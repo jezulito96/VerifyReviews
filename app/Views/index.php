@@ -44,6 +44,8 @@
         }
 
         if(isset($_GET['clavePublica'])) ;
+
+        echo "holaa";
     ?>
 
 </body>
