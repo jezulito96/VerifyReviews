@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /verifyreviews
+RewriteRule (.*) public/$1 [L]
