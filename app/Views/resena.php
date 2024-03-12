@@ -28,10 +28,9 @@
 
     <?php
         if(isset($val)) echo $val;
-        
-        
-
     ?>
+
+    <input type='file' title="Sube tus fotos" value='Subir foto'>
 
 </body>
 </html>
