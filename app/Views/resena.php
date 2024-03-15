@@ -33,8 +33,8 @@
 
     <input type='file' title="Sube tus fotos" value='Subir foto'>
     <div id="resultado"> </div>
-    <!-- <script>
+    <script>
         $("#resultado").append("HOLAAAA");
-    </script> -->
+    </script>
 </body>
 </html>
