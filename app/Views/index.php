@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <?php echo "<script src='". base_url() . "public/jquery/jquery.js' > </script>"; ?>
-    <?php echo "<script src='". base_url() . "public/js/prueba.js' > </script>"; ?>
+    <?php echo "<script src='". base_url() . "jquery/jquery.js' > </script>"; ?>
+    <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
 
     <!-- informacion de la web y autor-->
     <title>VerifyReviews</title>
