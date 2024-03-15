@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php //echo "<script src='". base_url() . "jquery/'"; ?>
+    <?php echo "<script src='". base_url() . "jquery/jquery.js'"; ?>
 
     <!-- informacion de la web y autor-->
     <title>VerifyReviews</title>
