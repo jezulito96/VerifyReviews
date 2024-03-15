@@ -1,4 +1,4 @@
 $(document).ready(function(){
-    $("#resultado").append("HOLAAAA");
+    $("#resultado").append("Jquery");
 
 });
