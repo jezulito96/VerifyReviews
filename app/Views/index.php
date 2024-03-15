@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <?php echo "<script src='". base_url() . "jquery/jquery.js' > </script>"; ?>
-    <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
+    <?php echo "<script src='". base_url() . "archivosJs/prueba.js' > </script>"; ?>
     <?php echo "<link rel='stylesheet' href='". base_url() . "css/index.css' />"; ?>
 
     <!-- informacion de la web y autor-->
