@@ -1,4 +1,4 @@
-$("#location").click(function () { 
+$("#ubicacion").click(function () { 
     if ("geolocation" in navigator){ 
         navigator.geolocation.getCurrentPosition(function(position){ 
                 $("#resultadoLocation").append("Latitud : "+position.coords.latitude+" Longitud :"+ position.coords.longitude); });

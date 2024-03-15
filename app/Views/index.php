@@ -55,7 +55,7 @@
     ?>
     <div id="resultado">Prueba --  </div>
 
-    <button id="location">Find Me</button>
+    <button id="ubicacion">Permiso para accder a tu Ubicación</button>
     <div id="resultadoLocation"></div>
 </body>
 </html>
