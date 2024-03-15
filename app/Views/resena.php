@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php echo "<script src='". base_url() . "jquery/jquery.js'"; ?>
+    <?php echo "<script src='". base_url() . "jquery/jquery.js' > </script>"; ?>
 
     <!-- informacion de la web y autor-->
     <title>VerifyReviews</title>
@@ -33,8 +33,8 @@
 
     <input type='file' title="Sube tus fotos" value='Subir foto'>
     <div id="resultado"> </div>
-    <script>
+    <!-- <script>
         $("#resultado").append("HOLAAAA");
-    </script>
+    </script> -->
 </body>
 </html>
