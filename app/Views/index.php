@@ -6,6 +6,7 @@
 
     <?php echo "<script src='". base_url() . "public/jquery/jquery.js' > </script>"; ?>
     <?php echo "<script src='". base_url() . "public/js/prueba.js' > </script>"; ?>
+    <?php echo "<link rel='stylesheet' href='". base_url() . "public/css/index.css' />"; ?>
 
     <!-- informacion de la web y autor-->
     <title>VerifyReviews</title>
