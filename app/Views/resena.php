@@ -34,7 +34,10 @@
     <input type='file' title="Sube tus fotos" value='Subir foto'>
     <div id="resultado">Prueba --  </div>
     <script>
-        $("#resultado").append("HOLAAAA");
+        $(document).ready(function(){
+            $("#resultado").append("HOLAAAA");
+
+        });
     </script>
 </body>
 </html>
