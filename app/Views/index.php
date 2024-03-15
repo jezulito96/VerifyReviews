@@ -6,7 +6,7 @@
 
     <?php //echo "<script src='". base_url() . "jquery/jquery.js' > </script>"; ?>
     <?php //echo "<script src='". base_url() . "archivosJs/prueba.js' > </script>"; ?>
-    <?php echo '<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
     $(document).ready(function(){
         $("#resultado").append("HOLAAAA");
     
