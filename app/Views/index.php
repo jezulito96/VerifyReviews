@@ -16,6 +16,15 @@
     <!-- Librerias para pintar mapas con libreria leaftlet.js-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Prueba de jqury -->
+    <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
+    
+    <!-- Recoger ubicacion usuario -->
+    <?php echo "<script src='". base_url() . "js/location.js' > </script>"; ?>
+    
+    <!-- Estilos de index -->
+    <?php echo "<link rel='stylesheet' href='". base_url() . "css/index.css' />"; ?>
     <script> 
                 var map = L.map('mapa').setView([51.505, -0.09], 13);
 
@@ -27,14 +36,7 @@
                     .bindPopup('A pretty CSS popup.<br> Easily customizable.')
                     .openPopup();
     </script>
-    <!-- Prueba de jqury -->
-    <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
-    
-    <!-- Recoger ubicacion usuario -->
-    <?php echo "<script src='". base_url() . "js/location.js' > </script>"; ?>
-    
-    <!-- Estilos de index -->
-    <?php echo "<link rel='stylesheet' href='". base_url() . "css/index.css' />"; ?>
+
 
     <!-- informacion de la web y autor-->
     <title>VerifyReviews</title>
