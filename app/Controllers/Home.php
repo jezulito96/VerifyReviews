@@ -21,15 +21,21 @@ class Home extends BaseController{
         $clavePublica = "holaaaa";
 
         $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+        
 
+        //vistas
         $maleta['cabecera'] = view('cabecera');
         // echo view('cabecera');
         return view('index', $maleta);
     }
 
     public function resena(): string {
-
+        
         $maleta['val'] = $this->request->getGet('clavePublica');
+
+        
+        //vistas
+        $maleta['cabecera'] = view('cabecera');
         return view('resena', $maleta);
     }
 }
