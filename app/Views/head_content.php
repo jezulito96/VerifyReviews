@@ -149,9 +149,11 @@
                     });
             });
 
-            //menu header
-            $(".menu-toggle").click(function () {
-                $(".menu ul").slideToggle();
+            // menu desplegable
+            $(".menuContainer").click(function(){
+                console.log("eee");
+                // Utiliza el método toggle para mostrar u ocultar la lista con efecto blind
+                $(".listaMenu").toggle("blind", 1000);
             });
         });
     </script>
