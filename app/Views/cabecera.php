@@ -116,6 +116,10 @@
                     });
             });
 
+            //menu header
+            $(".menu-toggle").click(function(){
+                $(".menu ul").slideToggle();
+            });
         });
     </script>
 
