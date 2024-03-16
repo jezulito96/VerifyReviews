@@ -1,20 +1,3 @@
-<?php
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    $es_movil;
-    if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
-        echo "El usuario está accediendo desde un dispositivo móvil.";
-        $es_movil = true;
-    } else {
-        echo "El usuario está accediendo desde un dispositivo de escritorio.";
-        $es_movil = false;
-    }
-
-    if($es_movil) {
-        echo "es movil";
-    } else{
-        echo "es escritorio";
-    }
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Libreria JQuery no funciona en local -->
-    <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>";   ?>
+    <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>";     ?>
 
     <!-- Libreria jquery -->
     <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
@@ -42,13 +25,23 @@
 
     <!-- Estilos de index -->
     <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
+    <?php
+    //comprobar si el que accede es movil o escritorio
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
+        // echo "<link rel='stylesheet' href='" . base_url() . "css/cabecera.css' />";
+    } else {
+        // echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
+    }
+    ?>
+
 
     <!-- Libreria para obtener lat y long a partir de la calle -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
     <!-- Recoger ubicacion usuario si acepta obtener ubicacion-->
-    <?php //echo "<script src='". base_url() . "js/location.js' > </script>";   ?>
+    <?php //echo "<script src='". base_url() . "js/location.js' > </script>";     ?>
     <!-- https://leafletjs.com/reference.html#map-factory -->
     <script>
         $(document).ready(function () {
@@ -97,7 +90,7 @@
             });
 
             // obtener lat y long a partir de calle, ciudad y pais
-            $("#obtenerLocalizacion").click(function(){
+            $("#obtenerLocalizacion").click(function () {
                 console.log("entra");
                 var calle = $("#calle").val();
                 var ciudad = $("#ciudad").val();
@@ -143,6 +136,55 @@
             height: 300px;
             width: 300px;
         }
+
+        /* estilo de header */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .line {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 10px 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .menu ul {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
     </style>
 
     <!-- posicionamiento -->
@@ -151,3 +193,19 @@
     <meta name="robots" content="index, follow"> -->
 
 </head>
+
+<body>
+    <div class="menu-toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>

@@ -1,5 +1,5 @@
 <?php if(isset($cabecera)) echo $cabecera  ?>
-<body>
+
     <h1>Proyecto de DAW</h1>
     
 
