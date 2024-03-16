@@ -48,7 +48,7 @@ $("#ubicacion").click(function () {
             }).addTo(map);
             
             L.marker([latitud, longitud]).addTo(map)
-                .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+                .bindPopup('Nombre negocio <br> Dirección.')
                 .openPopup();
 
         }, function (error) {
