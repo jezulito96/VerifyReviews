@@ -36,7 +36,7 @@
 
     <!-- Librerias Jquery UI -->
     <?php echo "<script src='" . base_url() . "jquery-ui/jquery-ui.js' > </script>"; ?>
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.css' />"; ?>
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.js' />"; ?>
 
 
     <!-- Libreria jquery maps -->
@@ -60,7 +60,6 @@
     //comprobar si el que accede es movil o escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
-        
         echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
 
     } else {
