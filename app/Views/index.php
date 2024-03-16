@@ -34,6 +34,7 @@ $("#ubicacion").click(function () {
     if (navigator.geolocation) {
         // le pido al usuario acceder a su localizacion
         navigator.geolocation.getCurrentPosition(function (position) {
+            $('#ubicacion').toggle();
             var latitud = position.coords.latitude;
             var longitud = position.coords.longitude;
 
