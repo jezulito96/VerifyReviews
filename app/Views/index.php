@@ -87,8 +87,8 @@ $("#ubicacion").click(function () {
             height: 300px;
         }
         .mapa {
-            height: 400px;
-            width: 400px;
+            height: 300px;
+            width: 300px;
         }
     </style>
 
