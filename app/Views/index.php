@@ -28,5 +28,15 @@
     <button id="ubicacion">Permiso para accder a tu Ubicación</button>
     <div id="resultadoLocation"></div>
     <div id="mapa" class="mapa"></div>
+
+
+    <!-- formulario para conseguir longitud y latitud -->
+        <label for="calle">Calle:</label><br>
+        <input type="text" id="calle" name="calle"><br>
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad"><br>
+        <label for="pais">País:</label><br>
+        <input type="text" id="pais" name="pais"><br><br>
+        <button type="button" id="obtenerLozalizacion" onclick="obtenerLocalizacion()">Comprobar direccion</button>
 </body>
 </html>
