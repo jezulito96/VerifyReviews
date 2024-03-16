@@ -31,30 +31,6 @@
     <?php //echo "<script src='". base_url() . "js/location.js' > </script>";   ?>
     <!-- https://leafletjs.com/reference.html#map-factory -->
     <script>
-        function obtenerLocalizacion() {
-            var calle = document.getElementById("calle").value;
-            var ciudad = document.getElementById("ciudad").value;
-            var pais = document.getElementById("pais").value;
-
-            var direccion = calle + ", " + ciudad + ", " + pais;
-            var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
-
-            axios.get(url)
-                .then(function (response) {
-                    var resultado = response.data[0];
-                    if (resultado) {
-                        var latitud = resultado.lat;
-                        var longitud = resultado.lon;
-                        console.log("Latitud: " + latitud);
-                        console.log("Longitud: " + longitud);
-                    } else {
-                        console.log("No se encontró la dirección.");
-                    }
-                })
-                .catch(function (error) {
-                    console.log("Error al obtener la latitud y longitud:", error);
-                });
-        }
         $(document).ready(function () {
 
             $("#ubicacion").click(function () {
@@ -101,7 +77,28 @@
             });
 
             $("#obtenerLocalizacion").click(function(){
-                obtenerLocalizacion();
+                var calle = document.getElementById("calle").value;
+                var ciudad = document.getElementById("ciudad").value;
+                var pais = document.getElementById("pais").value;
+
+                var direccion = calle + ", " + ciudad + ", " + pais;
+                var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
+
+                axios.get(url)
+                    .then(function (response) {
+                        var resultado = response.data[0];
+                        if (resultado) {
+                            var latitud = resultado.lat;
+                            var longitud = resultado.lon;
+                            console.log("Latitud: " + latitud);
+                            console.log("Longitud: " + longitud);
+                        } else {
+                            console.log("No se encontró la dirección.");
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log("Error al obtener la latitud y longitud:", error);
+                    });
             });
 
         });
