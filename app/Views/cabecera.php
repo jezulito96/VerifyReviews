@@ -100,7 +100,7 @@
                 }
             });
 
-            $("#obtenerLocalizacion").click(funtion(){
+            $("#obtenerLocalizacion").click(function(){
                 obtenerLocalizacion();
             });
 
