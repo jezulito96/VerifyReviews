@@ -102,7 +102,7 @@
 
             $("#obtenerLocalizacion").click(funtion(){
                 obtenerLocalizacion();
-            })
+            });
 
         });
     </script>
