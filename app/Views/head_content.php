@@ -34,6 +34,11 @@
     <!-- Libreria jquery -->
     <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
 
+    <!-- Librerias Jquery UI -->
+    <?php echo "<script src='" . base_url() . "jquery-ui/jquery-ui.js' > </script>"; ?>
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.css' />"; ?>
+
+
     <!-- Libreria jquery maps -->
     <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
@@ -46,6 +51,9 @@
     <!-- Prueba de jqury -->
     <?php echo "<script src='" . base_url() . "js/prueba.js' > </script>"; ?>
 
+    <!-- Estilos generales -->
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />"; ?>
+
     <!-- Estilos de index -->
     <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
     <?php
@@ -54,7 +62,7 @@
     if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
         
         echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
-        
+
     } else {
 
         // echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
