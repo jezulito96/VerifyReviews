@@ -23,6 +23,7 @@ class Home extends BaseController{
         $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
         
 
+        
         //vistas
         $maleta['cabecera'] = view('cabecera');
         $maleta['header_content'] = view('header_content');

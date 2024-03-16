@@ -1,6 +1,7 @@
 <div id="menuContainer">
     <?php   
-        $jsonFilePath = base_url() . 'img/imgMenu.json';
+        
+        $jsonFilePath = base_url() . 'imgs/imgMenu.json';
 
         // Verificar si el archivo existe
         if (file_exists($jsonFilePath)) {
