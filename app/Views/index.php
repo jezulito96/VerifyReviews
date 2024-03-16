@@ -37,6 +37,6 @@
         <input type="text" id="ciudad" name="ciudad"><br>
         <label for="pais">País:</label><br>
         <input type="text" id="pais" name="pais"><br><br>
-        <button type="button" id="obtenerLozalizacion">Comprobar direccion</button>
+        <button type="button" id="obtenerLocalizacion">Comprobar direccion</button>
 </body>
 </html>

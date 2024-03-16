@@ -77,6 +77,7 @@
             });
 
             $("#obtenerLocalizacion").click(function(){
+                console.log("entra");
                 var calle = document.getElementById("calle").value;
                 var ciudad = document.getElementById("ciudad").value;
                 var pais = document.getElementById("pais").value;
