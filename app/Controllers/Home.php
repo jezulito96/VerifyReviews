@@ -23,7 +23,19 @@ class Home extends BaseController{
         $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
         
 
+        //imagen json
+                
+        $jsonFilePath = base_url() . 'imgs/imgMenu.json';
+
+        // Verificar si el archivo existe
+        if (file_exists($jsonFilePath)) {
+            $maleta['jsonContent'] = file_get_contents($jsonFilePath);
+        } else {
+            echo 'El archivo JSON no existe.';
+        }
+
         
+
         //vistas
         $maleta['cabecera'] = view('cabecera');
         $maleta['header_content'] = view('header_content');
