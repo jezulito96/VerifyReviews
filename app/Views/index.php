@@ -20,8 +20,7 @@
     <!-- Prueba de jqury -->
     <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
     
-    <!-- Recoger ubicacion usuario -->
-    <?php echo "<script src='". base_url() . "js/location.js' > </script>"; ?>
+
     
     <!-- Estilos de index -->
     <?php echo "<link rel='stylesheet' href='". base_url() . "css/index.css' />"; ?>
@@ -77,5 +76,10 @@
     <button id="ubicacion">Permiso para accder a tu Ubicación</button>
     <div id="resultadoLocation"></div>
     <div id="mapa" class="mapa"></div>
+
+
+
+    <!-- Recoger ubicacion usuario -->
+    <?php echo "<script src='". base_url() . "js/location.js' > </script>"; ?>
 </body>
 </html>
