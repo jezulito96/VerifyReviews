@@ -1,3 +1,20 @@
+<?php
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $es_movil;
+    if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
+        echo "El usuario está accediendo desde un dispositivo móvil.";
+        $es_movil = true;
+    } else {
+        echo "El usuario está accediendo desde un dispositivo de escritorio.";
+        $es_movil = false;
+    }
+
+    if($es_movil) {
+        echo "es movil";
+    } else{
+        echo "es escritorio";
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 
