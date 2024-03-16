@@ -1,32 +1,36 @@
 <div id="menuContainer">
     <?php   
-        echo "Header";
+        $jsonFilePath = base_url() . 'img/imgMenu.json';
 
-        if(file_exists(base_url() . 'img/imgMenu.json')){
-            // si existe se carga
+        // Verificar si el archivo existe
+        if (file_exists($jsonFilePath)) {
+            // Cargar el contenido del archivo JSON
             $jsonContent = file_get_contents($jsonFilePath);
 
+            // Decodificar el contenido JSON
             $jsonData = json_decode($jsonContent, true);
 
-            // si se ha parseado
+            // Verificar si la decodificación fue exitosa
             if ($jsonData !== null) {
-                
+                // Iterar sobre las capas del JSON
                 foreach ($jsonData['layers'] as $layer) {
-                    if (isset($layer['nm']) && $layer['nm'] === 'menu') {
+                    // Verificar si la capa es la capa del menú
+                    if ($layer['nm'] === 'menu') {
+                        // Iterar sobre las formas de la capa
                         foreach ($layer['shapes'] as $shape) {
-                            if (isset($shape['nm']) && $shape['nm'] === 'Path 1') {
+                            // Verificar si la forma es una imagen
+                            if ($shape['ty'] === 4) {
                                 // Imprimir la ruta de la imagen
-                                echo '<img src="' . $shape['ks']['k'][0]['v'][0] . '" alt="Menu">';
+                                echo '<img src="' . $shape['ks']['k'][0]['s']['i'][0] . '" alt="' . $shape['nm'] . '">';
                             }
                         }
                     }
                 }
-
             } else {
-                echo 'Error al parsear el JSON.';
+                echo 'Error al decodificar el JSON.';
             }
-        }else{
-            echo "el archivo no existe";
+        } else {
+            echo 'El archivo JSON no existe.';
         }
 
     ?>
