@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Libreria JQuery no funciona en local -->
     <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>"; ?>
     
+    <!-- Libreria jquery -->
     <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
+    
+    <!-- Libreria jquery maps -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Librerias para pintar mapas con libreria leaftlet.js-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Prueba de jqury -->
     <?php echo "<script src='". base_url() . "js/prueba.js' > </script>"; ?>
+    
+    <!-- Recoger ubicacion usuario -->
     <?php echo "<script src='". base_url() . "js/location.js' > </script>"; ?>
+
+
+    <!-- Estilos de index -->
     <?php echo "<link rel='stylesheet' href='". base_url() . "css/index.css' />"; ?>
 
     <!-- informacion de la web y autor-->
@@ -18,10 +34,7 @@
     <meta name="author" content="Jesús Gomollón Andrés">
     <meta name="date" content="2024-03-04">
     <style>
-        .codigoQr{
-            width: 300px;
-            height: 300px;
-        }
+
     </style>
 
     <!-- posicionamiento -->

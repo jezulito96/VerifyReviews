@@ -3,17 +3,22 @@ $(document).ready(function(){
     $(document).ready(function(){
         $("#ubicacion").click(function(){
             if (navigator.geolocation) {
+                // le pido al usuario acceder a su localizacion
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var latitude = position.coords.latitude;
                     var longitude = position.coords.longitude;
                     
+                    // si acepta se pinta el mapa
                     $('#resultadoLocation').html('Tu ubicación actual es: Latitud ' + latitude + ' Longitud ' + longitude);
                     
-                    // Aquí puedes hacer una llamada AJAX para obtener información basada en la ubicación
-                    // por ejemplo:
-                    // $.get('tu_servicio_de_backend', {latitude: latitude, longitude: longitude}, function(data){
-                    //     // Mostrar información en el DOM
-                    // });
+                    var map = L.map('mapid').setView([51.505, -0.09], 13); // Configura el centro del mapa y el nivel de zoom inicial
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+                    var marker = L.marker([51.5, -0.09]).addTo(map); // Crea un marcador en la ubicación dada
+
                 }, function(error) {
                     switch(error.code) {
                         case error.PERMISSION_DENIED:
