@@ -34,7 +34,13 @@
     <meta name="author" content="Jesús Gomollón Andrés">
     <meta name="date" content="2024-03-04">
     <style>
-
+        .codigoQr{
+            width: 300px;
+            height: 300px;
+        }
+        .mapa {
+            height: 400px;
+        }
     </style>
 
     <!-- posicionamiento -->
@@ -71,5 +77,6 @@
 
     <button id="ubicacion">Permiso para accder a tu Ubicación</button>
     <div id="resultadoLocation"></div>
+    <div id="mapa" class="mapa"></div>
 </body>
 </html>
