@@ -44,7 +44,7 @@
                         $('#resultadoLocation').html('Tu ubicación actual es: Latitud ' + latitud + ' Longitud ' + longitud);
 
                         // si acepta se pinta el mapa
-                        var map = L.map('mapa').setView([latitud, longitud], 4);
+                        var map = L.map('mapa').setView([latitud, longitud], 10);
 
                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
