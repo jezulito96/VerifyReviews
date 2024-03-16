@@ -15,7 +15,7 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-    </header><
+    </header>
 
     <h1>Proyecto de DAW</h1>
     
