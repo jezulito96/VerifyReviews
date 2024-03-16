@@ -11,11 +11,9 @@ $(document).ready(function(){
                     // si acepta se pinta el mapa
                     $('#resultadoLocation').html('Tu ubicación actual es: Latitud ' + latitud + ' Longitud ' + longitud);
                     
-                    var map = L.map('mapa').setView([latitud,longitud], 13); // Configura el centro del mapa y el nivel de zoom inicial
+                    var map = L.map('mapa').setView([51.505, -0.09], 13); // Configura el centro del mapa y el nivel de zoom inicial
 
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(map);
+                    var marker = L.marker([51.5, -0.09]).addTo(map); // Crea un marcador en la ubicación dada
 
                     // var marker = L.marker([51.5, -0.09]).addTo(map); // Crea un marcador en la ubicación dada
 
