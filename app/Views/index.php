@@ -1,4 +1,21 @@
 <?php if(isset($cabecera)) echo $cabecera  ?>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header><
 
     <h1>Proyecto de DAW</h1>
     
