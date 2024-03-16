@@ -44,14 +44,14 @@
                         $('#resultadoLocation').html('Tu ubicación actual es: Latitud ' + latitud + ' Longitud ' + longitud);
 
                         // si acepta se pinta el mapa
-                        var map = L.map('mapa').setView([latitud, longitud], 15);
+                        var map = L.map('mapa').setView([latitud, longitud], 4);
 
                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         }).addTo(map);
 
                         L.marker([latitud, longitud]).addTo(map)
-                            .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+                            .bindPopup('Variable con nombre comercio');
                             .openPopup();
 
                     }, function (error) {
