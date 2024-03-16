@@ -82,9 +82,9 @@
             // obtener lat y long a partir de calle, ciudad y pais
             $("#obtenerLocalizacion").click(function(){
                 console.log("entra");
-                var calle = document.getElementById("calle").value;
-                var ciudad = document.getElementById("ciudad").value;
-                var pais = document.getElementById("pais").value;
+                var calle = $("#calle").val();
+                var ciudad = $("#ciudad").val();
+                var pais = $("#pais").val();
 
                 var direccion = calle + ", " + ciudad + ", " + pais;
                 var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);

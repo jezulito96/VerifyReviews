@@ -4,3 +4,4 @@ con composer php-qrcode
 JQuery/ JQuery.Ajax
 OpenStreetMaps con JQuery y api loaflet
 Utilizacion del BOM para geolocalización
+CDN de axios -  para obtener ubicacion a partir de calle con JQuery
