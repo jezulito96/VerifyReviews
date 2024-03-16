@@ -141,54 +141,6 @@
             width: 300px;
         }
 
-        /* estilo de header */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .line {
-            width: 30px;
-            height: 3px;
-            background-color: #333;
-            margin: 5px 0;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu ul li {
-            margin: 10px 20px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-        }
-
-        @media (max-width: 768px) {
-            .menu ul {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-        }
     </style>
 
     <!-- posicionamiento -->

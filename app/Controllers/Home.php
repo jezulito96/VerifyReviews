@@ -25,6 +25,7 @@ class Home extends BaseController{
 
         //vistas
         $maleta['cabecera'] = view('cabecera');
+        $maleta['header_content'] = view('header_content');
         // echo view('cabecera');
         return view('index', $maleta);
     }
@@ -36,6 +37,7 @@ class Home extends BaseController{
         
         //vistas
         $maleta['cabecera'] = view('cabecera');
+        $maleta['header_content'] = view('header_content');
         return view('resena', $maleta);
     }
 }

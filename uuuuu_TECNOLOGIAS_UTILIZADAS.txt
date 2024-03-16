@@ -5,3 +5,10 @@ JQuery/ JQuery.Ajax
 OpenStreetMaps con JQuery y api loaflet
 Utilizacion del BOM para geolocalización
 CDN de axios -  para obtener ubicacion a partir de calle con JQuery
+
+
+
+-------------- ICONOS JSON -------------------- 
+https://iconos8.es/icon/set/menu/group-color
+
+
