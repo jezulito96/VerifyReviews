@@ -12,7 +12,7 @@
     <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
 
     <!-- Libreria jquery maps -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
     <!-- Librerias para pintar mapas con libreria leaftlet.js-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -26,8 +26,11 @@
     <!-- Estilos de index -->
     <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
 
+    <!-- Libreria para obtener lat y long a partir de la calle -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- Recoger ubicacion usuario -->
+
+    <!-- Recoger ubicacion usuario si acepta obtener ubicacion-->
     <?php //echo "<script src='". base_url() . "js/location.js' > </script>";   ?>
     <!-- https://leafletjs.com/reference.html#map-factory -->
     <script>
@@ -76,6 +79,7 @@
                 }
             });
 
+            // obtener lat y long a partir de calle, ciudad y pais
             $("#obtenerLocalizacion").click(function(){
                 console.log("entra");
                 var calle = document.getElementById("calle").value;
