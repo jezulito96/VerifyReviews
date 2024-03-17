@@ -4,7 +4,8 @@
     <div class="logoContainer">
         <div class="logo">
             <a href="https://verifyreviews.es">
-                <img src="#" title="VerifyReviews.com" alt="VerifyReviews_logo" />
+                <!-- <img src="#" title="VerifyReviews.com" alt="VerifyReviews_logo" /> -->
+                Verifyrevies_logo
             </a>
         </div>
 
