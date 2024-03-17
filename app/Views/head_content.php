@@ -60,11 +60,11 @@
     //comprobar si el que accede es movil o escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
+        echo "holaa";
         
-        echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
 
     } else {
-
+        echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
     }
     ?>
 
