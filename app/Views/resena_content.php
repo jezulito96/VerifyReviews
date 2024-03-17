@@ -1,7 +1,7 @@
 <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
 <div class="resenaContainer" id="resenaContainer">
-
+    <div class="resenaContent">
 
     <div class="negocio" id="negocio">
 
@@ -110,5 +110,5 @@
         </div>
     </div>
 
-
+            </div>
 </div>

@@ -11,6 +11,9 @@
     justify-content: center;
   }
 
+  .resenaContent{
+    width: 90%;
+  }
   .negocio{
     width: 100%;
     height: auto;
