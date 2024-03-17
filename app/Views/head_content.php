@@ -11,6 +11,23 @@
         content="Proyecto final del ciclo de grado superior de Desarrollo de Aplicaciones Web (Educativo)">
     <meta name="author" content="Jesús Gomollón Andrés">
     <meta name="date" content="2024-03-04">
+        <!-- Estilos generales -->
+        <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />"; ?>
+
+        <!-- Estilos de index -->
+        <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
+        <?php
+        //comprobar si el que accede es movil o escritorio
+        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+        if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
+            echo "holaa1";
+            
+
+        } else {
+            echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
+            echo "holaa2";
+        }
+        ?>
     <style>
         .codigoQr {
             width: 300px;
@@ -51,22 +68,7 @@
     <!-- Prueba de jqury -->
     <?php echo "<script src='" . base_url() . "js/prueba.js' > </script>"; ?>
 
-    <!-- Estilos generales -->
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />"; ?>
 
-    <!-- Estilos de index -->
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
-    <?php
-    //comprobar si el que accede es movil o escritorio
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
-        echo "holaa";
-        
-
-    } else {
-        echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
-    }
-    ?>
 
 
     <!-- Libreria para obtener lat y long a partir de la calle -->
