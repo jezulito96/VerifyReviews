@@ -38,6 +38,75 @@
           </div>
           
         </div>
+
+        <div class="moduloResena">
+          <h3 class="titulos">
+            T&iacute;tulo de su experiencia
+          </h3>
+
+          <div class="areaTexto">
+
+            <textarea class="textoTitulo" placeholder="Velada en pareja perfecta..."></textarea>
+            <div class="infoInputs">M&aacute;ximo 100 car&aacute;teres</div>
+
+          </div>
+          
+        </div>
+
+        <div class="moduloResena">
+          <h3 class="titulos">
+            Describe tu experiencia
+          </h3>
+
+          <div class="areaTexto">
+
+            <textarea class="textoTituloArea" placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+            <div class="infoInputs">M&aacute;ximo 250 car&aacute;teres</div>
+
+          </div>
+          
+        </div>
+        
+        <div class="moduloResena">
+          <h3 class="titulos">
+            Añade alguna foto <span class="subtitulo">(opcional)</span>
+          </h3>
+
+          <div class="areaFile">
+
+            <!-- <input type="file" class="fotosResena" aria-label="Archivo"/> -->
+
+            <div class="file-select" id="foto1" >
+              <input type="file" name="foto1" aria-label="Archivo">
+            </div>
+
+            <div class="file-select" id="foto2" >
+              <input type="file" name="foto2" aria-label="Archivo">
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class="moduloResena">
+          <h3 class="titulos">
+            Fecha de tu experiencia
+          </h3>
+
+          <div class="areaFecha">
+            Date: <input type="text" id="fechaResena" class="fechaResena"></p>
+            <script>
+              $(document).ready(function(){
+                $("#fechaResena").datepicker()
+                .css("border:#5678ef")
+                
+              });
+            </script>
+            
+
+          </div>
+          
+        </div>
     </div>
 
 

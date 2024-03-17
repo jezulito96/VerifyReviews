@@ -54,33 +54,134 @@
   }
 
   /*////////////// VALORACION/////////// */
-  .valoracion{
-    padding:10px;
-    font-size: 1.1em;
-  }
+/* Titulo de su experiencia */
+.infoInputs{
+    width: 80%;
+    margin: 0px;
+    margin-left: 20px;
+    text-align: right;
+    font-size: 10px;
+}
 
-  .puntuacionValoracion{
+.moduloResena{
+    width: 100vw;
+    height: auto;
+}
+
+.areaTexto{
     width: 100%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding-left:10px ;
-  }
+    height: auto;
+}
 
-  .imgPuntuacion{
-    width: 30px;
-    height: 30px;
-    margin-left:10px;
-    margin-right:10px;
-  }
+.textoTitulo{
+    width: 80%;
+    height: 20px;
+    margin-left: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+}
 
-  .resultadoValoracion{
-    width: 30px;
-    height: 30px;
-    margin-left:10px;
+.textoTituloArea{
+    width: 80%;
+    min-height: 50px;
+    margin-left: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+.subtitulo{
+    font-size: 10px ;
+}
+
+.areaFile{
     display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 15px;
-  }
+    width: 80%;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+}
+  
+.file-select::before {
+background-color: #5678EF;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 3px;
+content: 'Seleccionar'; /* testo por defecto */
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+.file-select input[type="file"] {
+opacity: 0;
+width: 200px;
+height: 32px;
+display: inline-block;
+}
+
+#foto1::before {
+content: 'Foto 1';
+}
+
+#foto2::before {
+content: 'Foto 2';
+}
+
+.fechaResena{
+    margin-left:20px ;
+}
+
+/* fecha  */
+.areaFecha{
+    width: 100%;
+    margin-left:20px ;
+}
+
+div[class=".fechaResena.ui-widget.ui-widget-content"] {
+    border: 1px solid #eee;
+}
+div[class=".fechaResena.ui-widget.ui-widget-content"] {
+    background: #fff;
+}
+div[class=".ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br"]
+ {
+border-bottom-right-radius: 3px;
+}
+div[class=".ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl"]
+ {
+border-bottom-left-radius: 3px;
+}
+div[class=".ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr"]
+ {
+border-top-right-radius: 3px;
+}
+div[class=".ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl"]
+ {
+border-top-left-radius: 3px;
+}
+div[class=".ui-widget-content"]
+ {
+border: 1px solid #ccc;
+background: #5678ef;
+color: #333333;
+}
+div[class=".ui-widget"]
+ {
+font-family: Arial,Helvetica,sans-serif;
+font-size: 1em;
+}
+div[class=".ui-datepicker"]
+ {
+width: 17em;
+padding: .2em .2em 0;
+display: none;
+}
