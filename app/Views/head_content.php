@@ -169,13 +169,24 @@
             // menu desplegable
             var imgMenu = $(".imgMenu");
             var imgMenu2 = $(".imgMenu2");
-
+            var cont = 1;
             $(".menuContainer").click(function () {
-            
+              
+              if(cont == 1){
+                cont++;
                 $(".listaMenu").toggle("blind", 500);
-                imgMenu.toggle();
-                imgMenu2.toggle();
-
+                imgMenu.toggle("clip",500);
+                setTimeout(function(){
+                  imgMenu2.toggle();
+                },500);
+              }else{
+                cont = 1;
+                $(".listaMenu").toggle("blind", 500);
+                imgMenu2.toggle("clip",500);
+                setTimeout(function(){
+                  imgMenu.toggle();
+                },500);
+              }
             });
     });
     </script>
