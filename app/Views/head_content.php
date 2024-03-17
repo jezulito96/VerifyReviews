@@ -22,9 +22,9 @@
         if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
             echo "holaa1";
             
-
+            echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
         } else {
-            echo "<link rel='stylesheet' href='" . base_url() . "css/header_movil.css' />";
+            echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
             echo "holaa2";
         }
         ?>
