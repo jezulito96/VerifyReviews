@@ -36,7 +36,7 @@
 
     <!-- Librerias Jquery UI -->
     <?php echo "<script type='text/javascript' src='" . base_url() . "jquery-ui/jquery-ui.js' > </script>"; ?>
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.js' />"; ?>
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.css' />"; ?>
 
 
     <!-- Libreria jquery maps -->
