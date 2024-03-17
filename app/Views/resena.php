@@ -5,9 +5,10 @@
         <?php if (isset ($header_content))  echo $header_content; ?>
     </header>
 
-    <h1>Escribe tus reseñas</h1>
+    
 
     <main>
+        
         <?php if(isset($resena_content)) echo $resena_content ?>
     
         <?php

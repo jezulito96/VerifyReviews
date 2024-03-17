@@ -1,6 +1,8 @@
+.tituloResenaContent{
+    padding-left: 20px;
+}
 .resenaContainer {
     box-sizing: border-box;
-    margin-top: 5px;
     margin-bottom: 5px;
     width: 100vw;
     height: auto;
@@ -37,7 +39,7 @@
 
   .nombreNegocio{
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
     height: 25px;
     text-align: center;
     font-weight: 600;
@@ -49,4 +51,36 @@
     font-size: 15px;
     height: 17px;
     text-align: center;
+  }
+
+  /*////////////// VALORACION/////////// */
+  .valoracion{
+    padding:10px;
+    font-size: 1.1em;
+  }
+
+  .puntuacionValoracion{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-left:10px ;
+  }
+
+  .imgPuntuacion{
+    width: 30px;
+    height: 30px;
+    margin-left:10px;
+    margin-right:10px;
+  }
+
+  .resultadoValoracion{
+    width: 30px;
+    height: 30px;
+    margin-left:10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 15px;
   }
