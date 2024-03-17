@@ -16,8 +16,6 @@
             echo $val;
         ?>
 
-        <input type='file' title="Sube tus fotos" value='Subir foto'>
-
         <br />
 
         <button id="ubicacion">Permiso para accder a tu Ubicación</button>
