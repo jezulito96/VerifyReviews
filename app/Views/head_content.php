@@ -65,7 +65,6 @@
 
     } else {
 
-        // echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
     }
     ?>
 
