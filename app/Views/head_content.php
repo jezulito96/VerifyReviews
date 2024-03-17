@@ -150,10 +150,15 @@
             });
 
             // menu desplegable
-            $(".menuContainer").click(function(){
-                console.log("eee");
-                // Utiliza el método toggle para mostrar u ocultar la lista con efecto blind
-                $(".listaMenu").toggle("blind", 1000);
+            var imgMenu = $(".imgMenu");
+            var imgMenu2 = $(".imgMenu2");
+
+            $(".menuContainer").click(function () {
+            
+                $(".listaMenu").toggle("blind", 700);
+                imgMenu.toggle();
+                imgMenu2.toggle();
+
             });
         });
     </script>
