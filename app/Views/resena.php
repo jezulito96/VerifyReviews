@@ -3,6 +3,7 @@
     <header>
         <?php if(isset($header_content)) echo $header_content; ?>
     </header>
+    
     <h1>Escribe tus reseñas</h1>
     
 

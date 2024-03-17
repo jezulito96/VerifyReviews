@@ -161,7 +161,7 @@
                 imgMenu2.toggle();
 
             });
-        });
+    });
     </script>
 
 
