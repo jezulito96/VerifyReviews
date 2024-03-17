@@ -1,4 +1,4 @@
-<?php if(isset($cabecera)) echo $cabecera  ?>
+<?php if(isset($head_content)) echo $head_content  ?>
 <body>
     <header>
         <?php if(isset($header_content)) echo $header_content; ?>

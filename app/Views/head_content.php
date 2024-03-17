@@ -51,7 +51,7 @@
         strpos($user_agent, 'Android') !== false ||
         strpos($user_agent, 'iPhone') !== false ||
         strpos($user_agent, 'iPad') !== false ||
-        strpos($user_agent, 'iPod') !== false
+        strpos($user_agent, 'iPod') !== false 
     ) {
         // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
