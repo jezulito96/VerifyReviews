@@ -46,11 +46,11 @@
      echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; 
     //comprobar si el que accede es movil o escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    if (strpos($user_agent, 'Mobile') !== false || 
-        strpos($user_agent, 'Android') !== false ||
-        strpos($user_agent, 'iPhone') !== false ||
-        strpos($user_agent, 'iPad') !== false ||
-        strpos($user_agent, 'iPod') !== false
+    if (strpos($user_agent, 'Mobile') === false || 
+        strpos($user_agent, 'Android') === false ||
+        strpos($user_agent, 'iPhone') === false ||
+        strpos($user_agent, 'iPad') === false ||
+        strpos($user_agent, 'iPod') === false
         ) {
         // escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
