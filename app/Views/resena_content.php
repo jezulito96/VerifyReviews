@@ -23,7 +23,7 @@
 
         <div class="valoracion">
           <h3 class="tituloValoracion">
-              ¿Cómo puntuar&iacute;a la experiencia?
+              ¿Cómo puntuar&iacute;as la experiencia?
           </h3>
           <div class="puntuacionValoracion">
               <!-- imagen --- https://iconos8.es/icon/set/tick/stickers  -->
