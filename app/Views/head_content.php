@@ -44,19 +44,20 @@
 
     // <!-- Estilos de index -->
      echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; 
-    //comprobar si el que accede es movil o escritorio
+
+    // Comprobación para detectar si el usuario accede desde un dispositivo móvil
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    if (strpos($user_agent, 'Mobile') === false || 
-        strpos($user_agent, 'Android') === false ||
-        strpos($user_agent, 'iPhone') === false ||
-        strpos($user_agent, 'iPad') === false ||
-        strpos($user_agent, 'iPod') === false
-        ) {
-        // escritorio
-        echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
-    } else {
-        // movil
+    if (strpos($user_agent, 'Mobile') !== false || 
+        strpos($user_agent, 'Android') !== false ||
+        strpos($user_agent, 'iPhone') !== false ||
+        strpos($user_agent, 'iPad') !== false ||
+        strpos($user_agent, 'iPod') !== false
+    ) {
+        // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
+    } else {
+        // Escritorio
+        echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
     }
     ?>
 
