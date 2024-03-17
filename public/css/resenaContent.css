@@ -89,6 +89,9 @@
 
   
   /* Titulo de su experiencia */
+  .titulos{
+    padding-left: 20px;
+}
 .infoInputs{
     width: 80%;
     margin: 0px;
