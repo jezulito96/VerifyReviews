@@ -1,0 +1,52 @@
+.resenaContainer {
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .negocio{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .fotoPerfilNegocio{
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagenNegocio{
+    width: 60%;
+    height: auto;
+  }
+
+  .nombreNegocio{
+    width: 100%;
+    height: auto;
+  }
+  
+  .datosNegocio{
+    width: 100vw;
+    height: auto;
+  }
+
+  .nombreNegocio{
+    width: 100%;
+    font-size: 20px;
+    height: 25px;
+    text-align: center;
+    font-weight: 600;
+
+  }
+
+  .direccionNegocio{
+    width: 100%;
+    font-size: 15px;
+    height: 17px;
+    text-align: center;
+  }

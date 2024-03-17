@@ -38,6 +38,7 @@ class Home extends BaseController{
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
+        $maleta['resena_content'] = view('resena_content');
         return view('resena', $maleta);
     }
 }

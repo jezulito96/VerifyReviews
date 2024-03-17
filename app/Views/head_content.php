@@ -55,6 +55,7 @@
     ) {
         // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/resenaContent.css' />";
     } else {
         // Escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
@@ -188,6 +189,9 @@
                 },500);
               }
             });
+
+            //resenaContent
+
     });
     </script>
 
