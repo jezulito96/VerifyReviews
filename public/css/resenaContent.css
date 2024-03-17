@@ -7,7 +7,6 @@
     width: 100vw;
     height: auto;
     border-bottom: 1px solid #ccc;
-    padding-left:10px;
   }
 
   .negocio{
@@ -55,7 +54,39 @@
   }
 
   /*////////////// VALORACION/////////// */
-/* Titulo de su experiencia */
+  .valoracion{
+    padding:10px;
+    font-size: 1.1em;
+  }
+
+  .puntuacionValoracion{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-left:10px ;
+  }
+
+  .imgPuntuacion{
+    width: 30px;
+    height: 30px;
+    margin-left:10px;
+    margin-right:10px;
+  }
+
+  .resultadoValoracion{
+    width: 30px;
+    height: 30px;
+    margin-left:10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  
+  /* Titulo de su experiencia */
 .infoInputs{
     width: 80%;
     margin: 0px;
