@@ -2,32 +2,59 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
-    <!-- informacion de la web y autor-->
+    <!--/////////////////////////////////////////////// metas ////////////////////////////////////// -->
     <title>VerifyReviews</title>
     <meta name="description"
         content="Proyecto final del ciclo de grado superior de Desarrollo de Aplicaciones Web (Educativo)">
     <meta name="author" content="Jesús Gomollón Andrés">
     <meta name="date" content="2024-03-04">
-        <!-- Estilos generales -->
-        <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />"; ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Estilos de index -->
-        <?php echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; ?>
-        <?php
-        //comprobar si el que accede es movil o escritorio
-        $user_agent = $_SERVER['HTTP_USER_AGENT'];
-        if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
-            echo "holaa1";
-            
-            echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
-        } else {
-            echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
-            echo "holaa2";
-        }
-        ?>
+    <!-- posicionamiento -->
+    <!-- <meta name="keywords" content="Reseñas, verificadas, opiniones, comercio, opinion, negocio"> -->
+    <!-- <link rel="canonical" href="https://verifyreviews.es">
+    <meta name="robots" content="index, follow"> -->
+
+
+
+    <!--/////////////////////////////////////////////// jquery ////////////////////////////////////// -->
+    
+    <!-- Libreria JQuery no funciona en local -->
+    <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>";       ?>
+
+    <!-- Libreria jquery -->
+    <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
+
+    <!-- Librerias Jquery UI -->
+    <?php echo "<script type='text/javascript' src='" . base_url() . "jquery-ui/jquery-ui.js' > </script>"; ?>
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.css' />"; ?>
+
+    <!-- Libreria jquery maps -->
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+
+    <!--/////////////////////////////////////////////// ESTILOS CSS ////////////////////////////////////// -->
+
+    <!-- Estilos generales -->
+    <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />"; 
+
+    // <!-- Estilos de index -->
+     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />"; 
+    //comprobar si el que accede es movil o escritorio
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    if (strpos($user_agent, 'Mobile') !== false || strpos($user_agent, 'Android') !== false) {
+        // escritorio
+        echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
+    } else {
+        // movil
+        echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
+    }
+    ?>
+
     <style>
         .codigoQr {
             width: 300px;
@@ -40,24 +67,9 @@
         }
     </style>
 
-    <!-- posicionamiento -->
-    <!-- <meta name="keywords" content="Reseñas, verificadas, opiniones, comercio, opinion, negocio"> -->
-    <!-- <link rel="canonical" href="https://verifyreviews.es">
-    <meta name="robots" content="index, follow"> -->
-
-    <!-- Libreria JQuery no funciona en local -->
-    <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>";       ?>
-
-    <!-- Libreria jquery -->
-    <?php echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>'; ?>
-
-    <!-- Librerias Jquery UI -->
-    <?php echo "<script type='text/javascript' src='" . base_url() . "jquery-ui/jquery-ui.js' > </script>"; ?>
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "jquery-ui/jquery-ui.css' />"; ?>
 
 
-    <!-- Libreria jquery maps -->
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!--/////////////////////////////////////////////// GEOLOCALIZACIÓN ////////////////////////////////////// -->
 
     <!-- Librerias para pintar mapas con libreria leaftlet.js-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -67,9 +79,6 @@
 
     <!-- Prueba de jqury -->
     <?php echo "<script src='" . base_url() . "js/prueba.js' > </script>"; ?>
-
-
-
 
     <!-- Libreria para obtener lat y long a partir de la calle -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -164,8 +173,5 @@
             });
     });
     </script>
-
-
-
 
 </head>
