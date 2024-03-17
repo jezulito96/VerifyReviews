@@ -172,7 +172,7 @@
 
             $(".menuContainer").click(function () {
             
-                $(".listaMenu").toggle("blind", 700);
+                $(".listaMenu").toggle("blind", 500);
                 imgMenu.toggle();
                 imgMenu2.toggle();
 
