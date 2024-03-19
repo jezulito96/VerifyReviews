@@ -4,7 +4,7 @@
     <div class="logoContainer">
         <div class="logo">
             <a href="https://verifyreviews.es">
-                <?php '<img class="imgLogo" src="'.base_url() .'/img/logoMovil.svg" title="VerifyReviews.com" alt="VerifyReviews_logo" />' ?>
+                <?php '<img class="imgLogo" src="'.base_url() .'/img/logoMovil.svg" title="Verify Reviews" alt="Verify Reviews" />' ?>
             </a>
         </div>
 
