@@ -8,7 +8,25 @@
 }
 
 .menuContainer {
-  width: 70px;
+  width: 85px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.imgMenu {
+  width: 30px;
+  height: 30px;
+}
+
+.imgMenu2 {
+  width: 40px;
+  height: 40px;
+}
+
+.logoContainer {
+  width: calc(100vw - 85px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,23 +41,6 @@
 
 .imgLogo{
   height: 70px;
-}
-
-.imgMenu {
-  width: 30px;
-  height: 30px;
-}
-
-.imgMenu2 {
-  width: 40px;
-  height: 40px;
-}
-
-.logoContainer {
-  width: calc(100vw - 50px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .listaMenu {
