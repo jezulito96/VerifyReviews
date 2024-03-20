@@ -95,7 +95,7 @@
           </h3>
 
           <div class="areaFecha">
-            Date: <input type="text" id="fechaResena" class="fechaResena"></p>
+            Fecha: <input type="text" id="fechaResena" class="fechaResena"></p>
             <script>
               $(document).ready(function(){
                 $("#fechaResena").datepicker()
