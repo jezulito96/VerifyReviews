@@ -14,6 +14,11 @@
   align-items: center;
 }
 
+
+.imgLogo{
+  height: 70px;
+}
+
 .imgMenu {
   width: 30px;
   height: 30px;
