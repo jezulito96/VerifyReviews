@@ -97,11 +97,11 @@
           <div class="areaFecha">
             Fecha: <input type="text" id="fechaResena" class="fechaResena"></p>
             <script>
-              $(document).ready(function(){
-                $("#fechaResena").datepicker()
-                .css("border:#5678ef")
+              // $(document).ready(function(){
+              //   $("#fechaResena").datepicker()
+              //   .css("border:#5678ef")
                 
-              });
+              // });
             </script>
             
 
