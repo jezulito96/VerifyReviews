@@ -1,10 +1,8 @@
-<?php if (isset ($head_content))
-    echo $head_content ?>
+<?php if (isset ($head_content)) echo $head_content ?>
 
     <body>
         <header>
-        <?php if (isset ($header_content))
-    echo $header_content; ?>
+        <?php if (isset ($header_content)) echo $header_content; ?>
     </header>
 
     <h1>Proyecto de DAW</h1>
