@@ -95,16 +95,7 @@
           </h3>
 
           <div class="areaFecha">
-            Fecha: <input type="date" id="fechaResena" class="fechaResena" placeholder="d/m/Y"></p>
-            <script>
-              // $(document).ready(function(){
-              //   $("#fechaResena").datepicker()
-              //   .css("border:#5678ef")
-                
-              // });
-            </script>
-            
-
+            <input type="date" id="fechaResena" class="fechaResena" placeholder="d/m/Y"></p>
           </div>
           
         </div>
