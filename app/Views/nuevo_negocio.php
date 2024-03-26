@@ -1,5 +1,1 @@
-<?php
-
-    echo "hola";
-
-?>
+<h1>Hola</h1>
