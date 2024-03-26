@@ -25,5 +25,5 @@
 <ul class="listaMenu" style="display: none">
     <li>Iniciar sesion</li>
     <li>Escribe tu reseña</li>
-    <li><a href="http://verifyReviews.es/verifyreviews/resena"></a></li>
+    <li><a href="http://verifyReviews.es/verifyreviews/resena">¿Eres un negocio?</a></li>
 </ul>
