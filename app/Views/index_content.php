@@ -25,8 +25,20 @@
                 ';
             }
         }
+    ?>
 
+    <script>
+        $(document).ready(function(){
+            $('.slick-carousel').slick({
+                dots: true, // puntitos
+                slidesToShow: 1, // fotos que se pintan a la vez
+                prevArrow:".flechaAtras",
+                nextArrow:".flechaDelante"
+            });
+        });
+    </script>
 
+        <?php 
         // if (isset ($listaCategorias)) {
         //     foreach ($listaCategorias as $indice => $valor) {
         //         echo $valor['cod_categoria'] . " -> " . $valor['tipo_negocio'];
