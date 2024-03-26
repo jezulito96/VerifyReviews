@@ -1,4 +1,4 @@
-
+<div class="espacioHeader"></div>
 <div class="headerContainer">
 
     <div class="logoContainer">
