@@ -3,12 +3,12 @@
 
 
     <h3>¿Qué tipo de negocio le interesa?</h3>
-    <?php 
-        if(isset($listaCategorias)){
-            foreach($listaCategorias as $i => $categoria){
-                echo '
-
-                    <section class="slick-carousel">
+        <section class="slick-carousel">
+        <?php 
+            if(isset($listaCategorias)){
+                foreach($listaCategorias as $i => $categoria){
+                    echo '
+                        
                         <div class="fotoContainer">
                         
                         <img src="'. base_url()  . '/img/categorias/flechaAtras.png" class="flechaAtras">
@@ -20,14 +20,12 @@
                         <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                         
                         </div>
-                    </section>  
-                
-                ';
+                    
+                    ';
+                }
             }
-        }else{
-            echo "no existe";
-        }
-    ?>
+        ?>
+        </section>
 
     <script>
         $(document).ready(function(){
