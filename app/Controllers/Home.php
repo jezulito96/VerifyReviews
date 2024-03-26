@@ -44,7 +44,6 @@ class Home extends BaseController{
         //recojo de la lista BD las categorías y las convierto en objetos
         $listaCategorias = array();
         foreach($baseDatos -> getListaCategorias() as $i => $val){
-            echo "entra";
             array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
         }
         $maleta['listaCategorias'] = $listaCategorias;
