@@ -17,7 +17,7 @@ class Categoria {
         return $this->codCategoria;
     }
 
-    public function getTipoComercio() {
+    public function getTipoNegocio() {
         return $this->tipoNegocio;
     }
 }
