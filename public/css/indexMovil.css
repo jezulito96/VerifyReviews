@@ -1,33 +1,61 @@
+/* ---------   container tiltro / busqueda    --------------- */
+nav{
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.containerFiltro{
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.imgFiltro{
+  width: 40px;
+  height: 40px;
+}
+
+.containerBusqueda{
+  width: calc(100% - 70px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------   carousel    --------------- */
+h3{
+  margin-left: 10px;
+}
+h4{
+  margin: 0px;
+  text-align: center;
+}
 .imgCat{
-    width: 100vw;
-    height: 300px;
-  }
-  .fotoContainer{
-    position: relative;
-    height: 320px;
-  }
-  .flechaDelante, 
-  .flechaAtras{
-    position: absolute;
-  }
-  .flechaDelante{
-    top:45%;
-    right: 5px;
-    width: 16px;
-    height: 16px;
-  }
-  .flechaAtras{
-    top:45%;
-    left: 5px;
-    width: 16px;
-    height: 16px;
-  }
+  width: 100vw;
+  height: 300px;
+}
+.fotoContainer{
+  position: relative;
+  height: 320px;
+}
+.flechaDelante, 
+.flechaAtras{
+  position: absolute;
+}
+.flechaDelante{
+  top:45%;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+}
+.flechaAtras{
+  top:45%;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+}
   
-  h3{
-    margin-left: 10px;
-  }
-  h4{
-    margin: 0px;
-    text-align: center;
-  }
