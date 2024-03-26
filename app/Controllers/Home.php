@@ -67,4 +67,16 @@ class Home extends BaseController{
         $maleta['resena_content'] = view('resena_content');
         return view('resena', $maleta);
     }
+
+    public function nuevoNegocio(): string {
+        
+        // $maleta['val'] = $this->request->getGet('clavePublica');
+
+        
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['nuevo_negocio'] = view('nuevo_negocio');
+        return view('resena', $maleta);
+    }
 }
