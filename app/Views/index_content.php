@@ -11,11 +11,11 @@
                     <section class="slick-carousel">
                         <div class="fotoContainer">
                         
-                        <img src="flechaAtras.png" class="flechaAtras">
+                        <img src="'. base_url()  . '/img/categorias/flechaAtras.png" class="flechaAtras">
                 
                             <img src="'. base_url()  . '/img/categorias/catM-'. $categoria -> getCodCategoria()  . ' .jpg" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
                 
-                        <img src="flechaDelante.png" class="flechaDelante">
+                        <img src="'. base_url()  . '/img/categorias/flechaDelante.png" class="flechaDelante">
                 
                         <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                         
