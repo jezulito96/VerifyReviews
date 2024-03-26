@@ -24,6 +24,8 @@
                 
                 ';
             }
+        }else{
+            echo "no existe";
         }
     ?>
 
