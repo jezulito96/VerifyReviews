@@ -46,13 +46,13 @@ class Home extends BaseController{
         foreach($baseDatos -> getListaCategorias() as $i => $val){
             array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
         }
-        $maleta['listaCategorias'] = $listaCategorias;
+        $maleta_index['listaCategorias'] = $listaCategorias;
 
 
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content'); 
-        $maleta['index_content'] = view('index_content'); 
+        $maleta['index_content'] = view('index_content', $maleta_index); 
         return view('index', $maleta);
     }
 
