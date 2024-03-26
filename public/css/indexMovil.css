@@ -1,9 +1,11 @@
 
 .imgCat{
     width: 100vw;
+    height: 300px;
   }
   .fotoContainer{
     position: relative;
+    height: 300px;
   }
   .flechaDelante, 
   .flechaAtras{
