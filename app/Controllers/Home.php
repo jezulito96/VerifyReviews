@@ -3,6 +3,13 @@
 namespace App\Controllers;
 use App\Models\BaseDatos;
 use App\Models\Qr;
+use App\Models\Categoria;
+use App\Models\Comercio;
+use App\Models\Mapa;
+use App\Models\Resena;
+use App\Models\Usuario;
+use App\Models\UsuarioRegistrado;
+use App\Models\UsuarioSinRegistrar;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Output\QRImage;
 
@@ -10,23 +17,42 @@ use chillerlan\QRCode\Output\QRImage;
 
 class Home extends BaseController{
 
-    public function index(): string {
+    // public function index(): string {
 
+    //     $baseDatos = new BaseDatos();
+
+    //     // $maleta['listaCategorias'] = $baseDatos -> getListaCategorias();
+
+    //     $qr = new Qr();
+
+    //     $clavePublica = "holaaaa";
+
+    //     $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+        
+
+    //     //vistas
+    //     $maleta['head_content'] = view('head_content');
+    //     $maleta['header_content'] = view('header_content');
+    //     // echo view('head_content');
+    //     return view('index', $maleta);
+    // }
+
+    public function index(): string {
         $baseDatos = new BaseDatos();
 
-        $maleta['listaCategorias'] = $baseDatos -> getListaCategorias();
 
-        $qr = new Qr();
+        //recojo de la lista BD las categorías y las convierto en objetos
+        $listaCategorias = array();
+        foreach($baseDatos -> getListaCategorias() as $i => $val){
+            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+        }
+        $maleta['listaCategorias'] = $listaCategorias;
 
-        $clavePublica = "holaaaa";
-
-        $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-        
 
         //vistas
         $maleta['head_content'] = view('head_content');
-        $maleta['header_content'] = view('header_content');
-        // echo view('head_content');
+        $maleta['header_content'] = view('header_content'); 
+        $maleta['index_content'] = view('index_content'); 
         return view('index', $maleta);
     }
 

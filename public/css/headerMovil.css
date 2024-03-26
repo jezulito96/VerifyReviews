@@ -45,7 +45,7 @@
 
 .listaMenu {
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 0px;
   width: 100%;
   height: auto;
@@ -53,6 +53,7 @@
   padding: 0px;
   border-bottom:1px solid #ccc ;
   box-shadow: 4px 0px 4px #eee;
+  z-index:1000;
 }
 
 .listaMenu li {
@@ -64,4 +65,5 @@
   box-sizing: border-box;
   font-size: 1.5em;
   border-bottom:1px solid #eee ;
+  z-index:1000;
 }

@@ -35,6 +35,13 @@
     <!-- Libreria jquery maps -->
     <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
+    <!-- librerias para carusel en con jquery-->
+    <?php echo '<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>'; ?>
+    <?php echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>' ?>
+    <?php echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>' ?>
+
+    
+
 
 
     <!--/////////////////////////////////////////////// ESTILOS CSS ////////////////////////////////////// -->
@@ -57,6 +64,7 @@
         // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
         echo "<link rel='stylesheet' href='" . base_url() . "css/resenaContent.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/indexMovil.css' />";
     } else {
         // Escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";

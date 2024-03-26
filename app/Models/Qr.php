@@ -9,35 +9,32 @@ use chillerlan\QRCode\Output\QRGdImagePNG;
 
 
 class Qr {
-    public $ruta;
-    public $texto;
-    public $tamaño;
-    public $nivel_correccion_errores;
-    public $framSize;
-    public $respuesta;
-    public $formaQr;
-    public $codigo;
+    private $hash;
+    private $qr;
+    private $estilo;
+    private $url;
+    private $nombreNegocio;
 
     public function __construct(){
         $ruta = base_url() . 'images/qr/qrcode.png';
 
-        $formaQr = new QROptions;
+        $estilo = new QROptions;
 
-        $formaQr->version             = 7;
-        $formaQr->outputInterface     = QRGdImagePNG::class;
-        $formaQr->scale               = 40;
-        $formaQr->outputBase64        = true;
-        $formaQr->bgColor             = [200, 150, 200];
-        $formaQr->imageTransparent    = true;
-        #$formaQr->transparencyColor   = [233, 233, 233];
-        $formaQr->drawCircularModules = false;
-        $formaQr->drawLightModules    = true;
-        $formaQr->keepAsSquare        = [
+        $estilo->version             = 7;
+        $estilo->outputInterface     = QRGdImagePNG::class;
+        $estilo->scale               = 40;
+        $estilo->outputBase64        = true;
+        $estilo->bgColor             = [200, 150, 200];
+        $estilo->imageTransparent    = true;
+        #$estilo->transparencyColor   = [233, 233, 233];
+        $estilo->drawCircularModules = false;
+        $estilo->drawLightModules    = true;
+        $estilo->keepAsSquare        = [
             QRMatrix::M_FINDER_DARK,
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
-        $formaQr->moduleValues        = [
+        $estilo->moduleValues        = [
             // finder
             QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
             QRMatrix::M_FINDER_DOT     => [0, 63, 255], // finder dot, dark (true)
@@ -66,11 +63,11 @@ class Qr {
             // logo (requires a call to QRMatrix::setLogoSpace()), see QRImageWithLogo
             QRMatrix::M_LOGO           => [233, 233, 233],
         ];
-        $this -> formaQr = $formaQr;
+        $this -> estilo = $estilo;
     }
 
     public function crear($url){
-        $codigoQR = (new QRCode($this -> formaQr))->render($url);      
+        $codigoQR = (new QRCode($this -> estilo))->render($url);      
         // $codigoQR_base64 = 'data:image/webp;base64,' . base64_encode($codigoQR);  
             return $codigoQR;
         // $qrCode->text($this->texto)
@@ -79,5 +76,45 @@ class Qr {
         //        ->margin($this->framSize)
         //        ->size($this->tamaño)
         //        ->writeFile($this->ruta);
+    }
+
+    public function setHash($hash) {
+        $this->hash = $hash;
+    }
+
+    public function getHash() {
+        return $this->hash;
+    }
+
+    public function setQr($qr) {
+        $this->qr = $qr;
+    }
+
+    public function getQr() {
+        return $this->qr;
+    }
+
+    public function setEstilo($estilo) {
+        $this->estilo = $estilo;
+    }
+
+    public function getEstilo() {
+        return $this->estilo;
+    }
+
+    public function setUrl($url) {
+        $this->url = $url;
+    }
+
+    public function getUrl() {
+        return $this->url;
+    }
+
+    public function setNombreNegocio($nombreNegocio) {
+        $this->nombreNegocio = $nombreNegocio;
+    }
+
+    public function getNombreNegocio() {
+        return $this->nombreNegocio;
     }
 }
