@@ -17,7 +17,6 @@ use chillerlan\QRCode\Output\QRImage;
 
 class Home extends BaseController{
 
-    protected $listaCategorias = null;
 
     // public function index(): string {
 
@@ -42,18 +41,12 @@ class Home extends BaseController{
     public function index(): string {
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos
-        if ($this -> listaCategorias == null){
-            echo "1";
-            $listaCategorias = array();
-            foreach($baseDatos -> getListaCategorias() as $i => $val){
-                array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
-            }
-            $maleta_index['listaCategorias'] = $listaCategorias;
-
-            $this -> listaCategorias = $listaCategorias;
+        $listaCategorias = array();
+        foreach($baseDatos -> getListaCategorias() as $i => $val){
+            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
         }
-
-         
+        session() -> set('listaCategorias', $listaCategorias);
+        $maleta_index['listaCategorias'] = $listaCategorias;
 
 
         //vistas
@@ -77,16 +70,20 @@ class Home extends BaseController{
 
     public function nuevoNegocio(): string {
         $baseDatos = new BaseDatos();
-        if ($this -> listaCategorias == null){
-            echo "2";
+        $sesion = session() -> get("listaCategorias");
+        if(empty($sesion)){
+            echo "la sesion no existe";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
                 array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
             }
             $nuevo_negocio['listaCategorias'] = $listaCategorias;
-
-            $this -> listaCategorias = $listaCategorias;
+        }else{
+            echo "la sesion existe";
+            $nuevo_negocio['listaCategorias'] = session() -> get("listaCategorias");
         }
+
+
         
         //vistas
         $maleta['head_content'] = view('head_content');
