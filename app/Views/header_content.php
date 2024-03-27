@@ -25,5 +25,5 @@
 <ul class="listaMenu" style="display: none">
     <li>Iniciar sesion</li>
     <li>Escribe tu reseña</li>
-    <li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>
+    <li><form action="nuevoNegocio" method="post"><input type="submit" value="¿Eres un negocio?"></form></li>
 </ul>
