@@ -17,7 +17,7 @@ use chillerlan\QRCode\Output\QRImage;
 
 class Home extends BaseController{
 
-    private $listaCategorias = null;
+    private $listaCategorias = 0;
 
     // public function index(): string {
 
@@ -42,7 +42,7 @@ class Home extends BaseController{
     public function index(): string {
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
-        if ($this -> listaCategorias == null){
+        if ($this -> listaCategorias == 0){
             echo "entra1";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
@@ -78,7 +78,7 @@ class Home extends BaseController{
     public function nuevoNegocio(): string {
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
-        if ($this -> listaCategorias == null){
+        if ($this -> listaCategorias == 0){
             echo "entra2";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
