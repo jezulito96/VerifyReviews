@@ -59,3 +59,50 @@ h4{
   height: 16px;
 }
   
+/* formulario comercio */
+.containerNegocioForm{
+  width: 90vw;
+  height: auto;
+}
+
+form {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #274C77;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #A3CEF1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #FFFAFB;
+  color: #274C77;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color: #53A6D9;
+  border: none;
+  border-radius: 4px;
+  color: #FFFAFB;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #6096BA;
+}

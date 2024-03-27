@@ -17,6 +17,8 @@ use chillerlan\QRCode\Output\QRImage;
 
 class Home extends BaseController{
 
+    private $listaCategorias = null;
+
     // public function index(): string {
 
     //     $baseDatos = new BaseDatos();
@@ -39,14 +41,18 @@ class Home extends BaseController{
 
     public function index(): string {
         $baseDatos = new BaseDatos();
+        //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
+        if ($this -> listaCategorias == null){
+            $listaCategorias = array();
+            foreach($baseDatos -> getListaCategorias() as $i => $val){
+                array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+            }
+            $maleta_index['listaCategorias'] = $listaCategorias;
 
-
-        //recojo de la lista BD las categorías y las convierto en objetos
-        $listaCategorias = array();
-        foreach($baseDatos -> getListaCategorias() as $i => $val){
-            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+            $this -> listaCategorias = $listaCategorias;
         }
-        $maleta_index['listaCategorias'] = $listaCategorias;
+
+         
 
 
         //vistas
@@ -69,14 +75,24 @@ class Home extends BaseController{
     }
 
     public function nuevoNegocio(): string {
-        
-        // $maleta['val'] = $this->request->getGet('clavePublica');
+        $baseDatos = new BaseDatos();
+        //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
+        if ($this -> listaCategorias == null){
+            echo "entra";
+            $listaCategorias = array();
+            foreach($baseDatos -> getListaCategorias() as $i => $val){
+                array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+            }
+            $nuevo_negocio['listaCategorias'] = $listaCategorias;
 
+            $this -> listaCategorias = $listaCategorias;
+        }
         
+
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['nuevo_negocio'] = view('nuevo_negocio');
+        $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
         return view('index', $maleta);
     }
 }
