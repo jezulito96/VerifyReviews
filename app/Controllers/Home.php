@@ -41,8 +41,6 @@ class Home extends BaseController{
 
     public function index(): string {
         $baseDatos = new BaseDatos();
-
-
         //recojo de la lista BD las categorías y las convierto en objetos
         if ($this -> listaCategorias == null){
             echo "1";
