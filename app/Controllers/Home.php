@@ -43,6 +43,7 @@ class Home extends BaseController{
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
         if ($this -> listaCategorias == null){
+            echo "entra1";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
                 array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
@@ -78,7 +79,7 @@ class Home extends BaseController{
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos si listaCategorias es null
         if ($this -> listaCategorias == null){
-            echo "entra";
+            echo "entra2";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
                 array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
