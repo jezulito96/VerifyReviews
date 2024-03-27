@@ -41,12 +41,16 @@ class Home extends BaseController{
     public function index(): string {
         $baseDatos = new BaseDatos();
         //recojo de la lista BD las categorías y las convierto en objetos
-        $listaCategorias = array();
-        foreach($baseDatos -> getListaCategorias() as $i => $val){
-            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+        $sesion = session() -> get("listaCategorias");
+        if(empty($sesion)){
+            $listaCategorias = array();
+            foreach($baseDatos -> getListaCategorias() as $i => $val){
+                array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+            }
+            $maleta_index['listaCategorias'] = $listaCategorias;
+        }else{
+            $maleta_index['listaCategorias'] = session() -> get("listaCategorias");
         }
-        session() -> set('listaCategorias', $listaCategorias);
-        $maleta_index['listaCategorias'] = $listaCategorias;
 
 
         //vistas
@@ -72,14 +76,12 @@ class Home extends BaseController{
         $baseDatos = new BaseDatos();
         $sesion = session() -> get("listaCategorias");
         if(empty($sesion)){
-            echo "la sesion no existe";
             $listaCategorias = array();
             foreach($baseDatos -> getListaCategorias() as $i => $val){
                 array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
             }
             $nuevo_negocio['listaCategorias'] = $listaCategorias;
         }else{
-            echo "la sesion existe";
             $nuevo_negocio['listaCategorias'] = session() -> get("listaCategorias");
         }
 
