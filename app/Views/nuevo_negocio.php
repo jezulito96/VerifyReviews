@@ -5,20 +5,19 @@
     <form action="setNegocio" method="post" id="formSetNegocio">
 
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" pattern="/^[A-Za-z\s]+$/" required>
+        <input type="text" id="nombre" name="nombre" >
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" required>
+        <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" >
 
         <label for="calle">Calle:</label>
-        <input type="text" id="calle" name="calle" pattern="/^[A-Za-z0-9\s.,#-]+$/"
-            placeholder="C/ Calle Juan Carlos, 15">
+        <input type="text" id="calle" name="calle" placeholder="C/ Calle Juan Carlos, 15">
 
         <label for="ciudad">Ciudad:</label>
-        <input type="text" id="ciudad" name="ciudad" pattern="/^[A-Za-z0-9\s.,#-]{1,70}$/" required>
+        <input type="text" id="ciudad" name="ciudad" >
 
         <label for="pais">País:</label>
-        <input type="text" id="pais" name="pais" pattern="/^[A-Za-z\s]+$/">
+        <input type="text" id="pais" name="pais" >
 
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
