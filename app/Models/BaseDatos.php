@@ -4,9 +4,11 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 
-class BaseDatos extends Model{
+class BaseDatos extends Model
+{
 
-    function getListaCategorias()    {
+    function getListaCategorias()
+    {
 
         $orden = "SELECT cod_categoria, tipo_negocio FROM categoria";
         $listaCategorias = $this->db->query($orden);
@@ -16,7 +18,8 @@ class BaseDatos extends Model{
     }
 
 
-    function getListaNegocios()    {
+    function getListaNegocios()
+    {
 
         $orden = "SELECT * FROM categoria";
         $listaNegocios = $this->db->query($orden);
@@ -25,10 +28,11 @@ class BaseDatos extends Model{
         return $listaNegocios->getResultArray();
     }
 
-    function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
+    function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo)
+    {
 
-        $orden = "INSERT INTO negocio (nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria, nombre_titular, telefono_titular, activo, confirma_correo) VALUES (':nombre', ':email', ':calle', ':ciudad', ':pais', :telefono_negocio, ':fotos', ':foto_principal', ':coordenadas', ':sitio_web', :cod_categoria, ':nombre_titular', :telefono_titular, :activo, :confirma_correo)";
-    
+        $orden = "INSERT INTO negocio (nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria, nombre_titular, telefono_titular, activo, confirma_correo) VALUES (:nombre, :email, :calle, :ciudad, :pais, :telefono_negocio, :fotos, :foto_principal, :coordenadas, :sitio_web, :cod_categoria, :nombre_titular, :telefono_titular, :activo, :confirma_correo)";
+
         $this->db->query($orden, [
             'nombre' => $nombre,
             'email' => $email,
@@ -46,7 +50,8 @@ class BaseDatos extends Model{
             'activo' => $activo,
             'confirma_correo' => $confirma_correo
         ]);
-    
+
+
     }
 }
 
