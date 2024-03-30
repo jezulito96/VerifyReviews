@@ -65,8 +65,19 @@
                     if (resultado) {
                         var latitud = resultado.lat;
                         var longitud = resultado.lon;
-                        console.log("Latitud: " + latitud);
-                        console.log("Longitud: " + longitud);
+                        $("<input>").attr({
+                        type: "hidden",
+                        id: "latitud",
+                        name: "latitud",
+                        value: latitud
+                        }).appendTo("#formularioNegocio");
+
+                        $("<input>").attr({
+                        type: "hidden",
+                        id: "longitud",
+                        name: "longitud",
+                        value: longitud
+                        }).appendTo("#formularioNegocio");
 
                         $('#formularioNegocio').unbind('submit').submit();
                     } else {
