@@ -103,10 +103,10 @@ class Home extends BaseController{
 
             for ($i = 0; $i < $numFotos; $i++) {
                 $nombre_foto = "img" . ($i + 1);
-                $campoBD .= $nombre_foto . ":";
+                $fotosBD .= $nombre_foto . ":";
 
                 $tipoFoto = $_FILES['fotos']['type'][$i]; 
-                $campoBD .= $tipoFoto . "-";
+                $fotosBD .= $tipoFoto . "-";
 
                 $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
                         
