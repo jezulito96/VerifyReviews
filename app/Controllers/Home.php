@@ -86,13 +86,13 @@ class Home extends BaseController{
         // $latitud = $this->request->getPost('latitud');
         // $longitud = $this->request->getPost('longitud');
 
-        $directorioNegocio = base_url() . "images/" . strtolower($nombre);
+        $directorioNegocio = base_url() . "images/" . strtolower($nombre) . "/";
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) mkdir($directorioNegocio, 0777, true) ;
         // si existe se comprueba que esten las carpetas de negocio y de resenas
         //si no existen se crean 
-        if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio", 0777, true) ;
-        if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas", 0777, true) ;
+        if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio/", 0777, true) ;
+        if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas/", 0777, true) ;
 
         //campo fotos de la base de datos para guardar nombre del archivo y extension
         $fotosBD = "";
