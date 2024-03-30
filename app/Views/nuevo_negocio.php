@@ -67,6 +67,8 @@
                         var longitud = resultado.lon;
                         console.log("Latitud: " + latitud);
                         console.log("Longitud: " + longitud);
+
+                        $("#formularioNegocio").submit();
                     } else {
                         console.log("No se encontró la dirección.");
                     }
