@@ -42,33 +42,3 @@
         <input type="submit" value="Registrarse" id="registroNegocio">
     </form>
 </div>
-<script>
-    // obtener lat y long a partir de calle, ciudad y pais
-    $("#registroNegocio").click(function () {
-        console.log("entra");
-        var calle = $("#calle").val();
-        var ciudad = $("#ciudad").val();
-        var pais = $("#pais").val();
-
-        var direccion = calle + ", " + ciudad + ", " + pais;
-        var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
-
-        axios.get(url)
-            .then(function (response) {
-                var resultado = response.data[0];
-                if (resultado) {
-                    var latitud = resultado.lat;
-                    var longitud = resultado.lon;
-                    console.log("Latitud: " + latitud);
-                    console.log("Longitud: " + longitud);
-
-
-                } else {
-                    console.log("No se encontró la dirección.");
-                }
-            })
-            .catch(function (error) {
-                console.log("Error al obtener la latitud y longitud:", error);
-            });
-    });
-</script>
