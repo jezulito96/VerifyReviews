@@ -141,8 +141,8 @@ class Home extends BaseController{
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
-        $master = Master::obtenerInstancia();
-        $master -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+        $baseDatos = new BaseDatos();
+        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
 
 
         

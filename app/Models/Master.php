@@ -44,11 +44,9 @@ class Master {
     // }
 
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo){
-        // se guarda en BD 
-        $baseDatos = new BaseDatos();
-        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
-
         // se crea objeto y se añade a la lista de negocios
+
+        
 
 
     }
