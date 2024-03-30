@@ -116,8 +116,6 @@ class Home extends BaseController{
                 }else{
                     $fotosBD .= $nombre_foto . ",";
                 }
-                
-
                         
                 if (move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto)) {
                     echo "todo guay";
@@ -126,6 +124,7 @@ class Home extends BaseController{
                 }
             }
         }
+        echo $fotosBD;
 
         // if(!empty($latitud)) {
         //     echo $latitud;
