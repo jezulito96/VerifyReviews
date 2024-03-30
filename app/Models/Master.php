@@ -4,26 +4,35 @@ namespace App\Models;
 
 
 class Master {
+    private static $instancia;
     private $listaCategorias;
 
-    public function getListaCategorias() {
-        $baseDatos = new BaseDatos();
+    private function __construct() {}
 
-        $listaCategorias = array();        
-        foreach($baseDatos -> getListaCategorias() as $i => $val){
-            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+    public static function obtenerInstancia() {
+        if (self::$instancia === null) {
+            self::$instancia = new Master();
+        }
+        return self::$instancia;
+    }
+
+    public function getListaCategorias() {
+        if ($this->listaCategorias === null) {
+            $baseDatos = new BaseDatos();
+
+            $this->listaCategorias = array();        
+            foreach($baseDatos->getListaCategorias() as $val){
+                $this->listaCategorias[] = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
+            }
         }
         
-        return $listaCategorias;
+        return $this->listaCategorias;
     }
 
     public function getListaUsuarios() {
 
     }
-
-
-
-
 }
+
 
 ?>

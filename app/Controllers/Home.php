@@ -38,22 +38,10 @@ class Home extends BaseController{
     //     // echo view('head_content');
     //     return view('index', $maleta);
     // }
-
+    
     public function index(): string {
-        // $baseDatos = new BaseDatos();
-        // //recojo de la lista BD las categorías y las convierto en objetos
-        // $sesion = session() -> get("listaCategorias");
-        // if(empty($sesion)){
-        //     $listaCategorias = array();
-        //     foreach($baseDatos -> getListaCategorias() as $i => $val){
-        //         array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
-        //     }
-        //     $maleta_index['listaCategorias'] = $listaCategorias;
-        // }else{
-        //     $maleta_index['listaCategorias'] = session() -> get("listaCategorias");
-        // }
-        $master = new Master();
-        $maleta_index['listaCategorias'] = $master -> getListaCategorias();
+        $master = Master::obtenerInstancia();
+        $maleta_index['listaCategorias'] = $master->getListaCategorias();
         
         //vistas
         $maleta['head_content'] = view('head_content');
