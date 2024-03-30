@@ -18,6 +18,7 @@ class Master {
     }
 
     public function getListaCategorias() {
+        echo "entra";
         $baseDatos = new BaseDatos();
         if ($this->listaCategorias === null) {
 
