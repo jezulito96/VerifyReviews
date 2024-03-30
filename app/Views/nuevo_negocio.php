@@ -40,7 +40,7 @@
             ?>
         </select>
 
-        <input type="submit" value="Registrarse" id="registroNegocio">
+        <input type="button" value="Registrarse" id="registroNegocio">
     </form>
 </div>
 <!-- Libreria para obtener lat y long a partir de la calle -->
