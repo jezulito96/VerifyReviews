@@ -86,8 +86,11 @@ class Home extends BaseController{
         // $latitud = $this->request->getPost('latitud');
         // $longitud = $this->request->getPost('longitud');
 
+        //recibo imagenes
         if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
-            echo "siiii";
+            $numFotos = count($_FILES['fotos']['name']);
+
+            echo $numFotos;
         }else{
             echo "noo";
         }
