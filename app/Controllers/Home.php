@@ -86,7 +86,7 @@ class Home extends BaseController{
         // $latitud = $this->request->getPost('latitud');
         // $longitud = $this->request->getPost('longitud');
 
-        $directorioNegocio = base_url() . "images/" . strtolower($nombre);
+        $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) mkdir($directorioNegocio, 0777, true) ;
         // si existe se comprueba que esten las carpetas de negocio y de resenas
