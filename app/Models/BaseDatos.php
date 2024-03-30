@@ -26,7 +26,8 @@ class BaseDatos extends Model{
     }
 
     function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
-        $orden = "INSERT INTO negocio (nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria, nombre_titular, telefono_titular, activo, confirma_correo) VALUES (:nombre, :email, :calle, :ciudad, :pais, :telefono_negocio, :fotos, :foto_principal, :coordenadas, :sitio_web, :cod_categoria, :nombre_titular, :telefono_titular, :activo, :confirma_correo)";
+
+        $orden = "INSERT INTO negocio (nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria, nombre_titular, telefono_titular, activo, confirma_correo) VALUES (':nombre', ':email', ':calle', ':ciudad', ':pais', :telefono_negocio, ':fotos', ':foto_principal', ':coordenadas', ':sitio_web', :cod_categoria, ':nombre_titular', :telefono_titular, :activo, :confirma_correo)";
     
         $this->db->query($orden, [
             'nombre' => $nombre,
