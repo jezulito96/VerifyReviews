@@ -104,7 +104,6 @@ class Home extends BaseController{
 
         // campo fotos de la base de datos para guardar nombre del archivo y extension
         $fotosBD = "";
-        $foto_principal = "";
 
         //recibo imagen principal
         $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
