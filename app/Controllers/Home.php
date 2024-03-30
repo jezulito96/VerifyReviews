@@ -53,7 +53,6 @@ class Home extends BaseController{
     public function resena(): string {
         
         $maleta['val'] = $this->request->getGet('clavePublica');
-
         
         //vistas
         $maleta['head_content'] = view('head_content');
@@ -63,17 +62,8 @@ class Home extends BaseController{
     }
 
     public function nuevoNegocio(): string {
-        $baseDatos = new BaseDatos();
-        $sesion = session() -> get("listaCategorias");
-        if(empty($sesion)){
-            $listaCategorias = array();
-            foreach($baseDatos -> getListaCategorias() as $i => $val){
-                array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
-            }
-            $nuevo_negocio['listaCategorias'] = $listaCategorias;
-        }else{
-            $nuevo_negocio['listaCategorias'] = session() -> get("listaCategorias");
-        }
+        $master = Master::obtenerInstancia();
+        $nuevo_negocio['listaCategorias'] = $master->getListaCategorias();
 
 
         
@@ -93,15 +83,17 @@ class Home extends BaseController{
         $this->request->getGet('fotos');
         $this->request->getGet('sitio_web');
         $this->request->getGet('categoria');
+        $latitud = $this->request->getGet('latitud');
+        $longitud = $this->request->getGet('longitud');
 
-        $nuevo_negocio['resultadoSet'] = false;
 
-        
+        if(isset($latitud)) echo $latitud;
+        if(isset($longitud)) echo $longitud;
         
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['nuevo_negocio'] = view('nuevo_negocio', $nuevo_negocio);
+        $maleta['nuevo_negocio'] = view('nuevo_negocio');
         return view('index', $maleta);
     }
 }
