@@ -93,7 +93,7 @@ select {
   color: #274C77;
 }
 
-input[type="submit"] {
+#registroNegocio {
   width: auto;
   padding: 10px 20px;
   background-color: #53A6D9;
@@ -103,6 +103,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+#registroNegocio:hover {
   background-color: #6096BA;
 }
