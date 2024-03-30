@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\BaseDatos;
+use App\Models\Master;
 use App\Models\Qr;
 use App\Models\Categoria;
 use App\Models\Comercio;
@@ -37,29 +38,27 @@ class Home extends BaseController{
     //     // echo view('head_content');
     //     return view('index', $maleta);
     // }
-    private $home;
-    private $listaCategorias;
-
-    public function cargarDatos(){
-        $this -> home = new  Home();
-        $baseDatos = new BaseDatos();
-        $listaCategorias = array();
-        foreach($baseDatos -> getListaCategorias() as $i => $val){
-            array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
-        }
-        $this ->  $listaCategorias;
-    }
 
     public function index(): string {
-        $maleta_index['listaCategorias'] = $this -> home::listaCategorias;
-        //recojo de la lista BD las categorías y las convierto en objetos
-
-
+        // $baseDatos = new BaseDatos();
+        // //recojo de la lista BD las categorías y las convierto en objetos
+        // $sesion = session() -> get("listaCategorias");
+        // if(empty($sesion)){
+        //     $listaCategorias = array();
+        //     foreach($baseDatos -> getListaCategorias() as $i => $val){
+        //         array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
+        //     }
+        //     $maleta_index['listaCategorias'] = $listaCategorias;
+        // }else{
+        //     $maleta_index['listaCategorias'] = session() -> get("listaCategorias");
+        // }
+        $master = new Master();
+        $maleta_index['listaCategorias'] = $master -> getListaCategorias();
         
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content'); 
-        $maleta['index_content'] = view('index_content',$maleta_index ); 
+        $maleta['index_content'] = view('index_content', $maleta_index); 
         return view('index', $maleta);
     }
 

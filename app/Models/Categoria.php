@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 class Categoria {
     private $codCategoria;
     private $tipoNegocio;
@@ -20,6 +21,7 @@ class Categoria {
     public function getTipoNegocio() {
         return $this->tipoNegocio;
     }
+
 }
 
 ?>
