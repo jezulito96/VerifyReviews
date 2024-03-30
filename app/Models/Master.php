@@ -6,6 +6,7 @@ namespace App\Models;
 class Master {
     private static $instancia;
     private $listaCategorias;
+    private $listaNegocios;
 
     private static $baseDatos;
 
@@ -21,11 +22,10 @@ class Master {
 
     public function getListaCategorias() {
         if ($this->listaCategorias === null) {
-            
 
             $this->listaCategorias = array();        
             foreach(self::$baseDatos->getListaCategorias() as $val){
-                $this->listaCategorias[] = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
+                $this->listaCategorias = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
             }
         }
         
@@ -33,17 +33,28 @@ class Master {
     }
 
     public function getListaNegocios() {
-        if ($this->listaCategorias === null) {
-            $baseDatos = new BaseDatos();
+        if ($this->listaNegocios === null) {
 
-            $this->listaCategorias = array();        
+            $this->listaNegocios = array();        
             foreach(self::$baseDatos->getListaNegocios() as $val){
-
+                $this->listaNegocios = new Negocio($val['cod_categoria'], $val['tipo_negocio']);
             }
         }
         
-        return $this->listaCategorias;
+        return $this->listaNegocios;
     }
+
+    public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo){
+        // se guarda en BD 
+        self::$baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+
+        // se crea objeto y se añade a la lista de negocios
+
+
+    }
+
+
+
 }
 
 

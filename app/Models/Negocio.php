@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Comercio {
+class Negocio {
     private $id;
     private $nombre;
     private $coordenadas;
@@ -70,15 +70,15 @@ class Comercio {
     }
 
     public function generarCodigoQR() {
-        // Implementación del método
+
     }
 
     public function recibirMensaje($mensaje) {
-        // Implementación del método
+
     }
 
     public function asignarMapa() {
-        // Implementación del método
+
     }
 
     public function setResenas($resenas) {

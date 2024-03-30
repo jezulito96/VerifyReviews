@@ -5,7 +5,7 @@ use App\Models\BaseDatos;
 use App\Models\Master;
 use App\Models\Qr;
 use App\Models\Categoria;
-use App\Models\Comercio;
+use App\Models\Negocio;
 use App\Models\Mapa;
 use App\Models\Resena;
 use App\Models\Usuario;
@@ -75,16 +75,24 @@ class Home extends BaseController{
     }
 
     public function setNegocio(): string {
-        $nombre = $this->request->getPost('nombre');
+        $nombre = $this->request->getPost('nombreNegocio');
         $email = $this->request->getPost('email');
         $calle = $this->request->getPost('calle');
         $ciudad = $this->request->getPost('ciudad');
         $pais = $this->request->getPost('pais');
-        $fotos = $this->request->getPost('fotos');
+        $telefono_negocio = $this->request->getPost('telefonoNegocio');
         $sitio_web = $this->request->getPost('sitio_web');
-        $categoria = $this->request->getPost('categoria');
+        $cod_categoria = $this->request->getPost('categoria');
+        $nombre_titular = $this->request->getPost('nombreTitular');
+        $telefono_titular = $this->request->getPost('telefonoTitular');
+        $activo = 1;
+        $confirma_correo = 0;
+
+        // recojo en una misma variable las coordenadas
         $latitud = $this->request->getPost('latitud');
         $longitud = $this->request->getPost('longitud');
+        $coordenadas = $latitud . "," . $longitud;
+
 
         $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
@@ -96,6 +104,13 @@ class Home extends BaseController{
 
         // campo fotos de la base de datos para guardar nombre del archivo y extension
         $fotosBD = "";
+        $foto_principal = "";
+
+        //recibo imagen principal
+        $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
+        $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
+        $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
+        move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . "imgPrincipal." . $extensionPrincipal);
 
         // recibo imagenes
         if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
@@ -117,19 +132,17 @@ class Home extends BaseController{
                     $fotosBD .= $nombre_foto . ",";
                 }
                         
-                if (move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto)) {
-                    echo "todo guay";
-                } else {
-                    echo "todo feo";
-                }
+                move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto);
+                   
             }
         }
 
-        // añado un nuevo objeto a la lista de negocios
-        
+
 
         // añado el nuevo negocio a la base de datos
-        
+        // añado un nuevo objeto a la lista de negocios
+        $master = Master::obtenerInstancia();
+        $master -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
 
 
         

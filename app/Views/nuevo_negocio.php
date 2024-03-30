@@ -4,8 +4,8 @@
 <div class="containerNegocioForm">
     <form action="setNegocio" method="post" id="formularioNegocio" enctype="multipart/form-data" >
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
+        <label for="nombreNegocio">Nombre del negocio:</label>
+        <input type="text" id="nombreNegocio" name="nombreNegocio">
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/">
@@ -19,11 +19,14 @@
         <label for="pais">País:</label>
         <input type="text" id="pais" name="pais">
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
+        <label for="telefonoNegocio">Teléfono:</label>
+        <input type="tel" id="telefonoNegocio" name="telefonoNegocio" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
 
         <label for="fotos">Fotos:</label>
         <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple>
+
+        <label for="fotoPrincipal">Fotos principal:</label>
+        <input type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" >
 
         <label for="sitio_web">Sitio Web:</label>
         <input type="url" id="sitio_web" name="sitio_web"
@@ -34,11 +37,17 @@
             <?php
             if (isset($listaCategorias)) {
                 foreach ($listaCategorias as $i => $cat) {
-                    echo '<option value="' . strtolower($cat->getTipoNegocio()) . '">' . $cat->getTipoNegocio() . '</option>';
+                    echo '<option value="' . $cat->getCodCategoria() . '">' . $cat->getTipoNegocio() . '</option>';
                 }
             }
             ?>
         </select>
+
+        <label for="telefonoTitular">Teléfono del titular:</label>
+        <input type="tel" id="telefonoTitular" name="telefonoTitular" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
+
+        <label for="nombreTitular">Nombre del titular:</label>
+        <input type="text" id="nombreTitular" name="nombreTitular">
 
         <input type="submit" value="Registrarse" id="registroNegocio">
     </form>
