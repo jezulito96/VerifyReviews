@@ -94,30 +94,29 @@ class Home extends BaseController{
         if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio/", 0777, true) ;
         if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas/", 0777, true) ;
 
-        //campo fotos de la base de datos para guardar nombre del archivo y extension
-        // $fotosBD = "";
+        // campo fotos de la base de datos para guardar nombre del archivo y extension
+        $fotosBD = "";
 
-        //recibo imagenes
-        // if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
-        //     $numFotos = count($_FILES['fotos']['name']);
+        // recibo imagenes
+        if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
+            $numFotos = count($_FILES['fotos']['name']);
 
-        //     for ($i = 0; $i < $numFotos; $i++) {
-        //         $nombre_foto = "img" . ($i + 1);
-        //         $fotosBD .= $nombre_foto . ":";
+            for ($i = 0; $i < $numFotos - 1; $i++) {
+                $tipoFoto = $_FILES['fotos']['type'][$i]; 
+                $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
 
-        //         $tipoFoto = $_FILES['fotos']['type'][$i]; 
-        //         $fotosBD .= $tipoFoto . "-";
+                $nombre_foto = "img" . ($i + 1) . "." .$tipoFoto;
+                $fotosBD .= $nombre_foto . ",";
 
-        //         $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
                         
-        //         if (move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto)) {
-        //             echo "todo guay";
-        //         } else {
-        //             echo "todo feo";
-        //         }
-        //     }
+                if (move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto)) {
+                    echo "todo guay";
+                } else {
+                    echo "todo feo";
+                }
+            }
             
-        // }
+        }
 
         // if(!empty($latitud)) {
         //     echo $latitud;
