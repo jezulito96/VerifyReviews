@@ -76,15 +76,15 @@ class Home extends BaseController{
 
     public function setNegocio(): string {
         $nombre = $this->request->getPost('nombre');
-        // $this->request->getPost('email');
-        // $this->request->getPost('calle');
-        // $this->request->getPost('ciudad');
-        // $this->request->getPost('pais');
-        // $this->request->getPost('fotos');
-        // $this->request->getPost('sitio_web');
-        // $this->request->getPost('categoria');
-        // $latitud = $this->request->getPost('latitud');
-        // $longitud = $this->request->getPost('longitud');
+        $email = $this->request->getPost('email');
+        $calle = $this->request->getPost('calle');
+        $ciudad = $this->request->getPost('ciudad');
+        $pais = $this->request->getPost('pais');
+        $fotos = $this->request->getPost('fotos');
+        $sitio_web = $this->request->getPost('sitio_web');
+        $categoria = $this->request->getPost('categoria');
+        $latitud = $this->request->getPost('latitud');
+        $longitud = $this->request->getPost('longitud');
 
         $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
@@ -124,18 +124,12 @@ class Home extends BaseController{
                 }
             }
         }
-        echo $fotosBD;
 
-        // if(!empty($latitud)) {
-        //     echo $latitud;
-        // }else{
-        //     echo "naaa";
-        // }
-        // if(!empty($longitud)) {
-        //     echo $longitud;
-        // }else{
-        //     echo "naaa";
-        // }
+        // añado un nuevo objeto a la lista de negocios
+        
+
+        // añado el nuevo negocio a la base de datos
+        
 
 
         
