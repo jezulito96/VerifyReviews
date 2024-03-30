@@ -75,101 +75,86 @@ class Home extends BaseController{
     }
 
     public function setNegocio(): string {
-        // try{
-        //     $nombre = $this->request->getPost('nombreNegocio');
-        //     $email = $this->request->getPost('email');
-        //     $calle = $this->request->getPost('calle');
-        //     $ciudad = $this->request->getPost('ciudad');
-        //     $pais = $this->request->getPost('pais');
-        //     $telefono_negocio = $this->request->getPost('telefonoNegocio');
-        //     $sitio_web = $this->request->getPost('sitio_web');
-        //     $cod_categoria = $this->request->getPost('categoria');
-        //     $nombre_titular = $this->request->getPost('nombreTitular');
-        //     $telefono_titular = $this->request->getPost('telefonoTitular');
-        //     $activo = 1;
-        //     $confirma_correo = 0;
-    
-        //     // recojo en una misma variable las coordenadas
-        //     $latitud = $this->request->getPost('latitud');
-        //     $longitud = $this->request->getPost('longitud');
-        //     $coordenadas = $latitud . "," . $longitud;
-    
-    
-        //     $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
-        //     //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
-        //     if(!is_dir($directorioNegocio)) mkdir($directorioNegocio, 0777, true) ;
-        //     // si existe se comprueba que esten las carpetas de negocio y de resenas
-        //     //si no existen se crean 
-        //     if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio/", 0777, true) ;
-        //     if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas/", 0777, true) ;
-    
-        //     // campo fotos de la base de datos para guardar nombre del archivo y extension
-        //     $fotosBD = "";
-    
-        //     //recibo imagen principal
-        //     $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
-        //     $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
-        //     $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
-        //     $foto_principal = "imgPrincipal." . $extensionPrincipal;
-        //     move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $foto_principal);
-    
-        //     // recibo imagenes
-        //     if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
-        //         $numFotos = count($_FILES['fotos']['name']);
-    
-        //         for ($i = 0; $i < $numFotos; $i++) {
-        //             //extraigo la extension del archivo
-        //             $nombreAntiguo = $_FILES['fotos']['name'][$i];
-        //             $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
-    
-        //             //recojo ubicacion temporal de la foto
-        //             $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
-    
-        //             $nombre_foto = "img" . ($i + 1) . "." . $extension;
-    
-        //             if($i == $numFotos -1){
-        //                 $fotosBD .= $nombre_foto;
-        //             }else{
-        //                 $fotosBD .= $nombre_foto . ",";
-        //             }
-                            
-        //             move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto);
-                       
-        //         }
-        //     }
-    
-    
-    
-        //     // añado el nuevo negocio a la base de datos
-        //     // añado un nuevo objeto a la lista de negocios
-        //     $baseDatos = new BaseDatos();
-        //     $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
-    
-            
-        //     // añado a la lista de negocios el nuevo objeto negocio
-        //     $master = Master::obtenerInstancia();
-        //     $master->setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
-    
+        $nombre = $this->request->getPost('nombreNegocio');
+        $email = $this->request->getPost('email');
+        $calle = $this->request->getPost('calle');
+        $ciudad = $this->request->getPost('ciudad');
+        $pais = $this->request->getPost('pais');
+        $telefono_negocio = $this->request->getPost('telefonoNegocio');
+        $sitio_web = $this->request->getPost('sitio_web');
+        $cod_categoria = $this->request->getPost('categoria');
+        $nombre_titular = $this->request->getPost('nombreTitular');
+        $telefono_titular = $this->request->getPost('telefonoTitular');
+        $activo = 1;
+        $confirma_correo = 0;
 
-        //     // recojo categorias para pintarlas
-        //     $master = Master::obtenerInstancia();
-        //     $nuevo_negocio['listaCategorias'] = $master->getListaCategorias();
+        // recojo en una misma variable las coordenadas
+        $latitud = $this->request->getPost('latitud');
+        $longitud = $this->request->getPost('longitud');
+        $coordenadas = $latitud . "," . $longitud;
 
 
-        //     // vistas 
-        //     $maleta['head_content'] = view('head_content');
-        //     $maleta['header_content'] = view('header_content');
-        //     $maleta['nuevo_negocio'] = view('nuevo_negocio');
-        //     return view('index', $maleta);
+        $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
+        //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
+        if(!is_dir($directorioNegocio)) mkdir($directorioNegocio, 0777, true) ;
+        // si existe se comprueba que esten las carpetas de negocio y de resenas
+        //si no existen se crean 
+        if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio/", 0777, true) ;
+        if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas/", 0777, true) ;
 
-        // }catch(Exception $e){
-        //     //si va todo bien vuelve al index
-        //     $maleta_negocio['error']  = "algo ha salido mal";
+        // campo fotos de la base de datos para guardar nombre del archivo y extension
+        $fotosBD = "";
 
-        //     $this -> nuevoNegocio();
-        // }
-           return $this -> nuevoNegocio();
+        //recibo imagen principal
+        $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
+        $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
+        $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
+        $foto_principal = "imgPrincipal." . $extensionPrincipal;
+        move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $foto_principal);
+
+        // recibo imagenes
+        if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
+            $numFotos = count($_FILES['fotos']['name']);
+
+            for ($i = 0; $i < $numFotos; $i++) {
+                //extraigo la extension del archivo
+                $nombreAntiguo = $_FILES['fotos']['name'][$i];
+                $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
+
+                //recojo ubicacion temporal de la foto
+                $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
+
+                $nombre_foto = "img" . ($i + 1) . "." . $extension;
+
+                if($i == $numFotos -1){
+                    $fotosBD .= $nombre_foto;
+                }else{
+                    $fotosBD .= $nombre_foto . ",";
+                }
+                        
+                move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto);
+                   
+            }
+        }
+
+
+
+        // añado el nuevo negocio a la base de datos
+        // añado un nuevo objeto a la lista de negocios
+        $baseDatos = new BaseDatos();
+        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+
         
+        // añado a la lista de negocios el nuevo objeto negocio
+        $master = Master::obtenerInstancia();
+        $master->setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
 
+        $maleta_index['listaCategorias'] = $master->getListaCategorias();
+
+        //si va todo bien vuelve al index
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['index_content'] = view('index_content', $maleta_index); 
+        return view('index', $maleta);
     }
 }
