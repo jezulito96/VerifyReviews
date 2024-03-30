@@ -4,8 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 
-class BaseDatos extends Model
-{
+class BaseDatos extends Model{
 
     function getListaCategorias()    {
 

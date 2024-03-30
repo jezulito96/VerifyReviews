@@ -30,18 +30,18 @@ class Master {
         return $this->listaCategorias;
     }
 
-    public function getListaNegocios() {
-        $baseDatos = new BaseDatos();
-        if ($this->listaNegocios === null) {
+    // public function getListaNegocios() {
+    //     $baseDatos = new BaseDatos();
+    //     if ($this->listaNegocios === null) {
 
-            $this->listaNegocios = array();        
-            foreach($baseDatos->getListaNegocios() as $val){
-                $this->listaNegocios = new Negocio();
-            }
-        }
+    //         $this->listaNegocios = array();        
+    //         foreach($baseDatos->getListaNegocios() as $val){
+    //             $this->listaNegocios = new Negocio();
+    //         }
+    //     }
         
-        return $this->listaNegocios;
-    }
+    //     return $this->listaNegocios;
+    // }
 
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo){
         // se guarda en BD 
