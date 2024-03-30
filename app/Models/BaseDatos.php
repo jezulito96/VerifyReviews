@@ -13,6 +13,16 @@
 
             return $listaCategorias -> getResultArray();  
         }
+
+
+        function getListaNegocios(){
+
+            $orden = "SELECT * FROM categoria";
+            $listaNegocios = $this -> db -> query($orden);
+          
+
+            return $listaNegocios -> getResultArray();  
+        }
     }
 
 
