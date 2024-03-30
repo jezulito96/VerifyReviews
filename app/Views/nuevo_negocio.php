@@ -11,7 +11,7 @@
         <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" required>
 
         <label for="calle">Calle:</label>
-        <input type="text" id="calle" name="calle" pattern="/^[A-Za-z0-9\s.,#-]+$/">
+        <input type="text" id="calle" name="calle" pattern="/^[A-Za-z0-9\s.,#-]+$/" placeholder="C/ Calle Juan Carlos, 15">
 
         <label for="ciudad">Ciudad:</label>
         <input type="text" id="ciudad" name="ciudad" pattern="/^[A-Za-z0-9\s.,#-]{1,70}$/" required>
@@ -33,7 +33,7 @@
         <?php
             if(isset($listaCategorias)){
                 foreach($listaCategorias as $i => $cat){
-                    echo '<option value="'. $cat -> getTipoNegocio() .'">'. $cat -> getTipoNegocio() .'</option>';
+                    echo '<option value="'. strtolower($cat -> getTipoNegocio()) .'">'. $cat -> getTipoNegocio() .'</option>';
                 }
             }
         ?>
