@@ -62,10 +62,12 @@
                 .then(function (response) {
                     var resultado = response.data[0];
                     if (resultado) {
+                        console.log("entra3");
                         var latitud = resultado.lat;
                         var longitud = resultado.lon;
                         <?php echo '<input type="hidden" name="latitud" value="'; ?> latitud <?php echo '" > '; ?>
                         <?php echo '<input type="hidden" name="altitud" value="'; ?> longitud <?php echo '" > '; ?>
+                        console.log("entra4");
 
                         $('#formSetNegocio').unbind('submit').submit();
                     } else {

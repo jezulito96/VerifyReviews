@@ -75,20 +75,28 @@ class Home extends BaseController{
     }
 
     public function setNegocio(): string {
-        $this->request->getGet('nombre');
-        $this->request->getGet('email');
-        $this->request->getGet('calle');
-        $this->request->getGet('ciudad');
-        $this->request->getGet('pais');
-        $this->request->getGet('fotos');
-        $this->request->getGet('sitio_web');
-        $this->request->getGet('categoria');
+        // $this->request->getGet('nombre');
+        // $this->request->getGet('email');
+        // $this->request->getGet('calle');
+        // $this->request->getGet('ciudad');
+        // $this->request->getGet('pais');
+        // $this->request->getGet('fotos');
+        // $this->request->getGet('sitio_web');
+        // $this->request->getGet('categoria');
         $latitud = $this->request->getGet('latitud');
         $longitud = $this->request->getGet('longitud');
 
 
-        if(isset($latitud)) echo $latitud;
-        if(isset($longitud)) echo $longitud;
+        if(isset($latitud)) {
+            echo $latitud;
+        }else{
+            echo "naaa";
+        }
+        if(isset($longitud)) {
+            echo $longitud;
+        }else{
+            echo "naaa";
+        }
         
         //vistas
         $maleta['head_content'] = view('head_content');
