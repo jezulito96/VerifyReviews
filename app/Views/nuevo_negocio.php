@@ -2,7 +2,7 @@
 <h4>Rellena el formulario para recibir tus reseñas</h4>
 
 <div class="containerNegocioForm">
-    <form action="setNegocio" method="post" id="formSetNegocio">
+    <form action="setNegocio" method="get" id="formSetNegocio">
 
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" >
@@ -46,10 +46,11 @@
 <script>
     // obtener lat y long a partir de calle, ciudad y pais
     $(document).ready(function () {
+        console.log("entra1");
         $('#formSetNegocio').submit(function (event) {
             event.preventDefault();
 
-            console.log("entra");
+            console.log("entra2");
             var calle = $("#calle").val();
             var ciudad = $("#ciudad").val();
             var pais = $("#pais").val();
