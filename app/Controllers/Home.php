@@ -83,8 +83,8 @@ class Home extends BaseController{
         // $this->request->getGet('fotos');
         // $this->request->getGet('sitio_web');
         // $this->request->getGet('categoria');
-        $latitud = $this->request->getGet('latitud');
-        $longitud = $this->request->getGet('longitud');
+        $latitud = $this->request->getPost('latitud');
+        $longitud = $this->request->getPost('longitud');
 
 
         if(!empty($latitud)) {
