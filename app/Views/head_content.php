@@ -150,8 +150,8 @@
             });
 
             // obtener lat y long a partir de calle, ciudad y pais
-            $("#formularioNegocio").submit(function(event) {
-                event.preventDefault();
+            $("#registroNegocio").click(function () {
+
                 console.log("entra");
                 var calle = $("#calle").val();
                 var ciudad = $("#ciudad").val();
@@ -168,7 +168,6 @@
                             var longitud = resultado.lon;
                             console.log("Latitud: " + latitud);
                             console.log("Longitud: " + longitud);
-                            $("#formularioNegocio")..unbind('submit').submit();
                         } else {
                             console.log("No se encontró la dirección.");
                         }
