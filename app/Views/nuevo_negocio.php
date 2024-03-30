@@ -20,7 +20,7 @@
         <input type="text" id="pais" name="pais">
 
         <label for="telefonoNegocio">Teléfono:</label>
-        <input type="tel" id="telefonoNegocio" name="telefonoNegocio" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
+        <input type="tel" id="telefonoNegocio" name="telefonoNegocio" >
 
         <label for="fotos">Fotos:</label>
         <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple>
@@ -44,7 +44,7 @@
         </select>
 
         <label for="telefonoTitular">Teléfono del titular:</label>
-        <input type="tel" id="telefonoTitular" name="telefonoTitular" pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/">
+        <input type="tel" id="telefonoTitular" name="telefonoTitular" >
 
         <label for="nombreTitular">Nombre del titular:</label>
         <input type="text" id="nombreTitular" name="nombreTitular">
