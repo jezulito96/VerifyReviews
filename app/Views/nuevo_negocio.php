@@ -55,47 +55,47 @@
 <!-- Libreria para obtener lat y long a partir de la calle -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-    // $(document).ready(function () {
+    $(document).ready(function () {
 
-    //     // obtener lat y long a partir de calle, ciudad y pais
-    //     $("#formularioNegocio").submit(function(event) {
-    //         event.preventDefault();
-    //         console.log("entra");
-    //         var calle = $("#calle").val();
-    //         var ciudad = $("#ciudad").val();
-    //         var pais = $("#pais").val();
+        // obtener lat y long a partir de calle, ciudad y pais
+        $("#formularioNegocio").submit(function(event) {
+            event.preventDefault();
+            console.log("entra");
+            var calle = $("#calle").val();
+            var ciudad = $("#ciudad").val();
+            var pais = $("#pais").val();
 
-    //         var direccion = calle + ", " + ciudad + ", " + pais;
-    //         var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
+            var direccion = calle + ", " + ciudad + ", " + pais;
+            var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
 
-    //         axios.get(url)
-    //             .then(function (response) {
-    //                 var resultado = response.data[0];
-    //                 if (resultado) {
-    //                     var latitud = resultado.lat;
-    //                     var longitud = resultado.lon;
-    //                     $("<input>").attr({
-    //                     type: "hidden",
-    //                     id: "latitud",
-    //                     name: "latitud",
-    //                     value: latitud
-    //                     }).appendTo("#formularioNegocio");
+            axios.get(url)
+                .then(function (response) {
+                    var resultado = response.data[0];
+                    if (resultado) {
+                        var latitud = resultado.lat;
+                        var longitud = resultado.lon;
+                        $("<input>").attr({
+                        type: "hidden",
+                        id: "latitud",
+                        name: "latitud",
+                        value: latitud
+                        }).appendTo("#formularioNegocio");
 
-    //                     $("<input>").attr({
-    //                     type: "hidden",
-    //                     id: "longitud",
-    //                     name: "longitud",
-    //                     value: longitud
-    //                     }).appendTo("#formularioNegocio");
+                        $("<input>").attr({
+                        type: "hidden",
+                        id: "longitud",
+                        name: "longitud",
+                        value: longitud
+                        }).appendTo("#formularioNegocio");
 
-    //                     $('#formularioNegocio').unbind('submit').submit();
-    //                 } else {
-    //                     console.log("No se encontró la dirección.");
-    //                 }
-    //             })
-    //             .catch(function (error) {
-    //                 console.log("Error al obtener la latitud y longitud:", error);
-    //             });
-    //     });
-    // });
+                        $('#formularioNegocio').unbind('submit').submit();
+                    } else {
+                        console.log("No se encontró la dirección.");
+                    }
+                })
+                .catch(function (error) {
+                    console.log("Error al obtener la latitud y longitud:", error);
+                });
+        });
+    });
 </script>
