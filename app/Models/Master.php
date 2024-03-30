@@ -23,7 +23,7 @@ class Master {
 
             $this->listaCategorias = array();        
             foreach($baseDatos->getListaCategorias() as $val){
-                $this->listaCategorias = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
+                $this->listaCategorias[] = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
             }
         }
         
