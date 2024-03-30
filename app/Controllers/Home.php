@@ -37,17 +37,19 @@ class Home extends BaseController{
     //     // echo view('head_content');
     //     return view('index', $maleta);
     // }
+    private $listaCategorias;
+
     public function cargarDatos(){
         $baseDatos = new BaseDatos();
         $listaCategorias = array();
         foreach($baseDatos -> getListaCategorias() as $i => $val){
             array_push($listaCategorias, new Categoria($val['cod_categoria'] , $val['tipo_negocio'] ));
         }
-        return $listaCategorias;
+        $this ->  $listaCategorias;
     }
 
     public function index(): string {
-        $maleta_index['listaCategorias'] = $this -> cargarDatos();
+        $maleta_index['listaCategorias'] = $this -> listaCategorias;
         //recojo de la lista BD las categorías y las convierto en objetos
 
 
