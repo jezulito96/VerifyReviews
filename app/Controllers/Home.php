@@ -102,10 +102,14 @@ class Home extends BaseController{
             $numFotos = count($_FILES['fotos']['name']);
 
             for ($i = 0; $i < $numFotos - 1; $i++) {
-                $tipoFoto = $_FILES['fotos']['type'][$i]; 
+                //extraigo la extension del archivo
+                $nombreAntiguo = $_FILES['fotos']['name'][$i];
+                $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
+
+                //recojo ubicacion temporal de la foto
                 $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
 
-                $nombre_foto = "img" . ($i + 1) . "." .$tipoFoto;
+                $nombre_foto = "img" . ($i + 1) . "." . $extension;
                 $fotosBD .= $nombre_foto . ",";
 
                         
