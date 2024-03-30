@@ -30,25 +30,25 @@ class Master {
         return $this->listaCategorias;
     }
 
-    // public function getListaNegocios() {
-    //     $baseDatos = new BaseDatos();
-    //     if ($this->listaNegocios === null) {
+    public function getListaNegocios() {
+        $baseDatos = new BaseDatos();
+        if ($this->listaNegocios === null) {
 
-    //         $this->listaNegocios = array();        
-    //         foreach($baseDatos->getListaNegocios() as $val){
-    //             $this->listaNegocios = new Negocio();
-    //         }
-    //     }
+            $this->listaNegocios = array();        
+            foreach($baseDatos->getListaNegocios() as $val){
+                $this->listaNegocios = new Negocio($val['nombre'], $val['email'], $val['calle'], $val['ciudad'], $val['pais'], $val['telefono_negocio'], $val['fotos'], $val['foto_principal'], $val['coordenadas'], $val['sitio_web'], $val['cod_categoria'], $val['nombre_titular'], $val['telefono_titular'], $val['activo'], $val['confirma_correo']
+            );
+            }
+        }
         
-    //     return $this->listaNegocios;
-    // }
+        return $this->listaNegocios;
+    }
 
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo){
         // se crea objeto y se añade a la lista de negocios
+        $negocio = new Negocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
 
-        
-
-
+        array_push($this->listaNegocios, $negocio);
     }
 
 
