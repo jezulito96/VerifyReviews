@@ -87,12 +87,12 @@ class Home extends BaseController{
         $longitud = $this->request->getGet('longitud');
 
 
-        if(isset($latitud)) {
+        if(!empty($latitud)) {
             echo $latitud;
         }else{
             echo "naaa";
         }
-        if(isset($longitud)) {
+        if(!empty($longitud)) {
             echo $longitud;
         }else{
             echo "naaa";
