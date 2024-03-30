@@ -101,7 +101,7 @@ class Home extends BaseController{
         if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
             $numFotos = count($_FILES['fotos']['name']);
 
-            for ($i = 0; $i < $numFotos - 1; $i++) {
+            for ($i = 0; $i < $numFotos; $i++) {
                 //extraigo la extension del archivo
                 $nombreAntiguo = $_FILES['fotos']['name'][$i];
                 $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
@@ -110,7 +110,13 @@ class Home extends BaseController{
                 $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
 
                 $nombre_foto = "img" . ($i + 1) . "." . $extension;
-                $fotosBD .= $nombre_foto . ",";
+
+                if($i == $numFotos -1){
+                    $fotosBD .= $nombre_foto;
+                }else{
+                    $fotosBD .= $nombre_foto . ",";
+                }
+                
 
                         
                 if (move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto)) {
@@ -119,7 +125,6 @@ class Home extends BaseController{
                     echo "todo feo";
                 }
             }
-            
         }
 
         // if(!empty($latitud)) {
