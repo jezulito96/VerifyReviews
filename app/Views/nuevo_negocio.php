@@ -2,7 +2,7 @@
 <h4>Rellena el formulario para recibir tus reseñas</h4>
 
 <div class="containerNegocioForm">
-    <form action="setNegocio" method="post">
+    <form action="setNegocio" method="post" id="formularioNegocio" >
 
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" >
