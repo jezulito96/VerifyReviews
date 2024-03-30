@@ -46,7 +46,7 @@ class BaseDatos extends Model{
             'confirma_correo' => $confirma_correo
         ]);
     
-    
+    }
 }
 
 
