@@ -110,7 +110,8 @@ class Home extends BaseController{
         $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
         $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
         $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
-        move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . "imgPrincipal." . $extensionPrincipal);
+        $foto_principal = "imgPrincipal." . $extensionPrincipal;
+        move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $foto_principal);
 
         // recibo imagenes
         if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
