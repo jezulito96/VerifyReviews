@@ -43,6 +43,7 @@ class Home extends BaseController{
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master -> getListaCategorias();
         
+        print_r($maleta_index['listaCategorias']) ;
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content'); 
