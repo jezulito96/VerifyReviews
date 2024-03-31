@@ -12,7 +12,7 @@ class Emailmailer {
     public function __construct() {
         $this->mail = new PHPMailer(true);
         // Configuración SMTP
-        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+        // $this->mail->SMTPDebug = SMTP::DEBUG_SERVER; 
         $this->mail->isSMTP();
         $this->mail->SMTPAuth = true; 
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
