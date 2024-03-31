@@ -3,10 +3,7 @@
 namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-require 'system/src/Exception.php';
-require 'system/src/PHPMailer.php';
-require 'system/src/SMTP.php';
+use PHPMailer\PHPMailer\SMTP;
 
 
 class Emailmailer {
