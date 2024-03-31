@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\BaseDatos;
 use App\Models\Master;
+use App\Models\Email;
 use App\Models\Qr;
 use App\Models\Categoria;
 use App\Models\Negocio;
@@ -136,7 +137,9 @@ class Home extends BaseController{
             }
         }
 
-
+        //enviar email de confirmacion
+        $codigoConfirmacion = bin2hex(random_bytes(16));
+        echo $codigoConfirmacion;
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
