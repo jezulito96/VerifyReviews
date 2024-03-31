@@ -3,7 +3,7 @@
 namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require 'vendor/autoload.php';
+require base_url() . '../vendor/autoload.php';
 
 class Emailmailer {
     private $mail;
@@ -20,7 +20,6 @@ class Emailmailer {
         $this->mail->Username = 'verifyReviews@verifyreviews.es'; 
         $this->mail->Password = 'PwM}YKUx24i1$]HB'; 
         $this->mail->SMTPKeepAlive = true;
-        $this->mail->Mailer = "smtp";
         
 
     }
