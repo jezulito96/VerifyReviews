@@ -3,9 +3,9 @@
 namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require_once FCPATH . 'vendor/src/Exception.php';
-require_once FCPATH . 'vendor/src/PHPMailer.php';
-require_once FCPATH . 'vendor/src/SMTP.php';
+require 'vendor/src/Exception.php';
+require 'vendor/src/PHPMailer.php';
+require 'vendor/src/SMTP.php';
 
 // require 'path/to/PHPMailer/src/Exception.php';
 // require 'path/to/PHPMailer/src/PHPMailer.php';
