@@ -148,11 +148,7 @@ class Home extends BaseController{
         $asunto = "VerifyReviews: Confirmación email";
         $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico: \n https://verifyreviews.es/verifyreviews/confirmarEmail.php?codigoConfirmacion=' . $codigoConfirmacion;
 
-        if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje)){
-            echo "email enviado";
-        }else{
-            echo "email fail";
-        }
+        if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje));
 
 
 
@@ -169,6 +165,17 @@ class Home extends BaseController{
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
 
         //si va todo bien vuelve al index
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['index_content'] = view('index_content', $maleta_index); 
+        return view('index', $maleta);
+    }
+
+    public function confirmarEmail(){
+        echo "holaa";
+
+        $master = Master::obtenerInstancia();
+        $maleta_index['listaCategorias'] = $master->getListaCategorias();
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['index_content'] = view('index_content', $maleta_index); 
