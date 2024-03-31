@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\BaseDatos;
 use App\Models\Master;
-use App\Models\Email;
+use App\Models\Emailmailer;
 use App\Models\Qr;
 use App\Models\Categoria;
 use App\Models\Negocio;
@@ -144,12 +144,23 @@ class Home extends BaseController{
 
         //enviar email de confirmacion
         $codigoConfirmacion = bin2hex(random_bytes(16));
-        echo $codigoConfirmacion;
+        $email = new Emailmailer();
+        $destinatario = $email;
+        $asunto = "VerifyReviews: Confirmación email";
+        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico: \n https://verifyreviews.es/verifyreviews/confirmarEmail.php?codigoConfirmacion=' . $codigoConfirmacion;
+
+        if($email -> enviarCorreo($destinatario, $asunto, $mensaje)){
+            echo "email enviado";
+        }else{
+            echo "email fail";
+        }
+
+
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
         $baseDatos = new BaseDatos();
-        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$codigoConfirmacion);
 
         
         // añado a la lista de negocios el nuevo objeto negocio
@@ -163,6 +174,5 @@ class Home extends BaseController{
         $maleta['header_content'] = view('header_content');
         $maleta['index_content'] = view('index_content', $maleta_index); 
         return view('index', $maleta);
-        
     }
 }

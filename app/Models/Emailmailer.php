@@ -1,10 +1,9 @@
 <?php
-require 'vendor/autoload.php'; // Carga el autoloader de Composer
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-class Email {
+class Emailmailer {
     private $mail;
 
     public function __construct() {
