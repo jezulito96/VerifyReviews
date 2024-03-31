@@ -172,7 +172,31 @@ class Home extends BaseController{
     }
 
     public function confirmarEmail(){
-        echo "holaa";
+        $codigoConfirmacion = "";
+        if(isset($_GET['codigoConfirmacion'])){
+            $codigoConfirmacion = $_GET['codigoConfirmacion'];
+        }else{
+            echo "no recibo codigo";
+        }
+        
+
+        $baseDatos = new BaseDatos();
+        if(!empty($codigoConfirmacion)) {
+
+            $confirmado =  $baseDatos -> comprobarCorreo($codigoConfirmacion);
+
+            if($confirmado){
+                echo "el correo ha sido confirmado correctamente";
+                $baseDatos -> confirmarCorreo($codigoConfirmacion);
+
+            }else{
+                echo "el correo no coincide";
+            }
+
+        }else{
+            echo "codigo confirmacion vacio";
+        }
+        
 
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master->getListaCategorias();

@@ -28,7 +28,7 @@ class BaseDatos extends Model
         return $listaNegocios->getResultArray();
     }
 
-    function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$cod_confirmacion)
+    function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo, $cod_confirmacion)
     {
 
         $orden = "INSERT INTO negocio (nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria, nombre_titular, telefono_titular, activo, confirma_correo, cod_confirmacion) VALUES ('" . $nombre . "', '" . $email . "', '" . $calle . "', '" . $ciudad . "', '" . $pais . "', '" . $telefono_negocio . "', '" . $fotos . "', '" . $foto_principal . "', '" . $coordenadas . "', '" . $sitio_web . "', " . $cod_categoria . ", '" . $nombre_titular . "', '" . $telefono_titular . "', '" . $activo . "', '" . $confirma_correo . "', '" . $cod_confirmacion . "')";
@@ -36,6 +36,25 @@ class BaseDatos extends Model
 
         $this->db->query($orden);
 
+    }
+
+    function comprobarCorreo($codigoConfirmacion) {
+        $orden = "SELECT cod_confirmacion FROM negocio WHERE cod_confirmacion ='".  $codigoConfirmacion  ."'";
+        $consulta = $this -> db -> query($orden);
+        $numeroFilas = $consulta -> numRows();
+
+        if($numeroFilas > 0 ){
+            return true;
+        }else{
+            return false;
+        }
+
+
+    }
+
+    function confirmarCorreo($codigoConfirmacion){
+        $orden = "UPDATE negocio SET confirma_correo = 1 WHERE cod_confirmacion ='".  $codigoConfirmacion  ."'";
+        $this -> db -> query($orden);
     }
 }
 
