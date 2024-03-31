@@ -3,8 +3,8 @@
 namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
+require_once FCPATH . 'vendor/autoload.php';
 class Emailmailer {
     private $mail;
 
