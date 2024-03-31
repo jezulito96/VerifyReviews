@@ -9,4 +9,4 @@ $routes->get('/', 'Home::index');
 $routes->get('/resena', 'Home::resena');
 $routes->get('/nuevoNegocio', 'Home::nuevoNegocio');
 $routes->post('/setNegocio', 'Home::setNegocio');
-$routes->post('/confirmarEmail', 'Home::confirmarEmail');
+$routes->get('/confirmarEmail', 'Home::confirmarEmail');

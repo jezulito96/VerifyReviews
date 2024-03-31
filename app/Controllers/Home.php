@@ -146,7 +146,7 @@ class Home extends BaseController{
         $codigoConfirmacion = bin2hex(random_bytes(16));
         $email_confirmacion = new Emailmailer();
         $asunto = "VerifyReviews: Confirmación email";
-        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico: \n https://verifyreviews.es/verifyreviews/confirmarEmail.php?codigoConfirmacion=' . $codigoConfirmacion;
+        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion;
 
         if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje));
 
