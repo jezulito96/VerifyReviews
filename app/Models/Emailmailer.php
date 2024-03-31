@@ -15,7 +15,7 @@ class Emailmailer {
         $this->mail->SMTPAuth = true; 
         $this->mail->Username = 'verifyReviews@verifyreviews.es'; 
         $this->mail->Password = 'PwM}YKUx24i1$]HB'; 
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
         $this->mail->Port = 465; 
     }
 
