@@ -11,12 +11,17 @@ class Emailmailer {
         $this->mail = new PHPMailer(true);
         // Configuración SMTP
         $this->mail->isSMTP();
-        $this->mail->Host = 'smtp.hostinger.com'; 
         $this->mail->SMTPAuth = true; 
+        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+        $this->mail->Host = 'smtp.hostinger.com'; 
+        $this->mail->Port = 465; 
+        $this->mail ->CharSet = 'UTF-8';
         $this->mail->Username = 'verifyReviews@verifyreviews.es'; 
         $this->mail->Password = 'PwM}YKUx24i1$]HB'; 
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
-        $this->mail->Port = 465; 
+        $this->mail->SMTPKeepAlive = true;
+        $this->mail->Mailer = "smtp";
+        
+
     }
 
     public function enviarCorreo($destinatario, $asunto, $mensaje) {
