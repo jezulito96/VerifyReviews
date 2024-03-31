@@ -190,7 +190,7 @@ class Home extends BaseController{
                 $baseDatos -> confirmarCorreo($codigoConfirmacion);
 
             }else{
-                echo "el correo no coincide";
+                echo "el codigo de confirmacion no es correcto";
             }
 
         }else{
