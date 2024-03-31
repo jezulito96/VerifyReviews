@@ -3,7 +3,11 @@
 namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require __DIR__ . '../vendor/autoload.php';
+
+require 'vendor/phpMailer/src/Exception.php';
+require 'vendor/phpMailer/src/PHPMailer.php';
+require 'vendor/phpMailer/src/SMTP.php';
+
 
 class Emailmailer {
     private $mail;
