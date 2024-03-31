@@ -4,7 +4,7 @@ namespace App\Models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
-require 'vendor/autoload.php';
+require '../..vendor/autoload.php';
 
 class Emailmailer {
     private $mail;
@@ -21,7 +21,6 @@ class Emailmailer {
         $this->mail ->CharSet = 'UTF-8';
         $this->mail->Username = 'verifyReviews@verifyreviews.es'; 
         $this->mail->Password = 'PwM}YKUx24i1$]HB'; 
-        $this->mail->SMTPKeepAlive = true;
         
 
     }
@@ -29,6 +28,7 @@ class Emailmailer {
     public function enviarCorreo($destinatario, $asunto, $mensaje) {
         try {
             // Configuraciones del mensaje
+            $this->mail->isHTML(false);  
             $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
