@@ -163,5 +163,6 @@ class Home extends BaseController{
         $maleta['header_content'] = view('header_content');
         $maleta['index_content'] = view('index_content', $maleta_index); 
         return view('index', $maleta);
+        
     }
 }
