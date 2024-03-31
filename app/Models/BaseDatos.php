@@ -41,7 +41,7 @@ class BaseDatos extends Model
     function comprobarCorreo($codigoConfirmacion) {
         $orden = "SELECT cod_confirmacion FROM negocio WHERE cod_confirmacion ='".  $codigoConfirmacion  ."'";
         $consulta = $this -> db -> query($orden);
-        $numeroFilas = $consulta -> numRows();
+        $numeroFilas = $consulta -> getNumRows();
 
         if($numeroFilas > 0 ){
             return true;
