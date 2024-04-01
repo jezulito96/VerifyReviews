@@ -133,27 +133,26 @@ h4{
 
 .formLogin input[type="email"],
 .formLogin input[type="password"] {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  outline: none;
+  margin-bottom: 10px;
+  border: 1px solid #A3CEF1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #FFFAFB;
+  color: #274C77;
 }
 
 .formLogin input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #53A6D9;
   border: none;
-  border-radius: 5px;
-  background-color: #274C77;
-  color: white;
-  font-weight: bold;
+  border-radius: 4px;
+  color: #FFFAFB;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.formLogin input[type="submit"]:hover {
-  background-color: #53A6D9;
+.formLogin input[type="submit"] {
+  background-color: #6096BA;
 }
