@@ -116,12 +116,9 @@ h4{
 /* estilo login */
 
 .containerformLogin {
-  background-color: #8B8C89;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 100%;
   max-width: 300px;
+  padding: 20px;
 }
 
 .formLogin label,
@@ -133,26 +130,23 @@ h4{
 
 .formLogin input[type="email"],
 .formLogin input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #A3CEF1;
+}
+
+.formLogin input[type="submit"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #A3CEF1;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #FFFAFB;
-  color: #274C77;
-}
-
-.formLogin input[type="submit"] {
-  width: auto;
-  padding: 10px 20px;
-  background-color: #53A6D9;
+  margin-top: 20px;
   border: none;
-  border-radius: 4px;
-  color: #FFFAFB;
-  cursor: pointer;
+  border-radius: 5px;
+  background-color: #53A6D9;
+  color: white;
+  font-weight: bold;
 }
 
-.formLogin input[type="submit"] {
-  background-color: #6096BA;
-}
