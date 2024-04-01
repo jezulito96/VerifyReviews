@@ -11,8 +11,8 @@
         <?php if (isset ($index_content)) echo $index_content; ?> 
 
         <?php if (isset ($nuevo_negocio)) echo $nuevo_negocio; ?>
-        
-        <?php if (isset ($nuevo_negocio)) echo $nuevo_negocio; ?>
+
+        <?php if (isset ($nuevo_Usuario)) echo $nuevo_Usuario; ?>
         
     </main>
 
