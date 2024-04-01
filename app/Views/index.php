@@ -12,7 +12,7 @@
 
         <?php if (isset ($nuevo_negocio)) echo $nuevo_negocio; ?>
 
-        <?php if (isset ($nuevo_Usuario)) echo $nuevo_Usuario; ?>
+        <?php if (isset ($nuevo_usuario)) echo $nuevo_usuario; ?>
         
     </main>
 
