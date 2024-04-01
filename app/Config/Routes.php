@@ -18,7 +18,7 @@ $routes->get('/nuevoNegocio', 'Home::nuevoNegocio');
 $routes->post('/setNegocio', 'Home::setNegocio');
 
 //pagina para añadir un nuevo usuario  
-$routes->post('/nuevoUsuario', 'Home::nuevoUsuario');
+$routes->get('/nuevoUsuario', 'Home::nuevoUsuario');
 $routes->post('/setUsuario', 'Home::setUsuario');
 
 //confirmar email tanto de negocio como de usuario
