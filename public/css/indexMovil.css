@@ -124,8 +124,15 @@ h4{
   max-width: 300px;
 }
 
-.containerformLogin input[type="email"],
-.containerformLogin input[type="password"] {
+.formLogin label,
+.formLogin label {
+  display: block;
+  margin-bottom: 5px;
+  color: #274C77;
+}
+
+.formLogin input[type="email"],
+.formLogin input[type="password"] {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
@@ -134,7 +141,7 @@ h4{
   outline: none;
 }
 
-.containerformLogin input[type="submit"] {
+.formLogin input[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
@@ -147,6 +154,6 @@ h4{
   transition: background-color 0.3s ease;
 }
 
-.containerformLogin input[type="submit"]:hover {
+.formLogin input[type="submit"]:hover {
   background-color: #53A6D9;
 }
