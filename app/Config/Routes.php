@@ -23,3 +23,7 @@ $routes->post('/setUsuario', 'Home::setUsuario');
 
 //confirmar email tanto de negocio como de usuario
 $routes->get('/confirmarEmail', 'Home::confirmarEmail');
+
+// vista de login
+$routes->get('/login', 'Home::vistaLogin');
+

@@ -111,3 +111,42 @@ h4{
 .containerUsuarioForm #registroNegocio:hover {
   background-color: #6096BA;
 }
+
+
+/* estilo login */
+
+.containerformLogin {
+  background-color: #8B8C89;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 300px;
+}
+
+.containerformLogin input[type="email"],
+.containerformLogin input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.containerformLogin input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #274C77;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.containerformLogin input[type="submit"]:hover {
+  background-color: #53A6D9;
+}

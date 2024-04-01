@@ -23,7 +23,7 @@
 </div>
 <!-- Lista que se desplegará al hacer clic en el botón -->
 <ul class="listaMenu" style="display: none">
-    <li>Iniciar sesion</li>
+    <li><a href="http://verifyReviews.es/verifyreviews/login">Iniciar sesion</a></li>
     <li>Escribe tu reseña</li>
     <li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>
     <li><a href="http://verifyReviews.es/verifyreviews/nuevoUsuario">Registrate</a></li>

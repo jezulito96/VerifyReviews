@@ -9,7 +9,7 @@
  </nav>       
 
 
-<h3>¿Qué tipo de negocio le interesa?</h3>
+<h3>Comercios:</h3>
     <section class="slick-carousel">
     <?php 
     if(isset($listaCategorias)){

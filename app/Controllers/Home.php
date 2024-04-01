@@ -192,21 +192,22 @@ class Home extends BaseController{
 
     public function confirmarEmail(){
         $codigoConfirmacion = "";
-        if(isset($_GET['codigoConfirmacion'])){
+        if(isset($_GET['codigoConfirmacion']) && isset($_GET['tipo'])){
             $codigoConfirmacion = $_GET['codigoConfirmacion'];
+            $tipo = $_GET['tipo'];
         }else{
             echo "no recibo codigo";
         }
         
 
         $baseDatos = new BaseDatos();
-        if(!empty($codigoConfirmacion)) {
+        if(!empty($codigoConfirmacion) && !empty($tipo)) {
 
-            $confirmado =  $baseDatos -> comprobarCorreo($codigoConfirmacion);
+            $confirmado =  $baseDatos -> comprobarCorreo($codigoConfirmacion,$tipo);
 
             if($confirmado){
                 echo "el correo ha sido confirmado correctamente";
-                $baseDatos -> confirmarCorreo($codigoConfirmacion);
+                $baseDatos -> confirmarCorreo($codigoConfirmacion,$tipo);
 
             }else{
                 echo "el codigo de confirmacion no es correcto";
@@ -303,5 +304,15 @@ class Home extends BaseController{
         $maleta['header_content'] = view('header_content');
         $maleta['index_content'] = view('index_content', $maleta_index);
         return view('index', $maleta);
+    }
+
+
+    public function vistaLogin(){
+
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['login'] = view('login');
+
     }
 }
