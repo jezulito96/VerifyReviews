@@ -301,7 +301,7 @@ class Home extends BaseController{
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index); 
+        $maleta['index_content'] = view('index_content', $maleta_index);
         return view('index', $maleta);
     }
 }
