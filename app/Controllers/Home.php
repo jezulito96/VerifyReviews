@@ -147,7 +147,7 @@ class Home extends BaseController{
         $codigoConfirmacion = bin2hex(random_bytes(16));
         $email_confirmacion = new Emailmailer();
         $asunto = "VerifyReviews: Confirmación email";
-        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=2';
+        $mensaje = 'Bienvenido a Verify Reviews, estamos encantados de que ' . $nombre . ' sea parte de nuesta familia, por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=2';
 
         $email_confirmacion -> enviarCorreo($email, $asunto, $mensaje);
 
@@ -269,7 +269,7 @@ class Home extends BaseController{
         $codigoConfirmacion = bin2hex(random_bytes(16));
         $email_confirmacion = new Emailmailer();
         $asunto = "VerifyReviews: Confirmación email";
-        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=1';
+        $mensaje = '¡Hola! '. $nickname . 'por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=1';
 
         if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje));
 
@@ -288,8 +288,6 @@ class Home extends BaseController{
                 // La contraseña es incorrecta
             }
         */
-
-
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios

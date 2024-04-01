@@ -58,6 +58,8 @@ class BaseDatos extends Model
 
     function setUsuario($nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena){
         $orden = "INSERT INTO usuario_registrado ( nombre,	apellidos	nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimiento,email	,telefono,	activo,	confirma_correo,	cod_confirmacion	,cod_recordar_contrasena	,fecha_creacion	) VALUES ('$nombre', '$apellidos', '$nickname', '$foto_perfil', '$hash_contrasena', '$ciudad', '$pais', '$coordenadas', '$fecha_nacimiento', '$email', '$telefono', '$activo', '$confirma_correo', '$codigoConfirmacion', '$codigo_recordar_contrasena', NOW())";
+
+        $this -> db -> query($orden);
     }
 
 }

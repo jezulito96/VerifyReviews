@@ -1,5 +1,5 @@
-<h1>Únete a nosotros</h1>
-<h4>Rellena el formulario para recibir tus reseñas</h4>
+<h1>Crea tu usuario</h1>
+<h4>Rellena el formulario para ver tus antiguas reseñas</h4>
 
 <div class="containerUsuarioForm">
     <form action="setUsuario" method="post" id="formularioUsuario" enctype="multipart/form-data" >
@@ -24,9 +24,6 @@
 
         <label for="pais">País:</label>
         <input type="text" id="pais" name="pais">
-
-        <label for="coordenadas">Coordenadas:</label>
-        <input type="text" id="coordenadas" name="coordenadas">
 
         <label for="fechaNacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fechaNacimiento" name="fechaNacimiento">
