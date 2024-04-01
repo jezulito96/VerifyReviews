@@ -76,6 +76,7 @@ class Home extends BaseController{
 
     public function setNegocio(): string {
         $nombre = $this->request->getPost('nombreNegocio');
+        $contrasenaNegocio = $this->request->getPost('contrasenaNegocio');
         $email = $this->request->getPost('email');
         $calle = $this->request->getPost('calle');
         $ciudad = $this->request->getPost('ciudad');
@@ -146,16 +147,34 @@ class Home extends BaseController{
         $codigoConfirmacion = bin2hex(random_bytes(16));
         $email_confirmacion = new Emailmailer();
         $asunto = "VerifyReviews: Confirmación email";
-        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion;
+        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=2';
 
-        if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje));
+        $email_confirmacion -> enviarCorreo($email, $asunto, $mensaje);
 
 
+
+        // genero un codigo  para poder recordarle al usuario la contrasena si se olvida 
+        $codigo_recordar_contrasena = bin2hex(random_bytes(16));
+
+
+        //se encripta el hash de la contraseña para guardarla en base de datos 
+        $hash_contrasena = password_hash($contrasenaNegocio, PASSWORD_DEFAULT);
+        // luego se utilizara el siguiente manera: 
+        /*
+            - el usuario ingresa la contraseña 
+            - se recoge la contraseña ($contrasena_recogida) y se utiliza el siguiente metodo 
+            if (password_verify($contrasena_recogida, $hash_contrasena)) {
+                // La contraseña es correcta
+            } else {
+                // La contraseña es incorrecta
+            }
+        */
+        
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
         $baseDatos = new BaseDatos();
-        $baseDatos -> setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$codigoConfirmacion);
+        $baseDatos -> setNegocio($nombre,$hash_contrasena, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
 
         
         // añado a la lista de negocios el nuevo objeto negocio
@@ -198,6 +217,88 @@ class Home extends BaseController{
         }
         
 
+        $master = Master::obtenerInstancia();
+        $maleta_index['listaCategorias'] = $master->getListaCategorias();
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['index_content'] = view('index_content', $maleta_index); 
+        return view('index', $maleta);
+    }
+
+    public function nuevoUsuario(): string {
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['nuevo_usuario'] = view('nuevo_usuario');
+        return view('index', $maleta);
+    }
+
+    public function setUsuario(){
+        $nombre = $this->request->getPost('nombre');
+        $apellidos = $this->request->getPost('apellidos');
+        $nickname = $this->request->getPost('nickname');
+        $contrasena = $this->request->getPost('contrasenaUsuario');
+        $ciudad = $this->request->getPost('ciudad');
+        $pais = $this->request->getPost('pais');
+        $fecha_nacimiento = $this->request->getPost('fechaNacimiento');
+        $email = $this->request->getPost('email');
+        $telefono = $this->request->getPost('telefono');
+
+        $activo = 1;
+        $confirma_correo = 0;
+
+        // recojo en una misma variable las coordenadas
+        $latitud = $this->request->getPost('latitud');
+        $longitud = $this->request->getPost('longitud');
+        $coordenadas = $latitud . "," . $longitud;
+
+
+        $directorioUsuarios = FCPATH . "images/usuarios";
+        //compruebo si existe la carpeta de usuarios en public/images y si no la creo 
+        if(!is_dir($directorioUsuarios)) mkdir($directorioUsuarios, 0777, true);
+     
+
+        //recibo imagen de perfil de usuario y guardo el nombre en BD
+        $nombreAntiguaPerfil = $_FILES['fotoPerfil']['name'];
+        $tmpFoto = $_FILES['fotoPerfil']['tmp_name'];
+        $extensionPerfil = pathinfo($nombreAntiguaPerfil, PATHINFO_EXTENSION);
+        $foto_perfil = $nickname ."." . $extensionPerfil;
+        move_uploaded_file($tmpFoto, $directorioUsuarios . "/"  . $foto_perfil);
+
+        //enviar email de confirmacion
+        $codigoConfirmacion = bin2hex(random_bytes(16));
+        $email_confirmacion = new Emailmailer();
+        $asunto = "VerifyReviews: Confirmación email";
+        $mensaje = 'Por favor, haz clic en el siguiente enlace para confirmar tu correo electrónico:  https://verifyreviews.es/verifyreviews/confirmarEmail?codigoConfirmacion=' . $codigoConfirmacion . '&tipo=1';
+
+        if($email_confirmacion -> enviarCorreo($email, $asunto, $mensaje));
+
+        // genero un codigo  para poder recordarle al usuario la contrasena si se olvida 
+        $codigo_recordar_contrasena = bin2hex(random_bytes(16));
+
+        //se encripta el hash de la contraseña para guardarla en base de datos 
+        $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+        // luego se utilizara el siguiente manera: 
+        /*
+            - el usuario ingresa la contraseña 
+            - se recoge la contraseña ($contrasena_recogida) y se utiliza el siguiente metodo 
+            if (password_verify($contrasena_recogida, $hash_contrasena)) {
+                // La contraseña es correcta
+            } else {
+                // La contraseña es incorrecta
+            }
+        */
+
+
+
+        // añado el nuevo negocio a la base de datos
+        // añado un nuevo objeto a la lista de negocios
+        $baseDatos = new BaseDatos();
+        $baseDatos -> setUsuario($nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
+
+        
+        //vistas
+        //si va todo bien vuelve al index
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
         $maleta['head_content'] = view('head_content');

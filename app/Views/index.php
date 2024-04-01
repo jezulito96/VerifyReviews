@@ -12,6 +12,8 @@
 
         <?php if (isset ($nuevo_negocio)) echo $nuevo_negocio; ?>
         
+        <?php if (isset ($nuevo_negocio)) echo $nuevo_negocio; ?>
+        
     </main>
 
 </body>

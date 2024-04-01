@@ -26,4 +26,5 @@
     <li>Iniciar sesion</li>
     <li>Escribe tu reseña</li>
     <li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>
+    <li><a href="http://verifyReviews.es/verifyreviews/nuevoUsuario">Registrate</a></li>
 </ul>

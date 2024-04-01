@@ -7,6 +7,9 @@
         <label for="nombreNegocio">Nombre del negocio:</label>
         <input type="text" id="nombreNegocio" name="nombreNegocio">
 
+        <label for="contrasenaNegocio">Contraseña:</label>
+        <input type="password" id="contrasenaNegocio" name="contrasenaNegocio">
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/">
 

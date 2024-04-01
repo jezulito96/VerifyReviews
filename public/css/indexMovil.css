@@ -59,30 +59,34 @@ h4{
   height: 16px;
 }
   
-/* formulario comercio */
-.containerNegocioForm{
+/* formulario comercio y usuario*/
+.containerNegocioForm,
+.containerUsuarioForm{
   width: 90vw;
   height: auto;
-}
-
-form {
-  width: 100%;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.containerNegocioForm label,
+.containerUsuarioForm label {
   display: block;
   margin-bottom: 5px;
   color: #274C77;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="url"],
-input[type="file"],
-select {
+.containerNegocioForm input[type="text"],
+.containerUsuarioForm input[type="text"],
+.containerNegocioForm input[type="email"],
+.containerUsuarioForm input[type="email"],
+.containerNegocioForm input[type="tel"],
+.containerUsuarioForm input[type="tel"],
+.containerNegocioForm input[type="url"],
+.containerUsuarioForm input[type="url"],
+.containerNegocioForm input[type="file"],
+.containerUsuarioForm input[type="file"],
+.containerNegocioForm select ,
+.containerUsuarioForm select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -92,8 +96,8 @@ select {
   background-color: #FFFAFB;
   color: #274C77;
 }
-
-#registroNegocio {
+.containerNegocioForm #registroNegocio,
+.containerUsuarioForm #registroNegocio {
   width: auto;
   padding: 10px 20px;
   background-color: #53A6D9;
@@ -103,6 +107,7 @@ select {
   cursor: pointer;
 }
 
-#registroNegocio:hover {
+.containerNegocioForm #registroNegocio:hover,
+.containerUsuarioForm #registroNegocio:hover {
   background-color: #6096BA;
 }
