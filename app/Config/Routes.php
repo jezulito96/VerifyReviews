@@ -26,4 +26,5 @@ $routes->get('/confirmarEmail', 'Home::confirmarEmail');
 
 // vista de login
 $routes->get('/login', 'Home::vistaLogin');
+$routes->get('/setLogin', 'Home::setLogin');
 

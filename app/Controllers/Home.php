@@ -308,11 +308,55 @@ class Home extends BaseController{
 
 
     public function vistaLogin(){
-
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['login'] = view('login');
+        return view('index', $maleta);
+    }
+
+    public function setLogin(){
+        $baseDatos = new BaseDatos();
+        // verifico si el email o usuario/nickname introducido coinciden con un usuario registrado
+        $emailUsuario = $this->request->getPost('email');
+        $contrasenaUsuario = $this->request->getPost('contrasena');
+
+        $resultadoEmail = false;
+        $coincideContrasena = false;
+
+        $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
+        
+
+        if($resultadoEmail == 1 || $resultadoEmail == 2){
+            // el email coincide 
+
+            $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
+            if (password_verify($contrasenaUsuario, $hash_constrasena)) {
+                // La contraseña es correcta
+                $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
+                $maleta['login'] = view('login',$maleta_login);
+
+                // meter en sesion el objeto del usuario para tener los fatos a mano
+                session() -> set("usuarioOnline", "usuario en linea");
+
+                // devuelve 
+            } else {
+                // La contraseña es incorrecta
+                // se devulve a la vista login con un error
+                $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
+                $maleta['login'] = view('login',$maleta_login);
+            }
+        }else{
+            // el email es incorrecto 
+            // se devulve a la vista login con un error
+            $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
+            $maleta['login'] = view('login',$maleta_login);
+        }
+
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        
         return view('index', $maleta);
     }
 }

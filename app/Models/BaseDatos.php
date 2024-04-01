@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Predis\Connection\Parameters;
 
 
 class BaseDatos extends Model
@@ -84,6 +85,44 @@ class BaseDatos extends Model
         $this -> db -> query($orden);
     }
 
+
+    // devuelve false si no coincide con Usuario o Negocio
+    //devuelve 1 si coincide con usuario 
+    //devuelve 2 si coincide con negocio 
+    function comprobarEmail($email){
+        $orden = "SELECT email FROM negocio WHERE email='" . $email . "'";
+        $consulta = $this -> db -> query($orden);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            // email coincide con negocio 
+            return 2;
+        }else{
+            $orden = "SELECT email FROM usuario WHERE email='" . $email . "'";
+            $consulta = $this -> db -> query($orden);
+            $numeroFilas = $consulta -> getNumRows();
+
+            if($numeroFilas > 0 ){
+                // email coincide con usuario
+                return 1;
+            }else{
+                // email no coincide ni con usuario ni con negocio
+                return false;
+            }
+        }
+    }
+
+    public function getHashContrasena($email, $tipo){
+        if($tipo == 1) $tipo = "usuario";
+        if($tipo == 2) $tipo = "negocio";
+
+        $orden = "SELECT contrasena FROM " . $tipo . " WHERE email='" . $email . "' ";
+        $hash = $this -> db -> query($orden);
+        
+        return $hash;
+    }
+
+
 }
 
 
@@ -93,5 +132,3 @@ class BaseDatos extends Model
 // $listaCategorias = $this -> db -> query($orden, [
 //     'categoria' => 1
 // ]);
-
-?>
