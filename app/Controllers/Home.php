@@ -316,22 +316,20 @@ class Home extends BaseController{
     }
 
     public function setLogin(){
-        echo "entra1";
-
         $baseDatos = new BaseDatos();
         // verifico si el email o usuario/nickname introducido coinciden con un usuario registrado
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
+        $resultadoEmail = false;
         $coincideContrasena = false;
-        echo "entra2";
+
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
-        echo "entra3";
-        var_dump($resultadoEmail);
-        echo "entra4";
+        
+
         if($resultadoEmail == 1 || $resultadoEmail == 2){
             // el email coincide 
-            echo "entra1";
+
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
                 // La contraseña es correcta
@@ -340,7 +338,6 @@ class Home extends BaseController{
 
                 // meter en sesion el objeto del usuario para tener los fatos a mano
                 session() -> set("sesionIniciada", $resultadoEmail);
-                echo "entra2";
 
                 // devuelve 
             } else {
