@@ -333,7 +333,7 @@ class Home extends BaseController{
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
                 // meter en sesion el objeto del usuario para tener los fatos a mano
-                session() -> set("sesionIniciada", $resultadoEmail);
+                // session() -> set("sesionIniciada", $resultadoEmail);
 
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
@@ -357,7 +357,7 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
-        session_destroy();
+        // session_destroy();
         //vistas
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
