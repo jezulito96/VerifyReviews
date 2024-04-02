@@ -316,6 +316,8 @@ class Home extends BaseController{
     }
 
     public function setLogin(){
+        echo "entra1";
+
         $baseDatos = new BaseDatos();
         // verifico si el email o usuario/nickname introducido coinciden con un usuario registrado
         $emailUsuario = $this->request->getPost('email');
