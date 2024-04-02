@@ -1,7 +1,7 @@
     
     <?php 
         if (isset ($head_content)) echo $head_content;
-        $sesionIniciada = session() -> get("sesionIniciada");
+        
     ?>
 
     <body>

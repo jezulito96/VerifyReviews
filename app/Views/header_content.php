@@ -24,8 +24,10 @@
 <!-- Lista que se desplegará al hacer clic en el botón -->
 <ul class="listaMenu" style="display: none">
     <?php
-        
+        echo "entra en header_content";
+        $sesionIniciada = session() -> get("sesionIniciada");
         if(isset($sesionIniciada) && $sesionIniciada == 1) {
+            echo "entra en 1";
 
             echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li>Escribe tu reseña</li>';
@@ -33,12 +35,14 @@
             
 
         } else if(isset($sesionIniciada) && $sesionIniciada == 2){
+            echo "entra en 2";
             echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li>Mis reseñas</li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/generarResenas">Generar reseñas</a></li>';
 
         } else{
 
+            echo "entra en else";
             echo '<li><a href="http://verifyReviews.es/verifyreviews/login">Iniciar sesion</a></li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoUsuario">Registrate</a></li>';
@@ -57,3 +61,35 @@
         <input type="search" placeholder="Buscar">
     </div>
 </nav> 
+
+<script>
+        $(document).ready(funtion(){
+
+            // menu desplegable
+            var imgMenu = $(".imgMenu");
+            var imgMenu2 = $(".imgMenu2");
+            var imgLogo = $(".imgLogo");
+            var cont = 1;
+            $(".menuContainer").click(function () {
+
+                if (cont == 1) {
+                    cont++;
+                    $(".listaMenu").toggle("blind", 500);
+                    imgMenu.toggle("clip", 500);
+                    imgLogo.toggle();
+                    setTimeout(function () {
+                        imgMenu2.toggle();
+                    }, 500);
+                } else {
+                    cont = 1;
+                    $(".listaMenu").toggle("blind", 500);
+                    imgMenu2.toggle("clip", 500);
+                    setTimeout(function () {
+                        imgMenu.toggle();
+                        imgLogo.toggle();
+                    }, 500);
+                }
+            });
+
+        });
+</script>

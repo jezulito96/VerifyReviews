@@ -361,6 +361,7 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
+        echo "entra en cerrar sesion";
         //elimino sesion y vuelvo al index
         session() -> destroy();
         
