@@ -338,6 +338,7 @@ class Home extends BaseController{
 
                 // meter en sesion el objeto del usuario para tener los fatos a mano
                 session() -> set("sesionIniciada", $resultadoEmail);
+                echo "entra";
 
                 // devuelve 
             } else {
