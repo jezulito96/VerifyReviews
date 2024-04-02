@@ -98,7 +98,7 @@ class BaseDatos extends Model
             // email coincide con negocio 
             return 2;
         }else{
-            $orden = "SELECT email FROM usuario WHERE email='" . $email . "'";
+            $orden = "SELECT email FROM usuario_registrado WHERE email='" . $email . "'";
             $consulta = $this -> db -> query($orden);
             $numeroFilas = $consulta -> getNumRows();
 
