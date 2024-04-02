@@ -325,10 +325,11 @@ class Home extends BaseController{
 
         $resultadoEmail = false;
         $coincideContrasena = false;
-
+        echo "entra2";
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
+        echo "entra3";
         echo $resultadoEmail;
-
+        echo "entra4";
         if($resultadoEmail == 1 || $resultadoEmail == 2){
             // el email coincide 
             echo "entra1";
