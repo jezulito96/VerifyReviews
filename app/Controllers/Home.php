@@ -378,7 +378,7 @@ class Home extends BaseController{
         //     $clavePublica = "holaaaa";
 
         //     $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-
+        echo "entra vistaGenerarResenas";
 
         
         // vistas
