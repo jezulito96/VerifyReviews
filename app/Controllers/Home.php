@@ -364,7 +364,7 @@ class Home extends BaseController{
         //elimino sesion y vuelvo al index
         session() -> destroy();
         
-        redirect('https://verifyreviews.es');
+        $this -> index();
     }
 
     public function vistaGenerarResenas(){
