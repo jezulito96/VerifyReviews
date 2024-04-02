@@ -337,7 +337,7 @@ class Home extends BaseController{
                 $maleta['login'] = view('login',$maleta_login);
 
                 // meter en sesion el objeto del usuario para tener los fatos a mano
-                session() -> set("usuarioOnline", "usuario en linea");
+                session() -> set("sesionIniciada", $resultadoEmail);
 
                 // devuelve 
             } else {
@@ -357,6 +357,14 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         
+        return view('index', $maleta);
+    }
+
+    public function vistaGenerarContrasenas(){
+        // vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['generarContrasenas'] = view('generarContrasenas');
         return view('index', $maleta);
     }
 }

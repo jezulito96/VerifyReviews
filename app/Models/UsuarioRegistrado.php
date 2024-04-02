@@ -58,5 +58,3 @@ class UsuarioRegistrado extends Usuario {
         $this->email = $email;
     }
 }
-
-?>

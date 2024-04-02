@@ -18,6 +18,8 @@
 
         <!-- vista para inicio de sesion -->
         <?php if (isset ($login)) echo $login; ?>
+
+        <?php if (isset ($generarContrasenas)) echo $generarContrasenas; ?>
         
     </main>
 
