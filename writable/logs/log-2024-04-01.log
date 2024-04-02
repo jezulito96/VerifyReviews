@@ -1,0 +1,268 @@
+ERROR - 2024-04-01 11:17:25 --> mysqli_sql_exception: Unknown column 'contrasena_negocio' in 'field list' in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 11:17:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 11:17:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 11:17:25 --> [Caused by] mysqli_sql_exception: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-01 11:22:39 --> mysqli_sql_exception: Unknown column 'contrasena_negocio' in 'field list' in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 11:22:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 11:22:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 11:22:39 --> [Caused by] mysqli_sql_exception: Unknown column 'contrasena_negocio' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(36): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(177): App\Models\BaseDatos->setNegocio()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setNegocio()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 11:29:00 --> ErrorException: Undefined array key "HTTP_USER_AGENT"
+in APPPATH/Views/head_content.php on line 56.
+ 1 APPPATH/Views/head_content.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Views/head_content.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-01 13:58:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1 in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 13:58:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 13:58:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 13:58:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-01 13:59:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1 in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 13:59:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 13:59:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 13:59:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-01 14:06:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1 in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 14:06:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 14:06:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 14:06:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nickname,	foto_perfil,	contrasena,	ciudad,	pais,	coordenadas	,fecha_nacimient...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(62): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(295): App\Models\BaseDatos->setUsuario()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setUsuario()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 16:06:19 --> ErrorException: Undefined array key "HTTP_USER_AGENT"
+in APPPATH/Views/head_content.php on line 56.
+ 1 APPPATH/Views/head_content.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Views/head_content.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-01 16:30:36 --> mysqli_sql_exception: Table 'u866861647_verifyreviews.usuario' doesn't exist in /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Models/BaseDatos.php(102): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/app/Controllers/Home.php(327): App\Models\BaseDatos->comprobarEmail()
+#5 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(941): App\Controllers\Home->setLogin()
+#6 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u866861647/domains/verifyreviews.es/public_html/verifyreviews/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-01 16:30:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'u866861647_verifyreviews.usuario' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/BaseDatos.php(102): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Home.php(327): App\Models\BaseDatos->comprobarEmail()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 16:30:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'u866861647_verifyreviews.usuario' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/BaseDatos.php(102): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Home.php(327): App\Models\BaseDatos->comprobarEmail()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setLogin()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 16:30:36 --> [Caused by] mysqli_sql_exception: Table 'u866861647_verifyreviews.usuario' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/BaseDatos.php(102): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(327): App\Models\BaseDatos->comprobarEmail()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->setLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
