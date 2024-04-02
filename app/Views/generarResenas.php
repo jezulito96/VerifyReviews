@@ -1,1 +1,2 @@
-<!-- el form para enviar es setGenerarContrasenas -->
+<!-- el form para enviar es setGenerarResenas -->
+
