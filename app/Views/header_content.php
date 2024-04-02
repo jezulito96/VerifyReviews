@@ -24,8 +24,7 @@
 <!-- Lista que se desplegará al hacer clic en el botón -->
 <ul class="listaMenu" style="display: none">
     <?php
-        $sesionIniciada = session() -> get("sesionIniciada");
-        var_dump($sesionIniciada);
+        // var_dump($sesionIniciada);
         if(isset($sesionIniciada) && $sesionIniciada == 1) {
 
             echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
