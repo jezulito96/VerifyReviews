@@ -107,7 +107,7 @@ class BaseDatos extends Model
                 return 1;
             }else{
                 // email no coincide ni con usuario ni con negocio
-                return false;
+                return 0;
             }
         }
     }
