@@ -337,36 +337,40 @@ class Home extends BaseController{
 
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
+                
                 $maleta['login'] = view('login',$maleta_login);
                 
             } else {
                 // La contraseña es incorrecta
                 // se devulve a la vista login con un error
                 $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
                 $maleta['login'] = view('login',$maleta_login);
             }
         }else{
             // el email es incorrecto 
             // se devulve a la vista login con un error
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
-            $maleta['head_content'] = view('head_content');
-            $maleta['header_content'] = view('header_content');
             $maleta['login'] = view('login',$maleta_login);
         }
 
         //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        
         return view('index', $maleta);
     }
 
     function cerrarSesion(){
         //elimino sesion y vuelvo al index
-        session_destroy();
-
-        header('location: https://verifyreviews.es');
+        session() -> destroy();
+        $master = Master::obtenerInstancia();
+        $maleta_index['listaCategorias'] = $master -> getListaCategorias();
+        
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content'); 
+        $maleta['index_content'] = view('index_content', $maleta_index); 
+        return view('index', $maleta);
     }
 
     public function vistaGenerarResenas(){
