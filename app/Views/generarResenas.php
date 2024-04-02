@@ -1,7 +1,7 @@
 <!-- el form para enviar es setGenerarResenas -->
 <?php
     $sesion = session() -> get("sesionIniciada");
-    if(isset($sesion) && $sesion != 2 ||  !isset($sesion)) header('location: https://verifyreviews.es');
+    if(isset($sesion) && $sesion != 2 ||  !isset($sesion)) redirect('https://verifyreviews.es');
 ?>
 <h3>Login</h3>
 <div class="containerformGenerarResena">
