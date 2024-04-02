@@ -28,6 +28,10 @@ $routes->get('/confirmarEmail', 'Home::confirmarEmail');
 $routes->get('/login', 'Home::vistaLogin');
 $routes->post('/setLogin', 'Home::setLogin');
 
+// cerrar sesion
+$routes->get('/cerrarSesion', 'Home::cerrarSesion');
+
 // vista de generar reseñas
 $routes->get('/generarContrasenas', 'Home::vistaGenerarContrasenas');
 $routes->post('/setGenerarContrasenas', 'Home::setGenerarContrasenas');
+
