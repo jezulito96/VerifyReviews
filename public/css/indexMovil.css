@@ -115,21 +115,24 @@ h4{
 
 /* estilo login */
 
-.containerformLogin {
+.containerformLogin,
+.containerformGenerarResena {
   width: 100%;
   max-width: 300px;
   padding: 20px;
 }
 
 .formLogin label,
-.formLogin label {
+.containerformGenerarResena label {
   display: block;
   margin-bottom: 5px;
   color: #274C77;
 }
 
 .formLogin input[type="email"],
-.formLogin input[type="password"] {
+.formLogin input[type="password"],
+.containerformGenerarResena input[type="text"],
+.containerformGenerarResena input[type="number"] {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
@@ -139,7 +142,8 @@ h4{
   border: 1px solid #A3CEF1;
 }
 
-.formLogin input[type="submit"] {
+.formLogin input[type="submit"],
+.containerformGenerarResena input[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 20px;

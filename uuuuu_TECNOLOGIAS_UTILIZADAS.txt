@@ -6,6 +6,7 @@ OpenStreetMaps con JQuery y api loaflet
 Utilizacion del BOM para geolocalización
 CDN de axios -  para obtener ubicacion a partir de calle con JQuery
 JQUERY UI para efectos y/o animaciones
+DOMpdf para generar pdf de los Qr de reseñas
 
 
 -------------- ICONOS svg -------------------- 
