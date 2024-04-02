@@ -90,7 +90,7 @@ class BaseDatos extends Model
     //devuelve 1 si coincide con usuario 
     //devuelve 2 si coincide con negocio 
     function comprobarEmail($email){
-        $orden = "SELECT cod_negocio FROM negocio WHERE email='" . $email . "'";
+        $orden = "SELECT nombre FROM negocio WHERE email='" . $email . "'";
         $consulta = $this -> db -> query($orden);
         $numeroFilas = $consulta -> getNumRows();
 
@@ -98,7 +98,7 @@ class BaseDatos extends Model
             // email coincide con negocio 
             return 2;
         }else{
-            $orden = "SELECT cod_usuario FROM usuario_registrado WHERE email='" . $email . "'";
+            $orden = "SELECT email FROM usuario_registrado WHERE email='" . $email . "'";
             $consulta = $this -> db -> query($orden);
             $numeroFilas = $consulta -> getNumRows();
 
