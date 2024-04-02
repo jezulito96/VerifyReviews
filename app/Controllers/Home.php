@@ -364,7 +364,7 @@ class Home extends BaseController{
 
     function cerrarSesion(){
         //elimino sesion y vuelvo al index
-        session() -> destroy();
+        session_destroy();
 
         header('location: https://verifyreviews.es');
     }
