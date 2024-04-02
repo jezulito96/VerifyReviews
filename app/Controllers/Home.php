@@ -359,7 +359,7 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    function cerrarSession(){
+    function cerrarSesion(){
         //elimino sesion y vuelvo al index
         session() -> destroy();
 
