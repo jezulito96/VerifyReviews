@@ -161,7 +161,7 @@ class Session implements SessionInterface
      *
      * @deprecated No longer used.
      */
-    protected $cookieSameSite = Cookie::SAMESITE_NONE;
+    protected $cookieSameSite = Cookie::SAMESITE_LAX;
 
     /**
      * sid regex expression
