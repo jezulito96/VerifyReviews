@@ -113,7 +113,7 @@ class BaseDatos extends Model
     }
 
     public function getHashContrasena($email, $tipo){
-        if($tipo == 1) $tipo = "usuario";
+        if($tipo == 1) $tipo = "usuario_registrado";
         if($tipo == 2) $tipo = "negocio";
 
         $orden = "SELECT contrasena FROM " . $tipo . " WHERE email='" . $email . "' ";
