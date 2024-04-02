@@ -119,7 +119,7 @@ class BaseDatos extends Model
         $orden = "SELECT contrasena FROM " . $tipo . " WHERE email='" . $email . "' ";
         $hash = $this -> db -> query($orden);
         
-        return $hash;
+        return $hash -> getResultArray();
     }
 
 
