@@ -323,12 +323,11 @@ class Home extends BaseController{
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
-        $resultadoEmail = false;
         $coincideContrasena = false;
         echo "entra2";
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
         echo "entra3";
-        echo $resultadoEmail;
+        var_dump($resultadoEmail);
         echo "entra4";
         if($resultadoEmail == 1 || $resultadoEmail == 2){
             // el email coincide 
