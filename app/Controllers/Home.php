@@ -363,13 +363,7 @@ class Home extends BaseController{
         //elimino sesion y vuelvo al index
         session() -> destroy();
 
-        //vistas
-        $master = Master::obtenerInstancia();
-        $maleta_index['listaCategorias'] = $master->getListaCategorias();
-        $maleta['head_content'] = view('head_content');
-        $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index);
-        return view('index', $maleta);
+        header('location: https://verifyreviews.es');
     }
 
     public function vistaGenerarResenas(){
