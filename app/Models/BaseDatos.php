@@ -117,9 +117,12 @@ class BaseDatos extends Model
         if($tipo == 2) $tipo = "negocio";
 
         $orden = "SELECT contrasena FROM " . $tipo . " WHERE email='" . $email . "' ";
-        $hash = $this -> db -> query($orden);
+        $hash = $this->db->query($orden);
+        $has_contrasena = $hash->getRow(); 
         
-        return $hash -> getResultArray();
+        $contrasena = $has_contrasena->contrasena;
+
+        return $contrasena;
     }
 
 
