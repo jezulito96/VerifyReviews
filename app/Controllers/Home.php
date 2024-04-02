@@ -357,8 +357,6 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
-        $e = "entra en cerrar sesion";
-        var_dump($e) ;
         //elimino sesion y vuelvo al index
         session() -> destroy();
         
