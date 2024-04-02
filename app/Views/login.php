@@ -2,7 +2,6 @@
 <h3>Login</h3>
 <?php 
     $sesion = session() -> get("sesionIniciada");
-    var_dump($sesion);
     if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2)  echo "Sesion iniciada";
 ?>
 <div class="containerformLogin">

@@ -333,9 +333,8 @@ class Home extends BaseController{
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
                 // meter en sesion el objeto del usuario para tener los fatos a mano
-                var_dump($resultadoEmail);
                 session() -> set("sesionIniciada", $resultadoEmail);
-                
+
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
                 $maleta['login'] = view('login',$maleta_login);

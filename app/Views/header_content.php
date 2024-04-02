@@ -27,14 +27,15 @@
         $sesionIniciada = session() -> get("sesionIniciada");
         if(isset($sesionIniciada) && $sesionIniciada == 1) {
 
+            echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li>Escribe tu reseña</li>';
+            echo '<li>Mis reseñas</li>';
             
 
         } else if(isset($sesionIniciada) && $sesionIniciada == 2){
-
+            echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li>Mis reseñas</li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/generarContrasenas">Generar reseñas</a></li>';
-            echo '<li>Escribe tu reseña</li>';
 
         } else{
 
