@@ -329,7 +329,7 @@ class Home extends BaseController{
 
         if($resultadoEmail == 1 || $resultadoEmail == 2){
             // el email coincide 
-
+            echo "entra1";
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
                 // La contraseña es correcta
@@ -338,7 +338,7 @@ class Home extends BaseController{
 
                 // meter en sesion el objeto del usuario para tener los fatos a mano
                 session() -> set("sesionIniciada", $resultadoEmail);
-                echo "entra";
+                echo "entra2";
 
                 // devuelve 
             } else {
