@@ -327,7 +327,7 @@ class Home extends BaseController{
         $coincideContrasena = false;
 
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
-        
+        echo $resultadoEmail;
 
         if($resultadoEmail == 1 || $resultadoEmail == 2){
             // el email coincide 
