@@ -331,21 +331,22 @@ class Home extends BaseController{
             // el email coincide 
 
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
-            if (password_verify($contrasenaUsuario, $hash_constrasena)) {
-                // La contraseña es correcta
-                $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
-                $maleta['login'] = view('login',$maleta_login);
+            var_dump($hash_constrasena);
+            // if (password_verify($contrasenaUsuario, $hash_constrasena)) {
+            //     // La contraseña es correcta
+            //     $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
+            //     $maleta['login'] = view('login',$maleta_login);
 
-                // meter en sesion el objeto del usuario para tener los fatos a mano
-                session() -> set("sesionIniciada", $resultadoEmail);
+            //     // meter en sesion el objeto del usuario para tener los fatos a mano
+            //     session() -> set("sesionIniciada", $resultadoEmail);
 
-                // devuelve 
-            } else {
-                // La contraseña es incorrecta
-                // se devulve a la vista login con un error
-                $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
-                $maleta['login'] = view('login',$maleta_login);
-            }
+            //     // devuelve 
+            // } else {
+            //     // La contraseña es incorrecta
+            //     // se devulve a la vista login con un error
+            //     $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
+            //     $maleta['login'] = view('login',$maleta_login);
+            // }
         }else{
             // el email es incorrecto 
             // se devulve a la vista login con un error
