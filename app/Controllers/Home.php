@@ -372,13 +372,11 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    public function vistaGenerarContrasenas(){
+    public function vistaGenerarResenas(){
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['generarContrasenas'] = view('generarContrasenas');
+        $maleta['generarResenas'] = view('generarResenas');
         return view('index', $maleta);
     }
-
-
 }

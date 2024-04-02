@@ -32,6 +32,6 @@ $routes->post('/setLogin', 'Home::setLogin');
 $routes->get('/cerrarSesion', 'Home::cerrarSesion');
 
 // vista de generar reseñas
-$routes->get('/generarContrasenas', 'Home::vistaGenerarContrasenas');
-$routes->post('/setGenerarContrasenas', 'Home::setGenerarContrasenas');
+$routes->get('/generarResenas', 'Home::vistaGenerarResenas');
+$routes->post('/setGenerarResenas', 'Home::setGenerarResenas');
 

@@ -35,7 +35,7 @@
         } else if(isset($sesionIniciada) && $sesionIniciada == 2){
             echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li>Mis reseñas</li>';
-            echo '<li><a href="http://verifyReviews.es/verifyreviews/generarContrasenas">Generar reseñas</a></li>';
+            echo '<li><a href="http://verifyReviews.es/verifyreviews/generarResenas">Generar reseñas</a></li>';
 
         } else{
 
