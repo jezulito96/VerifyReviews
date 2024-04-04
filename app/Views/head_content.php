@@ -48,6 +48,8 @@
 
     <!-- Estilos generales -->
     <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
+          // lista header
+          echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
 
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
