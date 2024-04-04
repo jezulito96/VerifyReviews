@@ -59,7 +59,7 @@
 </nav> 
 
 <script>
-        $(document).ready(funtion(){
+        $(document).ready(function(){
 
             // menu desplegable
             var imgMenu = $(".imgMenu");
