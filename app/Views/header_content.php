@@ -22,7 +22,7 @@
 
 </div>
 <!-- Lista que se desplegará al hacer clic en el botón -->
-<ul class="listaMenu" style="display: none">
+<ul class="listaMenu" >
     <?php
         // var_dump($sesionIniciada);
         if(isset($sesionIniciada) && $sesionIniciada == 1) {
