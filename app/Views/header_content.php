@@ -37,7 +37,7 @@
             echo '<li>Mis reseñas</li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/generarResenas">Generar reseñas</a></li>';
 
-        } else{
+        } else if(!isset($sesionIniciada)){
 
             echo '<li><a href="http://verifyReviews.es/verifyreviews/login">Iniciar sesion</a></li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>';
@@ -59,33 +59,33 @@
 </nav> 
 
 <script>
-        $(document).ready(funtion(){
+        // $(document).ready(funtion(){
 
-            // menu desplegable
-            var imgMenu = $(".imgMenu");
-            var imgMenu2 = $(".imgMenu2");
-            var imgLogo = $(".imgLogo");
-            var cont = 1;
-            $(".menuContainer").click(function () {
+        //     // menu desplegable
+        //     var imgMenu = $(".imgMenu");
+        //     var imgMenu2 = $(".imgMenu2");
+        //     var imgLogo = $(".imgLogo");
+        //     var cont = 1;
+        //     $(".menuContainer").click(function () {
 
-                if (cont == 1) {
-                    cont++;
-                    $(".listaMenu").toggle("blind", 500);
-                    imgMenu.toggle("clip", 500);
-                    imgLogo.toggle();
-                    setTimeout(function () {
-                        imgMenu2.toggle();
-                    }, 500);
-                } else {
-                    cont = 1;
-                    $(".listaMenu").toggle("blind", 500);
-                    imgMenu2.toggle("clip", 500);
-                    setTimeout(function () {
-                        imgMenu.toggle();
-                        imgLogo.toggle();
-                    }, 500);
-                }
-            });
+        //         if (cont == 1) {
+        //             cont++;
+        //             $(".listaMenu").toggle("blind", 500);
+        //             imgMenu.toggle("clip", 500);
+        //             imgLogo.toggle();
+        //             setTimeout(function () {
+        //                 imgMenu2.toggle();
+        //             }, 500);
+        //         } else {
+        //             cont = 1;
+        //             $(".listaMenu").toggle("blind", 500);
+        //             imgMenu2.toggle("clip", 500);
+        //             setTimeout(function () {
+        //                 imgMenu.toggle();
+        //                 imgLogo.toggle();
+        //             }, 500);
+        //         }
+        //     });
 
-        });
+        // });
 </script>
