@@ -357,7 +357,7 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
-        // session_destroy();
+        session_destroy();
         //vistas
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
