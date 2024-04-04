@@ -357,6 +357,7 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
+        echo "entra";
         session_destroy();
         //vistas
         $master = Master::obtenerInstancia();
