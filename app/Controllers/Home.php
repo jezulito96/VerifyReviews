@@ -358,8 +358,8 @@ class Home extends BaseController{
 
     function cerrarSesion(){
         echo "entra";
-        $sesion = session() -> get("sesionIniciada");
-        $sesion -> close();
+        // $sesion = session() -> get("sesionIniciada");
+        session() -> close();
         // var_dump();
         // session_destroy();
         //vistas
