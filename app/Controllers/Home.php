@@ -358,7 +358,7 @@ class Home extends BaseController{
 
     function cerrarSesion(){
         session() -> destroy();
-        redirect("https://www.verifyreviews.es");
+        return redirect()->to('https://www.verifyreviews.es');
         //vistas
         // $master = Master::obtenerInstancia();
         // $maleta_index['listaCategorias'] = $master->getListaCategorias();
