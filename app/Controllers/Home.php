@@ -357,18 +357,15 @@ class Home extends BaseController{
     }
 
     function cerrarSesion(){
-        echo "entra";
-        // $sesion = session() -> get("sesionIniciada");
         session() -> destroy();
-        // var_dump();
-        // session_destroy();
+        redirect("https://verifyreviews.es");
         //vistas
-        $master = Master::obtenerInstancia();
-        $maleta_index['listaCategorias'] = $master->getListaCategorias();
-        $maleta['head_content'] = view('head_content');
-        $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index);
-        return view('index', $maleta);
+        // $master = Master::obtenerInstancia();
+        // $maleta_index['listaCategorias'] = $master->getListaCategorias();
+        // $maleta['head_content'] = view('head_content');
+        // $maleta['header_content'] = view('header_content');
+        // $maleta['index_content'] = view('index_content', $maleta_index);
+        // return view('index', $maleta);
     }
 
     public function vistaGenerarResenas(){
