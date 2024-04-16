@@ -15,7 +15,7 @@
 </div>
 <?php
     }else{
-        echo $qrGenerados;
+        echo '<img src="$qrGenerados" title="Reseña verifyReviews.es" alt="C&oacute;digo Qr/>';
 ?><?php
 
 
