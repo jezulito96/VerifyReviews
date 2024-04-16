@@ -49,7 +49,10 @@ class Master {
         $this->listaNegocios[] = new Negocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
     }
 
-
+    // genera con negocios 
+    public function generarResenas(){
+        
+    }
 
 }
 

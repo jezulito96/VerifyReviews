@@ -105,7 +105,7 @@
     <?php //echo "<script src='". base_url() . "js/location.js' > </script>";        ?>
     <!-- https://leafletjs.com/reference.html#map-factory -->
     <script>
-        // $(document).ready(function () {
+        // $(document).ready(function () { 
 
         //     $("#ubicacion").click(function () {
         //         if (navigator.geolocation) {
@@ -126,7 +126,7 @@
         //                 }).addTo(mapa);
 
         //                 L.marker([latitud, longitud]).addTo(mapa)
-        //                     .bindPopup('Nombre negocio <br> Dirección.')
+        //                     .bindPopup('Nombre negocio <br> Dirección.') 
         //                     .openPopup();
 
         //             }, function (error) {

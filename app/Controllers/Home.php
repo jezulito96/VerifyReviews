@@ -358,28 +358,11 @@ class Home extends BaseController{
 
     function cerrarSesion(){
         session() -> destroy();
-        return redirect()->to('https://www.verifyreviews.es');
-        //vistas
-        // $master = Master::obtenerInstancia();
-        // $maleta_index['listaCategorias'] = $master->getListaCategorias();
-        // $maleta['head_content'] = view('head_content');
-        // $maleta['header_content'] = view('header_content');
-        // $maleta['index_content'] = view('index_content', $maleta_index);
-        // return view('index', $maleta);
+        return redirect() -> to('https://www.verifyreviews.es');
     }
 
     public function vistaGenerarResenas(){
 
-        //    $baseDatos = new BaseDatos();
-
-        //     // $maleta['listaCategorias'] = $baseDatos -> getListaCategorias();
-
-        //     $qr = new Qr();
-
-        //     $clavePublica = "holaaaa";
-
-        //     $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-        echo "entra vistaGenerarResenas";
 
         
         // vistas
@@ -390,13 +373,20 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
+        // $emailUsuario = $this->request->getPost('email');
+        
+        $qr = new Qr();
 
-        echo "entra";
+        $clavePublica = "holaaaa";
+
+        $maleta_generarResenas['qrGenerados'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+
+        // $maleta_generarResenas['qrGenerados'] = "holaa";
 
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['generarResenas'] = view('generarResenas');
+        $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
         return view('index', $maleta);
     }
 }
