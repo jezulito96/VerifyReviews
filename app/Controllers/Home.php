@@ -361,8 +361,8 @@ class Home extends BaseController{
         return redirect() -> to('https://www.verifyreviews.es');
     }
 
-    public function vistaGenerarResenas(){
-
+    public function vistaGenerarResenas(){  
+        echo "entra vistaGenerarResenas()<br>";
 
         
         // vistas
@@ -373,6 +373,7 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
+        echo "entra setGenerarResenas()<br>";
         // $emailUsuario = $this->request->getPost('email');
         
         $qr = new Qr();
@@ -381,7 +382,6 @@ class Home extends BaseController{
 
         $maleta_generarResenas['qrGenerados'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
 
-        // $maleta_generarResenas['qrGenerados'] = "holaa";
 
         // vistas
         $maleta['head_content'] = view('head_content');
