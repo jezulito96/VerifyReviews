@@ -362,7 +362,6 @@ class Home extends BaseController{
     }
 
     public function vistaGenerarResenas(){  
-        echo "entra vistaGenerarResenas()<br>";
 
         
         // vistas
@@ -373,8 +372,6 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
-        echo "entra setGenerarResenas()<br>";
-        // $emailUsuario = $this->request->getPost('email');
         
         $qr = new Qr();
 

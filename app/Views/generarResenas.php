@@ -2,7 +2,7 @@
     // primero se muestra el formulario y cuando se envia 
     if(!isset($qrGenerados)){
 ?>
-<h3>Genera reseñas para tus clientes</h3>
+<h3>Genera códigos Qr para que tus clientes puedan opinar sobre tu negocio</h3>
 <p>
     Cada reseña será unica, de esta manera protegemos tu negocio. Nos aseguramos de que las reseñas que recibe tu negocio sean de tus clientes.
 </p>
@@ -13,12 +13,14 @@
         
     </form>
 </div>
+
 <?php
     }else{
-        print_r($qrGenerados);
-        echo '<img src="' . $qrGenerados . '" title="Reseña verifyReviews.es" alt="C&oacute;digo Qr" />';
-?><?php
 
+        echo '<img src="' . $qrGenerados . '" title="Reseña de negocio" alt="C&oacute;digo Qr" class="tamanoQr" />';
+        
+?><?php
+        
 
 
     }

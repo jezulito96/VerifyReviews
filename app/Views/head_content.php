@@ -50,6 +50,8 @@
     <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
           // lista header
           echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
+          
+          echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
 
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
@@ -74,11 +76,6 @@
     ?>
 
     <style>
-        .codigoQr {
-            width: 300px;
-            height: 300px;
-        }
-
         .mapa {
             height: 300px;
             width: 300px;
