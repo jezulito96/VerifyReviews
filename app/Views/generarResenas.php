@@ -48,5 +48,14 @@
 
 
     }
-
+?>
+<script>
+    $(document).ready(function(){
+        botonPrevisualizacion = $("#previsualizarQr");
+        botonPrevisualizacion.click(function(){
+            console.log("entra");
+        });
+        
+    });
+<script>
 
