@@ -51,11 +51,11 @@
 ?>
 <script>
     $(document).ready(function(){
-        botonPrevisualizacion = $("#previsualizarQr");
+        var botonPrevisualizacion = $("#previsualizarQr");
         botonPrevisualizacion.click(function(){
             console.log("entra");
         });
         
     });
-<script>
+</script>
 
