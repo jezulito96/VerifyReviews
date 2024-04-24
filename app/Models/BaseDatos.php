@@ -127,7 +127,7 @@ class BaseDatos extends Model
 
     public function getUsuario($emailUsuario){
         $orden = "SELECT * FROM usuario WHERE email=?";
-        $parametros = [':email' => $emailUsuario];
+        $parametros = ['email' => $emailUsuario];
         $consulta = $this -> db -> query($orden, $parametros);
         $numeroFilas = $consulta -> getNumRows();
 
