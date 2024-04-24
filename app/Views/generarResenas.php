@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <input type="button" name="previsualizarQr" value="Previsualizar" /> 
+        <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar" /> 
         <input type="submit" name="generaQr" value="Generar codigos">
     </form>
 </div>
