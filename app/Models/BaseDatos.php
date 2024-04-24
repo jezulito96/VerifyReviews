@@ -125,7 +125,25 @@ class BaseDatos extends Model
         return $contrasena;
     }
 
+    public function getUsuario($emailUsuario){
+        $orden = "SELECT * FROM usuario WHERE email=:email";
+        $parametros = [':email' => $emailUsuario];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
 
+        if($numeroFilas > 0 ){
+            // email coincide con negocio 
+
+            return $consulta -> getResultArray() ;
+        }else{
+            $orden = "SELECT email FROM usuario_registrado WHERE email='" . $emailUsuario . "'";
+            $consulta = $this -> db -> query($orden);
+            $numeroFilas = $consulta -> getNumRows();
+
+            // email coincide con usuario
+            return $consulta -> getResultArray();
+        }
+    }
 }
 
 

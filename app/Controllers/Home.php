@@ -324,6 +324,9 @@ class Home extends BaseController{
         $resultadoEmail = false;
         $coincideContrasena = false;
 
+        /**
+         * @param string $name
+         */
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
         
 
@@ -334,6 +337,10 @@ class Home extends BaseController{
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
                 // meter en sesion el objeto del usuario para tener los fatos a mano
                 session() -> set("sesionIniciada", $resultadoEmail);
+
+                //meto el objeto del usuario en sesion 
+                $usuario = $baseDatos -> getUsuario($emailUsuario);
+                session() -> set("usuario_en_sesion",$usuario);
 
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
@@ -362,7 +369,6 @@ class Home extends BaseController{
     }
 
     public function vistaGenerarResenas(){  
-
         
         // vistas
         $maleta['head_content'] = view('head_content');
@@ -372,6 +378,7 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
+
         
         $qr = new Qr();
 

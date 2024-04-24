@@ -8,16 +8,40 @@
 </p>
 <div class="containerformGenerarResena">
     <form action="setGenerarResenas" method="post" class="formLogin">
-        <input type="range" name="numResenas" step="5" max="20" min="5" required>
-        <input type="submit" value="Generar codigos">
-        
+
+        <label>¿Cuántas reseñas quieres generar?</label>
+        <select name="numeroQr" id="numeroQr" >
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Escoge un color para el codigo Qr</label>
+        <select name="colorQr" id="colorQr" >
+            <option value="150px">Pequeño</option>
+            <option value="200px">Mediano</option>
+            <option value="300px">Grande</option>
+        </select>
+
+        <div id="previsualizacion" class="previsualizacion">
+            <div id="prevQr" class="prevQr">
+
+            </div>
+
+            <div id="prevNegocio" class="prevNegocio">
+                <?php if(isset($preNegocio)) echo $preNegocio; ?>
+            </div>
+        </div>
+
+        <input type="button" name="previsualizarQr" value="Previsualizar" /> 
+        <input type="submit" name="generaQr" value="Generar codigos">
     </form>
 </div>
 
 <?php
     }else{
 
-        echo '<img src="' . $qrGenerados . '" title="Reseña de negocio" alt="C&oacute;digo Qr" class="tamanoQr" />';
+        echo '<img src="' . $qrGenerados . '" title="Reseña de negocio" alt="C&oacute;digo Qr" />';
         
 ?><?php
         

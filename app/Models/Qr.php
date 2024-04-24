@@ -22,7 +22,7 @@ class Qr {
 
         $estilo->version             = 7;
         $estilo->outputInterface     = QRGdImagePNG::class;
-        $estilo->scale               = 40;
+        $estilo->scale               = 20;
         $estilo->outputBase64        = true;
         $estilo->bgColor             = [200, 150, 200];
         $estilo->imageTransparent    = true;
