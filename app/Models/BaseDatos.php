@@ -126,7 +126,7 @@ class BaseDatos extends Model
     }
 
     public function getUsuario($emailUsuario){
-        $orden = "SELECT * FROM comercio WHERE email=?";
+        $orden = "SELECT * FROM negocio WHERE email=?";
         $parametros = [$emailUsuario];
         $consulta = $this -> db -> query($orden, $parametros);
         $numeroFilas = $consulta -> getNumRows();
