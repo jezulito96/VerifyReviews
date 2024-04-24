@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar" /> 
+        <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" /> 
         <input type="submit" name="generaQr" value="Generar codigos">
     </form>
 </div>
@@ -52,8 +52,13 @@
 <script>
     $(document).ready(function(){
         var botonPrevisualizacion = $("#previsualizarQr");
+
         botonPrevisualizacion.click(function(){
-            console.log("entra");
+            numeroQr = $("#numeroQr");
+            colorQr = $("#colorQr");
+
+            
+
         });
         
     });
