@@ -78,6 +78,10 @@ class Qr {
         //        ->writeFile($this->ruta);
     }
 
+    public function setColor($color) {
+        $this -> estilo->bgColor = $color;
+    }
+
     public function setHash($hash) {
         $this->hash = $hash;
     }

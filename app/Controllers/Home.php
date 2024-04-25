@@ -383,7 +383,7 @@ class Home extends BaseController{
         $qr = new Qr();
 
         $clavePublica = "holaaaa";
-
+        $qr -> setColor("red");
         $maleta_generarResenas['qrGenerados'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
 
 
