@@ -20,49 +20,50 @@ class Qr {
 
         $estilo = new QROptions;
 
-        $estilo->version             = 7;
-        $estilo->outputInterface     = QRGdImagePNG::class;
-        $estilo->scale               = 20;
-        $estilo->outputBase64        = true;
-        $estilo->bgColor             = [200, 150, 200];
-        $estilo->imageTransparent    = true;
-        #$estilo->transparencyColor   = [233, 233, 233];
-        $estilo->drawCircularModules = false;
-        $estilo->drawLightModules    = true;
-        $estilo->keepAsSquare        = [
-            QRMatrix::M_FINDER_DARK,
-            QRMatrix::M_FINDER_DOT,
-            QRMatrix::M_ALIGNMENT_DARK,
-        ];
-        $estilo->moduleValues        = [
-            // finder
-            QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
-            QRMatrix::M_FINDER_DOT     => [0, 63, 255], // finder dot, dark (true)
-            QRMatrix::M_FINDER         => [233, 233, 233], // light (false), white is the transparency color and is enabled by default
-            // alignment
-            QRMatrix::M_ALIGNMENT_DARK => [255, 0, 255],
-            QRMatrix::M_ALIGNMENT      => [233, 233, 233],
-            // timing
-            QRMatrix::M_TIMING_DARK    => [255, 0, 0],
-            QRMatrix::M_TIMING         => [233, 233, 233],
-            // format
-            QRMatrix::M_FORMAT_DARK    => [67, 159, 84],
-            QRMatrix::M_FORMAT         => [233, 233, 233],
-            // version
-            QRMatrix::M_VERSION_DARK   => [62, 174, 190],
-            QRMatrix::M_VERSION        => [233, 233, 233],
-            // data
-            QRMatrix::M_DATA_DARK      => [0, 0, 0],
-            QRMatrix::M_DATA           => [233, 233, 233],
-            // darkmodule
-            QRMatrix::M_DARKMODULE     => [0, 0, 0],
-            // separator
-            QRMatrix::M_SEPARATOR      => [233, 233, 233],
-            // quietzone
-            QRMatrix::M_QUIETZONE      => [233, 233, 233],
-            // logo (requires a call to QRMatrix::setLogoSpace()), see QRImageWithLogo
-            QRMatrix::M_LOGO           => [233, 233, 233],
-        ];
+        $estilo->version             = 7; // tamaño para datos
+        $estilo->outputInterface     = QRGdImagePNG::class; 
+        $estilo->scale               = 20; //tamaño
+        $estilo->outputBase64        = true; 
+        $estilo->bgColor             = [200, 150, 200]; // color de fondo
+        $estilo->imageTransparent    = true; // fondo transparente o no
+        #$estilo->transparencyColor   = [233, 233, 233]; //
+        $estilo->drawCircularModules = false; // modulos en forma de cirulos o no
+        $estilo->drawLightModules    = true; // puntos en las esquinas del Qr
+        
+        // $estilo->keepAsSquare        = [
+        //     QRMatrix::M_FINDER_DARK,
+        //     QRMatrix::M_FINDER_DOT,
+        //     QRMatrix::M_ALIGNMENT_DARK,
+        // ];
+        // $estilo->moduleValues        = [
+        //     // finder
+        //     QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
+        //     QRMatrix::M_FINDER_DOT     => [0, 63, 255], // finder dot, dark (true)
+        //     QRMatrix::M_FINDER         => [233, 233, 233], // light (false), white is the transparency color and is enabled by default
+        //     // alignment
+        //     QRMatrix::M_ALIGNMENT_DARK => [255, 0, 255],
+        //     QRMatrix::M_ALIGNMENT      => [233, 233, 233],
+        //     // timing
+        //     QRMatrix::M_TIMING_DARK    => [255, 0, 0],
+        //     QRMatrix::M_TIMING         => [233, 233, 233],
+        //     // format
+        //     QRMatrix::M_FORMAT_DARK    => [67, 159, 84],
+        //     QRMatrix::M_FORMAT         => [233, 233, 233],
+        //     // version
+        //     QRMatrix::M_VERSION_DARK   => [62, 174, 190],
+        //     QRMatrix::M_VERSION        => [233, 233, 233],
+        //     // data
+        //     QRMatrix::M_DATA_DARK      => [0, 0, 0],
+        //     QRMatrix::M_DATA           => [233, 233, 233],
+        //     // darkmodule
+        //     QRMatrix::M_DARKMODULE     => [0, 0, 0],
+        //     // separator
+        //     QRMatrix::M_SEPARATOR      => [233, 233, 233],
+        //     // quietzone
+        //     QRMatrix::M_QUIETZONE      => [233, 233, 233],
+        //     // logo (requires a call to QRMatrix::setLogoSpace()), see QRImageWithLogo
+        //     QRMatrix::M_LOGO           => [233, 233, 233],
+        // ];
         $this -> estilo = $estilo;
     }
 

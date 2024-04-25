@@ -41,7 +41,7 @@
 <?php
     }else{
 
-        echo '<img src="' . $qrGenerados . '" title="Reseña de negocio" alt="C&oacute;digo Qr" />';
+        echo $imagenQr;
         
 ?><?php
         
