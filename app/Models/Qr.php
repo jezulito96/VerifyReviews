@@ -79,7 +79,10 @@ class Qr {
     }
 
     public function setColor($color) {
-        $this -> estilo->bgColor = $color;
+        if($color = "red"){
+            $this ->estilo->bgColor = [240, 8, 8];
+        }
+        
     }
 
     public function setHash($hash) {
