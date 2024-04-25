@@ -378,11 +378,10 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
-
+        $clavePublica = "holaaaa";
         
         $qr = new Qr();
-
-        $clavePublica = "holaaaa";
+        $qr -> setTamano(10);        
         // $qr -> setColor("red");
         $imagenQr = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
         $maleta_generarResenas['imagenQr'] = '<img src="' . $imagenQr . '" title="Reseña de negocio" alt="C&oacute;digo Qr" />';
