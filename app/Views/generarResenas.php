@@ -1,6 +1,6 @@
 <?php 
     // primero se muestra el formulario y cuando se envia 
-    if(!isset($qrGenerados)){
+    if(!isset($imagenQr)){
 ?>
 <h3>Genera códigos Qr para que tus clientes puedan opinar sobre tu negocio</h3>
 <p>
