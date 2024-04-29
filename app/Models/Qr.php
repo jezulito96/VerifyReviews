@@ -30,53 +30,24 @@ class Qr {
     }
     public function crear($url){
         $codigoQR = (new QRCode($this -> cod_qr))->render($url);      
-        // $codigoQR_base64 = 'data:image/webp;base64,' . base64_encode($codigoQR);  
-            return $codigoQR;
-        // $qrCode->text($this->texto)
-        //        ->output(new QRImage($this->tamaño, $this->nivel_correccion_errores))
-        //        ->errorCorrection($this->nivel_correccion_errores)
-        //        ->margin($this->framSize)
-        //        ->size($this->tamaño)
-        //        ->writeFile($this->ruta);
+
+        return $codigoQR;
     }
     public function setColor($color) {
 
-        // if($color = "red"){
-        //     $this -> cod_qr -> outputInterface = [
+        $color = strtolower($color);
 
-        //     ];
-        // }
-
-        $this -> cod_qr-> qroutputinterface = [
-            // finder
-            QRMatrix::M_FINDER_DARK    => [0, 0, 255], // dark (true)
-            // QRMatrix::M_FINDER_DOT     => [0, 63, 255], // finder dot, dark (true)
-            // QRMatrix::M_FINDER         => [233, 233, 233], // light (false), white is the transparency color and is enabled by default
-            // // alignment
-            // QRMatrix::M_ALIGNMENT_DARK => [255, 0, 255],
-            // QRMatrix::M_ALIGNMENT      => [233, 233, 233],
-            // // timing
-            // QRMatrix::M_TIMING_DARK    => [255, 0, 0],
-            // QRMatrix::M_TIMING         => [233, 233, 233],
-            // // format
-            // QRMatrix::M_FORMAT_DARK    => [67, 159, 84],
-            // QRMatrix::M_FORMAT         => [233, 233, 233],
-            // // version
-            // QRMatrix::M_VERSION_DARK   => [62, 174, 190],
-            // QRMatrix::M_VERSION        => [233, 233, 233],
-            // // data
-            // QRMatrix::M_DATA_DARK      => [0, 0, 0],
-            // QRMatrix::M_DATA           => [233, 233, 233],
-            // // darkmodule
-            // QRMatrix::M_DARKMODULE     => [0, 0, 0],
-            // // separator
-            // QRMatrix::M_SEPARATOR      => [233, 233, 233],
-            // // quietzone
-            // QRMatrix::M_QUIETZONE      => [233, 233, 233],
-            // // logo (requires a call to QRMatrix::setLogoSpace()), see QRImageWithLogo
-            // QRMatrix::M_LOGO           => [233, 233, 233],
+        $colores = [
+            "rojo" => [255, 0, 0],
+            "verde" => [0, 255, 0],
+            "azul" => [0, 0, 255], 
         ];
-        
+
+        // Verificar si el color solicitado está en la lista de colores predefinidos
+        if(isset($colores[$color])) {
+            $this -> cod_qr -> fgColor = $colores[$color];
+        }
+
     }
     public function setTamano($tamano){
         $this -> cod_qr -> scale = $tamano; 
@@ -89,7 +60,6 @@ class Qr {
         }
         
     }
-    // public function set
 
     public function setHash($hash) {
         $this->hash = $hash;
