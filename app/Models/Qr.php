@@ -13,31 +13,50 @@ class Qr {
     private $cod_qr;
     private $url;
     private $nombreNegocio;
+    private $opciones;
 
     public function __construct(){
-        $ruta = base_url() . 'images/qr/qrcode.png';
+        // $ruta = base_url() . 'images/qr/qrcode.png';
 
-        $cod_qr = new QROptions;
+        // $cod_qr = new QROptions;
 
          
-        // $cod_qr->bgColor             = [200, 150, 200]; // color de fondo
-        $cod_qr->imageTransparent    = true; // fondo transparente o no
-        #$cod_qr->transparencyColor   = [233, 233, 233]; //
-        $cod_qr->drawCircularModules = false; // modulos en forma de cirulos o no
-        $cod_qr->drawLightModules    = true; // puntos en las esquinas del Qr
+        // // $cod_qr->bgColor             = [200, 150, 200]; // color de fondo
+        // $cod_qr->imageTransparent    = true; // fondo transparente o no
+        // #$cod_qr->transparencyColor   = [233, 233, 233]; //
+        // $cod_qr->drawCircularModules = false; // modulos en forma de cirulos o no
+        // $cod_qr->drawLightModules    = true; // puntos en las esquinas del Qr
 
-        $this -> cod_qr = $cod_qr;
+        // $this -> cod_qr = $cod_qr;
+
+        $this -> opciones = new QROptions([
+            'version'           => 5,
+            'outputType'        => QRCode::OUTPUT_MARKUP_SVG,
+            'eccLevel'          => QRCode::ECC_L,
+            'addQuietzone'      => true,
+            'cssClass'          => 'qrcode',
+            'imageBase64'       => false,
+            'imageTransparent'  => false,
+            'moduleValues'      => [
+                // Datos del módulo en [R, G, B, A] (0-255); A es la opacidad
+                'dark'  => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 0],
+                'light' => ['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0],
+            ],
+        ]);
+
+
     }
     public function crear($url){
-        $codigoQR = (new QRCode($this -> cod_qr))->render($url);      
-        // $codigoQR_base64 = 'data:image/webp;base64,' . base64_encode($codigoQR);  
-            return $codigoQR;
-        // $qrCode->text($this->texto)
-        //        ->output(new QRImage($this->tamaño, $this->nivel_correccion_errores))
-        //        ->errorCorrection($this->nivel_correccion_errores)
-        //        ->margin($this->framSize)
-        //        ->size($this->tamaño)
-        //        ->writeFile($this->ruta);
+        // $codigoQR = (new QRCode($this -> cod_qr))->render($url);      
+        // return $codigoQR;
+
+        $qrcode = new QRCode($this -> opciones);
+
+
+        $svg = $qrcode->render($url);
+
+        return $svg;
+
     }
     public function setColor($color) {
         $color = strtolower($color);
@@ -63,6 +82,8 @@ class Qr {
 
         if($tipo == "png"){
             $this -> cod_qr -> outputInterface = QRGdImagePNG::class; 
+            // $this -> cod_qr -> outputInterface = GDIMAGE_PNG::class; 
+            
             $this -> cod_qr -> outputBase64 = true;
         }
         
