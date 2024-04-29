@@ -19,12 +19,9 @@ class Qr {
 
         $cod_qr = new QROptions;
 
-         
-        // $cod_qr->bgColor             = [200, 150, 200]; // color de fondo
-        $cod_qr->imageTransparent    = true; // fondo transparente o no
-        #$cod_qr->transparencyColor   = [233, 233, 233]; //
-        $cod_qr->drawCircularModules = false; // modulos en forma de cirulos o no
-        $cod_qr->drawLightModules    = true; // puntos en las esquinas del Qr
+        // $cod_qr->imageTransparent    = true; // fondo transparente o no
+        // $cod_qr->drawCircularModules = false; // modulos en forma de cirulos o no
+        // $cod_qr->drawLightModules    = true; // puntos en las esquinas del Qr
 
         $this -> cod_qr = $cod_qr;
     }
@@ -43,7 +40,6 @@ class Qr {
             "azul" => [0, 0, 255], 
         ];
 
-        // Verificar si el color solicitado está en la lista de colores predefinidos
         if(isset($colores[$color])) {
             $this -> cod_qr -> fgColor = $colores[$color];
         }
