@@ -1,11 +1,10 @@
 <?php
 namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
+
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
-use chillerlan\QRCode\QROptionsTrait;
-use chillerlan\QRCode\Output\QRGdImagePNG;
 use chillerlan\QRCode\Output\QROutputInterface;
 
 class Qr extends QRCode {
