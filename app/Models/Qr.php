@@ -32,7 +32,7 @@ class Qr extends QRCode{
 
         $options = new QROptions;
 
-$options->version             = 7;
+$options->version             = 6;
 $options->outputInterface     = QRGdImagePNG::class;
 $options->scale               = 20;
 $options->outputBase64        = false;
