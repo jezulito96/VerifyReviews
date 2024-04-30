@@ -30,19 +30,55 @@ class Qr extends QRCode{
 
         // $this -> cod_qr = $cod_qr;
 
-        $this -> opciones = new QROptions([
-            'version'           => 5,
-            'outputType'        => QRCode::OUTPUT_MARKUP_SVG,
-            'eccLevel'          => QRCode::ECC_L,
-            'addQuietzone'      => true,
-            'cssClass'          => 'qrcode',
-            'imageBase64'       => false,
-            'imageTransparent'  => false,
-            // 'moduleValues'      => [
-            //     'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255],
-            //     'light' => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 0],
-            // ],
-        ]);
+        $options = new QROptions;
+
+        $options->version             = 7;
+        $options->outputInterface     = QRImagick::class;
+        $options->imagickFormat       = 'webp';
+        $options->quality             = 90;
+        $options->scale               = 20;
+        $options->outputBase64        = false;
+        $options->bgColor             = '#ccccaa';
+        $options->imageTransparent    = true;
+        $options->transparencyColor   = '#ccccaa';
+        $options->drawLightModules    = true;
+        $options->drawCircularModules = true;
+        $options->circleRadius        = 0.4;
+        $options->keepAsSquare        = [
+            QRMatrix::M_FINDER_DARK,
+            QRMatrix::M_FINDER_DOT,
+            QRMatrix::M_ALIGNMENT_DARK,
+        ];
+        $options->moduleValues        = [
+            // finder
+            QRMatrix::M_FINDER_DARK    => '#A71111', // dark (true)
+            QRMatrix::M_FINDER_DOT     => '#A71111', // finder dot, dark (true)
+            QRMatrix::M_FINDER         => '#FFBFBF', // light (false)
+            // alignment
+            QRMatrix::M_ALIGNMENT_DARK => '#A70364',
+            QRMatrix::M_ALIGNMENT      => '#FFC9C9',
+            // timing
+            QRMatrix::M_TIMING_DARK    => '#98005D',
+            QRMatrix::M_TIMING         => '#FFB8E9',
+            // format
+            QRMatrix::M_FORMAT_DARK    => '#003804',
+            QRMatrix::M_FORMAT         => '#CCFB12',
+            // version
+            QRMatrix::M_VERSION_DARK   => '#650098',
+            QRMatrix::M_VERSION        => '#E0B8FF',
+            // data
+            QRMatrix::M_DATA_DARK      => '#4A6000',
+            QRMatrix::M_DATA           => '#ECF9BE',
+            // darkmodule
+            QRMatrix::M_DARKMODULE     => '#080063',
+            // separator
+            QRMatrix::M_SEPARATOR      => '#DDDDDD',
+            // quietzone
+            QRMatrix::M_QUIETZONE      => '#DDDDDD',
+        ];
+        
+        
+        $this -> cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
 
     }
@@ -50,12 +86,14 @@ class Qr extends QRCode{
         // $codigoQR = (new QRCode($this -> cod_qr))->render($url);      
         // return $codigoQR;
 
-        $qrcode = new QRCode($this -> opciones);
+        // OPCION 2
+        // $qrcode = new QRCode($this -> opciones);
+        // $svg = $qrcode->render($url);
+        // return $svg;
 
 
-        $svg = $qrcode->render($url);
-        return $svg;
-
+        // OPCION 3
+        return $this -> cod_qr;
     }
     public function setColor($color) {
         $color = strtolower($color);
