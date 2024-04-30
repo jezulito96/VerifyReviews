@@ -43,7 +43,7 @@ $options->drawCircularModules = true;
 $options->drawLightModules    = true;
 $options->keepAsSquare        = [
 	QRMatrix::M_FINDER_DARK,
-	QRMatrix::M_FINDER_DOT,
+	// QRMatrix::M_FINDER_DOT,
 	QRMatrix::M_ALIGNMENT_DARK,
 ];
 // $options->moduleValues        = [
