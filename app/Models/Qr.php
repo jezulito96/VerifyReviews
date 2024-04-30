@@ -38,14 +38,7 @@ class Qr extends QRCode {
         // Crear una instancia de QRCode con las opciones configuradas
         $qrCode = new QRCode($options);
 
-        // Definir el texto que deseas codificar en el código QR
-        $texto = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-
-        // Establecer el texto en el código QR
-        $qrCode->setText($texto);
-
-        // Generar el código QR como un archivo SVG
-        $this->cod_qr = $qrCode->writeString();
+        $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     }
 
     public function crear(){
