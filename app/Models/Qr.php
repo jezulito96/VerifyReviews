@@ -30,30 +30,24 @@ class Qr extends QRCode{
 
         // $this -> cod_qr = $cod_qr;
 
-        $options = new QROptions;
-
-$options->version             = 6;
-$options->outputType = QROutputInterface::MARKUP_SVG;
-$options->scale               = 10;
-$options->outputBase64        = false;
-$options -> eccLevel          = QRCode::ECC_L;
-$options->bgColor             = [200, 150, 200];
-$options->imageTransparent    = false;
-$options->transparencyColor   = [233, 233, 233];
-$options->drawCircularModules = true;
-$options->drawLightModules    = true;
-$options->circleRadius        = 0.4;
-
-// para dar forma cuadrada a los cuadrados de las esquinas
-$options->keepAsSquare        = [
-	QRMatrix::M_FINDER_DARK,
-	QRMatrix::M_FINDER_DOT,
-	QRMatrix::M_ALIGNMENT_DARK,
-];
-$options -> moduleValues = [
-    'dark'  => ['r' => 255, 'g' => 0, 'b' => 0, 'a' => 255], // Cambiar a rojo
-    'light' => ['r' => 255, 'g' => 255, 'b' => 255, 'a' => 255], // Fondo en blanco
-];
+        $options = new QROptions([
+            'version'             => 6,
+            'outputType'          => QROutputInterface::MARKUP_SVG,
+            'scale'               => 10,
+            'outputBase64'        => false,
+            'eccLevel'            => QRCode::ECC_L,
+            'bgColor'             => [200, 150, 200],
+            'imageTransparent'    => false,
+            'transparencyColor'   => [233, 233, 233],
+            'drawCircularModules' => true,
+            'drawLightModules'    => true,
+            'circleRadius'        => 0.4,
+            'keepAsSquare'        => [
+                QRMatrix::M_FINDER_DARK,
+                QRMatrix::M_FINDER_DOT,
+                QRMatrix::M_ALIGNMENT_DARK,
+            ],
+        ]);
 // $options->moduleValues        = [
 // 	// finder
 // 	QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
