@@ -38,10 +38,10 @@ class Qr extends QRCode{
             'cssClass'          => 'qrcode',
             'imageBase64'       => false,
             'imageTransparent'  => false,
-            'moduleValues'      => [
-                'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255],
-                'light' => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 0],
-            ],
+            // 'moduleValues'      => [
+            //     'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255],
+            //     'light' => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 0],
+            // ],
         ]);
 
 
@@ -54,7 +54,6 @@ class Qr extends QRCode{
 
 
         $svg = $qrcode->render($url);
-        $this -> cod_qr -> scale = 10; 
         return $svg;
 
     }
