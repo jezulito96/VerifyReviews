@@ -74,7 +74,7 @@ class Qr extends QRCode {
             ]]></style>';
 
 
-        $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+            $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     }
 
     public function crear(){
