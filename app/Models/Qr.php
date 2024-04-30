@@ -39,44 +39,6 @@ class Qr extends QRCode {
         $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     }
 
-    public function __construct(){
-        $options = new SVGWithLogoOptions;
-
-        // SVG logo options (see extended class)
-        $options->svgLogo             = __DIR__.'/github.svg'; // logo from: https://github.com/simple-icons/simple-icons
-        $options->svgLogoScale        = 0.25;
-        $options->svgLogoCssClass     = 'dark';
-        // QROptions
-        $options->version             = 5;
-        $options->outputInterface     = QRSvgWithLogo::class;
-        $options->outputBase64        = false;
-        $options->eccLevel            = EccLevel::H; // ECC level H is necessary when using logos
-        $options->addQuietzone        = true;
-        $options->drawLightModules    = true;
-        $options->connectPaths        = true;
-        $options->drawCircularModules = true;
-        $options->circleRadius        = 0.45;
-        $options->keepAsSquare        = [
-            QRMatrix::M_FINDER_DARK,
-            QRMatrix::M_FINDER_DOT,
-            QRMatrix::M_ALIGNMENT_DARK,
-        ];
-        // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
-        $options->svgDefs = '
-            <linearGradient id="gradient" x1="100%" y2="100%">
-                <stop stop-color="#D70071" offset="0"/>
-                <stop stop-color="#9C4E97" offset="0.5"/>
-                <stop stop-color="#0035A9" offset="1"/>
-            </linearGradient>
-            <style><![CDATA[
-                .dark{fill: url(#gradient);}
-                .light{fill: #eaeaea;}
-            ]]></style>';
-
-
-            $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-    }
-
     public function crear(){
         // Retornar el código QR generado
         return $this->cod_qr;
