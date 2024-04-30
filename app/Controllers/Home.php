@@ -388,6 +388,10 @@ class Home extends BaseController{
         // $maleta_generarResenas['imagenQr'] = '<img src="' . $imagenQr . '" title="Reseña de negocio" alt="C&oacute;digo Qr" />';
 
         $maleta_generarResenas['imagenQr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+
+
+        //opcion 3
+        $maleta_generarResenas['imagenQr'] = $qr;
         
         // vistas
         $maleta['head_content'] = view('head_content');
