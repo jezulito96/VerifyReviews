@@ -36,8 +36,6 @@ class Qr extends QRCode {
         ]);
 
         // Crear una instancia de QRCode con las opciones configuradas
-        $qrCode = new QRCode($options);
-
         $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     }
 
