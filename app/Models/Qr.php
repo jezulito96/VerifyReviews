@@ -78,11 +78,11 @@ $options->moduleValues        = [
 ];
 
 
-$this -> cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    $this -> cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
 
     }
-    public function crear($url){
+    public function crear(){
         // $codigoQR = (new QRCode($this -> cod_qr))->render($url);      
         // return $codigoQR;
 

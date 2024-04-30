@@ -391,7 +391,8 @@ class Home extends BaseController{
 
 
         //opcion 3
-        $maleta_generarResenas['imagenQr'] = $qr;
+        
+        $maleta_generarResenas['imagenQr'] = $qr -> crear();
         
         // vistas
         $maleta['head_content'] = view('head_content');
