@@ -41,7 +41,6 @@ $options->imageTransparent    = true;
 #$options->transparencyColor   = [233, 233, 233];
 $options->drawCircularModules = true;
 $options->drawLightModules    = true;
-$options->circleRadius        = 0.4;
 $options->keepAsSquare        = [
 	QRMatrix::M_FINDER_DARK,
 	QRMatrix::M_FINDER_DOT,
