@@ -80,7 +80,9 @@
             height: 300px;
             width: 300px;
         }
-
+        .qr-code .qr-code-svg rect {
+    fill: blue; /* Cambiar a tu color deseado */
+}
     </style>
 
 
