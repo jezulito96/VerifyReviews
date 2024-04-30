@@ -54,7 +54,7 @@ class Qr extends QRCode{
 
 
         $svg = $qrcode->render($url);
-
+        $this -> cod_qr -> scale = 10; 
         return $svg;
 
     }
