@@ -1,6 +1,6 @@
 <?php
 namespace App\Models;
-require FCPATH . 'vendor/autoload.php';
+require FCPATH . '../vendor/autoload.php';
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
