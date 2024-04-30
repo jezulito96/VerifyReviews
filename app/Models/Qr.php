@@ -54,7 +54,7 @@ class Qr extends QRCode{
         ]);
         
         // Cambiar el color de los módulos oscuros específicos
-        $options->moduleValues['dark'] = ['r' => 255, 'g' => 0, 'b' => 0, 'a' => 255]; // Cambiar a rojo para M_FINDER_DARK
+        $options->QROptions::$moduleValues['dark'] = ['r' => 255, 'g' => 0, 'b' => 0, 'a' => 255]; // Cambiar a rojo para M_FINDER_DARK
 // $options->moduleValues        = [
 // 	// finder
 // 	QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
