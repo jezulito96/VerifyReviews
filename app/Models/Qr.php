@@ -34,14 +34,14 @@ class Qr extends QRCode{
 
 $options->version             = 6;
 $options->outputType = QROutputInterface::MARKUP_SVG;
-$options->scale               = 20;
+$options->scale               = 10;
 $options->outputBase64        = false;
 $options->bgColor             = [200, 150, 200];
 $options->imageTransparent    = true;
 #$options->transparencyColor   = [233, 233, 233];
 $options->drawCircularModules = true;
 $options->drawLightModules    = true;
-$options->circleRadius        = 0.4;
+// $options->circleRadius        = 0.4;
 $options->keepAsSquare        = [
 	QRMatrix::M_FINDER_DARK,
 	QRMatrix::M_FINDER_DOT,
