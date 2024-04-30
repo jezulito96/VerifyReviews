@@ -80,9 +80,9 @@
             height: 300px;
             width: 300px;
         }
-        .qr-data {
+        /* .qr-data {
     fill: blue; /* Cambiar a tu color deseado */
-}
+} */
     </style>
 
 
