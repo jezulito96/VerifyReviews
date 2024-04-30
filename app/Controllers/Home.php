@@ -381,6 +381,7 @@ class Home extends BaseController{
         $clavePublica = "holaaaa";
         
         $qr = new Qr();
+        
         // $qr -> setTamano(10);        
         // $qr -> setTipo("png");
         // $qr -> setColor("rojo");
@@ -391,6 +392,7 @@ class Home extends BaseController{
 
 
         //opcion 3
+        
         
         $maleta_generarResenas['imagenQr'] = $qr -> crear();
         
