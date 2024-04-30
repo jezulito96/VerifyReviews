@@ -47,7 +47,14 @@ class Qr extends QRCode{
                 QRMatrix::M_FINDER_DOT,
                 QRMatrix::M_ALIGNMENT_DARK,
             ],
+            'moduleValues'      => [
+                'dark'  => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 255], // Cambiar a azul
+                'light' => ['r' => 255, 'g' => 255, 'b' => 255, 'a' => 255], // Fondo en blanco
+            ],
         ]);
+        
+        // Cambiar el color de los módulos oscuros específicos
+        $options->moduleValues['dark'] = ['r' => 255, 'g' => 0, 'b' => 0, 'a' => 255]; // Cambiar a rojo para M_FINDER_DARK
 // $options->moduleValues        = [
 // 	// finder
 // 	QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
