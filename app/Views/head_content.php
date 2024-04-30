@@ -80,9 +80,7 @@
             height: 300px;
             width: 300px;
         }
-        .qrcode{
-            color: blue;
-        }
+        
     </style>
 
 

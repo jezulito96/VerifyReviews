@@ -5,10 +5,11 @@ namespace App\Models;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
+use chillerlan\QRCode\QROptionsTrait;
 use chillerlan\QRCode\Output\QRGdImagePNG;
 use chillerlan\QRCode\Output\QROutputInterface;
 
-class Qr {
+class Qr extends QRCode{
     private $hash;
     private $cod_qr;
     private $url;
@@ -38,7 +39,7 @@ class Qr {
             'imageBase64'       => false,
             'imageTransparent'  => false,
             'moduleValues'      => [
-                // 'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255],
+                'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255],
                 'light' => ['r' => 0, 'g' => 0, 'b' => 255, 'a' => 0],
             ],
         ]);
