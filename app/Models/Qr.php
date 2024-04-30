@@ -34,18 +34,19 @@ class Qr extends QRCode{
 
 $options->version             = 7;
 $options->outputInterface     = QRGdImagePNG::class;
-$options->scale               = 10;
+$options->scale               = 20;
 $options->outputBase64        = false;
-// $options->bgColor             = [200, 150, 200];
+$options->bgColor             = [200, 150, 200];
 $options->imageTransparent    = true;
 #$options->transparencyColor   = [233, 233, 233];
 $options->drawCircularModules = true;
 $options->drawLightModules    = true;
-// $options->keepAsSquare        = [
-// 	QRMatrix::M_FINDER_DARK,
-// 	QRMatrix::M_FINDER_DOT,
-// 	QRMatrix::M_ALIGNMENT_DARK,
-// ];
+$options->circleRadius        = false;
+$options->keepAsSquare        = [
+	QRMatrix::M_FINDER_DARK,
+	QRMatrix::M_FINDER_DOT,
+	QRMatrix::M_ALIGNMENT_DARK,
+];
 // $options->moduleValues        = [
 // 	// finder
 // 	QRMatrix::M_FINDER_DARK    => [0, 63, 255], // dark (true)
