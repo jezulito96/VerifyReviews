@@ -84,7 +84,7 @@ class Qr extends QRCode {
             $matrix = $qrCode->addMatrixModifications($matrix);
 
             // Renderizar el código QR
-            $codigoQRFinal = $qrCode->renderMatrix($matrix);
+            $this->cod_qr = $qrCode->renderMatrix($matrix);
 
             // El código QR final se encuentra ahora en $codigoQRFinal
         } catch (QRCodeDataException $e) {
