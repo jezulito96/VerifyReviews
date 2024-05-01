@@ -13,7 +13,7 @@ class Qr extends QRCode {
 
     public function __construct(){
         $options = new QROptions([
-            'version'             => 7,
+            'version'             => 6,
             'outputType'          => QROutputInterface::MARKUP_SVG,
             'scale'               => 5,
             'outputBase64'        => false,
@@ -83,8 +83,9 @@ class Qr extends QRCode {
         $matrix = $qrCode->addMatrixModifications($matrix);
 
         // Renderizar el código QR
-        $this->cod_qr = $qrCode->renderMatrix($matrix);
-
+        $qrFinal = $qrCode->renderMatrix($matrix);
+        $this->cod_qr = gzcompress($qrFinal);
+        
     }
 
     public function crear(){

@@ -41,7 +41,7 @@
 <?php
     }else{
 
-        echo $imagenQr;
+        echo gzuncompress($imagenQr);
         
 ?><?php
         
