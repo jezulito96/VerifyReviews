@@ -74,7 +74,7 @@ class Home extends BaseController{
 
 
 
-        if($resultado_descifrado)
+        
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
