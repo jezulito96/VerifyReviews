@@ -76,7 +76,7 @@ use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
 use chillerlan\QRCode\Output\QROutputInterface;
 
-class Qr extends QRCode {
+class Qr {
     const COLOR_PREDETERMINADO = 1;
     private $cod_qr;
     private $options;
@@ -84,6 +84,11 @@ class Qr extends QRCode {
 
         $this ->options = new QROptions;
 
+
+
+    }
+
+    public function crear($url){
         $this ->options -> scale = 5; 
         $this ->options->version          = 5;
         $this ->options->outputInterface   = QRMarkupSVG::class;
@@ -99,10 +104,6 @@ class Qr extends QRCode {
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
-
-    }
-
-    public function crear($url){
         // Retornar el código QR generado
         $this -> cod_qr = (new QRCode($this ->options))->render($url);
         return $this->cod_qr;
