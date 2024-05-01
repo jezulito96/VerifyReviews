@@ -131,7 +131,9 @@
 
 
     <!-- Recoger ubicacion usuario si acepta obtener ubicacion-->
-    <?php //echo "<script src='". base_url() . "js/location.js' > </script>";        ?>
+    <?php echo "<script src='". base_url() . "js/location.js' > </script>";        ?>
+
+    
     <!-- https://leafletjs.com/reference.html#map-factory -->
     <script>
         // $(document).ready(function () { 
