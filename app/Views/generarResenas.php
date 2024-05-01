@@ -9,6 +9,8 @@
 <div class="containerformGenerarResena">
     <form action="setGenerarResenas" method="post" class="formLogin">
 
+        
+
         <label>¿Cuántas reseñas quieres generar?</label>
         <select name="numeroQr" id="numeroQr" >
             <option value="5">5</option>
@@ -27,13 +29,9 @@
             <div id="prevQr" class="prevQr">
 
             </div>
-
-            <div id="prevNegocio" class="prevNegocio">
-                <?php if(isset($preNegocio)) echo $preNegocio; ?>
-            </div>
         </div>
 
-        <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" /> 
+        <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" style="background:red;"/> 
         <input type="submit" name="generaQr" value="Generar codigos">
     </form>
 </div>
@@ -50,15 +48,10 @@
 ?>
 <script>
     $(document).ready(function(){
-        var botonPrevisualizacion = $("#previsualizarQr");
 
-        botonPrevisualizacion.click(function(){
-            numeroQr = $("#numeroQr");
-            colorQr = $("#colorQr");
+        $(#).
 
-            
-
-        });
+        
         
     });
 </script>

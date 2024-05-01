@@ -121,11 +121,29 @@ class Qr {
                 2 => '#0035A9', // azul oscuro 
             ],
             [
-                0 => '#51a5d9', //azul_verify
-                1 => '#ccc',
-                2 => '#D70071' // morado_oscuro
+                // tonos verdes marrones
+                0 => '#3E8989', 
+                1 => '#05F140',
+                2 => '#2CDA9D' 
+            ],
+            [
+                // tonos grises
+                0 => '#7A9E9F', 
+                1 => '#B8D8D8',
+                2 => '#4F6367' 
+            ],
+            [
+                // tonos marrones
+                0 => '#7F534B', 
+                1 => '#8C705F',
+                2 => '#1E1A1D' 
+            ],
+            [
+                // tonos rosas...
+                0 => '#ffb5a7', 
+                1 => '#f9dcc4',
+                2 => '#fec89a' 
             ]
-            
             
 
         ];
