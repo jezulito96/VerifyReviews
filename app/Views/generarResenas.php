@@ -40,8 +40,8 @@
 
 <?php
     }else{
-
-        echo gzuncompress($imagenQr);
+        
+        echo $imagenQr;
         
 ?><?php
         

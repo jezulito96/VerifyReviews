@@ -3,9 +3,8 @@ namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
 
 use chillerlan\QRCode\QRCode;
-use chillerlan\QRCode\QROptions;
 use chillerlan\QRCode\Data\QRMatrix;
-use chillerlan\QRCode\Data\QRCodeDataException;
+use chillerlan\QRCode\QROptions;
 use chillerlan\QRCode\Output\QROutputInterface;
 
 class Qr extends QRCode {
@@ -36,56 +35,25 @@ class Qr extends QRCode {
             ],
         ]);
 
-        // // Crear una instancia de QRCode con las opciones configuradas
-        // $qrCode = new QRCode($options);
-
-        // // Definir el texto que deseas codificar en el código QR
-        // $texto = "https://verifyreviews.es/verifyreviews/resena";
-
-        // // Generar el código QR sin logo
-        // $codigoQRFinal = $qrCode->render($texto);
-
-        // // Obtener la ruta del archivo del logo
-        // $logoPath = FCPATH . 'img/logoMovil.png';
-
-        // $logoData = file_get_contents($logoPath);
-
-        // // Obtener el contenido base64 del logo
-        // $logoBase64 = base64_encode($logoData);
-
-        // // Insertar el logo en el SVG del código QR
-        // $this->cod_qr = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
-
-        
-        // Cargar la imagen del logo
-        $logoPath = FCPATH . 'img/logoMovil.png';
-        $logoData = file_get_contents($logoPath);
-
-        // Convertir la imagen del logo en base64
-        $logoBase64 = base64_encode($logoData);
+        // Crear una instancia de QRCode con las opciones configuradas
+        $qrCode = new QRCode($options);
 
         // Definir el texto que deseas codificar en el código QR
         $texto = "https://verifyreviews.es/verifyreviews/resena";
 
-        // Crear una instancia de QRCode
-        $qrCode = new QRCode();
+        // Generar el código QR sin logo
+        $codigoQRFinal = $qrCode->render($texto);
 
-        // Agregar la imagen del logo como un segmento de datos al código QR
-        $qrCode->render($logoBase64);
+        // Obtener la ruta del archivo del logo
+        $logoPath = FCPATH . 'img/logoMovil.png';
 
-        // Agregar el texto como otro segmento de datos al código QR
-        $qrCode->render($texto);
+        $logoData = file_get_contents($logoPath);
 
-        // Renderizar el código QR y obtener la matriz QR
-        $matrix = $qrCode->getQRMatrix();
+        // Obtener el contenido base64 del logo
+        $logoBase64 = base64_encode($logoData);
 
-        // Agregar modificaciones a la matriz (si es necesario)
-        $matrix = $qrCode->addMatrixModifications($matrix);
-
-        // Renderizar el código QR
-        $qrFinal = $qrCode->renderMatrix($matrix);
-        $this->cod_qr = gzcompress($qrFinal);
-        
+        // Insertar el logo en el SVG del código QR
+        $this->cod_qr = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
     }
 
     public function crear(){
