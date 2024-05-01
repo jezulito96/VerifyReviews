@@ -110,18 +110,19 @@ class Qr {
     public function setColor($opcion){
         $colores = [
             [
-                'gris_verify' => '#7A93AC',
-                'azul_verify' => '#51a5d9',
-                'azul_claro_verify' => '#92BCEA',
+                0 => '#7A93AC', //gris_verify
+                1 => '#51a5d9', // azul_verify
+                2 => '#92BCEA', // azul_claro_verify
             ], 
             [
-                'morado_oscuro' => '#D70071',
-                'purpura_oscuro' => '#9C4E97',
-                'azul_oscuro' => '#0035A9',
+                0 => '#D70071', //morado
+                1 => '#9C4E97', // purpura
+                2 => '#0035A9', // azul oscuro 
             ],
             [
-                'azul_verify' => '#51a5d9',
-                'morado_oscuro' => '#D70071',
+                0 => '#51a5d9', //azul_verify
+                1 => '#ccc',
+                2 => '#D70071' // morado_oscuro
             ]
             
             
