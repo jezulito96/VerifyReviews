@@ -73,16 +73,7 @@
 
     <!-- Estilos generales -->
     <?php 
-    echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
-
-    // lista header
-    echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
     
-    //estilos de los codigos qr
-    echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
-
-    // <!-- Estilos de index -->
-    echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
 
     // Comprobación para detectar si el usuario accede desde un dispositivo móvil o desde escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -101,6 +92,17 @@
         // Escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
     }
+
+    echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
+
+    // lista header
+    echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
+    
+    //estilos de los codigos qr
+    echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
+
+    // <!-- Estilos de index -->
+    echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
     ?>
 
     <!-- estilo del mapa que se genera con JQUERY y la libreria de OPENSTREETSMAPS -->

@@ -7,7 +7,7 @@
     <body>
         <header>
         <?php if (isset ($header_content)) echo $header_content; ?>
-    </header>
+        </header>
 
     <main>
         <!-- vista inicio de la web -->
@@ -22,8 +22,10 @@
         <!-- vista para inicio de sesion -->
         <?php if (isset ($login)) echo $login; ?>
 
+        <!-- cuando el negocio pulsa "generar resenas" -->
         <?php if (isset ($generarResenas)) echo $generarResenas; ?>
-        <!-- miraaaaaaaaaaaaaaaaaaar -->
+
+        <!-- cuando el usuario escanea el codigo qr -->
         <?php if (isset ($resena_content)) echo $resena_content; ?>
 
         <?php
