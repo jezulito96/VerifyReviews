@@ -84,9 +84,9 @@ class Qr extends QRCode {
         $options = new QROptions;
 
         // SVG logo options (see extended class)
-        $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
-        $options->svgLogoScale        = 0.25;
-        $options->svgLogoCssClass     = 'dark';
+        // $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
+        // $options->svgLogoScale        = 0.25;
+        // $options->svgLogoCssClass     = 'dark';
         // QROptions
         $options->version             = 5;
         $options->outputInterface     = QRMarkupSVG::class;
@@ -102,7 +102,6 @@ class Qr extends QRCode {
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
-        // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
         $options->svgDefs = '
             <linearGradient id="gradient" x1="100%" y2="100%">
                 <stop stop-color="#D70071" offset="0"/>
@@ -114,9 +113,7 @@ class Qr extends QRCode {
                 .light{fill: #eaeaea;}
             ]]></style>';
 
-        $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-
-
+        $out = (new QRCode($options))->render('https://verifyreviews.es/verifyreviews/resena');
 
         $this -> cod_qr = $out;
  
