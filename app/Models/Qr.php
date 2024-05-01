@@ -14,7 +14,7 @@ class Qr extends QRCode {
         $options = new QROptions([
             'version'             => 6,
             'outputType'          => QROutputInterface::MARKUP_SVG,
-            'scale'               => 10,
+            'scale'               => 5,
             'outputBase64'        => false,
             'eccLevel'            => QRCode::ECC_L,
             'addLogoSpace'        => true,
