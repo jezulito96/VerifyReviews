@@ -71,6 +71,8 @@ include "QRSvgWithLogo.php";
 include "SVGWithLogoOption";
 
 use chillerlan\QRCode\Output\QRMarkupSVG;
+use chillerlan\QRCode\QRCode;
+
 use chillerlan\QRCode\Common\EccLevel;
 
 use QRSvgWithLogo;
