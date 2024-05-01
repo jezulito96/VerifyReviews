@@ -100,27 +100,11 @@ class Qr extends QRCode {
             QRMatrix::M_ALIGNMENT_DARK,
         ];
 
-        
-        $this ->options->svgDefs = '
-            <linearGradient id="gradient" x1="100%" y2="100%">
-                <stop stop-color="#D70071" offset="0"/>
-                <stop stop-color="#9C4E97" offset="0.5"/>
-                <stop stop-color="#0035A9" offset="1"/>
-            </linearGradient>
-            <style><![CDATA[
-                .dark{fill: url(#gradient);}
-                .light{fill: #eaeaea;}
-            ]]></style>';
-
-        
-
-        $this -> cod_qr = $out;
- 
     }
 
     public function crear($url){
         // Retornar el código QR generado
-        $out = (new QRCode($this ->options))->render($url);
+        $this -> cod_qr = (new QRCode($this ->options))->render($url);
         return $this->cod_qr;
     }
 
