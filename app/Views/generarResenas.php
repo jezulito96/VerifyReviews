@@ -42,7 +42,6 @@
     }else{
         
         echo $imagenQr;
-        echo FCPATH
 ?><?php
         
 
