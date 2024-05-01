@@ -74,7 +74,6 @@ use chillerlan\QRCode\Common\EccLevel;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
-use chillerlan\QRCode\Output\QROutputInterface;
 
 class Qr {
     const COLOR_PREDETERMINADO = 1;
