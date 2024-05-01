@@ -108,7 +108,9 @@
             fill:#4c9cce;
         }
         .imageLogo{
-            fill-opacity: 0.3 ;
+            opacity: 0.3 ;
+            width: 30px;
+            height: 30px;
         }
     </style>
 
