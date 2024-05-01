@@ -1,14 +1,4 @@
 <?php
-/**
- * SVG with logo example
- *
- * @created      05.03.2022
- * @author       smiley <smiley@chillerlan.net>
- * @copyright    2022 smiley
- * @license      MIT
- *
- * @noinspection PhpComposerExtensionStubsInspection
- */
 
 use chillerlan\QRCode\{QRCode, QRCodeException, QROptions};
 use chillerlan\QRCode\Common\EccLevel;

@@ -1,10 +1,5 @@
 <?php
 
-
-/*
- * Runtime
- */
-
 $options = new SVGWithLogoOptions;
 
 // SVG logo options (see extended class)

@@ -64,12 +64,86 @@
 //     }
 // }
 
+// ------------------------------------------------------------------------
+
+// namespace App\Models;
+// require FCPATH . '../vendor/autoload.php';
+
+// use chillerlan\QRCode\Output\QRMarkupSVG;
+// use chillerlan\QRCode\Common\EccLevel;
+// use chillerlan\QRCode\QRCode;
+// use chillerlan\QRCode\Data\QRMatrix;
+// use chillerlan\QRCode\QROptions;
+// use chillerlan\QRCode\Output\QROutputInterface;
+
+// class Qr extends QRCode {
+//     private $cod_qr;
+
+//     public function __construct(){
+
+//         $options = new QROptions;
+
+//         // SVG logo options (see extended class)
+//         $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
+//         $options->svgLogoScale        = 0.25;
+//         $options->svgLogoCssClass     = 'dark';
+//         // QROptions
+//         $options->version             = 5;
+//         $options->outputInterface     = QRMarkupSVG::class;
+//         $options->outputBase64        = false;
+//         $options->eccLevel            = EccLevel::H; 
+//         $options->addQuietzone        = true;
+//         $options->drawLightModules    = true;
+//         $options->connectPaths        = true;
+//         $options->drawCircularModules = true;
+//         $options->circleRadius        = 0.45;
+//         $options->keepAsSquare        = [
+//             QRMatrix::M_FINDER_DARK,
+//             QRMatrix::M_FINDER_DOT,
+//             QRMatrix::M_ALIGNMENT_DARK,
+//         ];
+//         // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
+//         $options->svgDefs = '
+//             <linearGradient id="gradient" x1="100%" y2="100%">
+//                 <stop stop-color="#D70071" offset="0"/>
+//                 <stop stop-color="#9C4E97" offset="0.5"/>
+//                 <stop stop-color="#0035A9" offset="1"/>
+//             </linearGradient>
+//             <style><![CDATA[
+//                 .dark{fill: url(#gradient);}
+//                 .light{fill: #eaeaea;}
+//             ]]></style>';
+
+//         $options -> getLogo();
+
+//         $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+
+
+
+//         $this -> cod_qr = $out;
+ 
+//     }
+
+//     public function crear(){
+//         // Retornar el código QR generado
+//         return $this->cod_qr;
+//     }
+// }
+
+
+
+// --------------------------------------------------------------
 
 
 namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
-
+require 'SVGWithLogoOptions.php';
+require 'QRSvgWithLogo.php';
 use chillerlan\QRCode\Output\QRMarkupSVG;
+use SVGWithLogoOptions;
+
+use QRSvgWithLogo;
+
 use chillerlan\QRCode\Common\EccLevel;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Data\QRMatrix;
@@ -81,41 +155,42 @@ class Qr extends QRCode {
 
     public function __construct(){
 
-        $options = new QROptions;
+        
+    $options = new SVGWithLogoOptions;
 
-        // SVG logo options (see extended class)
-        $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
-        $options->svgLogoScale        = 0.25;
-        $options->svgLogoCssClass     = 'dark';
-        // QROptions
-        $options->version             = 5;
-        $options->outputInterface     = QRMarkupSVG::class;
-        $options->outputBase64        = false;
-        $options->eccLevel            = EccLevel::H; 
-        $options->addQuietzone        = true;
-        $options->drawLightModules    = true;
-        $options->connectPaths        = true;
-        $options->drawCircularModules = true;
-        $options->circleRadius        = 0.45;
-        $options->keepAsSquare        = [
-            QRMatrix::M_FINDER_DARK,
-            QRMatrix::M_FINDER_DOT,
-            QRMatrix::M_ALIGNMENT_DARK,
-        ];
-        // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
-        $options->svgDefs = '
-            <linearGradient id="gradient" x1="100%" y2="100%">
-                <stop stop-color="#D70071" offset="0"/>
-                <stop stop-color="#9C4E97" offset="0.5"/>
-                <stop stop-color="#0035A9" offset="1"/>
-            </linearGradient>
-            <style><![CDATA[
-                .dark{fill: url(#gradient);}
-                .light{fill: #eaeaea;}
-            ]]></style>';
+    // SVG logo options (see extended class)
+    $options->svgLogo             =FCPATH . 'img/logoMovil.svg'; 
+    $options->svgLogoScale        = 0.25;
+    $options->svgLogoCssClass     = 'dark';
+    // QROptions
+    $options->version             = 5;
+    $options->outputInterface     = QRSvgWithLogo::class;
+    $options->outputBase64        = false;
+    $options->eccLevel            = EccLevel::H; // ECC level H is necessary when using logos
+    $options->addQuietzone        = true;
+    $options->drawLightModules    = true;
+    $options->connectPaths        = true;
+    $options->drawCircularModules = true;
+    $options->circleRadius        = 0.45;
+    $options->keepAsSquare        = [
+        QRMatrix::M_FINDER_DARK,
+        QRMatrix::M_FINDER_DOT,
+        QRMatrix::M_ALIGNMENT_DARK,
+    ];
+    $options->svgDefs = '
+        <linearGradient id="gradient" x1="100%" y2="100%">
+            <stop stop-color="#D70071" offset="0"/>
+            <stop stop-color="#9C4E97" offset="0.5"/>
+            <stop stop-color="#0035A9" offset="1"/>
+        </linearGradient>
+        <style><![CDATA[
+            .dark{fill: url(#gradient);}
+            .light{fill: #eaeaea;}
+        ]]></style>';
 
 
-        $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+
 
 
 
