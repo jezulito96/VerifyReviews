@@ -70,28 +70,21 @@ class Qr extends QRCode {
         // Crear una instancia de QRCode
         $qrCode = new QRCode();
 
-        try {
-            // Agregar la imagen del logo como un segmento de datos al código QR
-            $qrCode->render($logoBase64);
+        // Agregar la imagen del logo como un segmento de datos al código QR
+        $qrCode->render($logoBase64);
 
-            // Agregar el texto como otro segmento de datos al código QR
-            $qrCode->render($texto);
+        // Agregar el texto como otro segmento de datos al código QR
+        $qrCode->render($texto);
 
-            // Renderizar el código QR y obtener la matriz QR
-            $matrix = $qrCode->getQRMatrix();
+        // Renderizar el código QR y obtener la matriz QR
+        $matrix = $qrCode->getQRMatrix();
 
-            // Agregar modificaciones a la matriz (si es necesario)
-            $matrix = $qrCode->addMatrixModifications($matrix);
+        // Agregar modificaciones a la matriz (si es necesario)
+        $matrix = $qrCode->addMatrixModifications($matrix);
 
-            // Renderizar el código QR
-            $this->cod_qr = $qrCode->renderMatrix($matrix);
+        // Renderizar el código QR
+        $this->cod_qr = $qrCode->renderMatrix($matrix);
 
-            // El código QR final se encuentra ahora en $codigoQRFinal
-        } catch (QRCodeDataException $e) {
-            // Manejar errores al agregar datos al código QR
-        } catch (\Exception $e) {
-            // Manejar otros errores
-        }
     }
 
     public function crear(){
