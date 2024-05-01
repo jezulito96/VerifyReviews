@@ -84,8 +84,8 @@
     fill: blue; /* Cambiar a tu color deseado */
 
 
-.qr-timing-dark .dark .qrcode{
-    fill:blue;
+.qr-timing-dark{
+    fill:red;
 }
 .qr-data-dark{
     fill:blue;
