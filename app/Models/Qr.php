@@ -39,7 +39,7 @@ class Qr extends QRCode {
         $qrCode = new QRCode($options);
 
         // Definir el texto que deseas codificar en el código QR
-        $texto = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        $texto = "https://verifyreviews.es/verifyreviews/resena";
 
         // Generar el código QR sin logo
         $codigoQRFinal = $qrCode->render($texto);
