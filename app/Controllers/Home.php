@@ -380,7 +380,7 @@ class Home extends BaseController{
     public function setGenerarResenas(){
         $clavePublica = "holaaaa";
         
-        $qr = new Qr();
+        // $qr = new Qr();
         
         // $qr -> setTamano(10);        
         // $qr -> setTipo("png");
