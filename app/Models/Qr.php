@@ -11,10 +11,13 @@ class Qr extends QRCode {
     private $cod_qr;
 
     public function __construct(){
+        $scale = 5;
+        $logoWidth = 50;
+        $logoHeight = 20;
         $options = new QROptions([
             'version'             => 6,
             'outputType'          => QROutputInterface::MARKUP_SVG,
-            'scale'               => 5,
+            'scale'               => $scale,
             'outputBase64'        => false,
             'eccLevel'            => QRCode::ECC_L,
             'addLogoSpace'        => true,
