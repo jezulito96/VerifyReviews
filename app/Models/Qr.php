@@ -13,7 +13,7 @@ class Qr extends QRCode {
 
     public function __construct(){
         $options = new QROptions([
-            'version'             => 6,
+            'version'             => 7,
             'outputType'          => QROutputInterface::MARKUP_SVG,
             'scale'               => 5,
             'outputBase64'        => false,
