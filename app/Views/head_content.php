@@ -80,21 +80,7 @@
             height: 300px;
             width: 300px;
         }
-        /* .qr-data {
-            fill: yellow; 
-        }
-
-        .qr-timing-dark{
-            fill:red;
-        }
-
-        .qr-finder{
-            color:green;
-        }
-
-        .qr-darkmodule{
-            fill:brown;
-        } */
+        /* -----------------------    Estilo de qr        ----------------------------------- */
 
         /* Para el de los puntitos  */
         .qr-data-dark{

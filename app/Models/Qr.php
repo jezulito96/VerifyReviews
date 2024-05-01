@@ -35,7 +35,25 @@ class Qr extends QRCode {
         ]);
 
         // Crear una instancia de QRCode con las opciones configuradas
-        $this->cod_qr = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        $qrCode = new QRCode($options);
+
+        // Definir el texto que deseas codificar en el código QR
+        $texto = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        // Generar el código QR sin logo
+        $codigoQRFinal = $qrCode->render($texto);
+
+        // Obtener la ruta del archivo del logo
+        $logoPath = base_url() . 'img/logoMovil.svg';
+
+        // Leer el contenido del archivo del logo
+        $logoData = file_get_contents($logoPath);
+
+        // Obtener el contenido base64 del logo
+        $logoBase64 = base64_encode($logoData);
+
+        // Insertar el logo en el SVG del código QR
+        $codigoQRFinal = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
     }
 
     public function crear(){
