@@ -80,16 +80,24 @@
             height: 300px;
             width: 300px;
         }
-        /* .qr-data {
-    fill: blue; /* Cambiar a tu color deseado */
+        .qr-data {
+            fill: yellow; 
+        }
 
+        .qr-timing-dark{
+            fill:red;
+        }
+        .qr-data-dark{
+            fill:blue;
+        }
+        .qr-finder{
+            color:green;
+        }
 
-.qr-timing-dark{
-    fill:red;
-}
-.qr-data-dark{
-    fill:blue;
-}
+        .qr-darkmodule{
+            fill:brown;
+        }
+
 
     </style>
 
