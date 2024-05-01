@@ -118,16 +118,16 @@ class Qr extends QRCode {
         $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
 
-        if(php_sapi_name() !== 'cli'){
-            header('Content-type: image/svg+xml');
+        // if(php_sapi_name() !== 'cli'){
+        //     header('Content-type: image/svg+xml');
 
-            if(extension_loaded('zlib')){
-                header('Vary: Accept-Encoding');
-                header('Content-Encoding: gzip');
-                $out = gzencode($out, 9);
-                echo "entraaa";
-            }
-        }
+        //     if(extension_loaded('zlib')){
+        //         header('Vary: Accept-Encoding');
+        //         header('Content-Encoding: gzip');
+        //         $out = gzencode($out, 9);
+        //         echo "entraaa";
+        //     }
+        // }
 
         $this -> cod_qr = $out;
  
