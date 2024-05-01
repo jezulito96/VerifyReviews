@@ -76,7 +76,6 @@ use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
 
 class Qr {
-    const COLOR_PREDETERMINADO = 1;
     private $cod_qr;
     private $options;
     public function __construct(){
@@ -108,38 +107,40 @@ class Qr {
         return $this->cod_qr;
     }
 
-    public function setColor($color){
+    public function setColor($opcion){
         $colores = [
-            'azul_verify' => '#51a5d9',
-            'azul_oscuro' => '#0035A9',
-            'purpura_ocuro' => '#9C4E97',
-            'morado_oscuro' => '#D70071'
+            [
+                'gris_verify' => '#7A93AC',
+                'azul_verify' => '#51a5d9',
+                'azul_claro_verify' => '#92BCEA',
+            ], 
+            [
+                'morado_oscuro' => '#D70071',
+                'purpura_oscuro' => '#9C4E97',
+                'azul_oscuro' => '#0035A9',
+            ],
+            [
+                'azul_verify' => '#51a5d9',
+                'morado_oscuro' => '#D70071',
+            ]
+            
+            
+
         ];
 
-        if($color == Qr::COLOR_PREDETERMINADO){
-            $this ->options->svgDefs = '
-            <linearGradient id="gradient" x1="100%" y2="100%">
-                <stop stop-color="#D70071" offset="0"/>
-                <stop stop-color="#9C4E97" offset="0.4"/>
-                <stop stop-color="#51a5d9" offset="1"/>
-            </linearGradient>
-            <style><![CDATA[
-                .dark{fill: url(#gradient);}
-                .light{fill: #eaeaea;}
-            ]]></style>';
-        }elseif(in_array($color, $colores)){
-            $this ->options->svgDefs = '
-            <linearGradient id="gradient" x1="100%" y2="100%">
-                <stop stop-color="#D70071" offset="0"/>
-                <stop stop-color="#9C4E97" offset="0.5"/>
-                <stop stop-color="#0035A9" offset="1"/>
-            </linearGradient>
-            <style><![CDATA[
-                .dark{fill: url(#gradient);}
-                .light{fill: #eaeaea;}
-            ]]></style>';
-        }
+        $this ->options->svgDefs = '
+        <linearGradient id="gradient" x1="100%" y2="100%">
+            <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
+            <stop stop-color="' . $colores[$opcion][1] .'" offset="0.4"/>
+            <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
+        </linearGradient>
+        <style><![CDATA[
+            .dark{fill: url(#gradient);}
+            .light{fill: #eaeaea;}
+        ]]></style>';
     }
+
+
 }
 
 

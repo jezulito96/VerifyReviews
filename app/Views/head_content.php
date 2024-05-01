@@ -2,8 +2,6 @@
 <html lang="es">
 
 <head>
-
-
     <!--/////////////////////////////////////////////// metas ////////////////////////////////////// -->
     <title>VerifyReviews</title>
     <meta name="description"
@@ -17,9 +15,6 @@
     <!-- <meta name="keywords" content="Reseñas, verificadas, opiniones, comercio, opinion, negocio"> -->
     <!-- <link rel="canonical" href="https://verifyreviews.es">
     <meta name="robots" content="index, follow"> -->
-
-
-
 
 
 
