@@ -93,7 +93,7 @@ class Qr extends QRCode {
         $options = new SVGWithLogoOptions;
 
         // SVG logo options (see extended class)
-        $options->svgLogo             = FCPATH . 'img/logoMovil.png';
+        $options->svgLogo             = FCPATH . '../../public/img/logoMovil.png';
         $options->svgLogoScale        = 0.25;
         $options->svgLogoCssClass     = 'dark';
         // QROptions
