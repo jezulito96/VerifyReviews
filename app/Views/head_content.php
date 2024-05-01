@@ -82,7 +82,11 @@
         }
         /* .qr-data {
     fill: blue; /* Cambiar a tu color deseado */
-} */
+
+
+.qr-timing-dark .dark .qrcode{
+    fill:blue;
+}
     </style>
 
 
