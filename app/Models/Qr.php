@@ -111,8 +111,9 @@ class Qr {
         $colores = [
             [
                 0 => '#7A93AC', //gris_verify
-                1 => '#51a5d9', // azul_verify
-                2 => '#92BCEA', // azul_claro_verify
+                1 => '#92BCEA', // azul_claro_verify
+                2 => '#51a5d9', // azul_verify
+                
             ], 
             [
                 0 => '#D70071', //morado
@@ -132,7 +133,7 @@ class Qr {
         $this ->options->svgDefs = '
         <linearGradient id="gradient" x1="100%" y2="100%">
             <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
-            <stop stop-color="' . $colores[$opcion][1] .'" offset="0.4"/>
+            <stop stop-color="' . $colores[$opcion][1] .'" offset="0.5"/>
             <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
         </linearGradient>
         <style><![CDATA[
