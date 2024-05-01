@@ -380,7 +380,7 @@ class Home extends BaseController{
     public function setGenerarResenas(){
         $clavePublica = "holaaaa";
         
-        // $qr = new Qr();
+        $qr = new Qr();
         
         // $qr -> setTamano(10);        
         // $qr -> setTipo("png");
@@ -393,8 +393,8 @@ class Home extends BaseController{
 
         //opcion 3
         
-        $maleta_generarResenas['imagenQr'] = '<img src="' . base_url() . 'img/logoMovil.svg">';
-        // $maleta_generarResenas['imagenQr'] = $qr -> crear();
+        
+        $maleta_generarResenas['imagenQr'] = $qr -> crear();
         
         // vistas
         $maleta['head_content'] = view('head_content');
