@@ -45,7 +45,7 @@ class Qr extends QRCode {
         $codigoQRFinal = $qrCode->render($texto);
 
         // Obtener la ruta del archivo del logo
-        $logoPath = base_url() . 'img/logoMovil.svg';
+        $logoPath = base_url() . 'img/logoMovil.png';
 
         // Leer el contenido del archivo del logo
         $logoData = file_get_contents($logoPath);
