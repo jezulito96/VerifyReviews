@@ -40,7 +40,16 @@
 
 <?php
     }else{
-        
+        if(php_sapi_name() !== 'cli'){
+            header('Content-type: image/svg+xml');
+
+            if(extension_loaded('zlib')){
+                header('Vary: Accept-Encoding');
+                header('Content-Encoding: gzip');
+                $out = gzencode($out, 9);
+                echo "entraaa";
+            }
+        }
         echo $imagenQr;
         
 ?><?php
