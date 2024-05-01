@@ -144,6 +144,44 @@ class BaseDatos extends Model
             return $consulta -> getResultArray();
         }
     }
+
+    public function setCodigoQr($clave_publica,$clave_privada, $vector_inicializacion){
+        $orden = "INSERT INTO codigo_qr (clave_publica, vector_inicializacion) VALUES (?,?)";
+        $parametros = [$clave_publica,$clave_privada, $vector_inicializacion];
+        $this -> db -> query($orden, $parametros);
+    }
+
+    public function getClavePrivada($claveCifradaHex){
+        $orden = "SELECT clave_privada FROM codigo_qr WHERE clave_publica=?";
+        $parametros = [$claveCifradaHex];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            // email coincide con negocio 
+            $clave = $consulta -> getRow();
+            
+            return $clave->clave_privada;
+        }else{
+            return false;
+        }
+    }
+
+    public function getVectorInicializacion($claveCifradaHex){
+        $orden = "SELECT vector_inicializacion FROM codigo_qr WHERE clave_publica=?";
+        $parametros = [$claveCifradaHex];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            // email coincide con negocio 
+            $clave = $consulta -> getRow();
+            
+            return $clave->vector_inicializacion;
+        }else{
+            return false;
+        }
+    }
 }
 
 

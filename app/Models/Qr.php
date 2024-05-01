@@ -82,11 +82,10 @@ class Qr {
 
         $this ->options = new QROptions;
 
-
-
     }
 
-    public function crear($url){
+    public function setEstilo(){
+
         $this ->options -> scale = 5; 
         $this ->options->version          = 5;
         $this ->options->outputInterface   = QRMarkupSVG::class;
@@ -102,6 +101,32 @@ class Qr {
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
+       
+    }
+
+    public function crear(){
+        // se crea una clave aleatoria de 16 bytes
+        $clavePublica = random_bytes(16);
+
+        // Clave privada y vector de inicialización para guardar en la base de datos
+        $clave_privada = random_bytes(32); // Clave de 256 bits
+        $vector_inicializacion = random_bytes(16);    // Vector de inicialización de 128 bits
+
+        // se encripta la clave con -->  AES-256-CBC
+        $claveCifrada = openssl_encrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
+
+        // se pasa la clave a hexadecimal
+        $claveCifradaHex = bin2hex($claveCifrada);
+
+
+        // se añade a la url para luego crear el qr
+        $url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
+
+        
+        // se guardan las claves en la base de datos
+        $baseDatos = new BaseDatos();
+        $baseDatos -> setCodigoQr($claveCifradaHex,$clave_privada,$vector_inicializacion);
+
         // Retornar el código QR generado
         $this -> cod_qr = (new QRCode($this ->options))->render($url);
         return $this->cod_qr;
@@ -146,8 +171,8 @@ class Qr {
             [
                 // 6. grises casi negros
                 0 => '495057', 
-                1 => '#6c757d',
-                2 => '#343a40' 
+                1 => '#343a40', 
+                2 => '#6c757d'
             ]
         ];
 
@@ -162,6 +187,8 @@ class Qr {
             .light{fill: #eaeaea;}
         ]]></style>';
     }
+
+
 
 
 }

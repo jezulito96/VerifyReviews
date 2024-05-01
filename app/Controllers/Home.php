@@ -51,13 +51,34 @@ class Home extends BaseController{
     }
 
     public function resena(): string {
-        
-        $maleta['val'] = $this->request->getGet('clavePublica');
-        
+        // recojo la clave publica en hexadecimal
+        $claveCifradaHex = $this->request->getGet('publicKey');
+        // Convertir la clave cifrada de hexadecimal a binario
+        $clavePublica = hex2bin($claveCifradaHex);
+
+        // busco en DBla clave publica y el vector de inicializacion que correspone a la clave que he recogido
+        $baseDatos = new BaseDatos();
+        $clave_privada = $baseDatos -> getClavePrivada($claveCifradaHex);
+        $vector_inicializacion = $baseDatos -> getVectorInicializacion($claveCifradaHex);
+
+        if($clave_privada != false && $vector_inicializacion != false){
+            
+            $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
+
+            if($resultado_descifrado){
+                $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
+            }
+        }else{
+            $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
+        }
+
+
+
+        if($resultado_descifrado)
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['resena_content'] = view('resena_content');
+        $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
         return view('index', $maleta);
     }
 
@@ -378,26 +399,12 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
-        $clavePublica = "holaaaa";
-        
+
         $qr = new Qr();
         $qr -> setColor(6);
-        $maleta_generarResenas['imagenQr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+        $qr -> setEstilo();
+        $maleta_generarResenas['imagenQr'] = $qr -> crear();
 
-        // $qr -> setTamano(10);        
-        // $qr -> setTipo("png");
-        // $qr -> setColor("rojo");
-        // $imagenQr = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-        // $maleta_generarResenas['imagenQr'] = '<img src="' . $imagenQr . '" title="Reseña de negocio" alt="C&oacute;digo Qr" />';
-
-        // $maleta_generarResenas['imagenQr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-
-
-        //opcion 3
-        
-        
-        
-        
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
