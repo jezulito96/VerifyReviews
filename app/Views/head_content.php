@@ -87,6 +87,10 @@
 .qr-timing-dark .dark .qrcode{
     fill:blue;
 }
+.qr-data-dark{
+    fill:blue;
+}
+
     </style>
 
 
