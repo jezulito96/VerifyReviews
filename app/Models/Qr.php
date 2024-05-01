@@ -91,7 +91,7 @@ class Qr {
         $this ->options->version          = 5;
         $this ->options->outputInterface   = QRMarkupSVG::class;
         $this ->options->outputBase64        = false;
-        $this ->options->eccLevel            = EccLevel::L; 
+        $this ->options->eccLevel            = EccLevel::H; 
         $this ->options->addQuietzone        = true;
         $this ->options->drawLightModules    = false;
         $this ->options->connectPaths        = true;
