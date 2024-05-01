@@ -20,8 +20,12 @@
 
 
 
-    <!--/////////////////////////////////////////////// jquery ////////////////////////////////////// -->
 
+
+
+    <!--/////////////////////// LIBRERIAS NECESARIAS PARA DIFERENTES FUNCIONALIDADES (animaciones, mapas....) ////////////////////////////////////// -->
+
+    
     <!-- Libreria JQuery no funciona en local -->
     <?php //echo "<script type='text/javascript' src='". base_url() . "jquery/jquery.js' > </script>";        ?>
 
@@ -40,23 +44,52 @@
     <?php echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>' ?>
     <?php echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>' ?>
 
-    
+    <!-- Librerias para pintar mapas con libreria leaftlet.js-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+
+
+
+
+    <!--/////////////////////////////////////////////// SCRIPTS JQuery ////////////////////////////////////// -->
+
+
+    <!-- script para pintar los ticks verdes de una nueva reseña -->
+    <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
+
+        <!-- https://leafletjs.com/reference.html#map-factory -->
+    <!-- Pinta el mapa dandole al boton de aceptar ubicacion -->
+    <?php echo "<script src='". base_url() . "js/location.js' > </script>";        ?>
+
+
+    <!-- Prueba de jqury -->
+    <?php echo "<script src='" . base_url() . "js/prueba.js' > </script>"; ?>
+
+
 
 
 
     <!--/////////////////////////////////////////////// ESTILOS CSS ////////////////////////////////////// -->
 
+
     <!-- Estilos generales -->
-    <?php echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
-          // lista header
-          echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
-          
-          echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
+    <?php 
+    echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
+
+    // lista header
+    echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
+    
+    //estilos de los codigos qr
+    echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
 
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
 
-    // Comprobación para detectar si el usuario accede desde un dispositivo móvil
+    // Comprobación para detectar si el usuario accede desde un dispositivo móvil o desde escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     if (
         strpos($user_agent, 'Mobile') !== false ||
@@ -75,62 +108,12 @@
     }
     ?>
 
+    <!-- estilo del mapa que se genera con JQUERY y la libreria de OPENSTREETSMAPS -->
     <style>
         .mapa {
             height: 300px;
             width: 300px;
         }
-        /* -----------------------    Estilo de qr        ----------------------------------- */
-
-        /* Para el de los puntitos  */
-        .qr-data-dark{
-            /* fill:blue; */
-            /* stroke:yellow; */
-        }
-        /* Para el color de los cuadrados grandes de las esquinas */
-        .qr-finder-dark{
-            fill:#4c9cce;
-        }
-        /* Para el color del cuadrado pequeño de la esquina inferior derecha*/
-        .qr-alignment-dark{
-            fill:#4c9cce;
-        }
-        /* Para el color de UNOS POCOS puntitos */
-        .qr-timing-dark{
-            /* fill:green; */
-        }
-        /* Para algunos puntitos al lado de los cuadrados grandes de las esquinas */
-        .qr-format-dark{
-            /* fill:lightblue; */
-        }
-        /* Para los cuadrados pequeños dentro de los grandes de las esquinas */
-        .qr-finder-dot{
-            fill:#4c9cce;
-        }
-        .imageLogo{
-            opacity: 0.7 ;
-            width: 30px;
-            height: 30px;
-        }
     </style>
 
-
-
-    <!--/////////////////////////////////////////////// GEOLOCALIZACIÓN ////////////////////////////////////// -->
-
-    <!-- Librerias para pintar mapas con libreria leaftlet.js-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <!-- Prueba de jqury -->
-    <?php echo "<script src='" . base_url() . "js/prueba.js' > </script>"; ?>
-
-    <!-- Pinta el mapa dandole al boton de aceptar ubicacion -->
-    <?php echo "<script src='". base_url() . "js/location.js' > </script>";        ?>
-
-    <!-- https://leafletjs.com/reference.html#map-factory -->
-    <!-- script para pintar los ticks verdes de una nueva reseña -->
-    <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
 </head>
