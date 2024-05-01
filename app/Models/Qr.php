@@ -106,10 +106,10 @@ class Qr {
 
     public function crear(){
         // se crea una clave aleatoria de 16 bytes
-        $clavePublica = random_bytes(16);
+        $clavePublica = random_bytes(8);
 
         // Clave privada y vector de inicialización para guardar en la base de datos
-        $clave_privada = random_bytes(16); // Clave de 256 bits
+        $clave_privada = random_bytes(32); // Clave de 256 bits
         $vector_inicializacion = random_bytes(16);    // Vector de inicialización de 128 bits
 
         // se encripta la clave con -->  AES-256-CBC
