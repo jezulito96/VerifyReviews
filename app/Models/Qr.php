@@ -48,7 +48,7 @@ class Qr extends QRCode {
         $logoPath = base_url() . 'img/logoMovil.png';
 
         // Insertar el logo en el SVG del código QR
-        $this->cod_qr = str_replace('</svg>', '<image href="'.$logoPath.'" x="13" y="13" width="30px" height="30px" /></svg>', $codigoQRFinal);
+        $this->cod_qr = str_replace('</svg>', '<image href="'.$logoPath.'" x="11" y="10" width="25px" height="25px" /></svg>', $codigoQRFinal);
         // $codigoQRFinal = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
     }
 
