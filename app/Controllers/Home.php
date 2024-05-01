@@ -67,6 +67,8 @@ class Home extends BaseController{
 
             if($resultado_descifrado){
                 $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
+            }else{
+                $maleta_resenaContent = array();
             }
         }else{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
