@@ -108,7 +108,7 @@ class Qr extends QRCode {
                 .light{fill: #eaeaea;}
             ]]></style>';
 
-        $out = (new QRCode($options))->render('https://verifyreviews.es/resena');
+        $out = (new QRCode($options))->render('https://verifyreviews.es/verifyreviews/resena');
 
         $this -> cod_qr = $out;
  
