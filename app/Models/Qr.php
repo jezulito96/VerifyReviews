@@ -150,7 +150,7 @@ use chillerlan\QRCode\Data\QRMatrix;
 use chillerlan\QRCode\QROptions;
 use chillerlan\QRCode\Output\QROutputInterface;
 
-class Qr extends QRCode {
+class Qr  {
     private $cod_qr;
 
     public function __construct(){
@@ -159,7 +159,7 @@ class Qr extends QRCode {
     $options = new SVGWithLogoOptions;
 
     // SVG logo options (see extended class)
-    $options->svgLogo             =FCPATH . 'img/logoMovil.svg'; 
+    $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
     $options->svgLogoScale        = 0.25;
     $options->svgLogoCssClass     = 'dark';
     // QROptions
@@ -192,7 +192,15 @@ class Qr extends QRCode {
     $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
 
-
+    if(php_sapi_name() !== 'cli'){
+        header('Content-type: image/svg+xml');
+    
+        if(extension_loaded('zlib')){
+            header('Vary: Accept-Encoding');
+            header('Content-Encoding: gzip');
+            $out = gzencode($out, 9);
+        }
+    }
 
         $this -> cod_qr = $out;
  
