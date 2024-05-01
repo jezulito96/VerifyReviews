@@ -107,6 +107,9 @@
         .qr-finder-dot{
             fill:#4c9cce;
         }
+        .imageLogo{
+            fill-opacity: 0.3 ;
+        }
     </style>
 
 
