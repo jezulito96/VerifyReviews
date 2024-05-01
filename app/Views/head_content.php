@@ -84,28 +84,28 @@
 
         /* Para el de los puntitos  */
         .qr-data-dark{
-            fill:blue;
+            /* fill:blue; */
             /* stroke:yellow; */
         }
-        /* Para el color de fondo de los cuadrados grandes de las esquinas */
+        /* Para el color de los cuadrados grandes de las esquinas */
         .qr-finder-dark{
-            fill:red;
+            fill:#4c9cce;
         }
         /* Para el color del cuadrado pequeño de la esquina inferior derecha*/
         .qr-alignment-dark{
-            fill:yellow;
+            fill:#4c9cce;
         }
         /* Para el color de UNOS POCOS puntitos */
         .qr-timing-dark{
-            fill:green;
+            /* fill:green; */
         }
         /* Para algunos puntitos al lado de los cuadrados grandes de las esquinas */
         .qr-format-dark{
-            fill:lightblue;
+            /* fill:lightblue; */
         }
         /* Para los cuadrados pequeños dentro de los grandes de las esquinas */
         .qr-finder-dot{
-            fill:red;
+            fill:#4c9cce;
         }
     </style>
 
