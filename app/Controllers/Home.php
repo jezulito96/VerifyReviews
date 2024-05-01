@@ -67,8 +67,6 @@ class Home extends BaseController{
 
             if($resultado_descifrado){
                 $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
-            }else{
-                $maleta_resenaContent = array();
             }
         }else{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
@@ -80,7 +78,12 @@ class Home extends BaseController{
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+        if(isset($maleta_resenaContent)){
+            $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+        }else{
+            $maleta['resena_content'] = view('resena_content');
+        }
+        
         return view('index', $maleta);
     }
 
