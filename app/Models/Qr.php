@@ -206,7 +206,7 @@
 
 namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
-require 'QRImageWithLogo.php';
+require 'QRImageWhithLogo.php';
 use chillerlan\QRCode\Output\QRMarkupSVG;
 use QRImageWithLogo;
 
