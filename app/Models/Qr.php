@@ -67,15 +67,22 @@
 
 namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
+include "QRSvgWithLogo.php";
+include "SVGWithLogoOption";
 
 use chillerlan\QRCode\Output\QRMarkupSVG;
-use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Common\EccLevel;
+
 use QRSvgWithLogo;
+
 use chillerlan\QRCode\Data\QRMatrix;
+
 use chillerlan\QRCode\Output\QROutputInterface;
+
 use SVGWithLogoOptions;
+
 use chillerlan\QRCode\QROptions;
+
 
 
 class Qr extends QRCode {
