@@ -88,7 +88,7 @@ class Qr extends QRCode {
         $options->outputBase64        = false;
         $options->eccLevel            = EccLevel::L; 
         $options->addQuietzone        = true;
-        $options->drawLightModules    = true;
+        $options->drawLightModules    = false;
         $options->connectPaths        = true;
         $options->drawCircularModules = true;
         $options->circleRadius        = 0.45;
@@ -97,6 +97,8 @@ class Qr extends QRCode {
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
+
+
         $options->svgDefs = '
             <linearGradient id="gradient" x1="100%" y2="100%">
                 <stop stop-color="#D70071" offset="0"/>
