@@ -19,7 +19,7 @@ class Qr extends QRCode {
             'svgLogoScale'        => 0.25,
             'svgLogoCssClass'     => 'dark',
             'version'             => 6,
-            'outputType'          => QRMarkupSVG::class,
+            'outputType'          => QRMarkupSVG::MIME_TYPE,
             'scale'               => 5,
             'outputBase64'        => false,
             'eccLevel'            => EccLevel::H,
