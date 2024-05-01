@@ -20,7 +20,7 @@ class Qr extends QRCode {
             'bgColor'             => [200, 150, 200],
             'imageTransparent'    => false,
             'transparencyColor'   => [233, 233, 233],
-            'drawCircularModules' => false,
+            'drawCircularModules' => true,
             'drawLightModules'    => true,
             'circleRadius'        => 0.4,
             'keepAsSquare'        => [
