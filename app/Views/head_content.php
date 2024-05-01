@@ -80,7 +80,7 @@
             height: 300px;
             width: 300px;
         }
-        .qr-data {
+        /* .qr-data {
             fill: yellow; 
         }
 
@@ -96,7 +96,7 @@
 
         .qr-darkmodule{
             fill:brown;
-        }
+        } */
 
 
     </style>
