@@ -381,7 +381,9 @@ class Home extends BaseController{
         $clavePublica = "holaaaa";
         
         $qr = new Qr();
-        
+        $qr -> setColor(1);
+        $maleta_generarResenas['imagenQr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
+
         // $qr -> setTamano(10);        
         // $qr -> setTipo("png");
         // $qr -> setColor("rojo");
@@ -394,7 +396,7 @@ class Home extends BaseController{
         //opcion 3
         
         
-        $maleta_generarResenas['imagenQr'] = $qr -> crear();
+        
         
         // vistas
         $maleta['head_content'] = view('head_content');

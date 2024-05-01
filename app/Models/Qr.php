@@ -77,29 +77,31 @@ use chillerlan\QRCode\QROptions;
 use chillerlan\QRCode\Output\QROutputInterface;
 
 class Qr extends QRCode {
+    const COLOR_PREDETERMINADO = 1;
     private $cod_qr;
-
+    private $options;
     public function __construct(){
 
-        $options = new QROptions;
-        $options -> scale = 5; 
-        $options->version          = 5;
-        $options->outputInterface   = QRMarkupSVG::class;
-        $options->outputBase64        = false;
-        $options->eccLevel            = EccLevel::L; 
-        $options->addQuietzone        = true;
-        $options->drawLightModules    = false;
-        $options->connectPaths        = true;
-        $options->drawCircularModules = true;
-        $options->circleRadius        = 0.45;
-        $options->keepAsSquare        = [
+        $this ->options = new QROptions;
+
+        $this ->options -> scale = 5; 
+        $this ->options->version          = 5;
+        $this ->options->outputInterface   = QRMarkupSVG::class;
+        $this ->options->outputBase64        = false;
+        $this ->options->eccLevel            = EccLevel::L; 
+        $this ->options->addQuietzone        = true;
+        $this ->options->drawLightModules    = false;
+        $this ->options->connectPaths        = true;
+        $this ->options->drawCircularModules = true;
+        $this ->options->circleRadius        = 0.45;
+        $this ->options->keepAsSquare        = [
             QRMatrix::M_FINDER_DARK,
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
 
-
-        $options->svgDefs = '
+        
+        $this ->options->svgDefs = '
             <linearGradient id="gradient" x1="100%" y2="100%">
                 <stop stop-color="#D70071" offset="0"/>
                 <stop stop-color="#9C4E97" offset="0.5"/>
@@ -110,15 +112,49 @@ class Qr extends QRCode {
                 .light{fill: #eaeaea;}
             ]]></style>';
 
-        $out = (new QRCode($options))->render('https://verifyreviews.es/verifyreviews/resena');
+        
 
         $this -> cod_qr = $out;
  
     }
 
-    public function crear(){
+    public function crear($url){
         // Retornar el código QR generado
+        $out = (new QRCode($this ->options))->render($url);
         return $this->cod_qr;
+    }
+
+    public function setColor($color){
+        $colores = [
+            'azul_verify' => '#51a5d9',
+            'azul_oscuro' => '#0035A9',
+            'purpura_ocuro' => '#9C4E97',
+            'morado_oscuro' => '#D70071'
+        ];
+
+        if($color == Qr::COLOR_PREDETERMINADO){
+            $this ->options->svgDefs = '
+            <linearGradient id="gradient" x1="100%" y2="100%">
+                <stop stop-color="#D70071" offset="0"/>
+                <stop stop-color="#9C4E97" offset="0.5"/>
+                <stop stop-color="#51a5d9" offset="1"/>
+            </linearGradient>
+            <style><![CDATA[
+                .dark{fill: url(#gradient);}
+                .light{fill: #eaeaea;}
+            ]]></style>';
+        }elseif(in_array($color, $colores)){
+            $this ->options->svgDefs = '
+            <linearGradient id="gradient" x1="100%" y2="100%">
+                <stop stop-color="#D70071" offset="0"/>
+                <stop stop-color="#9C4E97" offset="0.5"/>
+                <stop stop-color="#0035A9" offset="1"/>
+            </linearGradient>
+            <style><![CDATA[
+                .dark{fill: url(#gradient);}
+                .light{fill: #eaeaea;}
+            ]]></style>';
+        }
     }
 }
 
