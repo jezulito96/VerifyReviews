@@ -146,9 +146,8 @@ class BaseDatos extends Model
     }
 
     public function setCodigoQr($clave_publica,$clave_privada, $vector_inicializacion){
-        $orden = "INSERT INTO codigo_qr (clave_publica, vector_inicializacion) VALUES (?,?)";
-        $parametros = [$clave_publica,$clave_privada, $vector_inicializacion];
-        $this -> db -> query($orden, $parametros);
+        $orden = "INSERT INTO codigo_qr (clave_publica, vector_inicializacion) VALUES ($clave_publica,$clave_privada, $vector_inicializacion)";
+        $this -> db -> query($orden);
     }
 
     public function getClavePrivada($claveCifradaHex){
