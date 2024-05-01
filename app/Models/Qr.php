@@ -113,7 +113,6 @@ class Qr {
                 0 => '#7A93AC', //gris_verify
                 1 => '#92BCEA', // azul_claro_verify
                 2 => '#51a5d9', // azul_verify
-                
             ], 
             [
                 0 => '#D70071', //morado
@@ -121,31 +120,35 @@ class Qr {
                 2 => '#0035A9', // azul oscuro 
             ],
             [
-                // tonos verdes marrones
+                // 2.tonos verdes marrones
                 0 => '#3E8989', 
                 1 => '#05F140',
                 2 => '#2CDA9D' 
             ],
             [
-                // tonos grises
+                // 3.tonos grises
                 0 => '#7A9E9F', 
                 1 => '#B8D8D8',
                 2 => '#4F6367' 
             ],
             [
-                // tonos marrones
+                // 4.tonos marrones
                 0 => '#7F534B', 
                 1 => '#8C705F',
                 2 => '#1E1A1D' 
             ],
             [
-                // tonos rosas...
+                // 5. tonos rosas...
                 0 => '#ffb5a7', 
                 1 => '#f9dcc4',
                 2 => '#fec89a' 
+            ],
+            [
+                // 6. grises casi negros
+                0 => '495057', 
+                1 => '#6c757d',
+                2 => '#343a40' 
             ]
-            
-
         ];
 
         $this ->options->svgDefs = '
