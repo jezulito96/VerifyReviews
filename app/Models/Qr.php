@@ -82,9 +82,9 @@ class Qr extends QRCode {
     public function __construct(){
 
         $options = new QROptions;
-
-        $options->version             = 5;
-        $options->outputInterface     = QRMarkupSVG::class;
+        $options -> scale = 5; 
+        $options->version          = 5;
+        $options->outputInterface   = QRMarkupSVG::class;
         $options->outputBase64        = false;
         $options->eccLevel            = EccLevel::L; 
         $options->addQuietzone        = true;
