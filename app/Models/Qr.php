@@ -47,14 +47,9 @@ class Qr extends QRCode {
         // Obtener la ruta del archivo del logo
         $logoPath = base_url() . 'img/logoMovil.png';
 
-        // Leer el contenido del archivo del logo
-        $logoData = file_get_contents($logoPath);
-
-        // Obtener el contenido base64 del logo
-        $logoBase64 = base64_encode($logoData);
-
         // Insertar el logo en el SVG del código QR
-        $codigoQRFinal = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
+        $codigoQRFinal = str_replace('</svg>', '<img src="'.$logoPath.'" /></svg>', $codigoQRFinal);
+        // $codigoQRFinal = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
     }
 
     public function crear(){
