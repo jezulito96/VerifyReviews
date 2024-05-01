@@ -84,14 +84,14 @@ class Qr extends QRCode {
         $options = new QROptions;
 
         // SVG logo options (see extended class)
-        $options->svgLogo             = FCPATH . 'img/logoMovil.png'; // logo from: https://github.com/simple-icons/simple-icons
+        $options->svgLogo             = FCPATH . 'img/logoMovil.svg'; 
         $options->svgLogoScale        = 0.25;
         $options->svgLogoCssClass     = 'dark';
         // QROptions
         $options->version             = 5;
         $options->outputInterface     = QRMarkupSVG::class;
         $options->outputBase64        = false;
-        $options->eccLevel            = EccLevel::H; // ECC level H is necessary when using logos
+        $options->eccLevel            = EccLevel::H; 
         $options->addQuietzone        = true;
         $options->drawLightModules    = true;
         $options->connectPaths        = true;
@@ -116,7 +116,6 @@ class Qr extends QRCode {
 
 
         $out = (new QRCode($options))->render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-
 
 
 

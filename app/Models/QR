@@ -1,7 +1,5 @@
-
 <?php
 
-use chillerlan\QRCode\Data\QRMatrix;
 
 /*
  * Runtime
