@@ -125,6 +125,7 @@ class Qr extends QRCode {
                 header('Vary: Accept-Encoding');
                 header('Content-Encoding: gzip');
                 $out = gzencode($out, 9);
+                echo "entraaa";
             }
         }
 
