@@ -17,6 +17,7 @@ class Qr extends QRCode {
             'scale'               => 10,
             'outputBase64'        => false,
             'eccLevel'            => QRCode::ECC_L,
+            'addLogoSpace'        => true,
             'bgColor'             => [200, 150, 200],
             'imageTransparent'    => false,
             'transparencyColor'   => [233, 233, 233],
@@ -47,13 +48,13 @@ class Qr extends QRCode {
         $logoPath = base_url() . 'img/logoMovil.svg';
 
         // Leer el contenido del archivo del logo
-        // $logoData = file_get_contents($logoPath);
+        $logoData = file_get_contents($logoPath);
 
         // Obtener el contenido base64 del logo
-        $logoBase64 = base64_encode($logoPath);
+        $logoBase64 = base64_encode($logoData);
 
         // Insertar el logo en el SVG del código QR
-        $this -> cod_qr = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
+        $codigoQRFinal = str_replace('</svg>', '<image x="25" y="25" width="50" height="50" xlink:href="data:image/png;base64,'.$logoBase64.'" /></svg>', $codigoQRFinal);
     }
 
     public function crear(){
