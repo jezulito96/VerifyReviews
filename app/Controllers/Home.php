@@ -393,14 +393,13 @@ class Home extends BaseController{
 
         //opcion 3
         
-        echo '<img src="' . base_url() . 'img/logoMovil.svg">';
+        $maleta_generarResenas['imagenQr'] = '<img src="' . base_url() . 'img/logoMovil.svg">';
         // $maleta_generarResenas['imagenQr'] = $qr -> crear();
         
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        // $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
-        $maleta['generarResenas'] = view('generarResenas');
+        $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
         return view('index', $maleta);
     }
 }
