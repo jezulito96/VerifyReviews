@@ -89,9 +89,10 @@
                 default:
                     cambioSrc = "<?php echo base_url()?>img/preQr/verify.webp";
             }
+            console.log(cambioSrc);
+            preQr.attr('src', cambioSrc);
         });
-        console.log(cambioSrc);
-        preQr.attr('src', cambioSrc);
+
 
     });
 </script>
