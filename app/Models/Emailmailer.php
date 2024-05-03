@@ -60,7 +60,7 @@ class Emailmailer {
             $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
-            $this->mail->AddEmbeddedImage($imagen_qr['contenido'], $imagen_qr['cid'], $imagen_qr['nombre'], 'base64', $imagen_qr['tipo']);
+            $this->mail->AddEmbeddedImage($imagen['contenido'], $imagen['cid'], $imagen['nombre'], 'base64', $imagen['tipo']);
             $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
 
 
