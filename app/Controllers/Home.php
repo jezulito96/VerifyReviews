@@ -421,12 +421,10 @@ class Home extends BaseController{
         }elseif($accion == 2){
             $qr = new Qr();
             $qr -> setColor($color);
+            $qr -> setImagenQr($color);
             if($accion == 2) $qr -> setEmail($email);
             $maleta_generarResenas['resultadoEmail'] = $qr -> crear($accion);
         }
-
-
-        
 
         // vistas
         $maleta['head_content'] = view('head_content');

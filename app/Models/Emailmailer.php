@@ -36,7 +36,7 @@ class Emailmailer {
 
             // para enviar imagenes
             if ($imagen !== null) {
-                $this->mail->addAttachment($imagen['ruta']);
+                $this->mail->addAttachment($imagen);
             }
 
             // Enviar el correo
