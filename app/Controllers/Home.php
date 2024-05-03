@@ -410,8 +410,8 @@ class Home extends BaseController{
         $email = $this -> request -> getPost('email');
         $numero = $this -> request -> getPost('numeroQr');
         
-        $maleta_generarResenas['resultadoEmail'] = null;
-        $maleta_generarResenas['imagenQr'] = null;
+        $maleta_generarResenas['resultadoEmail'] = false;
+        $maleta_generarResenas['imagenQr'] = false;
 
         var_dump($accion);
         if($accion == 1){
