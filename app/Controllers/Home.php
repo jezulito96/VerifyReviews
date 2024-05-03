@@ -409,8 +409,9 @@ class Home extends BaseController{
         $email = $this -> request -> getPost('email');
         $numero = $this -> request -> getPost('numeroQr');
         
-        $maleta_generarResenas['resultadoEmail'] = false;
-        $maleta_generarResenas['imagenQr'] = false;
+        $maleta_generarResenas['resultadoEmail'] = null;
+        $maleta_generarResenas['imagenQr'] = null;
+        
         if($accion == 1){
             $qr = new Qr();
             $qr -> setColor($color);

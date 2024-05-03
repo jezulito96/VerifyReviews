@@ -1,6 +1,6 @@
 <?php 
     // primero se muestra el formulario y cuando se envia 
-    if($resultadoEmail == false && $imagenQr == false){
+    if(!isset($resultadoEmail) && !isset($imagenQr)){
 ?>
 <h3>Genera códigos Qr para que tus clientes puedan opinar sobre tu negocio</h3>
 <p>
@@ -54,8 +54,8 @@
 <?php
     }else{
         
-        if($imagenQr) echo $imagenQr;
-        if($resultadoEmail) echo $resultadoEmail;
+        if($imagenQr != null) echo $imagenQr;
+        if($resultadoEmail != null) echo $resultadoEmail;
 
 ?><?php
         
