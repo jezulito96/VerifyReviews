@@ -411,7 +411,8 @@ class Home extends BaseController{
         
         $maleta_generarResenas['resultadoEmail'] = null;
         $maleta_generarResenas['imagenQr'] = null;
-        
+
+        var_dump($accion);
         if($accion == 1){
             $qr = new Qr();
             $qr -> setColor($color);
