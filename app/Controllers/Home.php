@@ -413,7 +413,7 @@ class Home extends BaseController{
         $maleta_generarResenas['resultadoEmail'] = false;
         $maleta_generarResenas['imagenQr'] = false;
 
-        var_dump($accion);
+        // var_dump($accion);nv
         if($accion == 1){
             $qr = new Qr();
             $qr -> setColor($color);
@@ -426,7 +426,8 @@ class Home extends BaseController{
 
             $archivoTemporal = tempnam(sys_get_temp_dir(), 'imagen.svg');
             file_put_contents($archivoTemporal, $imagen_qr);
-            var_dump($archivoTemporal);
+            // var_dump($archivoTemporal);
+
             $mail = new Emailmailer();
             $resultado_email = $mail -> enviarImagen($email,$archivoTemporal);
 
