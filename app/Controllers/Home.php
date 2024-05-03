@@ -424,7 +424,7 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
 
-            $archivoTemporal = tempnam(sys_get_temp_dir(), 'qr_');
+            $archivoTemporal = tempnam(sys_get_temp_dir(), 'imagen.svg');
             file_put_contents($archivoTemporal, $imagen_qr);
 
             $mail = new Emailmailer();
