@@ -156,10 +156,10 @@ h4{
 
 .previsualizacionQr{
   display: block;
-  width: 60%;
+  width: 70%;
   margin: 0px auto;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .previsualizacionQr > img{
