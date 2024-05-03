@@ -47,6 +47,12 @@ class Emailmailer {
 
     function enviarImagen($destinatario,$imagen_qr){
         $asunto = "Reseña de Verify Reviews";
+
+        $imagen['contenido'] = $imagen_qr;
+        $imagen['tipo'] = "image/svg+xml";
+        $imagen['cid'] = "imagen.svg";
+        $imagen['nombre'] = "Codigo Qr Verify Reviews"; 
+
         try {
 
             $this->mail->isHTML(true); 
