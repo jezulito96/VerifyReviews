@@ -160,5 +160,9 @@ h4{
   margin: 0px auto;
   margin-top: 10px;
   margin-right: 10px;
+}
 
+.previsualizacionQr > img{
+  width: 100%;
+  height: 100%;
 }
