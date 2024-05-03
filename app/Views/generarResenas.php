@@ -80,7 +80,7 @@
                     break;
                 case "3":
                     console.log("entra");
-                    cambioSrc = "<?php echo base_url()?>img/preQr/grises1.webp";
+                    cambioSrc = "<?php echo base_url()?>img/preQr/grises.webp";
                     break;
                 case "6":
                     console.log("entra");
