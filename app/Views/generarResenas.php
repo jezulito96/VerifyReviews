@@ -53,7 +53,7 @@
 <script>
     $(document).ready(function(){
 
-        var preQr = $("·prevQr");
+        var preQr = $("#prevQr");
 
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();
@@ -90,6 +90,8 @@
             }
         });
         
+        preQr.attr('src', nuevoSrc);
+
     });
 </script>
 
