@@ -418,15 +418,14 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
-            
+
         }elseif($accion == 2){
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
 
             $mail = new Emailmailer();
-            $mail -> setEmail($email);
-            $resultado_email = $email -> enviarImagen($color,$imagen_qr);
+            $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
 
             if($resultado_email == false){
                 $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";

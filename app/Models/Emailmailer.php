@@ -45,7 +45,8 @@ class Emailmailer {
         }
     }
 
-    function enviarImagen($destinatario, $asunto, $mensaje,$imagen_qr){
+    function enviarImagen($destinatario,$imagen_qr){
+        $asunto = "Reseña de Verify Reviews";
         try {
 
             $this->mail->isHTML(true); 
@@ -63,10 +64,6 @@ class Emailmailer {
         } catch (Exception $e) {
             return false;
         }
-    }
-
-    function setEmail($correo_electronico){
-        $this -> correo_electronico = $correo_electronico;
     }
 
 }
