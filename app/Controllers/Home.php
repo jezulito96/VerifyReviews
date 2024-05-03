@@ -406,8 +406,8 @@ class Home extends BaseController{
     public function setGenerarResenas(){
 
         $qr = new Qr();
-        $qr -> setColor(6);
         $qr -> setEstilo();
+        $qr -> setColor(0);
         $maleta_generarResenas['imagenQr'] = $qr -> crear();
 
         // vistas
