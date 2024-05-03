@@ -162,7 +162,7 @@ class Qr {
     }
 
     function setImagenQr($opcion){
-
+        
         $this -> imagen_qr['nombre'] = "Código Qr";
 
         if ($opcion == "1") {

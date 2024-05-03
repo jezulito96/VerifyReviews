@@ -409,13 +409,21 @@ class Home extends BaseController{
         $email = $this -> request -> getPost('email');
         $numero = $this -> request -> getPost('numeroQr');
         
-        echo $numero;
+        $maleta_generarResenas['resultadoEmail'] = false;
+        $maleta_generarResenas['imagenQr'] = false;
+        if($accion == 1){
+            $qr = new Qr();
+            $qr -> setColor($color);
+            $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
+        }elseif($accion == 2){
+            $qr = new Qr();
+            $qr -> setColor($color);
+            if($accion == 2) $qr -> setEmail($email);
+            $maleta_generarResenas['resultadoEmail'] = $qr -> crear($accion);
+        }
 
-        $qr = new Qr();
-        $qr -> setColor($color);
-        if($accion == 2) $qr -> setEmail($email);
-        $qr -> crear($accion);
-        // $maleta_generarResenas['imagenQr'] = $qr -> crear();
+
+        
 
         // vistas
         $maleta['head_content'] = view('head_content');
