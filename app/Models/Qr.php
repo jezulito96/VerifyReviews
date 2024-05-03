@@ -178,7 +178,7 @@ class Qr {
         } else {
             $this -> imagen_qr =  base_url(). "img/preQr/verify.png";
         }
-
+        
     }
 
     public function setColor($opcion){

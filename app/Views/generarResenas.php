@@ -54,8 +54,8 @@
 <?php
     }else{
         
-        if($imagenQr != null) echo $imagenQr;
-        if($resultadoEmail != null) echo $resultadoEmail;
+        if(isset($imagenQr)) echo $imagenQr;
+        if(isset($resultadoEmail)) echo $resultadoEmail;
 
 ?><?php
         

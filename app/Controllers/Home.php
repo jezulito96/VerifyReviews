@@ -422,10 +422,11 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $qr -> setImagenQr($color);
-            if($accion == 2) $qr -> setEmail($email);
+            $qr -> setEmail($email);
             $maleta_generarResenas['resultadoEmail'] = $qr -> crear($accion);
         }
-
+        var_dump($maleta_generarResenas['resultadoEmail']);
+        var_dump($maleta_generarResenas['imagenQr']);
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
