@@ -34,7 +34,6 @@
         <div id="previsualizacion" class="previsualizacion">
             <img src="<?php echo base_url()?>img/preQr/default.webp" id="prevQr" class="prevQr">
                 <!-- Aqui se mostrara la previsualizacion de las imagenes qr  -->
-            </div>
         </div>
 
         
