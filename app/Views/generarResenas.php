@@ -54,12 +54,13 @@
     $(document).ready(function(){
 
         var preQr = $("#prevQr");
-
+        var cambioSrc;
+        
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();
             console.log($valorSeleccionado);
 
-            var cambioSrc;
+            
             switch (valorSeleccionado) {
                 case "1":
                     console.log("entra");
