@@ -57,25 +57,32 @@
 
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();
+            console.log($valorSeleccionado);
 
             var cambioSrc;
             switch (valorSeleccionado) {
                 case "1":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/morados.webp";
                     break;
                 case "2":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/verdes.webp";
                     break;
                 case "4":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/marrones.webp";
                     break;
                 case "5":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/rosas.webp";
                     break;
                 case "3":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/grises1.webp";
                     break;
                 case "6":
+                    console.log("entra");
                     cambioSrc = "<?php echo base_url()?>img/preQr/grises2.webp";
                     break;
                 default:
