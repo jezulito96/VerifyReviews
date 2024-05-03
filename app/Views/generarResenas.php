@@ -20,19 +20,30 @@
             <option value="6">Tonos grises 2</option>
         </select>
 
-        <!-- <label>Escoge un color para el codigo Qr</label>
-        <select name="colorQr" id="colorQr" >
-            <option value="150px">Pequeño</option>
-            <option value="200px">Mediano</option>
-            <option value="300px">Grande</option>
-        </select> -->
-
-        <!-- <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" style="background:red;"/>  -->
-
         <div id="previsualizacionQr" class="previsualizacionQr">
             <img src="<?php echo base_url()?>img/preQr/verify.webp" id="prevQr" class="prevQr">
                 <!-- Aqui se mostrara la previsualizacion de las imagenes qr  -->
         </div>
+
+        <!-- Añadir info para el usuario -->
+        <label>¿Como quieres generar los codigos?</label> 
+        <select name="accionQr" id="accionQr" >
+            <option value="1">Autom&aacute;tico</option>
+            <option value="2">Email</option>
+            <option value="3">PDF</option> 
+            <option value="4">Imagenes</option>
+        </select>
+
+        <div id="containerEmailQr" class="invisible">
+            <label>Correo electrónico del cliente </email>
+            <input type="text" class="emailQr" />
+        </div>
+        
+
+
+        <!-- <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" style="background:red;"/>  -->
+
+
 
         
         <input type="submit" name="generaQr" value="Generar codigos">
@@ -55,6 +66,21 @@
 
         var preQr = $("#prevQr");
         var cambioSrc;
+
+        function mostrarEmail(){
+            $("#containerEmailQr").toggleClass(".invisible");
+        }
+
+        $("#accionQr").change(function(){
+            var val = $(this).val();
+            console.log("acccion " + val);
+
+            if(val == 2){
+                console.log("entra en val");
+                mostrarEmail();
+            }
+            
+        });
 
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();

@@ -405,16 +405,23 @@ class Home extends BaseController{
 
     public function setGenerarResenas(){
         $color = $this -> request -> getPost('estiloQr');
+        $accion = $this -> request -> getPost('accionQr');
+        $email = $this -> request -> getPost('email');
+        $numero = $this -> request -> getPost('numeroQr');
+        
+        echo $numero;
 
         $qr = new Qr();
-        $qr -> setEstilo();
         $qr -> setColor($color);
-        $maleta_generarResenas['imagenQr'] = $qr -> crear();
+        if($accion == 2) $qr -> setEmail($email);
+        $qr -> crear($accion);
+        // $maleta_generarResenas['imagenQr'] = $qr -> crear();
 
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
+        $maleta['generarResenas'] = view('generarResenas');
+        // $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
         return view('index', $maleta);
     }
 }

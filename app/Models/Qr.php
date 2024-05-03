@@ -78,13 +78,15 @@ use chillerlan\QRCode\QROptions;
 class Qr {
     private $cod_qr;
     private $options;
+    private $genera_varios_qr;
+    private $url;
+    private $correo_electronico;
+    private $imagen_qr;
+
+
     public function __construct(){
 
         $this ->options = new QROptions;
-
-    }
-
-    public function setEstilo(){
 
         $this ->options -> scale = 5; 
         $this ->options->version          = 5;
@@ -101,16 +103,14 @@ class Qr {
             QRMatrix::M_FINDER_DOT,
             QRMatrix::M_ALIGNMENT_DARK,
         ];
-       
-    }
 
-    public function crear(){
+
         // se crea una clave aleatoria de 16 bytes
         $clavePublica = random_bytes(8);
 
         // Clave privada y vector de inicialización para guardar en la base de datos
-        $clave_privada = random_bytes(32); // Clave de 256 bits
-        $vector_inicializacion = random_bytes(16);    // Vector de inicialización de 128 bits
+        $clave_privada = random_bytes(32); 
+        $vector_inicializacion = random_bytes(16);   
 
         // se encripta la clave con -->  AES-256-CBC
         $claveCifrada = openssl_encrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
@@ -118,21 +118,74 @@ class Qr {
         // se pasa la clave a hexadecimal
         $claveCifradaHex = bin2hex($claveCifrada);
 
-
         // se añade a la url para luego crear el qr
-        $url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
+        $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
 
-        
         // se guardan las claves en la base de datos
         $baseDatos = new BaseDatos();
         $baseDatos -> setCodigoQr($claveCifradaHex,$clave_privada,$vector_inicializacion);
 
-        // Retornar el código QR generado
-        $this -> cod_qr = (new QRCode($this ->options))->render($url);
-        return $this->cod_qr;
+    }
+
+
+    /**
+     * Genera QR segun la accion que seleccione el usuario
+     * 
+     * @param int $accion
+     *      - 1 automatico -> Devuelve una imagen que se muestra directamente en pantalla
+     *      - 2 Email -> Manda un email al usuario con un codigo Qr
+     *      - 3 PDF -> Genera un pdf con un codigo Qr
+     *      - 4 Genera imagenes para poder descargarla 
+     * @param int $numero numero de codigos qr que se deben generar
+     */
+    public function crear($accion, $numero = 1){
+
+        if($numero > 1){
+            $this -> genera_varios_qr = true;
+        }        
+
+        if($accion == 1){
+            $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
+            return $this->cod_qr;
+        }elseif($accion == 2){
+            $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
+            $email = new Emailmailer();
+            $asunto = "Deja Tu reseña";
+            $mensaje = "Deja tu opinión en Verify Reviews escaneando el codigo Qr";
+            $email -> enviarCorreo($this -> correo_electronico, $asunto, $mensaje,$this -> imagen_qr);
+        }
+        
+    }
+
+    function setEmail($correo_electronico){
+        $this -> correo_electronico = $correo_electronico;
+    }
+
+    function setImagenQr($opcion){
+
+        $this -> imagen_qr['nombre'] = "Código Qr";
+
+        if ($opcion == "1") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_morados.png";
+        } elseif ($opcion == "2") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_verdes.png";
+        } elseif ($opcion == "4") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_marrones.png";
+        } elseif ($opcion == "5") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_rosas.png";
+        } elseif ($opcion == "3") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_grises_1.png";
+        } elseif ($opcion == "6") {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/tonos_grises_2.png";
+        } else {
+            $this -> imagen_qr['ruta'] =  base_url(). "img/preQr/verify.png";
+        }
+
     }
 
     public function setColor($opcion){
+        $this -> color_qr = $opcion;
+        
         $colores = [
             [
                 0 => '#7A93AC', //gris_verify

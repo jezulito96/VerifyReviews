@@ -25,7 +25,7 @@ class Emailmailer {
 
     }
 
-    public function enviarCorreo($destinatario, $asunto, $mensaje) {
+    public function enviarCorreo($destinatario, $asunto, $mensaje,$imagen = null) {
         try {
             // Configuraciones del mensaje
             $this->mail->isHTML(false);  
@@ -33,6 +33,11 @@ class Emailmailer {
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
             $this->mail->Body = $mensaje; 
+
+            // para enviar imagenes
+            if ($imagen !== null) {
+                $this->mail->AddEmbeddedImage($imagen['ruta'], $imagen['nombre']);
+            }
 
             // Enviar el correo
             $this->mail->send();

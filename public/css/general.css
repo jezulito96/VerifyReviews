@@ -9,3 +9,6 @@ body{
 li{
     list-style: none;
 }
+.invisible{
+    display: none;
+}
