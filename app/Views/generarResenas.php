@@ -36,7 +36,7 @@
 
         <div id="containerEmailQr" class="invisible">
             <label>Correo electrónico del cliente </email>
-            <input type="text" class="emailQr" />
+            <input type="text" name="emailQr" class="emailQr" />
         </div>
         
 
