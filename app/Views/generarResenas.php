@@ -65,11 +65,7 @@
     $(document).ready(function(){
 
         var preQr = $("#prevQr");
-        var cambioSrc;
-
-        function mostrarEmail(){
-            $("#containerEmailQr").toggleClass(".invisible");
-        }
+        
 
         $("#accionQr").change(function(){
             var val = $(this).val();
@@ -77,7 +73,7 @@
 
             if(val == 2){
                 console.log("entra en val");
-                mostrarEmail();
+                $("#containerEmailQr").toggleClass("invisible");
             }
             
         });
@@ -85,8 +81,8 @@
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();
             console.log(valorSeleccionado);
-
             
+            var cambioSrc;
             switch (valorSeleccionado) {
                 case "1":
                     console.log("entra");
