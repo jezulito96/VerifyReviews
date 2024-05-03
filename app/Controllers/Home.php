@@ -426,7 +426,7 @@ class Home extends BaseController{
 
             $archivoTemporal = tempnam(sys_get_temp_dir(), 'imagen.svg');
             file_put_contents($archivoTemporal, $imagen_qr);
-
+            var_dump($archivoTemporal);
             $mail = new Emailmailer();
             $resultado_email = $mail -> enviarImagen($email,$archivoTemporal);
 
