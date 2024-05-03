@@ -154,3 +154,11 @@ h4{
   font-weight: bold;
 }
 
+.previsualizacionQr{
+  display: block;
+  width: 60%;
+  margin: 0px auto;
+  margin-top: 10px;
+  margin-right: 10px;
+
+}

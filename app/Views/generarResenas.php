@@ -9,8 +9,6 @@
 <div class="containerformGenerarResena">
     <form action="setGenerarResenas" method="post" class="formLogin">
 
-        
-
         <label>Elige el estilo del Qr</label>
         <select name="estiloQr" id="estiloQr" >
             <option value="0">Verify Reviews</option>
@@ -31,8 +29,8 @@
 
         <!-- <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" style="background:red;"/>  -->
 
-        <div id="previsualizacion" class="previsualizacion">
-            <img src="<?php echo base_url()?>img/preQr/default.webp" id="prevQr" class="prevQr">
+        <div id="previsualizacionQr" class="previsualizacionQr">
+            <img src="<?php echo base_url()?>img/preQr/verify.webp" id="prevQr" class="prevQr">
                 <!-- Aqui se mostrara la previsualizacion de las imagenes qr  -->
         </div>
 
@@ -57,8 +55,32 @@
 
         var preQr = $("·prevQr");
 
-        click(function(){
-            
+        $("#estiloQr").change(function(){
+            var valorSeleccionado = $(this).val();
+
+            var cambioSrc;
+            switch (valorSeleccionado) {
+                case "1":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/morados.webp";
+                    break;
+                case "2":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/verdes.webp";
+                    break;
+                case "4":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/marrones.webp";
+                    break;
+                case "5":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/rosas.webp";
+                    break;
+                case "3":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/grises1.webp";
+                    break;
+                case "6":
+                    cambioSrc = "<?php echo base_url()?>img/preQr/grises2.webp";
+                    break;
+                default:
+                    cambioSrc = "<?php echo base_url()?>img/preQr/verify.webp";
+            }
         });
         
     });
