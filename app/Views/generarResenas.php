@@ -55,10 +55,10 @@
 
         var preQr = $("#prevQr");
         var cambioSrc;
-        
+
         $("#estiloQr").change(function(){
             var valorSeleccionado = $(this).val();
-            console.log($valorSeleccionado);
+            console.log(valorSeleccionado);
 
             
             switch (valorSeleccionado) {
