@@ -423,6 +423,7 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
+            var_dump($imagen_qr);
 
             $mail = new Emailmailer();
             $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
