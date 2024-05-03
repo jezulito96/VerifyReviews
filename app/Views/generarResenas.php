@@ -90,7 +90,7 @@
             }
         });
         
-        preQr.attr('src', nuevoSrc);
+        preQr.attr('src', cambioSrc);
 
     });
 </script>
