@@ -8,6 +8,7 @@ require FCPATH . '../vendor/autoload.php';
 
 class Emailmailer {
     private $mail;
+    private $correo_electronico;
 
     public function __construct() {
         $this->mail = new PHPMailer(true);
@@ -25,25 +26,15 @@ class Emailmailer {
 
     }
 
-    public function enviarCorreo($destinatario, $asunto, $mensaje,$imagen = null) {
+    public function enviarCorreo($destinatario, $asunto, $mensaje) {
         try {
 
-            // para enviar imagenes
-            if ($imagen !== null) {
-                $this->mail->isHTML(true); 
-                $this->mail->AddEmbeddedImage($imagen['contenido'], $imagen['cid'], $imagen['nombre'], 'base64', $imagen['tipo']);
-                $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
-            }else{
-                //para enviar solo texto
-                $this->mail->isHTML(false); 
-                $this->mail->Body = $mensaje; 
-            }
-
+            $this->mail->isHTML(false); 
             // Configuraciones generales del mensaje
             $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
-            
+            $this->mail->Body = $mensaje;
 
 
             // Enviar el correo
@@ -53,5 +44,30 @@ class Emailmailer {
             return false;
         }
     }
+
+    function enviarImagen($destinatario, $asunto, $mensaje,$imagen_qr){
+        try {
+
+            $this->mail->isHTML(true); 
+            // Configuraciones generales del mensaje
+            $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
+            $this->mail->addAddress($destinatario); 
+            $this->mail->Subject = $asunto; 
+            $this->mail->AddEmbeddedImage($imagen_qr['contenido'], $imagen_qr['cid'], $imagen_qr['nombre'], 'base64', $imagen_qr['tipo']);
+            $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
+
+
+            // Enviar el correo
+            $this->mail->send();
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    function setEmail($correo_electronico){
+        $this -> correo_electronico = $correo_electronico;
+    }
+
 }
 
