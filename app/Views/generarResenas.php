@@ -12,7 +12,7 @@
         <label>Elige el estilo del Qr</label>
         <select name="estiloQr" id="estiloQr" >
             <option value="0">Verify Reviews</option>
-            <option value="1">Tonos morados</option>
+            <option value="1">Morado azulado</option>
             <option value="2">Tonos verdes</option>
             <option value="4">Tonos marrones</option>
             <option value="5">Tonos rosas</option>
