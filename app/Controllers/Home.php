@@ -406,6 +406,7 @@ class Home extends BaseController{
     public function setGenerarResenas(){
         $color = $this -> request -> getPost('estiloQr');
         $accion = $this -> request -> getPost('accionQr');
+        $accion = intval($accion);
         $email = $this -> request -> getPost('email');
         $numero = $this -> request -> getPost('numeroQr');
         
