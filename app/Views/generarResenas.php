@@ -16,10 +16,10 @@
             <option value="0">Verify Reviews</option>
             <option value="1">Tonos morados</option>
             <option value="2">Tonos verdes</option>
-            <option value="3">Tonos grises</option>
             <option value="4">Tonos marrones</option>
             <option value="5">Tonos rosas</option>
-            <option value="6">Tonos grises</option>
+            <option value="3">Tonos grises 1</option>
+            <option value="6">Tonos grises 2</option>
         </select>
 
         <!-- <label>Escoge un color para el codigo Qr</label>
