@@ -163,22 +163,26 @@ class Qr {
 
     function setImagenQr($opcion){
 
+        $this -> imagen_qr['cid'] = "imagen.png";
+        $this -> imagen_qr['nombre'] = "Codigo Qr Verify Reviews";
+        $this -> imagen_qr['tipo'] = "image/png";
+
         if ($opcion == "1") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_morados.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_morados.png";
         } elseif ($opcion == "2") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_verdes.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_verdes.png";
         } elseif ($opcion == "4") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_marrones.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_marrones.png";
         } elseif ($opcion == "5") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_rosas.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_rosas.png";
         } elseif ($opcion == "3") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_grises_1.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_grises_1.png";
         } elseif ($opcion == "6") {
-            $this -> imagen_qr =  base_url(). "img/preQr/tonos_grises_2.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/tonos_grises_2.png";
         } else {
-            $this -> imagen_qr =  base_url(). "img/preQr/verify.png";
+            $this -> imagen_qr['contenido'] =  base_url(). "img/preQr/verify.png";
         }
-        
+
     }
 
     public function setColor($opcion){

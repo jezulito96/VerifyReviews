@@ -27,17 +27,24 @@ class Emailmailer {
 
     public function enviarCorreo($destinatario, $asunto, $mensaje,$imagen = null) {
         try {
-            // Configuraciones del mensaje
-            $this->mail->isHTML(false);  
-            $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
-            $this->mail->addAddress($destinatario); 
-            $this->mail->Subject = $asunto; 
-            $this->mail->Body = $mensaje; 
 
             // para enviar imagenes
             if ($imagen !== null) {
-                $this->mail->addAttachment($imagen);
+                $this->mail->isHTML(true); 
+                $this->mail->AddEmbeddedImage($imagen['contenido'], $imagen['cid'], $imagen['nombre'], 'base64', $imagen['tipo']);
+                $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
+            }else{
+                //para enviar solo texto
+                $this->mail->isHTML(false); 
+                $this->mail->Body = $mensaje; 
             }
+
+            // Configuraciones generales del mensaje
+            $this->mail->setFrom('verifyReviews@verifyreviews.es', 'VerifyReviews'); 
+            $this->mail->addAddress($destinatario); 
+            $this->mail->Subject = $asunto; 
+            
+
 
             // Enviar el correo
             $this->mail->send();
