@@ -447,7 +447,7 @@ class Home extends BaseController{
                 // $imagen->readImage($ruta_qr);
                 $imagen -> readImageBlob($imagen_qr);
                 $imagen->setImageResolution(600,600);
-                // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+                $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
 
                 // Establecer el formato de salida como PNG
                 $imagen->setImageFormat('png');
