@@ -61,7 +61,7 @@ class Emailmailer {
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
             // $this->mail->AddEmbeddedImage($imagen['contenido'], $imagen['cid'], $imagen['nombre'], 'base64', $imagen['tipo']);
-            $this->mail->addEmbeddedImage("imagen.svg", base_url()."otros/plantillaMail.html") ;
+            $this->mail->addEmbeddedImage($imagen_qr, 'imagen.svg', 'imagen.svg', 'base64', 'image/svg+xml');
 
             $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
 
