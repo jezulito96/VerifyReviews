@@ -422,21 +422,17 @@ class Home extends BaseController{
             $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
 
         }elseif($accion == 2){
-            $qr = new Qr();
-            $qr -> setColor($color);
-            $imagen_qr = $qr -> crear($accion);
-            // var_dump($email);
-
-
+            
             try {
-                $ruta_qr = FCPATH . "otros/imagen.png";
+                $qr = new Qr();
+                $qr -> setColor($color);
+                $imagen_qr = $qr -> crear($accion);
 
-                // Contenido del SVG generado por PHP QR Code (reemplaza esto con tu SVG)
-                $svg_content = '<svg width="100" height="100"><rect width="100" height="100" style="fill:#0000ff" /></svg>';
+                $ruta_qr = FCPATH . "otros/imagen.png";
 
                 // Crea un objeto Imagick a partir del contenido SVG
                 $imagick = \Config\Services::image('imagick');
-                $imagick->readImageBlob($svg_content);
+                $imagick->readImageBlob($imagen_qr);
 
                 // Establece el formato de salida como PNG
                 $imagick->setImageFormat("png");
