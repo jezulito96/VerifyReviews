@@ -425,44 +425,44 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            echo $imagen_qr;
-            $ruta_qr = FCPATH . "otros/codigo_Qr.png";
+            var_dump($imagen_qr);
+            // $ruta_qr = FCPATH . "otros/codigo_Qr.png";
 
-            //guardar en public / otros/codigo_Qr.svg la imagen svg 
-            if ($archivo = fopen($ruta_qr, 'w')) {
-                fwrite($archivo, $imagen_qr);
-                fclose($archivo);
-                echo "se ha guardado  ";
-            } else {
-                echo " error al guardar la imagen SVG.";
-            }
+            // //guardar en public / otros/codigo_Qr.svg la imagen svg 
+            // if ($archivo = fopen($ruta_qr, 'w')) {
+            //     fwrite($archivo, $imagen_qr);
+            //     fclose($archivo);
+            //     echo "se ha guardado  ";
+            // } else {
+            //     echo " error al guardar la imagen SVG.";
+            // }
             
-            try {
+            // try {
                 
-                // cambio de svg a 
-                $imagen = new \Imagick();
-                $imagen -> readImageBlob($imagen_qr);
-                $imagen->setImageResolution(600,600);
-                $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
-                $imagen->setImageFormat('png');
-                $ruta_png = FCPATH . "otros/codigo_Qr.png";
-                $imagen->writeImage($ruta_png);
-                $imagen->clear();
-                $imagen->destroy(); 
+            //     // cambio de svg a 
+            //     $imagen = new \Imagick();
+            //     $imagen -> readImageBlob($imagen_qr);
+            //     $imagen->setImageResolution(600,600);
+            //     $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+            //     $imagen->setImageFormat('png');
+            //     $ruta_png = FCPATH . "otros/codigo_Qr.png";
+            //     $imagen->writeImage($ruta_png);
+            //     $imagen->clear();
+            //     $imagen->destroy(); 
 
 
-                $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
+            //     $mail = new Emailmailer();
+            //     $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
 
-                if($resultado_email){
-                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                }else{
-                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                }
+            //     if($resultado_email){
+            //         $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+            //     }else{
+            //         $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+            //     }
                 
-            } catch (Exception $e) {
-                echo "Error al convertir la imagen: " . $e->getMessage();
-            }
+            // } catch (Exception $e) {
+            //     echo "Error al convertir la imagen: " . $e->getMessage();
+            // }
 
 
             
