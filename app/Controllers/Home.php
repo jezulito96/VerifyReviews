@@ -434,8 +434,8 @@ class Home extends BaseController{
                 file_put_contents($ruta_qr, $imagen_qr);
 
                 echo $ruta_qr . "<br>";
-                // $mail = new Emailmailer();
-                // $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
+                $mail = new Emailmailer();
+                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
                 echo "<br>";
                 // if($resultado_email == false){
                 //     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
