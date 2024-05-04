@@ -49,10 +49,11 @@ class Emailmailer {
         $asunto = "Reseña de Verify Reviews";
 
         $imagen['contenido'] = $imagen_qr;
-        $imagen['tipo'] = "image/png";
-        $imagen['cid'] = "imagen.png";
+        $imagen['tipo'] = "image/svg";
+        $imagen['cid'] = "imagen.svg";
         $imagen['nombre'] = "Codigo Qr Verify Reviews"; 
-
+        echo "entra";
+        var_dump($imagen);
         try {
 
             $this->mail->isHTML(true); 

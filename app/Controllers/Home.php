@@ -443,11 +443,11 @@ class Home extends BaseController{
                 $mail = new Emailmailer();
                 $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
                 echo "<br>";
-                // if($resultado_email == false){
-                //     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                // }else{
-                //     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                // }
+                if($resultado_email == false){
+                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+                }else{
+                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+                }
                 
                 echo "La conversión se ha realizado correctamente.";
             } catch (Exception $e) {
