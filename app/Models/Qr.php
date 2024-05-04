@@ -154,7 +154,7 @@ class Qr {
             return $this->cod_qr;
         }elseif($accion == 2){
 
-            $this ->options -> scale = 5; 
+            $this ->options -> scale = 20; 
             $this ->options->version          = 5;
             $this ->options->outputInterface   = QRMarkupSVG::class;
             $this ->options->outputBase64        = false;
