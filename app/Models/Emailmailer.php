@@ -65,16 +65,16 @@ class Emailmailer {
 
             // $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
             $this ->mail -> Body = '
-                    <svg class="qr-svg qrcode" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid">
-                        <image xlink:href="cid:imagen.svg" width="100" height="100" />
+                    <svg width="100" height="100">
+                        <image xlink:href="cid:imagen" width="100" height="100" />
                     </svg>
                 ';
-            $this->mail->addEmbeddedImage(base_url() . "otros/imagen.svg", 'imagen.svg');
+            $this->mail->addEmbeddedImage(base_url() . "otros/imagen.svg", 'imagen');
             // Enviar el correo
             $this->mail->send();
             return true;
         } catch (Exception $e) {
-            return false;
+            return $e ->getMessage();
         }
     }
 

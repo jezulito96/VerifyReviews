@@ -422,24 +422,23 @@ class Home extends BaseController{
             $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
 
         }elseif($accion == 2){
+            $qr = new Qr();
+            $qr -> setColor($color);
+            $imagen_qr = $qr -> crear($accion);
+
+            $ruta_qr = FCPATH . "otros/imagen.svg";
+
+            // Abrir o crear el archivo en modo escritura
+            if ($archivo = fopen($ruta_qr, 'w')) {
+                // Escribir el contenido SVG en el archivo
+                fwrite($archivo, $imagen_qr);
+                fclose($archivo);
+                echo "La imagen SVG se ha guardado correctamente ";
+            } else {
+                echo "Hubo un error al guardar la imagen SVG.";
+            }
             
             try {
-                $qr = new Qr();
-                $qr -> setColor($color);
-                $imagen_qr = $qr -> crear($accion);
-
-                $ruta_qr = FCPATH . "otros/imagen.svg";
-
-                // Abrir o crear el archivo en modo escritura
-                if ($archivo = fopen($ruta_qr, 'w')) {
-                    // Escribir el contenido SVG en el archivo
-                    fwrite($archivo, $imagen_qr);
-                    fclose($archivo);
-                    echo "La imagen SVG se ha guardado correctamente ";
-                } else {
-                    echo "Hubo un error al guardar la imagen SVG.";
-                }
-
                 // // Ruta de la imagen SVG
                 // $rutaSVG = $ruta_qr;
 
@@ -466,7 +465,7 @@ class Home extends BaseController{
                 $mail = new Emailmailer();
                 $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
-                if($resultado_email == false){
+                if($resultado_email){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
                 }else{
                     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
