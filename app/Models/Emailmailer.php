@@ -69,7 +69,7 @@ class Emailmailer {
                         <image xlink:href="cid:imagen" width="100" height="100" />
                     </svg>
                 ';
-            $this->mail->addEmbeddedImage(base_url() . "otros/imagen.svg", 'imagen');
+            $this->mail->addEmbeddedImage(FCPATH . "otros/imagen.svg", 'imagen');
             // Enviar el correo
             $this->mail->send();
             return true;
