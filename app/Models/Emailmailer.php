@@ -64,27 +64,22 @@ class Emailmailer {
             // $this->mail->addEmbeddedImage($imagen_qr, 'imagen.svg', 'imagen.svg', 'base64', 'image/svg+xml');
 
             // $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
-            $this ->mail -> Body = '<html>
-            <head>
-            <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
-            <title>Escribe una reseña en Verify Reviews</title>
-            </head>
-            <body>
+            $this ->mail -> Body = '
+            <h2>Escribe tu opinión sobre tu compra</h2>
+            <p>Descarga nuestro codigo Qr y escanealo para opinar sobre nuestro negocio</p>
+            <p>Ayuda a nuestro negocio a crecer, ¡Tú opinión nos importa!</p>
             <center>
             <table width=”450″ border=”0″ align=”center” cellpadding=”0″ cellspacing=”0″>
             <tr>
             <td>
             <svg width="100" height="100">
-                <image xlink:href="cid:imagen.svg" width="100" height="100" />
+                        <image xlink:href="cid:imagen" width="100" height="100" />
             </svg>
             </td>
             </tr>
             </table>
             </center>
-            </body>
-                    <svg width="100" height="100">
-                        <image xlink:href="cid:imagen" width="100" height="100" />
-                    </svg>
+                    
                 ';
             $this->mail->addEmbeddedImage(FCPATH . "otros/imagen.svg", 'imagen');
             // Enviar el correo
