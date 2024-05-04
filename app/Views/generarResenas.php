@@ -45,10 +45,8 @@
 
         <div name="opcionesDescargaContainer" id="opcionesDescargaContainer" class="invisible">
             <label>Selecciona una opcion</label>
-            <select name="opcionesDescarga" id="opcionesDescarga">
-                <option value="1">Enviar al email</option>
-                <option value="2">Descargar en zip</option>
-            </select>
+            <input type="button" value="1" value="Enviar al email" />
+            <input type="button" value="2" value="Descargar en zip" />
         </div>
         
         <input type="submit" name="generaQr" value="Generar codigos">
@@ -85,21 +83,6 @@
             $("#opcionesDescargaContainer").removeClass("invisible");
         }
         
-        $("#opcionesDescarga").change(function(){
-            var opcion = $(this).val();
-            console.log("acccion " + opcion);
-
-            if(opcion == 1){
-                $("#containerEmailQr").addClass("visible");
-            }else if(opcion == 2){
-
-                $("#previsualizacionQr").addClass("invisible");
-                $("#estiloQrContainer").removeClass("visible");
-                $("#estiloQrContainer").addClass("visible");
-            }
-            
-        });
-
         $("#accionQr").change(function(){
             var val = $(this).val();
             console.log("acccion " + val);
