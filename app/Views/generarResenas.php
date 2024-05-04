@@ -18,7 +18,7 @@
             <option value="4">Imagenes</option>
         </select>
 
-        <div id="estiloQrContainer" class="invisible">
+        <div id="estiloQrContainer" >
             <label>Elige el estilo del Qr</label>
             <select name="estiloQr" id="estiloQr">
                 <option value="0">Verify Reviews</option>
