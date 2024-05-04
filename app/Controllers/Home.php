@@ -442,14 +442,14 @@ class Home extends BaseController{
                 
                 // Crear un nuevo objeto Imagick
                 $imagen = new \Imagick();
-
+                $imagen->setImageResolution(300, 300);
+                $imagen->resizeImage(200, 200, \Imagick::FILTER_LANCZOS, 1);
                 // Leer el archivo SVG
                 $imagen->readImage($ruta_qr);
 
                 // Establecer el formato de salida como PNG
                 $imagen->setImageFormat('png');
-                $imagen->setImageResolution(300, 300);
-                $imagen->resizeImage(200, 200, \Imagick::FILTER_LANCZOS, 1);
+                
                 
                 // Guardar la imagen convertida
                 $ruta_png = FCPATH . "otros/codigo_Qr.png";
