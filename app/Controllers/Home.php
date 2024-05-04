@@ -424,15 +424,14 @@ class Home extends BaseController{
             $imagen_qr = $qr -> crear($accion);
             var_dump($imagen_qr);
 
-            $archivo_temporal = tmpfile();
-            fwrite($archivo_temporal, $imagen_qr);
-            $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
-            var_dump($ruta_temporal);
+            // $archivo_temporal = tmpfile();
+            // $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
+            // var_dump($ruta_temporal);
 
             $mail = new Emailmailer();
-            $resultado_email = $mail -> enviarImagen($email,$ruta_temporal);
-            fclose($archivo_temporal);
+            $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
 
+            
             if($resultado_email == false){
                 $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
             }else{

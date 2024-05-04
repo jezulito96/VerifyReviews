@@ -91,8 +91,8 @@ class Qr {
 
         $this ->options -> scale = 5; 
         $this ->options->version          = 5;
-        // $this ->options->outputInterface   = QRMarkupSVG::class;
-        $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
+        $this ->options->outputInterface   = QRMarkupSVG::class;
+        // $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
         $this ->options->outputBase64        = false;
         $this ->options->eccLevel            = EccLevel::L; 
         $this ->options->addQuietzone        = true;

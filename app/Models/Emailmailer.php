@@ -68,6 +68,7 @@ class Emailmailer {
             $this->mail->send();
             return true;
         } catch (Exception $e) {
+            echo "Error al enviar el correo: " . $e->getMessage();
             return false;
         }
     }
