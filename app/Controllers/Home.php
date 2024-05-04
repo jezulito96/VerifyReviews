@@ -440,23 +440,23 @@ class Home extends BaseController{
                     echo "Hubo un error al guardar la imagen SVG.";
                 }
 
-                // Ruta de la imagen SVG
-                $rutaSVG = $ruta_qr;
+                // // Ruta de la imagen SVG
+                // $rutaSVG = $ruta_qr;
 
-                // Ruta donde se guardará la imagen PNG
-                $rutaPNG = FCPATH . "otros/imagen.png";
+                // // Ruta donde se guardará la imagen PNG
+                // $rutaPNG = FCPATH . "otros/imagen.png";
 
-                // Crear un objeto Imagick
-                $imagen = \Config\Services::image('imagick');
+                // // Crear un objeto Imagick
+                // $imagen = \Config\Services::image('imagick');
 
-                // Leer el archivo SVG
-                $imagen->readImage($rutaSVG);
+                // // Leer el archivo SVG
+                // $imagen->readImage($rutaSVG);
 
-                // Convertir a formato PNG
-                $imagen->setImageFormat("png");
+                // // Convertir a formato PNG
+                // $imagen->setImageFormat("png");
 
-                // Guardar la imagen PNG
-                $imagen->writeImage($rutaPNG);
+                // // Guardar la imagen PNG
+                // $imagen->writeImage($rutaPNG);
 
                 // Liberar recursos
                 $imagen->clear();
@@ -464,7 +464,7 @@ class Home extends BaseController{
 
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$rutaPNG);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
                 if($resultado_email == false){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
