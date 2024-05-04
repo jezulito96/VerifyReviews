@@ -423,7 +423,7 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
             var_dump($email);
-            $ruta = base_url() . "otros/imagen.svg";
+            $ruta = FCPATH . "otros/imagen.svg";
             file_put_contents($ruta, $imagen_qr);
 
             // $archivo_temporal = tmpfile();
