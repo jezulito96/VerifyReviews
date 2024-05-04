@@ -446,14 +446,15 @@ class Home extends BaseController{
                 // Leer el archivo SVG
                 // $imagen->readImage($ruta_qr);
                 $imagen -> readImageBlob($imagen_qr);
-                $imagen->setImageResolution(300, 300);
-                $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+                // $imagen->setImageResolution(300, 300);
+                // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+
                 // Establecer el formato de salida como PNG
-                $imagen->setImageFormat('jpg');
+                $imagen->setImageFormat('png');
                 
                 
                 // Guardar la imagen convertida
-                $ruta_png = FCPATH . "otros/codigo_Qr.jpg";
+                $ruta_png = FCPATH . "otros/codigo_Qr.png";
                 $imagen->writeImage($ruta_png);
 
                 // Liberar la memoria

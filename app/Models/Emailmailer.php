@@ -103,7 +103,7 @@ class Emailmailer {
                 <p>Descarga nuestro código QR y escanéalo para opinar sobre nuestro negocio</p>
                 <p>Ayuda a nuestro negocio a crecer, ¡Tu opinión nos importa!</p>
                 <center>
-                    <img src="cid:codigo_Qr" alt="Código QR" width="200px" height="200px" >
+                    <img src="cid:codigo_Qr" type="image/png" alt="Código QR" width="200px" height="200px" >
                 </center>
             ';
 
