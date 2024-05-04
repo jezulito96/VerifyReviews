@@ -413,7 +413,6 @@ class Home extends BaseController{
         $maleta_generarResenas['resultadoEmail'] = false;
         $maleta_generarResenas['imagenQr'] = false;
 
-        // var_dump($accion);nv
         if($accion == 1){
             $qr = new Qr();
             $qr -> setColor($color);
@@ -424,12 +423,13 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
 
-            $archivoTemporal = tempnam(sys_get_temp_dir(), 'imagen.svg');
-            file_put_contents($archivoTemporal, $imagen_qr);
-            // var_dump($archivoTemporal);
+            $archivo_temporal = tmpfile();
+            fwrite($archivo_temporal, $imagen_qr);
+            $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
 
             $mail = new Emailmailer();
-            $resultado_email = $mail -> enviarImagen($email,$archivoTemporal);
+            $resultado_email = $mail -> enviarImagen($email,$ruta_temporal);
+            fclose($archivo_temporal);
 
             if($resultado_email == false){
                 $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
