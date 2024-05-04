@@ -72,15 +72,27 @@
     $(document).ready(function(){
 
         var preQr = $("#prevQr");
+
+        function borrarClases(){
+            $("#containerEmailQr").removeClass("visible");
+            $("#estiloQrContainer").removeClass("visible");
+            $("#containerEmailQr").removeClass("visible");
+            $("#opcionesDescarga").removeClass("visible");
+
+            $("#containerEmailQr").removeClass("invisible");
+            $("#estiloQrContainer").removeClass("invisible");
+            $("#containerEmailQr").removeClass("invisible");
+            $("#opcionesDescarga").removeClass("invisible");
+        }
         
         $("#opcionesDescarga").change(function(){
             var opcion = $(this).opcion();
             console.log("acccion " + opcion);
 
             if(opcion == 1){
-                $("#containerEmailQr").toggleClass("visible");
+                $("#containerEmailQr").addClass("visible");
             }else if(opcion == 2){
-                $("#estiloQrContainer").toggleClass("visible");
+                $("#estiloQrContainer").addClass("visible");
             }
             
         });
@@ -89,26 +101,28 @@
             var val = $(this).val();
             console.log("acccion " + val);
 
+            borrarClases();
+
             if(val == 1){
-                $("#containerEmailQr").toggleClass("visible");
-                $("#estiloQrContainer").toggleClass("visible");
-                $("#containerEmailQr").toggleClass("invisible");
-                $("#opcionesDescarga").toggleClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+                $("#estiloQrContainer").addClass("visible");
+                $("#containerEmailQr").addClass("invisible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 2){
-                $("#containerEmailQr").toggleClass("invisible");
-                $("#estiloQrContainer").toggleClass("invisible");
-                $("#containerEmailQr").toggleClass("visible");
-                $("#opcionesDescarga").toggleClass("invisible");
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 3){
-                $("#containerEmailQr").toggleClass("invisible");
-                $("#estiloQrContainer").toggleClass("invisible");
-                $("#containerEmailQr").toggleClass("visible");
-                $("#opcionesDescarga").toggleClass("invisible");
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 4){
-                $("#containerEmailQr").toggleClass("invisible");
-                $("#estiloQrContainer").toggleClass("invisible");
-                $("#containerEmailQr").toggleClass("invisible");
-                $("#opcionesDescarga").toggleClass("visible");
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
+                $("#containerEmailQr").addClass("invisible");
+                $("#opcionesDescarga").addClass("visible");
             }
             
         });
