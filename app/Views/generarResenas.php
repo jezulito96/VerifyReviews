@@ -47,12 +47,6 @@
             <option value="2">Descargar en zip</option>
         </select>
         
-
-
-        <!-- <input type="button" name="previsualizarQr" id="previsualizarQr" value="Previsualizar Qr" style="background:red;"/>  -->
-
-
-
         
         <input type="submit" name="generaQr" value="Generar codigos">
     </form>
@@ -76,6 +70,17 @@
 
         var preQr = $("#prevQr");
         
+        $("#opcionesDescarga").change(function(){
+            var opcion = $(this).opcion();
+            console.log("acccion " + opcion);
+
+            if(opcion == 1){
+                $("#containerEmailQr").addClass("visible");
+            }else if(opcion == 2){
+                $("#estiloQr").addClass("visible");
+            }
+            
+        });
 
         $("#accionQr").change(function(){
             var val = $(this).val();
@@ -85,19 +90,22 @@
                 $("#containerEmailQr").addClass("visible");
                 $("#estiloQr").addClass("visible");
                 $("#containerEmailQr").addClass("invisible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 2){
                 $("#containerEmailQr").addClass("invisible");
                 $("#estiloQr").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 3){
                 $("#containerEmailQr").addClass("invisible");
                 $("#estiloQr").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
+                $("#opcionesDescarga").addClass("invisible");
             }else if(val == 4){
                 $("#containerEmailQr").addClass("invisible");
                 $("#estiloQr").addClass("invisible");
-                $("#containerEmailQr").addClass("visible");
-
+                $("#containerEmailQr").addClass("invisible");
+                $("#opcionesDescarga").addClass("visible");
             }
             
         });
