@@ -446,17 +446,19 @@ class Home extends BaseController{
                 $mail = new Emailmailer();
                 $resultado_email = $mail -> enviarImagen($email,$imagen);
 
+                if($resultado_email == false){
+                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+                }else{
+                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+                }
+                
                 echo "La conversión se ha realizado correctamente.";
             } catch (Exception $e) {
                 echo "Error al convertir la imagen: " . $e->getMessage();
             }
 
 
-            if($resultado_email == false){
-                $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-            }else{
-                $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-            }
+            
             
         }
         var_dump($maleta_generarResenas['resultadoEmail']);
