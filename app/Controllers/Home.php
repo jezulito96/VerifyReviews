@@ -429,11 +429,9 @@ class Home extends BaseController{
                 $imagen_qr = $qr -> crear($accion);
 
                 $ruta_qr = FCPATH . "otros/";
-                if (file_exists($ruta_qr)){
-                    echo "existe";
-                }
+              
                 // Guardar la imagen en la ruta especificada
-                file_put_contents($ruta_qr, $imagen_qr);
+                file_put_contents($imagen_qr,$ruta_qr);
 
 
                 $mail = new Emailmailer();
