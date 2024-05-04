@@ -154,7 +154,7 @@ class Qr {
             return $this->cod_qr;
         }elseif($accion == 2){
 
-            $this -> options->version              = 7;
+            $this -> options->version              = 5;
             $this -> options->outputInterface      = SVGConvert::class;
             $this -> options->imagickFormat        = 'png32';
             $this -> options->scale                = 20;
