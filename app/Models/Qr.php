@@ -89,22 +89,7 @@ class Qr {
 
         $this ->options = new QROptions;
 
-        $this ->options -> scale = 5; 
-        $this ->options->version          = 5;
-        $this ->options->outputInterface   = QRMarkupSVG::class;
-        // $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
-        $this ->options->outputBase64        = false;
-        $this ->options->eccLevel            = EccLevel::L; 
-        $this ->options->addQuietzone        = true;
-        $this ->options->drawLightModules    = false;
-        $this ->options->connectPaths        = true;
-        $this ->options->drawCircularModules = true;
-        $this ->options->circleRadius        = 0.45;
-        $this ->options->keepAsSquare        = [
-            QRMatrix::M_FINDER_DARK,
-            QRMatrix::M_FINDER_DOT,
-            QRMatrix::M_ALIGNMENT_DARK,
-        ];
+
 
 
         // se crea una clave aleatoria de 16 bytes
@@ -147,9 +132,44 @@ class Qr {
         // }        
 
         if($accion == 1){
+
+            $this ->options -> scale = 5; 
+            $this ->options->version          = 5;
+            $this ->options->outputInterface   = QRMarkupSVG::class;
+            // $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
+            $this ->options->outputBase64        = false;
+            $this ->options->eccLevel            = EccLevel::L; 
+            $this ->options->addQuietzone        = true;
+            $this ->options->drawLightModules    = false;
+            $this ->options->connectPaths        = true;
+            $this ->options->drawCircularModules = true;
+            $this ->options->circleRadius        = 0.45;
+            $this ->options->keepAsSquare        = [
+                QRMatrix::M_FINDER_DARK,
+                QRMatrix::M_FINDER_DOT,
+                QRMatrix::M_ALIGNMENT_DARK,
+            ];
+
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
             return $this->cod_qr;
+            
         }elseif($accion == 2){
+
+            $this -> options->version              = 7;
+            $this -> options->outputInterface      = QRMarkupSVG::class;
+            $this -> options->imagickFormat        = 'png32';
+            $this -> options->scale                = 10;
+            $this -> options->outputBase64         = false;
+            $this -> options->drawLightModules     = true;
+            $this -> options->drawCircularModules  = true;
+            $this -> options->circleRadius         = 0.4;
+            $this -> options->connectPaths         = true;
+            $this -> options->keepAsSquare         = [
+                QRMatrix::M_FINDER_DARK,
+                QRMatrix::M_FINDER_DOT,
+                QRMatrix::M_ALIGNMENT_DARK,
+            ];
+
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
             return $this->cod_qr;
 
@@ -221,7 +241,7 @@ class Qr {
     }
 
 
-    
+
 
 }
 

@@ -428,23 +428,25 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear($accion);
 
-                $ruta_qr = FCPATH . "otros/imagen.png";
+                var_dump($imagen_qr);
 
-                // Crea un objeto Imagick a partir del contenido SVG
-                $imagick = \Config\Services::image('imagick');
-                $imagick->readImageBlob($imagen_qr);
+                // $ruta_qr = FCPATH . "otros/imagen.png";
 
-                // Establece el formato de salida como PNG
-                $imagick->setImageFormat("png");
+                // // Crea un objeto Imagick a partir del contenido SVG
+                // $imagick = \Config\Services::image('imagick');
+                // $imagick->readImageBlob($imagen_qr);
 
-                // Guarda la imagen PNG en la ruta especificada
-                $imagick->writeImage($ruta_qr);
+                // // Establece el formato de salida como PNG
+                // $imagick->setImageFormat("png");
 
-                // Libera la memoria utilizada por Imagick
-                $imagick->clear();
-                $imagick->destroy();
+                // // Guarda la imagen PNG en la ruta especificada
+                // $imagick->writeImage($ruta_qr);
 
-                $image = imagecreatefromstring($imagen_qr);
+                // // Libera la memoria utilizada por Imagick
+                // $imagick->clear();
+                // $imagick->destroy();
+
+                // $image = imagecreatefromstring($imagen_qr);
 
 
                 // $mail = new Emailmailer();
