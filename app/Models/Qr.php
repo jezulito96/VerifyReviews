@@ -164,12 +164,9 @@ class Qr {
                 'drawCircularModules' => true,
                 'drawLightModules'    => false,
                 'circleRadius'        => 0.5, // Ajustar el radio de los círculos
-                'moduleValues'        => [
-                    'dark'  => ['r' => 122, 'g' => 147, 'b' => 172, 'a' => 255], // Color oscuro (negro)
-                ],
-                'dark'  => ['r' => 122, 'g' => 147, 'b' => 172, 'a' => 255], // Color oscuro (negro)
+                'bgColor'             => [255, 255, 255], // Color de fondo blanco
                 'addQuietzone'        => true, // Agregar zona de silencio
-                'imageTransparent'    => false, // Hacer la imagen transparente
+                'imageTransparent'    => true, // Hacer la imagen transparente
             ]);
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
