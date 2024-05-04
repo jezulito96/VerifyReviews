@@ -14,6 +14,9 @@ use App\Models\UsuarioRegistrado;
 use App\Models\UsuarioSinRegistrar;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\Output\QRImage;
+use App\Controllers\BaseController;
+use CodeIgniter\Images\Handlers\ImageMagickHandler;
+use Exception;
 
 
 
@@ -422,21 +425,31 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            var_dump($email);
-            $ruta = FCPATH . "otros/imagen.svg";
-            $context = stream_context_create([
-                'ssl' => [
-                    'crypto_method' => STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT
-                ]
-            ]);
-            file_put_contents($ruta, $imagen_qr,$context);
+            // var_dump($email);
 
-            // $archivo_temporal = tmpfile();
-            // $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
-            // var_dump($ruta_temporal);
+            // Ruta donde se guardará el archivo PNG
+            $ruta_png = FCPATH . "otros/imagen.png";
 
-            $mail = new Emailmailer();
-            $resultado_email = $mail -> enviarImagen($email,$ruta);
+            try {
+                // Cargar el archivo SVG
+                $imagen = new ImageMagickHandler($imagen_qr);
+
+                // Convertir la imagen SVG a PNG
+                $imagen->setImageFormat("png");
+
+                // Guardar la imagen en formato PNG
+                $imagen->writeImage($ruta_png);
+
+                // Liberar la memoria ocupada por la imagen
+                $imagen->destroy();
+
+                $mail = new Emailmailer();
+                $resultado_email = $mail -> enviarImagen($email,$imagen);
+
+                echo "La conversión se ha realizado correctamente.";
+            } catch (Exception $e) {
+                echo "Error al convertir la imagen: " . $e->getMessage();
+            }
 
 
             if($resultado_email == false){
