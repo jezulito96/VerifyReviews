@@ -426,6 +426,7 @@ class Home extends BaseController{
             $archivo_temporal = tmpfile();
             fwrite($archivo_temporal, $imagen_qr);
             $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
+            var_dump($ruta_temporal);
 
             $mail = new Emailmailer();
             $resultado_email = $mail -> enviarImagen($email,$ruta_temporal);
