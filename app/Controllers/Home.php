@@ -459,8 +459,8 @@ class Home extends BaseController{
                 // $imagen->writeImage($rutaPNG);
 
                 // Liberar recursos
-                $imagen->clear();
-                $imagen->destroy();
+                // $imagen->clear();
+                // $imagen->destroy();
 
 
                 $mail = new Emailmailer();
