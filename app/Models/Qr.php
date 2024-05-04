@@ -155,7 +155,7 @@ class Qr {
             
         }elseif($accion == 2){
 
-            $this -> options->version              = 7;
+            $this -> options->version              = 5;
             $this -> options->outputInterface      = QRMarkupSVG::class;
             $this -> options->imagickFormat        = 'png32';
             $this -> options->scale                = 10;
