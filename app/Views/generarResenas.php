@@ -76,12 +76,12 @@
         function borrarClases(){
             $("#containerEmailQr").removeClass("visible");
             $("#estiloQrContainer").removeClass("visible");
-            $("#containerEmailQr").removeClass("visible");
+            $("#previsualizacionQr").removeClass("visible");
             $("#opcionesDescargaContainer").removeClass("visible");
 
             $("#containerEmailQr").removeClass("invisible");
             $("#estiloQrContainer").removeClass("invisible");
-            $("#containerEmailQr").removeClass("invisible");
+            $("#previsualizacionQr").removeClass("invisible");
             $("#opcionesDescargaContainer").removeClass("invisible");
         }
         
@@ -92,7 +92,7 @@
             if(opcion == 1){
                 $("#containerEmailQr").addClass("visible");
             }else if(opcion == 2){
-                $("#containerEmailQr").addClass("invisible");
+                $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("visible");
             }
             
@@ -105,22 +105,22 @@
             borrarClases();
 
             if(val == 1){
-                $("#containerEmailQr").addClass("visible");
+                $("#previsualizacionQr").addClass("visible");
                 $("#estiloQrContainer").addClass("visible");
                 $("#containerEmailQr").addClass("invisible");
                 $("#opcionesDescargaContainer").addClass("invisible");
             }else if(val == 2){
-                $("#containerEmailQr").addClass("invisible");
+                $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
                 $("#opcionesDescargaContainer").addClass("invisible");
             }else if(val == 3){
-                $("#containerEmailQr").addClass("invisible");
+                $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
                 $("#opcionesDescargaContainer").addClass("invisible");
             }else if(val == 4){
-                $("#containerEmailQr").addClass("invisible");
+                $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
                 $("#opcionesDescargaContainer").addClass("visible");
