@@ -422,14 +422,16 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            // var_dump($imagen_qr);
             var_dump($email);
+            $ruta = base_url() . "otros/imagen.svg";
+            file_put_contents($ruta, $imagen_qr);
+
             // $archivo_temporal = tmpfile();
             // $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
             // var_dump($ruta_temporal);
 
             $mail = new Emailmailer();
-            $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
+            $resultado_email = $mail -> enviarImagen($email,$ruta);
 
 
             if($resultado_email == false){
