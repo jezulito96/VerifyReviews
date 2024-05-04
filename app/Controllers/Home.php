@@ -431,15 +431,15 @@ class Home extends BaseController{
 
             try {
                 try{
-                    $ruta_temporal = WRITEPATH . 'tmp/' . uniqid('qr_', true) . '.svg';
-                    file_put_contents($ruta_temporal, $imagen_qr);
+                    $archivo_temporal = tempnam(sys_get_temp_dir(), 'qr_');
+                    file_put_contents($archivo_temporal, $imagen_qr);
 
                     // Ruta donde se guardará la imagen QR
                     $ruta_qr = FCPATH . "otros/imagen.svg";
 
                     // Mover la imagen QR a la ruta deseada
-                    rename($ruta_temporal, $ruta_qr);
-                    
+                    rename($archivo_temporal, $ruta_qr);
+
                     // Ruta del archivo SVG
                     $ruta_svg = FCPATH . "otros/imagen.svg";
 
