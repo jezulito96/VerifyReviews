@@ -78,9 +78,9 @@
             console.log("acccion " + opcion);
 
             if(opcion == 1){
-                $("#containerEmailQr").addClass("visible");
+                $("#containerEmailQr").toggleClass("visible");
             }else if(opcion == 2){
-                $("#estiloQrContainer").addClass("visible");
+                $("#estiloQrContainer").toggleClass("visible");
             }
             
         });
@@ -90,25 +90,25 @@
             console.log("acccion " + val);
 
             if(val == 1){
-                $("#containerEmailQr").addClass("visible");
-                $("#estiloQrContainer").addClass("visible");
-                $("#containerEmailQr").addClass("invisible");
-                $("#opcionesDescarga").addClass("invisible");
+                $("#containerEmailQr").toggleClass("visible");
+                $("#estiloQrContainer").toggleClass("visible");
+                $("#containerEmailQr").toggleClass("invisible");
+                $("#opcionesDescarga").toggleClass("invisible");
             }else if(val == 2){
-                $("#containerEmailQr").addClass("invisible");
-                $("#estiloQrContainer").addClass("invisible");
-                $("#containerEmailQr").addClass("visible");
-                $("#opcionesDescarga").addClass("invisible");
+                $("#containerEmailQr").toggleClass("invisible");
+                $("#estiloQrContainer").toggleClass("invisible");
+                $("#containerEmailQr").toggleClass("visible");
+                $("#opcionesDescarga").toggleClass("invisible");
             }else if(val == 3){
-                $("#containerEmailQr").addClass("invisible");
-                $("#estiloQrContainer").addClass("invisible");
-                $("#containerEmailQr").addClass("visible");
-                $("#opcionesDescarga").addClass("invisible");
+                $("#containerEmailQr").toggleClass("invisible");
+                $("#estiloQrContainer").toggleClass("invisible");
+                $("#containerEmailQr").toggleClass("visible");
+                $("#opcionesDescarga").toggleClass("invisible");
             }else if(val == 4){
-                $("#containerEmailQr").addClass("invisible");
-                $("#estiloQrContainer").addClass("invisible");
-                $("#containerEmailQr").addClass("invisible");
-                $("#opcionesDescarga").addClass("visible");
+                $("#containerEmailQr").toggleClass("invisible");
+                $("#estiloQrContainer").toggleClass("invisible");
+                $("#containerEmailQr").toggleClass("invisible");
+                $("#opcionesDescarga").toggleClass("visible");
             }
             
         });
