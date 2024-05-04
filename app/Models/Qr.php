@@ -162,10 +162,10 @@ class Qr {
                 'outputType'          => QRCode::OUTPUT_IMAGE_PNG,
                 'scale'               => 20,
                 'drawCircularModules' => true,
+                'drawLightModules'    => false,
                 'circleRadius'        => 0.5, // Ajustar el radio de los círculos
                 'moduleValues'        => [
-                    'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255], // Color oscuro (negro)
-                    'light' => ['r' => 255, 'g' => 255, 'b' => 255, 'a' => 255], // Color claro (blanco)
+                    'dark'  => ['r' => 122, 'g' => 147, 'b' => 172, 'a' => 255], // Color oscuro (negro)
                 ],
                 'bgColor'             => [255, 255, 255], // Color de fondo blanco
                 'addQuietzone'        => true, // Agregar zona de silencio
