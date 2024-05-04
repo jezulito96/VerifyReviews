@@ -444,15 +444,15 @@ class Home extends BaseController{
             try {
                 
                 // cambio de svg a 
-                $imagen = new \Imagick();
-                $imagen -> readImage($imagen_qr);
+                // $imagen = new \Imagick();
+                // $imagen -> readImage($imagen_qr);
                 // $imagen -> readImageBlob($imagen_qr);
                 // $imagen->setImageResolution(600,600);
                 // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
-                $imagen->setImageFormat('png');
-                $imagen->writeImage($ruta_png);
-                $imagen->clear();
-                $imagen->destroy(); 
+                // $imagen->setImageFormat('png');
+                // $imagen->writeImage($ruta_png);
+                // $imagen->clear();
+                // $imagen->destroy(); 
 
 
                 $mail = new Emailmailer();
