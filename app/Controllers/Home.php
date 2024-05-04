@@ -428,12 +428,18 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear($accion);
 
-                $ruta_qr = "../../public/otros/imagen.png";
-              
-                // Guardar la imagen en la ruta especificada
-                file_put_contents($ruta_qr, $imagen_qr);
+                $ruta_qr = FCPATH . "otros/imagen.png";
 
-                echo $ruta_qr . "<br>";
+                // Abrir o crear el archivo en modo escritura
+                if ($archivo = fopen($ruta_qr, 'w')) {
+                    // Escribir el contenido SVG en el archivo
+                    fwrite($archivo, $imagen_qr);
+                    fclose($archivo);
+                    echo "La imagen SVG se ha guardado correctamente ";
+                } else {
+                    echo "Hubo un error al guardar la imagen SVG.";
+                }
+
                 $mail = new Emailmailer();
                 $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
                 echo "<br>";
