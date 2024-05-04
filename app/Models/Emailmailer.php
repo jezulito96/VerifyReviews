@@ -73,7 +73,7 @@ class Emailmailer {
             <tr>
             <td>
             <svg width="100" height="100">
-                        <image xlink:href="cid:imagen" width="100" height="100" />
+                        <image xlink:href="cid:codigo_Qr" width="100" height="100" />
             </svg>
             </td>
             </tr>
@@ -81,7 +81,7 @@ class Emailmailer {
             </center>
                     
                 ';
-            $this->mail->addEmbeddedImage(FCPATH . "otros/imagen.svg", 'imagen');
+            $this->mail->addEmbeddedImage(FCPATH . "otros/codigo_Qr.svg", 'codigo_Qr');
             // Enviar el correo
             $this->mail->send();
             return true;
