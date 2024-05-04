@@ -434,6 +434,7 @@ class Home extends BaseController{
                 $ruta_png = FCPATH . "otros/imagen.png";
 
                 // Crear un objeto Imagick y cargar el contenido SVG
+                $imagen = \Config\Services::image();
                 $imagen = \Config\Services::image('imagick');
                 $imagen->readImageBlob($imagen_qr);
 
