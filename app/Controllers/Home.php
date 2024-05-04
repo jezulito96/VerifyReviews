@@ -441,38 +441,27 @@ class Home extends BaseController{
                 echo " error al guardar la imagen SVG.";
             }
             
-            try {
-                
-                // cambio de svg a 
-                // $imagen = new \Imagick();
-                // $imagen -> readImageBlob($imagen_qr);
-                // $imagen->setImageResolution(600,600);
-                // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
-                // $imagen->setImageFormat('png');
-                // $imagen->writeImage($ruta_png);
-                // $imagen->clear();
-                // $imagen->destroy(); 
+            // cambio de svg a 
+            // $imagen = new \Imagick();
+            // $imagen -> readImageBlob($imagen_qr);
+            // $imagen->setImageResolution(600,600);
+            // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+            // $imagen->setImageFormat('png');
+            // $imagen->writeImage($ruta_png);
+            // $imagen->clear();
+            // $imagen->destroy(); 
 
 
-                $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+            $mail = new Emailmailer();
 
-                if($resultado_email){
-                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                }else{
-                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                }
-                
-            } catch (Exception $e) {
-                echo "Error al convertir la imagen: " . $e->getMessage();
+            $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+
+            if($resultado_email){
+                $maleta_generarResenas['resultadoEmail'] = "Email enviado correctamente";
             }
-
-
-            
-            
         }
-        var_dump($maleta_generarResenas['resultadoEmail']);
-        var_dump($maleta_generarResenas['imagenQr']);
+
+
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');

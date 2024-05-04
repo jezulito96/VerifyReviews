@@ -9,22 +9,6 @@
 <div class="containerformGenerarResena">
     <form action="setGenerarResenas" method="post" class="formLogin">
 
-        <label>Elige el estilo del Qr</label>
-        <select name="estiloQr" id="estiloQr" >
-            <option value="0">Verify Reviews</option>
-            <option value="1">Morado azulado</option>
-            <option value="2">Tonos verdes</option>
-            <option value="4">Tonos marrones</option>
-            <option value="5">Tonos rosas</option>
-            <option value="3">Tonos grises 1</option>
-            <option value="6">Tonos grises 2</option>
-        </select>
-
-        <div id="previsualizacionQr" class="previsualizacionQr">
-            <img src="<?php echo base_url()?>img/preQr/verify.webp" id="prevQr" class="prevQr">
-                <!-- Aqui se mostrara la previsualizacion de las imagenes qr  -->
-        </div>
-
         <!-- Añadir info para el usuario -->
         <label>¿Como quieres generar los codigos?</label> 
         <select name="accionQr" id="accionQr" >
@@ -34,10 +18,34 @@
             <option value="4">Imagenes</option>
         </select>
 
+        <label>Elige el estilo del Qr</label>
+        <select name="estiloQr" id="estiloQr" class="invisible">
+            <option value="0">Verify Reviews</option>
+            <option value="1">Morado azulado</option>
+            <option value="2">Tonos verdes</option>
+            <option value="4">Tonos marrones</option>
+            <option value="5">Tonos rosas</option>
+            <option value="3">Tonos grises 1</option>
+            <option value="6">Tonos grises 2</option>
+        </select>
+
+        <div id="previsualizacionQr" class="previsualizacionQr" class="invisible">
+            <img src="<?php echo base_url()?>img/preQr/verify.webp" id="prevQr" class="prevQr">
+                <!-- Aqui se mostrara la previsualizacion de las imagenes qr  -->
+        </div>
+
+
         <div id="containerEmailQr" class="invisible">
             <label>Correo electrónico del cliente </email>
             <input type="email" name="emailQr" class="emailQr" />
         </div>
+
+
+        <label>Elige el estilo del Qr</label>
+        <select name="opcionesDescarga" id="opcionesDescarga" class="invisible">
+            <option value="1">Enviar al email</option>
+            <option value="2">Descargar en zip</option>
+        </select>
         
 
 
@@ -73,9 +81,23 @@
             var val = $(this).val();
             console.log("acccion " + val);
 
-            if(val == 2){
-                console.log("entra en val");
-                $("#containerEmailQr").toggleClass("invisible");
+            if(val == 1){
+                $("#containerEmailQr").addClass("visible");
+                $("#estiloQr").addClass("visible");
+                $("#containerEmailQr").addClass("invisible");
+            }else if(val == 2){
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQr").addClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+            }else if(val == 3){
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQr").addClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+            }else if(val == 4){
+                $("#containerEmailQr").addClass("invisible");
+                $("#estiloQr").addClass("invisible");
+                $("#containerEmailQr").addClass("visible");
+
             }
             
         });

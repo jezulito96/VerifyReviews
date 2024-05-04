@@ -12,3 +12,6 @@ li{
 .invisible{
     display: none;
 }
+.visible{
+    display: normal;
+}

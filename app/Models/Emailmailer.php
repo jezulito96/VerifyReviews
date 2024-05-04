@@ -112,7 +112,7 @@ class Emailmailer {
             $this->mail->send();
             return true;
         } catch (Exception $e) {
-            return $e ->getMessage();
+            return false;
         }
     }
 
