@@ -424,7 +424,12 @@ class Home extends BaseController{
             $imagen_qr = $qr -> crear($accion);
             var_dump($email);
             $ruta = FCPATH . "otros/imagen.svg";
-            file_put_contents($ruta, $imagen_qr);
+            $context = stream_context_create([
+                'ssl' => [
+                    'crypto_method' => STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT
+                ]
+            ]);
+            file_put_contents($ruta, $imagen_qr,$context);
 
             // $archivo_temporal = tmpfile();
             // $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
