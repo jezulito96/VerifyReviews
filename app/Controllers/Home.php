@@ -426,7 +426,7 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
 
-            $ruta_qr = FCPATH . "otros/codigo_Qr.png";
+            $ruta_qr = FCPATH . "otros/codigo_Qr.svg";
 
             //guardar en public / otros/codigo_Qr.svg la imagen svg 
             if ($archivo = fopen($ruta_qr, 'w')) {
@@ -440,21 +440,20 @@ class Home extends BaseController{
             try {
                 
                 // cambio de svg a 
-                // $imagen = new \Imagick();
-                // $imagen -> readImageBlob($imagen_qr);
-                // $imagen->setImageResolution(600,600);
-                // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
-                // $imagen->setImageFormat('png');
-                // $ruta_png = FCPATH . "otros/codigo_Qr.png";
-                // $imagen->writeImage($ruta_png);
-                // $imagen->clear();
-                // $imagen->destroy(); 
+                $imagen = new \Imagick();
+                $imagen -> readImageBlob($imagen_qr);
+                $imagen->setImageResolution(600,600);
+                $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+                $imagen->setImageFormat('png');
+                $ruta_png = FCPATH . "otros/codigo_Qr.png";
+                $imagen->writeImage($ruta_png);
+                $imagen->clear();
+                $imagen->destroy(); 
 
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
 
-                echo $resultado_email;
                 if($resultado_email){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
                 }else{
