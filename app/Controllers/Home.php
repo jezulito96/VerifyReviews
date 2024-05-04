@@ -425,17 +425,21 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            var_dump($imagen_qr);
-            // $ruta_qr = FCPATH . "otros/codigo_Qr.png";
-
-            // //guardar en public / otros/codigo_Qr.svg la imagen svg 
-            // if ($archivo = fopen($ruta_qr, 'w')) {
-            //     fwrite($archivo, $imagen_qr);
-            //     fclose($archivo);
-            //     echo "se ha guardado  ";
-            // } else {
-            //     echo " error al guardar la imagen SVG.";
-            // }
+            
+            $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
+            // Decodificar el contenido base64 en datos binarios
+            $image_png = base64_decode($imagen_base64);
+            // Especificar la ruta donde deseas guardar el archivo PNG
+            $ruta_png = FCPATH . "otros/codigo_Qr.png";
+            
+            //guardar en public / otros/codigo_Qr.svg la imagen svg 
+            if ($archivo = fopen($ruta_png, 'w')) {
+                fwrite($archivo, $image_png);
+                fclose($archivo);
+                echo "se ha guardado  ";
+            } else {
+                echo " error al guardar la imagen SVG.";
+            }
             
             // try {
                 
