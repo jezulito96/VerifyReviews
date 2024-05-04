@@ -18,16 +18,19 @@
             <option value="4">Imagenes</option>
         </select>
 
-        <label>Elige el estilo del Qr</label>
-        <select name="estiloQr" id="estiloQr" class="invisible">
-            <option value="0">Verify Reviews</option>
-            <option value="1">Morado azulado</option>
-            <option value="2">Tonos verdes</option>
-            <option value="4">Tonos marrones</option>
-            <option value="5">Tonos rosas</option>
-            <option value="3">Tonos grises 1</option>
-            <option value="6">Tonos grises 2</option>
-        </select>
+        <div id="estiloQrContainer" class="invisible">
+            <label>Elige el estilo del Qr</label>
+            <select name="estiloQr" id="estiloQr">
+                <option value="0">Verify Reviews</option>
+                <option value="1">Morado azulado</option>
+                <option value="2">Tonos verdes</option>
+                <option value="4">Tonos marrones</option>
+                <option value="5">Tonos rosas</option>
+                <option value="3">Tonos grises 1</option>
+                <option value="6">Tonos grises 2</option>
+            </select>
+        </div>
+        
 
         <div id="previsualizacionQr" class="previsualizacionQr" class="invisible">
             <img src="<?php echo base_url()?>img/preQr/verify.webp" id="prevQr" class="prevQr">
@@ -77,7 +80,7 @@
             if(opcion == 1){
                 $("#containerEmailQr").addClass("visible");
             }else if(opcion == 2){
-                $("#estiloQr").addClass("visible");
+                $("#estiloQrContainer").addClass("visible");
             }
             
         });
@@ -88,22 +91,22 @@
 
             if(val == 1){
                 $("#containerEmailQr").addClass("visible");
-                $("#estiloQr").addClass("visible");
+                $("#estiloQrContainer").addClass("visible");
                 $("#containerEmailQr").addClass("invisible");
                 $("#opcionesDescarga").addClass("invisible");
             }else if(val == 2){
                 $("#containerEmailQr").addClass("invisible");
-                $("#estiloQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
                 $("#opcionesDescarga").addClass("invisible");
             }else if(val == 3){
                 $("#containerEmailQr").addClass("invisible");
-                $("#estiloQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
                 $("#opcionesDescarga").addClass("invisible");
             }else if(val == 4){
                 $("#containerEmailQr").addClass("invisible");
-                $("#estiloQr").addClass("invisible");
+                $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
                 $("#opcionesDescarga").addClass("visible");
             }
