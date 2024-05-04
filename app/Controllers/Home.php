@@ -425,7 +425,7 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-
+            echo $imagen_qr;
             $ruta_qr = FCPATH . "otros/codigo_Qr.svg";
 
             //guardar en public / otros/codigo_Qr.svg la imagen svg 
