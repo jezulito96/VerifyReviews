@@ -69,6 +69,7 @@
 namespace App\Models;
 require FCPATH . '../vendor/autoload.php';
 
+use chillerlan\QRCode\Output\QRGdImagePNG;
 use chillerlan\QRCode\Output\QRMarkupSVG;
 use chillerlan\QRCode\Common\EccLevel;
 use chillerlan\QRCode\QRCode;
@@ -90,7 +91,8 @@ class Qr {
 
         $this ->options -> scale = 5; 
         $this ->options->version          = 5;
-        $this ->options->outputInterface   = QRMarkupSVG::class;
+        // $this ->options->outputInterface   = QRMarkupSVG::class;
+        $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
         $this ->options->outputBase64        = false;
         $this ->options->eccLevel            = EccLevel::L; 
         $this ->options->addQuietzone        = true;

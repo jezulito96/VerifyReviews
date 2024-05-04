@@ -422,6 +422,7 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
+            var_dump($imagen_qr);
 
             $archivo_temporal = tmpfile();
             fwrite($archivo_temporal, $imagen_qr);
