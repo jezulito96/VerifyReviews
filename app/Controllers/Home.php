@@ -429,26 +429,30 @@ class Home extends BaseController{
 
 
             try {
-                
-               // Ruta donde se guardará el archivo PNG
-                $ruta_png = FCPATH . "otros/imagen.png";
+                $ruta_qr = FCPATH . "otros/imagen.png";
 
-                // Crear un objeto Imagick y cargar el contenido SVG
-                $imagen = \Config\Services::image();
-                $imagen = \Config\Services::image('imagick');
-                $imagen->readImageBlob($imagen_qr);
+                // Contenido del SVG generado por PHP QR Code (reemplaza esto con tu SVG)
+                $svg_content = '<svg width="100" height="100"><rect width="100" height="100" style="fill:#0000ff" /></svg>';
 
-                // Convertir la imagen SVG a PNG
-                $imagen->setImageFormat("png");
+                // Crea un objeto Imagick a partir del contenido SVG
+                $imagick = \Config\Services::image('imagick');
+                $imagick->readImageBlob($svg_content);
 
-                // Guardar la imagen en formato PNG
-                $imagen->writeImage($ruta_png);
+                // Establece el formato de salida como PNG
+                $imagick->setImageFormat("png");
 
-                // Liberar la memoria ocupada por la imagen
-                $imagen->destroy();
+                // Guarda la imagen PNG en la ruta especificada
+                $imagick->writeImage($ruta_qr);
+
+                // Libera la memoria utilizada por Imagick
+                $imagick->clear();
+                $imagick->destroy();
+
+                $image = imagecreatefromstring($imagen_qr);
+
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
                 if($resultado_email == false){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
