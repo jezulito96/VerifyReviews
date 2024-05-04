@@ -1,22 +1,23 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\BaseDatos;
-use App\Models\Master;
-use App\Models\Emailmailer;
-use App\Models\Qr;
-use App\Models\Categoria;
-use App\Models\Negocio;
-use App\Models\Mapa;
-use App\Models\Resena;
-use App\Models\Usuario;
-use App\Models\UsuarioRegistrado;
-use App\Models\UsuarioSinRegistrar;
-use chillerlan\QRCode\QRCode;
-use chillerlan\QRCode\Output\QRImage;
-use App\Controllers\BaseController;
-use CodeIgniter\Images\Handlers\ImageMagickHandler;
 use Exception;
+use App\Models\Qr;
+use App\Models\Mapa;
+use App\Models\Master;
+use App\Models\Resena;
+use App\Models\Negocio;
+use App\Models\Usuario;
+use App\Models\BaseDatos;
+use App\Models\Categoria;
+use App\Models\Emailmailer;
+use chillerlan\QRCode\QRCode;
+use App\Models\UsuarioRegistrado;
+use App\Controllers\BaseController;
+use App\Models\UsuarioSinRegistrar;
+use Dompdf\Exception\ImageException;
+use chillerlan\QRCode\Output\QRImage;
+use CodeIgniter\Images\Handlers\ImageMagickHandler;
 
 
 
@@ -429,36 +430,39 @@ class Home extends BaseController{
 
 
             try {
-                
                 try{
-                    // Ruta donde se guardará el archivo SVG
+                    $ruta_temporal = WRITEPATH . 'tmp/' . uniqid('qr_', true) . '.svg';
+                    file_put_contents($ruta_temporal, $imagen_qr);
+
+                    // Ruta donde se guardará la imagen QR
+                    $ruta_qr = FCPATH . "otros/imagen.svg";
+
+                    // Mover la imagen QR a la ruta deseada
+                    rename($ruta_temporal, $ruta_qr);
+                    
+                    // Ruta del archivo SVG
                     $ruta_svg = FCPATH . "otros/imagen.svg";
 
-                    // Guardar el contenido SVG en un archivo temporal
-                    file_put_contents($ruta_svg, $imagen_qr);
+                    // Crear una instancia de ImageMagickHandler
+                    $imageHandler = new ImageMagickHandler();
 
-                    // Ruta donde se guardará el archivo PNG
-                    $ruta_png = FCPATH . "otros/imagen.png";
-                    
-                    // Crear un objeto ImageMagickHandler y pasarle la ruta del archivo SVG
-                    $imagen = new ImageMagickHandler($ruta_svg);
+                    // Establecer la ruta del archivo SVG en el manejador de imágenes
+                    $imageHandler->load($ruta_svg);
 
                     // Convertir la imagen SVG a PNG
-                    $imagen->setImageFormat("png");
+                    $imageHandler->convert(IMAGETYPE_PNG);
 
-                    // Guardar la imagen en formato PNG
-                    $imagen->writeImage($ruta_png);
-
-                    // Liberar la memoria ocupada por la imagen
-                    $imagen->destroy();
+                    // Guardar la imagen convertida como PNG
+                    $ruta_png = FCPATH . "otros/imagen.png";
+                    $imageHandler->save($ruta_png);
 
                     echo "La conversión se ha realizado correctamente.";
-                } catch (Exception $e) {
+                } catch (ImageException $e) {
                     echo "Error al convertir la imagen: " . $e->getMessage();
                 }
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$imagen);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
 
                 if($resultado_email == false){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
