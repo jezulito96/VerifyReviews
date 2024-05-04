@@ -450,14 +450,13 @@ class Home extends BaseController{
                 // $imagen->setImageResolution(600,600);
                 // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
                 $imagen->setImageFormat('png');
-                $ruta_png = FCPATH . "otros/codigo_Qr.png";
                 $imagen->writeImage($ruta_png);
                 $imagen->clear();
                 $imagen->destroy(); 
 
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
 
                 if($resultado_email){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
