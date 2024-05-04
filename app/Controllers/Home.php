@@ -448,7 +448,7 @@ class Home extends BaseController{
 
                 // Establecer el formato de salida como PNG
                 $imagen->setImageFormat('png');
-
+                $imagen->setImageResolution(300, 300);
                 $imagen->resizeImage(200, 200, \Imagick::FILTER_LANCZOS, 1);
                 
                 // Guardar la imagen convertida
