@@ -83,15 +83,15 @@ class Emailmailer {
             $archivo = fopen($imagen_qr, 'r');
             
             // Leer el contenido del archivo en un buffer
-            $contenidoSVG = '';
+            $contenido_png = '';
             while (!feof($archivo)) {
-                $contenidoSVG .= fread($archivo, 8192); // Leer 8192 bytes a la vez
+                $contenido_png .= fread($archivo, 8192); // Leer 8192 bytes a la vez
             }
             
             fclose($archivo);
             
             // Codificar el contenido en base64
-            $contenidoBase64 = base64_encode($contenidoSVG);
+            $contenidoBase64 = base64_encode($contenido_png);
             
             // Incrustar el contenido base64 en el correo electrónico
             $this->mail->addStringEmbeddedImage($contenidoBase64, 'codigo_Qr', 'codigo_Qr.png', 'base64', 'image/png');
