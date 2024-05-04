@@ -439,31 +439,28 @@ class Home extends BaseController{
             }
             
             try {
-                // // Ruta de la imagen SVG
-                // $rutaSVG = $ruta_qr;
+                
+                // Crear un nuevo objeto Imagick
+                $imagen = new \Imagick();
 
-                // // Ruta donde se guardará la imagen PNG
-                // $rutaPNG = FCPATH . "otros/imagen.png";
+                // Leer el archivo SVG
+                $imagen->readImage($ruta_qr);
 
-                // // Crear un objeto Imagick
-                // $imagen = \Config\Services::image('imagick');
+                // Establecer el formato de salida como PNG
+                $imagen->setImageFormat('png');
 
-                // // Leer el archivo SVG
-                // $imagen->readImage($rutaSVG);
+                // Guardar la imagen convertida
+                $ruta_png = FCPATH . "otros/codigo_Qr.png";
+                $imagen->writeImage($ruta_png);
 
-                // // Convertir a formato PNG
-                // $imagen->setImageFormat("png");
-
-                // // Guardar la imagen PNG
-                // $imagen->writeImage($rutaPNG);
-
-                // Liberar recursos
-                // $imagen->clear();
-                // $imagen->destroy();
+                // Liberar la memoria
+                $imagen->clear();
+                $imagen->destroy(); 
 
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
+                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+                // $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
                 echo $resultado_email;
                 // if($resultado_email){
