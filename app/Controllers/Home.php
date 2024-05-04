@@ -444,7 +444,8 @@ class Home extends BaseController{
                 $imagen = new \Imagick();
                 
                 // Leer el archivo SVG
-                $imagen->readImage($ruta_qr);
+                // $imagen->readImage($ruta_qr);
+                $imagen -> readImageBlob($imagen_qr);
                 $imagen->setImageResolution(300, 300);
                 $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
                 // Establecer el formato de salida como PNG
