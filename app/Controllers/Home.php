@@ -465,11 +465,12 @@ class Home extends BaseController{
                 $mail = new Emailmailer();
                 $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
-                if($resultado_email){
-                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                }else{
-                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                }
+                echo $resultado_email;
+                // if($resultado_email){
+                //     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+                // }else{
+                //     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+                // }
                 
             } catch (Exception $e) {
                 echo "Error al convertir la imagen: " . $e->getMessage();
