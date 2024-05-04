@@ -422,8 +422,8 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            var_dump($imagen_qr);
-
+            // var_dump($imagen_qr);
+            var_dump($email);
             // $archivo_temporal = tmpfile();
             // $ruta_temporal = stream_get_meta_data($archivo_temporal)['uri'];
             // var_dump($ruta_temporal);
@@ -431,7 +431,7 @@ class Home extends BaseController{
             $mail = new Emailmailer();
             $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
 
-            
+
             if($resultado_email == false){
                 $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
             }else{
