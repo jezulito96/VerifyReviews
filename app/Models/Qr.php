@@ -167,9 +167,9 @@ class Qr {
                 'moduleValues'        => [
                     'dark'  => ['r' => 122, 'g' => 147, 'b' => 172, 'a' => 255], // Color oscuro (negro)
                 ],
-                'bgColor'             => [255, 255, 255], // Color de fondo blanco
+                'dark'  => ['r' => 122, 'g' => 147, 'b' => 172, 'a' => 255], // Color oscuro (negro)
                 'addQuietzone'        => true, // Agregar zona de silencio
-                'imageTransparent'    => true, // Hacer la imagen transparente
+                'imageTransparent'    => false, // Hacer la imagen transparente
             ]);
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
