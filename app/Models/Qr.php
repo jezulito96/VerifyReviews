@@ -133,22 +133,23 @@ class Qr {
 
         if($accion == 1){
 
-            $this ->options -> scale = 5; 
-            $this ->options->version          = 5;
-            $this ->options->outputInterface   = QRMarkupSVG::class;
-            // $this ->options->outputInterface   = QRGdImagePNG::MIME_TYPE;
-            $this ->options->outputBase64        = false;
-            $this ->options->eccLevel            = EccLevel::L; 
-            $this ->options->addQuietzone        = true;
-            $this ->options->drawLightModules    = false;
-            $this ->options->connectPaths        = true;
-            $this ->options->drawCircularModules = true;
-            $this ->options->circleRadius        = 0.45;
-            $this ->options->keepAsSquare        = [
-                QRMatrix::M_FINDER_DARK,
-                QRMatrix::M_FINDER_DOT,
-                QRMatrix::M_ALIGNMENT_DARK,
-            ];
+            $options = new QROptions([
+                'version'             => 5,
+                'outputInterface'     => QRImage::class, // Usar la clase QRImage para generar imágenes
+                'outputType'          => QRCode::OUTPUT_IMAGE_PNG, // Especificar el formato de salida como PNG
+                'scale'               => 20,
+                'imagickFormat'       => 'png32', // Opcional: formato específico de Imagick
+                'drawLightModules'    => false,
+                'svgUseFillAttributes' => false,
+                'drawCircularModules' => true,
+                'circleRadius'        => 0.4,
+                'connectPaths'        => true,
+                'keepAsSquare'        => [
+                    QRMatrix::M_FINDER_DARK,
+                    QRMatrix::M_FINDER_DOT,
+                    QRMatrix::M_ALIGNMENT_DARK,
+                ],
+            ]);
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
             return $this->cod_qr;
