@@ -431,7 +431,7 @@ class Home extends BaseController{
                 $ruta_qr = FCPATH . "otros/imagen.png";
               
                 // Guardar la imagen en la ruta especificada
-                file_put_contents($imagen_qr,$ruta_qr);
+                file_put_contents($ruta_qr, $imagen_qr);
 
 
                 $mail = new Emailmailer();
