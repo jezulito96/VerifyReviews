@@ -426,7 +426,7 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
 
-            $ruta_qr = FCPATH . "otros/imagen.svg";
+            $ruta_qr = FCPATH . "otros/codigo_Qr.svg";
 
             // Abrir o crear el archivo en modo escritura
             if ($archivo = fopen($ruta_qr, 'w')) {
