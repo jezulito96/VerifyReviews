@@ -94,7 +94,7 @@ class Emailmailer {
             $contenidoBase64 = base64_encode($contenidoSVG);
             
             // Incrustar el contenido base64 en el correo electrónico
-            $this->mail->addStringEmbeddedImage($contenidoBase64, 'codigo_Qr', 'codigo_Qr.svg', 'base64', 'image/svg+xml');
+            $this->mail->addStringEmbeddedImage($contenidoBase64, 'codigo_Qr', 'codigo_Qr.png', 'base64', 'image/png');
             
             // Cuerpo del mensaje con la etiqueta <img> que utiliza el ID del contenido incrustado
             $this->mail->Body = '
