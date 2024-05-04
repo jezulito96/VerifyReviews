@@ -160,7 +160,7 @@ class Qr {
             $this -> options->imagickFormat        = 'png32';
             $this -> options->scale                = 10;
             $this -> options->outputBase64         = false;
-            $this -> options->drawLightModules     = true;
+            $this -> options->drawLightModules     = false;
             $this -> options->drawCircularModules  = true;
             $this -> options->circleRadius         = 0.4;
             $this -> options->connectPaths         = true;
