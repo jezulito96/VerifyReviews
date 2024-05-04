@@ -45,8 +45,8 @@
 
         <div name="opcionesDescargaContainer" id="opcionesDescargaContainer" class="invisible">
             <label>Selecciona una opcion</label>
-            <input type="button" value="1" value="Enviar al email" />
-            <input type="button" value="2" value="Descargar en zip" />
+            <input type="button" value="Enviar al email" />
+            <input type="button" value="Descargar en zip" />
         </div>
         
         <input type="submit" name="generaQr" value="Generar codigos">
