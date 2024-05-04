@@ -90,9 +90,13 @@
             console.log("acccion " + opcion);
 
             if(opcion == 1){
+                $("#containerEmailQr").removeClass("invisible");
                 $("#containerEmailQr").addClass("visible");
             }else if(opcion == 2){
+                
                 $("#previsualizacionQr").addClass("invisible");
+
+                $("#estiloQrContainer").removeClass("visible");
                 $("#estiloQrContainer").addClass("visible");
             }
             
