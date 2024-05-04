@@ -152,19 +152,19 @@ class Qr {
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
             return $this->cod_qr;
-            
         }elseif($accion == 2){
 
-            $this -> options->version              = 5;
-            $this -> options->outputInterface      = QRGdImagePNG::class;
-            $this -> options->imagickFormat        = 'png32';
-            $this -> options->scale                = 5;
-            $this -> options->outputBase64         = false;
-            $this -> options->drawLightModules     = false;
-            $this -> options->drawCircularModules  = true;
-            $this -> options->circleRadius         = 0.4;
-            $this -> options->connectPaths         = true;
-            $this -> options->keepAsSquare         = [
+            $this ->options -> scale = 5; 
+            $this ->options->version          = 5;
+            $this ->options->outputInterface   = QRMarkupSVG::class;
+            $this ->options->outputBase64        = false;
+            $this ->options->eccLevel            = EccLevel::L; 
+            $this ->options->addQuietzone        = true;
+            $this ->options->drawLightModules    = false;
+            $this ->options->connectPaths        = true;
+            $this ->options->drawCircularModules = true;
+            $this ->options->circleRadius        = 0.45;
+            $this ->options->keepAsSquare        = [
                 QRMatrix::M_FINDER_DARK,
                 QRMatrix::M_FINDER_DOT,
                 QRMatrix::M_ALIGNMENT_DARK,
