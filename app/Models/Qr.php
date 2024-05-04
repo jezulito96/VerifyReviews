@@ -232,15 +232,30 @@ class Qr {
             ]
         ];
 
-        $this ->options->svgDefs = '
-        <linearGradient id="gradient" x1="100%" y2="100%">
-            <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
-            <stop stop-color="' . $colores[$opcion][1] .'" offset="0.5"/>
-            <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
+        // $this ->options->svgDefs = '
+        // <linearGradient id="gradient" x1="100%" y2="100%">
+        //     <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
+        //     <stop stop-color="' . $colores[$opcion][1] .'" offset="0.5"/>
+        //     <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
+        // </linearGradient>
+        // <style><![CDATA[
+        //     .dark{fill: url(#gradient);}
+        //     .light{fill: #eaeaea;}
+        // ]]></style>';
+
+        $this -> options->svgDefs         = '
+        <linearGradient id="rainbow" x1="1" y2="1">
+            <stop stop-color="#e2453c" offset="0"/>
+            <stop stop-color="#e07e39" offset="0.2"/>
+            <stop stop-color="#e5d667" offset="0.4"/>
+            <stop stop-color="#51b95b" offset="0.6"/>
+            <stop stop-color="#1e72b7" offset="0.8"/>
+            <stop stop-color="#6f5ba7" offset="1"/>
         </linearGradient>
         <style><![CDATA[
-            .dark{fill: url(#gradient);}
-            .light{fill: #eaeaea;}
+            .dark{fill: url(#rainbow);}
+            .light{fill: #eee;}
+            svg{ width: 530px; height: 530px; }
         ]]></style>';
     }
 
