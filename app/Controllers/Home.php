@@ -428,7 +428,7 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear($accion);
 
-                $ruta_qr = FCPATH . "otros/imagen.png";
+                $ruta_qr = FCPATH . "otros/";
                 if (file_exists($ruta_qr)){
                     echo "existe";
                 }
