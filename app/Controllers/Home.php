@@ -428,35 +428,20 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear($accion);
 
-                var_dump($imagen_qr);
+                $ruta_qr = FCPATH . "otros/imagen.png";
 
-                // $ruta_qr = FCPATH . "otros/imagen.png";
-
-                // // Crea un objeto Imagick a partir del contenido SVG
-                // $imagick = \Config\Services::image('imagick');
-                // $imagick->readImageBlob($imagen_qr);
-
-                // // Establece el formato de salida como PNG
-                // $imagick->setImageFormat("png");
-
-                // // Guarda la imagen PNG en la ruta especificada
-                // $imagick->writeImage($ruta_qr);
-
-                // // Libera la memoria utilizada por Imagick
-                // $imagick->clear();
-                // $imagick->destroy();
-
-                // $image = imagecreatefromstring($imagen_qr);
+                // Guardar la imagen en la ruta especificada
+                file_put_contents($ruta_qr, $imagen_qr);
 
 
-                // $mail = new Emailmailer();
-                // $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
+                $mail = new Emailmailer();
+                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
-                // if($resultado_email == false){
-                //     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                // }else{
-                //     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                // }
+                if($resultado_email == false){
+                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+                }else{
+                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+                }
                 
                 echo "La conversión se ha realizado correctamente.";
             } catch (Exception $e) {

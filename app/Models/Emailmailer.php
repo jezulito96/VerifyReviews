@@ -49,8 +49,8 @@ class Emailmailer {
         $asunto = "Reseña de Verify Reviews";
 
         $imagen['contenido'] = $imagen_qr;
-        $imagen['tipo'] = "image/svg+xml";
-        $imagen['cid'] = "imagen.svg";
+        $imagen['tipo'] = "image/png";
+        $imagen['cid'] = "imagen.png";
         $imagen['nombre'] = "Codigo Qr Verify Reviews"; 
 
         try {
