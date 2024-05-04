@@ -426,7 +426,7 @@ class Home extends BaseController{
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
             echo $imagen_qr;
-            $ruta_qr = FCPATH . "otros/codigo_Qr.svg";
+            $ruta_qr = FCPATH . "otros/codigo_Qr.png";
 
             //guardar en public / otros/codigo_Qr.svg la imagen svg 
             if ($archivo = fopen($ruta_qr, 'w')) {
@@ -452,7 +452,7 @@ class Home extends BaseController{
 
 
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+                $resultado_email = $mail -> enviarImagen($email,$imagen_qr);
 
                 if($resultado_email){
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
