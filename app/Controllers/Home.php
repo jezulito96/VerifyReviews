@@ -428,7 +428,7 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear($accion);
 
-                $ruta_qr = FCPATH . "otros/imagen.png";
+                $ruta_qr = base_url(). "otros/imagen.png";
 
                 // Guardar la imagen en la ruta especificada
                 file_put_contents($ruta_qr, $imagen_qr);
