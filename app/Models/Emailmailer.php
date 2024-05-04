@@ -79,22 +79,23 @@ class Emailmailer {
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
             
-            // Abrir el archivo SVG
-            $archivo = fopen($imagen_qr, 'r');
+            // // Abrir el archivo SVG
+            // $archivo = fopen($imagen_qr, 'r');
             
-            // Leer el contenido del archivo en un buffer
-            $contenido_png = '';
-            while (!feof($archivo)) {
-                $contenido_png .= fread($archivo, 8192); // Leer 8192 bytes a la vez
-            }
+            // // Leer el contenido del archivo en un buffer
+            // $contenido_png = '';
+            // while (!feof($archivo)) {
+            //     $contenido_png .= fread($archivo, 8192); // Leer 8192 bytes a la vez
+            // }
             
-            fclose($archivo);
+            // fclose($archivo);
             
-            // Codificar el contenido en base64
-            $contenidoBase64 = base64_encode($contenido_png);
+            // // Codificar el contenido en base64
+            // $contenidoBase64 = base64_encode($contenido_png);
             
             // Incrustar el contenido base64 en el correo electrónico
-            $this->mail->addStringEmbeddedImage($contenidoBase64, 'codigo_Qr', 'codigo_Qr.png', 'base64', 'image/png');
+            // $this->mail->addStringEmbeddedImage($contenidoBase64, 'codigo_Qr', 'codigo_Qr.png', 'base64', 'image/png');
+            $this->mail->addStringEmbeddedImage($$imagen_qr, 'codigo_Qr', 'codigo_Qr.png', 'base64', 'image/png');
             
             // Cuerpo del mensaje con la etiqueta <img> que utiliza el ID del contenido incrustado
             $this->mail->Body = '
