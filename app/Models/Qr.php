@@ -156,17 +156,22 @@ class Qr {
             return $this->cod_qr;
         }elseif($accion == 2){
 
-            $this ->  options = new QROptions([
+            $this -> options = new QROptions([
                 'version'             => 5,
-                'outputInterface'     => QRImage::class,
-                'outputType'          => QRCode::OUTPUT_IMAGE_PNG,
+                'outputInterface'     => QRImage::class, // Usar la clase QRImage para generar imágenes
+                'outputType'          => QRCode::OUTPUT_IMAGE_PNG, // Especificar el formato de salida como PNG
                 'scale'               => 20,
-                'drawCircularModules' => true,
+                'imagickFormat'       => 'png32', // Opcional: formato específico de Imagick
                 'drawLightModules'    => false,
-                'circleRadius'        => 0.5, // Ajustar el radio de los círculos
-                'bgColor'             => [255, 255, 255], // Color de fondo blanco
-                'addQuietzone'        => true, // Agregar zona de silencio
-                'imageTransparent'    => true, // Hacer la imagen transparente
+                'svgUseFillAttributes' => false,
+                'drawCircularModules' => true,
+                'circleRadius'        => 0.4,
+                'connectPaths'        => true,
+                'keepAsSquare'        => [
+                    QRMatrix::M_FINDER_DARK,
+                    QRMatrix::M_FINDER_DOT,
+                    QRMatrix::M_ALIGNMENT_DARK,
+                ],
             ]);
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
