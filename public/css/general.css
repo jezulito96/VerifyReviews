@@ -13,5 +13,5 @@ li{
     display: none;
 }
 .visible{
-    display: normal;
+    display: block;
 }
