@@ -156,7 +156,7 @@ class Qr {
             return $this->cod_qr;
         }elseif($accion == 2){
 
-            $options = new QROptions([
+            $this -> options = new QROptions([
                 'version'             => 5,
                 'outputInterface'     => QRImage::class, // Usar la clase QRImage para generar imágenes
                 'outputType'          => QRCode::OUTPUT_IMAGE_PNG, // Especificar el formato de salida como PNG
