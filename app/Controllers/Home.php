@@ -425,14 +425,22 @@ class Home extends BaseController{
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
-            // var_dump($email);
+
+            // Generar el código SVG
+            $imagen_qr = $qr->crear($accion);
+
+            // Ruta donde se guardará el archivo SVG
+            $ruta_svg = FCPATH . "otros/imagen.svg";
+
+            // Guardar el contenido SVG en un archivo temporal
+            file_put_contents($ruta_svg, $imagen_qr);
 
             // Ruta donde se guardará el archivo PNG
             $ruta_png = FCPATH . "otros/imagen.png";
 
             try {
-                // Cargar el archivo SVG
-                $imagen = new ImageMagickHandler($imagen_qr);
+                // Crear un objeto Imagick y cargar la imagen SVG
+                $imagen = new Imagick($ruta_svg);
 
                 // Convertir la imagen SVG a PNG
                 $imagen->setImageFormat("png");
@@ -443,12 +451,13 @@ class Home extends BaseController{
                 // Liberar la memoria ocupada por la imagen
                 $imagen->destroy();
 
+                // Envía la imagen por correo electrónico
                 $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$imagen);
+                $resultado_email = $mail->enviarImagen($email, $ruta_png);
 
-                if($resultado_email == false){
+                if ($resultado_email === false) {
                     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                }else{
+                } else {
                     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
                 }
                 
@@ -456,11 +465,9 @@ class Home extends BaseController{
             } catch (Exception $e) {
                 echo "Error al convertir la imagen: " . $e->getMessage();
             }
-
-
-            
-            
         }
+
+        
         var_dump($maleta_generarResenas['resultadoEmail']);
         var_dump($maleta_generarResenas['imagenQr']);
         // vistas
