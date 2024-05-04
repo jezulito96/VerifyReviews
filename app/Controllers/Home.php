@@ -434,14 +434,14 @@ class Home extends BaseController{
                 file_put_contents($ruta_qr, $imagen_qr);
 
 
-                $mail = new Emailmailer();
-                $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
+                // $mail = new Emailmailer();
+                // $resultado_email = $mail -> enviarImagen($email,$ruta_qr);
 
-                if($resultado_email == false){
-                    $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
-                }else{
-                    $maleta_generarResenas['resultadoEmail'] = "Email enviado";
-                }
+                // if($resultado_email == false){
+                //     $maleta_generarResenas['resultadoEmail'] = "Error al enviar el email";
+                // }else{
+                //     $maleta_generarResenas['resultadoEmail'] = "Email enviado";
+                // }
                 
                 echo "La conversión se ha realizado correctamente.";
             } catch (Exception $e) {
