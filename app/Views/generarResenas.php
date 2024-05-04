@@ -86,16 +86,14 @@
         }
         
         $("#opcionesDescarga").change(function(){
-            var opcion = $(this).opcion();
+            var opcion = $(this).val();
             console.log("acccion " + opcion);
 
             if(opcion == 1){
-                $("#containerEmailQr").removeClass("invisible");
                 $("#containerEmailQr").addClass("visible");
             }else if(opcion == 2){
-                
-                $("#previsualizacionQr").addClass("invisible");
 
+                $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").removeClass("visible");
                 $("#estiloQrContainer").addClass("visible");
             }
