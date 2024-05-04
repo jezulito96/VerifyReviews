@@ -445,7 +445,6 @@ class Home extends BaseController{
                 
                 // cambio de svg a 
                 // $imagen = new \Imagick();
-                // $imagen -> readImage($imagen_qr);
                 // $imagen -> readImageBlob($imagen_qr);
                 // $imagen->setImageResolution(600,600);
                 // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
