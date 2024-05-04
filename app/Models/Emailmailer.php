@@ -61,11 +61,15 @@ class Emailmailer {
             $this->mail->addAddress($destinatario); 
             $this->mail->Subject = $asunto; 
             // $this->mail->AddEmbeddedImage($imagen['contenido'], $imagen['cid'], $imagen['nombre'], 'base64', $imagen['tipo']);
-            $this->mail->addEmbeddedImage($imagen_qr, 'imagen.svg', 'imagen.svg', 'base64', 'image/svg+xml');
+            // $this->mail->addEmbeddedImage($imagen_qr, 'imagen.svg', 'imagen.svg', 'base64', 'image/svg+xml');
 
-            $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
-
-
+            // $this ->mail -> Body = file_get_contents(base_url() . 'otros/plantillaEmail.html');
+            $this ->mail -> Body = '
+                    <svg class="qr-svg qrcode" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid">
+                        <image xlink:href="cid:imagen.svg" width="100" height="100" />
+                    </svg>
+                ';
+            $this->mail->addEmbeddedImage(base_url() . "otros/imagen.svg", 'imagen.svg');
             // Enviar el correo
             $this->mail->send();
             return true;
