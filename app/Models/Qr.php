@@ -156,22 +156,20 @@ class Qr {
             return $this->cod_qr;
         }elseif($accion == 2){
 
-            $this -> options = new QROptions([
+            $this ->  options = new QROptions([
                 'version'             => 5,
-                'outputInterface'     => QRImage::class, // Usar la clase QRImage para generar imágenes
-                'outputType'          => QRCode::OUTPUT_IMAGE_PNG, // Especificar el formato de salida como PNG
+                'outputInterface'     => QRImage::class,
+                'outputType'          => QRCode::OUTPUT_IMAGE_PNG,
                 'scale'               => 20,
-                'imagickFormat'       => 'png32', // Opcional: formato específico de Imagick
-                'drawLightModules'    => false,
-                'svgUseFillAttributes' => false,
                 'drawCircularModules' => true,
-                'circleRadius'        => 0.4,
-                'connectPaths'        => true,
-                'keepAsSquare'        => [
-                    QRMatrix::M_FINDER_DARK,
-                    QRMatrix::M_FINDER_DOT,
-                    QRMatrix::M_ALIGNMENT_DARK,
+                'circleRadius'        => 0.5, // Ajustar el radio de los círculos
+                'moduleValues'        => [
+                    'dark'  => ['r' => 0, 'g' => 0, 'b' => 0, 'a' => 255], // Color oscuro (negro)
+                    'light' => ['r' => 255, 'g' => 255, 'b' => 255, 'a' => 255], // Color claro (blanco)
                 ],
+                'bgColor'             => [255, 255, 255], // Color de fondo blanco
+                'addQuietzone'        => true, // Agregar zona de silencio
+                'imageTransparent'    => true, // Hacer la imagen transparente
             ]);
 
             $this -> cod_qr = (new QRCode($this ->options))->render($this -> url);
@@ -232,31 +230,17 @@ class Qr {
             ]
         ];
 
-        // $this ->options->svgDefs = '
-        // <linearGradient id="gradient" x1="100%" y2="100%">
-        //     <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
-        //     <stop stop-color="' . $colores[$opcion][1] .'" offset="0.5"/>
-        //     <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
-        // </linearGradient>
-        // <style><![CDATA[
-        //     .dark{fill: url(#gradient);}
-        //     .light{fill: #eaeaea;}
-        // ]]></style>';
-
-        $this -> options->svgDefs         = '
-        <linearGradient id="rainbow" x1="1" y2="1">
-            <stop stop-color="#e2453c" offset="0"/>
-            <stop stop-color="#e07e39" offset="0.2"/>
-            <stop stop-color="#e5d667" offset="0.4"/>
-            <stop stop-color="#51b95b" offset="0.6"/>
-            <stop stop-color="#1e72b7" offset="0.8"/>
-            <stop stop-color="#6f5ba7" offset="1"/>
+        $this ->options->svgDefs = '
+        <linearGradient id="gradient" x1="100%" y2="100%">
+            <stop stop-color="' . $colores[$opcion][0] .'" offset="0"/>
+            <stop stop-color="' . $colores[$opcion][1] .'" offset="0.5"/>
+            <stop stop-color="' . $colores[$opcion][2] .'" offset="1"/>
         </linearGradient>
         <style><![CDATA[
-            .dark{fill: url(#rainbow);}
-            .light{fill: #eee;}
-            svg{ width: 530px; height: 530px; }
+            .dark{fill: url(#gradient);}
+            .light{fill: #eaeaea;}
         ]]></style>';
+
     }
 
 
