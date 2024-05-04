@@ -449,6 +449,8 @@ class Home extends BaseController{
                 // Establecer el formato de salida como PNG
                 $imagen->setImageFormat('png');
 
+                $imagen->resizeImage(200, 200, \Imagick::FILTER_LANCZOS, 1);
+                
                 // Guardar la imagen convertida
                 $ruta_png = FCPATH . "otros/codigo_Qr.png";
                 $imagen->writeImage($ruta_png);
