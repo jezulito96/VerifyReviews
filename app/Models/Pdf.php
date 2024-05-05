@@ -23,8 +23,9 @@ class Pdf {
         // ';
 
         $html = '
-        <h1>Holaa</h1>
-        
+            <h1>Factura-3478</h1>
+            <h3>Pon una reseña</h3>
+            <img src="'. $rutaImagen .'" type="image/png" />
         ';
 
         $this -> dompdf->setPaper('A4', 'Inandscape');
