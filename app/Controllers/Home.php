@@ -412,7 +412,7 @@ class Home extends BaseController{
         $accion = $this -> request -> getPost('accionQr');
         $accion = intval($accion);
         $email = $this -> request -> getPost('emailQr');
-        $numero = $this -> request -> getPost('numeroQr');
+        $numero = intval($this -> request -> getPost('numeroQr'));
         
         $maleta_generarResenas['resultadoEmail'] = false;
         $maleta_generarResenas['imagenQr'] = false;
@@ -478,6 +478,21 @@ class Home extends BaseController{
             // se genera el pdf 
             $pdfGenerator = new Pdf();
             $pdfGenerator->crearPdf($imagen_base64, $imagen_logo_base64, 'PDF_Qr.pdf');
+
+        }elseif($accion == 4) {
+            $array_imagenes = array();
+
+             for($i = 0; $i < $numero; $i++){
+                // se genera el qr
+                $qr = new Qr();
+                $qr -> setColor($color);
+                $imagen_qr = $qr -> crear(1);
+
+                array_push($array_imagenes, $imagen_qr);
+             }
+             
+
+
 
         }
 
