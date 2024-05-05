@@ -1,6 +1,7 @@
 .qrcode {
-    width: 150px;
-    height: 150px;
+    margin: 0px auto;
+    width: 20px;
+    height: 200px;
 }
 
 /* Para el de los puntitos  */
