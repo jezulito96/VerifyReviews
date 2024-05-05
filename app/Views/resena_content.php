@@ -51,8 +51,8 @@
 
       <div class="areaTexto">
 
-        <textarea class="textoTitulo" placeholder="Velada en pareja perfecta..."></textarea>
-        <div class="infoInputs">M&aacute;ximo 100 car&aacute;teres</div>
+        <textarea class="textoTitulo" maxlength="50" title="Título de la reseña" required placeholder="Velada perfecta en pareja ..."></textarea>
+        <div class="infoInputs">M&aacute;ximo 50 car&aacute;teres</div>
 
       </div>
 
@@ -82,11 +82,11 @@
         <!-- <input type="file" class="fotosResena" aria-label="Archivo"/> -->
 
         <div class="file-select" id="foto1">
-          <input type="file" name="foto1" aria-label="Archivo">
+          <input type="file" id="foto1" name="foto1" aria-label="Archivo">
         </div>
 
         <div class="file-select" id="foto2">
-          <input type="file" name="foto2" aria-label="Archivo">
+          <input type="file" id="foto2" name="foto2" aria-label="Archivo">
         </div>
 
       </div>
