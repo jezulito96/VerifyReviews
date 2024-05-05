@@ -98,22 +98,22 @@
                 $("#previsualizacionQr").addClass("visible");
                 $("#estiloQrContainer").addClass("visible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#numeroQrContainer").removeClass("invisible");
+                $("#numeroQrContainer").addClass("invisible");
             }else if(val == 2){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
-                $("#numeroQrContainer").removeClass("invisible");
+                $("#numeroQrContainer").addClass("invisible");
             }else if(val == 3){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#numeroQrContainer").removeClass("invisible");
+                $("#numeroQrContainer").addClass("invisible");
             }else if(val == 4){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#numeroQrContainer").removeClass("visible");
+                $("#numeroQrContainer").addClass("visible");
             }
             
         });
