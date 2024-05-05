@@ -12,7 +12,8 @@ class Pdf {
     }
 
     public function crearPdf($imagen_base64, $nombreArchivo) {
-        $imagen_logo_base64 = FCPATH . "otros/negocioComida.png";
+        $imagen_logo = FCPATH . "otros/negocioComida.png";
+        $imagen_logo_base64 = base64_decode($imagen_logo);
 
         // $html = '
         //     <h1>Factura-3478</h1>
@@ -65,13 +66,13 @@ class Pdf {
         </head>
         <body>
             <div class="container">
+                <h1>Factura de Alimentación a Domicilio</h1>
                 <div class="header">
-                <img width="150px" height="150px" src="data:image/png;base64,' . $imagen_logo_base64  . '" class="logo" />
-                    <h1>Factura de Alimentación a Domicilio</h1>
-                    <p>Fecha: ' . date('d/m/Y') . '</p>
-                    <p>Número de Factura: 123456789</p>
+                    <img width="150px" height="150px" src="data:image/png;base64,' . $imagen_logo_base64  . '" class="logo" />
                     <img width="200px" height="200px" src="data:image/png;base64,' . $imagen_base64 . '" class="qr" />
                 </div>
+                <p>Fecha: ' . date('d/m/Y') . '</p>
+                <p>Número de Factura: 123456789</p>
                 <table class="invoice">
                     <thead>
                         <tr>
@@ -94,7 +95,6 @@ class Pdf {
                             <td>$10.00</td>
                             <td>$10.00</td>
                         </tr>
-                        <!-- Otros productos -->
                     </tbody>
                 </table>
                 <div class="total">
