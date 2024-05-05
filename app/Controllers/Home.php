@@ -488,10 +488,32 @@ class Home extends BaseController{
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear(1);
 
-                array_push($array_imagenes, $imagen_qr);
+                $imagen_base64 = base64_encode($imagen_qr);
+                array_push($array_imagenes, $imagen_base64);
              }
              
+            // Nombre del archivo ZIP
+            $nombre_zip = 'imagenes.zip';
 
+            // Crear un nuevo archivo ZIP en memoria
+            $zip = new ZipArchive();
+            if ($zip->open('data://' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
+                // Iterar sobre las imágenes en base64 y agregarlas al archivo ZIP
+                foreach ($array_imagenes as $index => $imagen_base64) {
+                    $zip->addFromString("imagen_$index.png", base64_decode($imagen_base64));
+                }
+
+                // Cerrar el archivo ZIP
+                $zip->close();
+
+                // Enviar el archivo ZIP al navegador para descargar
+                header('Content-Type: application/zip');
+                header('Content-Disposition: attachment; filename="' . $nombre_zip . '"');
+                readfile('data://' . $nombre_zip);
+            } else {
+                // Mensaje de error si no se puede crear el archivo ZIP
+                echo "No se pudo crear el archivo ZIP.";
+            }
 
 
         }
