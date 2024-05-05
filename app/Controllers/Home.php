@@ -84,9 +84,6 @@ class Home extends BaseController{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
         }
 
-
-
-        
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
@@ -96,6 +93,20 @@ class Home extends BaseController{
             $maleta['resena_content'] = view('resena_content');
         }
         
+        return view('index', $maleta);
+    }
+
+    public function setResena(): string{
+        
+        
+
+
+        $maleta_index['resena_completada'] = "La nueva resena se realizó correctamente";
+
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content'); 
+        $maleta['index_content'] = view('index_content', $maleta_index); 
         return view('index', $maleta);
     }
 
