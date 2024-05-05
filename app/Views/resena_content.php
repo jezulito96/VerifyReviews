@@ -11,13 +11,15 @@
       <input type="email" name="email" id="email" placeholder="Email" required>
       <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
       
-
-      <input type="text" name="nickname" id="nickname" class="invisible" required />
+      <div id="containerNickname" class="invisible" >
+        <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+        <input type="submit" name="loginResenaNick"  value="Aceptar" >
+      </div>
 
       <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
       <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
       
-      <input type="submit" name="loginResenaNick"  id="loginResenaNick" value="Aceptar" class="invisible">
+      
     </form>
   </div>
   <script>
@@ -32,9 +34,9 @@
 
           $("#opcion2").addClass("invisible");
           $("#loginResenaSesion").addClass("invisible");
-          $("#loginResenaNick").removeClass("invisible");
-          $("#nickname").removeClass("invisible");
 
+          $("#containerNickname").addClass("invisible");
+          
         });
 
       });
