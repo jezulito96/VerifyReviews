@@ -110,9 +110,12 @@ class Qr {
         // se añade a la url para luego crear el qr
         $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
 
+        $clave_privada_hex = bin2hex($clave_privada); 
+        $vector_inicializacion_hex = bin2hex($vector_inicializacion);   
+
         // se guardan las claves en la base de datos
         $baseDatos = new BaseDatos();
-        $baseDatos -> setCodigoQr($claveCifradaHex,$clave_privada,$vector_inicializacion);
+        $baseDatos -> setCodigoQr($claveCifradaHex,$clave_privada_hex,$vector_inicializacion_hex);
 
     }
 
