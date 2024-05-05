@@ -19,13 +19,13 @@ class Pdf {
         </head>
         <body>
             <img type="image/png" src="' . $rutaImagen . '" alt="C&oacute;digo Qr">
-            
         </body>
         ';
+        $this -> dompdf->setPaper('A4', 'Inadscape');
 
         // Cargar el HTML en Dompdf
-        $this->dompdf->loadHtml($html);
-        $this -> dompdf->setPaper('A4', 'portrait');
+        $this->dompdf->loadHtml(utf8_decode($html));
+        
 
         // Renderizar el PDF
         $this->dompdf->render();
