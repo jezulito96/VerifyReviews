@@ -462,12 +462,18 @@ class Home extends BaseController{
             // se genera el qr
             $qr = new Qr();
             $imagen_qr = $qr -> crear(2);
-            
-            // se guarda el qr
             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
 
-            $imagen_logo = FCPATH . "otros/negocioComida.png";
-            $imagen_logo_base64 = base64_encode($imagen_logo);
+            // leo la imagen logoComida para pasarla a base 64
+            $ruta_imagen = 'ruta/a/la/imagen.png';
+            $archivo = fopen($ruta_imagen, 'r');
+            $imagen_contenido = '';
+            while (!feof($archivo)) {
+                $imagen_contenido .= fread($archivo, 8192);
+            }
+            fclose($archivo);
+            $imagen_logo_base64 = base64_encode($imagen_contenido);
+
 
             // se genera el pdf 
             $pdfGenerator = new Pdf();
