@@ -35,7 +35,7 @@
           $("#opcion2").addClass("invisible");
           $("#loginResenaSesion").addClass("invisible");
 
-          $("#containerNickname").addClass("invisible");
+          $("#containerNickname").removeClass("invisible");
           
         });
 
