@@ -24,14 +24,14 @@ class Pdf {
 
         $html = '
             <h1>Factura-3478</h1>
-            <h3>Pon una reseña</h3>
+            <h3>Danos tu opini&oacute;n</h3>
             <img src="'. $rutaImagen .'" type="image/png" />
         ';
 
-        $this -> dompdf->setPaper('A4', 'landscape');
+        $this -> dompdf->setPaper('A4', 'portrait');
 
         // Cargar el HTML en Dompdf
-        $this->dompdf->loadHtml(utf8_decode($html));
+        $this->dompdf->loadHtml($html);
         
 
         // Renderizar el PDF
