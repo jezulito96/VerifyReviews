@@ -495,7 +495,7 @@ class Home extends BaseController{
              
             $nombre_zip = 'imagenes_QR.zip';
 
-            $ubicacion_temporal = $_FILES['temporal']; 
+            $ubicacion_temporal = FCPATH . "otros/"; 
 
             $zip = new ZipArchive();
             if ($zip->open($ubicacion_temporal . '/' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
