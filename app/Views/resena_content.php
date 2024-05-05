@@ -105,22 +105,13 @@
     </div>
   </div>
 </div>
-<!-- Escript para validar los campos introducidos -->
-<script>
 
-  $(document).ready(function(){
 
-    var valoracionTick = 3;
-    var imgTick1 = $("#imgTick1");
-    var imgTick2 = $("#imgTick2");
-    var imgTick3 = $("#imgTick3");
-    var imgTick4 = $("#imgTick4");
-    var imgTick5 = $("#imgTick5");
 
-    imgTick1.click(function(){
-      console.log("hola");
-    });
+    <!-- script para pintar los ticks verdes de una nueva reseña -->
+    <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
 
-  });
 
-</script>
+
+
+

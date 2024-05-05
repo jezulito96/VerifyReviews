@@ -53,8 +53,7 @@
     <!--/////////////////////////////////////////////// SCRIPTS JQuery ////////////////////////////////////// -->
 
 
-    <!-- script para pintar los ticks verdes de una nueva reseña -->
-    <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
+
 
         <!-- https://leafletjs.com/reference.html#map-factory -->
     <!-- Pinta el mapa dandole al boton de aceptar ubicacion -->

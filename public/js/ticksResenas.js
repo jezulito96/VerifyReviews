@@ -41,4 +41,37 @@ $(document).ready(function () {
         resultadoValoracion.text("Excelente");
     });
 
+    // <!-- Escript para validar los campos introducidos antes de enviarlos a base datos -->
+
+    var valoracionTick = 3;
+    var imgTick1 = $("#imgTick1");
+    var imgTick2 = $("#imgTick2");
+    var imgTick3 = $("#imgTick3");
+    var imgTick4 = $("#imgTick4");
+    var imgTick5 = $("#imgTick5");
+
+    imgTick1.click(function(){
+      valoracionTick = 1;
+    });
+
+    imgTick1.click(function(){
+      valoracionTick = 2;
+    });
+
+    imgTick1.click(function(){
+      valoracionTick = 3;
+    });
+
+    imgTick1.click(function(){
+      valoracionTick = 4;
+    });
+
+    imgTick1.click(function(){
+      valoracionTick = 5;
+    });
+
+    imgTick1.click(function(){
+      valoracionTick = 6;
+    });
+
 });
