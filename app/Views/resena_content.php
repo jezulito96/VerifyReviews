@@ -13,16 +13,16 @@
       
       <div id="containerNickname" class="invisible" >
         <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-        <input type="submit" name="loginResenaNick"  value="Aceptar" >
+        <input type="button" name="loginResenaNick" id="loginResenaNick" value="Aceptar" >
       </div>
 
-      <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
+      <input type="button" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
       <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
       
       
     </form>
   </div>
-  <script>
+  <!-- <script>
       $(document).ready(function(){
 
         var opcion2 = $("#opcion2");
@@ -38,8 +38,9 @@
           $("#containerNickname").removeClass("invisible");
         });
 
+        $("#")
       });
-  </script>
+  </script> -->
 
 <?php
 
