@@ -31,7 +31,10 @@
           $("#contrasena").addClass("invisible");
 
           $("#opcion2").addClass("invisible");
+          $("#loginResenaSesion").addClass("invisible");
           $("#loginResenaNick").removeClass("invisible");
+          $("#nickname").removeClass("invisible");
+
         });
 
       });
