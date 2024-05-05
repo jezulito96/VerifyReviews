@@ -51,7 +51,7 @@
 
       <div class="areaTexto">
 
-        <textarea class="textoTitulo" maxlength="50" title="Título de la reseña" required placeholder="Velada perfecta en pareja ..."></textarea>
+        <textarea class="textoTitulo" minlenght="5" maxlength="50" title="Título de la reseña" required placeholder="Velada perfecta en pareja ..."></textarea>
         <div class="infoInputs">M&aacute;ximo 50 car&aacute;teres</div>
 
       </div>
@@ -65,7 +65,7 @@
 
       <div class="areaTexto">
 
-        <textarea class="textoTituloArea" placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+        <textarea class="textoTituloArea" minlenght="50" maxlength="300" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
         <div class="infoInputs">M&aacute;ximo 250 car&aacute;teres</div>
 
       </div>
@@ -99,17 +99,15 @@
       </h3>
 
       <div class="areaFecha">
-        <input type="date" id="fechaResena" class="fechaResena" placeholder="d/m/Y"></p>
+        <input type="date" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01"></p>
       </div>
 
     </div>
   </div>
 </div>
 
-
-
-    <!-- script para pintar los ticks verdes de una nueva reseña -->
-    <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
+<!-- script para pintar los ticks verdes de una nueva reseña -->
+<?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
 
 
 
