@@ -494,11 +494,13 @@ class Home extends BaseController{
              }
              
             // Nombre del archivo ZIP
-            $nombre_zip = 'imagenes.zip';
+            $nombre_zip = 'imagenes_QR.zip';
+
+            $archivo_temporal = $_FILES['temporal'];
 
             // Crear un nuevo archivo ZIP en memoria
             $zip = new ZipArchive();
-            if ($zip->open('data://' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
+            if ($zip->open( $archivo_temporal . "/" . $nombre_zip, ZipArchive::CREATE) === TRUE) {
                 // Iterar sobre las imágenes en base64 y agregarlas al archivo ZIP
                 foreach ($array_imagenes as $index => $imagen_base64) {
                     $zip->addFromString("imagen_$index.png", base64_decode($imagen_base64));
