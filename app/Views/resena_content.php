@@ -52,7 +52,7 @@
       <div class="areaTexto">
 
         <textarea class="textoTitulo" minlenght="5" maxlength="50" title="Título de la reseña" required placeholder="Velada perfecta en pareja ..."></textarea>
-        <div class="infoInputs">M&aacute;ximo 50 car&aacute;teres</div>
+        <div class="infoInputs1">M&aacute;ximo 50 car&aacute;teres</div>
 
       </div>
 
@@ -66,7 +66,7 @@
       <div class="areaTexto">
 
         <textarea class="textoTituloArea" minlenght="50" maxlength="300" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
-        <div class="infoInputs">M&aacute;ximo 250 car&aacute;teres</div>
+        <div class="infoInputs2">M&aacute;ximo 250 car&aacute;teres</div>
 
       </div>
 

@@ -52,7 +52,21 @@ $(document).ready(function () {
         resultadoValoracion.text("Excelente");
         valoracionTick = 5;
     });
+    
+    
+    $('.textoTitulo').on('input', function() {
+        var maxLength = $(this).attr('maxlength');
+        var currentLength = $(this).val().length;
+        var remainingLength = maxLength - currentLength;
+        $('.infoInputs1').text('Máximo ' + maxLength + ' caracteres (' + remainingLength + ' restantes)');
+    });
 
+    $('.textoTituloArea').on('input', function() {
+        var maxLength = $(this).attr('maxlength');
+        var currentLength = $(this).val().length;
+        var remainingLength = maxLength - currentLength;
+        $('.infoInputs2').text('Máximo ' + maxLength + ' caracteres (' + remainingLength + ' restantes)');
+    });
 
     // estilos para validación usuario
 
