@@ -77,7 +77,7 @@ class Home extends BaseController{
             
             $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
 
-            if($resultado_descifrado){
+            if(!$resultado_descifrado){
                 $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
             }
         }else{
