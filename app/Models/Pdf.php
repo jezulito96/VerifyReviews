@@ -21,7 +21,7 @@ class Pdf {
         </head>
         <body>
             <svg width="100" height="100">
-                <image xlink:href=". $nombreArchivo . " width="100" height="100" />
+                        <image xlink:href="' . $rutaImagen . '" width="100" height="100" />
             </svg>
         </body>
         </html>
