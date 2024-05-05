@@ -465,21 +465,20 @@ class Home extends BaseController{
             
             // se guarda el qr
             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
-            $image_png = base64_decode($imagen_base64);
+            // $image_png = base64_decode($imagen_base64);
             $ruta_png = FCPATH . "otros/codigo_Qr.png";
             //guardar en public / otros/codigo_Qr.svg la imagen svg 
             if ($archivo = fopen($ruta_png, 'w')) {
-                fwrite($archivo, $image_png);
+                fwrite($archivo, $imagen_base64);
                 fclose($archivo);
                 echo "se ha guardado  ";
             } else {
                 echo " error al guardar la imagen SVG.";
             }
 
-            $ruta_html = FCPATH . "otros/plantillaPdf.html";
             // se genera el pdf 
             $pdfGenerator = new Pdf();
-            $pdfGenerator->crearPdf($ruta_html, 'PDF_Qr.pdf');
+            $pdfGenerator->crearPdf($ruta_png, 'PDF_Qr.pdf');
 
         }
 
