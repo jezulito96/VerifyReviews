@@ -500,7 +500,7 @@ class Home extends BaseController{
             $zip = new ZipArchive();
             if ($zip->open($ubicacion_temporal . '/' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
                 foreach ($array_imagenes as $index => $imagen_base64) {
-                    $zip->addFromString("imagen_$index.png", base64_decode($imagen_base64));
+                    $zip->addFromString("imagen_$index.svg", base64_decode($imagen_base64));
                 }
 
                 $zip->close();
