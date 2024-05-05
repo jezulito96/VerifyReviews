@@ -37,6 +37,7 @@ class Pdf {
                 .header {
                     text-align: center;
                     margin-bottom: 20px;
+                    height: 300px;
                 }
                 .logo {
                     float: left;
