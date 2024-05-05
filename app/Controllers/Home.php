@@ -63,14 +63,13 @@ class Home extends BaseController{
         if(!isset($claveCifradaHex) || empty($claveCifradaHex)) {
             header('location:https://www.verifyreviews.es');
         }
-        // Convertir la clave cifrada de hexadecimal a binario
-        $clavePublica = hex2bin($claveCifradaHex);
-
         // busco en DBla clave publica y el vector de inicializacion que correspone a la clave que he recogido
         $baseDatos = new BaseDatos();
         $clave_privada_hex = $baseDatos -> getClavePrivada($claveCifradaHex);
         $vector_inicializacion_hex = $baseDatos -> getVectorInicializacion($claveCifradaHex);
 
+        // Convertir la clave cifrada de hexadecimal a binario
+        $clavePublica = hex2bin($claveCifradaHex);
         $clave_privada = hex2bin($clave_privada_hex);
         $vector_inicializacion = hex2bin($vector_inicializacion_hex);
 
