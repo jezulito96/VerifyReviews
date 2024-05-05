@@ -28,7 +28,7 @@ class Pdf {
             <img src="'. $rutaImagen .'" type="image/png" />
         ';
 
-        $this -> dompdf->setPaper('A4', 'Inandscape');
+        $this -> dompdf->setPaper('A4', 'landscape');
 
         // Cargar el HTML en Dompdf
         $this->dompdf->loadHtml(utf8_decode($html));
