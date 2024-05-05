@@ -68,8 +68,11 @@ class Home extends BaseController{
 
         // busco en DBla clave publica y el vector de inicializacion que correspone a la clave que he recogido
         $baseDatos = new BaseDatos();
-        $clave_privada = $baseDatos -> getClavePrivada($claveCifradaHex);
-        $vector_inicializacion = $baseDatos -> getVectorInicializacion($claveCifradaHex);
+        $clave_privada_hex = $baseDatos -> getClavePrivada($claveCifradaHex);
+        $vector_inicializacion_hex = $baseDatos -> getVectorInicializacion($claveCifradaHex);
+
+        $clave_privada = hex2bin($clave_privada_hex);
+        $vector_inicializacion = hex2bin($vector_inicializacion_hex);
 
         if($clave_privada != false && $vector_inicializacion != false){
             
