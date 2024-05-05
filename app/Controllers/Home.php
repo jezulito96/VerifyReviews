@@ -58,6 +58,11 @@ class Home extends BaseController{
     public function resena(): string {
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
+
+        // si no va con clave redirecciona a inicio
+        if(!isset($claveCifradaHex) || empty($claveCifradaHex)) {
+            redirect() -> to('https://www.verifyreviews.es');
+        }
         // Convertir la clave cifrada de hexadecimal a binario
         $clavePublica = hex2bin($claveCifradaHex);
 
@@ -514,7 +519,6 @@ class Home extends BaseController{
                 // Mensaje de error si no se puede crear el archivo ZIP
                 echo "No se pudo crear el archivo ZIP.";
             }
-
 
         }
 
