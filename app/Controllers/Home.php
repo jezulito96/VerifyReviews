@@ -479,7 +479,7 @@ class Home extends BaseController{
 
             // se genera el pdf 
             $pdfGenerator = new Pdf();
-            $pdfGenerator->crearPdf($ruta_svg, 'PDF_Qr.pdf');
+            $pdfGenerator->crearPdf($ruta_png, 'PDF_Qr.pdf');
 
         }
 
