@@ -1,6 +1,7 @@
 <?php
-
+namespace App\Models;
 use Dompdf\Dompdf;
+require FCPATH . '../vendor/autoload.php';
 
 class Pdf {
     private $dompdf;
