@@ -61,7 +61,7 @@ class Home extends BaseController{
 
         // si no va con clave redirecciona a inicio
         if(!isset($claveCifradaHex) || empty($claveCifradaHex)) {
-            return redirect() -> to('https://www.verifyreviews.es');
+            redirect('https://www.verifyreviews.es');
         }
         // Convertir la clave cifrada de hexadecimal a binario
         $clavePublica = hex2bin($claveCifradaHex);
