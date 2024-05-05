@@ -43,12 +43,6 @@
             <input type="email" name="emailQr" class="emailQr" />
         </div>
 
-        <div name="opcionesDescargaContainer" id="opcionesDescargaContainer" class="invisible">
-            <label>Selecciona una opcion</label>
-            <input type="button" value="Enviar al email" />
-            <input type="button" value="Descargar en zip" />
-        </div>
-
         <div id="numeroQrContainer" class="invisible">
             <label>¿Cuántos códigos quieres generar?</label>
             <select name="numeroQr" id="numeroQr">
@@ -86,13 +80,11 @@
             $("#containerEmailQr").removeClass("visible");
             $("#estiloQrContainer").removeClass("visible");
             $("#previsualizacionQr").removeClass("visible");
-            $("#opcionesDescargaContainer").removeClass("visible");
             $("#numeroQrContainer").removeClass("visible");
 
             $("#containerEmailQr").removeClass("invisible");
             $("#estiloQrContainer").removeClass("invisible");
             $("#previsualizacionQr").removeClass("invisible");
-            $("#opcionesDescargaContainer").removeClass("invisible");
             $("#numeroQrContainer").removeClass("invisible");
         }
         
@@ -106,25 +98,21 @@
                 $("#previsualizacionQr").addClass("visible");
                 $("#estiloQrContainer").addClass("visible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#opcionesDescargaContainer").addClass("invisible");
                 $("#numeroQrContainer").removeClass("invisible");
             }else if(val == 2){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("visible");
-                $("#opcionesDescargaContainer").addClass("invisible");
                 $("#numeroQrContainer").removeClass("invisible");
             }else if(val == 3){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#opcionesDescargaContainer").addClass("invisible");
                 $("#numeroQrContainer").removeClass("invisible");
             }else if(val == 4){
                 $("#previsualizacionQr").addClass("invisible");
                 $("#estiloQrContainer").addClass("invisible");
                 $("#containerEmailQr").addClass("invisible");
-                $("#opcionesDescargaContainer").addClass("visible");
                 $("#numeroQrContainer").removeClass("visible");
             }
             
