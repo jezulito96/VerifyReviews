@@ -493,26 +493,23 @@ class Home extends BaseController{
                 array_push($array_imagenes, $imagen_base64);
              }
              
-            // Nombre del archivo ZIP
             $nombre_zip = 'imagenes_QR.zip';
 
-            $archivo_temporal = $_FILES['temporal'];
+            $ubicacion_temporal = $_FILES['temporal']; 
 
-            // Crear un nuevo archivo ZIP en memoria
             $zip = new ZipArchive();
-            if ($zip->open( $archivo_temporal . "/" . $nombre_zip, ZipArchive::CREATE) === TRUE) {
-                // Iterar sobre las imágenes en base64 y agregarlas al archivo ZIP
+            if ($zip->open($ubicacion_temporal . '/' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
                 foreach ($array_imagenes as $index => $imagen_base64) {
                     $zip->addFromString("imagen_$index.png", base64_decode($imagen_base64));
                 }
 
-                // Cerrar el archivo ZIP
                 $zip->close();
 
-                // Enviar el archivo ZIP al navegador para descargar
                 header('Content-Type: application/zip');
                 header('Content-Disposition: attachment; filename="' . $nombre_zip . '"');
-                readfile('data://' . $nombre_zip);
+                readfile($ubicacion_temporal . '/' . $nombre_zip);
+
+                unlink($ubicacion_temporal . '/' . $nombre_zip);
             } else {
                 // Mensaje de error si no se puede crear el archivo ZIP
                 echo "No se pudo crear el archivo ZIP.";
