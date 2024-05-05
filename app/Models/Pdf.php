@@ -33,7 +33,15 @@ class Pdf {
         $this->dompdf->render();
 
         // Guardar el PDF en un archivo
-        $this->dompdf->stream($nombreArchivo, array('Attachment' => true));
+        // $this->dompdf->stream($nombreArchivo, array('Attachment' => true));
+
+                // Obtener el contenido del PDF como una cadena
+                $output = $this->dompdf->output();
+
+                // Enviar el PDF como una descarga al navegador
+                header('Content-Type: application/pdf');
+                header('Content-Disposition: attachment;filename="' . $nombreArchivo . '"');
+                echo $output;
     }
 }
 
