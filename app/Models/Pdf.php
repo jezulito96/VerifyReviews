@@ -25,7 +25,7 @@ class Pdf {
         $html = '
             <h1>Factura-3478</h1>
             <h3>Danos tu opini&oacute;n</h3>
-            <img src="'. $rutaImagen .'" type="image/png" />
+            <img src="data:image/png;base64,' . $rutaImagen . '" />
         ';
 
         $this -> dompdf->setPaper('A4', 'portrait');
