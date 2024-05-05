@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use Pdf;
+use App\Models\Pdf;
 use Exception;
 use App\Models\Qr;
 use App\Models\Mapa;
