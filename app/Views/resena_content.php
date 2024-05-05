@@ -1,3 +1,47 @@
+<?php
+  if(isset($error)){
+    echo $error;
+  }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
+?>
+
+  <div class="containerformLogin">
+    <form action="setLogin" method="post" class="formLogin">
+      <input type="hidden" name="key" value="<?php echo $key;?>">
+      
+      <input type="email" name="email" id="email" placeholder="Email" required>
+      <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+      
+
+      <input type="text" name="nickname" id="nickname" class="invisible" required />
+
+      <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
+      <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
+      
+      <input type="submit" name="loginResenaNick"  id="loginResenaNick" value="Aceptar" class="invisible">
+    </form>
+  </div>
+  <script>
+      $(document).ready(function(){
+
+        var opcion2 = $("#opcion2");
+
+        opcion2.click(function(){
+          console.log("entra opcion 2");
+          $("#email").addClass("invisible");
+          $("#contrasena").addClass("invisible");
+
+          $("#opcion2").addClass("invisible");
+          $("#loginResenaNick").removeClass("invisible");
+        });
+
+      });
+  </script>
+
+<?php
+
+  }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
+    echo $usu;
+?>
 <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
 <div class="resenaContainer" id="resenaContainer">
@@ -105,9 +149,14 @@
     </div>
   </div>
 </div>
+<?php
 
+  }
+
+?>
 <!-- script para pintar los ticks verdes de una nueva reseña -->
 <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
+
 
 
 

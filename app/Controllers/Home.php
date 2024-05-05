@@ -77,8 +77,44 @@ class Home extends BaseController{
             
             $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
 
-            if(!$resultado_descifrado){
+            if($resultado_descifrado == true && isset($_POST['nickname']) && $_POST['nickname'] != "" && !empty($_POST['nickname']) ){
+                $maleta_resenaContent['completar_formulario_resena'] = true;
+                $maleta_resenaContent['usu'] = 2;
+
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
+            }elseif($resultado_descifrado == true && isset($_POST['usuario']) && $_POST['usuario'] == true){
+                $maleta_resenaContent['completar_formulario_resena'] = true;
+                $maleta_resenaContent['usu'] = 1;
+
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
+            }
+
+            if($resultado_descifrado == true){
+                $maleta_resenaContent['inicio_sesion_container'] = true;
+                $maleta_resenaContent['key'] = $clavePublica;
+
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
+
+            }else{
                 $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
+
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
             }
         }else{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
@@ -87,28 +123,20 @@ class Home extends BaseController{
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        if(isset($maleta_resenaContent)){
-            $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-        }else{
-            $maleta['resena_content'] = view('resena_content');
-        }
-        
+        $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
         return view('index', $maleta);
     }
 
-    public function setResena(): string{
-        
-        
+    // public function setResena(): string{
 
 
-        $maleta_index['resena_completada'] = "La nueva resena se realizó correctamente";
 
-        //vistas
-        $maleta['head_content'] = view('head_content');
-        $maleta['header_content'] = view('header_content'); 
-        $maleta['index_content'] = view('index_content', $maleta_index); 
-        return view('index', $maleta);
-    }
+    //     //vistas
+    //     $maleta['head_content'] = view('head_content');
+    //     $maleta['header_content'] = view('header_content'); 
+    //     $maleta['index_content'] = view('index_content', $maleta_index); 
+    //     return view('index', $maleta);
+    // }
 
     public function nuevoNegocio(): string {
         $master = Master::obtenerInstancia();
@@ -370,16 +398,15 @@ class Home extends BaseController{
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
+
         $resultadoEmail = false;
         $coincideContrasena = false;
-
-        /**
-         * @param string $name
-         */
+        $sesion_iniciada = false;
+      
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
         
 
-        if($resultadoEmail == 1 || $resultadoEmail == 2){
+        if($resultadoEmail == 1 || $resultadoEmail == 2 ){
             // el email coincide 
 
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
@@ -390,7 +417,7 @@ class Home extends BaseController{
                 //meto el objeto del usuario en sesion 
                 $usuario = $baseDatos -> getUsuario($emailUsuario);
                 session() -> set("usuario_en_sesion",$usuario);
-
+                $sesion_iniciada = true;
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
                 
@@ -404,6 +431,19 @@ class Home extends BaseController{
             // se devulve a la vista login con un error
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
         }
+        
+        if(isset($_POST['loginResenaSesion']) && $sesion_iniciada == true){
+            $key = $this -> request -> getPost("key");
+            return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&usuario=true");
+        }
+
+        if(isset($_POST['loginResenaNick']) && $sesion_iniciada == false){
+            $key = $this -> request -> getPost("key");
+            $nickname = $this -> request -> getPost("nickname");
+            return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&nickname=" . $nickname);
+        }
+
+
 
         //vistas
         $maleta['head_content'] = view('head_content');
