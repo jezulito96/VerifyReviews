@@ -37,25 +37,26 @@ class Pdf {
                 .header {
                     text-align: center;
                     margin-bottom: 20px;
-                    height: 300px;
+                    height: 250px;
                 }
                 .logo {
                     float: left;
                     margin-right: 20px;
+                    margin-top:10px;
                 }
                 .qr {
                     float: right;
                 }
-                .invoice {
+                .tabla {
                     border-collapse: collapse;
                     width: 100%;
                 }
-                .invoice th, .invoice td {
+                .tabla th, .tabla td {
                     border: 1px solid #dddddd;
                     text-align: left;
                     padding: 8px;
                 }
-                .invoice th {
+                .tabla th {
                     background-color: #f2f2f2;
                 }
                 .total {
@@ -66,14 +67,14 @@ class Pdf {
         </head>
         <body>
             <div class="container">
-                <h1>Factura de Alimentación a Domicilio</h1>
+                <h1>Factura de Ready Eats</h1>
                 <div class="header">
                     <img width="150px" height="150px" src="data:image/png;base64,' . $imagen_logo_base64  . '" class="logo" />
                     <img width="200px" height="200px" src="data:image/png;base64,' . $imagen_base64 . '" class="qr" />
                 </div>
                 <p>Fecha: ' . date('d/m/Y') . '</p>
                 <p>Número de Factura: 123456789</p>
-                <table class="invoice">
+                <table class="tabla">
                     <thead>
                         <tr>
                             <th>Producto</th>
