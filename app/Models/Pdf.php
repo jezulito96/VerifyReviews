@@ -20,9 +20,8 @@ class Pdf {
             <title>PDF con imagen</title>
         </head>
         <body>
-            <svg width="100" height="100">
-                        <image xlink:href="' . $rutaImagen . '" width="100" height="100" />
-            </svg>
+            <img src="' . $rutaImagen . '" alt="Imagen">
+            
         </body>
         </html>
         ';

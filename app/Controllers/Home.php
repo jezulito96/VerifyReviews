@@ -459,28 +459,27 @@ class Home extends BaseController{
                 $maleta_generarResenas['resultadoEmail'] = "Email enviado correctamente";
             }
         }elseif($accion == 3){
-            // se genera el qr
-            $qr = new Qr();
-            $qr -> setColor($color);
-            $imagen_qr = $qr -> crear($accion);
-            $ruta_svg = FCPATH . "otros/codigo_Qr.svg";
-
-            // se guarda el qr
-            // $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
-            // $image_png = base64_decode($imagen_base64);
-            // $ruta_png = FCPATH . "otros/codigo_Qr.svg";
-            //guardar en public / otros/codigo_Qr.svg la imagen svg 
-            if ($archivo = fopen($ruta_svg, 'w')) {
-                fwrite($archivo, $imagen_qr);
-                fclose($archivo);
-                echo "se ha guardado ";
-            } else {
-                echo " error al guardar la imagen SVG.";
-            }
+             // se genera el qr
+             $qr = new Qr();
+             $qr -> setColor($color);
+             $imagen_qr = $qr -> crear($accion);
+             
+             // se guarda el qr
+             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
+             $image_png = base64_decode($imagen_base64);
+             $ruta_png = FCPATH . "otros/codigo_Qr.png";
+             //guardar en public / otros/codigo_Qr.svg la imagen svg 
+             if ($archivo = fopen($ruta_png, 'w')) {
+                 fwrite($archivo, $image_png);
+                 fclose($archivo);
+                 echo "se ha guardado  ";
+             } else {
+                 echo " error al guardar la imagen SVG.";
+             }
 
             // se genera el pdf 
             $pdfGenerator = new Pdf();
-            $pdfGenerator->crearPdf($ruta_svg, 'factura.pdf');
+            $pdfGenerator->crearPdf($ruta_svg, 'PDF_Qr.pdf');
 
         }
 
