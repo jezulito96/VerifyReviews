@@ -13,7 +13,7 @@ class Pdf {
 
     public function crearPdf($imagen_base64, $nombreArchivo) {
         $imagen_logo = FCPATH . "otros/negocioComida.png";
-        $imagen_logo_base64 = base64_decode($imagen_logo);
+        $imagen_logo_base64 = substr($imagen_logo, strpos($imagen_logo, ',') + 1);
 
         // $html = '
         //     <h1>Factura-3478</h1>
