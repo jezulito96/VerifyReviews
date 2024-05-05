@@ -1,22 +1,23 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\BaseDatos;
-use App\Models\Master;
-use App\Models\Emailmailer;
-use App\Models\Qr;
-use App\Models\Categoria;
-use App\Models\Negocio;
-use App\Models\Mapa;
-use App\Models\Resena;
-use App\Models\Usuario;
-use App\Models\UsuarioRegistrado;
-use App\Models\UsuarioSinRegistrar;
-use chillerlan\QRCode\QRCode;
-use chillerlan\QRCode\Output\QRImage;
-use App\Controllers\BaseController;
-use CodeIgniter\Images\Handlers\ImageMagickHandler;
+use Pdf;
 use Exception;
+use App\Models\Qr;
+use App\Models\Mapa;
+use App\Models\Master;
+use App\Models\Resena;
+use App\Models\Negocio;
+use App\Models\Usuario;
+use App\Models\BaseDatos;
+use App\Models\Categoria;
+use App\Models\Emailmailer;
+use chillerlan\QRCode\QRCode;
+use App\Models\UsuarioRegistrado;
+use App\Controllers\BaseController;
+use App\Models\UsuarioSinRegistrar;
+use chillerlan\QRCode\Output\QRImage;
+use CodeIgniter\Images\Handlers\ImageMagickHandler;
 
 
 
@@ -422,16 +423,15 @@ class Home extends BaseController{
             $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
 
         }elseif($accion == 2){
+            // se genera el qr
             $qr = new Qr();
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
             
+            // se guarda el qr
             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
-            // Decodificar el contenido base64 en datos binarios
             $image_png = base64_decode($imagen_base64);
-            // Especificar la ruta donde deseas guardar el archivo PNG
             $ruta_png = FCPATH . "otros/codigo_Qr.png";
-
             //guardar en public / otros/codigo_Qr.svg la imagen svg 
             if ($archivo = fopen($ruta_png, 'w')) {
                 fwrite($archivo, $image_png);
@@ -451,14 +451,38 @@ class Home extends BaseController{
             // $imagen->clear();
             // $imagen->destroy(); 
 
-
+            // se genera el email con el qr
             $mail = new Emailmailer();
-
             $resultado_email = $mail -> enviarImagen($email,$ruta_png);
 
             if($resultado_email){
                 $maleta_generarResenas['resultadoEmail'] = "Email enviado correctamente";
             }
+        }elseif($accion == 3){
+            // se genera el qr
+            $qr = new Qr();
+            $qr -> setColor($color);
+            $imagen_qr = $qr -> crear($accion);
+            $ruta_svg = FCPATH . "otros/codigo_Qr.svg";
+
+            // se guarda el qr
+            // $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
+            // $image_png = base64_decode($imagen_base64);
+            // $ruta_png = FCPATH . "otros/codigo_Qr.svg";
+            //guardar en public / otros/codigo_Qr.svg la imagen svg 
+            if ($archivo = fopen($ruta_svg, 'w')) {
+                fwrite($archivo, $imagen_qr);
+                fclose($archivo);
+                echo "se ha guardado ";
+            } else {
+                echo " error al guardar la imagen SVG.";
+            }
+
+            // se genera el pdf 
+            $pdfGenerator = new Pdf();
+            $pdfGenerator->crearPdf($ruta_svg, 'factura.pdf');
+
+            var_dump($pdfGenerator);
         }
 
 
