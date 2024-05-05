@@ -11,13 +11,13 @@
       <input type="email" name="email" id="email" placeholder="Email" required>
       <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
       
-      <div id="containerNickname" class="invisible" >
+      <!-- <div id="containerNickname" class="invisible" >
         <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
         <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Aceptar" >
-      </div>
+      </div> -->
 
       <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
-      <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
+      <!-- <input type="button" id="opcion2" value="Continuar sin iniciar sesión"> -->
       
       
     </form>
