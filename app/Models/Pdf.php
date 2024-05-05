@@ -20,7 +20,7 @@ class Pdf {
             <title>PDF con imagen</title>
         </head>
         <body>
-            <img src="' . $rutaImagen . '" alt="Imagen">
+            <img type="image/png" src="' . $rutaImagen . '" alt="C&oacute;digo Qr">
             
         </body>
         </html>
