@@ -13,10 +13,10 @@
       
       <div id="containerNickname" class="invisible" >
         <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-        <input type="button" name="loginResenaNick" id="loginResenaNick" value="Aceptar" >
+        <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Aceptar" >
       </div>
 
-      <input type="button" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
+      <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
       <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
       
       
