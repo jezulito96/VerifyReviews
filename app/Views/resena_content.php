@@ -6,7 +6,7 @@
 
   <div class="containerformLogin">
     <form action="setLogin" method="post" class="formLogin">
-      <input type="hidden" name="key" value="<?php echo $key;?>">
+      <!-- <input type="hidden" name="key" value="<?php //echo $key;?>"> -->
       
       <input type="email" name="email" id="email" placeholder="Email" required>
       <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
@@ -36,7 +36,6 @@
           $("#loginResenaSesion").addClass("invisible");
 
           $("#containerNickname").removeClass("invisible");
-          
         });
 
       });
