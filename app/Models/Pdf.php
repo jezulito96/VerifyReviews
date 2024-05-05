@@ -71,7 +71,6 @@ class Pdf {
                     <p>Fecha: ' . date('d/m/Y') . '</p>
                     <p>Número de Factura: 123456789</p>
                     <img width="200px" height="200px" src="data:image/png;base64,' . $imagen_base64 . '" class="qr" />
-                    <img src="ruta/al/codigo_qr.png" alt="Código QR" class="qr">
                 </div>
                 <table class="invoice">
                     <thead>
