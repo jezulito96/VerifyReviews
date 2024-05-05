@@ -37,12 +37,12 @@ class Pdf {
                 .header {
                     text-align: center;
                     margin-bottom: 20px;
-                    height: 250px;
+                    height: 200px;
                 }
                 .logo {
                     float: left;
                     margin-right: 20px;
-                    margin-top:10px;
+                    margin-top:20px;
                 }
                 .qr {
                     float: right;
