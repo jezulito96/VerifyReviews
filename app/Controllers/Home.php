@@ -465,7 +465,7 @@ class Home extends BaseController{
             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
 
             // leo la imagen logoComida para pasarla a base 64
-            $ruta_imagen = 'ruta/a/la/imagen.png';
+            $ruta_imagen = FCPATH . "otros/negocioComida.png";
             $archivo = fopen($ruta_imagen, 'r');
             $imagen_contenido = '';
             while (!feof($archivo)) {
