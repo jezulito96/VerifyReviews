@@ -476,9 +476,10 @@ class Home extends BaseController{
                 echo " error al guardar la imagen SVG.";
             }
 
+            $ruta_html = FCPATH . "otros/plantillaPdf.html";
             // se genera el pdf 
             $pdfGenerator = new Pdf();
-            $pdfGenerator->crearPdf($ruta_png, 'PDF_Qr.pdf');
+            $pdfGenerator->crearPdf($ruta_html, 'PDF_Qr.pdf');
 
         }
 

@@ -11,7 +11,7 @@ class Pdf {
         $this->dompdf = new Dompdf();
     }
 
-    public function crearPdf($rutaImagen, $nombreArchivo) {
+    public function crearPdf($rutaHtml, $nombreArchivo) {
         // HTML para el contenido del PDF con la imagen
         // $html = '
         // <head>
@@ -22,11 +22,16 @@ class Pdf {
         // </body>
         // ';
 
-        $html = '
-            <h1>Factura-3478</h1>
-            <h3>Danos tu opini&oacute;n</h3>
-            <img src="'. $rutaImagen .'" type="image/png" />
-        ';
+        // $html = '
+        //     <h1>Factura-3478</h1>
+        //     <h3>Danos tu opini&oacute;n</h3>
+        //     <img src="'. $rutaImagen .'" type="image/png" />
+        // ';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $rutaHtml);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $html = curl_exec($ch);
+        curl_close($ch);
 
         $this -> dompdf->setPaper('A4', 'portrait');
 
@@ -41,5 +46,6 @@ class Pdf {
         $this->dompdf->stream($nombreArchivo, array('Attachment' => true));
 
     }
+
 }
 
