@@ -32,7 +32,7 @@ class Pdf {
         $this->dompdf->render();
 
         // Guardar el PDF en un archivo
-        return $this -> dompdf;
+        $this->dompdf->stream($nombreArchivo, array('Attachment' => true));
     }
 }
 

@@ -482,7 +482,6 @@ class Home extends BaseController{
             $pdfGenerator = new Pdf();
             $pdfGenerator->crearPdf($ruta_svg, 'factura.pdf');
 
-            var_dump($pdfGenerator);
         }
 
 
