@@ -56,7 +56,9 @@ class Home extends BaseController{
     }
 
     public function resena(): string {
-
+        // recibo el codigo de  negocio al que va la resena 
+        $cod_negocio = $this -> request -> getPost("");
+        
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
@@ -102,7 +104,7 @@ class Home extends BaseController{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
         }
 
-
+        
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
@@ -383,10 +385,10 @@ class Home extends BaseController{
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
             
-            // if(!isset($_POST['qr_key'])){
-            //     // si meten directamente "https://verifyreviews.es/verifyreviews/setLogin" redirecciona a vista Login
-            //     // return redirect() -> to("https://verifyReviews.es");
-            // }
+            if(!isset($_POST['qr_key'])){
+                // si no se recibe clave redirecciona a index
+                return redirect() -> to("https://verifyReviews.es");
+            }
 
             if($_POST['es_sesion_resena'] == "sesion"){
                 echo "entra 1<br>";

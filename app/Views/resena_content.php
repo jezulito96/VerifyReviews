@@ -82,6 +82,8 @@
 <?php
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
+    if(isset($wr_key))echo "llega clave";
+    else echo "NO llega clave";
 ?>
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
