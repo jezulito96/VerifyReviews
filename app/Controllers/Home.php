@@ -456,7 +456,7 @@ class Home extends BaseController{
            session() -> set("sesionIniciada", $resultadoEmail);
            
            //meto el objeto del usuario en sesion 
-           $usuario_en_sesion = $baseDatos -> getUsuario_en_sesion($emailUsuario);
+           $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
            session() -> set("usuario_en_sesion",$usuario_en_sesion);
            session() -> set("sesion_iniciada",true);
         }
