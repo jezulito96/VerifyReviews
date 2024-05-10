@@ -86,7 +86,7 @@
     if(isset($qr_key))echo "sii hay clave";
     else echo "no hay clavee";
     echo "<pre>";
-    print_r($negocio);
+    // print_r($negocio);
     echo "</pre>";
 
 ?>
