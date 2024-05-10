@@ -59,6 +59,8 @@ class Home extends BaseController{
         // compruebo si el usuario tiene iniciada la sesion 
         if(session() -> get("sesion_iniciada") == true){
             echo "ya ha iniciado la sesion";
+        }else{
+            echo "aun no se ha iniciado la sesion";
         }
 
         // recojo la clave publica en hexadecimal
