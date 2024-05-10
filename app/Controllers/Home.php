@@ -56,6 +56,11 @@ class Home extends BaseController{
     }
 
     public function setResena(): string {
+        // compruebo si el usuario tiene iniciada la sesion 
+        if(session() -> get("sesion_iniciada") == true){
+            echo "ya ha iniciado la sesion";
+        }
+
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
