@@ -136,9 +136,8 @@ class BaseDatos extends Model
 
             return $consulta -> getResultArray() ;
         }else{
-            $orden = "SELECT email FROM usuario_registrado WHERE email=?";
+            $orden = "SELECT * FROM usuario_registrado WHERE email=?";
             $consulta = $this -> db -> query($orden, $parametros);
-            $numeroFilas = $consulta -> getNumRows();
 
             // email coincide con usuario
             return $consulta -> getResultArray();
