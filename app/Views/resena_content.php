@@ -26,8 +26,6 @@
     <div id="containerNickname" class="invisible">
       <!-- <form action="setLogin" method="post"> -->
 
-          <!-- <input type="hidden" name="es_sesion_resena" value="nickname">
-          <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>"> -->
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
@@ -50,15 +48,25 @@
         
         opcion2.click(function(){
 
-          containerNickname.removeClass("invisible");
-          containerSesion.addClass("invisible");
+          containerNickname.toggleClass("invisible");
+          containerSesion.toggleClass("invisible");
+          // containerNickname.removeClass("invisible");
+          // containerNickname.addClass("visible");
+          // containerSesion.addClass("invisible");
+          // containerSesion.removeClass("invisible");
 
         });
 
         opcion1.click(function(){
 
-          containerSesion.removeClass("invisible");
-          containerNickname.addClass("invisible");
+          // containerNickname.removeClass("visible");
+          // containerNickname.addClass("invisible");
+
+          // containerSesion.addClass("invisible");
+          // containerSesion.removeClass("invisible");
+
+          containerNickname.toggleClass("invisible");
+          containerSesion.toggleClass("invisible");
 
         });
       });

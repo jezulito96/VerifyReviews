@@ -12,7 +12,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/resena', 'Home::resena');
 
 // pagina de escribir una reseña --> resena.php
-$routes->get('/setResena', 'Home::setResena');
+$routes->post('/setResena', 'Home::setResena');
 
 //pagina para añadir un nuevo negocio  
 $routes->get('/nuevoNegocio', 'Home::nuevoNegocio');
