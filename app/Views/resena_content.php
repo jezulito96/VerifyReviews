@@ -5,11 +5,11 @@
     echo "resena enviadaaaaaaaaa";
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
-<form action="setLogin" method="post" id="formSetResena">
+<!-- <form action="setLogin" method="post" id="formSetResena"> -->
   <div class="containerResenaLogin">
 
     <div id="containerSesion">
-      <!-- <form action="setLogin" method="post"> -->
+      <form action="setLogin" method="post">
 
         <input type="hidden" name="es_sesion_resena" value="sesion">
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
@@ -20,22 +20,24 @@
         <input type="submit" name="submit_sesion" id="submit_sesion" value="Iniciar sesión" >
         <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
 
-      <!-- </form> -->
+      </form>
     </div>  
 
     <div id="containerNickname" class="invisible">
-      <!-- <form action="setLogin" method="post"> -->
+      <form action="setLogin" method="post">
 
+        <input type="hidden" name="es_sesion_resena" value="sesion">
+        <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
 
-          <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-          <input type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
-          <input type="button" id="opcion1" value="Iniciar sesion">
-      
-      <!-- </form> -->
+        <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+        <input type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
+        <input type="button" id="opcion1" value="Iniciar sesion">
+    
+      </form>
     </div>
     
   </div>
-</form>
+<!-- </form> -->
 
   <script>
       $(document).ready(function(){
@@ -50,13 +52,6 @@
         var submit_nickname = $("#submit_nickname");
 
         var formulario = $("#formSetResena");
-
-        submitSesion.click(function(){
-          formSetResena.submit();
-        });
-        submit_nickname.click(function(){
-          formSetResena.submit();
-        });
 
         opcion2.click(function(){
 
