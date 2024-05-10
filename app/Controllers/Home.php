@@ -497,104 +497,104 @@ class Home extends BaseController{
         var_dump($usuario_en_sesion);
 
 
-        // if($accion == 1){
-        //     $qr = new Qr($usuario_en_sesion['cod_negocio']);
-        //     $qr -> setColor($color);
-        //     $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
+        if($accion == 1){
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
+            $qr -> setColor($color);
+            $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
 
-        // }elseif($accion == 2){
-        //     // se genera el qr
-        //     $qr = new Qr($usuario_en_sesion['cod_negocio']);
-        //     $qr -> setColor($color);
-        //     $imagen_qr = $qr -> crear($accion);
+        }elseif($accion == 2){
+            // se genera el qr
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
+            $qr -> setColor($color);
+            $imagen_qr = $qr -> crear($accion);
             
-        //     // se guarda el qr
-        //     $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
-        //     $image_png = base64_decode($imagen_base64);
-        //     $ruta_png = FCPATH . "otros/codigo_Qr.png";
-        //     //guardar en public / otros/codigo_Qr.svg la imagen svg 
-        //     if ($archivo = fopen($ruta_png, 'w')) {
-        //         fwrite($archivo, $image_png);
-        //         fclose($archivo);
-        //         echo "se ha guardado  ";
-        //     } else {
-        //         echo " error al guardar la imagen SVG.";
-        //     }
+            // se guarda el qr
+            $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
+            $image_png = base64_decode($imagen_base64);
+            $ruta_png = FCPATH . "otros/codigo_Qr.png";
+            //guardar en public / otros/codigo_Qr.svg la imagen svg 
+            if ($archivo = fopen($ruta_png, 'w')) {
+                fwrite($archivo, $image_png);
+                fclose($archivo);
+                echo "se ha guardado  ";
+            } else {
+                echo " error al guardar la imagen SVG.";
+            }
             
-        //     // cambio de svg a 
-        //     // $imagen = new \Imagick();
-        //     // $imagen -> readImageBlob($imagen_qr);
-        //     // $imagen->setImageResolution(600,600);
-        //     // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
-        //     // $imagen->setImageFormat('png');
-        //     // $imagen->writeImage($ruta_png);
-        //     // $imagen->clear();
-        //     // $imagen->destroy(); 
+            // cambio de svg a 
+            // $imagen = new \Imagick();
+            // $imagen -> readImageBlob($imagen_qr);
+            // $imagen->setImageResolution(600,600);
+            // $imagen->resizeImage(200, 200, \Imagick::ALIGN_UNDEFINED, 1);
+            // $imagen->setImageFormat('png');
+            // $imagen->writeImage($ruta_png);
+            // $imagen->clear();
+            // $imagen->destroy(); 
 
-        //     // se genera el email con el qr
-        //     $mail = new Emailmailer();
-        //     $resultado_email = $mail -> enviarImagen($email,$ruta_png);
+            // se genera el email con el qr
+            $mail = new Emailmailer();
+            $resultado_email = $mail -> enviarImagen($email,$ruta_png);
 
-        //     if($resultado_email){
-        //         $maleta_generarResenas['resultadoEmail'] = "Email enviado correctamente";
-        //     }
-        // }elseif($accion == 3){
-        //     // se genera el qr
-        //     $qr = new Qr($usuario_en_sesion['cod_negocio']);
-        //     $imagen_qr = $qr -> crear(2);
-        //     $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
+            if($resultado_email){
+                $maleta_generarResenas['resultadoEmail'] = "Email enviado correctamente";
+            }
+        }elseif($accion == 3){
+            // se genera el qr
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
+            $imagen_qr = $qr -> crear(2);
+            $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
 
-        //     // leo la imagen logoComida para pasarla a base 64
-        //     $ruta_imagen = FCPATH . "otros/negocioComida.png";
-        //     $archivo = fopen($ruta_imagen, 'r');
-        //     $imagen_contenido = '';
-        //     while (!feof($archivo)) {
-        //         $imagen_contenido .= fread($archivo, 8192);
-        //     }
-        //     fclose($archivo);
-        //     $imagen_logo_base64 = base64_encode($imagen_contenido);
+            // leo la imagen logoComida para pasarla a base 64
+            $ruta_imagen = FCPATH . "otros/negocioComida.png";
+            $archivo = fopen($ruta_imagen, 'r');
+            $imagen_contenido = '';
+            while (!feof($archivo)) {
+                $imagen_contenido .= fread($archivo, 8192);
+            }
+            fclose($archivo);
+            $imagen_logo_base64 = base64_encode($imagen_contenido);
 
 
-        //     // se genera el pdf 
-        //     $pdfGenerator = new Pdf();
-        //     $pdfGenerator->crearPdf($imagen_base64, $imagen_logo_base64, 'PDF_Qr.pdf');
+            // se genera el pdf 
+            $pdfGenerator = new Pdf();
+            $pdfGenerator->crearPdf($imagen_base64, $imagen_logo_base64, 'PDF_Qr.pdf');
 
-        // }elseif($accion == 4) {
-        //     $array_imagenes = array();
+        }elseif($accion == 4) {
+            $array_imagenes = array();
 
-        //      for($i = 0; $i < $numero; $i++){
-        //         // se genera el qr
-        //         $qr = new Qr($usuario_en_sesion['cod_negocio']);
-        //         $qr -> setColor($color);
-        //         $imagen_qr = $qr -> crear(1);
+             for($i = 0; $i < $numero; $i++){
+                // se genera el qr
+                $qr = new Qr($usuario_en_sesion['cod_negocio']);
+                $qr -> setColor($color);
+                $imagen_qr = $qr -> crear(1);
 
-        //         $imagen_base64 = base64_encode($imagen_qr);
-        //         array_push($array_imagenes, $imagen_base64);
-        //      }
+                $imagen_base64 = base64_encode($imagen_qr);
+                array_push($array_imagenes, $imagen_base64);
+             }
              
-        //     $nombre_zip = 'imagenes_QR.zip';
+            $nombre_zip = 'imagenes_QR.zip';
 
-        //     $ubicacion_temporal = FCPATH . "otros/"; 
+            $ubicacion_temporal = FCPATH . "otros/"; 
 
-        //     $zip = new ZipArchive();
-        //     if ($zip->open($ubicacion_temporal . '/' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
-        //         foreach ($array_imagenes as $index => $imagen_base64) {
-        //             $zip->addFromString("imagen_$index.svg", base64_decode($imagen_base64));
-        //         }
+            $zip = new ZipArchive();
+            if ($zip->open($ubicacion_temporal . '/' . $nombre_zip, ZipArchive::CREATE) === TRUE) {
+                foreach ($array_imagenes as $index => $imagen_base64) {
+                    $zip->addFromString("imagen_$index.svg", base64_decode($imagen_base64));
+                }
 
-        //         $zip->close();
+                $zip->close();
 
-        //         header('Content-Type: application/zip');
-        //         header('Content-Disposition: attachment; filename="' . $nombre_zip . '"');
-        //         readfile($ubicacion_temporal . '/' . $nombre_zip);
+                header('Content-Type: application/zip');
+                header('Content-Disposition: attachment; filename="' . $nombre_zip . '"');
+                readfile($ubicacion_temporal . '/' . $nombre_zip);
 
-        //         unlink($ubicacion_temporal . '/' . $nombre_zip);
-        //     } else {
-        //         // Mensaje de error si no se puede crear el archivo ZIP
-        //         echo "No se pudo crear el archivo ZIP.";
-        //     }
+                unlink($ubicacion_temporal . '/' . $nombre_zip);
+            } else {
+                // Mensaje de error si no se puede crear el archivo ZIP
+                echo "No se pudo crear el archivo ZIP.";
+            }
 
-        // }
+        }
 
         // vistas
         $maleta['head_content'] = view('head_content');
