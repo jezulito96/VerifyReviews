@@ -383,7 +383,7 @@ class Home extends BaseController{
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
             if(!isset($_POST['qr_key'])){
-                return redirect() -> to("https://verifyReviews.es");
+                // return redirect() -> to("https://verifyReviews.es");
             }
 
             if($_POST['es_sesion_resena'] == "sesion"){
@@ -435,16 +435,16 @@ class Home extends BaseController{
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
         }
         
-        if(isset($_POST['loginResenaSesion']) && $sesion_iniciada == true){
-            $key = $this -> request -> getPost("key");
-            return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&usuario=true");
-        }
+        // if(isset($_POST['loginResenaSesion']) && $sesion_iniciada == true){
+        //     $key = $this -> request -> getPost("key");
+        //     return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&usuario=true");
+        // }
 
-        if(isset($_POST['loginResenaNick']) && $sesion_iniciada == false){
-            $key = $this -> request -> getPost("key");
-            $nickname = $this -> request -> getPost("nickname");
-            return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&nickname=" . $nickname);
-        }
+        // if(isset($_POST['loginResenaNick']) && $sesion_iniciada == false){
+        //     $key = $this -> request -> getPost("key");
+        //     $nickname = $this -> request -> getPost("nickname");
+        //     return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&nickname=" . $nickname);
+        // }
 
         // va a resena_content
         if($es_sesion_resena == true){
