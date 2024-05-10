@@ -58,7 +58,7 @@ class Home extends BaseController{
     public function resena(): string {
         // recibo el codigo de  negocio al que va la resena 
         $cod_negocio = $this -> request -> getPost("");
-        
+
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
@@ -86,13 +86,13 @@ class Home extends BaseController{
                 // compruebo si el usuario tiene iniciada la sesion 
                 if(session() -> get("sesion_iniciada") == true){
                     // si es true va directamente a resena_content para completar la reseña
-                    $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                    $maleta_resenaContent['qr_key'] = $clavePublica;
                     $maleta_resenaContent['completar_formulario_resena'] = true;
 
                 }else{
                     // si es false va a resena_content para iniciar sesion o introducir Nickname
                     // pasa por login 
-                    $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                    $maleta_resenaContent['qr_key'] = $clavePublica;
                     $maleta_resenaContent['inicio_sesion_container'] = true;
                 }
 
