@@ -12,17 +12,17 @@
         <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
 
         <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
-        <input type="button" id="opcion2" value="Iniciar sesion">
+        <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
 
       </form>
     </div>  
 
-    <div id="containerNickname" class="invisible">
+    <div class="containerNickname" class="invisible">
       <form action="setLogin" class="containerNickname" >
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
-          <input type="button" id="opcion1" value="Continuar sin iniciar sesión">
+          <input type="button" id="opcion1" value="Iniciar sesion">
       
       </form>
     </div>
