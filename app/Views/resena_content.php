@@ -4,6 +4,7 @@
   }elseif(isset($resena_enviada)){
     echo "resena enviadaaaaaaaaa";
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
+    echo $qr_key;
 ?>
 <!-- <form action="setLogin" method="post" id="formSetResena"> -->
   <div class="containerResenaLogin">
