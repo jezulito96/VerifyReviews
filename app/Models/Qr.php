@@ -108,7 +108,7 @@ class Qr {
         $claveCifradaHex = bin2hex($claveCifrada);
 
         // se añade a la url para luego crear el qr
-        $this -> url = "http://verifyReviews.es/verifyreviews/setResena?publicKey=" . $claveCifradaHex;
+        $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
 
         $clave_privada_hex = bin2hex($clave_privada); 
         $vector_inicializacion_hex = bin2hex($vector_inicializacion);   

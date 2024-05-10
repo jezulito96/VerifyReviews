@@ -55,10 +55,8 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    public function setResena(): string {
-if(session() -> get("sesion_iniciada") == true){
-    echo "sesion iciada";
-}
+    public function resena(): string {
+
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
@@ -112,16 +110,18 @@ if(session() -> get("sesion_iniciada") == true){
         return view('index', $maleta);
     }
 
-    // public function loginSetResena(): string{
+    public function setResena(): string{
+
+        echo "llega a setResena";
+        $maleta_resenaContent['resena_enviada'] = true;
 
 
-
-    //     //vistas
-    //     $maleta['head_content'] = view('head_content');
-    //     $maleta['header_content'] = view('header_content'); 
-    //     $maleta['index_content'] = view('index_content', $maleta_index); 
-    //     return view('index', $maleta);
-    // }
+        //vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+        return view('index', $maleta);
+    }
 
     public function nuevoNegocio(): string {
         $master = Master::obtenerInstancia();

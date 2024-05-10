@@ -71,56 +71,30 @@ $(document).ready(function () {
     // estilos para validación usuario
 
     // <!-- Para validar los campos introducidos antes de enviarlos a base datos -->
-    $("#btnEnviarResena").click(function(){
+    $('#setResenaForm').submit(function(event) {
+        event.preventDefault();
+        
+        // Recoger los datos del formulario
+        var valoracionFinal = valoracionTick;
+        console.log( $valoracionFinal);
 
-            // Recoger los datos del formulario
-            var valoracionFinal = valoracionTick;
-            console.log( $valoracionFinal);
+        var txtTitulo = $(".textoTitulo").val();
+        console.log( txtDescripccion);
 
-            var txtTitulo = $(".textoTitulo").val();
-            console.log( txtDescripccion);
+        var txtDescripcion = $(".textoTituloArea").val();
+        console.log( txtDescripccion);
 
-            var txtDescripcion = $(".textoTituloArea").val();
-            console.log( txtDescripccion);
+        var foto1 = $("#foto1").val();
+        console.log( foto1);
 
-            var foto1 = $("#foto1").val();
-            console.log( foto1);
+        var foto2 = $("#foto2").val();
+        console.log( foto2);
 
-            var foto2 = $("#foto2").val();
-            console.log( foto2);
+        var fechaResena = $("#fechaResena").val();
+        console.log( fechaResena);
 
-            var fechaResena = $("#fechaResena").val();
-            console.log( fechaResena);
-
-            // creo el objeto con los datos
-            var datos = {
-                valoracionFinal: valoracionFinal,
-                txtTitulo: txtTitulo,
-                txtDescripcion: txtDescripcion,
-                foto1: foto1,
-                foto2: foto2,
-                fechaResena: fechaResena
-            };
-    
-            // hago solicitud
-            $.ajax({
-                type: 'POST',
-                url: 'https://verifyreviews.es/verifyreviews/setResena',
-                data: datos,
-                success: function(response) {
-                    // Manejar la respuesta del servidor si es necesario
-                    console.log('La reseña se envió con éxito');
-                    console.log(response);
-                },
-                error: function(xhr, status, error) {
-                    // Manejar errores de la solicitud
-                    console.error('Error al enviar la reseña:', error);
-                }
-            });
+        this.submit();
 
     });
-
-    
-
 
 });

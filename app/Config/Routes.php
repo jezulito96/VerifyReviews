@@ -9,7 +9,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 // verificar autenticidad del codigo QR para poder poner la resena en resena.php
-$routes->get('/resena', 'Home::setResena');
+$routes->get('/resena', 'Home::resena');
 
 // pagina de escribir una reseña --> resena.php
 $routes->get('/setResena', 'Home::setResena');
