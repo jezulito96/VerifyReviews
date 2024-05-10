@@ -383,7 +383,7 @@ if(session() -> get("sesion_iniciada") == true){
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
             if($_POST['es_sesion_resena'] == "sesion"){
-                
+                echo "entra 1<br>";
                 $es_sesion_resena = true;
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
@@ -446,7 +446,7 @@ if(session() -> get("sesion_iniciada") == true){
         if($es_sesion_resena == true){
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
             $maleta_resenaContent['completar_formulario_resena'] = true;
-
+            echo "entra 2<br>";
             //vistas
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
