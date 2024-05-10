@@ -19,7 +19,7 @@
       </form>
     </div>  
     
-    <div id="containerNickname" hidden>
+    <div id="containerNickname" >
         <form action="setLogin" method="post">
 
             <input type="hidden" name="es_sesion_resena" value="nickname">
@@ -41,7 +41,8 @@
 
         var containerSesion = $("#containerSesion");
         var containerNickname = $("#containerNickname");
-        
+        containerNickname.hide();
+
         opcion2.click(function(){
 
           containerNickname.hide();
