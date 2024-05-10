@@ -5,8 +5,8 @@
 ?>
 
   <div class="containerResenaLogin">
-    
-    <div class="containerSesion">
+
+    <div id="containerSesion">
       <form action="setLogin" method="post">
         
         <input type="email" name="email" id="email" placeholder="Email" required>
@@ -18,8 +18,8 @@
       </form>
     </div>  
 
-    <div class="containerNickname" class="invisible">
-      <form action="setLogin" >
+    <div id="containerNickname" class="invisible">
+      <form action="setLogin" method="post">
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
@@ -36,20 +36,20 @@
         var opcion1 = $("#opcion1");
         var opcion2 = $("#opcion2");
 
-        var containerSesion = $(".containerSesion");
-        var containerNickname = $(".containerNickname");
+        var containerSesion = $("#containerSesion");
+        var containerNickname = $("#containerNickname");
         
         opcion2.click(function(){
 
           containerNickname.removeClass("invisible");
-          containerSesion.addClass("inviseible");
+          containerSesion.addClass("invisible");
 
         });
 
         opcion1.click(function(){
 
           containerSesion.removeClass("invisible");
-          containerNickname.addClass("inviseible");
+          containerNickname.addClass("invisible");
 
         });
       });
