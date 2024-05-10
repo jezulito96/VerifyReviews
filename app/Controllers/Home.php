@@ -83,7 +83,7 @@ class Home extends BaseController{
 
                 $cod_negocio = $this->request->getGet('id');
                 $negocio = $baseDatos -> getNegocio($cod_negocio);
-                session() -> set("datos_negocio", $negocio[0]);
+                session() -> set("datos_negocio", $negocio);
 
                 // compruebo si el usuario tiene iniciada la sesion 
                 if(session() -> get("sesion_iniciada") == true){
