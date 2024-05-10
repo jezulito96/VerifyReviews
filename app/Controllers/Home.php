@@ -396,15 +396,14 @@ class Home extends BaseController{
                 $es_sesion_resena = true;
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
-
-                $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
-                $maleta_resenaContent['completar_formulario_resena'] = true;
-                //vistas
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
-                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-                return view('index', $maleta);
-
+                $es_sesion_resena = true;
+                // $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                // $maleta_resenaContent['completar_formulario_resena'] = true;
+                // //vistas
+                // $maleta['head_content'] = view('head_content');
+                // $maleta['header_content'] = view('header_content');
+                // $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                // return view('index', $maleta);
             }
         }
         
@@ -440,17 +439,6 @@ class Home extends BaseController{
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
         }
         
-        // if(isset($_POST['loginResenaSesion']) && $sesion_iniciada == true){
-        //     $key = $this -> request -> getPost("key");
-        //     return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&usuario=true");
-        // }
-
-        // if(isset($_POST['loginResenaNick']) && $sesion_iniciada == false){
-        //     $key = $this -> request -> getPost("key");
-        //     $nickname = $this -> request -> getPost("nickname");
-        //     return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&nickname=" . $nickname);
-        // }
-
         // va a resena_content
         if($es_sesion_resena == true){
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
