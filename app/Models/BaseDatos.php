@@ -144,6 +144,16 @@ class BaseDatos extends Model
         }
     }
 
+    public function getNegocio($cod_negocio){
+        $orden = "SELECT * FROM negocio WHERE email=?";
+        $parametros = [$cod_negocio];
+        $consulta = $this -> db -> query($orden, $parametros);
+
+        // email coincide con usuario
+        return $consulta -> getResultArray();
+        
+    }
+
     public function setCodigoQr($clave_publica,$clave_privada, $vector_inicializacion){
         $orden = "INSERT INTO codigo_qr (clave_publica, clave_privada, vector_inicializacion) VALUES ('$clave_publica','$clave_privada', '$vector_inicializacion')";
         $this -> db -> query($orden);

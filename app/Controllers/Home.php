@@ -56,8 +56,6 @@ class Home extends BaseController{
     }
 
     public function resena(): string {
-        // recibo el codigo de  negocio al que va la resena 
-        $cod_negocio = $this -> request -> getPost("");
 
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
@@ -83,7 +81,7 @@ class Home extends BaseController{
 
             if($resultado_descifrado == true){
 
-                
+
 
                 // compruebo si el usuario tiene iniciada la sesion 
                 if(session() -> get("sesion_iniciada") == true){
@@ -438,29 +436,32 @@ class Home extends BaseController{
             // se devulve a la vista login con un error
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
         }
-        
+
         // va a resena_content
         if($es_sesion_resena == true){
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
             $maleta_resenaContent['completar_formulario_resena'] = true;
-            echo "entra 2<br>";
+
+            // recojo el codigo de negocio para tener la info del negocio en sesion
+            $cod_negocio = $this -> request -> getPost("cod");
+            $negocio = $baseDatos -> getNegocio($cod_negocio);
+            echo "<pre>";
+            print_r($negocio);
+            echo "</pre>";
+            
             //vistas
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
             $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
             return view('index', $maleta);
         }
-        
-        
+                
         if($sesion_iniciada == true){
-           // meter en sesion el objeto del usuario para tener los fatos a mano
+            // meter en sesion el objeto del usuario para tener los fatos a mano
            session() -> set("sesionIniciada", $resultadoEmail);
 
            //meto el objeto del usuario en sesion 
            $usuario = $baseDatos -> getUsuario($emailUsuario);
-           echo "<pre>";
-           print_r($usuario);
-           echo "</pre>";
            session() -> set("usuario_en_sesion",$usuario);
            session() -> set("sesion_iniciada",true);
 
