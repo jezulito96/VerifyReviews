@@ -56,7 +56,9 @@ class Home extends BaseController{
     }
 
     public function setResena(): string {
-
+if(session() -> get("sesion_iniciada") == true){
+    echo "sesion iciada";
+}
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
@@ -385,7 +387,7 @@ class Home extends BaseController{
                 $es_sesion_resena = true;
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
-                
+
                 $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
                 $maleta_resenaContent['completar_formulario_resena'] = true;
                 //vistas

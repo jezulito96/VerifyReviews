@@ -64,7 +64,6 @@
 <?php
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
-    echo $usu;
 ?>
 <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
