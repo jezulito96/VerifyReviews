@@ -17,8 +17,8 @@
       </form>
     </div>  
 
-    <div id="containerNickname" >
-      <form action="setLogin" class="containerNickname" class="invisible">
+    <div id="containerNickname" class="invisible">
+      <form action="setLogin" class="containerNickname" >
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
