@@ -8,6 +8,9 @@
 
     <div id="containerSesion">
       <form action="setLogin" method="post">
+
+        <input type="hidden" name="es_sesion_resena" value="sesion">
+        <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
         
         <input type="email" name="email" id="email" placeholder="Email" required>
         <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
@@ -20,6 +23,9 @@
 
     <div id="containerNickname" class="invisible">
       <form action="setLogin" method="post">
+
+          <input type="hidden" name="es_sesion_resena" value="nickname">
+          <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >

@@ -56,12 +56,6 @@ class Home extends BaseController{
     }
 
     public function setResena(): string {
-        // compruebo si el usuario tiene iniciada la sesion 
-        if(session() -> get("sesion_iniciada") == true){
-            echo "ya ha iniciado la sesion";
-        }else{
-            echo "aun no se ha iniciado la sesion";
-        }
 
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
@@ -70,6 +64,7 @@ class Home extends BaseController{
         if(!isset($claveCifradaHex) || empty($claveCifradaHex)) {
             header('location:https://www.verifyreviews.es');
         }
+
         // busco en DBla clave publica y el vector de inicializacion que correspone a la clave que he recogido
         $baseDatos = new BaseDatos();
         $clave_privada_hex = $baseDatos -> getClavePrivada($claveCifradaHex);
@@ -84,48 +79,29 @@ class Home extends BaseController{
             
             $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
 
-            if($resultado_descifrado == true && isset($_POST['nickname']) && $_POST['nickname'] != "" && !empty($_POST['nickname']) ){
-                $maleta_resenaContent['completar_formulario_resena'] = true;
-                $maleta_resenaContent['usu'] = 2;
-
-                //vistas
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
-                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-                return view('index', $maleta);
-            }elseif($resultado_descifrado == true && isset($_POST['usuario']) && $_POST['usuario'] == true){
-                $maleta_resenaContent['completar_formulario_resena'] = true;
-                $maleta_resenaContent['usu'] = 1;
-
-                //vistas
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
-                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-                return view('index', $maleta);
-            }
-
             if($resultado_descifrado == true){
-                $maleta_resenaContent['inicio_sesion_container'] = true;
-                $maleta_resenaContent['key'] = $clavePublica;
 
-                //vistas
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
-                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-                return view('index', $maleta);
+                // compruebo si el usuario tiene iniciada la sesion 
+                if(session() -> get("sesion_iniciada") == true){
+                    // si es true va directamente a resena_content para completar la reseña
+                    $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                    $maleta_resenaContent['completar_formulario_resena'] = true;
+
+                }else{
+                    // si es false va a resena_content para iniciar sesion o introducir Nickname
+                    // pasa por login 
+                    $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                    $maleta_resenaContent['inicio_sesion_container'] = true;
+                }
 
             }else{
                 $maleta_resenaContent['error'] = "La reseña asociada a este codigo Qr ya se ha escrito";
 
-                //vistas
-                $maleta['head_content'] = view('head_content');
-                $maleta['header_content'] = view('header_content');
-                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-                return view('index', $maleta);
             }
         }else{
             $maleta_resenaContent['error'] = "Se ha producido un error, por favor contacte con nosotros para solucionar el problema";
         }
+
 
         //vistas
         $maleta['head_content'] = view('head_content');
@@ -400,36 +376,48 @@ class Home extends BaseController{
     }
 
     public function setLogin(){
-        echo "llega setLogin";
+        // veo si $es_sesion_resena es true
+        // esto quiere decir que el usuario escaneo un QR para poner una resena
+        $es_sesion_resena = false;
+        if(isset($_POST['es_sesion_resena'])){
+            if($_POST['es_sesion_resena'] == "sesion"){
+                
+                $es_sesion_resena = true;
+
+            }elseif($_POST['es_sesion_resena'] == "nickname"){
+                
+                $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                $maleta_resenaContent['completar_formulario_resena'] = true;
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
+
+            }
+        }
+        
+
         $baseDatos = new BaseDatos();
         // verifico si el email o usuario/nickname introducido coinciden con un usuario registrado
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
-
         $resultadoEmail = false;
-        $coincideContrasena = false;
         $sesion_iniciada = false;
       
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
         
-
         if($resultadoEmail == 1 || $resultadoEmail == 2 ){
             // el email coincide 
 
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
-                // meter en sesion el objeto del usuario para tener los fatos a mano
-                session() -> set("sesionIniciada", $resultadoEmail);
-
-                //meto el objeto del usuario en sesion 
-                $usuario = $baseDatos -> getUsuario($emailUsuario);
-                session() -> set("usuario_en_sesion",$usuario);
-                session() -> set("sesion_iniciada",true);
-                $sesion_iniciada = true;
+     
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Sesión iniciada";
-                
+                $sesion_iniciada = true;
+
             } else {
                 // La contraseña es incorrecta
                 // se devulve a la vista login con un error
@@ -452,7 +440,29 @@ class Home extends BaseController{
             return redirect() -> to("http://verifyReviews.es/verifyreviews/resena?publicKey=" . $key . "&nickname=" . $nickname);
         }
 
+        // va a resena_content
+        if($es_sesion_resena == true){
+            $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+            $maleta_resenaContent['completar_formulario_resena'] = true;
 
+            //vistas
+            $maleta['head_content'] = view('head_content');
+            $maleta['header_content'] = view('header_content');
+            $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+            return view('index', $maleta);
+        }
+        
+        
+        if($sesion_iniciada == true){
+           // meter en sesion el objeto del usuario para tener los fatos a mano
+           session() -> set("sesionIniciada", $resultadoEmail);
+
+           //meto el objeto del usuario en sesion 
+           $usuario = $baseDatos -> getUsuario($emailUsuario);
+           session() -> set("usuario_en_sesion",$usuario);
+           session() -> set("sesion_iniciada",true);
+
+        }
 
         //vistas
         $maleta['head_content'] = view('head_content');
