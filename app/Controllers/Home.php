@@ -382,6 +382,17 @@ class Home extends BaseController{
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
+            if(!isset($_POST['qr_key'])){
+                $master = Master::obtenerInstancia();
+                $maleta_index['listaCategorias'] = $master -> getListaCategorias();
+                
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content'); 
+                $maleta['index_content'] = view('index_content', $maleta_index); 
+                return view('index', $maleta);
+            }
+
             if($_POST['es_sesion_resena'] == "sesion"){
                 echo "entra 1<br>";
                 $es_sesion_resena = true;
