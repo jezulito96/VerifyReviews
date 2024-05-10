@@ -19,7 +19,7 @@
       </form>
     </div>  
     
-    <div id="containerNickname" class="invisible">
+    <div id="containerNickname" hidden>
         <form action="setLogin" method="post">
 
             <input type="hidden" name="es_sesion_resena" value="nickname">
@@ -32,7 +32,7 @@
         
         </form>
     </div>
-    
+
   <script>
       $(document).ready(function(){
 
@@ -44,15 +44,15 @@
         
         opcion2.click(function(){
 
-          containerNickname.removeClass("invisible");
-          containerSesion.addClass("invisible");
+          containerNickname.hide();
+          containerSesion.show();
 
         });
 
         opcion1.click(function(){
 
-          containerSesion.removeClass("invisible");
-          containerNickname.addClass("invisible");
+          containerSesion.show();
+          containerNickname.hide();
 
         });
       });
