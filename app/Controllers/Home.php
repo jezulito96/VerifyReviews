@@ -81,7 +81,9 @@ class Home extends BaseController{
 
             if($resultado_descifrado == true){
 
-
+                $cod_negocio = $this->request->getGet('id');
+                $negocio = $baseDatos -> getNegocio($cod_negocio);
+                session() -> set("datos_negocio", $negocio);
 
                 // compruebo si el usuario tiene iniciada la sesion 
                 if(session() -> get("sesion_iniciada") == true){
@@ -441,14 +443,7 @@ class Home extends BaseController{
         if($es_sesion_resena == true){
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
             $maleta_resenaContent['completar_formulario_resena'] = true;
-
-            // recojo el codigo de negocio para tener la info del negocio en sesion
-            $cod_negocio = $this -> request -> getPost("cod");
-            $negocio = $baseDatos -> getNegocio($cod_negocio);
-            echo "<pre>";
-            print_r($negocio);
-            echo "</pre>";
-            
+       
             //vistas
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
@@ -457,14 +452,13 @@ class Home extends BaseController{
         }
                 
         if($sesion_iniciada == true){
-            // meter en sesion el objeto del usuario para tener los fatos a mano
+            // meter en sesion el objeto del usuario para tener los datos a mano
            session() -> set("sesionIniciada", $resultadoEmail);
-
+           
            //meto el objeto del usuario en sesion 
-           $usuario = $baseDatos -> getUsuario($emailUsuario);
-           session() -> set("usuario_en_sesion",$usuario);
+           $usuario_en_sesion = $baseDatos -> getUsuario_en_sesion($emailUsuario);
+           session() -> set("usuario_en_sesion",$usuario_en_sesion);
            session() -> set("sesion_iniciada",true);
-
         }
 
         //vistas
@@ -499,14 +493,16 @@ class Home extends BaseController{
         $maleta_generarResenas['resultadoEmail'] = false;
         $maleta_generarResenas['imagenQr'] = false;
 
+        $usuario_en_sesion = session() -> get("usuario_en_sesion");
+
         if($accion == 1){
-            $qr = new Qr();
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
             $qr -> setColor($color);
             $maleta_generarResenas['imagenQr'] = $qr -> crear($accion);
 
         }elseif($accion == 2){
             // se genera el qr
-            $qr = new Qr();
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
             $qr -> setColor($color);
             $imagen_qr = $qr -> crear($accion);
             
@@ -542,7 +538,7 @@ class Home extends BaseController{
             }
         }elseif($accion == 3){
             // se genera el qr
-            $qr = new Qr();
+            $qr = new Qr($usuario_en_sesion['cod_negocio']);
             $imagen_qr = $qr -> crear(2);
             $imagen_base64 = substr($imagen_qr, strpos($imagen_qr, ',') + 1);
 
@@ -566,7 +562,7 @@ class Home extends BaseController{
 
              for($i = 0; $i < $numero; $i++){
                 // se genera el qr
-                $qr = new Qr();
+                $qr = new Qr($usuario_en_sesion['cod_negocio']);
                 $qr -> setColor($color);
                 $imagen_qr = $qr -> crear(1);
 

@@ -83,8 +83,11 @@
 <?php
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
-    if(isset($qr_key))echo "llega clave";
-    else echo "NO llega clave";
+    $negocio = session() -> get("datos_negocio");
+    echo "<pre>";
+    print_r($negocio);
+    echo "</pre>";
+
 ?>
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">

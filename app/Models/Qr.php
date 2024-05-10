@@ -87,7 +87,7 @@ class Qr {
     
 
 
-    public function __construct(){
+    public function __construct($cod_negocio){
 
         $this ->options = new QROptions;
 
@@ -108,8 +108,7 @@ class Qr {
         $claveCifradaHex = bin2hex($claveCifrada);
 
         // se añade a la url para luego crear el qr
-        // $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex . "&cod=" . $cod_negocio;
-        $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex;
+        $this -> url = "http://verifyReviews.es/verifyreviews/resena?publicKey=" . $claveCifradaHex . "&id=" . $cod_negocio;
 
         $clave_privada_hex = bin2hex($clave_privada); 
         $vector_inicializacion_hex = bin2hex($vector_inicializacion);   
