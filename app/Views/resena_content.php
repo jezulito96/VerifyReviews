@@ -5,6 +5,7 @@
 ?>
 
   <div class="containerResenaLogin">
+    
     <div class="containerSesion">
       <form action="setLogin" method="post">
         
@@ -18,7 +19,7 @@
     </div>  
 
     <div class="containerNickname" class="invisible">
-      <form action="setLogin" class="containerNickname" >
+      <form action="setLogin" >
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
