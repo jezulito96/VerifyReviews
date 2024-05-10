@@ -382,9 +382,11 @@ class Home extends BaseController{
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
-            if(!isset($_POST['qr_key'])){
-                // return redirect() -> to("https://verifyReviews.es");
-            }
+            
+            // if(!isset($_POST['qr_key'])){
+            //     // si meten directamente "https://verifyreviews.es/verifyreviews/setLogin" redirecciona a vista Login
+            //     // return redirect() -> to("https://verifyReviews.es");
+            // }
 
             if($_POST['es_sesion_resena'] == "sesion"){
                 echo "entra 1<br>";

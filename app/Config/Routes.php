@@ -28,6 +28,9 @@ $routes->get('/confirmarEmail', 'Home::confirmarEmail');
 // vista de login
 $routes->get('/login', 'Home::vistaLogin');
 $routes->post('/setLogin', 'Home::setLogin');
+// si meten directamente "https://verifyreviews.es/verifyreviews/setLogin" redirecciona a vista Login
+$routes->get('/setLogin', 'Home::vistaLogin');
+
 
 // cerrar sesion
 $routes->get('/cerrarSesion', 'Home::cerrarSesion');
