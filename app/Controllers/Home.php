@@ -83,16 +83,16 @@ class Home extends BaseController{
 
             if($resultado_descifrado == true){
 
+                $maleta_resenaContent['qr_key'] = $claveCifradaHex;
+
                 // compruebo si el usuario tiene iniciada la sesion 
                 if(session() -> get("sesion_iniciada") == true){
                     // si es true va directamente a resena_content para completar la reseña
-                    $maleta_resenaContent['qr_key'] = $clavePublica;
                     $maleta_resenaContent['completar_formulario_resena'] = true;
 
                 }else{
                     // si es false va a resena_content para iniciar sesion o introducir Nickname
                     // pasa por login 
-                    $maleta_resenaContent['qr_key'] = $clavePublica;
                     $maleta_resenaContent['inicio_sesion_container'] = true;
                 }
 
