@@ -4,6 +4,8 @@
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
 
+  <div class="containerResenaLogin">
+
     <div id="containerSesion">
       <form action="setLogin" method="post">
 
@@ -18,21 +20,22 @@
 
       </form>
     </div>  
-    
-    <div id="containerNickname" >
-        <form action="setLogin" method="post">
 
-            <input type="hidden" name="es_sesion_resena" value="nickname">
-            <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
+    <div id="containerNickname" class="invisible">
+      <form action="setLogin" method="post">
 
-            <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-            
-            <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
-            <input type="button" id="opcion1" value="Iniciar sesion">
-        
-        </form>
+          <input type="hidden" name="es_sesion_resena" value="nickname">
+          <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
+
+          <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+          <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
+          <input type="button" id="opcion1" value="Iniciar sesion">
+      
+      </form>
     </div>
-
+    
+  </div>
+  
   <script>
       $(document).ready(function(){
 
@@ -41,19 +44,18 @@
 
         var containerSesion = $("#containerSesion");
         var containerNickname = $("#containerNickname");
-        containerNickname.hide();
-
+        
         opcion2.click(function(){
 
-          containerNickname.hide();
-          containerSesion.show();
+          containerNickname.removeClass("invisible");
+          containerSesion.addClass("invisible");
 
         });
 
         opcion1.click(function(){
 
-          containerSesion.show();
-          containerNickname.hide();
+          containerSesion.removeClass("invisible");
+          containerNickname.addClass("invisible");
 
         });
       });
