@@ -15,7 +15,7 @@
         <input type="email" name="email" id="email" placeholder="Email" required >
         <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
 
-        <input type="submit" value="Iniciar sesión" >
+        <input type="submit" name="loginSesion" value="Iniciar sesión" >
         <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
 
       <!-- </form> -->
