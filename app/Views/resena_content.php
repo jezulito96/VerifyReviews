@@ -4,8 +4,6 @@
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
 
-  <div class="containerResenaLogin">
-
     <div id="containerSesion">
       <form action="setLogin" method="post">
 
@@ -20,22 +18,21 @@
 
       </form>
     </div>  
-
-    <div id="containerNickname" class="invisible">
-      <form action="setLogin" method="post">
-
-          <input type="hidden" name="es_sesion_resena" value="nickname">
-          <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
-
-          <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-          <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
-          <input type="button" id="opcion1" value="Iniciar sesion">
-      
-      </form>
-    </div>
-      
     
-  </div>
+    <div id="containerNickname" class="invisible">
+        <form action="setLogin" method="post">
+
+            <input type="hidden" name="es_sesion_resena" value="nickname">
+            <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
+
+            <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+            
+            <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
+            <input type="button" id="opcion1" value="Iniciar sesion">
+        
+        </form>
+    </div>
+    
   <script>
       $(document).ready(function(){
 
