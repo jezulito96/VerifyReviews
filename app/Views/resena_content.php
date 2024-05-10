@@ -84,7 +84,7 @@
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
 ?>
 
-<form action="setResena" method="post" id="setResenaForm">
+<form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
   <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
   <div class="resenaContainer" id="resenaContainer">

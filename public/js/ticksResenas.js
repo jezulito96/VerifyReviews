@@ -76,10 +76,10 @@ $(document).ready(function () {
         
         // Recoger los datos del formulario
         var valoracionFinal = valoracionTick;
-        console.log( $valoracionFinal);
+        console.log( valoracionFinal);
 
         var txtTitulo = $(".textoTitulo").val();
-        console.log( txtDescripccion);
+        console.log( txtTitulo);
 
         var txtDescripcion = $(".textoTituloArea").val();
         console.log( txtDescripccion);
@@ -94,7 +94,6 @@ $(document).ready(function () {
         console.log( fechaResena);
 
         this.submit();
-
     });
 
 });
