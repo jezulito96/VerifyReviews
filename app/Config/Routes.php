@@ -8,10 +8,11 @@ use CodeIgniter\Router\RouteCollection;
 // pagina inicio inicio --> index_content.php
 $routes->get('/', 'Home::index');
 
+// verificar autenticidad del codigo QR para poder poner la resena en resena.php
+$routes->get('/resena', 'Home::setResena');
+
 // pagina de escribir una reseña --> resena.php
-$routes->get('/resena', 'Home::resena');
-
-
+$routes->get('/setResena', 'Home::setResena');
 
 //pagina para añadir un nuevo negocio  
 $routes->get('/nuevoNegocio', 'Home::nuevoNegocio');
@@ -31,7 +32,7 @@ $routes->post('/setLogin', 'Home::setLogin');
 // cerrar sesion
 $routes->get('/cerrarSesion', 'Home::cerrarSesion');
 
-// vista de generar reseñas
+// vista de generar reseñas para negocios
 $routes->get('/generarResenas', 'Home::vistaGenerarResenas');
 $routes->post('/setGenerarResenas', 'Home::setGenerarResenas');
 

@@ -55,7 +55,7 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    public function resena(): string {
+    public function setResena(): string {
         // recojo la clave publica en hexadecimal
         $claveCifradaHex = $this->request->getGet('publicKey');
 
@@ -127,7 +127,7 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    // public function setResena(): string{
+    // public function loginSetResena(): string{
 
 
 
@@ -418,9 +418,10 @@ class Home extends BaseController{
                 //meto el objeto del usuario en sesion 
                 $usuario = $baseDatos -> getUsuario($emailUsuario);
                 session() -> set("usuario_en_sesion",$usuario);
+                session() -> set("sesion_iniciada",true);
                 $sesion_iniciada = true;
                 // La contraseña es correcta
-                $maleta_login['todoCorrecto'] = "Email y/o contraseña incorrectos";
+                $maleta_login['todoCorrecto'] = "Sesión iniciada";
                 
             } else {
                 // La contraseña es incorrecta
@@ -468,6 +469,7 @@ class Home extends BaseController{
     }
 
     public function setGenerarResenas(){
+
         $color = $this -> request -> getPost('estiloQr');
         $accion = $this -> request -> getPost('accionQr');
         $accion = intval($accion);
@@ -575,7 +577,6 @@ class Home extends BaseController{
             }
 
         }
-
 
         // vistas
         $maleta['head_content'] = view('head_content');

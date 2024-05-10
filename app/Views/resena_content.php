@@ -4,43 +4,55 @@
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
 
-  <div class="containerformLogin">
-    <form action="setLogin" method="post" class="formLogin">
-      <!-- <input type="hidden" name="key" value="<?php //echo $key;?>"> -->
-      
-      <input type="email" name="email" id="email" placeholder="Email" required>
-      <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
-      
-      <!-- <div id="containerNickname" class="invisible" >
-        <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-        <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Aceptar" >
-      </div> -->
+  <div class="containerResenaLogin">
+    <div class="containerSesion">
+      <form action="setLogin" method="post">
+        
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
 
-      <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
-      <!-- <input type="button" id="opcion2" value="Continuar sin iniciar sesión"> -->
+        <input type="submit" name="loginResenaSesion" id="loginResenaSesion" value="Iniciar sesión" >
+        <input type="button" id="opcion2" value="Iniciar sesion">
+
+      </form>
+    </div>  
+
+    <div id="containerNickname" >
+      <form action="setLogin" class="containerNickname" class="invisible">
+
+          <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+          <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
+          <input type="button" id="opcion1" value="Continuar sin iniciar sesión">
       
+      </form>
+    </div>
       
-    </form>
+    
   </div>
-  <!-- <script>
+  <script>
       $(document).ready(function(){
 
+        var opcion1 = $("#opcion1");
         var opcion2 = $("#opcion2");
 
+        var containerSesion = $(".containerSesion");
+        var containerNickname = $(".containerNickname");
+        
         opcion2.click(function(){
-          console.log("entra opcion 2");
-          $("#email").addClass("invisible");
-          $("#contrasena").addClass("invisible");
 
-          $("#opcion2").addClass("invisible");
-          $("#loginResenaSesion").addClass("invisible");
+          containerNickname.removeClass("invisible");
+          containerSesion.addClass("inviseible");
 
-          $("#containerNickname").removeClass("invisible");
         });
 
-        $("#")
+        opcion1.click(function(){
+
+          containerSesion.removeClass("invisible");
+          containerNickname.addClass("inviseible");
+
+        });
       });
-  </script> -->
+  </script>
 
 <?php
 
