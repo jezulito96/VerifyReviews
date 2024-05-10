@@ -5,7 +5,7 @@
     echo "resena enviadaaaaaaaaa";
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
-<form action="setLogin" method="post">
+<form action="setLogin" method="post" id="formSetResena">
   <div class="containerResenaLogin">
 
     <div id="containerSesion">
@@ -17,7 +17,7 @@
         <input type="email" name="email" id="email" placeholder="Email" required >
         <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
 
-        <input type="submit" name="loginSesion" value="Iniciar sesión" >
+        <input type="submit" name="submit_sesion" id="submit_sesion" value="Iniciar sesión" >
         <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
 
       <!-- </form> -->
@@ -28,7 +28,7 @@
 
 
           <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-          <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
+          <input type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
           <input type="button" id="opcion1" value="Iniciar sesion">
       
       <!-- </form> -->
@@ -46,6 +46,18 @@
         var containerSesion = $("#containerSesion");
         var containerNickname = $("#containerNickname");
         
+        var submitSesion = $("submit_sesion");
+        var submit_nickname = $("#submit_nickname");
+
+        var formulario = $("#formSetResena");
+
+        submitSesion.click(function(){
+          formSetResena.submit();
+        });
+        submit_nickname.click(function(){
+          formSetResena.submit();
+        });
+
         opcion2.click(function(){
 
           containerNickname.toggleClass("invisible");
