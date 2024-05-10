@@ -3,26 +3,26 @@
     echo $error;
   }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
 ?>
-
+<form action="setLogin" method="post">
   <div class="containerResenaLogin">
 
     <div id="containerSesion">
-      <form action="setLogin" method="post">
+      <!-- <form action="setLogin" method="post"> -->
 
         <input type="hidden" name="es_sesion_resena" value="sesion">
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
         
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+        <input type="email" name="email" id="email" placeholder="Email" required >
+        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
 
         <input type="submit" value="Iniciar sesión" >
         <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
 
-      </form>
+      <!-- </form> -->
     </div>  
 
     <div id="containerNickname" class="invisible">
-      <form action="setLogin" method="post">
+      <!-- <form action="setLogin" method="post"> -->
 
           <input type="hidden" name="es_sesion_resena" value="nickname">
           <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
@@ -31,11 +31,12 @@
           <input type="submit" name="loginResenaNick" id="loginResenaNick" value="Continuar" >
           <input type="button" id="opcion1" value="Iniciar sesion">
       
-      </form>
+      <!-- </form> -->
     </div>
     
   </div>
-  
+</form>
+
   <script>
       $(document).ready(function(){
 
