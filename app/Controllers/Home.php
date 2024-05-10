@@ -494,7 +494,7 @@ class Home extends BaseController{
         $maleta_generarResenas['imagenQr'] = false;
 
         $usuario_en_sesion = session() -> get("usuario_en_sesion");
-        var_dump($usuario_en_sesion);
+        // var_dump($usuario_en_sesion);
 
 
         if($accion == 1){
