@@ -145,7 +145,7 @@ class Home extends BaseController{
         $negocio = session() -> get("datos_negocio");
         $negocio = $negocio [0];
         $carpetaNegocio = substr(strtolower($negocio['nombre']), 0, 3) . substr((string)$negocio['telefono_titular'], 2, 3);
-        $directorioNegocio = "images/negocios/n_" . $carpetaNegocio . "/resenas";
+        $directorioNegocio = "images/n/n_" . $carpetaNegocio . "/resenas";
         
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
