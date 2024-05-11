@@ -63,6 +63,8 @@ class Home extends BaseController{
         // si no va con clave redirecciona a inicio
         if(!isset($claveCifradaHex) || empty($claveCifradaHex)) {
             header('location:https://www.verifyreviews.es');
+        }elseif(session() ->get("sesionIniciada") == 2 || session() ->get("sesionIniciada") == "2"){
+            header('location:https://www.verifyreviews.es');
         }
 
         // busco en DBla clave publica y el vector de inicializacion que correspone a la clave que he recogido
@@ -397,6 +399,14 @@ class Home extends BaseController{
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
                 $es_sesion_resena = true;
+                $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+                $maleta_resenaContent['nickname'] = $this->request->getPost('nickname');
+                $maleta_resenaContent['completar_formulario_resena'] = true;
+                //vistas
+                $maleta['head_content'] = view('head_content');
+                $maleta['header_content'] = view('header_content');
+                $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                return view('index', $maleta);
                 // $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
                 // $maleta_resenaContent['completar_formulario_resena'] = true;
                 // //vistas
