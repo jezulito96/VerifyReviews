@@ -194,14 +194,14 @@ class BaseDatos extends Model
 
     public function getMaxResena(){
 
-        $orden = "SELECT MAX(cod_resena) FROM resena";
+        $orden = "SELECT MAX(cod_resena) as max_cod FROM resena";
         $consulta = $this -> db -> query($orden);
         $numeroFilas = $consulta -> getNumRows();
 
         if($numeroFilas > 0 ){
             $clave = $consulta -> getRow();
             
-            return $clave -> cod_resena;
+            return $clave -> max_cod;
         }else{
             return 1;
         }
