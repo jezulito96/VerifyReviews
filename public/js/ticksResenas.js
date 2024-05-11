@@ -97,7 +97,7 @@ $(document).ready(function () {
         if (txtTitulo.trim() === '' || txtTitulo.length <= 50) {
             error = "El campo del título debe tener al menos 50 caracateres";
             envioForm = false;
-        } else if (txtDescripccion.trim() === '' || txtTitulo.length <= 170) {
+        } else if (txtDescripccion.trim() === '' || txtDescripccion.length <= 170) {
             envioForm = false;
             error = "El campo de la descripción debe tener al menos 170 caracateres";
         } else if (fechaResena.trim() === '') {
