@@ -131,13 +131,13 @@ class Home extends BaseController{
         $txt_descripccion = $this -> request -> getPost("textoTituloArea");
         $fecha_resena = $this -> request -> getPost("fechaResena");
 
-        echo "Código de Negocio: " . $cod_negocio . "\n";
-        echo "QR Key: " . $qr_key . "\n";
-        echo "Nickname: " . $nickname . "\n";
-        echo "Valoración Final: " . $valoracion_final . "\n";
-        echo "Título: " . $txt_Titulo . "\n";
-        echo "Descripción: " . $txt_descripccion . "\n";
-        echo "Fecha de Reseña: " . $fecha_resena . "\n";
+        echo "Código de Negocio: " . $cod_negocio . "<br>";
+        echo "QR Key: " . $qr_key . "<br>";
+        echo "Nickname: " . $nickname . "<br>";
+        echo "Valoración Final: " . $valoracion_final . "<br>";
+        echo "Título: " . $txt_Titulo . "<br>";
+        echo "Descripción: " . $txt_descripccion . "<br>";
+        echo "Fecha de Reseña: " . $fecha_resena . "<br>";
 
 
 

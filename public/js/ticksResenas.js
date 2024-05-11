@@ -84,13 +84,13 @@ $(document).ready(function () {
         var nickname = $("#nickname").val();
         var qr_key = $("#qr_key").val();
         
-        console.log("cod " + codNegocio);
-        console.log("valoracion " + valoracionFinal);
-        console.log("titulo " + txtTitulo);
-        console.log("descripcion " + txtDescripccion);
-        console.log("fecha resena " + fechaResena);
-        console.log("nickname " + nickname);
-        console.log("qr_key " + qr_key);
+        // console.log("cod " + codNegocio);
+        // console.log("valoracion " + valoracionFinal);
+        // console.log("titulo " + txtTitulo);
+        // console.log("descripcion " + txtDescripccion);
+        // console.log("fecha resena " + fechaResena);
+        // console.log("nickname " + nickname);
+        // console.log("qr_key " + qr_key);
 
         var error = "";
         var envioForm = true;
