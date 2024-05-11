@@ -176,8 +176,8 @@ class Home extends BaseController{
                 //recojo ubicacion temporal de la foto
                 $tmpFoto = $_FILES['fotos_resena']['tmp_name'][$i]; 
 
-                $nombre_foto =  "r_" . $cod_resena . "n/" . "n_" . $carpetaNegocio . "/img" . ($i + 1) . "." . $extension;
-                $nombre_foto_dir = "r_" . $cod_resena . "/img". ($i + 1) . "." . $extension;
+                $nombre_foto =  "n_" . $carpetaNegocio . "/r_" . $cod_resena .  "/img" . ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "/img". ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
                     $fotosBD .= $nombre_foto;
