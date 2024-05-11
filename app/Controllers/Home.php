@@ -167,10 +167,11 @@ class Home extends BaseController{
         
         // recibo las fotos y las guardo en la carpetas
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
-            $numFotos = count($_FILES['fotos_resena']['name']);
+                echo "<br>entra<br>";
+                $numFotos = count($_FILES['fotos_resena']['name']);
 
             for ($i = 0; $i < $numFotos; $i++) {
-                echo "entra";
+                echo "<br>entra<br>";
                 //extraigo la extension del archivo
                 $nombreAntiguo = $_FILES['fotos_resena']['name'][$i];
                 $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
