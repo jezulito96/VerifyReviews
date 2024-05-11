@@ -256,7 +256,7 @@ class BaseDatos extends Model
             
             return true;
         }else{
-            return false;
+            return $clave->estado;
         }
         
     }
