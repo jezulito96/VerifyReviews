@@ -170,6 +170,7 @@ class Home extends BaseController{
             $numFotos = count($_FILES['fotos_resena']['name']);
 
             for ($i = 0; $i < $numFotos; $i++) {
+                echo "entra";
                 //extraigo la extension del archivo
                 $nombreAntiguo = $_FILES['fotos_resena']['name'][$i];
                 $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
@@ -241,7 +242,7 @@ class Home extends BaseController{
         $cod_negocio = $baseDatos -> getMaxNegocio();
         if($cod_negocio == null || empty($cod_negocio) || $cod_negocio == false) $cod_negocio = 1;
         $directorioNegocio = FCPATH . "images/n/n_" . $cod_negocio;
-        $nombreNegocio = "images/negocios/n_" . $cod_negocio . "/img_negocio";
+        $nombreNegocio = "images/n_" . $cod_negocio . "/img_negocio";
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
