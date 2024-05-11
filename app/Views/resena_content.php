@@ -106,7 +106,7 @@
 
       <div class="fotoPerfilNegocio" id="fotoPerfilNegocio">
         <!-- cambiar url -->
-        <img class="imagenNegocio" src="<?php echo FCPATH . $negocio['foto_principal'] ;?>" alt="Imagen negocio" title="Imagen negocio" />
+        <img class="imagenNegocio" src="<?php echo base_url() . $negocio['foto_principal'] ;?>" alt="Imagen negocio" title="Imagen negocio" />
       </div>
 
       <div class="datosNegocio" id="datosNegocio">
