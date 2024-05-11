@@ -132,7 +132,7 @@ $(document).ready(function () {
     });
 
     // para decir que como maximo se pueden subir cinco fotos 
-    $('#fotos').change(function() {
+    $('#fotos_resena').change(function() {
         var archivos = this.archivos;
         var maxArchivos = 5;
 
