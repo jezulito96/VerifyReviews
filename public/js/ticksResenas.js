@@ -85,13 +85,15 @@ $(document).ready(function () {
         var foto2 = $("#foto2").val();
         var fechaResena = $("#fechaResena").val();
 
+        
+        console.log("cod " + codNegocio);
+        console.log("contrasena " + contrasena);
         console.log("valoracion " + valoracionFinal);
-        console.log("valoracion " + valoracionFinal);
-        console.log( txtTitulo);
-        console.log( txtDescripccion);
-        console.log( foto1);
-        console.log( foto2);
-        console.log( fechaResena);
+        console.log("titulo " + txtTitulo);
+        console.log("descripcion " + txtDescripcion);
+        console.log("foto1 " + foto1);
+        console.log("foto2 " + foto2);
+        console.log("fecha resena " + fechaResena);
 
         // this.submit();
     });
