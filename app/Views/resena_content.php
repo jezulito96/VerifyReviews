@@ -100,7 +100,7 @@
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
   <input type="hidden" id="cod_negocio" name="cod_negocio" value="<?php echo $negocio['cod_negocio']; ?>" />
   <input type="hidden" id="qr_key" name="qr_key" value="<?php echo $qr_key ;?>" /> 
-  <!-- <input type="hidden" id="nickname" name="nickname" value="<?php //echo $negocio['nickname'] ;?>" />  -->
+  <input type="hidden" id="nickname" name="nickname" value="<?php echo $negocio['nickname'] ;?>" /> 
 
   <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
