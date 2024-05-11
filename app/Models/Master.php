@@ -63,8 +63,9 @@ class Master {
         $baseDatos = new BaseDatos();
 
         // primero tengo que sacar el qr_id del qr_key que es la clave publica 
-        
-        $id = $baseDatos -> desactivarQr(hex2bin($qr_key));
+        $claveQr = hex2bin($qr_key);
+        $id = $baseDatos ->getQr_id($claveQr);
+        $baseDatos -> desactivarQr($id);
         
         // después hago la insertcion a la base de datos con el id que me devuelve el metodo anterior
         if($id !=false){

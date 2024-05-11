@@ -207,7 +207,7 @@ class Home extends BaseController{
         }else{
 
             /////////// gestionar el error en resena_content
-
+            echo "ha devuelto false";
             $maleta_resenaContent['resena_enviada'] = true;
         }
         

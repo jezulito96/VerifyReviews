@@ -224,11 +224,14 @@ class BaseDatos extends Model
 
     }
 
-    public function desctivarQr($qr_key){
+    public function desctivarQr($id ){
 
-        $orden = "UPDATE codigo_qr SET estado=1 WHERE clave_publica='" . $qr_key . "' ";
+        $orden = "UPDATE codigo_qr SET estado=0 WHERE id='" . $id . "' ";
         $this -> db -> query($orden);
 
+    }
+
+    public function getQr_id($qr_key){
         $orden = "SELECT id FROM codigo_qr WHERE clave_publica=?";
         $parametros = [$qr_key];
         $consulta = $this -> db -> query($orden, $parametros);
@@ -241,7 +244,6 @@ class BaseDatos extends Model
         }else{
             return false;
         }
-
     }
 
     public function comprobarEstado($claveCifradaHex){
@@ -250,7 +252,7 @@ class BaseDatos extends Model
         $consulta = $this -> db -> query($orden, $parametros);
         $clave = $consulta -> getRow();
         
-        if($clave->vector_inicializacion == 0){
+        if($clave->estado == 0){
             return true;
         }else{
             return false;
