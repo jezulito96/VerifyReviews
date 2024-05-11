@@ -164,14 +164,14 @@ class Home extends BaseController{
         $coordenadas = $latitud . "," . $longitud;
 
 
-        $directorioNegocio = FCPATH . "images/" . strtolower($nombre);
+        $directorioNegocio = FCPATH . "images/negocios/n_" . substr(strtolower($nombre), 0, 3) . substr((string)$telefono_titular, 0, 3);
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
 
             // si existe se comprueba que esten las carpetas de negocio y de resenas
             //si no existen se crean 
-            if(!is_dir($directorioNegocio . "/negocio")) mkdir($directorioNegocio . "/negocio/", 0777, true) ;
+            if(!is_dir($directorioNegocio . "/img_negocio")) mkdir($directorioNegocio . "/img_negocio/", 0777, true) ;
             if(!is_dir($directorioNegocio . "/resenas")) mkdir($directorioNegocio. "/resenas/", 0777, true) ;
 
         }
@@ -185,7 +185,7 @@ class Home extends BaseController{
         $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
         $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
         $foto_principal = "imgPrincipal." . $extensionPrincipal;
-        move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $foto_principal);
+        move_uploaded_file($tmpFoto, $directorioNegocio . "/img_negocio/" . $foto_principal);
 
         // recibo imagenes
         if (isset($_FILES['fotos']) && !empty($_FILES['fotos']['name'][0])) {
@@ -207,7 +207,7 @@ class Home extends BaseController{
                     $fotosBD .= $nombre_foto . ",";
                 }
                         
-                move_uploaded_file($tmpFoto, $directorioNegocio . "/negocio/" . $nombre_foto);
+                move_uploaded_file($tmpFoto, $directorioNegocio . "/img_negocio/" . $nombre_foto);
                    
             }
         }
@@ -459,6 +459,14 @@ class Home extends BaseController{
         // va a resena_content
         if($es_sesion_resena == true){
 
+            // meter en sesion el objeto del usuario para tener los datos a mano
+           session() -> set("sesionIniciada", $resultadoEmail);
+           
+           //meto el objeto del usuario en sesion 
+           $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
+           session() -> set("usuario_en_sesion",$usuario_en_sesion[0]);
+           session() -> set("sesion_iniciada",true);
+
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
        
             //vistas
@@ -469,7 +477,7 @@ class Home extends BaseController{
         }
 
         // formulario de resena_content
-        if($sesion_iniciada == true){
+        if($sesion_iniciada == true ){
             // meter en sesion el objeto del usuario para tener los datos a mano
            session() -> set("sesionIniciada", $resultadoEmail);
            
