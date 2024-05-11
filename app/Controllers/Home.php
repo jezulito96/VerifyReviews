@@ -154,6 +154,12 @@ class Home extends BaseController{
         // campo fotos de la base de datos para guardar nombre del archivo y extension
         $fotosBD = "";
 
+        // recojo el max cod de reseña
+        $baseDatos = new BaseDatos();
+        $cod_resena = $baseDatos -> getMaxResena();
+        $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
+        mkdir($directorioResena, 0777, true);
+
         // recibo las fotos y las guardo en la carpeta
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
             $numFotos = count($_FILES['fotos_resena']['name']);
@@ -166,8 +172,8 @@ class Home extends BaseController{
                 //recojo ubicacion temporal de la foto
                 $tmpFoto = $_FILES['fotos_resena']['tmp_name'][$i]; 
 
-                $nombre_foto =  "n/" . "n_" . $carpetaNegocio . "/img" . ($i + 1) . "." . $extension;
-                $nombre_foto_dir = "/img". ($i + 1) . "." . $extension;
+                $nombre_foto =  "r_" . $cod_resena . "n/" . "n_" . $carpetaNegocio . "/img" . ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "r_" . $cod_resena . "/img". ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
                     $fotosBD .= $nombre_foto;
