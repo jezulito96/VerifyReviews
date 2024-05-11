@@ -146,7 +146,7 @@ class BaseDatos extends Model
 
     public function getNegocio($cod_negocio){
         $activo = 1;
-        $orden = "SELECT cod_negocio, nombre, nickname,  email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria  FROM negocio WHERE cod_negocio=? AND activo=?";
+        $orden = "SELECT cod_negocio, nombre, email, calle, ciudad, pais, telefono_negocio, fotos, foto_principal, coordenadas, sitio_web, cod_categoria  FROM negocio WHERE cod_negocio=? AND activo=?";
         $parametros = [$cod_negocio,$activo];
         $consulta = $this -> db -> query($orden, $parametros);
 
