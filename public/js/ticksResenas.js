@@ -125,7 +125,7 @@ $(document).ready(function () {
         // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
         if(envioForm == true){
 
-            var input_archivos = $('#fotos_resena');
+            var input_archivos = $('#fotos_resena')[0];
             var archivos = input_archivos.files.length;
         
             if (archivos > 5) {
