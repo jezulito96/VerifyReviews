@@ -383,18 +383,20 @@ class Home extends BaseController{
     }
 
     public function setLogin(){
+        echo "entra login";
         // veo si $es_sesion_resena es true
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
             echo "entra en es_sesion_resena";
             if(!isset($_POST['qr_key'])){
+                echo "no hay clave<br>";
                 // si no se recibe clave redirecciona a index
                 return redirect() -> to("https://verifyReviews.es");
             }
 
             if($_POST['es_sesion_resena'] == "sesion"){
-                echo "entra 1<br>";
+                echo "es_sesion_resena = true<br>";
                 $es_sesion_resena = true;
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
@@ -430,13 +432,14 @@ class Home extends BaseController{
         
         if($resultadoEmail == 1 || $resultadoEmail == 2 ){
             // el email coincide 
-
+            echo "entra a mirar correo";
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
      
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Sesión iniciada";
                 $sesion_iniciada = true;
+                echo "todo correcto<br>";
 
             } else {
                 // La contraseña es incorrecta
@@ -451,6 +454,8 @@ class Home extends BaseController{
 
         // va a resena_content
         if($es_sesion_resena == true){
+            echo "completa form = truee<br>";
+            
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
             $maleta_resenaContent['completar_formulario_resena'] = true;
        
@@ -460,7 +465,7 @@ class Home extends BaseController{
             $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
             return view('index', $maleta);
         }
-                
+        echo "no deberia entrar aqui";
         if($sesion_iniciada == true){
             // meter en sesion el objeto del usuario para tener los datos a mano
            session() -> set("sesionIniciada", $resultadoEmail);
