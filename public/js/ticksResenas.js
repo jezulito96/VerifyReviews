@@ -123,22 +123,21 @@ $(document).ready(function () {
         }
 
         if(envioForm == true){
+            var archivos = $('#fotos_resena');
+            var maxArchivos = 5;
+    
+            if (archivos.length > maxArchivos) {
+                $("#resultadoFormResena").text(error);
+            }
+        }
+
+        if(envioForm == true){
             this.submit();
         }else{
             $("#resultadoFormResena").text(error);
         }
 
 
-    });
-
-    // para decir que como maximo se pueden subir cinco fotos 
-    $('#fotos_resena').change(function() {
-        var archivos = $('#fotos_resena');
-        var maxArchivos = 5;
-
-        if (archivos.length > maxArchivos) {
-            $("#resultadoFormResena").text(error);
-        }
     });
 
 });
