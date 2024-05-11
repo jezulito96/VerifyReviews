@@ -138,7 +138,9 @@ class Home extends BaseController{
         echo "Descripción: " . $txt_descripccion . "\n";
         echo "Fecha de Reseña: " . $fecha_resena . "\n";
 
-        // $maleta_resenaContent['resena_enviada'] = true;
+
+
+        $maleta_resenaContent['resena_enviada'] = true;
 
 
 
