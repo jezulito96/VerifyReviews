@@ -80,17 +80,18 @@ $(document).ready(function () {
         var contrasena = $('#contrasena').val();
         var valoracionFinal = valoracionTick;
         var txtTitulo = $(".textoTitulo").val();
-        var txtDescripcion = $(".textoTituloArea").val();
+        var txtDescripccion = $(".textoTituloArea").val();
         var foto1 = $("#foto1").val();
         var foto2 = $("#foto2").val();
         var fechaResena = $("#fechaResena").val();
 
         
         console.log("cod " + codNegocio);
+        console.log("email " + email);
         console.log("contrasena " + contrasena);
         console.log("valoracion " + valoracionFinal);
         console.log("titulo " + txtTitulo);
-        console.log("descripcion " + txtDescripcion);
+        console.log("descripcion " + txtDescripccion);
         console.log("foto1 " + foto1);
         console.log("foto2 " + foto2);
         console.log("fecha resena " + fechaResena);
