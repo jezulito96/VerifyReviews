@@ -159,7 +159,7 @@ class Home extends BaseController{
         $cod_resena = $baseDatos -> getMaxResena();
         $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
         mkdir($directorioResena, 0777, true);
-        echo "cod_resena :" . $cod_resena;
+        echo "cod_resena :" . var_dump($cod_resena);
         // recibo las fotos y las guardo en la carpeta
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
             $numFotos = count($_FILES['fotos_resena']['name']);
