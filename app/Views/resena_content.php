@@ -205,7 +205,7 @@
         </h3>
 
         <div class="areaFecha">
-          <input type="date" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01"></p>
+          <input type="date" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01">
         </div>
 
       </div>
