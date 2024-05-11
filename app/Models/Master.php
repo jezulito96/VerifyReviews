@@ -8,6 +8,8 @@ class Master {
     private $listaCategorias;
     private $listaNegocios;
 
+    private $listaResenas;
+
     private function __construct() {}
 
     public static function obtenerInstancia() {
@@ -49,9 +51,23 @@ class Master {
         $this->listaNegocios[] = new Negocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
     }
 
-    // public function setResena(){
-        
+    // public function setListaResenas($cod_negocio){
+
     // }
+
+    // public function setTopResenas(){
+
+    // }
+
+    public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_id,$estado){
+        
+        $baseDatos = new BaseDatos();
+
+        $this->listaNegocios[];
+        
+
+
+    }
 
 }
 

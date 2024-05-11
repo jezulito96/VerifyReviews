@@ -183,7 +183,7 @@
 
         <div class="areaTexto">
 
-          <textarea class="textoTituloArea" class="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+          <textarea class="textoTituloArea" name="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
           <div id="infoInputs2" class="infoInputs"></div>
 
         </div>

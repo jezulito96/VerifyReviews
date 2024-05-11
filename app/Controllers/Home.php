@@ -116,7 +116,7 @@ class Home extends BaseController{
     }
 
     public function setResena(){
-        // $master = Master::obtenerInstancia();
+        $master = Master::obtenerInstancia();
         echo "edntra en serResena()<br>";
         if(!isset($_POST['qr_key'])){
             return redirect() -> to("https://verifyReviews.es");
@@ -139,6 +139,49 @@ class Home extends BaseController{
         echo "Descripción: " . $txt_descripccion . "<br>";
         echo "Fecha de Reseña: " . $fecha_resena . "<br>";
 
+        // tengo que coger el nombre del negocio y el telefono_titular para buscar el directorio de carpetas
+        // dentro de la carpeta del negocio crear la carpeta resenas si no esta creada 
+        // dentro de la carpeta resena metes las fotos que recojo
+        $negocio = session() -> get("datos_negocio");
+        $negocio = $negocio [0];
+        $carpetaNegocio = substr(strtolower($negocio['nombre']), 0, 3) . substr((string)$negocio['telefono_titular'], 2, 3);
+        $directorioNegocio = "images/negocios/n_" . $carpetaNegocio . "/resenas";
+        
+        if(!is_dir($directorioNegocio)) {
+            mkdir($directorioNegocio, 0777, true);
+        }
+
+        // campo fotos de la base de datos para guardar nombre del archivo y extension
+        $fotosBD = "";
+
+        // recibo las fotos y las guardo en la carpeta
+        if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
+            $numFotos = count($_FILES['fotos_resena']['name']);
+
+            for ($i = 0; $i < $numFotos; $i++) {
+                //extraigo la extension del archivo
+                $nombreAntiguo = $_FILES['fotos_resena']['name'][$i];
+                $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
+
+                //recojo ubicacion temporal de la foto
+                $tmpFoto = $_FILES['fotos_resena']['tmp_name'][$i]; 
+
+                $nombre_foto =  "n/" . "n_" . $carpetaNegocio . "/img" . ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "/img". ($i + 1) . "." . $extension;
+
+                if($i == $numFotos -1){
+                    $fotosBD .= $nombre_foto;
+                }else{
+                    $fotosBD .= $nombre_foto . ",";
+                }
+                        
+                move_uploaded_file($tmpFoto, $directorioNegocio . $nombre_foto_dir);
+                    
+            }
+        }
+
+        // se añade la reseña a base de datos a traves de master
+        // $master -> setResena($cod_negocio,	$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_id,$estado);
 
 
         $maleta_resenaContent['resena_enviada'] = true;
@@ -221,6 +264,7 @@ class Home extends BaseController{
                 $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
 
                 $nombre_foto = $nombreNegocio . "img" . ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "img" . ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
                     $fotosBD .= $nombre_foto;
@@ -228,7 +272,7 @@ class Home extends BaseController{
                     $fotosBD .= $nombre_foto . ",";
                 }
                         
-                move_uploaded_file($tmpFoto, $directorioNegocio . "/img_negocio/" . $nombre_foto);
+                move_uploaded_file($tmpFoto, $directorioNegocio . "/img_negocio/" . $nombre_foto_dir);
                    
             }
         }
