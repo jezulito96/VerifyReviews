@@ -77,6 +77,7 @@ $(document).ready(function () {
         //recojo datos
         var codNegocio = $("#cod_negocio");
         var valoracionFinal = valoracionTick;
+        $("#setResenaForm").html("<input type='hidden' name='valoracionFinal' value='" + valoracionFinal +"' />");
         var txtTitulo = $(".textoTitulo").val();
         var txtDescripccion = $(".textoTituloArea").val();
         var fechaResena = $("#fechaResena").val();
@@ -94,10 +95,10 @@ $(document).ready(function () {
         var error = "";
         var envioForm = true;
 
-        if (txtTitulo.trim() === '' || txtTitulo.length <= 50) {
+        if (txtTitulo.trim() === '' || txtTitulo.length <= 49) {
             error = "El campo del título debe tener al menos 50 caracateres";
             envioForm = false;
-        } else if (txtDescripccion.trim() === '' || txtDescripccion.length <= 170) {
+        } else if (txtDescripccion.trim() === '' || txtDescripccion.length <= 169) {
             envioForm = false;
             error = "El campo de la descripción debe tener al menos 170 caracateres";
         } else if (fechaResena.trim() === '') {
@@ -119,11 +120,6 @@ $(document).ready(function () {
                 error = "La fecha que has seleccionado no es correcta";
             }
 
-            fechaActual.setMonth(fechaActual.getMonth() - 1);
-            
-            if (fechaSeleccionada < fechaActual){
-                error = "Los códigos Qr caducan al mes de su creación";
-            }
         }
 
         if(envioForm == true){

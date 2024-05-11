@@ -115,14 +115,30 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    public function setResena(): string{
+    public function setResena(){
         $master = Master::obtenerInstancia();
+        if(!isset($_POST['qr_key'])){
+            return redirect() -> to("https://verifyReviews.es");
+        } 
 
         // recojo todos los datos
-        
+        $cod_negocio = $this -> request -> getPost("cod_negocio");
+        $qr_key = $this -> request -> getPost("qr_key");
+        $nickname = $this -> request -> getPost("nickname");
+        $valoracion_final = $this -> request -> getPost("valoracionFinal");
+        $txt_Titulo = $this -> request -> getPost("textoTitulo");
+        $txt_descripccion = $this -> request -> getPost("textoTituloArea");
+        $fecha_resena = $this -> request -> getPost("fechaResena");
 
-        
-        $maleta_resenaContent['resena_enviada'] = true;
+        echo "Código de Negocio: " . $cod_negocio . "\n";
+        echo "QR Key: " . $qr_key . "\n";
+        echo "Nickname: " . $nickname . "\n";
+        echo "Valoración Final: " . $valoracion_final . "\n";
+        echo "Título: " . $txt_Titulo . "\n";
+        echo "Descripción: " . $txt_descripccion . "\n";
+        echo "Fecha de Reseña: " . $fecha_resena . "\n";
+
+        // $maleta_resenaContent['resena_enviada'] = true;
 
 
 
