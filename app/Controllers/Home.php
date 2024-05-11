@@ -158,12 +158,12 @@ class Home extends BaseController{
         $baseDatos = new BaseDatos();
         $cod_resena = $baseDatos -> getMaxResena();
         $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
-        if(!is_dir($directorioNegocio)) {
+        if(!is_dir($directorioResena)) {
             mkdir($directorioResena, 0777, true);
         }
-        echo "cod_resena :" . var_dump($cod_resena) . "<br>";
+        
         if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
-        echo "cod_resena :" . var_dump($cod_resena) . "<br>";
+        
         // recibo las fotos y las guardo en la carpetas
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
             $numFotos = count($_FILES['fotos_resena']['name']);
@@ -185,7 +185,7 @@ class Home extends BaseController{
                     $fotosBD .= $nombre_foto . ",";
                 }
                         
-                move_uploaded_file($tmpFoto, $directorioNegocio . $nombre_foto_dir);
+                move_uploaded_file($tmpFoto, $directorioResena . $nombre_foto_dir);
                     
             }
         }
