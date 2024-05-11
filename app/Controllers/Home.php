@@ -144,8 +144,7 @@ class Home extends BaseController{
         // dentro de la carpeta resena metes las fotos que recojo
         $negocio = session() -> get("datos_negocio");
         $negocio = $negocio [0];
-        $carpetaNegocio = substr(strtolower($negocio['nombre']), 0, 3) . substr((string)$negocio['telefono_titular'], 2, 3);
-        $directorioNegocio = "images/n/n_" . $carpetaNegocio . "/resenas";
+        $directorioNegocio = "images/n/n_" . $cod_negocio . "/resenas";
         
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
@@ -159,7 +158,7 @@ class Home extends BaseController{
         $cod_resena = $baseDatos -> getMaxResena();
         if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
 
-        $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
+        $directorioResena = "images/n/n_" . $cod_negocio . "/resenas/r_" . $cod_resena;
         if(!is_dir($directorioResena)) {
             mkdir($directorioResena, 0777, true);
         }
@@ -179,7 +178,7 @@ class Home extends BaseController{
                 $tmpFoto = $_FILES['fotos_resena']['tmp_name'][$i]; 
 
                 $destinoFotos =  $directorioResena . "/img" . ($i + 1) . "." . $extension;
-                $nombre_foto_dir = "n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena . "/img". ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "n_" . $cod_negocio . "/resenas/r_" . $cod_resena . "/img". ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
                     $fotosBD .= $nombre_foto_dir;
@@ -219,6 +218,7 @@ class Home extends BaseController{
     }
 
     public function setNegocio(): string {
+        $baseDatos = new BaseDatos();
         $nombre = $this->request->getPost('nombreNegocio');
         $contrasenaNegocio = $this->request->getPost('contrasenaNegocio');
         $email = $this->request->getPost('email');
@@ -238,9 +238,10 @@ class Home extends BaseController{
         $longitud = $this->request->getPost('longitud');
         $coordenadas = $latitud . "," . $longitud;
 
-
-        $directorioNegocio = FCPATH . "images/n/n_" . substr(strtolower($nombre), 0, 3) . substr((string)$telefono_titular, 2, 3);
-        $nombreNegocio = "images/negocios/n_" . substr(strtolower($nombre), 0, 3) . substr((string)$telefono_titular, 2, 3) . "/img_negocio";
+        $cod_negocio = $baseDatos -> getMaxNegocio();
+        if($cod_negocio == null || empty($cod_negocio) || $cod_negocio == false) $cod_negocio = 1;
+        $directorioNegocio = FCPATH . "images/n/n_" . $cod_negocio;
+        $nombreNegocio = "images/negocios/n_" . $cod_negocio . "/img_negocio";
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
@@ -319,7 +320,7 @@ class Home extends BaseController{
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
-        $baseDatos = new BaseDatos();
+        
         $baseDatos -> setNegocio($nombre,$hash_contrasena, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
 
         

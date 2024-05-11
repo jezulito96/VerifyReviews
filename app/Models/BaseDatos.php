@@ -200,7 +200,22 @@ class BaseDatos extends Model
 
         if($numeroFilas > 0 ){
             $clave = $consulta -> getRow();
-            
+            return $clave -> max_cod;
+        }else{
+            return 1;
+        }
+
+
+    }
+
+    public function getMaxNegocio(){
+
+        $orden = "SELECT MAX(cod_negocio) as max_cod FROM negocio";
+        $consulta = $this -> db -> query($orden);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            $clave = $consulta -> getRow();
             return $clave -> max_cod;
         }else{
             return 1;
