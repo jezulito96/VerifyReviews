@@ -111,11 +111,16 @@ $(document).ready(function () {
             
             var fechaActual = new Date();
             var fechaSeleccionada = new Date(fechaResena);
-            fechaActual.setMonth(fechaActual.getMonth() - 1);
 
             if (fechaSeleccionada > fechaActual) {
                 envioForm = false;
                 error = "La fecha que has seleccionado no es correcta";
+            }
+
+            fechaActual.setMonth(fechaActual.getMonth() - 1);
+            
+            if (fechaSeleccionada < fechaActual){
+
             }
 
         }
