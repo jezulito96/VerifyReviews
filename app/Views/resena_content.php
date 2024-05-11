@@ -88,6 +88,7 @@
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
     $negocio = session() -> get("datos_negocio");
+    $negocio = $negocio [0];
     // if(isset($qr_key))echo "sii hay clave";
     // else echo "no hay clavee";
     echo "<pre>";
