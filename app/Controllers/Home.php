@@ -158,7 +158,7 @@ class Home extends BaseController{
         $baseDatos = new BaseDatos();
         $cod_resena = $baseDatos -> getMaxResena();
         if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
-        
+
         $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
         if(!is_dir($directorioResena)) {
             mkdir($directorioResena, 0777, true);
@@ -178,16 +178,16 @@ class Home extends BaseController{
                 //recojo ubicacion temporal de la foto
                 $tmpFoto = $_FILES['fotos_resena']['tmp_name'][$i]; 
 
-                $nombre_foto =  "n_" . $carpetaNegocio . "/r_" . $cod_resena .  "/img" . ($i + 1) . "." . $extension;
-                $nombre_foto_dir = "/img". ($i + 1) . "." . $extension;
+                $destinoFotos =  $directorioResena . "/img" . ($i + 1) . "." . $extension;
+                $nombre_foto_dir = "n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena . "/img". ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
-                    $fotosBD .= $nombre_foto;
+                    $fotosBD .= $nombre_foto_dir;
                 }else{
-                    $fotosBD .= $nombre_foto . ",";
+                    $fotosBD .= $nombre_foto_dir . ",";
                 }
                         
-                move_uploaded_file($tmpFoto, $directorioResena . $nombre_foto_dir);
+                move_uploaded_file($tmpFoto, $destinoFotos);
                     
             }
         }
