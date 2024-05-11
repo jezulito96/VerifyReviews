@@ -165,13 +165,6 @@ height: 32px;
 display: inline-block;
 }
 
-#foto1::before {
-content: 'Foto 1';
-}
-
-#foto2::before {
-content: 'Foto 2';
-}
 #fotos::before {
   content: 'Sube aquí tus fotos';
 }
