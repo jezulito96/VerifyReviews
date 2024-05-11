@@ -133,14 +133,11 @@ $(document).ready(function () {
 
     // para decir que como maximo se pueden subir cinco fotos 
     $('#fotos_resena').change(function() {
-        var archivos = this.archivos;
+        var archivos = $('#fotos_resena');
         var maxArchivos = 5;
 
-        // Verificar si se ha excedido el número máximo de archivos
         if (archivos.length > maxArchivos) {
             $("#resultadoFormResena").text(error);
-            // Limpiar el valor del input de archivos para eliminar los archivos excedentes
-            this.value = '';
         }
     });
 
