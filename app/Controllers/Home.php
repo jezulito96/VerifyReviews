@@ -164,7 +164,7 @@ class Home extends BaseController{
         $coordenadas = $latitud . "," . $longitud;
 
 
-        $directorioNegocio = FCPATH . "images/negocios/n_" . substr(strtolower($nombre), 0, 3) . substr((string)$telefono_titular, 0, 3);
+        $directorioNegocio = FCPATH . "images/negocios/n_" . substr(strtolower($nombre), 0, 3) . substr((string)$telefono_titular, 2, 3);
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioNegocio, 0777, true);
@@ -199,7 +199,7 @@ class Home extends BaseController{
                 //recojo ubicacion temporal de la foto
                 $tmpFoto = $_FILES['fotos']['tmp_name'][$i]; 
 
-                $nombre_foto = "img" . ($i + 1) . "." . $extension;
+                $nombre_foto = $directorioNegocio . "img" . ($i + 1) . "." . $extension;
 
                 if($i == $numFotos -1){
                     $fotosBD .= $nombre_foto;
