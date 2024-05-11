@@ -224,7 +224,7 @@ class BaseDatos extends Model
 
     }
 
-    public function desctivarQr($id ){
+    public function desactivarQr($id ){
 
         $orden = "UPDATE codigo_qr SET estado=0 WHERE id=?";
         $parametros = [$id];
