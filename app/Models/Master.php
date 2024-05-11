@@ -63,13 +63,13 @@ class Master {
         $baseDatos = new BaseDatos();
 
         // primero tengo que sacar el qr_id del qr_key que es la clave publica 
-        $claveQr = hex2bin($qr_key);
-        $id = $baseDatos ->getQr_id($claveQr);
-        $baseDatos -> desactivarQr($id);
+        // $claveQr = hex2bin($qr_key);
+        $id = $baseDatos ->getQr_id($qr_key);
+        $baseDatos -> desactivarQr(intval($id));
         
         // después hago la insertcion a la base de datos con el id que me devuelve el metodo anterior
         if($id !=false){
-            $baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname);
+            $baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,intval($id),$estado,$nickname);
             return true;
         }else{
             return false;
