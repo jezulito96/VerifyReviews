@@ -252,7 +252,7 @@ class BaseDatos extends Model
         $consulta = $this -> db -> query($orden, $parametros);
         $clave = $consulta -> getRow();
         
-        if($clave->estado == 0 || $clave->estado == "0"){
+        if($clave->estado == 1 || $clave->estado == "1"){
             return true;
         }else{
             return false;
