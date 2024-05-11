@@ -94,10 +94,12 @@ $(document).ready(function () {
         var error = "";
         var envioForm = true;
 
-        if (txtTitulo.trim() === '') {
+        if (txtTitulo.trim() === '' || txtTitulo.val().length <= 50) {
+            error = "El campo del título debe tener al menos 50 caracateres";
             envioForm = false;
-        } else if (txtDescripccion.trim() === '') {
+        } else if (txtDescripccion.trim() === '' || txtTitulo.val().length <= 170) {
             envioForm = false;
+            error = "El campo de la descripción debe tener al menos 170 caracateres";
         } else if (fechaResena.trim() === '') {
             envioForm = false;
         } else if (qr_key.trim() === '') {
@@ -120,9 +122,8 @@ $(document).ready(function () {
             fechaActual.setMonth(fechaActual.getMonth() - 1);
             
             if (fechaSeleccionada < fechaActual){
-
+                error = "Los códigos Qr caducan al mes de su creación";
             }
-
         }
 
         if(envioForm == true){
