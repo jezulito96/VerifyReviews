@@ -123,9 +123,16 @@ $(document).ready(function () {
         }
 
         // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
-        // if(envioForm == true){
+        if(envioForm == true){
 
-        // }
+            var input_archivos = $('#fotos_resena');
+
+            var archivos = input_archivos.files.length;
+        
+            if (archivos > 5) {
+                $("#resultadoFormResena").text("Se permite subir 5 imágenes como máximo");
+            }
+        }
 
         if(envioForm == true){
             this.submit();
@@ -136,16 +143,7 @@ $(document).ready(function () {
 
     });
 
-    var input_archivos = $('#fotos_resena');
 
-    input_archivos.change(function(){
-        var archivos = input_archivos.files.length;
-    
-        if (archivos > 5) {
-            $("#resultadoFormResena").text("Se permite subir 5 imágenes como máximo");
-        }
-
-    });
 
     
 });
