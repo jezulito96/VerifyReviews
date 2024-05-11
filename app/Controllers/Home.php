@@ -82,6 +82,11 @@ class Home extends BaseController{
             $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
 
             if($resultado_descifrado == true){
+                $resultado_descifrado = $baseDatos -> comprobarEstado($claveCifradaHex);
+                echo $resultado_descifrado;
+            }
+
+            if($resultado_descifrado == true){
 
                 $cod_negocio = $this->request->getGet('id');
                 $negocio = $baseDatos -> getNegocio($cod_negocio);
@@ -117,7 +122,7 @@ class Home extends BaseController{
 
     public function setResena(){
         $master = Master::obtenerInstancia();
-        echo "edntra en serResena()<br>";
+
         if(!isset($_POST['qr_key'])){
             return redirect() -> to("https://verifyReviews.es");
         } 
@@ -131,19 +136,19 @@ class Home extends BaseController{
         $txt_descripccion = $this -> request -> getPost("textoTituloArea");
         $fecha_resena = $this -> request -> getPost("fechaResena");
 
-        echo "Código de Negocio: " . $cod_negocio . "<br>";
-        echo "QR Key: " . $qr_key . "<br>";
-        echo "Nickname: " . $nickname . "<br>";
-        echo "Valoración Final: " . $valoracion_final . "<br>";
-        echo "Título: " . $txt_Titulo . "<br>";
-        echo "Descripción: " . $txt_descripccion . "<br>";
-        echo "Fecha de Reseña: " . $fecha_resena . "<br>";
+        // echo "Código de Negocio: " . $cod_negocio . "<br>";
+        // echo "QR Key: " . $qr_key . "<br>";
+        // echo "Nickname: " . $nickname . "<br>";
+        // echo "Valoración Final: " . $valoracion_final . "<br>";
+        // echo "Título: " . $txt_Titulo . "<br>";
+        // echo "Descripción: " . $txt_descripccion . "<br>";
+        // echo "Fecha de Reseña: " . $fecha_resena . "<br>";
 
         // tengo que coger el nombre del negocio y el telefono_titular para buscar el directorio de carpetas
         // dentro de la carpeta del negocio crear la carpeta resenas si no esta creada 
         // dentro de la carpeta resena metes las fotos que recojo
-        $negocio = session() -> get("datos_negocio");
-        $negocio = $negocio [0];
+        // $negocio = session() -> get("datos_negocio");
+        // $negocio = $negocio [0];
         $directorioNegocio = "images/n/n_" . $cod_negocio . "/resenas";
         
         if(!is_dir($directorioNegocio)) {
@@ -167,11 +172,9 @@ class Home extends BaseController{
         
         // recibo las fotos y las guardo en la carpetas
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
-                echo "<br>entra<br>";
                 $numFotos = count($_FILES['fotos_resena']['name']);
 
             for ($i = 0; $i < $numFotos; $i++) {
-                echo "<br>entra<br>";
                 //extraigo la extension del archivo
                 $nombreAntiguo = $_FILES['fotos_resena']['name'][$i];
                 $extension = pathinfo($nombreAntiguo, PATHINFO_EXTENSION);
@@ -193,11 +196,21 @@ class Home extends BaseController{
             }
         }
 
+
+
+        $usuario = session() -> get("usuario_en_sesion");
         // se añade la reseña a base de datos a traves de master
-        // $master -> setResena($cod_negocio,	$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_id,$estado);
+        $resultadoInsert = $master -> setResena($cod_resena,$cod_negocio,$usuario['cod_usuario'],date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$qr_key,1, $nickname);
 
+        if($resultadoInsert == true){
+            $maleta_resenaContent['resena_enviada'] = true;
+        }else{
 
-        $maleta_resenaContent['resena_enviada'] = true;
+            /////////// gestionar el error en resena_content
+
+            $maleta_resenaContent['resena_enviada'] = true;
+        }
+        
 
 
 

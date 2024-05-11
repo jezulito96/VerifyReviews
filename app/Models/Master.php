@@ -59,13 +59,20 @@ class Master {
 
     // }
 
-    public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_id,$estado){
-        
+    public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_key,$estado,$nickname){
         $baseDatos = new BaseDatos();
 
-        // $this->listaNegocios[];
+        // primero tengo que sacar el qr_id del qr_key que es la clave publica 
         
-
+        $id = $baseDatos -> desactivarQr(hex2bin($qr_key));
+        
+        // después hago la insertcion a la base de datos con el id que me devuelve el metodo anterior
+        if($id !=false){
+            $baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname);
+            return true;
+        }else{
+            return false;
+        }
 
     }
 

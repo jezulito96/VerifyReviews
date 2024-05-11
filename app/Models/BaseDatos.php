@@ -223,6 +223,47 @@ class BaseDatos extends Model
 
 
     }
+
+    public function desctivarQr($qr_key){
+
+        $orden = "UPDATE codigo_qr SET estado=1 WHERE clave_publica='" . $qr_key . "' ";
+        $this -> db -> query($orden);
+
+        $orden = "SELECT id FROM codigo_qr WHERE clave_publica=?";
+        $parametros = [$qr_key];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            // email coincide con negocio 
+            $clave = $consulta -> getRow();
+            return $clave->id;
+        }else{
+            return false;
+        }
+
+    }
+
+    public function comprobarEstado($claveCifradaHex){
+        $orden = "SELECT estado FROM codigo_qr WHERE clave_publica=?";
+        $parametros = [$claveCifradaHex];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $clave = $consulta -> getRow();
+        
+        if($clave->vector_inicializacion == 0){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+    public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname){
+        $orden = "INSERT INTO (cod_negocio, cod_usuario, fecha_creacion,	fecha_servicio,	calificacion,titulo,opinion,fotos,qr_id,estado,	nickname) 
+                  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $parametros = [$cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];
+        $this -> db -> query($orden, $parametros);
+    }
 }
 
 
