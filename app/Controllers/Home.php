@@ -119,6 +119,7 @@ class Home extends BaseController{
         $master = Master::obtenerInstancia();
 
         // recojo todos los datos
+        
 
         
         $maleta_resenaContent['resena_enviada'] = true;

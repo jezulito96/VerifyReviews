@@ -74,26 +74,26 @@ $(document).ready(function () {
     $('#setResenaForm').submit(function(event) {
         event.preventDefault();
         
-        // Recoger los datos del formulario
+        //recojo datos
+        var codNegocio = $("#cod_negocio");
+        var email = $('#email').val();
+        var contrasena = $('#contrasena').val();
         var valoracionFinal = valoracionTick;
-        console.log( valoracionFinal);
-
         var txtTitulo = $(".textoTitulo").val();
-        console.log( txtTitulo);
-
         var txtDescripcion = $(".textoTituloArea").val();
-        console.log( txtDescripccion);
-
         var foto1 = $("#foto1").val();
-        console.log( foto1);
-
         var foto2 = $("#foto2").val();
-        console.log( foto2);
-
         var fechaResena = $("#fechaResena").val();
+
+        console.log("valoracion " + valoracionFinal);
+        console.log("valoracion " + valoracionFinal);
+        console.log( txtTitulo);
+        console.log( txtDescripccion);
+        console.log( foto1);
+        console.log( foto2);
         console.log( fechaResena);
 
-        this.submit();
+        // this.submit();
     });
 
 });

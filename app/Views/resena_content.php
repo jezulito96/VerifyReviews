@@ -91,13 +91,15 @@
     $negocio = $negocio [0];
     // if(isset($qr_key))echo "sii hay clave";
     // else echo "no hay clavee";
-    echo "<pre>";
-    print_r($negocio);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($negocio);
+    // echo "</pre>";
 
 ?>
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
+  <input type="hidden" id="cod_negocio" name="cod_negocio" value="<?php echo $negocio['cod_negocio']; ?>" />
+
   <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
   <div class="resenaContainer" id="resenaContainer">
@@ -214,18 +216,16 @@
 
 </form>
 
-<?php
-
-  }
-
-?>
-<script>
+<!-- <script>
 
   $(document).ready(function(){
+
+    //valido los datos antes de enviarlos
     $('#setResenaForm').submit(function(event) {
       event.preventDefault();
 
-      // Aquí puedes realizar tus validaciones
+      //recojo datos
+      var codNegocio = $("#cod_negocio");
       var email = $('#email').val();
       var contrasena = $('#contrasena').val();
 
@@ -240,7 +240,14 @@
     });
   });
 
-</script>
+</script> -->
+
+<?php
+
+  }
+
+?>
+
 <!-- script para pintar los ticks verdes de una nueva reseña -->
 <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
 
