@@ -1,7 +1,7 @@
 <?php
   if(isset($error)){
     echo $error;
-  }elseif(isset($resena_enviada)){
+  }elseif(isset($resena_enviada) && $resena_enviada == true){
     echo "resena enviadaaaaaaaaa";
   }elseif((isset($inicio_sesion_container) && $inicio_sesion_container == true) || isset($errorEmail)){
     // echo FCPATH;

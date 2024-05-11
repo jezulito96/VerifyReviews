@@ -116,7 +116,8 @@ class Home extends BaseController{
     }
 
     public function setResena(){
-        $master = Master::obtenerInstancia();
+        // $master = Master::obtenerInstancia();
+        echo "edntra en serResena()<br>";
         if(!isset($_POST['qr_key'])){
             return redirect() -> to("https://verifyReviews.es");
         } 
