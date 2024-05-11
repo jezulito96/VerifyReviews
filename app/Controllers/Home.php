@@ -157,12 +157,14 @@ class Home extends BaseController{
         // recojo el max cod de reseña
         $baseDatos = new BaseDatos();
         $cod_resena = $baseDatos -> getMaxResena();
+        if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
+        
         $directorioResena = "images/n/n_" . $carpetaNegocio . "/resenas/r_" . $cod_resena;
         if(!is_dir($directorioResena)) {
             mkdir($directorioResena, 0777, true);
         }
         
-        if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
+        
         
         // recibo las fotos y las guardo en la carpetas
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
