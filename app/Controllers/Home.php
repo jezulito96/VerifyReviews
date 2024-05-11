@@ -116,9 +116,13 @@ class Home extends BaseController{
     }
 
     public function setResena(): string{
+        $master = Master::obtenerInstancia();
 
-        echo "llega a setResena";
+        // recojo todos los datos
+
+        
         $maleta_resenaContent['resena_enviada'] = true;
+
 
 
         //vistas
@@ -131,8 +135,6 @@ class Home extends BaseController{
     public function nuevoNegocio(): string {
         $master = Master::obtenerInstancia();
         $nuevo_negocio['listaCategorias'] = $master->getListaCategorias();
-
-
         
         //vistas
         $maleta['head_content'] = view('head_content');
@@ -383,14 +385,11 @@ class Home extends BaseController{
     }
 
     public function setLogin(){
-        echo "entra login";
         // veo si $es_sesion_resena es true
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
         if(isset($_POST['es_sesion_resena'])){
-            echo "entra en es_sesion_resena";
             if(!isset($_POST['qr_key'])){
-                echo "no hay clave<br>";
                 // si no se recibe clave redirecciona a index
                 return redirect() -> to("https://verifyReviews.es");
             }
@@ -426,18 +425,14 @@ class Home extends BaseController{
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
-        echo $emailUsuario ."<br>";
-        echo $contrasenaUsuario ."<br>";
 
         $resultadoEmail = false;
         $sesion_iniciada = false;
       
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
-        echo "resultado email" . $resultadoEmail . "<br>";
         
         if($resultadoEmail == 1 || $resultadoEmail == 2 ){
             // el email coincide 
-            echo "entra a mirar correo";
             $hash_constrasena = $baseDatos -> getHashContrasena($emailUsuario,$resultadoEmail);
             if (password_verify($contrasenaUsuario, $hash_constrasena)) {
      
@@ -447,7 +442,6 @@ class Home extends BaseController{
                 echo "todo correcto<br>";
 
             } else {
-                echo "No esta correcto";
                 // La contraseña es incorrecta
                 // se devulve a la vista login con un error
                 $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
@@ -455,7 +449,6 @@ class Home extends BaseController{
                 $maleta_resenaContent['completar_formulario_resena'] = false;
             }
         }else{
-            echo "No esta correcto";
             // el email es incorrecto 
             // se devulve a la vista login con un error
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
@@ -465,7 +458,6 @@ class Home extends BaseController{
 
         // va a resena_content
         if($es_sesion_resena == true){
-            echo "completa form = truee<br>";
 
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
        
@@ -475,7 +467,8 @@ class Home extends BaseController{
             $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
             return view('index', $maleta);
         }
-        echo "no deberia entrar aqui";
+
+        // formulario de resena_content
         if($sesion_iniciada == true){
             // meter en sesion el objeto del usuario para tener los datos a mano
            session() -> set("sesionIniciada", $resultadoEmail);
