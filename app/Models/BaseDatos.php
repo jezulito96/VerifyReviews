@@ -253,7 +253,7 @@ class BaseDatos extends Model
         $clave = $consulta -> getRow();
         
         if($clave->estado == 0){
-            var_dump($clave->estado);
+            
             return true;
         }else{
             return false;
