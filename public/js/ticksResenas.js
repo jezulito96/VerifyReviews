@@ -94,9 +94,7 @@ $(document).ready(function () {
         var error = "";
         var envioForm = true;
 
-        if (valoracionFinal.trim() === '') {
-            envioForm = false;
-        } else if (txtTitulo.trim() === '') {
+        if (txtTitulo.trim() === '') {
             envioForm = false;
         } else if (txtDescripccion.trim() === '') {
             envioForm = false;
