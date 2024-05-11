@@ -161,7 +161,8 @@ class Home extends BaseController{
         if(!is_dir($directorioNegocio)) {
             mkdir($directorioResena, 0777, true);
         }
-        echo "cod_resena :" . var_dump($cod_resena);
+        echo "cod_resena :" . var_dump($cod_resena) . "<br>";
+        if($cod_resena == null || empty($cod_resena)) $cod_resena = 1;
         // recibo las fotos y las guardo en la carpeta
         if (isset($_FILES['fotos_resena']) && !empty($_FILES['fotos_resena']['name'][0])) {
             $numFotos = count($_FILES['fotos_resena']['name']);
