@@ -77,7 +77,7 @@ $(document).ready(function () {
         //recojo datos
         var codNegocio = $("#cod_negocio");
         var valoracionFinal = valoracionTick;
-        $("#setResenaForm").html("<input type='hidden' name='valoracionFinal' value='" + valoracionFinal +"' />");
+        $("#setResenaForm").append("<input type='hidden' name='valoracionFinal' value='" + valoracionFinal +"' />");
         var txtTitulo = $(".textoTitulo").val();
         var txtDescripccion = $(".textoTituloArea").val();
         var fechaResena = $("#fechaResena").val();
