@@ -226,8 +226,9 @@ class BaseDatos extends Model
 
     public function desctivarQr($id ){
 
-        $orden = "UPDATE codigo_qr SET estado=0 WHERE id='" . $id . "' ";
-        $this -> db -> query($orden);
+        $orden = "UPDATE codigo_qr SET estado=0 WHERE id=?";
+        $parametros = [$id];
+        $this -> db -> query($orden,$parametros);
 
     }
 
