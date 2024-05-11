@@ -63,7 +63,7 @@ class Master {
         
         $baseDatos = new BaseDatos();
 
-        $this->listaNegocios[];
+        // $this->listaNegocios[];
         
 
 
