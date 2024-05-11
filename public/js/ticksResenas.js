@@ -123,7 +123,7 @@ $(document).ready(function () {
         if(envioForm == true){
             this.submit();
         }else{
-            $("#resultadoFormResena").text($error);
+            $("#resultadoFormResena").text(error);
         }
 
 
