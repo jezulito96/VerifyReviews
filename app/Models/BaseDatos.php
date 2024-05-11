@@ -264,7 +264,7 @@ class BaseDatos extends Model
     public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname){
         $orden = "INSERT INTO resena (cod_negocio, cod_usuario, fecha_creacion,	fecha_servicio,	calificacion,titulo,opinion,fotos,qr_id,estado,	nickname) 
                   VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-        $parametros = [$cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];
+        $parametros = [$cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];
         $this -> db -> query($orden, $parametros);
     }
 }
