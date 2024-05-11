@@ -172,6 +172,9 @@ content: 'Foto 1';
 #foto2::before {
 content: 'Foto 2';
 }
+#fotos::before {
+  content: 'Sube aquí tus fotos';
+}
 
 .fechaResena{
     margin-left:20px ;
