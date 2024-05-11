@@ -126,11 +126,11 @@ $(document).ready(function () {
         if(envioForm == true){
 
             var input_archivos = $('#fotos_resena');
-
             var archivos = input_archivos.files.length;
         
             if (archivos > 5) {
-                $("#resultadoFormResena").text("Se permite subir 5 imágenes como máximo");
+                error= "Se permite subir 5 imágenes como máximo";
+                envioForm = false;
             }
         }
 
