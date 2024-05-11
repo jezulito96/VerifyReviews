@@ -98,10 +98,9 @@
 ?>
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
+
   <input type="hidden" id="cod_negocio" name="cod_negocio" value="<?php echo $negocio['cod_negocio']; ?>" />
   <input type="hidden" id="qr_key" name="qr_key" value="<?php echo $qr_key ;?>" /> 
-  
-
   <?php 
     if(session() -> get("sesionIniciada") == true){
       $usuario_en_sesion = session() -> get("usuario_en_sesion");

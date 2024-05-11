@@ -94,11 +94,7 @@ $(document).ready(function () {
         var error = "";
         var envioForm = true;
 
-        if (codNegocio.trim() === '') {
-            envioForm = false;
-        } else if (email.trim() === '') {
-            envioForm = false;
-        } else if (contrasena.trim() === '') {
+        if (contrasena.trim() === '') {
             envioForm = false;
         } else if (valoracionFinal.trim() === '') {
             envioForm = false;
