@@ -198,7 +198,7 @@
         <div class="areaFile">
 
           <div class="file-select" id="fotos">
-            <input type="file" maxlength="5" id="fotos_resena" name="fotos[]" accept="image/*" aria-label="Archivo" multiple>
+            <input type="file" maxlength="5" id="fotos_resena" name="fotos[]" accept="image/*" aria-label="Archivo" multiple><span class="subtitulo">(opcional)</span>
           </div>
 
         </div>
