@@ -3,7 +3,8 @@
     echo $error;
   }elseif(isset($resena_enviada)){
     echo "resena enviadaaaaaaaaa";
-  }elseif(isset($inicio_sesion_container) && $inicio_sesion_container == true){
+  }elseif((isset($inicio_sesion_container) && $inicio_sesion_container == true) || isset($errorEmail)){
+
 ?>
 <!-- <form action="setLogin" method="post" id="formSetResena"> -->
   <div class="containerResenaLogin">
@@ -80,6 +81,10 @@
   </script>
 
 <?php
+    if(isset($errorEmail)){
+      echo $errorEmail;
+    }
+
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
     $negocio = session() -> get("datos_negocio");

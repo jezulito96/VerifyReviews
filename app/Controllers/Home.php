@@ -397,6 +397,7 @@ class Home extends BaseController{
 
             if($_POST['es_sesion_resena'] == "sesion"){
                 echo "es_sesion_resena = true<br>";
+                $maleta_resenaContent['completar_formulario_resena'] = true;
                 $es_sesion_resena = true;
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
@@ -425,10 +426,14 @@ class Home extends BaseController{
         $emailUsuario = $this->request->getPost('email');
         $contrasenaUsuario = $this->request->getPost('contrasena');
 
+        echo $emailUsuario ."<br>";
+        echo $contrasenaUsuario ."<br>";
+
         $resultadoEmail = false;
         $sesion_iniciada = false;
       
         $resultadoEmail = $baseDatos -> comprobarEmail($emailUsuario);
+        echo "resultado email" . $resultadoEmail . "<br>";
         
         if($resultadoEmail == 1 || $resultadoEmail == 2 ){
             // el email coincide 
@@ -442,22 +447,27 @@ class Home extends BaseController{
                 echo "todo correcto<br>";
 
             } else {
+                echo "No esta correcto";
                 // La contraseña es incorrecta
                 // se devulve a la vista login con un error
                 $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
+                $maleta_resenaContent['errorEmail'] = "Email y/o contraseña incorrectos";
+                $maleta_resenaContent['completar_formulario_resena'] = false;
             }
         }else{
+            echo "No esta correcto";
             // el email es incorrecto 
             // se devulve a la vista login con un error
             $maleta_login['errorEmail'] = "Email y/o contraseña incorrectos";
+            $maleta_resenaContent['errorEmail'] = "Email y/o contraseña incorrectos";
+            $maleta_resenaContent['completar_formulario_resena'] = false;
         }
 
         // va a resena_content
         if($es_sesion_resena == true){
             echo "completa form = truee<br>";
-            
+
             $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
-            $maleta_resenaContent['completar_formulario_resena'] = true;
        
             //vistas
             $maleta['head_content'] = view('head_content');
