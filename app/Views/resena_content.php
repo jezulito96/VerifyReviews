@@ -227,32 +227,6 @@
 
 </form>
 
-<!-- <script>
-
-  $(document).ready(function(){
-
-    //valido los datos antes de enviarlos
-    $('#setResenaForm').submit(function(event) {
-      event.preventDefault();
-
-      //recojo datos
-      var codNegocio = $("#cod_negocio");
-      var email = $('#email').val();
-      var contrasena = $('#contrasena').val();
-
-      // Ejemplo de validación
-      if (email === '' || contrasena === '') {
-          alert('Por favor, completa todos los campos.');
-          return;
-      }
-
-      // Si todas las validaciones son exitosas, entonces envía el formulario
-      this.submit();
-    });
-  });
-
-</script> -->
-
 <?php
 
   }

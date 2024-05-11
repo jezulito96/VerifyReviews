@@ -109,7 +109,7 @@ $(document).ready(function () {
             envioForm = false;
         }
 
-
+        //compruebo que la fecha no pase de hoy
         if(envioForm == true){
             
             var fechaActual = new Date();
@@ -129,6 +129,19 @@ $(document).ready(function () {
         }
 
 
+    });
+
+    // para decir que como maximo se pueden subir cinco fotos 
+    $('#fotos').change(function() {
+        var archivos = this.archivos;
+        var maxArchivos = 5;
+
+        // Verificar si se ha excedido el número máximo de archivos
+        if (archivos.length > maxArchivos) {
+            $("#resultadoFormResena").text(error);
+            // Limpiar el valor del input de archivos para eliminar los archivos excedentes
+            this.value = '';
+        }
     });
 
 });
