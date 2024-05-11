@@ -169,7 +169,7 @@
 
         <div class="areaTexto">
 
-          <input type="text" class="textoTitulo" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Velada perfecta en pareja ...">
+          <input type="text" name="textoTitulo" class="textoTitulo" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Velada perfecta en pareja ...">
           <div id="infoInputs1" class="infoInputs"></div>
 
         </div>
@@ -183,7 +183,7 @@
 
         <div class="areaTexto">
 
-          <textarea class="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+          <textarea class="textoTituloArea" class="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
           <div id="infoInputs2" class="infoInputs"></div>
 
         </div>
@@ -197,14 +197,8 @@
 
         <div class="areaFile">
 
-          <!-- <input type="file" class="fotosResena" aria-label="Archivo"/> -->
-
-          <div class="file-select" id="foto1">
-            <input type="file" id="foto1" name="foto1" aria-label="Archivo">
-          </div>
-
           <div class="file-select" id="foto2">
-            <input type="file" id="foto2" name="foto2" aria-label="Archivo">
+            <input type="file" maxlength="5" id="fotos" name="fotos[]" accept="image/*" aria-label="Archivo" multiple>
           </div>
 
         </div>
@@ -217,7 +211,7 @@
         </h3>
 
         <div class="areaFecha">
-          <input type="date" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01">
+          <input type="date" name="fechaResena" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01">
         </div>
 
       </div>
