@@ -112,12 +112,12 @@
 
         <div class="nombreNegocio" id="nombreNegocio">
           <!-- La terraza del caballo blanco -->
-          <?php echo $negocio['nombre'] ;?>
+          <?php //echo $negocio['nombre'] ;?>
         </div>
 
         <div class="direccionNegocio" id="direccionNegocio">
           <!-- Av. Valladolid, 106, 42005 Soria -->
-          <?php echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?>
+          <?php //echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?>
         </div>
 
       </div>
