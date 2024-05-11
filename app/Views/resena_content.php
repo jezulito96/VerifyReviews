@@ -99,6 +99,8 @@
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
   <input type="hidden" id="cod_negocio" name="cod_negocio" value="<?php echo $negocio['cod_negocio']; ?>" />
+  <input type="hidden" id="qr_key" name="qr_key" value="<?php echo $qr_key ;?>" /> 
+  <input type="hidden" id="nickname" name="nickname" value="<?php echo $negocio['nickname'] ;?>" /> 
 
   <h1 class="tituloResenaContent">Escribe tu reseña</h1>
 
@@ -155,7 +157,7 @@
 
         <div class="areaTexto">
 
-          <input type="text" class="textoTitulo" minlenght="5" maxlength="50" title="Título de la reseña" required placeholder="Velada perfecta en pareja ...">
+          <input type="text" class="textoTitulo" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Velada perfecta en pareja ...">
           <div id="infoInputs1" class="infoInputs"></div>
 
         </div>
@@ -169,7 +171,7 @@
 
         <div class="areaTexto">
 
-          <textarea class="textoTituloArea" minlenght="50" maxlength="300" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+          <textarea class="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
           <div id="infoInputs2" class="infoInputs"></div>
 
         </div>
@@ -210,7 +212,10 @@
     </div>
   </div>
 
-  <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>" /> 
+  <div id="resultadoFormResena">
+      <!-- Se insertarán posibles errores -->
+  </div>
+  
   
   <input type="submit" value="Enviar" />
 

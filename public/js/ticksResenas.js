@@ -55,17 +55,17 @@ $(document).ready(function () {
     
     
     $('.textoTitulo').on('input', function() {
-        var maxLength = $(this).attr('maxlength');
-        var currentLength = $(this).val().length;
-        var remainingLength = maxLength - currentLength;
-        $('#infoInputs1').text('Máximo ' + maxLength + ' caracteres (' + remainingLength + ' restantes)');
+        var tamanoMaximo = $(this).attr('minlenght');
+        var tamanoActual = $(this).val().length;
+        var tamanoRestante = tamanoMaximo - tamanoActual;
+        $('#infoInputs1').text('Mínimo ' + tamanoMaximo + ' caracteres (' + tamanoRestante + ' restantes)');
     });
 
     $('.textoTituloArea').on('input', function() {
-        var maxLength = $(this).attr('maxlength');
-        var currentLength = $(this).val().length;
-        var remainingLength = maxLength - currentLength;
-        $('#infoInputs2').text('Máximo ' + maxLength + ' caracteres (' + remainingLength + ' restantes)');
+        var tamanoMaximo = $(this).attr('minlenght');
+        var tamanoActual = $(this).val().length;
+        var tamanoRestante = tamanoMaximo - tamanoActual;
+        $('#infoInputs2').text('Mínimo ' + tamanoMaximo + ' caracteres (' + tamanoRestante + ' restantes)');
     });
 
     // estilos para validación usuario
@@ -76,27 +76,65 @@ $(document).ready(function () {
         
         //recojo datos
         var codNegocio = $("#cod_negocio");
-        var email = $('#email').val();
-        var contrasena = $('#contrasena').val();
         var valoracionFinal = valoracionTick;
         var txtTitulo = $(".textoTitulo").val();
         var txtDescripccion = $(".textoTituloArea").val();
-        var foto1 = $("#foto1").val();
-        var foto2 = $("#foto2").val();
         var fechaResena = $("#fechaResena").val();
-
+        var nickname = $("#nickname").val();
+        var qr_key = $("#qr_key").val();
         
         console.log("cod " + codNegocio);
-        console.log("email " + email);
-        console.log("contrasena " + contrasena);
         console.log("valoracion " + valoracionFinal);
         console.log("titulo " + txtTitulo);
         console.log("descripcion " + txtDescripccion);
-        console.log("foto1 " + foto1);
-        console.log("foto2 " + foto2);
         console.log("fecha resena " + fechaResena);
+        console.log("nickname " + nickname);
+        console.log("qr_key " + qr_key);
 
-        // this.submit();
+        var error = "";
+        var envioForm = true;
+
+        if (codNegocio.trim() === '') {
+            envioForm = false;
+        } else if (email.trim() === '') {
+            envioForm = false;
+        } else if (contrasena.trim() === '') {
+            envioForm = false;
+        } else if (valoracionFinal.trim() === '') {
+            envioForm = false;
+        } else if (txtTitulo.trim() === '') {
+            envioForm = false;
+        } else if (txtDescripccion.trim() === '') {
+            envioForm = false;
+        } else if (fechaResena.trim() === '') {
+            envioForm = false;
+        } else if (qr_key.trim() === '') {
+            envioForm = false;
+        } else if (nickname.trim() === '') {
+            envioForm = false;
+        }
+
+
+        if(envioForm == true){
+            
+            var fechaActual = new Date();
+            var fechaSeleccionada = new Date(fechaResena);
+            fechaActual.setMonth(fechaActual.getMonth() - 1);
+
+            if (fechaSeleccionada > fechaActual) {
+                envioForm = false;
+                error = "La fecha que has seleccionado no es correcta";
+            }
+
+        }
+
+        if(envioForm == true){
+            this.submit();
+        }else{
+            $("#resultadoFormResena").text($error);
+        }
+
+
     });
 
 });
