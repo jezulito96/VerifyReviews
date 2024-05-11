@@ -88,8 +88,8 @@
 
   }elseif(isset($completar_formulario_resena) && $completar_formulario_resena == true) {
     $negocio = session() -> get("datos_negocio");
-    if(isset($qr_key))echo "sii hay clave";
-    else echo "no hay clavee";
+    // if(isset($qr_key))echo "sii hay clave";
+    // else echo "no hay clavee";
     echo "<pre>";
     print_r($negocio);
     echo "</pre>";
@@ -111,11 +111,13 @@
       <div class="datosNegocio" id="datosNegocio">
 
         <div class="nombreNegocio" id="nombreNegocio">
-          La terraza del caballo blanco
+          <!-- La terraza del caballo blanco -->
+          <?php echo $negocio['nombre'] ;?>
         </div>
 
         <div class="direccionNegocio" id="direccionNegocio">
-          Av. Valladolid, 106, 42005 Soria
+          <!-- Av. Valladolid, 106, 42005 Soria -->
+          <?php echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?>
         </div>
 
       </div>
