@@ -199,9 +199,9 @@ class BaseDatos extends Model
         $numeroFilas = $consulta -> getNumRows();
 
         if($numeroFilas > 0 ){
-            $stmt = $consulta -> getRow();
+            $clave = $consulta -> getRow();
             
-            return $stmt->cod_resena;
+            return $clave -> cod_resena;
         }else{
             return 1;
         }
