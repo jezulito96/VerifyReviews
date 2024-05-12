@@ -45,10 +45,14 @@ $(document).ready(function () {
     //     }
     // });
 
-        $(".header").css('backdrop-filter', 'blur(5px)');
-        $(".body").css('backdrop-filter', 'blur(5px)');
+ // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
+ $('#ubicacion').show();
+ $('#main').addClass('blurred');
 
-        $(".header").css('z-index', '-1');
-        $(".body").css('z-index', '-1');
-
+ // Cuando se hace clic en el botón "ubicacion"
+ $('#ubicacion').click(function() {
+   // Ocultar el botón y quitar el efecto de desenfoque
+   $(this).hide();
+   $('#main').removeClass('blurred');
+ });
 });
