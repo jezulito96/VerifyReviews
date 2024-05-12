@@ -78,8 +78,9 @@ class BaseDatos extends Model
         }
     }
 
-    function setUsuario($nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena){
-        $orden = "INSERT INTO usuario_registrado (nombre, apellidos, nickname, foto_perfil, contrasena, ciudad, pais, coordenadas, fecha_nacimiento, email, telefono, activo, confirma_correo, cod_confirmacion, cod_recordar_contrasena, fecha_creacion) VALUES ('$nombre', '$apellidos', '$nickname', '$foto_perfil', '$hash_contrasena', '$ciudad', '$pais', '$coordenadas', '$fecha_nacimiento', '$email', '$telefono', '$activo', '$confirma_correo', '$codigoConfirmacion', '$codigo_recordar_contrasena', NOW())";
+    function setUsuario($cod_usuario,$nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena){
+
+        $orden = "INSERT INTO usuario_registrado (cod_usuario,nombre, apellidos, nickname, foto_perfil, contrasena, ciudad, pais, coordenadas, fecha_nacimiento, email, telefono, activo, confirma_correo, cod_confirmacion, cod_recordar_contrasena, fecha_creacion) VALUES ($cod_usuario,'$nombre', '$apellidos', '$nickname', '$foto_perfil', '$hash_contrasena', '$ciudad', '$pais', '$coordenadas', '$fecha_nacimiento', '$email', '$telefono', '$activo', '$confirma_correo', '$codigoConfirmacion', '$codigo_recordar_contrasena', NOW())";
 
 
         $this -> db -> query($orden);
@@ -224,6 +225,43 @@ class BaseDatos extends Model
 
     }
 
+    public function getMaxUsuario(){
+        $max_no_registrado = 0;
+        $max_registrado = 0;
+        
+        $orden = "SELECT MAX(cod_usuario) as max_cod FROM usuario_no_registrado";
+        $consulta = $this -> db -> query($orden);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            $clave = $consulta -> getRow();
+            $max_no_registrado = $clave -> max_cod;
+        }else{
+            $max_no_registrado = 1;
+        }
+
+        $sql = "SELECT MAX(cod_usuario) as max_cod_usu FROM usuario_registrado";
+        $stmt = $this -> db -> query($sql);
+        $numFilas = $stmt -> getNumRows();
+
+        if($numFilas > 0 ){
+            $key = $stmt -> getRow();
+            $max_registrado = $key -> max_cod_usu;
+        }else{
+            $max_registrado = 1;
+        }
+
+        $max_no_registrado = intval($max_no_registrado);
+        $max_registrado = intval($max_registrado);
+
+        if($max_no_registrado > $max_registrado){
+            return $max_no_registrado + 1 ;
+        }else{
+            return $max_registrado + 1;
+        }
+        
+    }
+
     public function desactivarQr($id ){
 
         $orden = "UPDATE codigo_qr SET estado=0 WHERE id=?";
@@ -262,6 +300,13 @@ class BaseDatos extends Model
     }
 
     public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname){
+        $orden = "INSERT INTO resena (cod_negocio, cod_usuario, fecha_creacion,	fecha_servicio,	calificacion,titulo,opinion,fotos,qr_id,estado,	nickname) 
+                  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $parametros = [$cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];
+        $this -> db -> query($orden, $parametros);
+    }
+
+    public function setResena_no_registrado($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname){
         $orden = "INSERT INTO resena (cod_negocio, cod_usuario, fecha_creacion,	fecha_servicio,	calificacion,titulo,opinion,fotos,qr_id,estado,	nickname) 
                   VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $parametros = [$cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];

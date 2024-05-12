@@ -206,12 +206,26 @@ class Home extends BaseController{
             }
         }
 
+        // en tabla usu_si retocar el insert para meter el cod_max
 
+        if(isset($usuario_sin_sesion)){
+            $id = $baseDatos ->getQr_id($qr_key);
+            $baseDatos -> desactivarQr(intval($id));
+            $max_cod = $baseDatos -> getMaxUsuario();
+            //inserto cod y nickname en tabla usu no registrado
+            $baseDatos -> setUsu_sin_registrar($max_cod, $nickname);
 
-        $usuario = session() -> get("usuario_en_sesion");
-        // se añade la reseña a base de datos a traves de master
-        $resultadoInsert = $master -> setResena($cod_resena,$cod_negocio,$usuario['cod_usuario'],date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$qr_key,1, $nickname);
+            //inserto reseña
+            $baseDatos -> setResena($cod_resena,$cod_negocio,$max_cod,date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$id,1, $nickname);
+            $resultadoInsert = true;
+            
+        }else{
+            $usuario = session() -> get("usuario_en_sesion");
+            // se añade la reseña a base de datos a traves de master
+            $resultadoInsert = $master -> setResena($cod_resena,$cod_negocio,$usuario['cod_usuario'],date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$qr_key,1, $nickname);
+        }
 
+        
         if($resultadoInsert == true){
             $maleta_resenaContent['resena_enviada'] = true;
         }else{
@@ -470,7 +484,8 @@ class Home extends BaseController{
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
         $baseDatos = new BaseDatos();
-        $baseDatos -> setUsuario($nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
+        $max_cod = $baseDatos -> getMaxUsuario();
+        $baseDatos -> setUsuario($max_cod,$nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
 
         
         //vistas
