@@ -25,8 +25,18 @@ li{
     border: 1px solid rgb(234, 52, 52);
 }
 
+
+/* es para los permisos de acceder a la ubicacion */
 .blur {
     backdrop-filter: blur(5px); /* Aplica un efecto de desenfoque al fondo */
     transition: backdrop-filter 0.5s ease; /* Agrega una transición suave al desenfoque */
     -webkit-filter: blur(8px);  
-  }
+}
+
+.containerPermisosUbicacion{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 300px;
+}
