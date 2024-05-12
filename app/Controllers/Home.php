@@ -170,8 +170,8 @@ class Home extends BaseController{
             echo "suma uno a " + $cod_resena;
         }
 
-        echo "<br>";
-        var_dump($cod_resena);
+        $maleta_resenaContent['cod_resena'] = $cod_resena;
+        
 
         $directorioResena = "images/n/n_" . $cod_negocio . "/resenas/r_" . $cod_resena;
         if(!is_dir($directorioResena)) {

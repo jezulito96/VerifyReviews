@@ -3,6 +3,7 @@
     echo $error;
   }elseif(isset($resena_enviada) && $resena_enviada == true){
     echo "resena enviadaaaaaaaaa";
+    var_dump($cod_resena);
   }elseif((isset($inicio_sesion_container) && $inicio_sesion_container == true) || isset($errorEmail)){
     // echo FCPATH;
 ?>
