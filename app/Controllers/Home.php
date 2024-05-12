@@ -162,7 +162,7 @@ class Home extends BaseController{
 
         // recojo el max cod de reseña
         $baseDatos = new BaseDatos();
-        $cod_resena = $baseDatos -> getMaxResena();
+        $cod_resena = intval($baseDatos -> getMaxResena());
         if($cod_resena == null || empty($cod_resena) || $cod_resena == false) {
             $cod_resena = 1;
         }else{
