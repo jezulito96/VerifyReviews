@@ -45,14 +45,14 @@ $(document).ready(function () {
     //     }
     // });
 
- // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
- $('#ubicacion').show();
- $('#main').addClass('blurred');
+    // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
+    $('#ubicacion').show();
+    $('#main').addClass('blurred');
 
- // Cuando se hace clic en el botón "ubicacion"
- $('#ubicacion').click(function() {
-   // Ocultar el botón y quitar el efecto de desenfoque
-   $(this).hide();
-   $('#main').removeClass('blurred');
- });
+    // Cuando se hace clic en el botón "ubicacion"
+    $('#ubicacion').click(function() {
+    // Ocultar el botón y quitar el efecto de desenfoque
+    $(this).hide();
+    $('#main').removeClass('blurred');
+    });
 });
