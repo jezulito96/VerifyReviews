@@ -168,7 +168,6 @@ class Home extends BaseController{
         }else{
             $cod_resena = intval($cod_resena);
             $cod_resena += 1;
-            echo "suma uno a " + $cod_resena;
         }
 
         $maleta_resenaContent['cod_resena'] = $cod_resena;
