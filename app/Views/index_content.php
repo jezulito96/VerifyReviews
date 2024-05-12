@@ -2,7 +2,7 @@
       
 
 
-<h3>Categorías:</h3>
+    <h3>Categorías</h3>
     <section class="slick-carousel">
     <?php 
     if(isset($listaCategorias)){
@@ -27,6 +27,7 @@
     ?>
     </section>
 
+    <h3>Top 10</h3>
     <section class="slick-carousel">
     <?php 
     if(isset($listaCategorias)){
@@ -50,7 +51,6 @@
     }
     ?>
     </section>
-
 
 <script>
     $(document).ready(function(){
