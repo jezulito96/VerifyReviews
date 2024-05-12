@@ -28,7 +28,7 @@
     <div id="containerNickname" class="invisible">
       <form action="setLogin" method="post">
 
-        <input type="hidden" name="es_sesion_resena" value="sesion">
+        <input type="hidden" name="es_sesion_resena" value="nickname">
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
 
         <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />

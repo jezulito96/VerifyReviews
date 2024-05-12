@@ -565,36 +565,36 @@ class Home extends BaseController{
             $maleta_resenaContent['completar_formulario_resena'] = false;
         }
 
-        // // va a resena_content
-        // if($es_sesion_resena == true){
+        // va a resena_content
+        if($es_sesion_resena == true){
 
-        //     // meter en sesion el objeto del usuario para tener los datos a mano
-        //    session() -> set("sesionIniciada", $resultadoEmail);
+            // meter en sesion el objeto del usuario para tener los datos a mano
+           session() -> set("sesionIniciada", $resultadoEmail);
            
-        //    //meto el objeto del usuario en sesion 
-        //    $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
-        //    session() -> set("usuario_en_sesion",$usuario_en_sesion[0]);
-        //    session() -> set("sesion_iniciada",true);
+           //meto el objeto del usuario en sesion 
+           $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
+           session() -> set("usuario_en_sesion",$usuario_en_sesion[0]);
+           session() -> set("sesion_iniciada",true);
 
-        //     $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
+            $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
        
-        //     //vistas
-        //     $maleta['head_content'] = view('head_content');
-        //     $maleta['header_content'] = view('header_content');
-        //     $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
-        //     return view('index', $maleta);
-        // }
+            //vistas
+            $maleta['head_content'] = view('head_content');
+            $maleta['header_content'] = view('header_content');
+            $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+            return view('index', $maleta);
+        }
 
-        // // formulario de resena_content
-        // if($sesion_iniciada == true ){
-        //     // meter en sesion el objeto del usuario para tener los datos a mano
-        //    session() -> set("sesionIniciada", $resultadoEmail);
+        // formulario de resena_content
+        if($sesion_iniciada == true ){
+            // meter en sesion el objeto del usuario para tener los datos a mano
+           session() -> set("sesionIniciada", $resultadoEmail);
            
-        //    //meto el objeto del usuario en sesion 
-        //    $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
-        //    session() -> set("usuario_en_sesion",$usuario_en_sesion[0]);
-        //    session() -> set("sesion_iniciada",true);
-        // }
+           //meto el objeto del usuario en sesion 
+           $usuario_en_sesion = $baseDatos -> getUsuario($emailUsuario);
+           session() -> set("usuario_en_sesion",$usuario_en_sesion[0]);
+           session() -> set("sesion_iniciada",true);
+        }
 
         //vistas
         $maleta['head_content'] = view('head_content');
