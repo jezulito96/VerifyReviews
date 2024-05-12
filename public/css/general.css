@@ -35,10 +35,10 @@ li{
 
 #containerPermisosUbicacion{
     position: absolute;
-    bottom: 0px;
+    bottom: 100px;
     left: 0px;
     width: 100vw;
-    height: 300px;
+    height: 200px;
     background: white;
     padding: 10px;
 }
