@@ -496,6 +496,7 @@ class Home extends BaseController{
         // veo si $es_sesion_resena es true
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
+        var_dump($_POST['es_sesion_resena']);
         if(isset($_POST['es_sesion_resena'])){
             if(!isset($_POST['qr_key'])){
                 // si no se recibe clave redirecciona a index
@@ -509,6 +510,7 @@ class Home extends BaseController{
 
             }elseif($_POST['es_sesion_resena'] == "nickname"){
                 $es_sesion_resena = true;
+                $maleta_resenaContent['usuario_sin_sesion'] = true;
                 $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
                 $maleta_resenaContent['nickname'] = $this->request->getPost('nickname');
                 $maleta_resenaContent['completar_formulario_resena'] = true;
@@ -526,7 +528,6 @@ class Home extends BaseController{
                 // return view('index', $maleta);
             }
         }
-        
 
         $baseDatos = new BaseDatos();
         // verifico si el email o usuario/nickname introducido coinciden con un usuario registrado

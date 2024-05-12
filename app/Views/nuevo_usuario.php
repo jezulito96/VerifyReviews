@@ -13,7 +13,7 @@
         <label for="nickname">Nickname:</label>
         <input type="text" id="nickname" name="nickname">
 
-        <label for="contrasenaUsuario">Nickname:</label>
+        <label for="contrasenaUsuario">Contraseña</label>
         <input type="password" id="contrasenaUsuario" name="contrasenaUsuario">
 
         <label for="fotoPerfil">Foto de Perfil:</label>

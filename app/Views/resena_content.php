@@ -100,6 +100,13 @@
 
 <form action="setResena" method="post" id="setResenaForm" enctype="multipart/form-data">
 
+    <!-- si la reseña la escribe un usuario sin  inciar sesion -->
+    <?php 
+      if(isset($usuario_sin_sesion) && $usuario_sin_sesion == true){
+        echo "<input type='hidden' name='usuario_sin_sesion' />";
+      }
+    ?>
+
   <input type="hidden" id="cod_negocio" name="cod_negocio" value="<?php echo $negocio['cod_negocio']; ?>" />
   <input type="hidden" id="qr_key" name="qr_key" value="<?php echo $qr_key ;?>" /> 
   <?php 
