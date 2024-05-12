@@ -22,15 +22,15 @@
         
                     <img
                         srcset="
-                            catM-'. $categoria -> getCodCategoria()  . '.jpg 300w,
-                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 400w,
-                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 600w,
+                            catM-'. $categoria -> getCodCategoria()  . '.png 300w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.png 400w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.png 600w,
                             
                         "
                         sizes="(max-width: 300px) 280px,
                                 (max-width: 400px) 360px,
                                 1960px"
-                        src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.jpg"
+                        src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png"
                         alt="'. $categoria -> getTipoNegocio()  . ' "
                         class="imgCat" />
 
