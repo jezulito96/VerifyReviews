@@ -513,7 +513,6 @@ class Home extends BaseController{
         // veo si $es_sesion_resena es true
         // esto quiere decir que el usuario escaneo un QR para poner una resena
         $es_sesion_resena = false;
-        var_dump($_POST['es_sesion_resena']);
         if(isset($_POST['es_sesion_resena'])){
             if(!isset($_POST['qr_key'])){
                 // si no se recibe clave redirecciona a index
