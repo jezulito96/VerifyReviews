@@ -45,12 +45,10 @@ $(document).ready(function () {
     //     }
     // });
 
-    $("#ubicacion").click(function(){
         $(".header").css('backdrop-filter', 'blur(5px)');
         $(".body").css('backdrop-filter', 'blur(5px)');
 
         $(".header").css('z-index', '-1');
         $(".body").css('z-index', '-1');
-    });
 
 });
