@@ -208,7 +208,7 @@ class Home extends BaseController{
 
         // en tabla usu_si retocar el insert para meter el cod_max
 
-        if(isset($usuario_sin_sesion)){
+        if(isset($_POST['usuario_sin_sesion'])){
             $id = $baseDatos ->getQr_id($qr_key);
             $baseDatos -> desactivarQr(intval($id));
             $max_cod = $baseDatos -> getMaxUsuario();
