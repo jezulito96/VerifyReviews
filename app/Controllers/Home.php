@@ -163,7 +163,15 @@ class Home extends BaseController{
         // recojo el max cod de reseña
         $baseDatos = new BaseDatos();
         $cod_resena = $baseDatos -> getMaxResena();
-        if($cod_resena == null || empty($cod_resena) || $cod_resena == false) $cod_resena = 1;
+        if($cod_resena == null || empty($cod_resena) || $cod_resena == false) {
+            $cod_resena = 1;
+        }else{
+            $cod_resena += 1;
+            echo "suma uno a " + $cod_resena;
+        }
+
+        echo "<br>";
+        var_dump($cod_resena);
 
         $directorioResena = "images/n/n_" . $cod_negocio . "/resenas/r_" . $cod_resena;
         if(!is_dir($directorioResena)) {
