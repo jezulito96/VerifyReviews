@@ -291,7 +291,7 @@ class Home extends BaseController{
         $nombreAntiguoPrincipal = $_FILES['fotoPrincipal']['name'];
         $tmpFoto = $_FILES['fotoPrincipal']['tmp_name'];
         $extensionPrincipal = pathinfo($nombreAntiguoPrincipal, PATHINFO_EXTENSION);
-        $foto_principal = $nombreNegocio . "imgPrincipal." . $extensionPrincipal;
+        $foto_principal = "imgPrincipal." . $extensionPrincipal;
         move_uploaded_file($tmpFoto, $directorioNegocio . "/img_negocio/" . $foto_principal);
 
         // recibo imagenes
