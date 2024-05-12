@@ -216,7 +216,7 @@ class Home extends BaseController{
             $baseDatos -> setUsu_sin_registrar($max_cod, $nickname);
 
             //inserto reseña
-            $baseDatos -> setResena($cod_resena,$cod_negocio,$max_cod,date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$id,1, $nickname);
+            $baseDatos -> setResena_no_registrado($cod_resena,$cod_negocio,$max_cod,date("Y-m-d"),$fecha_resena,$valoracion_final,$txt_Titulo,$txt_descripccion,$fotosBD,$id,1, $nickname);
             $resultadoInsert = true;
             
         }else{
