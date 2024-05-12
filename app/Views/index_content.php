@@ -1,6 +1,12 @@
 
       
 
+<!-- <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.jpg" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"> -->
+<!-- catM-'. $categoria -> getCodCategoria()  . '-1.jpg 800w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 1000w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 1200w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 2000w -->
+
 
 <h3>Comercios:</h3>
     <section class="slick-carousel">
@@ -13,8 +19,21 @@
                 
                 <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
         
-                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.jpg" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
         
+                    <img
+                        srcset="
+                            catM-'. $categoria -> getCodCategoria()  . '.jpg 300w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 400w,
+                            catM-'. $categoria -> getCodCategoria()  . '-1.jpg 600w,
+                            
+                        "
+                        sizes="(max-width: 300px) 280px,
+                                (max-width: 400px) 360px,
+                                1960px"
+                        src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.jpg"
+                        alt="'. $categoria -> getTipoNegocio()  . ' "
+                        class="imgCat" />
+
                 <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
         
                 <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
