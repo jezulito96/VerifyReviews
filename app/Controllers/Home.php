@@ -264,7 +264,12 @@ class Home extends BaseController{
         $coordenadas = $latitud . "," . $longitud;
 
         $cod_negocio = $baseDatos -> getMaxNegocio();
-        if($cod_negocio == null || empty($cod_negocio) || $cod_negocio == false) $cod_negocio = 1;
+        if($cod_negocio == null || empty($cod_negocio) || $cod_negocio == false) {
+            $cod_negocio = 1;
+        }else{
+            $cod_negocio = intval($cod_negocio);
+            $cod_negocio += 1;
+        }
         $directorioNegocio = FCPATH . "images/n/n_" . $cod_negocio;
         $nombreNegocio = "images/n_" . $cod_negocio . "/img_negocio";
         //compruebo si existe el nombre del negocio como carpeta en la carpeta de imagenes base()/images/nombreNegocio
