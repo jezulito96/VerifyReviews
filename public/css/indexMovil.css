@@ -60,6 +60,17 @@
     width: 16px;
     height: 16px;
   }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 83px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
     
   /* formulario comercio y usuario*/
   .containerNegocioForm,
