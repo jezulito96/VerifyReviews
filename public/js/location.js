@@ -46,10 +46,9 @@ $(document).ready(function () {
     // });
 
     // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
-    // $('#ubicacion').show();
     $('#main').addClass('blur');
     $('#header').addClass('blur');
-
+    $('#ubicacion').show();
     // Cuando se hace clic en el botón "ubicacion"
     $('#ubicacion').click(function() {
         // Ocultar el botón y quitar el efecto de desenfoque
