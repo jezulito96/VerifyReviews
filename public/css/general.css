@@ -35,7 +35,7 @@ li{
 
 .containerPermisosUbicacion{
     position: absolute;
-    bottom: 0px;
+    top: 100px;
     left: 0px;
     width: 100vw;
     height: 300px;
