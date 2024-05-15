@@ -59,3 +59,7 @@ $(document).ready(function () {
     });
 
 });
+
+
+// ahora deberia meter la info en una cookie con caducidad de un año para poder acceder a la ubicacion
+// si vuelve a entrar y no nos da permiso para ubicacion accedemos a los datos viejos
