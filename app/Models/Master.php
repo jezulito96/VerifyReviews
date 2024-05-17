@@ -6,9 +6,9 @@ namespace App\Models;
 class Master {
     private static $instancia;
     
-    private $listaCategorias;
-    private $listaNegocios;
-    private $listaResenas;
+    public $listaCategorias;
+    public $listaNegocios;
+    public $listaResenas;
 
 
 
