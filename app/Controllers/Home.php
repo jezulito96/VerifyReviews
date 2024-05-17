@@ -761,11 +761,15 @@ class Home extends BaseController{
          if(isset($_GET['id'])){
             $categoria = $_GET['id'];
             
-            foreach($master -> listaCategorias as $key => $categoria){
-                echo "<br>";
-                var_dump($categoria);
-                echo "<br>";
-            }   
+            echo "<pre>";
+            print_r($master -> listaCategorias);
+            echo "<pre>";
+
+            // foreach($master -> listaCategorias as $key => $categoria){
+            //     echo "<br>";
+            //     var_dump($categoria);
+            //     echo "<br>";
+            // }   
         }else{
             echo "algo ha salido mal";
         }
