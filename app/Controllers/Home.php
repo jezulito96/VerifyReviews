@@ -757,7 +757,7 @@ class Home extends BaseController{
 
     public function vista_cat_negocio(){
         $master = master::obtenerInstancia();
-        
+        var_dump($master -> obj_categoria(1));
         // $array_negocios = $master -> getListaNegocios();
         $maleta_cont_categorias['lista_negocios'] = $master -> obj_categoria(1);
 
