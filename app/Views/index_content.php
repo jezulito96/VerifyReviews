@@ -11,11 +11,11 @@
                 
                 <div class="fotoContainer">
                 
-                <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
+                <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras invisible">
         
                     <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
         
-                <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
+                <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante invisible">
         
                 <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                 

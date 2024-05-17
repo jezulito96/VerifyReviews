@@ -91,9 +91,6 @@ class Qr {
 
         $this ->options = new QROptions;
 
-
-
-
         // se crea una clave aleatoria de 16 bytes
         $clavePublica = random_bytes(8);
 
