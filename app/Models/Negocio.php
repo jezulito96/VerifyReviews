@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Categoria;
 class Negocio {
     private $nombre;
     private $email;
