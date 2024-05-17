@@ -759,7 +759,7 @@ class Home extends BaseController{
         $master = master::obtenerInstancia();
         
         // $array_negocios = $master -> getListaNegocios();
-        $maleta_cont_categorias['lista_negocios'] = $master -> obj_categoria(1) ;
+        $maleta_cont_categorias['lista_negocios'] = $master -> obj_categoria(1);
 
         // if(isset($_GET['id'])){
         //     $categoria = $_GET['id'];
