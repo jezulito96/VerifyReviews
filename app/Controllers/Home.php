@@ -763,7 +763,7 @@ class Home extends BaseController{
             
             echo "<pre>";
             print_r($master -> listaCategorias);
-            echo "<pre>";
+            echo "</pre>";
 
             // foreach($master -> listaCategorias as $key => $categoria){
             //     echo "<br>";
@@ -777,7 +777,7 @@ class Home extends BaseController{
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['cont_categorias'] = view('cont_categorias');
+        $maleta['cont_categoria'] = view('cont_categoria');
         return view('index', $maleta);
 
     }
