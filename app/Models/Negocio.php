@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 class Negocio {
     private $nombre;
     private $email;
@@ -12,13 +13,13 @@ class Negocio {
     private $foto_principal;
     private $coordenadas;
     private $sitio_web;
-    private $cod_categoria;
+    private $categoria;
     private $nombre_titular;
     private $telefono_titular;
     private $activo;
     private $confirma_correo;
 
-    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
+    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, Categoria $categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
         $this->nombre = $nombre;
         $this->email = $email;
         $this->calle = $calle;
@@ -29,7 +30,7 @@ class Negocio {
         $this->foto_principal = $foto_principal;
         $this->coordenadas = $coordenadas;
         $this->sitio_web = $sitio_web;
-        $this->cod_categoria = $cod_categoria;
+        $this->categoria = $categoria;
         $this->nombre_titular = $nombre_titular;
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;

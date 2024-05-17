@@ -758,17 +758,17 @@ class Home extends BaseController{
     public function vista_cat_negocio(){
         $master = master::obtenerInstancia();
         
-        $maleta_cont_categorias['lista_negocios'] = $master -> getListaNegocios();
+        $array_negocios = $master -> getListaNegocios();
         
 
-        // if(isset($_GET['id'])){
-        //     $categoria = $_GET['id'];
+        if(isset($_GET['id'])){
+            $categoria = $_GET['id'];
            
-        //     $maleta_cont_categorias['listaNegocios'] = $master -> listanegociosCat(intval($categoria));
+            $maleta_cont_categorias['lista_negocios'] = $master -> negocios_categoria(intval($categoria));
             
-        // }else{
-        //     echo "algo ha salido mal";
-        // }
+        }else{
+            echo "algo ha salido mal";
+        }
 
         // vistas
         $maleta['head_content'] = view('head_content');
