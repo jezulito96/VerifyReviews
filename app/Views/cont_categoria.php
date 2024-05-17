@@ -1,4 +1,3 @@
 <?php
 
-
-echo "hola pendejo";
+var_dump($lista_negocios);

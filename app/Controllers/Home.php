@@ -758,8 +758,8 @@ class Home extends BaseController{
     public function vista_cat_negocio(){
         $master = master::obtenerInstancia();
         
-        $lista_negocios = $master -> getListaNegocios();
-        var_dump($lista_negocios);
+        $maleta_cont_categorias['lista_negocios'] = $master -> getListaNegocios();
+        
 
         // if(isset($_GET['id'])){
         //     $categoria = $_GET['id'];
@@ -771,10 +771,10 @@ class Home extends BaseController{
         // }
 
         // vistas
-        // $maleta['head_content'] = view('head_content');
-        // $maleta['header_content'] = view('header_content');
-        // $maleta['cont_categoria'] = view('cont_categoria', $maleta_cont_categorias);
-        // return view('index', $maleta);
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['cont_categoria'] = view('cont_categoria', $maleta_cont_categorias);
+        return view('index', $maleta);
 
     }
 }
