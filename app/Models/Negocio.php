@@ -34,6 +34,7 @@ class Negocio {
         $this->nombre_titular = $nombre_titular;
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;
+        $this->confirma_correo = $confirma_correo;
     }
 
     public function getNombre() {
