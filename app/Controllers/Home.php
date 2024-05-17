@@ -758,8 +758,8 @@ class Home extends BaseController{
     public function vista_cat_negocio(){
         $master = master::obtenerInstancia();
         
-         if(isset($_GET['cat'])){
-            $categoria = $_GET['cat'];
+         if(isset($_GET['id'])){
+            $categoria = $_GET['id'];
             
             foreach($master -> listaCategorias as $key => $categoria){
                 echo "<br>";

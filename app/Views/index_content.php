@@ -13,7 +13,7 @@
                 
                 <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
         
-                    <a href="https://verifyreviews.es/verifyreviews/cat='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
+                    <a href="https://verifyreviews.es/verifyreviews/categoria/id='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
         
                 <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
         
