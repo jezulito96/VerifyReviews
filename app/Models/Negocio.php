@@ -1,16 +1,14 @@
 <?php
 
 namespace App\Models;
-
 class Negocio {
     private $nombre;
-    private $contrasena_negocio;
     private $email;
     private $calle;
     private $ciudad;
     private $pais;
     private $telefono_negocio;
-    private $fotos;
+    private $fotosBD;
     private $foto_principal;
     private $coordenadas;
     private $sitio_web;
@@ -18,19 +16,15 @@ class Negocio {
     private $nombre_titular;
     private $telefono_titular;
     private $activo;
-    private $confirma_correo;
-    private $cod_confirmacion;
-    private $codigo_recordar_contrasena;
 
-    public function __construct($nombre, $contrasena_negocio, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo, $cod_confirmacion, $codigo_recordar_contrasena) {
+    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo) {
         $this->nombre = $nombre;
-        $this->contrasena_negocio = $contrasena_negocio;
         $this->email = $email;
         $this->calle = $calle;
         $this->ciudad = $ciudad;
         $this->pais = $pais;
         $this->telefono_negocio = $telefono_negocio;
-        $this->fotos = $fotos;
+        $this->fotosBD = $fotosBD;
         $this->foto_principal = $foto_principal;
         $this->coordenadas = $coordenadas;
         $this->sitio_web = $sitio_web;
@@ -38,17 +32,10 @@ class Negocio {
         $this->nombre_titular = $nombre_titular;
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;
-        $this->confirma_correo = $confirma_correo;
-        $this->cod_confirmacion = $cod_confirmacion;
-        $this->codigo_recordar_contrasena = $codigo_recordar_contrasena;
     }
 
     public function getNombre() {
         return $this->nombre;
-    }
-
-    public function getContrasenaNegocio() {
-        return $this->contrasena_negocio;
     }
 
     public function getEmail() {
@@ -71,8 +58,8 @@ class Negocio {
         return $this->telefono_negocio;
     }
 
-    public function getFotos() {
-        return $this->fotos;
+    public function getFotosBD() {
+        return $this->fotosBD;
     }
 
     public function getFotoPrincipal() {
@@ -102,17 +89,4 @@ class Negocio {
     public function getActivo() {
         return $this->activo;
     }
-
-    public function getConfirmaCorreo() {
-        return $this->confirma_correo;
-    }
-
-    public function getCodConfirmacion() {
-        return $this->cod_confirmacion;
-    }
-
-    public function getCodigoRecordarContrasena() {
-        return $this->codigo_recordar_contrasena;
-    }
 }
-?>
