@@ -80,7 +80,8 @@ class Master {
 
     public function listanegociosCat($categoria = false){
         $array_negocios_cat = array();
-        foreach($this -> listaNegocios as $key => $negocio){
+        $lista_negocios = $this -> listaNegocios;
+        foreach($lista_negocios as $key => $negocio){
             if($negocio -> cod_categoria == $categoria){
                 array_push($array_negocios_cat, $negocio );
             }
