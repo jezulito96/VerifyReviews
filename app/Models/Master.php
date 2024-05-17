@@ -63,17 +63,17 @@ class Master {
     }
 
     public function obj_categoria($cod_categoria){
-        // foreach($this -> listaCategorias as $categoria){
-        //     if($cod_categoria == $categoria -> codCategoria){
-        //         return $categoria;
-        //     }
-        // }
-        return $this -> listaCategorias;
+        foreach($this -> listaCategorias as $categoria){
+            if($cod_categoria == $categoria -> getCodCategoria()){
+                return $categoria;
+            }
+        }
     }
 
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
         // busco el objeto de la categoria para meterla en el negocio
-        $categoria_obj = $this -> instancia -> obj_categoria($cod_categoria);
+        $instancia = self::obtenerInstancia();
+        $categoria_obj = $instancia -> obj_categoria($cod_categoria);
 
         // se crea objeto y se añade a la lista de negocios
         $this->listaNegocios[] = new Negocio(
@@ -113,18 +113,18 @@ class Master {
 
     }
 
-    public function negocios_categoria($categoria){
+    // public function negocios_categoria($categoria){
 
-        $lista_negocios_cat = array();
-        foreach($this -> listaNegocios as $key => $negocio){
+    //     $lista_negocios_cat = array();
+    //     foreach($this -> listaNegocios as $key => $negocio){
             
-            if($negocio -> cod_categoria == $categoria){
-                array_push($lista_negocios_cat, $negocio);
-            }
-        }
+    //         // if($negocio -> cod_categoria == $categoria){
+    //         //     array_push($lista_negocios_cat, $negocio);
+    //         // }
+    //     }
 
-        return $lista_negocios_cat;
-    }
+    //     return $lista_negocios_cat;
+    // }
 
 
     // public function setListaResenas($cod_negocio){

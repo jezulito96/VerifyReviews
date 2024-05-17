@@ -78,7 +78,7 @@ class Negocio {
     }
 
     public function getCodCategoria() {
-        return $this->cod_categoria;
+        return $this->categoria;
     }
 
     public function getNombreTitular() {
