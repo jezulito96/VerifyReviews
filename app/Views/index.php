@@ -30,6 +30,9 @@
             <!-- cuando el usuario escanea el codigo qr -->
             <?php if (isset ($resena_content)) echo $resena_content; ?>
 
+            <!--  vista para pintar los negocios que pertenecen a una categoria -->
+            <?php if (isset ($cont_categorias)) echo $cont_categorias; ?>
+            
             <?php
             if (isset ($val))
                 echo $val;

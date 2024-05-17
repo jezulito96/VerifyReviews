@@ -22,6 +22,12 @@ class Categoria {
         return $this->tipoNegocio;
     }
 
+    public function getInfo(){
+
+        
+
+    }
+
 }
 
 ?>

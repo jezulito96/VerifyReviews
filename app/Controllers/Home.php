@@ -753,4 +753,28 @@ class Home extends BaseController{
         $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
         return view('index', $maleta);
     }
+
+
+    public function vista_cat_negocio(){
+        $master = master::obtenerInstancia();
+        
+         if(isset($_GET['cat'])){
+            $categoria = $_GET['cat'];
+            
+            foreach($master -> listaCategorias as $key => $categoria){
+                echo "<br>";
+                var_dump($categoria);
+                echo "<br>";
+            }   
+        }else{
+            echo "algo ha salido mal";
+        }
+
+        // vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['cont_categorias'] = view('cont_categorias');
+        return view('index', $maleta);
+
+    }
 }

@@ -11,11 +11,11 @@
                 
                 <div class="fotoContainer">
                 
-                <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras invisible">
+                <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
         
-                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
+                    <a href="https://verifyreviews.es/verifyreviews/cat='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
         
-                <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante invisible">
+                <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
         
                 <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                 

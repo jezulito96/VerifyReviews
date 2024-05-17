@@ -39,3 +39,6 @@ $routes->get('/cerrarSesion', 'Home::cerrarSesion');
 $routes->get('/generarResenas', 'Home::vistaGenerarResenas');
 $routes->post('/setGenerarResenas', 'Home::setGenerarResenas');
 
+
+// vista para mostrar la lista de negocios de una categoria
+$routes->post('/cat', 'Home::vista_cat_negocio');
