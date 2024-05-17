@@ -3,7 +3,7 @@
 
 
     <h3>Categorías</h3>
-    <section class="slick-carousel">
+    <section class="carousel_Categorias">
     <?php 
     if(isset($listaCategorias)){
         foreach($listaCategorias as $i => $categoria){
@@ -54,7 +54,7 @@
 
 <script>
     $(document).ready(function(){
-        $('.slick-carousel').slick({
+        $('.carousel_Categorias').slick({
             dots: true, // puntitos
             slidesToShow: 1, // fotos que se pintan a la vez
             prevArrow:".flechaAtras",
