@@ -5,7 +5,7 @@ namespace App\Models;
 
 class Master {
     private static $instancia;
-    private static $baseDatos;
+    
     private $listaCategorias;
     private $listaNegocios;
     private $listaResenas;
@@ -16,15 +16,15 @@ class Master {
         if (self::$instancia === null) {
             self::$instancia = new Master();
         }
-        self::$baseDatos = new BaseDatos();
         return self::$instancia;
     }
 
     public function getListaCategorias() {
+        $baseDatos = new BaseDatos();
         if ($this->listaCategorias === null) {
 
             $this->listaCategorias = array();        
-            foreach($this -> baseDatos->getListaCategorias() as $val){
+            foreach($baseDatos->getListaCategorias() as $val){
                 $this->listaCategorias[] = new Categoria($val['cod_categoria'], $val['tipo_negocio']);
             }
         }
@@ -33,10 +33,11 @@ class Master {
     }
 
     public function getListaNegocios() {
+        $baseDatos = new BaseDatos();
         if ($this->listaNegocios === null) {
 
             $this->listaNegocios = array();        
-                foreach($this -> baseDatos->getListaNegocios() as $val){
+                foreach($baseDatos->getListaNegocios() as $val){
                     $this->listaNegocios[] = new Negocio($val['nombre'], $val['email'], $val['calle'], $val['ciudad'], $val['pais'], $val['telefono_negocio'], $val['fotos'], $val['foto_principal'], $val['coordenadas'], $val['sitio_web'], $val['cod_categoria'], $val['nombre_titular'], $val['telefono_titular'], $val['activo'], $val['confirma_correo']
                 );
             }
@@ -59,15 +60,16 @@ class Master {
     // }
 
     public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_key,$estado,$nickname){
+        $baseDatos = new BaseDatos();
 
         // primero tengo que sacar el qr_id del qr_key que es la clave publica 
         // $claveQr = hex2bin($qr_key);
-        $id = $this -> baseDatos ->getQr_id($qr_key);
-        $this -> baseDatos -> desactivarQr(intval($id));
+        $id = $baseDatos ->getQr_id($qr_key);
+        $baseDatos -> desactivarQr(intval($id));
         
         // después hago la insertcion a la base de datos con el id que me devuelve el metodo anterior
         if($id !=false){
-            $this -> baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,intval($id),$estado,$nickname);
+            $baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,intval($id),$estado,$nickname);
             return true;
         }else{
             return false;
