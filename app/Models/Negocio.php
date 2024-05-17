@@ -16,8 +16,9 @@ class Negocio {
     private $nombre_titular;
     private $telefono_titular;
     private $activo;
+    private $confirma_correo;
 
-    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo) {
+    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
         $this->nombre = $nombre;
         $this->email = $email;
         $this->calle = $calle;
@@ -88,5 +89,9 @@ class Negocio {
 
     public function getActivo() {
         return $this->activo;
+    }
+
+    public function getConfirmaCorreo() {
+        return $this->confirma_correo;
     }
 }

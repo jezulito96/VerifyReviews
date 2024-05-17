@@ -38,16 +38,49 @@ class Master {
 
             $this->listaNegocios = array();        
             foreach($baseDatos->getListaNegocios() as $val){
-                $this->listaNegocios[] = new Negocio($val['nombre'], $val['email'], $val['calle'], $val['ciudad'], $val['pais'], $val['telefono_negocio'], $val['fotos'], $val['foto_principal'], $val['coordenadas'], $val['sitio_web'], $val['cod_categoria'], $val['nombre_titular'], $val['telefono_titular'], $val['activo'], $val['confirma_correo']);
+                $this->listaNegocios[] = new Negocio(
+                    $val['nombre'], 
+                    $val['email'], 
+                    $val['calle'], 
+                    $val['ciudad'], 
+                    $val['pais'], 
+                    $val['telefono_negocio'], 
+                    $val['fotos'], // Cambié 'fotosBD' a 'fotos' para que coincida con el array $val
+                    $val['foto_principal'], 
+                    $val['coordenadas'], 
+                    $val['sitio_web'], 
+                    $val['cod_categoria'], 
+                    $val['nombre_titular'], 
+                    $val['telefono_titular'], 
+                    $val['activo'],
+                    $val['confirma_correo']
+                );
+                
             }
         }
         
         return $this->listaNegocios;
     }
 
-    public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo){
+    public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
         // se crea objeto y se añade a la lista de negocios
-        $this->listaNegocios[] = new Negocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+        $this->listaNegocios[] = new Negocio(
+            $nombre, 
+            $email, 
+            $calle, 
+            $ciudad, 
+            $pais, 
+            $telefono_negocio, 
+            $fotos, // Cambié 'fotosBD' a 'fotos' para que coincida con el constructor de la clase Negocio
+            $foto_principal, 
+            $coordenadas, 
+            $sitio_web, 
+            $cod_categoria, 
+            $nombre_titular, 
+            $telefono_titular, 
+            $activo,
+            $confirma_correo
+        );
     }
 
     public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_key,$estado,$nickname){
