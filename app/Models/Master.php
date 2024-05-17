@@ -10,7 +10,11 @@ class Master {
 
     private $listaResenas;
 
-    private function __construct() {}
+    private function __construct() {
+
+        $this->getListaCategorias();
+        $this->getListaNegocios();
+    }
 
     public static function obtenerInstancia() {
         if (self::$instancia === null) {
