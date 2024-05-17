@@ -11,9 +11,6 @@ class Master {
     private $listaResenas;
 
     private function __construct() {
-
-        $this->getListaCategorias();
-        $this->getListaNegocios();
     }
 
     public static function obtenerInstancia() {
@@ -66,20 +63,9 @@ class Master {
         return $this->listaNegocios;
     }
 
-    public function obj_categoria($cod_categoria){
-        return $this -> listaCategorias;
-        // foreach($this -> listaCategorias as $categoria){
-        //     if($cod_categoria == $categoria -> getCodCategoria()){
-        //         return $categoria;
-        //     }
-        // }
-
-    }
-
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
-        // busco el objeto de la categoria para meterla en el negocio
-        $instancia = master::obtenerInstancia();
-        $categoria_obj = $instancia -> obj_categoria($cod_categoria);
+        // meto el negocio en la clase categoria 
+        
 
         // se crea objeto y se añade a la lista de negocios
         $this->listaNegocios[] = new Negocio(
@@ -93,7 +79,7 @@ class Master {
             $foto_principal, 
             $coordenadas, 
             $sitio_web, 
-            $categoria_obj, 
+            $cod_categoria, 
             $nombre_titular, 
             $telefono_titular, 
             $activo,

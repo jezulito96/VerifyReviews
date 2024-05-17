@@ -7,7 +7,8 @@ class Categoria {
     private $codCategoria;
     private $tipoNegocio;
     private $imgCategoria;
-    private $listaComercios;
+
+    private static $listaObjetos = array();
 
     public function __construct($codCategoria, $tipoNegocio) {
         $this->codCategoria = $codCategoria;
@@ -22,12 +23,20 @@ class Categoria {
         return $this->tipoNegocio;
     }
 
-    public function getInfo(){
-
-        
-
+    public static function agregarObjeto(Negocio $objeto) {
+        self::$listaObjetos[] = $objeto; // Añadir objeto a la lista estática
     }
 
+    public static function getListaObjetos($codCategoria) {
+        $objetosFiltrados = array();
+        foreach (self::$listaObjetos as $objeto) {
+            if ($objeto->getCodCategoria() == $codCategoria) {
+                $objetosFiltrados[] = $objeto;
+            }
+        }
+        return $objetosFiltrados;
+    }
+    
 }
 
 ?>
