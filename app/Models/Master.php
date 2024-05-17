@@ -75,9 +75,19 @@ class Master {
             return false;
         }
 
+        
     }
 
+    public function listanegociosCat($categoria = false){
+        $array_negocios_cat = array();
+        foreach($this -> listaNegocios as $key => $negocio){
+            if($negocio -> cod_categoria == $categoria){
+                array_push($array_negocios_cat, $negocio );
+            }
+        }
 
+        return $array_negocios_cat;
+    }
 
 }
 

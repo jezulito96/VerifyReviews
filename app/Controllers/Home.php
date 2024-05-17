@@ -760,16 +760,9 @@ class Home extends BaseController{
         
          if(isset($_GET['id'])){
             $categoria = $_GET['id'];
+           
+            $maleta_cont_categorias['listaNegocios'] = $master -> listanegociosCat(intval($categoria));
             
-            echo "<pre>";
-            print_r($master -> listaCategorias);
-            echo "</pre>";
-
-            // foreach($master -> listaCategorias as $key => $categoria){
-            //     echo "<br>";
-            //     var_dump($categoria);
-            //     echo "<br>";
-            // }   
         }else{
             echo "algo ha salido mal";
         }
@@ -777,7 +770,7 @@ class Home extends BaseController{
         // vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['cont_categoria'] = view('cont_categoria');
+        $maleta['cont_categoria'] = view('cont_categoria', $maleta_cont_categorias);
         return view('index', $maleta);
 
     }
