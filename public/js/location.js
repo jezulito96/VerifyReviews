@@ -1,20 +1,20 @@
 $(document).ready(function () {
 
     // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
-    $('#main').addClass('blur');
-    $('#header').addClass('blur');
-    $('#ubicacion').show();
+    // $('#main').addClass('blur');
+    // $('#header').addClass('blur');
+    // $('#ubicacion').show();
 
-    $("#aceptarUbicacion").click(function () {
-        $("#containerPermisosUbicacion").hide();
-        $('#main').removeClass('blur');
-        $('#header').removeClass('blur');
-    });   
+    // $("#aceptarUbicacion").click(function () {
+    //     $("#containerPermisosUbicacion").hide();
+    //     $('#main').removeClass('blur');
+    //     $('#header').removeClass('blur');
+    // });   
     
-    $("#aceptarUbicacion").click(function () {
-        $("#containerPermisosUbicacion").hide();
-        $('#main').removeClass('blur');
-        $('#header').removeClass('blur');
+    // $("#aceptarUbicacion").click(function () {
+    //     $("#containerPermisosUbicacion").hide();
+    //     $('#main').removeClass('blur');
+    //     $('#header').removeClass('blur');
 
         if (navigator.geolocation) {
             // le pido al usuario acceder a su localizacion
@@ -56,7 +56,7 @@ $(document).ready(function () {
         } else {
             $('#resultadoLocation').html("Tu navegador no soporta la geolocalización.");
         }
-    });
+    // });
 
 });
 
