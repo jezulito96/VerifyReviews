@@ -63,12 +63,12 @@ class Master {
     }
 
     public function obj_categoria($cod_categoria){
-       
-        foreach($this -> listaCategorias as $categoria){
-            if($cod_categoria == $categoria -> getCodCategoria()){
-                return $categoria;
-            }
-        }
+        return $this -> listaCategorias;
+        // foreach($this -> listaCategorias as $categoria){
+        //     if($cod_categoria == $categoria -> getCodCategoria()){
+        //         return $categoria;
+        //     }
+        // }
 
     }
 
