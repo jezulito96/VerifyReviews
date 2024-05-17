@@ -4,6 +4,7 @@ namespace App\Models;
 
 class Negocio {
     private $nombre;
+    private $contrasena_negocio;
     private $email;
     private $calle;
     private $ciudad;
@@ -18,9 +19,12 @@ class Negocio {
     private $telefono_titular;
     private $activo;
     private $confirma_correo;
+    private $cod_confirmacion;
+    private $codigo_recordar_contrasena;
 
-    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
+    public function __construct($nombre, $contrasena_negocio, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo, $cod_confirmacion, $codigo_recordar_contrasena) {
         $this->nombre = $nombre;
+        $this->contrasena_negocio = $contrasena_negocio;
         $this->email = $email;
         $this->calle = $calle;
         $this->ciudad = $ciudad;
@@ -35,10 +39,16 @@ class Negocio {
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;
         $this->confirma_correo = $confirma_correo;
+        $this->cod_confirmacion = $cod_confirmacion;
+        $this->codigo_recordar_contrasena = $codigo_recordar_contrasena;
     }
 
     public function getNombre() {
         return $this->nombre;
+    }
+
+    public function getContrasenaNegocio() {
+        return $this->contrasena_negocio;
     }
 
     public function getEmail() {
@@ -97,65 +107,12 @@ class Negocio {
         return $this->confirma_correo;
     }
 
-    public function setNombre($nombre) {
-        $this->nombre = $nombre;
+    public function getCodConfirmacion() {
+        return $this->cod_confirmacion;
     }
 
-    public function setEmail($email) {
-        $this->email = $email;
-    }
-
-    public function setCalle($calle) {
-        $this->calle = $calle;
-    }
-
-    public function setCiudad($ciudad) {
-        $this->ciudad = $ciudad;
-    }
-
-    public function setPais($pais) {
-        $this->pais = $pais;
-    }
-
-    public function setTelefonoNegocio($telefono_negocio) {
-        $this->telefono_negocio = $telefono_negocio;
-    }
-
-    public function setFotos($fotos) {
-        $this->fotos = $fotos;
-    }
-
-    public function setFotoPrincipal($foto_principal) {
-        $this->foto_principal = $foto_principal;
-    }
-
-    public function setCoordenadas($coordenadas) {
-        $this->coordenadas = $coordenadas;
-    }
-
-    public function setSitioWeb($sitio_web) {
-        $this->sitio_web = $sitio_web;
-    }
-
-    public function setCodCategoria($cod_categoria) {
-        $this->cod_categoria = $cod_categoria;
-    }
-
-    public function setNombreTitular($nombre_titular) {
-        $this->nombre_titular = $nombre_titular;
-    }
-
-    public function setTelefonoTitular($telefono_titular) {
-        $this->telefono_titular = $telefono_titular;
-    }
-
-    public function setActivo($activo) {
-        $this->activo = $activo;
-    }
-
-    public function setConfirmaCorreo($confirma_correo) {
-        $this->confirma_correo = $confirma_correo;
+    public function getCodigoRecordarContrasena() {
+        return $this->codigo_recordar_contrasena;
     }
 }
-
-
+?>

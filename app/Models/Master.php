@@ -37,9 +37,8 @@ class Master {
         if ($this->listaNegocios === null) {
 
             $this->listaNegocios = array();        
-                foreach($baseDatos->getListaNegocios() as $val){
-                    $this->listaNegocios[] = new Negocio($val['nombre'], $val['email'], $val['calle'], $val['ciudad'], $val['pais'], $val['telefono_negocio'], $val['fotos'], $val['foto_principal'], $val['coordenadas'], $val['sitio_web'], $val['cod_categoria'], $val['nombre_titular'], $val['telefono_titular'], $val['activo'], $val['confirma_correo']
-                );
+            foreach($baseDatos->getListaNegocios() as $val){
+                $this->listaNegocios[] = new Negocio($val['nombre'], $val['email'], $val['calle'], $val['ciudad'], $val['pais'], $val['telefono_negocio'], $val['fotos'], $val['foto_principal'], $val['coordenadas'], $val['sitio_web'], $val['cod_categoria'], $val['nombre_titular'], $val['telefono_titular'], $val['activo'], $val['confirma_correo']);
             }
         }
         

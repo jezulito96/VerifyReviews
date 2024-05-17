@@ -22,7 +22,10 @@ class BaseDatos extends Model
     function getListaNegocios()
     {
 
-        $orden = "SELECT * FROM categoria";
+        $orden = "SELECT 
+        cod_negocio,nombre, contrasena, email,calle,ciudad,pais,telefono_negocio, fotos,foto_principal, coordenadas,sitio_web,
+        cod_categoria, nombre_titular,telefono_titular,activo, confirma_correo, cod_confirmacion, cod_recordar_contrasena,fecha_creacion
+        FROM negocio";
         $listaNegocios = $this->db->query($orden);
 
 
