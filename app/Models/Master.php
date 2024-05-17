@@ -5,12 +5,12 @@ namespace App\Models;
 
 class Master {
     private static $instancia;
-    
-    public $listaCategorias;
-    public $listaNegocios;
-    public $listaResenas;
+    private $listaCategorias;
+    private $listaNegocios;
 
+    private $listaResenas;
 
+    private function __construct() {}
 
     public static function obtenerInstancia() {
         if (self::$instancia === null) {
@@ -75,20 +75,9 @@ class Master {
             return false;
         }
 
-        
     }
 
-    // public function listanegociosCat($categoria = false){
-    //     $array_negocios_cat = array();
-    //     $lista_negocios = $this -> listaNegocios;
-    //     foreach($lista_negocios as $key => $negocio){
-    //         if($negocio -> cod_categoria == $categoria){
-    //             array_push($array_negocios_cat, $negocio );
-    //         }
-    //     }
 
-    //     return $array_negocios_cat;
-    // }
 
 }
 
