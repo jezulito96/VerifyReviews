@@ -63,11 +63,13 @@ class Master {
     }
 
     public function obj_categoria($cod_categoria){
+       
         foreach($this -> listaCategorias as $categoria){
             if($cod_categoria == $categoria -> getCodCategoria()){
                 return $categoria;
             }
         }
+        
     }
 
     public function setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotos, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo) {
