@@ -5,13 +5,15 @@
             // echo "categoria: " . $negocio -> getCodCategoria() ." <br>";
             // echo "nombre Categoria: " . $negocio -> getNombreCategoria() ."<br>";
             // echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
-            echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."<i class='far fa-heart icono-corazon'></i></h3>";
+            echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."
+                <i class='fa-solid fa-check' id='checkVerde' style='color: #63E6BE;'></i>
+                <i class=''fa-solid fa-check' id='checkAzul' style='color: #3b789f;'></i></h3>";
 
             echo '<div class="fotosContainerNegocio">';
 
                 // recojo las rutas de las fotos y las pinto 
                 $foto_principal = $negocio -> getFotoPrincipal();
-                echo '<div class="fotoContainer" style="margin-left:10px;">';
+                echo '<div class="fotoContainer" style="margin-left:15px;">';
                     echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                         echo '<img src="'. base_url(). $foto_principal .'" alt="'. $negocio -> getNombre() .'" title="'. $negocio -> getNombre() .'"/>';
                     echo '</a>';
@@ -32,5 +34,18 @@
             echo '</div>';
         }
     }
-    
-    
+?>
+<script>
+    $(document).ready(function(){
+        $("#checkVerde").hide();
+
+        $("#checkAzul").click(function(){
+            $("#checkVerde").show();
+            $(this).hide();
+        });
+        $("#checkVerde").click(function(){
+            $("#checkAzul").show();
+            $(this).hide();
+        });
+    });
+</script>
