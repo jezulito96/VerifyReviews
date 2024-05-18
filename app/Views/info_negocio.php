@@ -194,12 +194,13 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             var alturaPantalla = $(window).height();
             var scroll = $(window).scrollTop();
 
-            console.log("altura total" + alturaTotal);
-            console.log("altura pant" + alturaPantalla);
-            console.log("scrol" + scroll);
+            // console.log("altura total" + alturaTotal);
+            // console.log("altura pant" + alturaPantalla);
+            // console.log("scrol" + scroll);
 
             if (scroll + 100 >= alturaPantalla) {
                 $('.flechaArriba').show();
+                console.log("entra");
             } else {
                 $('.flechaArriba').hide();
             }
