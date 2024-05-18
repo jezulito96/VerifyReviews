@@ -113,16 +113,17 @@ li{
     z-index:300;
     background: #ddd;
     border-radius: 100px;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.9;
 }
 
 .flechaArriba i{
     color:#51a5d9;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 

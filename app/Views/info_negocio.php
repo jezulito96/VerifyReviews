@@ -147,7 +147,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <div class="flechaArriba" style="display:none">
+    <div class="flechaArriba" style="display:none;">
         <i class="fas fa-arrow-up"></i>
     </div>
 
