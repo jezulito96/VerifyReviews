@@ -107,7 +107,7 @@ li{
 
 
 .flechaArriba{
-    position: absolute;
+    position: fixed;
     top:80vh;
     right: 10vw;
     z-index:300;
