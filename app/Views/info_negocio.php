@@ -56,7 +56,7 @@
             <span id="email">Email</span>
         </div>
         <div class="containerIcono container_redesSociales">
-            <i class="fab fa-twitter iconosColor"></i>
+            <i class="fas fa-share-alt iconosColor"></i>
             <span id="redesSociales">Redes</span>
         </div>
 
@@ -147,7 +147,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <i class="fa-solid fa-arrow-up flechaArriba" style="color: #74C0FC;"></i>
+    <i class="fas fa-arrow-up flechaArriba"></i>
 
 <script>
     $(document).ready(function(){
@@ -179,6 +179,25 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             $('html, body').animate({
                 scrollTop: $('#content_redesSociales').offset().top
             }, 1000);
+        });
+
+        $('.flechaArriba').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.containerTitulo').offset().top
+            }, 1000);
+        });
+        
+        
+        $(window).scroll(function() {
+            var alturaTotal = $(document).height();
+            var alturaPantalla = $(window).height();
+            var scroll = $(window).scrollTop();
+
+            if (scroll + alturaPantalla >= alturaTotal - 100) {
+                $('.flechaArriba').fadeIn();
+            } else {
+                $('.flechaArriba').fadeOut();
+            }
         });
     });
 </script>

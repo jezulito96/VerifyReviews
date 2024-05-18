@@ -108,4 +108,8 @@ li{
 .flechaArriba{
     color:#51a5d9;
     size: 20px;
+    position: absolute;
+    top:80vh;
+    right: 10vw;
+    z-index:300;
 }
