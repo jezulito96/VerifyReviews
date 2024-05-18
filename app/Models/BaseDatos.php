@@ -13,9 +13,9 @@ class BaseDatos extends Model
 
         $where = " ";
         if($cod_categoria != false){
-            $where = " cod_categoria=" . $cod_categoria;
+            $where = " cod_categoria=" . intval($cod_categoria);
         }
-        
+
         $orden = "SELECT cod_categoria, tipo_negocio FROM categoria ". $where;
 
         $listaCategorias = $this->db->query($orden);
