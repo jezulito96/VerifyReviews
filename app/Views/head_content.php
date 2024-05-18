@@ -74,6 +74,7 @@
     <?php 
     
 
+
     // Comprobación para detectar si el usuario accede desde un dispositivo móvil o desde escritorio
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     if (
@@ -102,6 +103,9 @@
 
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
+
+    // maravillosos iconode de cloudflare
+    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">';
     ?>
 
     <!-- estilo del mapa que se genera con JQUERY y la libreria de OPENSTREETSMAPS -->
