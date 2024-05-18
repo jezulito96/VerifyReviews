@@ -76,8 +76,8 @@
                         
                         echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
                         echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
-                        echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
-                        echo "texto". "<br>". $resena -> getOpinion(). "<br>";
+                        // echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
+                        // echo "texto". "<br>". $resena -> getOpinion(). "<br>";
                         echo "Calificacion". "<br>". $resena -> getCalificacion(). "<br>";
                         echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
 
