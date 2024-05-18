@@ -69,10 +69,9 @@
                 Opiniones
             </h3>    
             <?php
-            foreach($listaResenas as $i => $resena){
-                echo '<div class=".container_opiniones_info">';
-
-                    
+            echo '<div class=".container_opiniones_info">';
+                foreach($listaResenas as $i => $resena){
+                        
                     echo '<div class="info_opiniones" >';
                         
                         echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
@@ -84,8 +83,9 @@
 
                     echo '</div>';
 
-                echo '</div>';
-            }
+                }
+            echo '</div>';
+
             ?>
         </div>
 
