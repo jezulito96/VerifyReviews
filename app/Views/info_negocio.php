@@ -147,7 +147,9 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <i class="fas fa-arrow-up flechaArriba"></i>
+    <div class="flechaArriba">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
 <script>
     $(document).ready(function(){
@@ -191,6 +193,10 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             var alturaTotal = $(document).height();
             var alturaPantalla = $(window).height();
             var scroll = $(window).scrollTop();
+
+            console.log("altura total" + alturaTotal);
+            console.log("altura pant" + alturaPantalla);
+            console.log("scrol" + scroll);
 
             if (scroll <= alturaPantalla) {
                 $('.flechaArriba').hide();
