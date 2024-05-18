@@ -58,7 +58,7 @@ class Master {
                 );
 
                 $baseDatos = new BaseDatos();
-                $nombre_categoria = $baseDatos -> getCategoria($negocio -> cod_categoria);
+                $nombre_categoria = $baseDatos -> getCategoria($negocio -> getCodCategoria());
                 $negocio -> setNombreCategoria($nombre_categoria);
                 $this->listaNegocios[] = $negocio;
             }

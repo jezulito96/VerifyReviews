@@ -18,7 +18,7 @@ class Negocio {
     private $activo;
     private $confirma_correo;
 
-    public $nombreCategoria;
+    private $nombreCategoria;
 
     public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
         $this->nombre = $nombre;
