@@ -21,7 +21,7 @@ class Negocio {
 
     private $nombreCategoria;
 
-    public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
+    public function __construct($cod_negocio, $nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
         
         $this->nombre = $nombre;
         $this->email = $email;
@@ -38,16 +38,16 @@ class Negocio {
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;
         $this->confirma_correo = $confirma_correo;
-
+        $this ->cod_negocio = $cod_negocio;
         // le paso el codigo del negocio
         $baseDatos = new BaseDatos();
-        $cod_negocio = $baseDatos -> getMaxNegocio();
+        // $cod_negocio = $baseDatos -> getMaxNegocio();
 
         $cat =  $baseDatos -> getListaCategorias($cod_categoria);
         $nombre_categoria = $cat[0]['tipo_negocio'];
         $this -> nombreCategoria =$nombre_categoria;
 
-        $this -> cod_negocio = intval($cod_negocio - 1);
+        // $this -> cod_negocio = intval($cod_negocio - 1);
     }
 
     public function getNombre() {

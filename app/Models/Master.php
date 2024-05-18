@@ -40,6 +40,7 @@ class Master {
             $this->listaNegocios = array();        
             foreach($baseDatos->getListaNegocios() as $val){
                 $negocio = new Negocio(
+                    $val['cod_negocio'], 
                     $val['nombre'], 
                     $val['email'], 
                     $val['calle'], 

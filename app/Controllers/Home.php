@@ -372,7 +372,7 @@ class Home extends BaseController{
         
         // añado a la lista de negocios el nuevo objeto negocio
         $master = Master::obtenerInstancia();
-        $master->setNegocio($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
+        $master->setNegocio($cod_negocio, $nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
 
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
 
