@@ -70,7 +70,7 @@
             </h3>    
             <?php
             // foreach($listaOpiniones as $i => $opinion){
-                echo '<div class="info_opiniones">';
+                echo '<div class=".container_opiniones_info">';
 
                     
                     echo '<div class="info_opiniones" >';
