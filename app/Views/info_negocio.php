@@ -61,7 +61,7 @@
         </div>
 
     </div>
-
+    
     <div class="infoContainerNegocio">
 
         <div id="content_opiniones">
@@ -69,18 +69,23 @@
                 Opiniones
             </h3>    
             <?php
-            // foreach($listaOpiniones as $i => $opinion){
+            foreach($listaResenas as $i => $resena){
                 echo '<div class=".container_opiniones_info">';
 
                     
                     echo '<div class="info_opiniones" >';
                         
-                        echo "hola";
+                        echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
+                        echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
+                        echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
+                        echo "texto". "<br>". $resena -> getOpinion(). "<br>";
+                        echo "Calificacion". "<br>". $resena -> getCalificacion(). "<br>";
+                        echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
 
                     echo '</div>';
 
                 echo '</div>';
-            // }
+            }
             ?>
         </div>
 
@@ -91,7 +96,7 @@
             <div id="info_opiniones">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+            Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
             </div> 
         </div>
 
@@ -102,7 +107,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             <div id="info_llamar">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+            Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
             </div>
         </div>
 
@@ -113,7 +118,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             <div id="info">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+            Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
             </div> 
         </div>
 
@@ -125,7 +130,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
                 <div id="info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
                 </div>
             </div>
 
@@ -136,7 +141,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
                 <div id="info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
                 </div> 
             </div>
 
@@ -147,7 +152,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
                 <div id="info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
 
-Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
+                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
                 </div>   
             </div>
             

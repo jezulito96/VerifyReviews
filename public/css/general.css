@@ -131,6 +131,9 @@ li{
 .container_opiniones_info {
     display: flex;
     overflow-x: auto;
+    padding: 10px 0;
+    background-color: white;
+
 }
 
 .info_opiniones {
@@ -138,5 +141,7 @@ li{
     margin: 10px 10px; 
     height: 150px;
     width: 200px;
+    border-left: 1px solid #ddd;
+    padding:5px;
 }
 

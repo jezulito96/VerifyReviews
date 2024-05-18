@@ -8,7 +8,7 @@ class Master {
     private $listaCategorias;
     private $listaNegocios;
 
-    private $listaResenas;
+    public $listaResenas;
 
     private function __construct() {
     }
@@ -95,7 +95,7 @@ class Master {
         $this->listaNegocios[] = $negocio;
     }
 
-    public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_key,$estado,$nickname){
+    public function setResena($cod_resena, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$qr_key,$estado,$nickname){
         $baseDatos = new BaseDatos();
 
         // primero tengo que sacar el qr_id del qr_key que es la clave publica 
@@ -105,7 +105,9 @@ class Master {
         
         // después hago la insertcion a la base de datos con el id que me devuelve el metodo anterior
         if($id !=false){
-            $baseDatos -> setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,intval($id),$estado,$nickname);
+            $baseDatos -> setResena($cod_resena, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,intval($id),$estado,$nickname);
+            $this->listaResenas[] = new Resena($cod_resena, $cod_negocio, $cod_usuario, $fecha_creacion, $fecha_servicio, $calificacion, $titulo, $opinion, $fotos, $id, $estado, $nickname);
+            
             return true;
         }else{
             return false;
@@ -136,15 +138,32 @@ class Master {
         }
 
     }
+    
+    public function getListaResenas($cod_negocio = false){
+        
+        $baseDatos = new BaseDatos();
+        if ($this->listaResenas === null) {
 
-    // public function setListaResenas($cod_negocio){
+            $this->listaResenas = array();        
+            foreach($baseDatos->getlistaResenas() as $val){
+                $this->listaResenas[] = new Resena($val['cod_resena'],$val['cod_negocio'],$val['cod_usuario'],$val['fecha_creacion'],$val['fecha_servicio'],$val['calificacion'],$val['titulo'],$val['opinion'],$val['fotos'],$val['qr_id'],$val['estado'],$val['nickname']);
+            }
+        }
 
-    // }
+        if($cod_negocio != false){
+            $resenas_negocio = array();
+            foreach($this -> listaResenas as $i => $resena){
+                if($resena -> getCodNegocio() == $cod_negocio){
+                    $resenas_negocio[] = $resena;
+                }
+            }
 
-    // public function setTopResenas(){
+            return $resenas_negocio;
+        }
 
-    // }
-
+        
+        return $this->listaResenas;
+    }
 
 }
 

@@ -327,6 +327,16 @@ class BaseDatos extends Model
         $parametros = [$cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname];
         $this -> db -> query($orden, $parametros);
     }
+
+    public function getlistaResenas(){
+        $orden = "SELECT cod_resena, cod_negocio, cod_usuario, fecha_creacion, fecha_servicio, calificacion, titulo, opinion, fotos, qr_id, estado, nickname 
+                FROM resena";
+
+        $listaResenas = $this->db->query($orden);
+
+        return $listaResenas->getResultArray();
+    }
+
 }
 
 

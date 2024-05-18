@@ -47,6 +47,8 @@ class Home extends BaseController{
     public function index(): string {
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master -> getListaCategorias();
+        $master -> getListaNegocios();
+        $master -> getListaResenas();
         
         //vistas
         $maleta['head_content'] = view('head_content');
@@ -783,10 +785,13 @@ class Home extends BaseController{
             $id_negocio= $_GET['id'];
            
             $maleta_info_negocio['negocio'] = $master -> getNegocio(intval($id_negocio));
+            $maleta_info_negocio['lista_resenas'] = $master -> getListaResenas(intval($id_negocio));
             
         }else{
             echo "algo ha salido mal";
         }
+
+
 
         // vistas
         $maleta['head_content'] = view('head_content');
