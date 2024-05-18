@@ -38,24 +38,24 @@
 
     <div class="sliderInfoNegocio">
 
-        <div class="containerIcono">
+        <div class="container_opiniones">
             <i class="fas fa-comment iconosColor"></i>
             <span id="opiniones">Opiniones</span>
         </div>
-        <div class="containerIcono">
+        <div class="container_mapa">
             <i class="fas fa-map-marked-alt iconosColor"></i>
             <span id="mapa">Mapa</span>
         </div>
-        <div class="containerIcono">
+        <div class="container_llamar">
             <i class="fas fa-phone iconosColor"></i>
             <span id="llamar">Llamar</span>
         </div>
 
-        <div class="containerIcono">
+        <div class="container_email">
             <i class="fas fa-envelope iconosColor"></i>
             <span id="email">Email</span>
         </div>
-        <div class="containerIcono">
+        <div class="container_redesSociales">
             <i class="fab fa-twitter iconosColor"></i>
             <span id="redesSociales">Redes sociales</span>
         </div>
@@ -149,10 +149,9 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
 <script>
     $(document).ready(function(){
-        $('.sliderInfoNegocio i').click(function(){
-            var targetId = $(this).data('target');
+        $('.container_opiniones').click(function(){
             $('html, body').animate({
-                scrollTop: $('#' + targetId).offset().top
+                scrollTop: $('#content_opiniones').offset().top
             }, 1000);
         });
     });

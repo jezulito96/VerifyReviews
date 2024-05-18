@@ -80,20 +80,27 @@ li{
     border-bottom: 1px solid #ddd;
 }
 
-.sliderInfoNegocio .containerIcono{
+.containerIcono{
     text-align: center;
     flex: 0 0 auto;
     padding: 0 10px;
-    width: 25%;
+    width: 20%;
 }
 
-.sliderInfoNegocio i {
+.containerIcono i {
     font-size: 24px;
     color: #333;
 }
-.sliderInfoNegocio span {
+
+.containerIcono span {
     display: block;
     margin-top: 5px;
     font-size: 14px;
-    text-align: center;
 }
+
+/* apartados de info */
+.infoContainerNegocio > div{
+    margin-bottom: 15px ;
+    border-bottom: 1px solid #ccc;
+}
+
