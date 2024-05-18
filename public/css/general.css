@@ -27,10 +27,10 @@ li{
 
 
 /* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA Y EN INFO_NEGOCIO--------------------- */
-.containerTitulo{
+.containerTitulo {
     text-align: center;
     margin: 15px 0;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 }
 .icono-corazon {
@@ -84,7 +84,7 @@ li{
     text-align: center;
     flex: 0 0 auto;
     padding: 0 10px;
-    width: 30%;
+    width: 25%;
 }
 
 .sliderInfoNegocio i {

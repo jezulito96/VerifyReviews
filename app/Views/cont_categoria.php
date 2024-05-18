@@ -7,7 +7,9 @@
             // echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
             ?>
             <div class="containerTitulo" >
-              <?php  echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."<i class='far fa-heart icono-corazon'></i></h3>";?>
+                <?php  
+                    echo $negocio -> getNombre(). "<i class='far fa-heart icono-corazon'></i>";
+                ?>
             </div>
             
             <?php
