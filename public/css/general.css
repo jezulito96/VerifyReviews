@@ -126,4 +126,17 @@ li{
     font-size: 30px;
 }
 
+/* scroll de div opiniones en info_negocio */
+
+.container_opiniones_info {
+    display: flex;
+    overflow-x: auto;
+}
+
+.info_opiniones {
+    display: flex;
+    margin: 10px 10px; 
+    height: 150px;
+    width: 200px;
+}
 
