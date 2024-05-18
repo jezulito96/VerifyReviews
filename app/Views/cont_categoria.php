@@ -5,8 +5,12 @@
             // echo "categoria: " . $negocio -> getCodCategoria() ." <br>";
             // echo "nombre Categoria: " . $negocio -> getNombreCategoria() ."<br>";
             // echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
-            echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."<i class='far fa-heart icono-corazon'></i></h3>";
-
+            ?>
+            <div class="containerTitulo" >
+              <?php  echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."<i class='far fa-heart icono-corazon'></i></h3>";?>
+            </div>
+            
+            <?php
             echo '<div class="fotosContainerNegocio">';
 
                 // recojo las rutas de las fotos y las pinto 

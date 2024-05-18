@@ -27,6 +27,11 @@ li{
 
 
 /* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA--------------------- */
+.containerTitulo{
+    height: 20px;
+    margin: 5px 10px;
+}
+
 .tituloNegocio{
     border-top: 1px solid #ddd;
     margin:3px 0px;
