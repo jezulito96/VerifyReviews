@@ -31,6 +31,9 @@ li{
     height: 20px;
     margin: 5px 10px;
 }
+.containerTitulo i{
+    height: 18px;
+}
 
 .tituloNegocio{
     border-top: 1px solid #ddd;
