@@ -147,7 +147,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <div class="flechaArriba">
+    <div class="flechaArriba invisible">
         <i class="fas fa-arrow-up"></i>
     </div>
 
@@ -198,11 +198,10 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             // console.log("altura pant" + alturaPantalla);
             // console.log("scrol" + scroll);
 
-            if (scroll + 100 >= alturaPantalla) {
-                $('.flechaArriba').show();
-                console.log("entra");
+            if (scroll + 100 <= alturaPantalla) {
+                $('.flechaArriba').addClass('invisible');
             } else {
-                $('.flechaArriba').hide();
+                $('.flechaArriba').removeClass('invisible');
             }
         });
     });
