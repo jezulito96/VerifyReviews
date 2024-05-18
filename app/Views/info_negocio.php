@@ -37,25 +37,26 @@
 ?>
 
     <div class="sliderInfoNegocio">
-        <div>
-            <i class="fas fa-comment iconos-Color"></i>
+        
+        <div class="containerIcono">
+            <i class="fas fa-comment iconosColor"></i>
             <span id="opiniones">Opiniones</span>
         </div>
-        <div>
-            <i class="fas fa-map-marked-alt iconos-Color"></i>
+        <div class="containerIcono">
+            <i class="fas fa-map-marked-alt iconosColor"></i>
             <span id="mapa">Mapa</span>
         </div>
-        <div>
-            <i class="fas fa-phone iconos-Color"></i>
+        <div class="containerIcono">
+            <i class="fas fa-phone iconosColor"></i>
             <span id="llamar">Llamar</span>
         </div>
 
-        <div>
-            <i class="fas fa-envelope iconos-Color"></i>
+        <div class="containerIcono">
+            <i class="fas fa-envelope iconosColor"></i>
             <span id="email">Email</span>
         </div>
-        <div>
-            <i class="fab fa-twitter iconos-Color"></i>
+        <div class="containerIcono">
+            <i class="fab fa-twitter iconosColor"></i>
             <span id="redesSociales">Redes sociales</span>
         </div>
 
@@ -67,24 +68,36 @@
             <h3>
                 Opiniones
             </h3>    
+            <div id="info_opiniones">
+
+            </div>
         </div>
 
         <div id="content_mapa">
             <h3>
                 Mapa
-            </h3>    
+            </h3>   
+            <div id="info_opiniones">
+                
+            </div> 
         </div>
 
         <div id="content_opiniones">
             <h3>
                 Llamar
             </h3>    
+            <div id="info_opiniones">
+                
+            </div>
         </div>
 
         <div id="content_email">
             <h3>
                 Email
-            </h3>    
+            </h3>   
+            <div id="info">
+                
+            </div> 
         </div>
 
         <div id="content_redesSociales">
@@ -92,19 +105,29 @@
                 <h3>
                     Facebook
                 </h3>    
+                <div id="info">
+                
+                </div>
             </div>
 
             <div id="x">
                 <h3>
                     X
-                </h3>    
+                </h3>   
+                <div id="info">
+                
+                </div> 
             </div>
 
             <div id="instagram">
                 <h3>
                     Instagram
-                </h3>    
+                </h3> 
+                <div id="info">
+                
+                </div>   
             </div>
+            
         </div>
 
 
