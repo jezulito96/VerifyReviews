@@ -33,6 +33,10 @@
             <!--  vista para pintar los negocios que pertenecen a una categoria -->
             <?php if (isset ($cont_categoria)) echo $cont_categoria; ?>
             
+
+            <!--  vista para la informacion de un negocio en concreto-->
+            <?php if (isset ($info_negocio)) echo $info_negocio; ?>
+
             <?php
             if (isset ($val))
                 echo $val;

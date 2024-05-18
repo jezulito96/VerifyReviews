@@ -774,4 +774,17 @@ class Home extends BaseController{
         return view('index', $maleta);
 
     }
+
+
+    public function vista_info_negocio(){
+
+
+        $maleta_info_negocio['hola'] = "hola";
+
+        // vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['info_negocio'] = view('info_negocio', $maleta_info_negocio);
+        return view('index', $maleta);
+    }
 }

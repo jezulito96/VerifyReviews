@@ -42,3 +42,6 @@ $routes->post('/setGenerarResenas', 'Home::setGenerarResenas');
 
 // vista para mostrar la lista de negocios de una categoria
 $routes->get('/categoria', 'Home::vista_cat_negocio');
+
+// vista para la info de un negocio en concreto
+$routes->get('/negocio', 'Home::vista_info_negocio');
