@@ -8,8 +8,8 @@
 
             echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."
                     <span class='check'>
-                        <i class='fa-solid fa-check visible' style='color: #63E6BE;'></i>
-                        <i class=''fa-solid fa-check invisible' style='color: #3b789f;'></i>
+                        <i class='fa-solid fa-check' style='color: #63E6BE;'></i>
+                        <i class=''fa-solid fa-check' style='color: #3b789f;'></i>
                     </span>
                 </h3>";
             
