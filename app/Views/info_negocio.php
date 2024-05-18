@@ -181,10 +181,9 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             }, 1000);
         });
 
-        $('.flechaArriba').click(function(){
-            $('html, body').animate({
-                scrollTop: $('.containerTitulo').offset().top
-            }, 1000);
+        $('.flechaArriba').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            return false;
         });
         
         
