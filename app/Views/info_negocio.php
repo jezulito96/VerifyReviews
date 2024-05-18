@@ -193,9 +193,9 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             var scroll = $(window).scrollTop();
 
             if (scroll + alturaPantalla >= alturaTotal - 100) {
-                $('.flechaArriba').fadeIn();
+                $('.flechaArriba').show();
             } else {
-                $('.flechaArriba').fadeOut();
+                $('.flechaArriba').hide();
             }
         });
     });
