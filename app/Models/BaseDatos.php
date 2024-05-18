@@ -8,10 +8,15 @@ use Predis\Connection\Parameters;
 class BaseDatos extends Model
 {
 
-    function getListaCategorias()
+    function getListaCategorias($cod_categoria = false)
     {
 
-        $orden = "SELECT cod_categoria, tipo_negocio FROM categoria";
+        $cod_categoria = " ";
+        if($cod_categoria != false){
+            $where = " cod_categoria=" . $cod_categoria;
+        }
+        $orden = "SELECT cod_categoria, tipo_negocio FROM categoria ". $where;
+
         $listaCategorias = $this->db->query($orden);
 
 

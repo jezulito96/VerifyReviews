@@ -18,6 +18,8 @@ class Negocio {
     private $activo;
     private $confirma_correo;
 
+    private $nombreCategoria;
+
     public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
         $this->nombre = $nombre;
         $this->email = $email;
@@ -94,5 +96,13 @@ class Negocio {
 
     public function getConfirmaCorreo() {
         return $this->confirma_correo;
+    }
+
+    public function getNombreCategoria(){    
+        return $this -> nombreCategoria;
+    }
+
+    public function setNombreCategoria($nombreCategoria){
+        $this -> nombreCategoria = $nombreCategoria;
     }
 }
