@@ -87,6 +87,11 @@ class Master {
             $activo,
             $confirma_correo
         );
+        $baseDatos = new BaseDatos();
+        $cat =  $baseDatos -> getListaCategorias($cod_categoria);
+        $nombre_categoria = $cat[0]['tipo_negocio'];
+        $negocio -> setNombreCategoria($nombre_categoria);
+        $this->listaNegocios[] = $negocio;
         $this->listaNegocios[] = $negocio;
     }
 
