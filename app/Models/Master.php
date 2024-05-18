@@ -113,7 +113,7 @@ class Master {
         $lista_negocios_cat = array();
         foreach($this -> getListaNegocios() as $key => $negocio){
             
-            if($negocio -> cod_categoria == $categoria){
+            if($negocio -> getCodCategoria() == $categoria){
                 array_push($lista_negocios_cat, $negocio);
             }
         }
