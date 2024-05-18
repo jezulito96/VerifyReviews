@@ -45,7 +45,7 @@ class Negocio {
 
         $cat =  $baseDatos -> getListaCategorias($cod_categoria);
         $nombre_categoria = $cat[0]['tipo_negocio'];
-        $this -> nombreCategoria -> setNombreCategoria($nombre_categoria);
+        $this -> nombreCategoria =$nombre_categoria;
 
         $this -> cod_negocio = intval($cod_negocio - 1);
     }
