@@ -13,7 +13,7 @@ class BaseDatos extends Model
 
         $where = " ";
         if($cod_categoria != false){
-            $where = " WHERE cod_categoria= " . intval($cod_categoria);
+            $where = " WHERE cod_categoria=" . intval($cod_categoria);
         }
 
         $orden = "SELECT cod_categoria, tipo_negocio FROM categoria ". $where;
