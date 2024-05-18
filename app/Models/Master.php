@@ -125,6 +125,16 @@ class Master {
         return $lista_negocios_cat;
     }
 
+    public function getNegocio($cod_negocio){
+
+        foreach($this -> getListaNegocios() as $key => $negocio){
+            
+            if($negocio -> getCodNegocio() == $cod_negocio){
+                return $negocio;
+            }
+        }
+
+    }
 
     // public function setListaResenas($cod_negocio){
 

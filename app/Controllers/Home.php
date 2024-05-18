@@ -777,9 +777,16 @@ class Home extends BaseController{
 
 
     public function vista_info_negocio(){
+        $master = master::obtenerInstancia();
 
-
-        $maleta_info_negocio['hola'] = "hola";
+        if(isset($_GET['id'])){
+            $id_negocio= $_GET['id'];
+           
+            $maleta_info_negocio['negocio'] = $master -> getNegocio(intval($id_negocio));
+            
+        }else{
+            echo "algo ha salido mal";
+        }
 
         // vistas
         $maleta['head_content'] = view('head_content');

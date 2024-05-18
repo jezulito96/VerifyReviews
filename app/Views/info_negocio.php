@@ -1,4 +1,7 @@
 <?php
 
 
-if(isset($hola)) echo  $hola;
+if(isset($negocio)){
+    echo "cod_negocio: " . $negocio -> getCodNegocio() . "<br>";
+    echo "nombre: " . $negocio -> getNombre() . "<br>";
+} 
