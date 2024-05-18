@@ -4,7 +4,7 @@
         foreach($lista_negocios as $i => $negocio){
             echo "categoria: " . $negocio -> getCodCategoria() ." <br>";
             echo "nombre Categoria: " . $negocio -> getNombreCategoria() ."<br>";
-            echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a>';
+            echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
             echo "nombre negocio: " . $negocio -> getNombre()."<br><hr>";
             
         }
