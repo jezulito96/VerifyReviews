@@ -22,7 +22,7 @@
                 echo '</div>';
 
 
-                $rutasimgs = $negocio -> getFotoPrincipal();
+                $rutasimgs = $negocio -> getFotosBD();
                 $imagenes = explode(",", $rutasimgs);
                 foreach($imagenes as $key => $valor){
                    echo "<p color='red'>" .base_url(). $valor ."</p>";
