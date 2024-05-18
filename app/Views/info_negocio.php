@@ -147,7 +147,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <div class="flechaArriba invisible">
+    <div class="flechaArriba">
         <i class="fas fa-arrow-up"></i>
     </div>
 
@@ -199,9 +199,9 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             // console.log("scrol" + scroll);
 
             if (scroll + 100 <= alturaPantalla) {
-                $('.flechaArriba').addClass('invisible');
+                $('.flechaArriba').hide();
             } else {
-                $('.flechaArriba').removeClass('invisible');
+                $('.flechaArriba').show();
             }
         });
     });
