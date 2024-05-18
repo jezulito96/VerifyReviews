@@ -11,9 +11,11 @@ class BaseDatos extends Model
     function getListaCategorias($cod_categoria = false)
     {
 
-        $cod_categoria = " ";
+        
         if($cod_categoria != false){
             $where = " cod_categoria=" . $cod_categoria;
+        }else{
+            $cod_categoria = " ";
         }
         $orden = "SELECT cod_categoria, tipo_negocio FROM categoria ". $where;
 
