@@ -25,7 +25,7 @@
                 $rutasimgs = $negocio -> getFotosBD();
                 $imagenes = explode(",", $rutasimgs);
                 foreach($imagenes as $key => $valor){
-                   echo "<p color='red'>" .base_url(). $valor ."</p>";
+                //    echo "<p color='red'>" .base_url(). $valor ."</p>";
                     echo '<div class="fotoContainer" >';
                         echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                             echo '<img src="'. base_url(). $valor .'" alt="'. $negocio -> getNombre() .'" title="'. $negocio -> getNombre() .'"/>';
