@@ -188,7 +188,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             return false;
         });
         
-        
+        $('.flechaArriba').hide();
         $(window).scroll(function() {
             var alturaTotal = $(document).height();
             var alturaPantalla = $(window).height();
@@ -198,10 +198,10 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             console.log("altura pant" + alturaPantalla);
             console.log("scrol" + scroll);
 
-            if (scroll <= alturaPantalla) {
-                $('.flechaArriba').hide();
-            } else {
+            if (scroll + 100 >= alturaPantalla) {
                 $('.flechaArriba').show();
+            } else {
+                $('.flechaArriba').hide();
             }
         });
     });
