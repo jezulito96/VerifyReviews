@@ -5,7 +5,7 @@
             // echo "categoria: " . $negocio -> getCodCategoria() ." <br>";
             // echo "nombre Categoria: " . $negocio -> getNombreCategoria() ."<br>";
             // echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
-            echo "<h3>nombre negocio: " . $negocio -> getNombre()."<h3>";
+            echo "<h3>nombre negocio: " . $negocio -> getNombre()."</h3>";
 
             echo '<div class="fotosContainerNegocio">';
 

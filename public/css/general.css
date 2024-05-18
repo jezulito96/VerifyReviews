@@ -30,17 +30,17 @@ li{
 .fotosContainerNegocio {
     display: flex;
     overflow-x: auto;
-    padding: 10px 0;
     background-color: white;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
 .fotosContainerNegocio .fotoContainer {
-    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
+    height: 150px;
 }
 .fotosContainerNegocio img {
-    width: 90%;
+    height: 90%;
 }
