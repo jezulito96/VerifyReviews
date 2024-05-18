@@ -38,24 +38,24 @@
 
     <div class="sliderInfoNegocio">
 
-        <div class="container_opiniones">
+        <div class="containerIcono container_opiniones">
             <i class="fas fa-comment iconosColor"></i>
             <span id="opiniones">Opiniones</span>
         </div>
-        <div class="container_mapa">
+        <div class="containerIcono container_mapa">
             <i class="fas fa-map-marked-alt iconosColor"></i>
             <span id="mapa">Mapa</span>
         </div>
-        <div class="container_llamar">
+        <div class="containerIcono container_llamar">
             <i class="fas fa-phone iconosColor"></i>
             <span id="llamar">Llamar</span>
         </div>
 
-        <div class="container_email">
+        <div class="containerIcono container_email">
             <i class="fas fa-envelope iconosColor"></i>
             <span id="email">Email</span>
         </div>
-        <div class="container_redesSociales">
+        <div class="containerIcono container_redesSociales">
             <i class="fab fa-twitter iconosColor"></i>
             <span id="redesSociales">Redes sociales</span>
         </div>
