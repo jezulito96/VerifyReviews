@@ -192,10 +192,10 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             var alturaPantalla = $(window).height();
             var scroll = $(window).scrollTop();
 
-            if (scroll + alturaPantalla >= alturaTotal - 100) {
-                $('.flechaArriba').show();
-            } else {
+            if (scroll <= alturaPantalla) {
                 $('.flechaArriba').hide();
+            } else {
+                $('.flechaArriba').show();
             }
         });
     });
