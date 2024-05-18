@@ -188,7 +188,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             return false;
         });
         
-        $('.flechaArriba').hide();
+        // $('.flechaArriba').hide();
         $(window).scroll(function() {
             var alturaTotal = $(document).height();
             var alturaPantalla = $(window).height();
