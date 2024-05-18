@@ -57,12 +57,12 @@
         </div>
         <div class="containerIcono container_redesSociales">
             <i class="fab fa-twitter iconosColor"></i>
-            <span id="redesSociales">Redes sociales</span>
+            <span id="redesSociales">Redes</span>
         </div>
 
     </div>
 
-    <div id="infoContainerNegocio">
+    <div class="infoContainerNegocio">
 
         <div id="content_opiniones">
             <h3>
@@ -147,11 +147,37 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
+    <i class="fa-solid fa-arrow-up flechaArriba" style="color: #74C0FC;"></i>
+
 <script>
     $(document).ready(function(){
         $('.container_opiniones').click(function(){
             $('html, body').animate({
                 scrollTop: $('#content_opiniones').offset().top
+            }, 1000);
+        });
+
+        $('.container_mapa').click(function(){
+            $('html, body').animate({
+                scrollTop: $('#content_mapa').offset().top
+            }, 1000);
+        });
+
+        $('.container_llamar').click(function(){
+            $('html, body').animate({
+                scrollTop: $('#content_llamar').offset().top
+            }, 1000);
+        });
+
+        $('.container_email').click(function(){
+            $('html, body').animate({
+                scrollTop: $('#content_email').offset().top
+            }, 1000);
+        });
+
+        $('.container_redesSociales').click(function(){
+            $('html, body').animate({
+                scrollTop: $('#content_redesSociales').offset().top
             }, 1000);
         });
     });

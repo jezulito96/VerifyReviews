@@ -100,7 +100,12 @@ li{
 
 /* apartados de info */
 .infoContainerNegocio > div{
-    margin-bottom: 15px ;
+    padding-top: 10px;
+    margin-bottom: 5px ;
     border-bottom: 1px solid #ccc;
 }
 
+.flechaArriba{
+    color:#51a5d9;
+    size: 20px;
+}
