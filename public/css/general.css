@@ -26,23 +26,21 @@ li{
 }
 
 
-/* es para los permisos de acceder a la ubicacion */
-.blur {
-    backdrop-filter: blur(5px); /* Aplica un efecto de desenfoque al fondo */
-    transition: backdrop-filter 0.5s ease; /* Agrega una transición suave al desenfoque */
-    -webkit-filter: blur(8px);  
+/* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA--------------------- */
+.fotosContainerNegocio {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
-
-#containerPermisosUbicacion{
-    position: absolute;
-    bottom: 100px;
-    left: 0px;
-    width: 100vw;
-    height: 200px;
-    background: white;
-    padding: 10px;
+.fotosContainerNegocio .fotoContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
- 
-.botonesUbicacion{
-    text-align: center;
+.fotosContainerNegocio img {
+    width: 90%;
 }
