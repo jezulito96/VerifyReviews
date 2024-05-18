@@ -2,6 +2,7 @@
 
 namespace App\Models;
 class Negocio {
+    private $cod_negocio;
     private $nombre;
     private $email;
     private $calle;
@@ -21,6 +22,7 @@ class Negocio {
     private $nombreCategoria;
 
     public function __construct($nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo,$confirma_correo) {
+        
         $this->nombre = $nombre;
         $this->email = $email;
         $this->calle = $calle;
@@ -36,6 +38,16 @@ class Negocio {
         $this->telefono_titular = $telefono_titular;
         $this->activo = $activo;
         $this->confirma_correo = $confirma_correo;
+
+        // le paso el codigo del negocio
+        $baseDatos = new BaseDatos();
+        $cod_negocio = $baseDatos -> getMaxNegocio();
+
+        $cat =  $baseDatos -> getListaCategorias($cod_categoria);
+        $nombre_categoria = $cat[0]['tipo_negocio'];
+        $this -> nombreCategoria -> setNombreCategoria($nombre_categoria);
+
+        $this -> cod_negocio = intval($cod_negocio - 1);
     }
 
     public function getNombre() {
@@ -101,8 +113,8 @@ class Negocio {
     public function getNombreCategoria(){    
         return $this -> nombreCategoria;
     }
-
-    public function setNombreCategoria($nombreCategoria){
-        $this -> nombreCategoria = $nombreCategoria;
+    public function getCodNegocio(){    
+        return $this -> cod_negocio;
     }
+
 }
