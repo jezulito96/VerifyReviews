@@ -5,14 +5,7 @@
             // echo "categoria: " . $negocio -> getCodCategoria() ." <br>";
             // echo "nombre Categoria: " . $negocio -> getNombreCategoria() ."<br>";
             // echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >Info negocio</a><br>';
-
-            echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."
-                    <span class='check'>
-                        <i class='fa-solid fa-check' style='color: #63E6BE;'></i>
-                        <i class=''fa-solid fa-check' style='color: #3b789f;'></i>
-                    </span>
-                </h3>";
-            
+            echo "<h3 class='tituloNegocio'>" . $negocio -> getNombre()."<i class='far fa-heart icono-corazon'></i></h3>";
 
             echo '<div class="fotosContainerNegocio">';
 
@@ -36,18 +29,8 @@
                     echo '</div>';
                 }
                 
-            echo '</div>';
+            echo '</div>'; 
         }
     }
-?>
-<script>
-    $(document).ready(function(){
-
-        $('.check').click(function(){
-
-            $('.toggle').find('i').toggle();
-
-        });
-
-    });
-</script>
+    
+    
