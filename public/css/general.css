@@ -27,11 +27,14 @@ li{
 
 
 /* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA--------------------- */
+.tituloNegocio{
+    border-top: 1px solid #ddd;
+}
 .fotosContainerNegocio {
     display: flex;
     overflow-x: auto;
     background-color: white;
-    border-top: 1px solid #ddd;
+   
     border-bottom: 1px solid #ddd;
 }
 .fotosContainerNegocio .fotoContainer {
