@@ -147,7 +147,7 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
 
     </div>
 
-    <div class="flechaArriba">
+    <div class="flechaArriba" style="display:none">
         <i class="fas fa-arrow-up"></i>
     </div>
 
@@ -188,7 +188,6 @@ Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdie
             return false;
         });
         
-        $('.flechaArriba').hide();
         $(window).scroll(function() {
             var alturaTotal = $(document).height();
             var alturaPantalla = $(window).height();
