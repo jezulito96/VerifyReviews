@@ -115,14 +115,23 @@
                         echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
                             echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
                                 echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
-                                
-                                
                                 echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
-
                                     echo $resena -> getFotos(); 
+                                    
+                                    echo '<div class="fotos_container_resenas">';
+                        
+                                    $rutasimgs = $resena -> getFotos();
+                                    $imagenes = explode(",", $rutasimgs);
+                                    foreach($imagenes as $key => $valor){
+                                    $rutaImagen = base_url().'/images/n/' . $valor;
+                                        echo '<div class="foto_container" >';
+                                                echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
+                                        echo '</div>';
+                                    }
+                                    
+                                    echo '</div>';  
 
                                 echo '</div>';
-
                             echo '</div>';
                         echo '</div>';
 

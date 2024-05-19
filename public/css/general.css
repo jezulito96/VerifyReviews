@@ -271,3 +271,23 @@ li{
     font-size: 20px;
     cursor: pointer;
 }
+
+/* para la galeria de imagenes de cada resena */
+.fotos_container_resenas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+.fotos_container_resenas .foto_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.foto_container img {
+    height: 90%;
+}
