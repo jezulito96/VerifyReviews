@@ -122,7 +122,7 @@
                                     $imagenes = explode(",", $rutasimgs);
                                     foreach($imagenes as $key => $valor){
                                         $rutaImagen = base_url().'/images/n/' . $valor;
-                                        echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
+                                        echo '<img class="imgs_resenas" src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
                                     }
                                     
                                 echo '</div>';
