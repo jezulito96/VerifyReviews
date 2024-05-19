@@ -103,24 +103,24 @@
 
                         echo '<div class="menu_opinion">';
                             // btn_imagenes    |  btn_ opinion
-                            echo '<div class="btn_opinion1" >Imágenes</div>';
-                            echo '<div class="btn_opinion2" >Opinión</div>';
+                            echo '<div id="btn_' . $resena-> getCodResena() . '" class="btn_opinion1" >Imágenes</div>';
+                            echo '<div id="btn_' . $resena-> getCodResena() . '" class="btn_opinion2" >Opinión</div>';
 
                         echo '</div>';
 
-                        echo '<div id="popup" class="popup">';
-                            echo '<div class="contenido_popup">';
-                                echo '<span class="boton_cerrar">&times;</span>';
-                                echo '<div id="informacion_popup">';
+                        echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
+                            echo '<div class="contenido_popup_' . $resena-> getCodResena() . '" >';
+                                echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
+                                echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
                                     echo $resena -> getFotos(); 
                                 echo '</div>';
                             echo '</div>';
                         echo '</div>';
 
-                        echo '<div id="popup2" class="popup2">';
-                            echo '<div class="contenido_popup2">';
-                                echo '<span class="boton_cerrar2">&times;</span>';
-                                echo '<div id="informacion_popup2">';
+                        echo '<div id="popup2_' . $resena-> getCodResena() . '" class="popup2">';
+                            echo '<div class="contenido_popup2_' . $resena-> getCodResena() . '" >';
+                                echo '<span class="boton_cerrar2_' . $resena-> getCodResena() . '" >&times;</span>';
+                                echo '<div id="informacion_popup2_' . $resena-> getCodResena() . '" >';
                                     echo $resena -> getOpinion(); 
                                 echo '</div>';
                             echo '</div>';
@@ -133,43 +133,52 @@
 
             ?>
         </div>
-        <script>
-            $(document).ready(function () {
-                var $popup = $("#popup");
-                var $boton_cerrar = $(".boton_cerrar");
+<script>
+    $(document).ready(function () {
+        
 
-                $(".btn_opinion1").click(function () {
-                    $popup.css("display", "flex");
-                });
+        $(".btn_opinion1").click(function () {
+                var id = $(this).attr('id');
 
-                $boton_cerrar.click(function () {
-                    $popup.css("display", "none");
-                });
+                var $popup = $("#popup_" + id);
+                var $boton_cerrar = $(".boton_cerrar_" + id);
+
+                $popup.css("display", "flex");
+
+                $boton_cerrar.click(function() {
+                $popup.css("display", "none");
 
                 $(window).click(function (evento) {
                     if ($(evento.target).is($popup)) {
                         $popup.css("display", "none");
                     }
                 });
-
-                var $popup2 = $("#popup2");
-                var $boton_cerrar2 = $(".boton_cerrar2");
-
-                $(".btn_opinion2").click(function () {
-                    $popup2.css("display", "flex");
-                });
-
-                $boton_cerrar2.click(function () {
-                    $popup2.css("display", "none");
-                });
-
-                $(window).click(function (evento) {
-                    if ($(evento.target).is($popup2)) {
-                        $popup2.css("display", "none");
-                    }
-                });
             });
-        </script>
+        });
+
+        $(".btn_opinion2").click(function () {
+            var id = $(this).attr('id');
+
+            var $popup2 = $("#popup2_" + id );
+            var $boton_cerrar2 = $(".boton_cerrar2_" + id);
+
+            $popup2.css("display", "flex");
+           
+            $boton_cerrar2.click(function () {
+                $popup2.css("display", "none");
+            });
+
+            $(window).click(function (evento) {
+                if ($(evento.target).is($popup2)) {
+                    $popup2.css("display", "none");
+                }
+            });
+
+        });
+
+
+    });
+</script>
         <div id="content_mapa">
             <h3>
                 Mapa
