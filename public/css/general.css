@@ -251,8 +251,16 @@ li{
     padding: 20px;
     border-radius: 5px;
     width: 80%;
-    max-width: 400px;
     position: relative;
+}
+
+.contenido_popup{
+    height: 50px;
+}
+
+.contenido_popup2{
+    min-height: 60px;
+    word-wrap: break-word;
 }
 
 .boton_cerrar,
