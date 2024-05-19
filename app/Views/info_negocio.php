@@ -107,12 +107,22 @@
                             echo '<div class="btn_opinion2" >Opinión</div>';
                         echo '</div>';
 
-                        echo '<div class="fotos_opinion__container" style="display:none;">';
-                            echo $resena -> getFotos(); 
+                        echo '<div id="popup" class="popup">';
+                            echo '<div class="contenido_popup">';
+                                echo '<span class="boton_cerrar">&times;</span>';
+                                echo '<div id="informacion_popup">';
+                                    echo $resena -> getFotos(); 
+                                echo '</div>';
+                            echo '</div>';
                         echo '</div>';
 
-                        echo '<div class="opinion_opinion" style="display:none;">';
-                            echo $resena -> getOpinion(); 
+                        echo '<div id="popup2" class="popup2">';
+                            echo '<div class="contenido_popup2">';
+                                echo '<span class="boton_cerrar2">&times;</span>';
+                                echo '<div id="informacion_popup2">';
+                                    echo $resena -> getOpinion(); 
+                                echo '</div>';
+                            echo '</div>';
                         echo '</div>';
 
                     echo '</div>';
@@ -122,7 +132,51 @@
 
             ?>
         </div>
+        <script>
+            $(document).ready(function () {
+                var $popup = $("#popup");
+                var $informacion_popup = $("#informacion_popup");
+                var $boton_cerrar = $(".boton_cerrar");
 
+                $(".btn_opinion2").on("click", function () {
+                    $informacion_popup.html(
+                        "Esta es la información del botón 1."
+                    );
+                    $popup.css("display", "flex");
+                });
+
+                $boton_cerrar.on("click", function () {
+                    $popup.css("display", "none");
+                });
+
+                $(window).on("click", function (evento) {
+                    if ($(evento.target).is($popup)) {
+                        $popup.css("display", "none");
+                    }
+                });
+
+                var $popup2 = $(".popup2");
+                var $informacion_popup2 = $("#informacion_popup2");
+                var $boton_cerrar = $(".boton_cerrar2");
+
+                $(".btn_opinion2").on("click", function () {
+                    $informacion_popup2.html(
+                        "Esta es la información del botón 1."
+                    );
+                    $popup2.css("display", "flex");
+                });
+
+                $boton_cerrar.on("click", function () {
+                    $popup2.css("display", "none");
+                });
+
+                $(window).on("click", function (evento) {
+                    if ($(evento.target).is($popup2)) {
+                        $popup2.css("display", "none");
+                    }
+                });
+            });
+        </script>
         <div id="content_mapa">
             <h3>
                 Mapa
