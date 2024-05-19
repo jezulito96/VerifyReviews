@@ -73,13 +73,19 @@
                 foreach($lista_resenas as $i => $resena){
                         
                     echo '<div class="info_opiniones" >';
+                        echo '<div class="cabecera_opinion>';
+                            // imagen de usuario
+                            echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
                         
-                        echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
-                        echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
-                        // echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
-                        // echo "texto". "<br>". $resena -> getOpinion(). "<br>";
-                        echo "Calificacion". "<br>". $resena -> getCalificacion(). "<br>";
-                        echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
+                            echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
+                        echo '</div>';
+
+                            // calificacion 
+
+                            // titulo
+
+
+                            // btn_imagenes    |  btn_ opinion
 
                     echo '</div>';
 
