@@ -76,9 +76,14 @@
 
                         echo '<div class="head_opinion">';
                             // imagen de usuario
-                            echo $resena -> getNickname();
-                        
-                            echo $resena -> getFechaServicio();
+                            echo '<div class="nick_opinion">';
+                                echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
+                                echo $resena -> getNickname();
+                            echo '</div>';
+
+                            $fecha = $resena -> getFechaServicio();
+                            echo '<div class="fecha_opinion">'. substr($fecha, 0, 10) . '</div>';
+
                         echo '</div>';
 
                         echo '<div class="resultado_opinion">';

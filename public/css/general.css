@@ -154,6 +154,13 @@ li{
 .head_opinion{
     display: flex;
 }
+.nick_opinion{
+
+}
+
+.fecha_opinion{
+    
+}
 
 .resultado_opinion{
 
@@ -180,5 +187,5 @@ li{
 }
 
 .btn_opinion_container{
-    
+
 }
