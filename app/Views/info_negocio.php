@@ -76,9 +76,9 @@
 
                         echo '<div class="head_opinion">';
                             // imagen de usuario
-                            echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
+                            echo $resena -> getNickname();
                         
-                            echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
+                            echo $resena -> getFechaServicio();
                         echo '</div>';
 
                         echo '<div class="resultado_opinion">';
@@ -91,7 +91,7 @@
 
                         echo '<div class="titulo_opinion">';
                             // TITULO DE LA RESEÑA
-                            $resena -> getTitulo();                            
+                            echo $resena -> getTitulo();                            
 
                         echo '</div>';
 
@@ -102,11 +102,11 @@
                         echo '</div>';
 
                         echo '<div class="fotos_opinion__container" style="display:none;">';
-                            $resena -> getFotos(); 
+                            echo $resena -> getFotos(); 
                         echo '</div>';
 
                         echo '<div class="opinion_opinion" style="display:none;">';
-                            $resena -> getOpinion(); 
+                            echo $resena -> getOpinion(); 
                         echo '</div>';
 
                     echo '</div>';
