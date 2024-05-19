@@ -120,10 +120,10 @@
                                     $rutasimgs = $resena -> getFotos();
                                     $imagenes = explode(",", $rutasimgs);
                                     foreach($imagenes as $key => $valor){
-                                    $rutaImagen = base_url().'/images/n/' . $valor;
+                                        $rutaImagen = base_url().'/images/n/' . $valor;
 
-                                    echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'"';
-                                    
+                                        echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'"';
+                                    }
 
                                 echo '</div>';
                             echo '</div>';
@@ -322,5 +322,5 @@
         });
 
     });
-    
+
 </script>
