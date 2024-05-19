@@ -79,7 +79,7 @@
                         
                             echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
                         echo '</div>';
-
+                        echo '<div class="cabecera_opinion>';
                             // calificacion 
 
                             // titulo
@@ -87,6 +87,7 @@
 
                             // btn_imagenes    |  btn_ opinion
 
+                        echo '</div>';
                     echo '</div>';
 
                 }
