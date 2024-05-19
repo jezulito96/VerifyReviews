@@ -103,8 +103,8 @@
 
                         echo '<div class="menu_opinion">';
                             // btn_imagenes    |  btn_ opinion
-                            echo '<div id="btn_' . $resena-> getCodResena() . '" class="btn_opinion1" >Imágenes</div>';
-                            echo '<div id="btn_' . $resena-> getCodResena() . '" class="btn_opinion2" >Opinión</div>';
+                            echo '<div id="' . $resena-> getCodResena() . '" class="btn_opinion1" >Imágenes</div>';
+                            echo '<div id="' . $resena-> getCodResena() . '" class="btn_opinion2" >Opinión</div>';
 
                         echo '</div>';
 
