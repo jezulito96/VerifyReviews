@@ -105,6 +105,7 @@
                             // btn_imagenes    |  btn_ opinion
                             echo '<div class="btn_opinion1" >Imágenes</div>';
                             echo '<div class="btn_opinion2" >Opinión</div>';
+
                         echo '</div>';
 
                         echo '<div id="popup" class="popup">';
@@ -135,13 +136,9 @@
         <script>
             $(document).ready(function () {
                 var $popup = $("#popup");
-                var $informacion_popup = $("#informacion_popup");
                 var $boton_cerrar = $(".boton_cerrar");
 
                 $(".btn_opinion1").click(function () {
-                    // $informacion_popup.html(
-                    //     "Esta es la información del botón 1."
-                    // );
                     $popup.css("display", "flex");
                 });
 
@@ -155,14 +152,10 @@
                     }
                 });
 
-                var $popup2 = $(".popup2");
-                var $informacion_popup2 = $("#informacion_popup2");
+                var $popup2 = $("#popup2");
                 var $boton_cerrar2 = $(".boton_cerrar2");
 
                 $(".btn_opinion2").click(function () {
-                    // $informacion_popup2.html(
-                    //     "Esta es la información del botón 1."
-                    // );
                     $popup2.css("display", "flex");
                 });
 
