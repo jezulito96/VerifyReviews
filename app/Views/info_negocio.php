@@ -118,15 +118,22 @@
                                 echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
                                     // echo $resena -> getFotos(); 
                                     
-                                    echo '<div class="fotos_container_resenas">';
-                        
                                     $rutasimgs = $resena -> getFotos();
                                     $imagenes = explode(",", $rutasimgs);
                                     foreach($imagenes as $key => $valor){
                                     $rutaImagen = base_url().'/images/n/' . $valor;
-                                        echo '<div class="foto_container" >';
-                                                echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
-                                        echo '</div>';
+                                    echo '
+                                        <div class="carousel_imgs_resenas">
+                                            <div class="fotoContainer_imgs_resenas">
+                                            
+                                                <img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" class="imgCat_resena"
+                                    
+                                            <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
+                                            
+                                            </div>
+                                        </div>
+                                    ';
+
                                     }
                                     
                                     echo '</div>';  
@@ -326,5 +333,17 @@
                 $('.flechaArriba').show();
             }
         });
+
+
+        //  carrousel imagenes de reseñas
+        
+        $('.carousel_imgs_resenas').slick({
+            dots: true, // puntitos
+            slidesToShow: 1, // fotos que se pintan a la vez
+            prevArrow:".flechaAtras",
+            nextArrow:".flechaDelante"
+        });
     });
+
+</script>
 </script>

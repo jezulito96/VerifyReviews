@@ -273,22 +273,28 @@ li{
     cursor: pointer;
 }
 
-/* para la galeria de imagenes de cada resena */
-.fotos_container_resenas {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow-x: auto;
+/* para la galeria de imagenes de cada resena el slider*/
+.imgCat_resena{
+    width: 80vw;
+    margin: 0px auto;
 }
-.fotos_container_resenas .foto_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    margin-top: 5px;
-    height: 150px;
-    margin-bottom: 10px;
+.fotoContainer_imgs_resenas{
+position: relative;
+height: 250px;
 }
-.foto_container img {
-    height: 90%;
+/* .flechaDelante, 
+.flechaAtras{
+position: absolute;
 }
+.flechaDelante{
+top:28%;
+right: 30px;
+width: 16px;
+height: 16px;
+}
+.flechaAtras{
+top:28%;
+left: 30px;
+width: 16px;
+height: 16px;
+} */
