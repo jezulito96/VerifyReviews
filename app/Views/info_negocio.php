@@ -69,22 +69,22 @@
                 Opiniones
             </h3>    
             <?php
-            // echo '<div class=".container_opiniones_info">';
-            //     foreach($lista_resenas as $i => $resena){
+            echo '<div class="container_opiniones_info">';
+                foreach($lista_resenas as $i => $resena){
                         
-            //         echo '<div class="info_opiniones" >';
+                    echo '<div class="info_opiniones" >';
                         
-            //             echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
-            //             echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
-            //             // echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
-            //             // echo "texto". "<br>". $resena -> getOpinion(). "<br>";
-            //             echo "Calificacion". "<br>". $resena -> getCalificacion(). "<br>";
-            //             echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
+                        echo "cod resena: ". "<br>" . $resena -> getCodResena(). "<br>";
+                        echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
+                        // echo "Titulo". "<br>". $resena -> getTitulo(). "<br>";
+                        // echo "texto". "<br>". $resena -> getOpinion(). "<br>";
+                        echo "Calificacion". "<br>". $resena -> getCalificacion(). "<br>";
+                        echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
 
-            //         echo '</div>';
+                    echo '</div>';
 
-            //     }
-            // echo '</div>';
+                }
+            echo '</div>';
 
             ?>
         </div>

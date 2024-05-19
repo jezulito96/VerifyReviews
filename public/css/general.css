@@ -133,14 +133,15 @@ li{
     overflow-x: auto;
     padding: 10px 0;
     background-color: white;
-
+    margin-left: 5vw;
 }
 
 .info_opiniones {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px 10px; 
     height: 150px;
-    width: 200px;
+    width: 90vw;
     border-left: 1px solid #ddd;
     padding:5px;
 }
