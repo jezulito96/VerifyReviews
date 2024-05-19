@@ -137,7 +137,7 @@ li{
     display: flex;
     overflow-x: auto;
     background-color: white;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .info_opiniones {
@@ -269,3 +269,6 @@ li{
     cursor: pointer;
 }
 
+.imgs_resenas{
+    width: 70vw;
+}
