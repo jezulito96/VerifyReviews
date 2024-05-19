@@ -80,21 +80,21 @@
                                 echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
                                 echo $resena -> getNickname();
                             echo '</div>';
+                            
+                            echo '<div class="resultado_opinion">';
+                                // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
 
-                            $fecha = $resena -> getFechaServicio();
-                            echo '<div class="fecha_opinion">'. substr($fecha, 0, 10) . '</div>';
+                                echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
+                                // imagen de check del logo
+                                echo '<div class="nota_media">4,2</div>';
 
-                        echo '</div>';
-
-                        echo '<div class="resultado_opinion">';
-                            // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
-
-                            echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
-                            // imagen de check del logo
-                            echo '<div class="nota_media">4,2</div>';
+                            echo '</div>';
 
                         echo '</div>';
 
+                        $fecha = $resena -> getFechaServicio();
+                        echo '<div class="fecha_opinion">'. substr($fecha, 0, 10) . '</div>';
+                        
                         echo '<div class="titulo_opinion">';
                             // TITULO DE LA RESEÑA
                             echo $resena -> getTitulo();                            

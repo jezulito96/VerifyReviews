@@ -203,9 +203,10 @@ li{
     width: 100%;
     height: 30px;
     display: flex;
+    align-items: start;
 }
 
-.menu_opinion:first-child{
+.menu_opinion .btn_opinion:first-child{
     border-right: 1px solid #ccc;
 }
 
@@ -215,6 +216,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ddd;
 }
 
 .fotos_opinion__container{
