@@ -104,7 +104,7 @@
                         echo '<div class="menu_opinion">';
                             // btn_imagenes    |  btn_ opinion
                             $es_disabled = "";
-                            if($resena -> getFotos() == false){
+                            if($resena -> getFotos() != false){
                                 $es_disabled = 'btn_opinion1';
                             }
                             echo '<div id="' . $resena-> getCodResena() . '" class="' . $es_disabled . '" >Imágenes</div>';
