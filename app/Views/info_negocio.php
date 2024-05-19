@@ -128,8 +128,6 @@
                                             
                                                 <img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" class="imgCat_resena"
                                     
-                                            <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
-                                            
                                             </div>
                                         </div>
                                     ';
