@@ -73,21 +73,42 @@
                 foreach($lista_resenas as $i => $resena){
                         
                     echo '<div class="info_opiniones" >';
-                        echo '<div class="cabecera_opinion>';
+
+                        echo '<div class="head_opinion">';
                             // imagen de usuario
                             echo "nickname: ". "<br>" . $resena -> getNickname(). "<br>";
                         
                             echo "Calificacion". "<br>". $resena -> getFechaServicio(). "<br>";
                         echo '</div>';
-                        echo '<div class="cabecera_opinion>';
-                            // calificacion 
 
-                            // titulo
+                        echo '<div class="resultado_opinion">';
 
-
-                            // btn_imagenes    |  btn_ opinion
+                            // imagen de check del logo
+                            // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
+                            echo "4,2";
 
                         echo '</div>';
+
+                        echo '<div class="titulo_opinion">';
+                            // TITULO DE LA RESEÑA
+                            $resena -> getTitulo();                            
+
+                        echo '</div>';
+
+                        echo '<div class="menu_opinion">';
+                            // btn_imagenes    |  btn_ opinion
+                            echo '<div class="btn_imagenes_container" >Imágenes</div>';
+                            echo '<div class="btn_opinion_container" >Opinión</div>';
+                        echo '</div>';
+
+                        echo '<div class="fotos_opinion__container" style="display:none;">';
+                            $resena -> getFotos(); 
+                        echo '</div>';
+
+                        echo '<div class="opinion_opinion" style="display:none;">';
+                            $resena -> getOpinion(); 
+                        echo '</div>';
+
                     echo '</div>';
 
                 }
