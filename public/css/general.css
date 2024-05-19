@@ -206,17 +206,17 @@ li{
     align-items: start;
 }
 
-.menu_opinion .btn_opinion:first-child{
+.btn_opinion1{
     border-right: 1px solid #ccc;
 }
 
-.btn_opinion{
+.btn_opinion1,
+.btn_opinion2{
     width: 50%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ddd;
 }
 
 .fotos_opinion__container{
