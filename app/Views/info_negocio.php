@@ -90,7 +90,8 @@
 
                             // imagen de check del logo
                             // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
-                            echo "4,2";
+                            echo '<div class="img_opinion_usu">IMAGEN </div>';
+                            echo '<div class="nota_media">4,2</div>';
 
                         echo '</div>';
 
