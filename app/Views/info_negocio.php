@@ -157,7 +157,7 @@
 
                 var $popup2 = $(".popup2");
                 var $informacion_popup2 = $("#informacion_popup2");
-                var $boton_cerrar = $(".boton_cerrar2");
+                var $boton_cerrar2 = $(".boton_cerrar2");
 
                 $(".btn_opinion2").on("click", function () {
                     // $informacion_popup2.html(
@@ -166,7 +166,7 @@
                     $popup2.css("display", "flex");
                 });
 
-                $boton_cerrar.on("click", function () {
+                $boton_cerrar2.on("click", function () {
                     $popup2.css("display", "none");
                 });
 
