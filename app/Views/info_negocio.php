@@ -101,22 +101,22 @@
 
                         echo '</div>';
 
-                        echo '<div class="menu_opinion">';
-                            // btn_imagenes    |  btn_ opinion
-                            echo '<div class="btn_opinion" >Imágenes</div>';
-                            echo '<div class="btn_opinion" >Opinión</div>';
-                        echo '</div>';
-
-                        echo '<div class="fotos_opinion__container" style="display:none;">';
-                            echo $resena -> getFotos(); 
-                        echo '</div>';
-
-                        echo '<div class="opinion_opinion" style="display:none;">';
-                            echo $resena -> getOpinion(); 
-                        echo '</div>';
-
                     echo '</div>';
 
+                    echo '<div class="menu_opinion">';
+                        // btn_imagenes    |  btn_ opinion
+                        echo '<div class="btn_opinion" >Imágenes</div>';
+                        echo '<div class="btn_opinion" >Opinión</div>';
+                    echo '</div>';
+
+                    echo '<div class="fotos_opinion__container" style="display:none;">';
+                        echo $resena -> getFotos(); 
+                    echo '</div>';
+
+                    echo '<div class="opinion_opinion" style="display:none;">';
+                        echo $resena -> getOpinion(); 
+                    echo '</div>';
+                    
                 }
             echo '</div>';
 
