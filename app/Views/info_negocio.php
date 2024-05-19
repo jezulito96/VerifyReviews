@@ -138,10 +138,10 @@
                 var $informacion_popup = $("#informacion_popup");
                 var $boton_cerrar = $(".boton_cerrar");
 
-                $(".btn_opinion2").on("click", function () {
-                    $informacion_popup.html(
-                        "Esta es la información del botón 1."
-                    );
+                $(".btn_opinion1").on("click", function () {
+                    // $informacion_popup.html(
+                    //     "Esta es la información del botón 1."
+                    // );
                     $popup.css("display", "flex");
                 });
 
@@ -160,9 +160,9 @@
                 var $boton_cerrar = $(".boton_cerrar2");
 
                 $(".btn_opinion2").on("click", function () {
-                    $informacion_popup2.html(
-                        "Esta es la información del botón 1."
-                    );
+                    // $informacion_popup2.html(
+                    //     "Esta es la información del botón 1."
+                    // );
                     $popup2.css("display", "flex");
                 });
 
