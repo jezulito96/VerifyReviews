@@ -103,7 +103,11 @@
 
                         echo '<div class="menu_opinion">';
                             // btn_imagenes    |  btn_ opinion
-                            echo '<div id="' . $resena-> getCodResena() . '" class="btn_opinion1" >Imágenes</div>';
+                            $es_disabled = "";
+                            if($resena -> getFotos() == false){
+                                $es_disabled = 'btn_opinion1';
+                            }
+                            echo '<div id="' . $resena-> getCodResena() . '" class="' . $es_disabled . '" >Imágenes</div>';
                             echo '<div id="' . $resena-> getCodResena() . '" class="btn_opinion2" >Opinión</div>';
 
                         echo '</div>';
@@ -111,9 +115,14 @@
                         echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
                             echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
                                 echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
+                                
+                                
                                 echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
+
                                     echo $resena -> getFotos(); 
+
                                 echo '</div>';
+
                             echo '</div>';
                         echo '</div>';
 
@@ -136,10 +145,10 @@
 <script>
     $(document).ready(function () {
         
-
+        // -------------    Para los botones de las reseñas fotos y opinion     -------------------
         $(".btn_opinion1").click(function() {
+            
                 var id = $(this).attr('id');
-
                 var $popup = $("#popup_" + id);
                 var $boton_cerrar = $(".boton_cerrar_" + id);
 
