@@ -138,18 +138,18 @@
                 var $informacion_popup = $("#informacion_popup");
                 var $boton_cerrar = $(".boton_cerrar");
 
-                $(".btn_opinion1").on("click", function () {
+                $(".btn_opinion1").click(function () {
                     // $informacion_popup.html(
                     //     "Esta es la información del botón 1."
                     // );
                     $popup.css("display", "flex");
                 });
 
-                $boton_cerrar.on("click", function () {
+                $boton_cerrar.click(function () {
                     $popup.css("display", "none");
                 });
 
-                $(window).on("click", function (evento) {
+                $(window).click(function (evento) {
                     if ($(evento.target).is($popup)) {
                         $popup.css("display", "none");
                     }
@@ -159,18 +159,18 @@
                 var $informacion_popup2 = $("#informacion_popup2");
                 var $boton_cerrar2 = $(".boton_cerrar2");
 
-                $(".btn_opinion2").on("click", function () {
+                $(".btn_opinion2").click(function () {
                     // $informacion_popup2.html(
                     //     "Esta es la información del botón 1."
                     // );
                     $popup2.css("display", "flex");
                 });
 
-                $boton_cerrar2.on("click", function () {
+                $boton_cerrar2.click(function () {
                     $popup2.css("display", "none");
                 });
 
-                $(window).on("click", function (evento) {
+                $(window).click(function (evento) {
                     if ($(evento.target).is($popup2)) {
                         $popup2.css("display", "none");
                     }
