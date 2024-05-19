@@ -250,17 +250,18 @@ li{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
     position: relative;
 }
 
 .contenido_popup{
     height: 50px;
+    width: 80%;
 }
 
 .contenido_popup2{
     min-height: 60px;
     word-wrap: break-word;
+    width: 90%;
 }
 
 .boton_cerrar,

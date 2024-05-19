@@ -116,7 +116,7 @@
                             echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
                                 echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
                                 echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
-                                    echo $resena -> getFotos(); 
+                                    // echo $resena -> getFotos(); 
                                     
                                     echo '<div class="fotos_container_resenas">';
                         
