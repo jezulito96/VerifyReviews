@@ -116,25 +116,14 @@
                             echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
                                 echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
                                 echo '<div class="info_popup" id="informacion_popup_"' . $resena-> getCodResena() . '" >';
-                                    // echo $resena -> getFotos(); 
-                                    
+
                                     $rutasimgs = $resena -> getFotos();
                                     $imagenes = explode(",", $rutasimgs);
                                     foreach($imagenes as $key => $valor){
                                     $rutaImagen = base_url().'/images/n/' . $valor;
-                                    echo '
-                                        <div class="carousel_imgs_resenas">
-                                            <div class="fotoContainer_imgs_resenas">
-                                            
-                                                <img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" class="imgCat_resena"
-                                    
-                                            </div>
-                                        </div>
-                                    ';
 
-                                    }
+                                    echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'"';
                                     
-                                    echo '</div>';  
 
                                 echo '</div>';
                             echo '</div>';
@@ -332,16 +321,6 @@
             }
         });
 
-
-        //  carrousel imagenes de reseñas
-        
-        $('.carousel_imgs_resenas').slick({
-            dots: true, // puntitos
-            slidesToShow: 1, // fotos que se pintan a la vez
-            prevArrow:".flechaAtras",
-            nextArrow:".flechaDelante"
-        });
     });
-
-</script>
+    
 </script>
