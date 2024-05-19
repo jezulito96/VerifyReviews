@@ -251,6 +251,9 @@ li{
 .contenido_popup{
     height: 200px;
     width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenido_popup2{
