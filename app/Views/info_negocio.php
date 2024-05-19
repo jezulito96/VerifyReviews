@@ -87,10 +87,10 @@
                         echo '</div>';
 
                         echo '<div class="resultado_opinion">';
-
-                            // imagen de check del logo
                             // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
-                            echo '<div class="img_opinion_usu">IMAGEN </div>';
+
+                            echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
+                            // imagen de check del logo
                             echo '<div class="nota_media">4,2</div>';
 
                         echo '</div>';
@@ -103,8 +103,8 @@
 
                         echo '<div class="menu_opinion">';
                             // btn_imagenes    |  btn_ opinion
-                            echo '<div class="btn_imagenes_container" >Imágenes</div>';
-                            echo '<div class="btn_opinion_container" >Opinión</div>';
+                            echo '<div class="btn_opinion" >Imágenes</div>';
+                            echo '<div class="btn_opinion" >Opinión</div>';
                         echo '</div>';
 
                         echo '<div class="fotos_opinion__container" style="display:none;">';
