@@ -240,6 +240,14 @@ li{
     align-items: center;
 }
 
+.info_popup{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
 .contenido_popup,
 .contenido_popup2{
     background-color: #fff;
@@ -251,9 +259,6 @@ li{
 .contenido_popup{
     height: 200px;
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .contenido_popup2{
@@ -270,7 +275,6 @@ li{
     font-size: 20px;
     cursor: pointer;
 }
-
 /* para la galeria de imagenes de cada resena el slider*/
 .imgCat_resena{
     height:200px;
