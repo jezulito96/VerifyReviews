@@ -137,7 +137,7 @@
     $(document).ready(function () {
         
 
-        $(".btn_opinion1").click(function () {
+        $(".btn_opinion1").click(function() {
                 var id = $(this).attr('id');
 
                 var $popup = $("#popup_" + id);
@@ -147,16 +147,17 @@
 
                 $boton_cerrar.click(function() {
                 $popup.css("display", "none");
+                });
 
                 $(window).click(function (evento) {
                     if ($(evento.target).is($popup)) {
                         $popup.css("display", "none");
                     }
                 });
-            });
         });
 
-        $(".btn_opinion2").click(function () {
+
+        $(".btn_opinion2").click(function() {
             var id = $(this).attr('id');
 
             var $popup2 = $("#popup2_" + id );
