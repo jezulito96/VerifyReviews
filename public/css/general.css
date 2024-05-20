@@ -240,7 +240,12 @@ li{
     align-items: center;
 }
 
-.contenido_popup,
+.contenido_popup{
+    background-color: #3d3b3b74;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
 .contenido_popup2{
     background-color: #fff;
     padding: 20px;
@@ -252,6 +257,7 @@ li{
     width: 80%;
     height: 300px;
     overflow-y: scroll;
+    margin-top: 20px;
 }
 
 .contenido_popup2{
