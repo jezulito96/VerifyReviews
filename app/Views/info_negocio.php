@@ -193,7 +193,7 @@
         // PINTAR EL Mapa  info_mapa
         var latitud = $("#latitud").val();
         var longitud = $("#longitud").val();
-        var nombre_negocio_mapa = $('nombre_necogio_mapa').val();
+        var nombre_negocio_mapa = $('#nombre_necogio_mapa').val();
 
         var mapa = L.map('info_mapa').setView([latitud, longitud], 16);
 
