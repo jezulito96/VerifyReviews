@@ -321,7 +321,7 @@ li{
 }
 
 /* ---------   TELEFONO   ---------- */
-.content_llamar{
+#content_llamar{
     width: 100%;
     height: 100px;
     display: flex;
@@ -336,7 +336,7 @@ li{
     align-items: center;
 }
 
-.telefono_llamar{
+#telefono_llamar{
     width: 80%;
     height: 100%;
     display: flex;
