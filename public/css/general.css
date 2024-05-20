@@ -267,10 +267,7 @@ li{
 }
 .informacion_popup{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;    
+    text-align: center;
 }
 .boton_cerrar,
 .boton_cerrar2 {
