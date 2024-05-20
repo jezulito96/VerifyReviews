@@ -227,6 +227,8 @@
 
                         echo '<input type="hidden" value="'. $coord[0] . '" id="latitud" />';
                         echo '<input type="hidden" value="'. $coord[1] . '" id="longitud" />';
+                        echo '<input type="hidden" value="'. $negocio -> getNombre() . '" id="longitud" />';
+
                     }
 
                 ?>
