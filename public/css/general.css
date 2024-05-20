@@ -229,7 +229,7 @@ li{
 }
 .popup,
 .popup2 {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -250,7 +250,7 @@ li{
 
 .contenido_popup{
     width: 80%;
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
 }
 
@@ -277,5 +277,5 @@ li{
 
 .imgs_resenas{
     width: 70%;
-
+    margin-bottom: 30px;
 }
