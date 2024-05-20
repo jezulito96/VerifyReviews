@@ -209,6 +209,7 @@ $(document).ready(function () {
         $("#containerPermisosUbicacion").hide();
         $('#main').removeClass('blur');
         $('#header').removeClass('blur');
+    });   
 
 
     /////////////////////////////////////////////////// esto es lo bueno
