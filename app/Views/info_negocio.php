@@ -185,14 +185,14 @@ $(document).ready(function () {
     });
 
     // PINTAR EL Mapa info_mapa
-    $('#main').addClass('blur');
-    $('#header').addClass('blur');
-    $('#ubicacion').show();
+    // $('#main').addClass('blur');
+    // $('#header').addClass('blur');
+    // $('#ubicacion').show();
 
-    $("#aceptarUbicacion").click(function () {
-        $("#containerPermisosUbicacion").hide();
-        $('#main').removeClass('blur');
-        $('#header').removeClass('blur');
+    // $("#aceptarUbicacion").click(function () {
+    //     $("#containerPermisosUbicacion").hide();
+    //     $('#main').removeClass('blur');
+    //     $('#header').removeClass('blur');
 
         // Código para obtener la ubicación y mostrar el mapa
         // if (navigator.geolocation) {
@@ -229,7 +229,7 @@ $(document).ready(function () {
         // } else {
         //     $('#info_mapa').html("Tu navegador no soporta la geolocalización.");
         // }
-    });
+    // });
 });
 </script>
 
