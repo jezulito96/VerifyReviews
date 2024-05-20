@@ -237,12 +237,12 @@
             </div> 
         </div>
 
-        <div class="content_llamar" id="content_llamar">
+        <div id="content_llamar">
             <div class="icono_llamar">
                 <i class="fas fa-phone iconosColor"></i>
             </div>
                 
-            <div class="telefono_llamar">
+            <div id="telefono_llamar">
                     <?php echo $negocio -> getTelefonoNegocio(); ?>
             </div>
         </div>
