@@ -216,8 +216,8 @@ $(document).ready(function () {
         // le pido al usuario acceder a su localizacion
         // navigator.geolocation.getCurrentPosition(function (position) {
             // $('#ubicacion').toggle();
-            var latitud = $("#latitud");
-            var longitud = $("#longitud");
+            var latitud = $("#latitud").val();
+            var longitud = $("#longitud").val();
 
             var mapa = L.map('info_mapa').setView([latitud, longitud], 16);
 
@@ -247,7 +247,7 @@ $(document).ready(function () {
         //     }
         // });
     } else {
-        $('#resultadoLocation').html("Tu navegador no soporta la geolocalización.");
+        $('#info_mapa').html("Tu navegador no soporta la geolocalización.");
     }
 
 });

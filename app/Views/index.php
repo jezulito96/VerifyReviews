@@ -59,7 +59,7 @@
 
         </div> -->
         <div id="resultadoLocation"></div>
-        <div id="mapa" class="mapa"></div>
+        <!-- <div id="mapa" class="mapa"></div> -->
 
 
 
