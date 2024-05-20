@@ -249,9 +249,9 @@ li{
 }
 
 .contenido_popup{
-    height: 200px;
     width: 80%;
-    height: auto;
+    height: 200px;
+    overflow-y: scroll;
 }
 
 .contenido_popup2{
@@ -259,7 +259,9 @@ li{
     word-wrap: break-word;
     width: 90%;
 }
-
+.informacion_popup{
+    text-align: center;
+}
 .boton_cerrar,
 .boton_cerrar2 {
     position: absolute;

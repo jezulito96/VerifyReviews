@@ -115,7 +115,7 @@
                         echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
                             echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
                                 echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
-                                echo '<div id="informacion_popup_"' . $resena-> getCodResena() . '" >';
+                                echo '<div class="informacion_popup" id="informacion_popup_' . $resena-> getCodResena() . '" >';
                                     // echo $resena -> getFotos(); 
                                     
                                     $rutasimgs = $resena -> getFotos();
@@ -132,7 +132,7 @@
                         echo '<div id="popup2_' . $resena-> getCodResena() . '" class="popup2">';
                             echo '<div id="contenido_popup2_' . $resena-> getCodResena() . '" class="contenido_popup2" >';
                                 echo '<span class="boton_cerrar2_' . $resena-> getCodResena() . '" >&times;</span>';
-                                echo '<div id="informacion_popup2_' . $resena-> getCodResena() . '" >';
+                                echo '<div  id="informacion_popup2_' . $resena-> getCodResena() . '" >';
                                     echo $resena -> getOpinion(); 
                                 echo '</div>';
                             echo '</div>';
