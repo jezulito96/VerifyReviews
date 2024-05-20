@@ -192,7 +192,7 @@ $(document).ready(function () {
 
     // PINTAR EL Mapa  info_mapa
     
-    $(document).ready(function () {
+    // $(document).ready(function () {
 
     // Al cargar la página, hacer visible el botón y aplicar el efecto de desenfoque
     $('#main').addClass('blur');
