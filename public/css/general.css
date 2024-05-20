@@ -260,7 +260,11 @@ li{
     width: 90%;
 }
 .informacion_popup{
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;    
 }
 .boton_cerrar,
 .boton_cerrar2 {
