@@ -246,9 +246,9 @@ $(document).ready(function () {
         //             break;
         //     }
         // });
-    } else {
-        $('#info_mapa').html("Tu navegador no soporta la geolocalización.");
-    }
+    // } else {
+    //     $('#info_mapa').html("Tu navegador no soporta la geolocalización.");
+    // }
 
 });
 </script>
