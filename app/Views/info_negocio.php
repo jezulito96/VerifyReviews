@@ -193,6 +193,7 @@
         // PINTAR EL Mapa  info_mapa
         var latitud = $("#latitud").val();
         var longitud = $("#longitud").val();
+        var nombre_negocio_mapa = $('nombre_necogio_mapa').val();
 
         var mapa = L.map('info_mapa').setView([latitud, longitud], 16);
 
@@ -201,7 +202,7 @@
         }).addTo(mapa);
 
         L.marker([latitud, longitud]).addTo(mapa)
-            .bindPopup('Nombre negocio <br> Dirección.') 
+            .bindPopup(nombre_negocio_mapa) 
             .openPopup();
         
 
@@ -227,7 +228,7 @@
 
                         echo '<input type="hidden" value="'. $coord[0] . '" id="latitud" />';
                         echo '<input type="hidden" value="'. $coord[1] . '" id="longitud" />';
-                        echo '<input type="hidden" value="'. $negocio -> getNombre() . '" id="longitud" />';
+                        echo '<input type="hidden" value="'. $negocio -> getNombre() . '" id="nombre_necogio_mapa" />';
 
                     }
 
