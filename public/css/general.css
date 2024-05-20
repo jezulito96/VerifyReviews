@@ -319,3 +319,27 @@ li{
     width: 100%;
     height: 250px;
 }
+
+/* ---------   TELEFONO   ---------- */
+.content_llamar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icono_llamar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telefono_llamar{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
