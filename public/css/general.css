@@ -272,5 +272,5 @@ li{
 }
 
 .imgs_resenas{
-    width: 70vw;
+    max-width: 60vw;
 }
