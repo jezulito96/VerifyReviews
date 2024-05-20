@@ -258,6 +258,7 @@ li{
     height: 300px;
     overflow-y: scroll;
     margin-top: 20px;
+    scrollbar-color: rgb(137, 207, 232);
 }
 
 .contenido_popup2{
