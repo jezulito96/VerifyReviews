@@ -253,7 +253,7 @@
             </div>
                 
             <div id="info_web">
-                <a href="<?php echo $negocio -> getweb() ?>"><?php echo $negocio -> getweb() ?></a>
+                <a href="<?php echo $negocio -> getSitioWeb() ?>"><?php echo $negocio -> getSitioWeb() ?></a>
             </div>
         </div>
 
