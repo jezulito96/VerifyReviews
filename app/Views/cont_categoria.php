@@ -8,7 +8,7 @@
             ?>
             <div class="containerTitulo" >
                 <?php  
-                    echo $negocio -> getNombre(). "<i class='far fa-heart icono-corazon'></i>";
+                    echo $negocio -> getNombre();
                 ?>
             </div>
             
