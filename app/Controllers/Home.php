@@ -261,6 +261,7 @@ class Home extends BaseController{
     }
 
     public function setNegocio(): string {
+        echo "entra";
         $baseDatos = new BaseDatos();
         $nombre = $this->request->getPost('nombreNegocio');
         $contrasenaNegocio = $this->request->getPost('contrasenaNegocio');
