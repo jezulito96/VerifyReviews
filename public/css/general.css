@@ -346,13 +346,19 @@ li{
 
 /*-------- email negocio ------------------*/
 #content_redesSociales{
-    width: 100%;
+    width: 100px;
     height: 25px;
+    display: flex;
+    align-items: center;
+}
+.info_redes{
+    height: 24px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
 .iconos_redes{
-    height: 100%;
+    font-size: 24px;
 }

@@ -258,18 +258,21 @@
         </div>
 
         <div id="content_redesSociales">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter iconos_redes"></i>
-            </a>
-            
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook-f iconos_redes"></i>
-            </a>
-            
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram iconos_redes"></i>
-            </a>
+            <div class="info_redes">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter iconos_redes"></i>
+                </a>
+                
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f iconos_redes"></i>
+                </a>
+                
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram iconosColor"></i>
+                </a>
+            </div>
         </div>
+
 
     </div>
 
