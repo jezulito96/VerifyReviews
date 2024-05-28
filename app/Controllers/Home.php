@@ -260,10 +260,21 @@ class Home extends BaseController{
         return view('index', $maleta);
     }
 
-    public function setNegocio(): string {
-        echo "entra";
+    public function setNegocio() {
         $baseDatos = new BaseDatos();
         $nombre = $this->request->getPost('nombreNegocio');
+        //comprobamos que el nombre del negocio ya existe
+        $comprueba_negocio = $baseDatos -> comprobarNegocio($nombre);
+        if($comprueba_negocio == true){
+            $nuevo_negocio['error'] = "El nombre del negocio ya existe";
+        
+            //vistas
+            $maleta['head_content'] = view('head_content');
+            $maleta['header_content'] = view('header_content');
+            $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
+            return view('index', $maleta);
+        }
+
         $contrasenaNegocio = $this->request->getPost('contrasenaNegocio');
         $email = $this->request->getPost('email');
         $calle = $this->request->getPost('calle');
@@ -380,9 +391,10 @@ class Home extends BaseController{
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
 
         //si va todo bien vuelve al index
+        $nuevo_negocio['form_correcto'] = "Enhorabuena, el registro ha sido correcto";
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index); 
+        $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
         return view('index', $maleta);
     }
 

@@ -44,7 +44,19 @@ class BaseDatos extends Model
 
 
         $this->db->query($orden);
+    }
 
+    function comprobarNegocio($nombre){
+        $orden = "SELECT cod_negocio FROM negocio WHERE nombre=?";
+            $parametros = [$nombre];
+            $consulta = $this -> db -> query($orden, $parametros);
+            $numeroFilas = $consulta -> getNumRows();
+    
+        if($numeroFilas > 0 ){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     function comprobarCorreo($codigoConfirmacion,$tipo) {
