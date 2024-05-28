@@ -44,8 +44,7 @@
             <input type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
 
             <label for="sitio_web">Sitio Web:</label>
-            <input type="url" id="sitio_web" name="sitio_web"
-                pattern="/^https?:\/\/(?:www\.)?[\w-]+(\.[\w-]+)+[\w.,@?^=%&:/~+#-]*$/" required>
+            <input type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
             <select id="categoria" name="categoria" required>
