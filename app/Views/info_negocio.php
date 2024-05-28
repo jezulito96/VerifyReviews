@@ -51,9 +51,9 @@
             <span id="llamar">Llamar</span>
         </div>
 
-        <div class="containerIcono container_email">
+        <div class="containerIcono container_web">
             <i class="fas fa-envelope iconosColor"></i>
-            <span id="email">Email</span>
+            <span id="web">web</span>
         </div>
         <div class="containerIcono container_redesSociales">
             <i class="fas fa-share-alt iconosColor"></i>
@@ -247,13 +247,13 @@
             </div>
         </div>
 
-        <div id="content_email">
-            <div class="icono_mail">
+        <div id="content_web">
+            <div class="icono_web">
                 <i class="fas fa-envelope iconosColor"></i>
             </div>
                 
-            <div id="mail_mail">
-                <a href="mailto:<?php echo $negocio -> getEmail() ?>"><?php echo $negocio -> getEmail() ?></a>
+            <div id="info_web">
+                <a href="<?php echo $negocio -> getweb() ?>"><?php echo $negocio -> getweb() ?></a>
             </div>
         </div>
 
@@ -300,9 +300,9 @@
             }, 1000);
         });
 
-        $('.container_email').click(function(){
+        $('.container_web').click(function(){
             $('html, body').animate({
-                scrollTop: $('#content_email').offset().top
+                scrollTop: $('#content_web').offset().top
             }, 1000);
         });
 

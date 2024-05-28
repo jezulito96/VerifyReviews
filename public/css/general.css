@@ -344,29 +344,30 @@ li{
     align-items: center;
 }
 
-/*-------- email negocio ------------------*/
-#content_email{
+/*-------- web negocio ------------------*/
+#content_web{
     display: flex;
     align-items: center;
     width: 100%;
     height: 100px;
 }
-.icono_email{
+.icono_web{
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.icono_email > i{
+.icono_web > i{
    font-size: 24px;
 }
-#mail_email{
+#info_web{
     width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
