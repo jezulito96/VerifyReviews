@@ -73,7 +73,7 @@ class BaseDatos extends Model
     }
 
     function comprobarcorreoUsuario($email){
-        $orden = "SELECT cod_usuario FROM usuario WHERE email=?";
+        $orden = "SELECT cod_usuario FROM usuario_registrado WHERE email=?";
             $parametros = [$email];
             $consulta = $this -> db -> query($orden, $parametros);
             $numeroFilas = $consulta -> getNumRows();
