@@ -20,7 +20,7 @@
             <input type="password" id="contrasenaNegocio" name="contrasenaNegocio" required>
 
             <label for="contrasenaNegocio2">*Confirma la contraseña:</label>
-            <input type="password2" id="contrasenaNegocio2" required>
+            <input type="password" id="contrasenaNegocio2" required>
 
             <label for="email">*Email:</label>
             <input type="email" id="email" name="email"  required>
@@ -75,7 +75,7 @@
 <script>
     $(document).ready(function () {
         
-        $('#password').on('input', function() {
+        $('input[type="password"]').on('input', function() {
         var contrasena1 = $("#contrasenaNegocio").val();
         var fuerza = 0;
         var cositas = "";
