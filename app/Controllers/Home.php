@@ -459,7 +459,7 @@ class Home extends BaseController{
 
         $comprobando_usuario = $baseDatos -> comprobarUsuario($nickname);
         if($comprobando_usuario == true){
-            $maleta_nuevo_usuario['error'] = "El nombre del negocio ya existe";
+            $maleta_nuevo_usuario['error'] = "El nicknmame ya existe";
         }
 
         // recojo en una misma variable las coordenadas
