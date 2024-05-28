@@ -280,11 +280,11 @@ class Home extends BaseController{
         $calle = $this->request->getPost('calle');
         $ciudad = $this->request->getPost('ciudad');
         $pais = $this->request->getPost('pais');
-        $telefono_negocio = $this->request->getPost('telefonoNegocio');
+        $telefono_negocio = intval($this->request->getPost('telefonoNegocio'));
         $sitio_web = $this->request->getPost('sitio_web');
         $cod_categoria = $this->request->getPost('categoria');
         $nombre_titular = $this->request->getPost('nombreTitular');
-        $telefono_titular = $this->request->getPost('telefonoTitular');
+        $telefono_titular = intval($this->request->getPost('telefonoTitular'));
         $activo = 1;
         $confirma_correo = 0;
 

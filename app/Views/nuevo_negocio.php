@@ -36,7 +36,7 @@
             <input type="text" id="pais" name="pais" required>
 
             <label for="telefonoNegocio">*Teléfono:</label>
-            <input type="tel" id="telefonoNegocio" name="telefonoNegocio" required>
+            <input type="text" id="telefonoNegocio" name="telefonoNegocio" required>
 
             <label for="fotos">Fotos:</label>
             <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
@@ -59,7 +59,7 @@
             </select>
 
             <label for="telefonoTitular">Teléfono del titular:</label>
-            <input type="tel" id="telefonoTitular" name="telefonoTitular" required>
+            <input type="text" id="telefonoTitular" name="telefonoTitular" required>
 
             <label for="nombreTitular">Nombre del titular:</label>
             <input type="text" id="nombreTitular" name="nombreTitular" required>
