@@ -85,7 +85,7 @@
             var contrasena2 = $("#contrasenaNegocio2").val();
             var pattern_contrasena = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
             if(contrasena1 == contrasena2){
-                if(passwordPattern.test(password)){
+                if(pattern_contrasena.test(contrasena1)){
                     todo_guay = true;
                 }
             }
