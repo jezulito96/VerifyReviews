@@ -78,7 +78,8 @@
                         echo '<div class="head_opinion">';
                             // imagen de usuario
                             echo '<div class="nick_opinion">';
-                                echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
+                                echo '<img src="' . base_url() . 'images/usuarios/' . $resena -> getNickname() .  '" ';
+                                // echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
                                 echo $resena -> getNickname();
                             echo '</div>';
                             
