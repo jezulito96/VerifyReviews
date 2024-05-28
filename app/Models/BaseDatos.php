@@ -60,7 +60,7 @@ class BaseDatos extends Model
     }
 
     function comprobarUsuario($nickname){
-        $orden = "SELECT cod_usuario FROM usuario WHERE nickname=?";
+        $orden = "SELECT cod_usuario FROM usuario_registrado WHERE nickname=?";
             $parametros = [$nickname];
             $consulta = $this -> db -> query($orden, $parametros);
             $numeroFilas = $consulta -> getNumRows();
