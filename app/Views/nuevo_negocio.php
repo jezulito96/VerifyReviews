@@ -79,13 +79,15 @@
         $("#formularioNegocio").submit(function(event) {
             event.preventDefault();
             var todo_guay = false;
-            
+            console.log("entraaa");
             var contrasena1 = $("#contrasenaNegocio").val();
             var contrasena2 = $("#contrasenaNegocio2").val();
             var pattern_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
             if(contrasena1 == contrasena2){
+                console.log("entra 1");
                 if(pattern_contrasena.test(contrasena1)){
                     todo_guay = true;
+                    console.log("entra 2");
                 }
             }
 
@@ -114,11 +116,11 @@
                         name: "longitud",
                         value: longitud
                         }).appendTo("#formularioNegocio");
-
+                        console.log("entra 3");
                         if(todo_guay == true){
+                            console.log("entra 4");
                             $('#formularioNegocio').unbind('submit').submit();
                         }
-                        
                     } else {
                         $("#error_direccion").html("<p>Porfavor, introduzca correctamente la dirección del negocio</p>");
                     }
