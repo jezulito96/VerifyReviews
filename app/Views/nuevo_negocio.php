@@ -23,8 +23,8 @@
             <input type="password2" id="contrasenaNegocio2" required>
 
             <label for="email">*Email:</label>
-            <input type="email" id="email" name="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" required>
-
+            <input type="email" id="email" name="email"  required>
+            <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
             <label for="calle">*Dirección:</label>
             <input type="text" id="calle" name="calle" placeholder="C/ Calle Juan Carlos, 15" required>
 
