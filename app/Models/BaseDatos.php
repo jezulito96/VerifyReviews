@@ -72,6 +72,18 @@ class BaseDatos extends Model
         }
     }
 
+    function comprobarcorreoUsuario($email){
+        $orden = "SELECT cod_usuario FROM usuario WHERE email=?";
+            $parametros = [$email];
+            $consulta = $this -> db -> query($orden, $parametros);
+            $numeroFilas = $consulta -> getNumRows();
+    
+        if($numeroFilas > 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
     function comprobarCorreo($codigoConfirmacion,$tipo) {
         if($tipo == 1 || $tipo == "1"){
             $orden = "SELECT cod_confirmacion FROM usuario_registrado WHERE cod_confirmacion ='".  $codigoConfirmacion  ."'";

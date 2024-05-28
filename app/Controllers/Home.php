@@ -457,9 +457,26 @@ class Home extends BaseController{
         $activo = 1;
         $confirma_correo = 0;
 
+        $entra_error = false;
         $comprobando_usuario = $baseDatos -> comprobarUsuario($nickname);
         if($comprobando_usuario == true){
             $maleta_nuevo_usuario['error'] = "El nicknmame ya existe";
+            $entra_error = true;
+        }
+
+        $comprobando_correo_usuario = $baseDatos -> comprobarcorreoUsuario($email);
+        if($comprobando_correo_usuario == true){
+            $maleta_nuevo_usuario['error'] = "El correo ya existe";
+            $entra_error = true;
+        }
+
+        if($entra_error){
+            //vistas
+            $maleta_nuevo_usuario['formulario_correcto'] = "Registro completado";
+            $maleta['head_content'] = view('head_content');
+            $maleta['header_content'] = view('header_content');
+            $maleta['nuevo_usuario'] = view('nuevo_usuario',$maleta_nuevo_usuario);
+            return view('index', $maleta);
         }
 
         // recojo en una misma variable las coordenadas
