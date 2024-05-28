@@ -53,8 +53,8 @@
         </div>
 
         <div class="containerIcono container_web">
-            <i class="fas fa-envelope iconosColor"></i>
-            <span id="web">web</span>
+            <i class="fas fa-globe"></i>
+            <span id="web">Web</span>
         </div>
         <div class="containerIcono container_redesSociales">
             <i class="fas fa-share-alt iconosColor"></i>
@@ -254,7 +254,7 @@
             </div>
                 
             <div id="info_web">
-                <a href="<?php echo $negocio -> getSitioWeb() ?>"><?php echo $negocio -> getSitioWeb() ?></a>
+                <a href="<?php echo $negocio -> getSitioWeb() ?>">Visita su Web</a>
             </div>
         </div>
 
