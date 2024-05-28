@@ -243,7 +243,7 @@
             </div>
                 
             <div id="telefono_llamar">
-                    <a href="tel" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
+                    <a href="tel:<?php echo $negocio -> getTelefonoNegocio(); ?>" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
             </div>
         </div>
 

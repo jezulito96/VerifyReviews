@@ -345,6 +345,30 @@ li{
 }
 
 /*-------- email negocio ------------------*/
+#content_email{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.icono_email{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icono_email > i{
+   font-size: 24px;
+}
+.mail_email{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 #content_redesSociales{
     width: 100%;
     height: 100px;
