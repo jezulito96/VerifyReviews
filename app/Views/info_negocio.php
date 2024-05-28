@@ -243,57 +243,33 @@
             </div>
                 
             <div id="telefono_llamar">
-                    <?php echo $negocio -> getTelefonoNegocio(); ?>
+                    <a href="tel" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
             </div>
         </div>
 
         <div id="content_email">
-            <h3>
-                Email
-            </h3>   
-            <div id="info">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
-
-            Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
-            </div> 
+            <div class="icono_mail">
+                <i class="fas fa-envelope iconosColor"></i>
+            </div>
+                
+            <div id="mail_mail">
+                <a href="mailto:<?php echo $negocio -> getEmail() ?>"><?php echo $negocio -> getEmail() ?></a>
+            </div>
         </div>
 
         <div id="content_redesSociales">
-            <div id="Facebook">
-                <h3>
-                    Facebook
-                </h3>    
-                <div id="info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
-
-                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
-                </div>
-            </div>
-
-            <div id="x">
-                <h3>
-                    X
-                </h3>   
-                <div id="info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
-
-                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
-                </div> 
-            </div>
-
-            <div id="instagram">
-                <h3>
-                    Instagram
-                </h3> 
-                <div id="info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu erat ornare, maximus arcu sit amet, lacinia eros. Vivamus porta sem lectus, et vulputate lectus malesuada sit amet. Ut imperdiet condimentum ornare. Aenean id porttitor lorem. In lectus ipsum, porta id eros eget, congue tempus purus. Duis ut maximus lorem, ut semper sapien. Etiam dignissim bibendum tellus, consequat aliquam justo. Duis arcu felis, placerat vitae molestie eu, efficitur eget nisl. Mauris scelerisque nec enim sed elementum. Nam quis volutpat enim.
-
-                Aenean at quam malesuada ipsum viverra tristique. Phasellus erat lacus, imperdiet vitae libero eget, efficitur eleifend enim. Aenean et tristique metus. Maecenas id tortor eu risus pretium ornare. Integer eu ornare lacus, sed maximus odio. Integer id magna metus. Sed elementum, lorem nec gravida viverra, libero massa elementum sapien, vitae maximus risus ante ac sem. In a efficitur magna. Phasellus feugiat libero ipsum. Aliquam interdum sollicitudin fermentum. Praesent sit amet nunc turpis. Nulla cursus non est vel scelerisque. Suspendisse accumsan massa eu aliquam ornare. Nullam vel orci faucibus, volutpat leo eget, varius sem. In vitae sagittis lacus, non commodo mi. Quisque velit risus, tincidunt a porttitor ac, imperdiet vel dui. 
-                </div>   
-            </div>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter iconos_redes"></i>
+            </a>
             
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f iconos_redes"></i>
+            </a>
+            
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram iconos_redes"></i>
+            </a>
         </div>
-
 
     </div>
 
