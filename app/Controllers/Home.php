@@ -443,6 +443,7 @@ class Home extends BaseController{
     }
 
     public function setUsuario(){
+        $baseDatos = new BaseDatos();
         $nombre = $this->request->getPost('nombre');
         $apellidos = $this->request->getPost('apellidos');
         $nickname = $this->request->getPost('nickname');
@@ -451,28 +452,36 @@ class Home extends BaseController{
         $pais = $this->request->getPost('pais');
         $fecha_nacimiento = $this->request->getPost('fechaNacimiento');
         $email = $this->request->getPost('email');
-        $telefono = $this->request->getPost('telefono');
+        $telefono = intval(trim($this->request->getPost('telefono')));
 
         $activo = 1;
         $confirma_correo = 0;
+
+        $comprobando_usuario = $baseDatos -> comprobarUsuario($nickname);
+        if($comprobando_usuario == true){
+            $maleta_nuevo_usuario['error'] = "El nombre del negocio ya existe";
+        }
 
         // recojo en una misma variable las coordenadas
         $latitud = $this->request->getPost('latitud');
         $longitud = $this->request->getPost('longitud');
         $coordenadas = $latitud . "," . $longitud;
 
-
         $directorioUsuarios = FCPATH . "images/usuarios";
         //compruebo si existe la carpeta de usuarios en public/images y si no la creo 
         if(!is_dir($directorioUsuarios)) mkdir($directorioUsuarios, 0777, true);
      
-
         //recibo imagen de perfil de usuario y guardo el nombre en BD
         $nombreAntiguaPerfil = $_FILES['fotoPerfil']['name'];
-        $tmpFoto = $_FILES['fotoPerfil']['tmp_name'];
-        $extensionPerfil = pathinfo($nombreAntiguaPerfil, PATHINFO_EXTENSION);
-        $foto_perfil = $nickname ."." . $extensionPerfil;
-        move_uploaded_file($tmpFoto, $directorioUsuarios . "/"  . $foto_perfil);
+        //si recibo imagen la recojo, sino le pongo la de por defecto
+        if(empty($nombreAntiguaPerfil)){
+            $foto_perfil = "default_user.png";
+        }else{
+            $tmpFoto = $_FILES['fotoPerfil']['tmp_name'];
+            $extensionPerfil = pathinfo($nombreAntiguaPerfil, PATHINFO_EXTENSION);
+            $foto_perfil = $nickname ."." . $extensionPerfil;
+            move_uploaded_file($tmpFoto, $directorioUsuarios . "/"  . $foto_perfil);
+        }
 
         //enviar email de confirmacion
         $codigoConfirmacion = bin2hex(random_bytes(16));
@@ -500,18 +509,16 @@ class Home extends BaseController{
 
         // añado el nuevo negocio a la base de datos
         // añado un nuevo objeto a la lista de negocios
-        $baseDatos = new BaseDatos();
+        
         $max_cod = $baseDatos -> getMaxUsuario();
         $baseDatos -> setUsuario($max_cod,$nombre, $apellidos, $nickname, $foto_perfil, $hash_contrasena, $ciudad, $pais, $coordenadas, $fecha_nacimiento, $email, $telefono, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
 
         
         //vistas
-        //si va todo bien vuelve al index
-        $master = Master::obtenerInstancia();
-        $maleta_index['listaCategorias'] = $master->getListaCategorias();
+        $maleta_nuevo_usuario['formulario_correcto'] = "Registro completado";
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index);
+        $maleta['nuevo_usuario'] = view('nuevo_usuario',$maleta_nuevo_usuario);
         return view('index', $maleta);
     }
 
