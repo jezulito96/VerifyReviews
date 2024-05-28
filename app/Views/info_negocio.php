@@ -13,9 +13,10 @@
 
             // recojo las rutas de las fotos y las pinto 
             $foto_principal = $negocio -> getFotoPrincipal();
+            $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
             echo '<div class="fotoContainer" style="margin-left:15px;">';
                 echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
-                    echo '<img src="'. base_url(). $foto_principal .'" alt="'. $negocio -> getNombre() .'" title="'. $negocio -> getNombre() .'"/>';
+                    echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
                 echo '</a>';
             echo '</div>';
 
