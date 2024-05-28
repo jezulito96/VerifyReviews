@@ -109,7 +109,7 @@
             cositas += "Al menos un caracter especial. ";
         }
   
-        var resultado_contrasena = $('#error_direccion');
+        var resultado_contrasena = $('#resultado_contrasena');
         if (fuerza < 2) {
             resultado_contrasena.text("Fácil. " + cositas);
             resultado_contrasena.css('color', 'red');
