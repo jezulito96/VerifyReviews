@@ -10,7 +10,7 @@
     }else{
 ?>
     <div class="containerNegocioForm">
-        <div id="error_direccion"></div>
+
         <form action="setNegocio" method="post" id="formularioNegocio" enctype="multipart/form-data" >
 
             <label for="nombreNegocio">Nombre del negocio:</label>
@@ -62,6 +62,7 @@
             <input type="text" id="nombreTitular" name="nombreTitular">
 
             <input type="submit" value="Registrarse" id="registroNegocio">
+            <div id="error_direccion"></div>
         </form>
     </div>
 <?php
@@ -104,7 +105,7 @@
 
                         $('#formularioNegocio').unbind('submit').submit();
                     } else {
-                        $("error_direccion").html("<p>Porfavor, introduzca correctamente la dirección del negocio</p>");
+                        $("#error_direccion").html("<p>Porfavor, introduzca correctamente la dirección del negocio</p>");
                     }
                 })
                 .catch(function (error) {
