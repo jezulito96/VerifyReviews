@@ -21,6 +21,7 @@
 
             <label for="contrasenaNegocio2">*Confirma la contraseña:</label>
             <input type="password" id="contrasenaNegocio2" required>
+            <div id="resultado_contrasena"></div>
 
             <label for="email">*Email:</label>
             <input type="email" id="email" name="email"  required>
@@ -108,19 +109,19 @@
             cositas += "Al menos un caracter especial. ";
         }
   
-        var contrasena1fuerzaElement = $('#error_direccion');
+        var resultado_contrasena = $('#error_direccion');
         if (fuerza < 2) {
-            contrasena1fuerzaElement.text("Fácil. " + cositas);
-            contrasena1fuerzaElement.css('color', 'red');
+            resultado_contrasena.text("Fácil. " + cositas);
+            resultado_contrasena.css('color', 'red');
         } else if (fuerza === 2) {
-            contrasena1fuerzaElement.text("Media. " + cositas);
-            contrasena1fuerzaElement.css('color', 'orange');
+            resultado_contrasena.text("Media. " + cositas);
+            resultado_contrasena.css('color', 'orange');
         } else if (fuerza === 3) {
-            contrasena1fuerzaElement.text("Dificil. " + cositas);
-            contrasena1fuerzaElement.css('color', 'black');
+            resultado_contrasena.text("Dificil. " + cositas);
+            resultado_contrasena.css('color', 'black');
         } else {
-            contrasena1fuerzaElement.text("Muy dificil. " + cositas);
-            contrasena1fuerzaElement.css('color', 'green');
+            resultado_contrasena.text("Muy dificil. " + cositas);
+            resultado_contrasena.css('color', 'green');
         }
     });
         
