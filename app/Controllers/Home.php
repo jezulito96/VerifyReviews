@@ -372,7 +372,7 @@ class Home extends BaseController{
         
         $baseDatos -> setNegocio($nombre,$hash_contrasena, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo,$codigoConfirmacion,$codigo_recordar_contrasena);
 
-        
+        $cod_negocio = $baseDatos -> getMaxNegocio();
         // añado a la lista de negocios el nuevo objeto negocio
         $master = Master::obtenerInstancia();
         $master->setNegocio($cod_negocio, $nombre, $email, $calle, $ciudad, $pais, $telefono_negocio, $fotosBD, $foto_principal, $coordenadas, $sitio_web, $cod_categoria, $nombre_titular, $telefono_titular, $activo, $confirma_correo);
