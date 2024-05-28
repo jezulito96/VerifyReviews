@@ -3,13 +3,13 @@
 
 <?php
 
-    if(isset($error)){
-        echo $error;
+    if(isset($form_correcto)){
+        echo $form_correcto;
     }else{
 ?>
     <div class="containerNegocioForm">
         <?php
-            if(isset($form_correcto)) echo $form_correcto;
+            if(isset($error)) echo $error;
         ?>
         <form action="setNegocio" method="post" id="formularioNegocio" enctype="multipart/form-data" >
 
@@ -111,16 +111,16 @@
   
         var resultado_contrasena = $('#resultado_contrasena');
         if (fuerza < 2) {
-            resultado_contrasena.text("Fácil. " + cositas);
+            resultado_contrasena.text("Seguridad: sencilla. " + cositas);
             resultado_contrasena.css('color', 'red');
         } else if (fuerza === 2) {
-            resultado_contrasena.text("Media. " + cositas);
+            resultado_contrasena.text("Seguridad: Media. " + cositas);
             resultado_contrasena.css('color', 'orange');
         } else if (fuerza === 3) {
-            resultado_contrasena.text("Dificil. " + cositas);
+            resultado_contrasena.text("Seguridad: Segura. " + cositas);
             resultado_contrasena.css('color', 'black');
         } else {
-            resultado_contrasena.text("Muy dificil. " + cositas);
+            resultado_contrasena.text("Seguridad: Muy segura. " + cositas);
             resultado_contrasena.css('color', 'green');
         }
     });
