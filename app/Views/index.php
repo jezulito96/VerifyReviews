@@ -12,7 +12,11 @@
         </header>
 
         <main id="main" class="main">
-            <h3>El contenido de esta web esta destinada a fines educativos</h3>
+            <h3>
+                <span style="font-weight: bold;">Aviso importante</span>
+                Esta página web ha sido creada exclusivamente con fines educativos. 
+                Cualquier contenido presente en este sitio es para uso académico y no con propósitos comerciales o profesionales. Agradecemos tu comprensión y cooperación.
+            </h3>
             <!-- vista inicio de la web -->
             <?php if (isset ($index_content)) echo $index_content; ?> 
 
