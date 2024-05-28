@@ -104,7 +104,7 @@
 
                         $('#formularioNegocio').unbind('submit').submit();
                     } else {
-                        $("error_direccion").html("Porfavor, introduzca correctamente la dirección del negocio");
+                        $("error_direccion").html("<p>Porfavor, introduzca correctamente la dirección del negocio</p>");
                     }
                 })
                 .catch(function (error) {
