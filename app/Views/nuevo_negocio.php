@@ -74,21 +74,72 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     $(document).ready(function () {
-        // obtener lat y long a partir de calle, ciudad y pais
         
+        $('#password').on('input', function() {
+        var contrasena1 = $("#contrasenaNegocio").val();
+        var fuerza = 0;
+        var cositas = "";
+  
+        // Check password length
+        if (contrasena1.length < 8) {
+            cositas += "Mínimo 8 caracteres. ";
+        } else {
+            fuerza += 1;
+        }
+  
+        // Check for mixed case
+        if (contrasena1.match(/[a-z]/) && contrasena1.match(/[A-Z]/)) {
+            fuerza += 1;
+        } else {
+            cositas += "Usa mayúsculas y minúsculas. ";
+        }
+  
+        // Check for numbers
+        if (contrasena1.match(/\d/)) {
+            fuerza += 1;
+        } else {
+            cositas += "Al menos un numero. ";
+        }
+  
+        // Check for special characters
+        if (contrasena1.match(/[^a-zA-Z\d]/)) {
+            fuerza += 1;
+        } else {
+            cositas += "Al menos un caracter especial. ";
+        }
+  
+        var contrasena1fuerzaElement = $('#error_direccion');
+        if (fuerza < 2) {
+            contrasena1fuerzaElement.text("Fácil. " + cositas);
+            contrasena1fuerzaElement.css('color', 'red');
+        } else if (fuerza === 2) {
+            contrasena1fuerzaElement.text("Media. " + cositas);
+            contrasena1fuerzaElement.css('color', 'orange');
+        } else if (fuerza === 3) {
+            contrasena1fuerzaElement.text("Dificil. " + cositas);
+            contrasena1fuerzaElement.css('color', 'black');
+        } else {
+            contrasena1fuerzaElement.text("Muy dificil. " + cositas);
+            contrasena1fuerzaElement.css('color', 'green');
+        }
+    });
+        
+        
+        // obtener lat y long a partir de calle, ciudad y pais
         $("#formularioNegocio").submit(function(event) {
             event.preventDefault();
             var todo_guay = false;
             console.log("entraaa");
             var contrasena1 = $("#contrasenaNegocio").val();
             var contrasena2 = $("#contrasenaNegocio2").val();
-            var pattern_contrasena = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
+            
             if(contrasena1 == contrasena2){
-                console.log("entra 1");
-                if(pattern_contrasena.test(contrasena1)){
+                if(contrasena1.length > 8){
                     todo_guay = true;
                     console.log("entra 2");
                 }
+            }else{
+                $("#error_direccion").html("Las contraseñas no coinciden");
             }
 
             var calle = $("#calle").val();
