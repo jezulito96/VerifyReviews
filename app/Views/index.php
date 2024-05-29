@@ -39,8 +39,12 @@
             <?php if (isset ($cont_categoria)) echo $cont_categoria; ?>
             
 
-            <!--  vista para la informacion de un negocio en concreto-->
+            <!--  vista para la informacion de un negocio en concreto -->
             <?php if (isset ($info_negocio)) echo $info_negocio; ?>
+            
+
+            <!--  vista para que el usuario_registrado vea las resenas que ha escrito -->
+            <?php if (isset ($mis_resenas_usuario)) echo $mis_resenas_usuario; ?>
 
             <?php
             if (isset ($val))

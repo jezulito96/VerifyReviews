@@ -836,4 +836,23 @@ class Home extends BaseController{
         $maleta['info_negocio'] = view('info_negocio', $maleta_info_negocio);
         return view('index', $maleta);
     }
+
+    public function misResenas(){
+        $master = master::obtenerInstancia();
+        $usuario = session() -> get("usuario_en_sesion");
+
+        $lista_resenas = $master -> getListaResenas(false, $usuario['cod_usuario']);
+
+        if(sizeof($lista_resenas) > 0){
+            $maleta_mis_resenas['lista_resenas'] = $lista_resenas;
+        }else{
+            $maleta_mis_resenas['error'] = "Aún no has escrito ninguna reseña, solo necesitas el codigo Qr que te ofrecen nuestros establecimientos. ¡Animate!";
+        }
+
+        // vistas
+        $maleta['head_content'] = view('head_content');
+        $maleta['header_content'] = view('header_content');
+        $maleta['mis_resenas_usuario'] = view('mis_resenas_usuario', $maleta_mis_resenas);
+        return view('index', $maleta);
+    }
 }

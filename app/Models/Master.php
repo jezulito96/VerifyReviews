@@ -138,8 +138,8 @@ class Master {
         }
 
     }
-    
-    public function getListaResenas($cod_negocio = false){
+
+    public function getListaResenas($cod_negocio = false,$cod_usuario = false){
         
         $baseDatos = new BaseDatos();
         if ($this->listaResenas === null) {
@@ -159,6 +159,17 @@ class Master {
             }
 
             return $resenas_negocio;
+        }
+
+        if($cod_usuario != false){
+            $resenas_usuario = array();
+            foreach($this -> listaResenas as $i => $resena){
+                if($resena -> getCodUsuario() == $cod_usuario){
+                    $resenas_usuario[] = $resena;
+                }
+            }
+            
+            return $resenas_usuario;
         }
 
         

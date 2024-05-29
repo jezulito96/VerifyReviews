@@ -2,7 +2,11 @@
 <h3>Login</h3>
 <?php 
     $sesion = session() -> get("sesionIniciada");
-    if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2)  echo "Sesion iniciada";
+    if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2) {
+        echo "Sesion iniciada";
+    }else{
+        echo "Usuario o contraseña incorrectos";
+    }
 
 ?>
 <div class="containerformLogin">
