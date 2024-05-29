@@ -450,7 +450,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10095;
+    z-index: 20095;
 }
 .cerrar_busqueda span{
     font-size: 18px;
