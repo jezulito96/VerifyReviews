@@ -16,6 +16,7 @@ class Resena {
     private $estado;
     private $nickname;
     private $foto_perfil;
+    private $nombre_negocio;
 
     // Constructor
     public function __construct($cod_resena, $cod_negocio, $cod_usuario, $fecha_creacion, $fecha_servicio, $calificacion, $titulo, $opinion, $fotos, $qr_id, $estado, $nickname) {
@@ -34,8 +35,12 @@ class Resena {
 
         $baseDatos = new BaseDatos();
         $this -> foto_perfil =  $baseDatos -> get_foto_perfil_usuario($cod_usuario);
+        $this -> nombre_negocio =  $baseDatos -> get_nombre_negocio($cod_negocio);
     }
 
+    public function get_nombre_negocio(){
+        return $this -> nombre_negocio;
+    }
     public function get_foto_perfil_usuario(){
         return $this -> foto_perfil;
     }

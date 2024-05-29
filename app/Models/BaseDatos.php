@@ -393,8 +393,16 @@ class BaseDatos extends Model
             $clave = $consulta -> getRow();
             return $clave->foto_perfil;
         }
+              
+    }
 
+    public function get_nombre_negocio($cod_negocio){
+        $orden = "SELECT nombre FROM negocio WHERE cod_negocio=?";
+        $parametros = [$cod_negocio];
+        $consulta = $this -> db -> query($orden, $parametros);
         
+        $clave = $consulta -> getRow();
+        return $clave->nombre;
     }
 }
 
