@@ -407,15 +407,15 @@ li{
     max-width: 100px;
     margin-bottom: 10px;
 }
-.footer nav {
+.footer .listaMenu_footer {
     margin: 20px 0;
 }
-.footer nav a {
+.footer .listaMenu_footer a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
 }
-.footer nav a:hover {
+.footer .listaMenu_footer a:hover {
     text-decoration: underline;
 }
 .footer .social {
