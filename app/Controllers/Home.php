@@ -881,6 +881,7 @@ class Home extends BaseController{
 
         // estadisticas del negocio
         $maleta_mi_negocio['estadisticas'] = $master -> getEstadisticas($usuario['cod_negocio']);
+        
 
         $lista_resenas = $master -> getListaResenas( $usuario['cod_negocio'],false);
 

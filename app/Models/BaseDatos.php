@@ -414,6 +414,21 @@ class BaseDatos extends Model
         $clave = $consulta -> getRow();
         return $clave->nota_media;
     }
+
+    public function getRanking($cod_categoria){
+
+        $orden = "SELECT cod_negocio, SUM(calificacion) / COUNT(calificacion) as nota_media 
+        FROM resena 
+        WHERE cod_categoria=? 
+        GROUP BY cod_negocio 
+        ORDER BY nota_media DES";
+        $parametros = [$cod_categoria];
+        $consulta = $this -> db -> query($orden, $parametros);
+
+        return $consulta->getResultArray();
+    }
+
+
 }
 
 

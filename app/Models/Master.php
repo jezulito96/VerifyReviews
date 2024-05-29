@@ -175,11 +175,12 @@ class Master {
         return $this->listaResenas;
     }
 
-    public function getEstadisticas($cod_negocio){
+    public function getEstadisticas($cod_negocio, $cod_categoria){
         $lista_estadisticas = array();
         $baseDatos = new BaseDatos();
 
         $lista_estadisticas['nota_media'] = $baseDatos -> getNotaMediaNegocio($cod_negocio);
+        $lista_estadisticas['ranking'] = $baseDatos -> getRanking($cod_categoria);
 
         return $lista_estadisticas;
     }

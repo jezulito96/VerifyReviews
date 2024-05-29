@@ -9,13 +9,17 @@ if(isset($error)){
   
     if(isset($estadisticas)){
         echo $estadisticas['nota_media'];
-    }
+    
     
 ?>
+<h3>Ranking</h3>
+<?php print_r($estadisticas['ranking']); ?>
+
 
 <h3>Tus reseñas</h3>
-
 <?php
+    }
+
     if(isset($lista_resenas)){
         echo "<ul>";
         foreach($lista_resenas as $i => $resena){
