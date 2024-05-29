@@ -11,7 +11,7 @@
 
                 echo  $resena -> get_nombre_negocio();
 
-                echo '<div class="mi_resena_container">Holaa</div>';
+                echo '<div class="mi_resena_container" style="display:none;">Holaa</div>';
 
             echo "</li>";
 
@@ -28,6 +28,6 @@
         $('.mi_resena').on('click', function() {
             $(this).find('.mi_resena_container').toggle();
         });
-        
+
     });
 </script>
