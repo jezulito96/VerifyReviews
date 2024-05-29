@@ -860,7 +860,7 @@ class Home extends BaseController{
         $master = master::obtenerInstancia();
         $usuario = session() -> get("usuario_en_sesion");
 
-        $lista_resenas = $master -> getListaResenas( $usuario['cod_usuario'],false);
+        $lista_resenas = $master -> getListaResenas( $usuario['cod_negocio'],false);
 
         if(sizeof($lista_resenas) > 0){
             $maleta_mi_negocio['lista_resenas'] = $lista_resenas;
