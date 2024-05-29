@@ -55,7 +55,7 @@ class Home extends BaseController{
         //vistas
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content'); 
-        $maleta['filtros_busqueda'] = view('filtros_busqueda'); 
+        // $maleta['filtros_busqueda'] = view('filtros_busqueda'); 
         $maleta['index_content'] = view('index_content', $maleta_index); 
         $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
