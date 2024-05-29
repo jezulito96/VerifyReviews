@@ -52,3 +52,7 @@ $routes->get('/misResenas', 'Home::misResenas');
 
 // cuando el usuario registrado pulsa en "Mis reseñas" (lista de reseñas que el usuario ha puesto)
 $routes->get('/miNegocio', 'Home::miNegocio');
+
+
+// para filtrar busquedas por ajax
+$routes->get('/filtro', 'Home::filtro');

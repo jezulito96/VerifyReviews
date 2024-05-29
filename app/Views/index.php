@@ -12,11 +12,10 @@
         <nav>
             <div class="filtros_container">
                 <button><i class="fas fa-filter"></i> Filtros</button>
-                <input type="text" placeholder="Buscar">
+                <input type="text" placeholder="Buscar" id="buscar">
                 <i class="fas fa-search"></i>
             </div>
-            <div class="resultados_busqueda">
-            <!-- <div class="resultados_busqueda" style="display:none;"> -->
+            <div class="resultados_busqueda" style="display:none;">
 
                 <!-- se mostraran los resultados de la busqueda y los filtros -->
                 
@@ -30,9 +29,9 @@
                 $('#buscar-icono').on('click', function() {
                     var query = $('#buscar').val();
                     $.ajax({
-                        url: '<?= site_url('BusquedaController/buscar'); ?>',
-                        type: 'GET',
-                        data: { q: query },
+                        url: 'https://verifyreviews.es/verifyreviews/filtro',
+                        type: 'POST',
+                        data: { texto: query },
                         success: function(response) {
                             $('.resultados_busqueda').html(response).show();
                         },

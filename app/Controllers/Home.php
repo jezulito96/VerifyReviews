@@ -903,4 +903,11 @@ class Home extends BaseController{
         $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
+
+    public function filtro(){
+        $hola =  $this -> request -> getPost('texto');
+
+        $maleta_filtros['hola'] = $hola;
+        return view('filtros_busqueda', $maleta_filtros);
+    }
 }
