@@ -27,7 +27,7 @@
     ?>
     </section>
 
-    <h3>Top 10</h3>
+    <h3>Top 3</h3>
     <section class="slick-carousel">
     <?php 
     if(isset($top3_categorias)){
