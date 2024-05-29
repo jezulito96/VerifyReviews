@@ -176,6 +176,15 @@ class Master {
         return $this->listaResenas;
     }
 
+    public function getEstadisticas($cod_negocio){
+        $lista_estadisticas = array();
+        $baseDatos = new BaseDatos();
+
+        $lista_estadisticas['nota_media'] = $baseDatos -> getNotaMediaNegocio($cod_negocio);
+
+        return $lista_estadisticas;
+    }
+
 }
 
 

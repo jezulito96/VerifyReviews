@@ -1,9 +1,22 @@
-<h1>Mis negocio</h1>
+<h1>Mi negocio</h1>
+
+<h3>Valoración</h3>
 <?php
 
-    if(isset($error)){
-        echo $error;
-    }elseif(isset($lista_resenas)){
+if(isset($error)){
+    echo $error;
+}else{
+  
+    if(isset($estadisticas)){
+        
+    }
+    
+?>
+
+<h3>Tus reseñas</h3>
+
+<?php
+    if(isset($lista_resenas)){
         echo "<ul>";
         foreach($lista_resenas as $i => $resena){
 
@@ -16,11 +29,10 @@
 
             echo "</li>";
 
-            
         }
         echo "</ul>";
     }
-
+}
 ?>
 
 <script>

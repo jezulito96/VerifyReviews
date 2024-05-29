@@ -404,6 +404,16 @@ class BaseDatos extends Model
         $clave = $consulta -> getRow();
         return $clave->nombre;
     }
+
+    public function getNotaMediaNegocio($cod_negocio){
+
+        $orden = "SELECT SUM(calificacion) / COUNT(calificacion) as nota_media FROM resena WHERE cod_negocio=?";
+        $parametros = [$cod_negocio];
+        $consulta = $this -> db -> query($orden, $parametros);
+        
+        $clave = $consulta -> getRow();
+        return $clave->nota_media;
+    }
 }
 
 

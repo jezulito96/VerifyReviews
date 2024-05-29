@@ -860,6 +860,9 @@ class Home extends BaseController{
         $master = master::obtenerInstancia();
         $usuario = session() -> get("usuario_en_sesion");
 
+        // estadisticas del negocio
+        $maleta_mi_negocio['estadisticas'] = $master -> getEstadisticas($usuario['cod_negocio']);
+
         $lista_resenas = $master -> getListaResenas( $usuario['cod_negocio'],false);
 
         if(sizeof($lista_resenas) > 0){
@@ -869,6 +872,7 @@ class Home extends BaseController{
         }
 
         // vistas
+        helper('mis_helpers');
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['mi_negocio'] = view('mi_negocio', $maleta_mi_negocio);
