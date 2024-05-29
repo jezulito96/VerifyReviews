@@ -54,6 +54,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content'); 
         $maleta['index_content'] = view('index_content', $maleta_index); 
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -121,6 +122,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -246,6 +248,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -257,6 +260,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -272,6 +276,7 @@ class Home extends BaseController{
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
             $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
+            $maleta['vista_footer'] = view('vista_footer');
             return view('index', $maleta);
         }
 
@@ -395,6 +400,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['nuevo_negocio'] = view('nuevo_negocio',$nuevo_negocio);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -431,6 +437,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['index_content'] = view('index_content', $maleta_index); 
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -439,6 +446,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['nuevo_usuario'] = view('nuevo_usuario');
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -476,6 +484,7 @@ class Home extends BaseController{
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
             $maleta['nuevo_usuario'] = view('nuevo_usuario',$maleta_nuevo_usuario);
+            $maleta['vista_footer'] = view('vista_footer');
             return view('index', $maleta);
         }
 
@@ -536,6 +545,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['nuevo_usuario'] = view('nuevo_usuario',$maleta_nuevo_usuario);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -545,6 +555,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['login'] = view('login');
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -573,6 +584,7 @@ class Home extends BaseController{
                 $maleta['head_content'] = view('head_content');
                 $maleta['header_content'] = view('header_content');
                 $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+                $maleta['vista_footer'] = view('vista_footer');
                 return view('index', $maleta);
                 // $maleta_resenaContent['qr_key'] = $this->request->getPost('qr_key');
                 // $maleta_resenaContent['completar_formulario_resena'] = true;
@@ -637,6 +649,7 @@ class Home extends BaseController{
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
             $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+            $maleta['vista_footer'] = view('vista_footer');
             return view('index', $maleta);
         }
 
@@ -655,6 +668,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['login'] = view('login',$maleta_login);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -669,6 +683,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['generarResenas'] = view('generarResenas');
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -790,6 +805,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['generarResenas'] = view('generarResenas', $maleta_generarResenas);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -810,6 +826,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['cont_categoria'] = view('cont_categoria', $maleta_cont_categorias);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
 
     }
@@ -834,6 +851,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['info_negocio'] = view('info_negocio', $maleta_info_negocio);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -853,6 +871,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['mis_resenas_usuario'] = view('mis_resenas_usuario', $maleta_mis_resenas);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 
@@ -876,6 +895,7 @@ class Home extends BaseController{
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
         $maleta['mi_negocio'] = view('mi_negocio', $maleta_mi_negocio);
+        $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
 }

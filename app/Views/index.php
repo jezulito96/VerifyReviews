@@ -74,7 +74,10 @@
         <div id="resultadoLocation"></div>
         <!-- <div id="mapa" class="mapa"></div> -->
 
-
+        <footer>
+            <!--  vista para que el negocio vea sus reseñas y sus valoraciones -->
+            <?php if (isset ($vista_footer)) echo $vista_footer; ?>
+        </footer>
 
     </body>
 
