@@ -45,6 +45,10 @@
 
             <!--  vista para que el usuario_registrado vea las resenas que ha escrito -->
             <?php if (isset ($mis_resenas_usuario)) echo $mis_resenas_usuario; ?>
+            
+
+            <!--  vista para que el negocio vea sus reseñas y sus valoraciones -->
+            <?php if (isset ($mi_negocio)) echo $mi_negocio; ?>
 
             <?php
             if (isset ($val))
