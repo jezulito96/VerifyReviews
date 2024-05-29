@@ -26,6 +26,9 @@
     flex-grow: 1;
     padding-left: 10px;
 }
+.filtros_container > i{
+  font-size: 25px;
+}
 
   /* ---------   carousel    --------------- */
   h3{
