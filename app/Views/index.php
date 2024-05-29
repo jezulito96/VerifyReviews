@@ -12,7 +12,7 @@
         </header>
         
         <nav>
-            <div class="encabezado">
+            <div class="filtros_container">
                 <button><i class="fas fa-filter"></i> Filtros</button>
                 <input type="text" placeholder="Buscar">
             </div>
