@@ -427,7 +427,7 @@ class BaseDatos extends Model
         WHERE categoria_negocio=?
         GROUP BY cod_negocio 
         ORDER BY nota_media DESC
-        LIMIT BY 3";
+        LIMIT 3";
         $parametros = [$cod_categoria];
         $consulta = $this -> db -> query($orden, $parametros);
 
