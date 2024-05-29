@@ -12,8 +12,8 @@
         <nav>
             <div class="filtros_container">
                 <button><i class="fas fa-filter"></i> Filtros</button>
-                <input type="text" placeholder="Buscar" id="buscar">
-                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar" id="buscar" >
+                <i class="fas fa-search" id="buscar-icono"></i>
             </div>
             <div class="resultados_busqueda" style="display:none;">
 
