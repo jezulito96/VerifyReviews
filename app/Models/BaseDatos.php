@@ -421,7 +421,7 @@ class BaseDatos extends Model
         FROM resena 
         WHERE cod_categoria=? 
         GROUP BY cod_negocio 
-        ORDER BY nota_media DES";
+        ORDER BY nota_media DESC";
         $parametros = [$cod_categoria];
         $consulta = $this -> db -> query($orden, $parametros);
 
