@@ -440,7 +440,7 @@ li{
     left: 0px;
     background-color: #fff;
     padding:10px;
-    z-index: 20000;
+    z-index: 200;
 }
 .cerrar_busqueda{
     position:absolute;
@@ -451,7 +451,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 20095;
+    z-index: 195;
 }
 .cerrar_busqueda span{
     font-size: 18px;
@@ -460,4 +460,35 @@ li{
     border-bottom: 1px solid #333;
     /* box-shadow:  2px 2px 2px #333;
     text-shadow: 1px 1px 1px #333; */
+}
+
+
+/* container de filtros */
+
+#lista-filtros {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filtro {
+    margin-bottom: 10px;
+}
+
+.filtro li {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.filtro li i {
+    margin-right: 10px;
+    color: #007bff; /* Cambiar color del icono según preferencia */
+}
+
+.filtro li .valores {
+    margin-left: auto;
+    color: #999;
 }
