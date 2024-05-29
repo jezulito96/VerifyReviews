@@ -880,7 +880,7 @@ class Home extends BaseController{
         $usuario = session() -> get("usuario_en_sesion");
 
         // estadisticas del negocio
-        $maleta_mi_negocio['estadisticas'] = $master -> getEstadisticas($usuario['cod_negocio']);
+        $maleta_mi_negocio['estadisticas'] = $master -> getEstadisticas($usuario['cod_negocio'],$usuario['cod_categoria']);
         
 
         $lista_resenas = $master -> getListaResenas( $usuario['cod_negocio'],false);
