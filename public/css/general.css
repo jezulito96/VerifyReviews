@@ -434,6 +434,7 @@ li{
 /* -------  filtros de busqueda     ------ */
 .resultados_busqueda{
     width: 100%;
+    min-height:100px;
     position:absolute;
     top:120px;
     left: 0px;
