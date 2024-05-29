@@ -8,8 +8,9 @@
         foreach($lista_resenas as $i => $resena){
 
             echo "<li class='mi_resena'>";
-
-                echo  $resena -> get_nombre_negocio() . " - " . $resena -> getFechaServicio();
+                $fecha = $resena -> getFechaServicio();
+                substr($fecha, 0, 10);
+                echo  $resena -> get_nombre_negocio() . " - " . $fecha;
 
                 echo '<div class="mi_resena_container" style="display:none;">Holaa</div>';
 
