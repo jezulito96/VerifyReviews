@@ -374,6 +374,28 @@ class BaseDatos extends Model
         return $listaResenas->getResultArray();
     }
 
+    public function get_foto_perfil_usuario($cod_usuario){
+
+        $orden = "SELECT foto_perfil FROM usuario_registrado WHERE cod_usuario=?";
+        $parametros = [$cod_usuario];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
+        
+        if($numeroFilas > 0 ){
+            $clave = $consulta -> getRow();
+            return $clave->foto_perfil;
+        }else{
+
+            $orden = "SELECT foto_perfil FROM usuario_no_registrado WHERE cod_usuario=?";
+            $parametros = [$cod_usuario];
+            $consulta = $this -> db -> query($orden, $parametros);
+
+            $clave = $consulta -> getRow();
+            return $clave->foto_perfil;
+        }
+
+        
+    }
 }
 
 

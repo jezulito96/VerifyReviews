@@ -7,7 +7,6 @@ class Master {
     private static $instancia;
     private $listaCategorias;
     private $listaNegocios;
-
     public $listaResenas;
 
     private function __construct() {

@@ -15,8 +15,7 @@ class Resena {
     private $qr_id;
     private $estado;
     private $nickname;
-    // private Negocio $obj_negocio;
-    // private Categoria $obj_categoria;
+    private $foto_perfil;
 
     // Constructor
     public function __construct($cod_resena, $cod_negocio, $cod_usuario, $fecha_creacion, $fecha_servicio, $calificacion, $titulo, $opinion, $fotos, $qr_id, $estado, $nickname) {
@@ -32,11 +31,14 @@ class Resena {
         $this->qr_id = $qr_id;
         $this->estado = $estado;
         $this->nickname = $nickname;
+
+        $baseDatos = new BaseDatos();
+        $this -> foto_perfil =  $baseDatos -> get_foto_perfil_usuario($cod_usuario);
     }
 
-    // public function get_obj_negocio($obj_negocio){
-    //     return $this -> obj_negocio;
-    // }
+    public function get_foto_perfil_usuario(){
+        return $this -> foto_perfil;
+    }
 
     public function getCodResena() {
         return $this->cod_resena;
