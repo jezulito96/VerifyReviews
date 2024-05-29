@@ -166,6 +166,11 @@ li{
     width: 40%;
     height: 40px;
 }
+.nick_opinion > img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+}
 
 .fecha_opinion{
 
