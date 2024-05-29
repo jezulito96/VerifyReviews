@@ -7,26 +7,24 @@
     display: flex;
     flex-direction: row;
   }
-  .containerFiltro{
-    width: 70px;
-    height: 100%;
+  .filtros_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .imgFiltro{
-    width: 30px;
-    height: 30px;
-  }
-
-  .containerBusqueda{
-    width: calc(100% - 70px);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    padding: 10px 15px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.filtros_container button, .filtros_container input {
+    background-color: #eee;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.filtros_container input {
+    flex-grow: 1;
+}
 
   /* ---------   carousel    --------------- */
   h3{

@@ -10,6 +10,13 @@
             <?php if (isset ($header_content)) echo $header_content; ?>
         
         </header>
+        
+        <nav>
+            <div class="encabezado">
+                <button><i class="fas fa-filter"></i> Filtros</button>
+                <input type="text" placeholder="Buscar">
+            </div>
+        </nav> 
 
         <main id="main" class="main">
             <p>
