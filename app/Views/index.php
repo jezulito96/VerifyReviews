@@ -16,7 +16,8 @@
                 <i class="fas fa-search" id="buscar-icono"></i>
             </div>
             <div id="container_filtros" style="display:none;">  
-                <div id="lista-filtros">
+               
+            <div id="lista-filtros">
                 <ul class="filtro">
                     <li>
                         <i class="fas fa-map-marker-alt"></i> Ciudad:
@@ -35,6 +36,7 @@
                         <span class="valores">1, 2, 3, 4, 5</span>
                     </li>
                 </ul>
+            </div>
             </div>
                 
 
