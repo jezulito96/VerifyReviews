@@ -55,4 +55,4 @@ $routes->get('/miNegocio', 'Home::miNegocio');
 
 
 // para filtrar busquedas por ajax
-$routes->get('/filtro', 'Home::filtro');
+$routes->post('/filtro', 'Home::filtro');
