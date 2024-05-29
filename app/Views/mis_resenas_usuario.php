@@ -9,7 +9,7 @@
 
             echo "<li class='mi_resena'>";
 
-                echo  $resena -> get_nombre_negocio();
+                echo  $resena -> get_nombre_negocio() . " - " . $resena -> getFechaServicio();
 
                 echo '<div class="mi_resena_container" style="display:none;">Holaa</div>';
 
