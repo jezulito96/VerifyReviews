@@ -49,6 +49,8 @@ class Home extends BaseController{
         $maleta_index['listaCategorias'] = $master -> getListaCategorias();
         $master -> getListaNegocios();
         $master -> getListaResenas();
+
+        $maleta['top3_categorias'] = $master -> getEstadisticas();
         
         //vistas
         $maleta['head_content'] = view('head_content');

@@ -189,13 +189,28 @@ class Master {
 
     }
 
-    public function getEstadisticas($cod_negocio, $cod_categoria){
+    public function getEstadisticas($cod_negocio = false, $cod_categoria = false){
 
         $lista_estadisticas = array();
         $baseDatos = new BaseDatos();
 
-        $lista_estadisticas['nota_media'] = $baseDatos -> getNotaMediaNegocio($cod_negocio);
-        $lista_estadisticas['ranking'] = $baseDatos -> getRanking($cod_categoria);
+        if($cod_negocio != false){
+
+            $lista_estadisticas['nota_media'] = $baseDatos -> getNotaMediaNegocio($cod_negocio);
+        }
+        if($cod_categoria != false){
+
+            $lista_estadisticas['ranking'] = $baseDatos -> getRanking($cod_categoria);
+        }
+
+
+        if($cod_categoria == false && $cod_negocio == false){
+            $top3_categorias = array();
+            
+            foreach($this -> getListaCategorias() as $i => $categoria)
+            
+            $lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()] = $baseDatos -> getRanking($categoria -> getCodCategoria());
+        }
 
         return $lista_estadisticas;
     }

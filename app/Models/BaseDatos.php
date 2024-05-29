@@ -426,7 +426,8 @@ class BaseDatos extends Model
         FROM estadisticas_resena 
         WHERE categoria_negocio=?
         GROUP BY cod_negocio 
-        ORDER BY nota_media DESC";
+        ORDER BY nota_media DESC
+        LIMIT BY 3";
         $parametros = [$cod_categoria];
         $consulta = $this -> db -> query($orden, $parametros);
 
