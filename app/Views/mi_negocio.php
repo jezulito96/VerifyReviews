@@ -8,7 +8,7 @@ if(isset($error)){
 }else{
   
     if(isset($estadisticas)){
-        
+        echo $estadisticas;
     }
     
 ?>
