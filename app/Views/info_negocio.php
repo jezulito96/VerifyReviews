@@ -210,34 +210,7 @@
 
     });
 </script>
-        <div id="content_mapa">
-            <div class="head_mapa">
-                <div class="icono_mapa">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="calle_mapa">
-                    <?php echo $negocio -> getCalle() . ", " . $negocio -> getCiudad() . ", " . $negocio -> getPais(); ?> 
-                </div>
-            </div>
-
-            <div id="info_mapa" class="info_mapa" >
-                <?php
-                    $coordenadas = $negocio -> getCoordenadas();
-                    if($coordenadas == null ||  empty($coordenadas)){
-                        echo "Upss hemos tenido un problema con el mapa, en estos  momentos no es posible dar la ubicacion,perdone las molestias";
-                    }else{
-                        $coord = explode(",", $coordenadas);
-
-                        echo '<input type="hidden" value="'. $coord[0] . '" id="latitud" />';
-                        echo '<input type="hidden" value="'. $coord[1] . '" id="longitud" />';
-                        echo '<input type="hidden" value="'. $negocio -> getNombre() . '" id="nombre_necogio_mapa" />';
-
-                    }
-
-                ?>
-                
-            </div> 
-        </div>
+        
 
         <div id="content_llamar">
             <div class="icono_llamar">
@@ -282,6 +255,35 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <div id="content_mapa">
+        <div class="head_mapa">
+            <div class="icono_mapa">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="calle_mapa">
+                <?php echo $negocio -> getCalle() . ", " . $negocio -> getCiudad() . ", " . $negocio -> getPais(); ?> 
+            </div>
+        </div>
+
+        <div id="info_mapa" class="info_mapa" >
+            <?php
+                $coordenadas = $negocio -> getCoordenadas();
+                if($coordenadas == null ||  empty($coordenadas)){
+                    echo "Upss hemos tenido un problema con el mapa, en estos  momentos no es posible dar la ubicacion,perdone las molestias";
+                }else{
+                    $coord = explode(",", $coordenadas);
+
+                    echo '<input type="hidden" value="'. $coord[0] . '" id="latitud" />';
+                    echo '<input type="hidden" value="'. $coord[1] . '" id="longitud" />';
+                    echo '<input type="hidden" value="'. $negocio -> getNombre() . '" id="nombre_necogio_mapa" />';
+
+                }
+
+            ?>
+            
+        </div> 
+    </div>
+        
 <script>
     $(document).ready(function(){
         $('.container_opiniones').click(function(){

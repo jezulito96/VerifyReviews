@@ -172,7 +172,6 @@ class Master {
             return $resenas_usuario;
         }
 
-        
         return $this->listaResenas;
     }
 
