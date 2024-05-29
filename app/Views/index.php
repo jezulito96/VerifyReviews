@@ -2,7 +2,6 @@
     <?php 
         if (isset ($head_content)) echo $head_content;
     ?>
-
     <body >
 
         <header id="header" class="header">
@@ -10,14 +9,40 @@
             <?php if (isset ($header_content)) echo $header_content; ?>
         
         </header>
-        
         <nav>
             <div class="filtros_container">
                 <button><i class="fas fa-filter"></i> Filtros</button>
                 <input type="text" placeholder="Buscar">
                 <i class="fas fa-search"></i>
             </div>
+            <div class="resultados_busqueda">
+            <!-- <div class="resultados_busqueda" style="display:none;"> -->
+
+                <!-- se mostraran los resultados de la busqueda y los filtros -->
+                
+
+            </div>
         </nav> 
+            <?php //if(isset($filtros_busqueda)) echo $filtros_busqueda; ?>
+
+        <script>
+            $(document).ready(function() {
+                $('#buscar-icono').on('click', function() {
+                    var query = $('#buscar').val();
+                    $.ajax({
+                        url: '<?= site_url('BusquedaController/buscar'); ?>',
+                        type: 'GET',
+                        data: { q: query },
+                        success: function(response) {
+                            $('.resultados_busqueda').html(response).show();
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error en la búsqueda:', error);
+                        }
+                    });
+                });
+            });
+        </script>
 
         <main id="main" class="main">
             <p>
