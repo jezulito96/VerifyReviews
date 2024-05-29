@@ -19,14 +19,15 @@
 
                 <!-- se mostraran los resultados de la busqueda y los filtros -->
                 
-
+                
             </div>
+            <div class="cerrar_busqueda"><span>Cerrar búsqueda</span></div>
         </nav> 
             <?php //if(isset($filtros_busqueda)) echo $filtros_busqueda; ?>
 
         <script>
             $(document).ready(function() {
-                $('#buscar-icono').on('click', function() {
+                $('#buscar-icono').click(function() {
                     var query = $('#buscar').val();
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
@@ -40,6 +41,9 @@
                         }
                     });
                 });
+            });
+            $('.cerrar_busqueda').on('click', function() {
+                $('.resultados_busqueda').slideUp();
             });
         </script>
 

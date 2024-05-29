@@ -442,3 +442,21 @@ li{
     padding:10px;
     z-index: 20000;
 }
+.cerrar_busqueda{
+    position:absolute;
+    bottom: 20px;
+    left: 0px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10095;
+}
+.cerrar_busqueda span{
+    font-size: 18px;
+    color: #333;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #333;
+    box-shadow:  2px 2px 2px #333;
+    text-shadow: 1px 1px 1px #333;
+}
