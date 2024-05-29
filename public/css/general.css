@@ -464,7 +464,16 @@ li{
 
 
 /* container de filtros */
-
+.container_filtros{
+    width: 100%;
+    min-height:auto;
+    position:absolute;
+    top:120px;
+    left: 0px;
+    background-color: #fff;
+    padding:10px;
+    z-index: 200;
+}
 #lista-filtros {
     list-style-type: none;
     padding: 0;

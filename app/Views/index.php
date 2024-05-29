@@ -15,7 +15,7 @@
                 <input type="text" placeholder="Buscar" id="buscar">
                 <i class="fas fa-search" id="buscar-icono"></i>
             </div>
-            <div id="container_filtros">  
+            <div id="container_filtros" >  
                 <div id="lista-filtros">
                 <ul class="filtro">
                     <li>
