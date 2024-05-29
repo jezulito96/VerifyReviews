@@ -173,9 +173,24 @@ class Master {
         }
 
         return $this->listaResenas;
+
+    }
+
+    public function setEstadisticas($cod_resena, $cod_negocio, $valoracion_final){
+        $cod_categoria = 0;
+        foreach($this -> listaNegocios as $i => $negocio){
+            if($cod_negocio == $negocio -> getCodNegocio()){
+                $cod_categoria = $negocio -> getCodCategoria();
+            }
+        }
+
+        $baseDatos = new BaseDatos();
+        $baseDatos -> setEstadisticas($cod_resena, $cod_negocio, $cod_categoria, $valoracion_final);
+
     }
 
     public function getEstadisticas($cod_negocio, $cod_categoria){
+
         $lista_estadisticas = array();
         $baseDatos = new BaseDatos();
 

@@ -234,6 +234,7 @@ class Home extends BaseController{
         
         if($resultadoInsert == true){
             $maleta_resenaContent['resena_enviada'] = true;
+            $master -> setEstadisticas($cod_resena, $cod_negocio, $valoracion_final);
         }else{
 
             /////////// gestionar el error en resena_content

@@ -405,9 +405,14 @@ class BaseDatos extends Model
         return $clave->nombre;
     }
 
+    public function setEstadisticas($cod_resena, $cod_negocio, $cod_categoria, $valoracion_final){
+        $orden = "INSERT INTO estadisticas_resena (cod_resena, cod_negocio, categoria_negocio, calificacion, fecha) VALUES ($cod_resena, $cod_negocio, $cod_categoria, $valoracion_final, NOW())";
+        $this -> db -> query($orden);
+    }
+
     public function getNotaMediaNegocio($cod_negocio){
 
-        $orden = "SELECT SUM(calificacion) / COUNT(calificacion) as nota_media FROM resena WHERE cod_negocio=?";
+        $orden = "SELECT SUM(calificacion) / COUNT(calificacion) as nota_media FROM estadisticas_resena WHERE cod_negocio=?";
         $parametros = [$cod_negocio];
         $consulta = $this -> db -> query($orden, $parametros);
         
@@ -418,8 +423,8 @@ class BaseDatos extends Model
     public function getRanking($cod_categoria){
 
         $orden = "SELECT cod_negocio, SUM(calificacion) / COUNT(calificacion) as nota_media 
-        FROM resena 
-        WHERE cod_categoria=? 
+        FROM estadisticas_resena 
+        WHERE categoria_negocio=?
         GROUP BY cod_negocio 
         ORDER BY nota_media DESC";
         $parametros = [$cod_categoria];
