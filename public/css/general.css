@@ -466,7 +466,7 @@ li{
 /* container de filtros */
 #container_filtros{
     width: 100%;
-    min-height:auto;
+    min-height:600px;
     position:absolute;
     top:120px;
     left: 0px;
