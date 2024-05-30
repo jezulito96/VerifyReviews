@@ -21,54 +21,53 @@
 
                     <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
                     <div class="filtros">
-                        <button class="opciones_filtro">Madrid</button>
-                        <button class="opciones_filtro">Soria</button>
-                        <button class="opciones_filtro">Barcelona</button>
-                        <button class="opciones_filtro">Valencia</button>
+                        <button class="opciones_filtro" value="1_soria">Soria</button>
+                        <button class="opciones_filtro" value="1_madrid">Madrid</button>
+                        <button class="opciones_filtro" value="1_barcelona">Barcelona</button>
+                        <button class="opciones_filtro" value="1_valencia">Valencia</button>
                     </div>
 
                     <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Categoria</div>
                     <div class="filtros">
-                        <button class="opciones_filtro">Restaurantes</button>
-                        <button class="opciones_filtro">Peluquerías</button>
-                        <button class="opciones_filtro">Cafeterías</button>
-                        <button class="opciones_filtro">Talleres</button>
-                        <button class="opciones_filtro">Perfumerías</button>
-                        <button class="opciones_filtro">Psicología</button>
-                        <button class="opciones_filtro">Moda</button>
+                        <button class="opciones_filtro" value="2_1">Restaurantes</button>
+                        <button class="opciones_filtro" value="2_2">Peluquerías</button>
+                        <button class="opciones_filtro" value="2_3">Cafeterías</button>
+                        <button class="opciones_filtro" value="2_4">Talleres</button>
+                        <button class="opciones_filtro" value="2_5">Perfumerías</button>
+                        <button class="opciones_filtro" value="2_6">Psicología</button>
+                        <button class="opciones_filtro" value="2_7">Moda</button>
                     </div>
 
                     <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Valoración</div>
                     <div class="filtros">
-                        <button class="opciones_filtro">
+                        <button class="opciones_filtro" value="3_1">
                             <i class="fas fa-check check_filtro"></i>
                         </button>
-                        <button class="opciones_filtro">
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
-                        <button class="opciones_filtro">
-                            <i class="fas fa-check check_filtro"></i>
+                        <button class="opciones_filtro" value="3_2">
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                         </button>
-                        <button class="opciones_filtro">
-                            <i class="fas fa-check check_filtro"></i>
+                        <button class="opciones_filtro" value="3_3">
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                         </button>
-                        <button class="opciones_filtro">
+                        <button class="opciones_filtro" value="3_4">
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                        </button>
+                        <button class="opciones_filtro" value="3_5">
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
                             <i class="fas fa-check check_filtro"></i>
-                    </button>
+                        </button>
                     </div>
 
                 </div>
-                
 
             </div>
             <div class="resultados_busqueda" style="display:none;">
@@ -82,6 +81,20 @@
 
         <script>
             $(document).ready(function() {
+                var info_filtros = [];
+
+                $('.opciones_filtro').click(function() {
+                    const valor = $(this).val();
+
+                    const index = info_filtros.indexOf(valor);
+                    if (index === -1) {
+                        info_filtros.push(valor);
+                    } else {
+                        info_filtros.splice(index, 1);
+                    }
+                    console.log(info_filtros);
+                });
+
                 $("#btn_filtros").click(function(){
                     $("#container_filtros").toggle();
                 });
@@ -92,7 +105,7 @@
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
                         type: 'POST',
-                        data: { texto: query },
+                        data: { texto: query , filtros: JSON.stringify(info_filtros) },
                         success: function(response) {
                             $('.resultados_busqueda').html(response).show();
                         },

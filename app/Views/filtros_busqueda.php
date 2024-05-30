@@ -2,7 +2,12 @@
 <?php
 
 
-if(isset($hola)) echo $hola;
+if(isset($hola)) {
+    echo $hola;
+}
+
+if(isset($filtros)) print_r($filtros);
+
 
 
 ?>

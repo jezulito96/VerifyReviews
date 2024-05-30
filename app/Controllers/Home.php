@@ -907,6 +907,10 @@ class Home extends BaseController{
     public function filtro(){
         $hola =  $this -> request -> getPost('texto');
 
+        if(isset($_POST['filtros'])){
+            $maleta_filtros['filtros'] = json_decode($_POST['filtros']);
+        }
+
         $maleta_filtros['hola'] = $hola;
         return view('filtros_busqueda', $maleta_filtros);
     }
