@@ -250,7 +250,7 @@ class Master {
         
         if($texto != false){
             foreach($this -> getListaNegocios() as $i => $negocio){
-                if(strpos($negocio -> getNombre(), $texto) == false || strpos($negocio -> getNombreCategoria(), $texto) == false){
+                if(strpos($negocio -> getNombre(), $texto) != false || strpos($negocio -> getNombreCategoria(), $texto) != false){
                     array_push($resultado_busqueda, $negocio);
                 }
             }
