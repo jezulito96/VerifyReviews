@@ -223,7 +223,7 @@ class Master {
 
         if($filtrar != false){
             foreach($filtrar as $i => $lista_filtros){
-                print_r($lista_filtros);
+                echo $lista_filtros[0];
                 // if($lista_filtros[0] == 1){
                 //     //es ciudad
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
