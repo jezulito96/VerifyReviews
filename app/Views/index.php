@@ -45,7 +45,6 @@
 
                 <!-- se mostraran los resultados de la busqueda y los filtros -->
                 
-                <div class="cerrar_busqueda" ><span>Cerrar búsqueda</span></div>    
             </div>
             
         </nav> 
