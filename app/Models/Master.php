@@ -220,31 +220,31 @@ class Master {
         $categorias = false;
         $valoraciones = false;
 
-        foreach($filtrar as $i => $lista_filtros){
-            if(is_string($lista_filtros)){
-                $texto = $lista_filtros;
-            }else{
-                if($lista_filtros[0] == 1){
-                    //es ciudad
-                    $ciudades = array();
-                    foreach($lista_filtros as $j => $filtro){
-                        if($j != 0) array_push($ciudades, $filtro);
-                    }
-                }elseif($lista_filtros[0] == 2){
-                    //es ciudad
-                    $categorias = array();
-                    foreach($lista_filtros as $j => $filtro){
-                        if($j != 0) array_push($categorias, $filtro);
-                    }
-                }elseif($lista_filtros[0] == 3){
-                    //es ciudad
-                    $valoraciones = array();
-                    foreach($lista_filtros as $j => $filtro){
-                        if($j != 0) array_push($valoraciones, $filtro);
-                    }
-                }
-            }
-        }
+        // foreach($filtrar as $i => $lista_filtros){
+        //     if(is_string($lista_filtros)){
+        //         $texto = $lista_filtros;
+        //     }else{
+        //         if($lista_filtros[0] == 1){
+        //             //es ciudad
+        //             $ciudades = array();
+        //             foreach($lista_filtros as $j => $filtro){
+        //                 if($j != 0) array_push($ciudades, $filtro);
+        //             }
+        //         }elseif($lista_filtros[0] == 2){
+        //             //es ciudad
+        //             $categorias = array();
+        //             foreach($lista_filtros as $j => $filtro){
+        //                 if($j != 0) array_push($categorias, $filtro);
+        //             }
+        //         }elseif($lista_filtros[0] == 3){
+        //             //es ciudad
+        //             $valoraciones = array();
+        //             foreach($lista_filtros as $j => $filtro){
+        //                 if($j != 0) array_push($valoraciones, $filtro);
+        //             }
+        //         }
+        //     }
+        // }
 
         $resultado_busqueda = $this -> getListaNegocios();
         
