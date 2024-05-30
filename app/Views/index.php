@@ -21,17 +21,50 @@
 
                     <div class="filtros">
                         <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
-                        <button class="opciones_filtro"></button>
+                        <button class="opciones_filtro">Madrid</button>
+                        <button class="opciones_filtro">Soria</button>
+                        <button class="opciones_filtro">Barcelona</button>
+                        <button class="opciones_filtro">Valencia</button>
                     </div>
 
                     <div class="filtros">
-                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
-                        <button class="opciones_filtro"></button>
+                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Categoria</div>
+                        <button class="opciones_filtro">Restaurantes</button>
+                        <button class="opciones_filtro">Peluquerías</button>
+                        <button class="opciones_filtro">Cafeterías</button>
+                        <button class="opciones_filtro">Talleres</button>
+                        <button class="opciones_filtro">Perfumerías</button>
+                        <button class="opciones_filtro">Psicología</button>
+                        <button class="opciones_filtro">Moda</button>
                     </div>
 
                     <div class="filtros">
-                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
-                        <button class="opciones_filtro"></button>
+                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Valoración</div>
+                        <button class="opciones_filtro">
+                            <i class="fas fa-check check_filtro"></i>
+                        </button>
+                        <button class="opciones_filtro">
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                        </button>
+                        <button class="opciones_filtro">
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                        </button>
+                        <button class="opciones_filtro">
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                        </button>
+                        <button class="opciones_filtro">
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                            <i class="fas fa-check check_filtro"></i>
+                    </button>
                     </div>
 
                 </div>

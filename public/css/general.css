@@ -512,3 +512,8 @@ li{
     background-color: #333;
     color:white;
 }
+
+/* icono check filtro */
+.check_filtro{
+    font-size: 15px;
+}
