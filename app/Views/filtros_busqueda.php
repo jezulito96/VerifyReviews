@@ -4,7 +4,7 @@
 if(isset($resultado_busqueda)){
     echo '<div class="container_busquedas">';
         foreach($resultado_busqueda as $i => $negocio){
-            echo '<div class="container_resultado">';
+            echo '<a class="container_resultado" href=https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '">';
 
                 echo '<div class="titulo_resultado">';
 
@@ -20,7 +20,7 @@ if(isset($resultado_busqueda)){
 
                 echo '</div>';
 
-            echo "</div>";
+            echo "</a>";
         }
     echo "</div>";
 }elseif(isset($error)){
