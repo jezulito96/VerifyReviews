@@ -100,11 +100,14 @@
 
                 $('#buscar-icono').click(function() {
                     $("#cerrar_busqueda").toggle();
-                    var query = $('#buscar').val();
+                    var texto = $('#buscar').val();
+                    if(texto == ""){
+                        texto = false;
+                    }
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
                         type: 'POST',
-                        data: { texto: query , filtros: JSON.stringify(info_filtros) },
+                        data: { texto: texto , filtros: JSON.stringify(info_filtros) },
                         success: function(response) {
                             $('.resultados_busqueda').html(response).show();
                         },
