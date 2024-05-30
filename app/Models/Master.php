@@ -283,10 +283,10 @@ class Master {
             }
         }
 
-        if($texto == false && $filtrar == false){
-            return false;
-        }else{
+        if(sizeof($resultado_busqueda) > 0){
             return $resultado_busqueda;
+        }else{
+            return false;
         }
         
     }
