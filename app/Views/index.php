@@ -108,6 +108,7 @@
                         data: { texto: query , filtros: JSON.stringify(info_filtros) },
                         success: function(response) {
                             $('.resultados_busqueda').html(response).show();
+                            info_filtros = [];
                         },
                         error: function(xhr, status, error) {
                             console.error('Error en la búsqueda:', error);
