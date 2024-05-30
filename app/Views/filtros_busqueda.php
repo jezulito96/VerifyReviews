@@ -2,11 +2,12 @@
 <?php
 
 
-if(isset($hola)) {
-    echo $hola;
+if(isset($resultado_busqueda)){
+    print_r($resultado_busqueda);
+}elseif(isset($error)){
+    echo $error;
 }
 
-if(isset($filtros)) print_r($filtros);
 
 
 

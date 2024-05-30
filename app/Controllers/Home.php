@@ -905,13 +905,62 @@ class Home extends BaseController{
     }
 
     public function filtro(){
-        $hola =  $this -> request -> getPost('texto');
+        $master = master::obtenerInstancia();
+        $texto = false;
+        $ciudades = false;
+        $categorias = false;
+        $valoraciones = false;
+        $se_filtra = false;
 
-        if(isset($_POST['filtros'])){
-            $maleta_filtros['filtros'] = json_decode($_POST['filtros']);
+        if(isset($_POST['filtros']) && !empty($_POST['filtros'])){
+            $se_filtra = true;
+            $filtros = json_decode($_POST['filtros']);
+            foreach($filtros as $i => $filtro){
+
+                $array_filtro = explode("_",$filtro);
+
+                if(intval($array_filtro[0]) == 1){
+                    $ciudades = array();
+                    $ciudades[0] = 1;
+                    array_push($ciudades, $array_filtro[1]);
+                }elseif(intval($array_filtro[0]) == 2){
+                    $categorias = array();
+                    $categorias[0] = 2;
+                    array_push($categorias, $array_filtro[1]);
+                }elseif(intval($array_filtro[0]) == 3){
+                    $valoraciones = array();
+                    $valoraciones[0] = 3;
+                    array_push($valoraciones, $array_filtro[1]);
+                }
+            }
         }
 
-        $maleta_filtros['hola'] = $hola;
+        if(isset($_POST['texto']) && !empty($_POST['texto'])){
+            $se_filtra = true;
+            
+            $texto =  $this -> request -> getPost('texto');
+        }
+
+        if($se_filtra){
+            $filtrar = array();
+            if($texto != true) array_push($filtrar, $texto);
+            if($ciudades != true) array_push($filtrar, $ciudades);
+            if($categorias != true) array_push($filtrar, $categorias);
+            if($valoraciones != true) array_push($filtrar, $valoraciones);
+
+            $resultado_busqueda = $master -> filtrar($filtrar);
+            if(empty($resultado_busqueda)){
+                $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
+            }else{
+                $maleta_filtros['resultado_busqueda'] = $resultado_busqueda;
+            }
+        }else{
+            $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
+        }
+
+
+        $maleta_filtros['filtros'] = 0 ;
+        $maleta_filtros['hola'] = 0 ;
         return view('filtros_busqueda', $maleta_filtros);
     }
 }
