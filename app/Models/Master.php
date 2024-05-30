@@ -255,7 +255,8 @@ class Master {
                     foreach($this -> getListaNegocios() as $i => $negocio){
                         
                         // calculo nota media y redondeo 
-                        $nota_media = $this -> getEstadisticas($negocio -> getCodNegocio());
+                        $estadisticas = $this -> getEstadisticas($negocio -> getCodNegocio());
+                        $nota_media = $estadisticas['nota_media'];
                         if(!is_int($nota_media)) $nota_media = round($nota_media);
                         foreach($lista_filtros as $j => $filtro){
                             if(intval($filtro) == $nota_media){
