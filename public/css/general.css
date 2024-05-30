@@ -542,6 +542,7 @@ li{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    columns: 2;
 }
 
 .titulo_resultado{
