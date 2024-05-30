@@ -523,3 +523,38 @@ li{
 .check_filtro{
     font-size: 15px;
 }
+
+/* resultados de los filtros */
+.container_busquedas{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.container_resultado{
+    width:30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.titulo_resultado{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto_resultado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

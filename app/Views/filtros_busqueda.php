@@ -3,10 +3,27 @@
 
 echo "llega a filtros";
 if(isset($resultado_busqueda)){
-    foreach($resultado_busqueda as $i => $negocio){
-        echo "<br>" . $negocio -> getNombre() . "<br>";
-    }
+    echo '<div class="container_busquedas">';
+        foreach($resultado_busqueda as $i => $negocio){
+            echo '<div class="container_resultado">';
 
+                echo '<div class="titulo_resultado">';
+
+                    echo "<h4>" . $negocio -> getNombre() . "</h4>";
+
+                echo '</div>';
+
+                echo '<div class="foto_resultado">';
+                
+                    $foto_principal = $negocio -> getFotoPrincipal();
+                    $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
+                    echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
+
+                echo '</div>';
+
+            echo "</div>";
+        }
+    echo "</div>";
 }elseif(isset($error)){
     echo $error;
 }
