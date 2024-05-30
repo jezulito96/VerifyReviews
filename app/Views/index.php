@@ -24,6 +24,16 @@
                         <button class="opciones_filtro"></button>
                     </div>
 
+                    <div class="filtros">
+                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
+                        <button class="opciones_filtro"></button>
+                    </div>
+
+                    <div class="filtros">
+                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
+                        <button class="opciones_filtro"></button>
+                    </div>
+
                 </div>
                 
 
