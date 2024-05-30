@@ -1,7 +1,6 @@
 
 <?php
 
-echo "llega a filtros";
 if(isset($resultado_busqueda)){
     echo '<div class="container_busquedas">';
         foreach($resultado_busqueda as $i => $negocio){
