@@ -3,7 +3,10 @@
 
 echo "llega a filtros";
 if(isset($resultado_busqueda)){
-    print_r($resultado_busqueda);
+    foreach($resultado_busqueda as $i => $negocio){
+        echo $negocio -> getNombre();
+    }
+
 }elseif(isset($error)){
     echo $error;
 }
