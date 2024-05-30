@@ -222,59 +222,59 @@ class Master {
         $resultado_busqueda = array();
 
         if($filtrar != false){
-            foreach($filtrar as $i => $lista_filtros){
-                // var_dump($lista_filtros);
-                
-                if($lista_filtros[0] == 1){
-                    //es ciudad
-                    echo "<br>entra en listafiltro[0] = 1";
-                    foreach($lista_filtros as $j => $filtro){
-                        foreach($this -> getListaNegocios() as $i => $negocio){
+            foreach($this -> getListaNegocios() as $i => $negocio){
 
-                            if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
-                                if(!in_array($negocio, $resultado_busqueda)){
-                                    array_push($resultado_busqueda, $negocio);
+                foreach($filtrar as $i => $filtro){
+                    $lista_filtros = explode("_",$filtro);
+                    if($lista_filtros[0] == 1){
+                        //es ciudad
+                        echo "<br>entra en listafiltro[0] = 1";
+                        // foreach($lista_filtros as $j => $filtro){
+                            // foreach($this -> getListaNegocios() as $i => $negocio){
+
+                                if(preg_match("/\b$lista_filtros[1]\b/i", $negocio -> getCiudad()) ){
+                                    if(!in_array($negocio, $resultado_busqueda)){
+                                        array_push($resultado_busqueda, $negocio);
+                                    }
+                                    
                                 }
-                                
-                            }
-                        }
-                    }
-                    
-                }elseif($lista_filtros[0] == 2){
-                    //es categoria
-                    foreach($lista_filtros as $j => $filtro){
-                        foreach($this -> getListaNegocios() as $i => $negocio){
-    
-                            if(intval($filtro) == $negocio -> getCodCategoria()){
-        
-                                if(!in_array($negocio, $resultado_busqueda)){
-                                    array_push($resultado_busqueda, $negocio);
+                        //     }
+                        // }
+                        
+                    }elseif($lista_filtros[0] == 2){
+                        //es categoria
+                        // foreach($lista_filtros as $j => $filtro){
+                        //     foreach($this -> getListaNegocios() as $i => $negocio){
+
+                                if(intval($lista_filtros[1]) == $negocio -> getCodCategoria()){
+            
+                                    if(!in_array($negocio, $resultado_busqueda)){
+                                        array_push($resultado_busqueda, $negocio);
+                                    }
                                 }
-                            }
-                        }
-                        
-                    }
-                }elseif($lista_filtros[0] == 3){
-                    //es valoracion
-                    foreach($this -> getListaNegocios() as $i => $negocio){
-                        
-                        // calculo nota media y redondeo 
-                        $estadisticas = $this -> getEstadisticas($negocio -> getCodNegocio());
-                        $nota_media = $estadisticas['nota_media'];
-                        if(!is_int($nota_media)) $nota_media = round($nota_media);
-                        foreach($lista_filtros as $j => $filtro){
-                            if(intval($filtro) == $nota_media){
-                                
-                                if(!in_array($negocio, $resultado_busqueda)){
-                                    array_push($resultado_busqueda, $negocio);
+                        //     }
+                        // }
+                    }elseif($lista_filtros[0] == 3){
+                        //es valoracion
+                        // foreach($this -> getListaNegocios() as $i => $negocio){
+                            
+                            // calculo nota media y redondeo 
+                            $estadisticas = $this -> getEstadisticas($negocio -> getCodNegocio());
+                            $nota_media = $estadisticas['nota_media'];
+                            if(!is_int($nota_media)) $nota_media = round($nota_media);
+                            // foreach($lista_filtros as $j => $filtro){
+                                if(intval($lista_filtros[1]) == $nota_media){
+                                    
+                                    if(!in_array($negocio, $resultado_busqueda)){
+                                        array_push($resultado_busqueda, $negocio);
+                                    }
                                 }
-                            }
-                        }
-                        
+                            // }
+                            
+                        // }
                     }
                 }
             }
-           
 
         }
         
