@@ -104,9 +104,6 @@
                     if(texto == ""){
                         texto = "false";
                     }
-                    if(info_filtros.length == 0){
-                        info_filtros.push(false);
-                    }
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
                         type: 'POST',
