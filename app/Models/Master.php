@@ -227,29 +227,30 @@ class Master {
                 
                 if($lista_filtros[0] == 1){
                     //es ciudad
-                    foreach($this -> getListaNegocios() as $i => $negocio){
-    
-                        foreach($lista_filtros as $j => $filtro){
+                    foreach($lista_filtros as $j => $filtro){
+                        foreach($this -> getListaNegocios() as $i => $negocio){
+                            echo "<br>mira negocio";
                             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
-        
+                                echo "<br>coincide";
                                 array_push($resultado_busqueda, $negocio);
                             }
                         }
-                        
                     }
-                }elseif($lista_filtros[0] == 2){
-                    //es categoria
-                    foreach($this -> getListaNegocios() as $i => $negocio){
-    
-                        foreach($lista_filtros as $j => $filtro){
-                            if(intval($filtro) == $negocio -> getCodCategoria()){
-        
-                                array_push($resultado_busqueda, $negocio);
-                            }
-                        }
-                        
-                    }
+                    echo "<br>entra en listafiltro[0] = 1";
                 }
+                // elseif($lista_filtros[0] == 2){
+                //     //es categoria
+                //     foreach($this -> getListaNegocios() as $i => $negocio){
+    
+                //         foreach($lista_filtros as $j => $filtro){
+                //             if(intval($filtro) == $negocio -> getCodCategoria()){
+        
+                //                 array_push($resultado_busqueda, $negocio);
+                //             }
+                //         }
+                        
+                //     }
+                // }
                 // elseif($lista_filtros[0] == 3){
                 //     //es valoracion
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
@@ -264,9 +265,9 @@ class Master {
                 //     }
                 // }
             }
-            // echo "<pre>";
-            // print_r($filtrar);
-            // echo "</pre>";
+            echo "<pre>";
+            print_r($filtrar);
+            echo "</pre>";
 
         }
         
