@@ -950,7 +950,7 @@ class Home extends BaseController{
             $filtrar = false;
         }
 
-        if(isset($_POST['texto']) && !empty($_POST['texto'])){
+        if(isset($_POST['texto']) && !empty($_POST['texto']) && $_POST['texto'] != ""){
             $se_filtra = true;
             $texto =  $this -> request -> getPost('texto');
         }else{
