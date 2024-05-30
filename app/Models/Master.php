@@ -230,27 +230,27 @@ class Master {
                     echo "<br>entra en listafiltro[0] = 1";
                     foreach($lista_filtros as $j => $filtro){
                         foreach($this -> getListaNegocios() as $i => $negocio){
+
                             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
-                                echo "<br>coincide";
+
                                 array_push($resultado_busqueda, $negocio);
                             }
                         }
                     }
                     
-                }
-                // elseif($lista_filtros[0] == 2){
-                //     //es categoria
-                //     foreach($this -> getListaNegocios() as $i => $negocio){
+                }elseif($lista_filtros[0] == 2){
+                    //es categoria
+                    foreach($lista_filtros as $j => $filtro){
+                        foreach($this -> getListaNegocios() as $i => $negocio){
     
-                //         foreach($lista_filtros as $j => $filtro){
-                //             if(intval($filtro) == $negocio -> getCodCategoria()){
+                            if(intval($filtro) == $negocio -> getCodCategoria()){
         
-                //                 array_push($resultado_busqueda, $negocio);
-                //             }
-                //         }
+                                array_push($resultado_busqueda, $negocio);
+                            }
+                        }
                         
-                //     }
-                // }
+                    }
+                }
                 // elseif($lista_filtros[0] == 3){
                 //     //es valoracion
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
@@ -282,9 +282,6 @@ class Master {
         }
        
         if(sizeof($resultado_busqueda) > 0){
-            // echo "<pre>";
-            // print_r($resultado_busqueda);
-            // echo "</pre>";
             return $resultado_busqueda;
         }else{
             return false;
