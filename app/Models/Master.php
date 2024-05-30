@@ -246,12 +246,12 @@ class Master {
         //     }
         // }
 
-        $resultado_busqueda = $this -> getListaNegocios();
+        $resultado_busqueda = array();
         
         if($texto != false){
-            foreach($resultado_busqueda as $i => $negocio){
+            foreach($this -> getListaNegocios() as $i => $negocio){
                 if(strpos($negocio -> getNombre(), $texto) == false || strpos($negocio -> getNombreCategoria(), $texto) == false){
-                    unset($resultado_busqueda[$i]);
+                    array_push($resultado_busqueda, $negocio);
                 }
             }
         }
