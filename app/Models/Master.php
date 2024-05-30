@@ -223,7 +223,15 @@ class Master {
 
         if($filtrar != false){
             foreach($filtrar as $i => $lista_filtros){
-                echo $lista_filtros[0];
+                
+                foreach($lista_filtros as $j => $filtro){
+                    echo "filtro ". $filtro . "<br>";
+                    echo "j ". $j . "<br>";
+                    // if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
+
+                    //     array_push($resultado_busqueda, $negocio);
+                    // }
+                }
                 // if($lista_filtros[0] == 1){
                 //     //es ciudad
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
