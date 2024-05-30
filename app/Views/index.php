@@ -72,9 +72,7 @@
                     });
                 });
             });
-            $('.cerrar_busqueda').on('click', function() {
-                $('.resultados_busqueda').slideUp();
-            });
+            
         </script>
         
         <main id="main" class="main">
