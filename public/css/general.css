@@ -526,9 +526,8 @@ li{
 
 /* resultados de los filtros */
 .container_busquedas{
-    width: 90%;
+    width: 95%;
     height: auto;
-    margin-left: 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -544,11 +543,14 @@ li{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 15px;
 }
 
 .titulo_resultado{
     width: 100%;
-    height: 20px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
