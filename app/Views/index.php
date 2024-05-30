@@ -45,8 +45,9 @@
 
                 <!-- se mostraran los resultados de la busqueda y los filtros -->
                 
+                <div class="cerrar_busqueda" ><span>Cerrar búsqueda</span></div>    
             </div>
-            <div class="cerrar_busqueda" style="display:none;"><span>Cerrar búsqueda</span></div>
+            
         </nav> 
             <?php //if(isset($filtros_busqueda)) echo $filtros_busqueda; ?>
 
