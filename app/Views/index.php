@@ -12,7 +12,7 @@
         <nav>
             <div class="filtros_container">
                 <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
-                <input type="text" placeholder="Buscar" id="buscar">
+                <input type="text" placeholder="Buscar" id="buscar" value="">
                 <i class="fas fa-search" id="buscar-icono"></i>
             </div>
             <div id="container_filtros" style="display:none;">  
