@@ -915,6 +915,7 @@ class Home extends BaseController{
         if(isset($_POST['filtros']) && !empty($_POST['filtros'])){
             $se_filtra = true;
             $filtros = json_decode($_POST['filtros']);
+            unset($filtros[0]);
             foreach($filtros as $i => $filtro){
 
                 $array_filtro = explode("_",$filtro);
@@ -937,18 +938,17 @@ class Home extends BaseController{
 
         if(isset($_POST['texto']) && !empty($_POST['texto'])){
             $se_filtra = true;
-            
             $texto =  $this -> request -> getPost('texto');
         }
 
         if($se_filtra){
+
             $filtrar = array();
-            if($texto != true) array_push($filtrar, $texto);
             if($ciudades != true) array_push($filtrar, $ciudades);
             if($categorias != true) array_push($filtrar, $categorias);
             if($valoraciones != true) array_push($filtrar, $valoraciones);
 
-            $resultado_busqueda = $master -> filtrar($filtrar);
+            $resultado_busqueda = $master -> filtrar($texto,$filtrar);
             if(empty($resultado_busqueda)){
                 $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
             }else{

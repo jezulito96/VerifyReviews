@@ -215,8 +215,7 @@ class Master {
         return $lista_estadisticas;
     }
 
-    public function filtrar($filtrar){
-        $texto = false;
+    public function filtrar($texto = false,  $filtrar){
         $ciudades = false;
         $categorias = false;
         $valoraciones = false;
