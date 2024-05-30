@@ -535,10 +535,11 @@ li{
     flex-wrap: wrap;
     flex-direction: row;
     columns: 2;
+    padding-top: 20px;
 }
 
 .container_resultado{
-    width:30%;
+    width:35%;
     height: auto;
     display: flex;
     flex-direction: column;
