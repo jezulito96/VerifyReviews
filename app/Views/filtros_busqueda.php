@@ -38,6 +38,7 @@ if(isset($resultado_busqueda)){
         
     });
     $('.cerrar_busqueda').click(function() {
+        $(".container_filtros").slideUp();
         $('.resultados_busqueda').slideUp();
     });
 </script>
