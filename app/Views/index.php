@@ -46,7 +46,7 @@
                 <!-- se mostraran los resultados de la busqueda y los filtros -->
                 
             </div>
-            <div class="cerrar_busqueda"><span>Cerrar búsqueda</span></div>
+            <div class="cerrar_busqueda" style="display:none;"><span>Cerrar búsqueda</span></div>
         </nav> 
             <?php //if(isset($filtros_busqueda)) echo $filtros_busqueda; ?>
 
@@ -57,6 +57,7 @@
                 });
 
                 $('#buscar-icono').click(function() {
+                    $("#cerrar_busqueda").toggle();
                     var query = $('#buscar').val();
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
