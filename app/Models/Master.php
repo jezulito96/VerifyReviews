@@ -265,9 +265,7 @@ class Master {
                 //     }
                 // }
             }
-            echo "<pre>";
-            print_r($resultado_busqueda);
-            echo "</pre>";
+           
 
         }
         
@@ -282,7 +280,9 @@ class Master {
                 }
             }
         }
-
+        echo "<pre>";
+        print_r($resultado_busqueda);
+        echo "</pre>";
         if(sizeof($resultado_busqueda) > 0){
             return $resultado_busqueda;
         }else{
