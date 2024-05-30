@@ -905,66 +905,75 @@ class Home extends BaseController{
     }
 
     public function filtro(){
-        echo "entra filtro";
+        echo "entra filtro()";
         $master = master::obtenerInstancia();
-        $ciudades = false;
-        $categorias = false;
-        $valoraciones = false;
+        $filtrar = array();
         $se_filtra = false;
 
         if(isset($_POST['filtros']) && !empty($_POST['filtros'])){
             $se_filtra = true;
             $filtros = json_decode($_POST['filtros']);
-            unset($filtros[0]);
+            $ciudades_array = array();
+            $ciudades_array[0] = 1;
+            $categorias_array = array();
+            $categorias_array[0] = 2;
+            $valoraciones_array = array();
+            $valoraciones_array[0] = 3;
+
+            $ciudades = false;
+            $categorias = false;
+            $valoraciones = false;
             foreach($filtros as $i => $filtro){
 
                 $array_filtro = explode("_",$filtro);
 
                 if(intval($array_filtro[0]) == 1){
-                    $ciudades = array();
-                    $ciudades[0] = 1;
-                    array_push($ciudades, $array_filtro[1]);
+                    array_push($ciudades_array, $array_filtro[1]);
+                    $ciudades = true;
+
                 }elseif(intval($array_filtro[0]) == 2){
-                    $categorias = array();
-                    $categorias[0] = 2;
-                    array_push($categorias, $array_filtro[1]);
+                    array_push($categorias_array, $array_filtro[1]);
+                    $categorias = true;
+
+
                 }elseif(intval($array_filtro[0]) == 3){
-                    $valoraciones = array();
-                    $valoraciones[0] = 3;
-                    array_push($valoraciones, $array_filtro[1]);
+                    array_push($valoraciones_array, $array_filtro[1]);
+                    $valoraciones = true;
+
                 }
             }
+            
+            if($ciudades == true ) array_push($filtrar, $ciudades_array);
+            if($categorias == true ) array_push($filtrar, $categorias_array);
+            if($valoraciones == true ) array_push($filtrar, $valoraciones_array);
+        }else{
+            $filtrar = false;
         }
 
         if(isset($_POST['texto']) && !empty($_POST['texto'])){
             $se_filtra = true;
             $texto =  $this -> request -> getPost('texto');
-            $resultado_busqueda = $master -> filtrar($texto,false);
         }else{
             $texto = false;
         }
 
-        // if($se_filtra){
+        if($se_filtra){
+            if($ciudades != true) array_push($filtrar, $ciudades);
+            if($categorias != true) array_push($filtrar, $categorias);
+            if($valoraciones != true) array_push($filtrar, $valoraciones);
 
-        //     $filtrar = array();
-        //     if($ciudades != true) array_push($filtrar, $ciudades);
-        //     if($categorias != true) array_push($filtrar, $categorias);
-        //     if($valoraciones != true) array_push($filtrar, $valoraciones);
-
+            $resultado_busqueda = $master -> filtrar($texto,$filtrar);
             
-        //     echo "devuelve";
             if(empty($resultado_busqueda)){
                 $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
             }else{
                 $maleta_filtros['resultado_busqueda'] = $resultado_busqueda;
             }
-        // }else{
-        //     $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
-        // }
+        }else{
+            $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
+        }
 
 
-        $maleta_filtros['filtros'] = 0 ;
-        $maleta_filtros['hola'] = 0 ;
         return view('filtros_busqueda', $maleta_filtros);
     }
 }
