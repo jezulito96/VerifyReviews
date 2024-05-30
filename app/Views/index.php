@@ -85,7 +85,7 @@
 
                 $('.opciones_filtro').click(function() {
                     const valor = $(this).val();
-                    $(this).toggle("filtro_seleccionado");
+                    $(this).toggleClass("filtro_seleccionado");
                     const index = info_filtros.indexOf(valor);
                     if (index === -1) {
                         info_filtros.push(valor);
