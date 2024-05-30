@@ -85,7 +85,7 @@
 
                 $('.opciones_filtro').click(function() {
                     const valor = $(this).val();
-
+                    $(this).toggle("filtro_seleccionado");
                     const index = info_filtros.indexOf(valor);
                     if (index === -1) {
                         info_filtros.push(valor);
@@ -108,7 +108,6 @@
                         data: { texto: query , filtros: JSON.stringify(info_filtros) },
                         success: function(response) {
                             $('.resultados_busqueda').html(response).show();
-                            info_filtros = [];
                         },
                         error: function(xhr, status, error) {
                             console.error('Error en la búsqueda:', error);
