@@ -907,7 +907,6 @@ class Home extends BaseController{
     public function filtro(){
         echo "entra filtro";
         $master = master::obtenerInstancia();
-        $texto = false;
         $ciudades = false;
         $categorias = false;
         $valoraciones = false;
