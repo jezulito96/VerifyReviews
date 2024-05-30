@@ -102,7 +102,7 @@
                     $("#cerrar_busqueda").toggle();
                     var texto = $('#buscar').val();
                     if(texto == ""){
-                        texto = false;
+                        texto = "false";
                     }
                     $.ajax({
                         url: 'https://verifyreviews.es/verifyreviews/filtro',
