@@ -913,7 +913,7 @@ class Home extends BaseController{
         if(isset($_POST['filtros']) ){
             $filtros = json_decode($_POST['filtros']);
             if(sizeof($filtros) > 0){
-                // echo "entra en filtro() -> filtros array";
+                echo "<br>entra en filtro() -> filtros array<br>";
                 $se_filtra = true;
                 $ciudades_array = array();
                 $ciudades_array[0] = 1;
@@ -955,7 +955,7 @@ class Home extends BaseController{
         }
 
         if(isset($_POST['texto']) && $_POST['texto'] != "false"){
-            echo "entra en filtro() -> texto";
+            echo "<br>entra en filtro() -> texto<br>";
             $se_filtra = true;
             $texto =  $this -> request -> getPost('texto');
         }else{
@@ -963,10 +963,10 @@ class Home extends BaseController{
         }
 
         if($se_filtra){
-            echo "cumple la condicion de se_filtra";
-            if($ciudades != true) array_push($filtrar, $ciudades);
-            if($categorias != true) array_push($filtrar, $categorias);
-            if($valoraciones != true) array_push($filtrar, $valoraciones);
+            echo "<br>cumple la condicion de se_filtra<br>";
+            // if($ciudades != true) array_push($filtrar, $ciudades);
+            // if($categorias != true) array_push($filtrar, $categorias);
+            // if($valoraciones != true) array_push($filtrar, $valoraciones);
 
             $resultado_busqueda = $master -> filtrar($texto,$filtrar);
             
