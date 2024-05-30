@@ -17,7 +17,11 @@ if(isset($resultado_busqueda)){
 ?>
 <div class="cerrar_busqueda" ><span>Cerrar búsqueda</span></div>    
 <script>
-    $('.cerrar_busqueda').on('click', function() {
+     $("#btn_filtros").click(function(){
+        $('.resultados_busqueda').slideUp();
+        
+    });
+    $('.cerrar_busqueda').click(function() {
         $('.resultados_busqueda').slideUp();
     });
 </script>
