@@ -4,7 +4,7 @@
 echo "llega a filtros";
 if(isset($resultado_busqueda)){
     foreach($resultado_busqueda as $i => $negocio){
-        echo $negocio -> getNombre();
+        echo "<br>" . $negocio -> getNombre() . "<br>";
     }
 
 }elseif(isset($error)){
