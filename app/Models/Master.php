@@ -238,18 +238,18 @@ class Master {
                         
                     }
                 }elseif($lista_filtros[0] == 2){
-                //     //es categoria
-                //     foreach($this -> getListaNegocios() as $i => $negocio){
+                    //es categoria
+                    foreach($this -> getListaNegocios() as $i => $negocio){
     
-                //         foreach($lista_filtros as $j => $filtro){
-                //             if(intval($filtro) == $negocio -> getCodCategoria()){
+                        foreach($lista_filtros as $j => $filtro){
+                            if(intval($filtro) == $negocio -> getCodCategoria()){
         
-                //                 array_push($resultado_busqueda, $negocio);
-                //             }
-                //         }
+                                array_push($resultado_busqueda, $negocio);
+                            }
+                        }
                         
-                //     }
-                // }
+                    }
+                }
                 // elseif($lista_filtros[0] == 3){
                 //     //es valoracion
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
