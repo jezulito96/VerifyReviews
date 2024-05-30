@@ -229,7 +229,7 @@ class Master {
                     foreach($this -> getListaNegocios() as $i => $negocio){
     
                         foreach($lista_filtros as $j => $filtro){
-                            if(reg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
+                            if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
         
                                 array_push($resultado_busqueda, $negocio);
                             }

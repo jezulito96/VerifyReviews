@@ -905,7 +905,7 @@ class Home extends BaseController{
     }
 
     public function filtro(){
-        echo "entra filtro()";
+        // echo "entra filtro()";
         $master = master::obtenerInstancia();
         $filtrar = array();
         $se_filtra = false;
@@ -913,7 +913,7 @@ class Home extends BaseController{
         if(isset($_POST['filtros']) ){
             $filtros = json_decode($_POST['filtros']);
             if(sizeof($filtros) > 0){
-                echo "entra en filtro() -> filtros array";
+                // echo "entra en filtro() -> filtros array";
                 $se_filtra = true;
                 $ciudades_array = array();
                 $ciudades_array[0] = 1;
