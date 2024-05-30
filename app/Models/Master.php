@@ -266,7 +266,7 @@ class Master {
                 // }
             }
             echo "<pre>";
-            print_r($filtrar);
+            print_r($resultado_busqueda);
             echo "</pre>";
 
         }
