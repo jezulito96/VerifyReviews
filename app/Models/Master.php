@@ -232,8 +232,10 @@ class Master {
                         foreach($this -> getListaNegocios() as $i => $negocio){
 
                             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
-
-                                array_push($resultado_busqueda, $negocio);
+                                if(!in_array($negocio, $resultado_busqueda)){
+                                    array_push($resultado_busqueda, $negocio);
+                                }
+                                
                             }
                         }
                     }
@@ -245,7 +247,9 @@ class Master {
     
                             if(intval($filtro) == $negocio -> getCodCategoria()){
         
-                                array_push($resultado_busqueda, $negocio);
+                                if(!in_array($negocio, $resultado_busqueda)){
+                                    array_push($resultado_busqueda, $negocio);
+                                }
                             }
                         }
                         
@@ -260,8 +264,10 @@ class Master {
                         if(!is_int($nota_media)) $nota_media = round($nota_media);
                         foreach($lista_filtros as $j => $filtro){
                             if(intval($filtro) == $nota_media){
-        
-                                array_push($resultado_busqueda, $negocio);
+                                
+                                if(!in_array($negocio, $resultado_busqueda)){
+                                    array_push($resultado_busqueda, $negocio);
+                                }
                             }
                         }
                         
@@ -279,7 +285,9 @@ class Master {
                     preg_match("/\b$texto\b/i", $negocio -> getNombreCategoria()) || 
                     preg_match("/\b$texto\b/i", $negocio -> getCiudad()) ){
 
-                    array_push($resultado_busqueda, $negocio);
+                        if(!in_array($negocio, $resultado_busqueda)){
+                            array_push($resultado_busqueda, $negocio);
+                        }
                 }
             }
         }
