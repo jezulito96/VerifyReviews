@@ -222,47 +222,47 @@ class Master {
         $resultado_busqueda = array();
 
         if($filtrar != false){
-            // foreach($filtrar as $i => $lista_filtros){
-           
-            //     if($lista_filtros[0] == 1){
-            //         //es ciudad
-            //         foreach($this -> getListaNegocios() as $i => $negocio){
+            foreach($filtrar as $i => $lista_filtros){
+                print_r($lista_filtros[0]);
+                // if($lista_filtros[0] == 1){
+                //     //es ciudad
+                //     foreach($this -> getListaNegocios() as $i => $negocio){
     
-            //             foreach($lista_filtros as $j => $filtro){
-            //                 if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
+                //         foreach($lista_filtros as $j => $filtro){
+                //             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
         
-            //                     array_push($resultado_busqueda, $negocio);
-            //                 }
-            //             }
+                //                 array_push($resultado_busqueda, $negocio);
+                //             }
+                //         }
                         
-            //         }
-            //     }elseif($lista_filtros[0] == 2){
-            //         //es categoria
-            //         foreach($this -> getListaNegocios() as $i => $negocio){
+                //     }
+                // }elseif($lista_filtros[0] == 2){
+                //     //es categoria
+                //     foreach($this -> getListaNegocios() as $i => $negocio){
     
-            //             foreach($lista_filtros as $j => $filtro){
-            //                 if(intval($filtro) == $negocio -> getCodCategoria()){
+                //         foreach($lista_filtros as $j => $filtro){
+                //             if(intval($filtro) == $negocio -> getCodCategoria()){
         
-            //                     array_push($resultado_busqueda, $negocio);
-            //                 }
-            //             }
+                //                 array_push($resultado_busqueda, $negocio);
+                //             }
+                //         }
                         
-            //         }
-            //     }
-            //     // elseif($lista_filtros[0] == 3){
-            //     //     //es valoracion
-            //     //     foreach($this -> getListaNegocios() as $i => $negocio){
+                //     }
+                // }
+                // elseif($lista_filtros[0] == 3){
+                //     //es valoracion
+                //     foreach($this -> getListaNegocios() as $i => $negocio){
     
-            //     //         foreach($lista_filtros as $j => $filtro){
-            //     //             if(intval($filtro) == $negocio -> getValoracion()){
+                //         foreach($lista_filtros as $j => $filtro){
+                //             if(intval($filtro) == $negocio -> getValoracion()){
         
-            //     //                 array_push($resultado_busqueda, $negocio);
-            //     //             }
-            //     //         }
+                //                 array_push($resultado_busqueda, $negocio);
+                //             }
+                //         }
                         
-            //     //     }
-            //     // }
-            // }
+                //     }
+                }
+            }
             echo "<pre>";
             print_r($filtrar);
             echo "</pre>";
