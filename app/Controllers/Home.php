@@ -939,27 +939,28 @@ class Home extends BaseController{
         if(isset($_POST['texto']) && !empty($_POST['texto'])){
             $se_filtra = true;
             $texto =  $this -> request -> getPost('texto');
+            $resultado_busqueda = $master -> filtrar($texto,false);
         }else{
             $texto = false;
         }
 
-        if($se_filtra){
+        // if($se_filtra){
 
-            $filtrar = array();
-            if($ciudades != true) array_push($filtrar, $ciudades);
-            if($categorias != true) array_push($filtrar, $categorias);
-            if($valoraciones != true) array_push($filtrar, $valoraciones);
+        //     $filtrar = array();
+        //     if($ciudades != true) array_push($filtrar, $ciudades);
+        //     if($categorias != true) array_push($filtrar, $categorias);
+        //     if($valoraciones != true) array_push($filtrar, $valoraciones);
 
-            $resultado_busqueda = $master -> filtrar($texto,$filtrar);
-            echo "devuelve";
+            
+        //     echo "devuelve";
             if(empty($resultado_busqueda)){
                 $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
             }else{
                 $maleta_filtros['resultado_busqueda'] = $resultado_busqueda;
             }
-        }else{
-            $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
-        }
+        // }else{
+        //     $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
+        // }
 
 
         $maleta_filtros['filtros'] = 0 ;
