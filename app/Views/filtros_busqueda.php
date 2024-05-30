@@ -1,7 +1,7 @@
 
 <?php
 
-
+echo "llega a filtros";
 if(isset($resultado_busqueda)){
     print_r($resultado_busqueda);
 }elseif(isset($error)){
