@@ -113,6 +113,7 @@
         .mapa {
             height: 300px;
             width: 300px;
+            z-index: 20;
         }
     </style>
 
