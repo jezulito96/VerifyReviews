@@ -905,6 +905,7 @@ class Home extends BaseController{
     }
 
     public function filtro(){
+        echo "entra filtro";
         $master = master::obtenerInstancia();
         $texto = false;
         $ciudades = false;
@@ -949,6 +950,7 @@ class Home extends BaseController{
             if($valoraciones != true) array_push($filtrar, $valoraciones);
 
             $resultado_busqueda = $master -> filtrar($texto,$filtrar);
+            echo "devuelve";
             if(empty($resultado_busqueda)){
                 $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
             }else{
