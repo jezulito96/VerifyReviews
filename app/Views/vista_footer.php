@@ -35,7 +35,7 @@
             <i class="fab fa-facebook-f iconos_redes"></i>
         </a>
         <a href="https://www.instagram.com" target="_blank">
-            <i class="fab fa-instagram iconosColor"></i>
+            <i class="fab fa-instagram iconosColor" style="color:white;></i>
         </a>
     </div>
     

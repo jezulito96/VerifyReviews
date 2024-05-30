@@ -443,7 +443,7 @@ li{
     z-index: 200;
 }
 .cerrar_busqueda{
-    position:absolute;
+    position:relative;
     bottom: 20px;
     left: 0px;
     width: 100%;
