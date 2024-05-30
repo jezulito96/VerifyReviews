@@ -451,7 +451,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 195;
+    margin-top:20px;    
 }
 .cerrar_busqueda span{
     font-size: 18px;
@@ -474,30 +474,41 @@ li{
     padding:10px;
     z-index: 200;
 }
-#lista-filtros {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.lista_filtros{
+    width: 100%;
+    height:400px;
+    padding: 10px;
+    box-sizing: border-box;
 }
-
-.filtro {
-    margin-bottom: 10px;
-}
-
-.filtro li {
+.filtros{
+    width: 100%;
+    height: 100px;
     display: flex;
+    flex-direction: row;
+}
+
+.nombre_filtro{
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
 }
 
-.filtro li i {
+.nombre_filtro > i {
     margin-right: 10px;
-    color: #007bff; /* Cambiar color del icono según preferencia */
 }
 
-.filtro li .valores {
-    margin-left: auto;
-    color: #999;
+.opciones_filtro{
+    border-radius: 10px;
+    width: auto;
+    padding: 3px;
+    height: 19px;
+    font-size: 15px;
+    background-color: #ccc;
+}
+
+.opciones_filtro:focus{
+    background-color: #333;
+    color:white;
 }

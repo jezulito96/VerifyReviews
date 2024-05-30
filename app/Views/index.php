@@ -17,27 +17,14 @@
             </div>
             <div id="container_filtros" style="display:none;">  
                
-            <div id="lista-filtros">
-                <ul class="filtro">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i> Ciudad:
-                        <span class="valores">España</span>
-                    </li>
-                </ul>
-                <ul class="filtro">
-                    <li>
-                        <i class="fas fa-utensils"></i> Categoría:
-                        <span class="valores">Restaurantes, Peluquerías, Cafeterías, Talleres, Perfumería, Psicología, Moda</span>
-                    </li>
-                </ul>
-                <ul class="filtro">
-                    <li>
-                        <i class="fas fa-star"></i> Valoración:
-                        <span class="valores">1, 2, 3, 4, 5</span>
-                    </li>
-                </ul>
-            </div>
-            </div>
+                <div class="lista_filtros">
+
+                    <div class="filtros">
+                        <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
+                        <button class="opciones_filtro"></button>
+                    </div>
+
+                </div>
                 
 
             </div>
