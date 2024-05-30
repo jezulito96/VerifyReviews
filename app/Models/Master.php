@@ -223,21 +223,21 @@ class Master {
 
         if($filtrar != false){
             foreach($filtrar as $i => $lista_filtros){
-                var_dump($lista_filtros);
+                // var_dump($lista_filtros);
                 
-                // if($lista_filtros[0] == 1){
-                //     //es ciudad
-                //     foreach($this -> getListaNegocios() as $i => $negocio){
+                if($lista_filtros[0] == 1){
+                    //es ciudad
+                    foreach($this -> getListaNegocios() as $i => $negocio){
     
-                //         foreach($lista_filtros as $j => $filtro){
-                //             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
+                        foreach($lista_filtros as $j => $filtro){
+                            if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
         
-                //                 array_push($resultado_busqueda, $negocio);
-                //             }
-                //         }
+                                array_push($resultado_busqueda, $negocio);
+                            }
+                        }
                         
-                //     }
-                // }elseif($lista_filtros[0] == 2){
+                    }
+                }elseif($lista_filtros[0] == 2){
                 //     //es categoria
                 //     foreach($this -> getListaNegocios() as $i => $negocio){
     
@@ -264,9 +264,9 @@ class Master {
                 //     }
                 // }
             }
-            echo "<pre>";
-            print_r($filtrar);
-            echo "</pre>";
+            // echo "<pre>";
+            // print_r($filtrar);
+            // echo "</pre>";
 
         }
         
