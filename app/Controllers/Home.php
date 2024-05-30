@@ -911,6 +911,7 @@ class Home extends BaseController{
         $se_filtra = false;
 
         if(isset($_POST['filtros']) && $_POST['filtros'][0] != false){
+            echo "entra en filtro() -> filtros array";
             $se_filtra = true;
             $filtros = json_decode($_POST['filtros']);
             $ciudades_array = array();
@@ -951,6 +952,7 @@ class Home extends BaseController{
         }
 
         if(isset($_POST['texto']) && $_POST['texto'] != "false"){
+            echo "entra en filtro() -> texto";
             $se_filtra = true;
             $texto =  $this -> request -> getPost('texto');
         }else{
@@ -958,6 +960,7 @@ class Home extends BaseController{
         }
 
         if($se_filtra){
+            echo "cumple la condicion de se_filtra";
             if($ciudades != true) array_push($filtrar, $ciudades);
             if($categorias != true) array_push($filtrar, $categorias);
             if($valoraciones != true) array_push($filtrar, $valoraciones);
