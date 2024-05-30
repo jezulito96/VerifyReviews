@@ -250,20 +250,22 @@ class Master {
                         }
                         
                     }
-                }
-                // elseif($lista_filtros[0] == 3){
-                //     //es valoracion
-                //     foreach($this -> getListaNegocios() as $i => $negocio){
-    
-                //         foreach($lista_filtros as $j => $filtro){
-                //             if(intval($filtro) == $negocio -> getValoracion()){
-        
-                //                 array_push($resultado_busqueda, $negocio);
-                //             }
-                //         }
+                }elseif($lista_filtros[0] == 3){
+                    //es valoracion
+                    foreach($this -> getListaNegocios() as $i => $negocio){
                         
-                //     }
-                // }
+                        // calculo nota media y redondeo 
+                        $nota_media = $this -> getEstadisticas($negocio -> getCodNegocio());
+                        if(!is_int($nota_media)) $nota_media = round($nota_media);
+                        foreach($lista_filtros as $j => $filtro){
+                            if(intval($filtro) == $nota_media){
+        
+                                array_push($resultado_busqueda, $negocio);
+                            }
+                        }
+                        
+                    }
+                }
             }
            
 
