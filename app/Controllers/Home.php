@@ -910,7 +910,7 @@ class Home extends BaseController{
         $filtrar = array();
         $se_filtra = false;
 
-        if(isset($_POST['filtros']) && $_POST['filtros'][0] != false){
+        if(isset($_POST['filtros']) && !empty($_POST['filtros'])){
             echo "entra en filtro() -> filtros array";
             $se_filtra = true;
             $filtros = json_decode($_POST['filtros']);
