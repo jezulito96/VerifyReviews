@@ -558,3 +558,7 @@ li{
     justify-content: center;
     align-items: center;
 }
+
+.foto_resultado > img{
+    width: 100%;
+}
