@@ -82,7 +82,7 @@
         <script>
             $(document).ready(function() {
                 var info_filtros = [];
-                    info_filtros[0] = "para que no este vacio";
+                    info_filtros.push("hola");
                 $('.opciones_filtro').click(function() {
                     const valor = $(this).val();
                     $(this).toggleClass("filtro_seleccionado");
