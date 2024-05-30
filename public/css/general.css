@@ -486,6 +486,9 @@ li{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .nombre_filtro{
@@ -502,12 +505,13 @@ li{
 }
 
 .opciones_filtro{
-    border-radius: 10px;
+    border-radius: 5px;
     width: auto;
-    padding: 5px;
-    height: 20px;
-    font-size: 15px;
+    padding: 3px 10px;
+    height: 23px;
+    font-size: 11px;
     background-color: #ccc;
+    margin: 5px;
 }
 
 /* .opciones_filtro:focus{
