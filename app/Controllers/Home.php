@@ -910,7 +910,7 @@ class Home extends BaseController{
         $filtrar = array();
         $se_filtra = false;
 
-        if(isset($_POST['filtros']) && !empty($_POST['filtros'])){
+        if(isset($_POST['filtros']) && $_POST['filtros'][0] != false){
             $se_filtra = true;
             $filtros = json_decode($_POST['filtros']);
             $ciudades_array = array();
