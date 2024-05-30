@@ -282,9 +282,9 @@ class Master {
         }
        
         if(sizeof($resultado_busqueda) > 0){
-            echo "<pre>";
-            print_r($resultado_busqueda);
-            echo "</pre>";
+            // echo "<pre>";
+            // print_r($resultado_busqueda);
+            // echo "</pre>";
             return $resultado_busqueda;
         }else{
             return false;

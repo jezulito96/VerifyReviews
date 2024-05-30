@@ -970,7 +970,7 @@ class Home extends BaseController{
 
             $resultado_busqueda = $master -> filtrar($texto,$filtrar);
             
-            if($resultado_busqueda != false){
+            if($resultado_busqueda == false){
                 $maleta_filtros['error'] = "No se han encontrado resultados de la búsqueda" ;
             }else{
                 $maleta_filtros['resultado_busqueda'] = $resultado_busqueda;
