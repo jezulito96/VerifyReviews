@@ -277,9 +277,12 @@ class Master {
             }
         }
 
-
-
-        return $resultado_busqueda;
+        if($texto == false && $filtrar == false){
+            return false;
+        }else{
+            return $resultado_busqueda;
+        }
+        
     }
 }
 
