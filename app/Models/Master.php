@@ -227,16 +227,16 @@ class Master {
                 
                 if($lista_filtros[0] == 1){
                     //es ciudad
+                    echo "<br>entra en listafiltro[0] = 1";
                     foreach($lista_filtros as $j => $filtro){
                         foreach($this -> getListaNegocios() as $i => $negocio){
-                            echo "<br>mira negocio";
                             if(preg_match("/\b$filtro\b/i", $negocio -> getCiudad()) ){
                                 echo "<br>coincide";
                                 array_push($resultado_busqueda, $negocio);
                             }
                         }
                     }
-                    echo "<br>entra en listafiltro[0] = 1";
+                    
                 }
                 // elseif($lista_filtros[0] == 2){
                 //     //es categoria
