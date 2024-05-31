@@ -8,7 +8,7 @@ if(isset($resultado_busqueda)){
 
                 echo '<div class="titulo_resultado">';
 
-                    echo "<h4>" . $negocio -> getNombre() . "</h4>";
+                    echo "<h6>" . $negocio -> getNombre() . "</h6>";
 
                 echo '</div>';
 
