@@ -59,9 +59,9 @@
     <?php 
     if(isset($top3_categorias)){
 
-        // foreach($top3_categorias as $categoria){
+        foreach($top3_categorias as $categoria){
             echo "<pre>";
-            print_r($top3_categorias);
+            print_r($categoria);
             echo "</pre>";
             // echo '
                 
@@ -74,7 +74,7 @@
             //     </div>
             
             // ';
-        // }
+        }
     }
     ?>
     </section>
