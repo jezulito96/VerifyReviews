@@ -184,7 +184,7 @@
     /*///////////  RESULTADOS DE BUSQUEDA O FILTROS   /////////// */
     .resultados_busqueda{
         width: 100%;
-        min-height:300px;
+        height:auto;
         position:absolute;
         top:141px;
         left: 0px;
