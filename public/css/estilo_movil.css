@@ -307,16 +307,16 @@
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
     }
-    /* .imgCat{
+    .imgCat{
         width: 50vw;
         margin: 0px auto;
     }
     .fotoContainer{
         position: relative;
         height: 250px;
-    } */
+    } 
 
-    /* .flechaDelante, 
+    .flechaDelante, 
     .flechaAtras{
         position: absolute;
     }
@@ -332,7 +332,7 @@
         width: 16px;
         height: 16px;
         color: transparent;
-    } */
+    }
 
 }
  /* formulario comercio y usuario*/
