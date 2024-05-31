@@ -2,7 +2,7 @@
       
 
 
-    <h3>Categorías</h3>
+    <!-- <h3>Categorías</h3> -->
     <section class="carousel_Categorias">
     <?php 
     if(isset($listaCategorias)){
