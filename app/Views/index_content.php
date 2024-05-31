@@ -60,20 +60,28 @@
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $categoria){
-            echo "<pre>";
-            print_r($top3_categorias);
-            echo "</pre>";
-            echo '
+            // echo "<pre>";
+            // print_r($top3_categorias);
+            // echo "</pre>";
+            foreach ($top3_categorias as $categoria) {
+                echo "Categoría: " . $categoria['nombre_categoria'] . "\n";
+                echo "------------------------------------------\n";
+                foreach ($categoria['ranking'] as $negocio) {
+                    echo "Negocio: " . $negocio['cod_negocio'] . ", Nota Media: " . $negocio['nota_media'] . "\n";
+                }
+                echo "\n";
+            }
+            // echo '
                 
-                <div class="fotoContainer">
+            //     <div class="fotoContainer">
                 
-                    <img src="'. base_url()  . 'img/categorias/catM-'. $top3_categorias[$categoria]['cod_categoria'] . '.png" title="'. $top3_categorias[$categoria]['nombre_categoria'] . ' " class="imgCat">
+            //         <img src="'. base_url()  . 'img/categorias/catM-'. $top3_categorias[$categoria]['cod_categoria'] . '.png" title="'. $top3_categorias[$categoria]['nombre_categoria'] . ' " class="imgCat">
         
-                <h4>'. $top3_categorias[$categoria]['nombre_categoria']  . ' </h4>
+            //     <h4>'. $top3_categorias[$categoria]['nombre_categoria']  . ' </h4>
                 
-                </div>
+            //     </div>
             
-            ';
+            // ';
         }
     }
     ?>
