@@ -285,7 +285,7 @@
         position: relative;
         height: 250px;
     }
-    .flechaDelante, 
+    /* .flechaDelante, 
     .flechaAtras{
         position: absolute;
     }
@@ -294,7 +294,6 @@
         right: 30px;
         width: 16px;
         height: 16px;
-        color: transparent;
     }
     .flechaAtras{
         top:28%;
@@ -302,7 +301,7 @@
         width: 16px;
         height: 16px;
         color: transparent;
-    }
+    } */
 
         
     /* formulario comercio y usuario*/
