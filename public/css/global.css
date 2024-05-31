@@ -5,28 +5,38 @@
     font-style: normal;
 }
 
+:root {
+    --azul_verify: #51a5d9;
+    --azul: #3390c7;
+    --azul_claro: #83c4e8;
+    --azul_blanco: #d1e4f1;
+    --gris: #3b3f44;
+}
 *{
     font-family: inika;
 }
 
 h1{
     font-size: 32.44px;
-    color:#222222;
+    color:var(--gris);
 }
 
 h2{
     font-size: 28.83px;
-    color:#222222;
+    color:var(--gris);
+
 }
 
 h3{
     font-size: 35.63px;
-    color:#222222;
+    color:var(--gris);
+
 }
 
 h4{
     font-size: 22.78px;
-    color:#222222;
+    color:var(--gris);
+
 }
 
 h5{
@@ -48,3 +58,4 @@ small{
     font-size: 14.22px;
     color:#222222;
 }
+
