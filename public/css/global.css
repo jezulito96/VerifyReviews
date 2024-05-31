@@ -28,7 +28,8 @@ li{
     --azul_claro: #83c4e8;
     --azul_blanco: #d1e4f1;
     --gris: #3b3f44;
-
+    
+    --gris_claro:#f7f7f7;
     --error: #e74c3c;
     --advertencia: #eca069;
 }

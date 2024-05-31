@@ -19,7 +19,10 @@
                
                 <div class="lista_filtros">
 
-                    <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Ciudad</div>
+                    <div class="nombre_filtro">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Ciudad</h5>
+                    </div>
                     <div class="filtros">
                         <button class="opciones_filtro" value="1_soria">Soria</button>
                         <button class="opciones_filtro" value="1_madrid">Madrid</button>
@@ -27,7 +30,10 @@
                         <button class="opciones_filtro" value="1_valencia">Valencia</button>
                     </div>
 
-                    <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Categoria</div>
+                    <div class="nombre_filtro">
+                        <i class="fas fa-map-marker-alt">
+                        <h5>Categoria</h5>
+                    </div>
                     <div class="filtros">
                         <button class="opciones_filtro" value="2_1">Restaurantes</button>
                         <button class="opciones_filtro" value="2_2">Peluquerías</button>
@@ -38,7 +44,10 @@
                         <button class="opciones_filtro" value="2_7">Moda</button>
                     </div>
 
-                    <div class="nombre_filtro"><i class="fas fa-map-marker-alt"></i>Valoración</div>
+                    <div class="nombre_filtro">
+                        <i class="fas fa-map-marker-alt">
+                        <h5>Valoración</h5>
+                    </div>
                     <div class="filtros">
                         <button class="opciones_filtro" value="3_1">
                             <i class="fas fa-check check_filtro"></i>
