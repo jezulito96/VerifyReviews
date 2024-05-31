@@ -103,13 +103,13 @@
             // nextArrow:".flechaDelante"
         });
 
-        $('.container_top3').slick({
-            // dots: true, // puntitos
-            slidesToShow: 1, // fotos que se pintan a la vez
-            centerMode:true,
-            // prevArrow:".flechaAtras",
-            // nextArrow:".flechaDelante"
-        });
+        // $('.container_top3').slick({
+        //     // dots: true, // puntitos
+        //     slidesToShow: 1, // fotos que se pintan a la vez
+        //     centerMode:true,
+        //     // prevArrow:".flechaAtras",
+        //     // nextArrow:".flechaDelante"
+        // });
     });
 </script>
 
