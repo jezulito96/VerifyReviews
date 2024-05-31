@@ -77,7 +77,7 @@
                 foreach($categoria as $i => $value){
                     foreach($value as $j => $negocio)
                     echo "<pre>";
-                    print_r($j);
+                    echo $j;
                     echo "</pre>";
                     // echo '
                     //     <div class="fotoContainer">
