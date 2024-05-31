@@ -303,11 +303,14 @@
         height: 16px;
         color: transparent;
     } */
+    .carousel_Categorias{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+    }
     .fotoContainer {
         position: relative;
         width: 100%;
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+        
     }
     
     .videoCat {
