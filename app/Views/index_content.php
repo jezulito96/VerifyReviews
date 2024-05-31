@@ -38,13 +38,13 @@
             // ';
             echo '
                 <div class="fotoContainer">
-                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
+                    <a href="https://verifyreviews.es/verifyreviews/categoria?id=1">
                         <video class="videoCat" autoplay loop muted>
                             <source src="'. base_url()  . 'videos/catM_V-1.mp4" type="video/mp4">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </a>
-                    <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
+                    <h5 class="tituloCat">Restaurantes </h5>
                 </div>
             ';
         // }
