@@ -54,7 +54,6 @@
     </section>
     
     
-    <section class="container_top3">
     
     <?php 
     if(isset($top3_categorias)){
@@ -64,17 +63,19 @@
                     <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCatTop3"><h4>Top 3 '. $categoria['nombre_categoria']  . '</h4>
                 </div>
             ';
-            // echo '<div class="fotoContainer">';
-            // echo '
+            
+            echo '<section class="container_top3">';
+
+                echo '<div class="fotoContainer">
                     
+                    '.  print($categoria) .'
                 
-            //     </div>
-            // ';
-                
+                </div>';
+
+            echo '</section>';
+            
         }
-    }
     ?>
-    </section>
     
 
 <script>
@@ -86,13 +87,13 @@
             // nextArrow:".flechaDelante"
         });
 
-        // $('.container_top3').slick({
-        //     // dots: true, // puntitos
-        //     slidesToShow: 1, // fotos que se pintan a la vez
-        //     centerMode:true,
-        //     // prevArrow:".flechaAtras",
-        //     // nextArrow:".flechaDelante"
-        // });
+        $('.container_top3').slick({
+            // dots: true, // puntitos
+            slidesToShow: 1, // fotos que se pintan a la vez
+            centerMode:true,
+            // prevArrow:".flechaAtras",
+            // nextArrow:".flechaDelante"
+        });
     });
 </script>
 
