@@ -311,9 +311,9 @@
     
     .videoCat {
         width: 100%;
-        height: auto;
+        height: 500px;
         display: block;
-        object-fit: cover;
+        object-fit: fill;
     }
     
     .tituloCat {
