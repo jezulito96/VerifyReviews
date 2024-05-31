@@ -269,7 +269,12 @@
                                 /*  RESENA CONTENT */
 
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
+    .videoCat {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
 
 
 
