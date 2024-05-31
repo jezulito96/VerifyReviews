@@ -60,20 +60,14 @@
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $categoria => $value){
-            echo "<pre>";
-            var_dump($categoria[0]);
-            echo "</pre>";
-            // echo '<div class="fotoContainer">';
-            //     echo '
-                    
-            //         <div class="fotoContainer">
-                    
-            //             <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
-            
-            //             <h4>'. $categoria['nombre_categoria']  . ' </h4>
-                    
-            //         </div>
-            //     ';
+            echo '<div class="fotoContainer">';
+            echo '
+                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
+        
+                    <h4>'. $categoria['nombre_categoria']  . ' </h4>
+                
+                </div>
+            ';
                 
         }
     }
