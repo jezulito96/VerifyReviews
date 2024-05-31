@@ -276,7 +276,7 @@
 
 
 @media (max-width: 500px) {
-    .fotoContainer {
+    .videoContainer {
         position: relative;
         width: 100%;
         overflow: hidden;

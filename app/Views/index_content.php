@@ -37,7 +37,7 @@
             //     </div>
             // ';
             echo '
-                <div class="fotoContainer">
+                <div class="videoContainer">
                     <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
                         <video class="videoCat" autoplay loop muted playsinline>
                             <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
