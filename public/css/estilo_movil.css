@@ -303,19 +303,20 @@
         height: 16px;
         color: transparent;
     } */
-    .fotoContainer{
+    .fotoContainer {
         position: relative;
         width: 100%;
         overflow: hidden;
     }
-    .videoCat{
+    
+    .videoCat {
         width: 100%;
         height: auto;
         display: block;
         object-fit: cover;
     }
-   
-    .tituloCat{
+    
+    .tituloCat {
         position: absolute;
         bottom: 10px;
         left: 50%;

@@ -72,8 +72,8 @@
         $('.carousel_Categorias').slick({
             dots: true, // puntitos
             slidesToShow: 1, // fotos que se pintan a la vez
-            prevArrow:".flechaAtras",
-            nextArrow:".flechaDelante"
+            // prevArrow:".flechaAtras",
+            // nextArrow:".flechaDelante"
         });
     });
 </script>
