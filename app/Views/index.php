@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="nombre_filtro">
-                        <i class="fas fa-map-marker-alt">
+                        <i class="fas fa-map-marker-alt"></i>
                         <h5>Categoria</h5>
                     </div>
                     <div class="filtros">
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="nombre_filtro">
-                        <i class="fas fa-map-marker-alt">
+                        <i class="fas fa-map-marker-alt"></i>
                         <h5>Valoración</h5>
                     </div>
                     <div class="filtros">
