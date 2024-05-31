@@ -121,11 +121,11 @@
         </script>
         
         <main id="main" class="main">
-            <p>
+            <!-- <p>
                 <span style="font-weight: bold;">Aviso importante:</span><br>
                 Esta página web ha sido creada exclusivamente con fines educativos. 
                 Cualquier contenido presente en este sitio es para uso académico y no con propósitos comerciales o profesionales. Agradecemos tu comprensión y cooperación.
-            </p>
+            </p> -->
             <!-- vista inicio de la web -->
             <?php if (isset ($index_content)) echo $index_content; ?> 
 
