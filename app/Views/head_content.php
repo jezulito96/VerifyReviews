@@ -93,6 +93,7 @@
         echo "<link rel='stylesheet' href='" . base_url() . "css/general_escritorio.css' />";
     }
 
+    echo "<link rel='stylesheet' href='" . base_url() . "css/global.css' />";
     
 
     // lista header

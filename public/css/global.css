@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'inika';
+    src: url('../fonts/Inika-Regular.ttf') format('woff');;
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: inika;
+}
+
+h1{
+    font-size: 32.44px;
+    color:#222222;
+}
+
+h2{
+    font-size: 28.83px;
+    color:#222222;
+}
+
+h3{
+    font-size: 35.63px;
+    color:#222222;
+}
+
+h4{
+    font-size: 22.78px;
+    color:#222222;
+}
+
+h5{
+    font-size: 20.25px;
+    color:#222222;
+}
+
+h6{
+    font-size: 16px;
+    color:#222222;
+}
+
+p{
+    font-size: 16px;
+    color:#222222;
+}
+
+small{
+    font-size: 14.22px;
+    color:#222222;
+}
