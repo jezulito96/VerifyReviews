@@ -75,10 +75,13 @@
                 //     </div>
                 // ';
                 foreach($categoria as $i => $value){
-                    foreach($value as $j => $negocio)
-                    echo "<pre>";
-                    echo $j;
-                    echo "</pre>";
+                    if(!is_string($value)){
+                        foreach($value as $j => $negocio)
+                        echo "<pre>";
+                        echo $j;
+                        echo "</pre>";
+                    }
+                    
                     // echo '
                     //     <div class="fotoContainer">
                         
