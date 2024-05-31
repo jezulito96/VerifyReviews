@@ -63,7 +63,7 @@
             // echo "<pre>";
             // print_r($categoria['cod_categoria']);
             // echo "</pre>";
-            echo '<div class="fotoContainer">';
+            // echo '<div class="fotoContainer">';
                 // echo '
                     
                 //     <div class="fotoContainer">
