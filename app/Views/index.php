@@ -104,7 +104,7 @@
                 });
 
                 $("#btn_filtros").click(function(){
-                    $("#container_filtros").toggle();
+                    $("#container_filtros").toggle(500);
                 });
 
                 $('#buscar-icono').click(function() {
