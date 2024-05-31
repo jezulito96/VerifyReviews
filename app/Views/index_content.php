@@ -60,10 +60,10 @@
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $i => $categoria){
-            echo $categoria['nota_media'];
-            // echo "<pre>";
-            // print_r($top3_categorias);
-            // echo "</pre>";
+            // echo $categoria['nota_media'];
+            echo "<pre>";
+            print_r($top3_categorias);
+            echo "</pre>";
             // echo '
                 
             //     <div class="fotoContainer">
