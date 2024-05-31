@@ -85,22 +85,19 @@
         strpos($user_agent, 'iPod') !== false
     ) {
         // Móvil
-        echo "<link rel='stylesheet' href='" . base_url() . "css/headerMovil.css' />";
-        echo "<link rel='stylesheet' href='" . base_url() . "css/resenaContent.css' />";
-        echo "<link rel='stylesheet' href='" . base_url() . "css/indexMovil.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/estilo_movil.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/general_movil.css' />";
     } else {
         // Escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/general_escritorio.css' />";
     }
 
-    echo "<link rel='stylesheet' href='" . base_url() . "css/general.css' />";
+    
 
     // lista header
     echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
     
-    //estilos de los codigos qr
-    // echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
-
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
 
