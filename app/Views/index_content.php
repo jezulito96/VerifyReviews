@@ -72,8 +72,9 @@
                     <h4>'. $categoria['nombre_categoria']  . ' </h4>
                 
                 </div>
-                <br> <p>'. $value['nota_media'] .'</p>
             ';
+
+            echo $value;
         }
     }
     ?>
