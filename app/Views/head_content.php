@@ -99,7 +99,7 @@
     echo '<script type="text/javascript" src="' . base_url()  . 'js/lista_header.js"></script>';
     
     //estilos de los codigos qr
-    echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
+    // echo "<link rel='stylesheet' href='" . base_url() . "css/codigosQr.css' />";
 
     // <!-- Estilos de index -->
     echo "<link rel='stylesheet' href='" . base_url() . "css/index.css' />";
