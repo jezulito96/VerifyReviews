@@ -79,7 +79,7 @@
     /* ////////   DIV DE BUSQUEDA  ///////////// */
     nav{
         width: 100vw;
-        height: 50px;
+        height: 60px;
         background-color: var(--gris_claro);
         display: flex;
         align-items: center;
