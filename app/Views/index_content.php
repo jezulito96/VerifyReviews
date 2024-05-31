@@ -60,7 +60,7 @@
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $i => $categoria){
-            echo "<br>" . print_r($categoria) . "<br>";
+            echo "<pre>" . print_r($categoria) . "</pre>";
             // echo "<pre>";
             // print_r($top3_categorias);
             // echo "</pre>";
