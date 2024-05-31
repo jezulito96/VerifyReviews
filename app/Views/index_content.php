@@ -6,7 +6,7 @@
     <section class="carousel_Categorias">
     <?php 
     if(isset($listaCategorias)){
-        // foreach($listaCategorias as $i => $categoria){
+        foreach($listaCategorias as $i => $categoria){
             // carousel con flechas //
 
             // echo '
@@ -38,17 +38,17 @@
             // ';
             echo '
                 <div class="fotoContainer">
-                    <a href="https://verifyreviews.es/verifyreviews/categoria?id=1">
+                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
                         <video class="videoCat" autoplay loop muted playsinline>
-                            <source src="'. base_url()  . 'img/categorias/catM_V-1.mp4" type="video/mp4">
-                            <source src="'. base_url()  . 'img/categorias/catM_V-1.webm" type="video/webm">
+                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
+                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.webm" type="video/webm">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </a>
-                    <h5 class="tituloCat">Restaurantes</h5>
+                    <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
                 </div>
             ';
-        // }
+        }
     }
     ?>
     </section>
