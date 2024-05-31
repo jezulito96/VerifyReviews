@@ -307,33 +307,37 @@
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
     }
-    .imgCat{
-        width: 50vw;
-        margin: 0px auto;
-    }
-    .fotoContainer{
-        position: relative;
-        height: 250px;
-    } 
+    
 
-    .flechaDelante, 
-    .flechaAtras{
-        position: absolute;
-    }
-    .flechaDelante{
-        top:28%;
-        right: 30px;
-        width: 16px;
-        height: 16px;
-    }
-    .flechaAtras{
-        top:28%;
-        left: 30px;
-        width: 16px;
-        height: 16px;
-        color: transparent;
-    }
+}
 
+
+
+.imgCat{
+    width: 50vw;
+    margin: 0px auto;
+}
+.fotoContainer{
+    position: relative;
+    height: 250px;
+} 
+
+.flechaDelante, 
+.flechaAtras{
+    position: absolute;
+}
+.flechaDelante{
+    top:28%;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+}
+.flechaAtras{
+    top:28%;
+    left: 30px;
+    width: 16px;
+    height: 16px;
+    color: transparent;
 }
  /* formulario comercio y usuario*/
  .containerNegocioForm,
