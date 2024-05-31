@@ -314,11 +314,12 @@
         justify-content: start;
         align-items: center;
         margin-left: 20px;
-        margin-right: 20px;
+        
     }
     .imgCatTop3{
         width: 30px;
         height: 30px;
+        margin-right: 20px;
     }
 
 }
