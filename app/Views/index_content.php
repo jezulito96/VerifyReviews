@@ -52,7 +52,6 @@
     }
     ?>
     </section>
-    <div class="carousel_sombra"></div>
     
     <h3>Top 3</h3>
     <section class="slick-carousel">
