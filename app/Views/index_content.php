@@ -69,7 +69,7 @@
                 echo '<div class="fotoContainer">';
                     
                     foreach($categoria as $i){
-                        echo $i;
+                        print_r($i);
                     }
                 
                 echo '</div>';
