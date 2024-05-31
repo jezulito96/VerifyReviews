@@ -25,25 +25,6 @@ use CodeIgniter\Images\Handlers\ImageMagickHandler;
 class Home extends BaseController{
 
 
-    // public function index(): string {
-
-    //     $baseDatos = new BaseDatos();
-
-    //     // $maleta['listaCategorias'] = $baseDatos -> getListaCategorias();
-
-    //     $qr = new Qr();
-
-    //     $clavePublica = "holaaaa";
-
-    //     $maleta['qr'] = $qr -> crear("http://verifyReviews.es/verifyreviews/resena?clavePublica=" . $clavePublica);
-        
-    //     //vistas
-    //     $maleta['head_content'] = view('head_content');
-    //     $maleta['header_content'] = view('header_content');
-    //     // echo view('head_content');
-    //     return view('index', $maleta);
-    // }
-    
     public function index(): string {
         $master = Master::obtenerInstancia();
         $maleta_index['listaCategorias'] = $master -> getListaCategorias();

@@ -178,7 +178,7 @@ class Master {
 
     public function setEstadisticas($cod_resena, $cod_negocio, $valoracion_final){
         $cod_categoria = 0;
-        foreach($this -> listaNegocios as $i => $negocio){
+        foreach($this -> getListaNegocios() as $i => $negocio){
             if($cod_negocio == $negocio -> getCodNegocio()){
                 $cod_categoria = $negocio -> getCodCategoria();
             }
