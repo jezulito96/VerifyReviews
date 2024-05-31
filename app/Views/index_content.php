@@ -7,20 +7,33 @@
     <?php 
     if(isset($listaCategorias)){
         foreach($listaCategorias as $i => $categoria){
-            echo '
+            // echo '
                 
-                <div class="fotoContainer">
+            //     <div class="fotoContainer">
                 
-                <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
+            //     <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
         
-                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
+            //         <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
         
-                <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
+            //     <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
         
-                <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
+            //     <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                 
-                </div>
+            //     </div>
             
+            // ';
+            echo '
+                <div class="fotoContainer">
+                    <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
+                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
+                        <video class="videoCat" controls>
+                            <source src="'. base_url()  . 'videos/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </a>
+                    <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
+                    <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
+                </div>
             ';
         }
     }
