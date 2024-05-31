@@ -27,7 +27,7 @@
                     <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
                     <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
                         <video class="videoCat" controls>
-                            <source src="'. base_url()  . 'videos/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
+                            <source style="width: 100%;height: auto;" src="'. base_url()  . 'videos/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </a>
