@@ -209,11 +209,16 @@ class Master {
             
             foreach($this -> getListaCategorias() as $i => $categoria){
                 $array_aux = [
-                    'cod_categoria' => $categoria -> getCodCategoria(),
-                    'nombre_categoria' => $categoria -> getTipoNegocio(),
+                    'cod_categoria' => $categoria->getCodCategoria(),
+                    'nombre_categoria' => $categoria->getTipoNegocio(),
                 ];
-                $lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()] = $array_aux;
-                $lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()] .= $baseDatos -> getRanking($categoria -> getCodCategoria());
+                
+                // Obtener los resultados del método getRanking y agregarlos al array_aux
+                $ranking = $baseDatos->getRanking($categoria->getCodCategoria());
+                $array_aux['ranking'] = $ranking;
+                
+                // Asignar $array_aux a $lista_estadisticas['top3_categorias'] usando el código de categoría como clave
+                $lista_estadisticas['top3_categorias'][$categoria->getCodCategoria()] = $array_aux;
             }
             
             
