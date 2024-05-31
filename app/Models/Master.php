@@ -208,7 +208,7 @@ class Master {
             $top3_categorias = array();
             
             foreach($this -> getListaCategorias() as $i => $categoria){
-                array_push($lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()],$categoria);
+                // array_push($lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()],$categoria);
                 array_push($lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()],$baseDatos -> getRanking($categoria -> getCodCategoria()) );
 
             }
