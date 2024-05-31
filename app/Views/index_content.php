@@ -59,20 +59,22 @@
     <?php 
     if(isset($top3_categorias)){
 
-        foreach($top3_categorias as $i => $negocio){
-            // print_r($top3_categorias[$i]);
-            echo '
+        // foreach($top3_categorias as $i => $negocio){
+            echo "<pre>";
+            print_r($top3_categorias[$i]);
+            echo "</pre>";
+            // echo '
                 
-                <div class="fotoContainer">
+            //     <div class="fotoContainer">
                 
-                    <img src="'. base_url()  . 'img/categorias/catM-'. $negocio -> getCodCategoria()  . '.png" alt="'. $negocio -> getTipoNegocio()  . ' " title="'. $negocio -> getTipoNegocio()  . ' " class="imgCat">
+            //         <img src="'. base_url()  . 'img/categorias/catM-'. $negocio -> getCodCategoria()  . '.png" alt="'. $negocio -> getTipoNegocio()  . ' " title="'. $negocio -> getTipoNegocio()  . ' " class="imgCat">
         
-                <h4>'. $negocio -> getTipoNegocio()  . ' </h4>
+            //     <h4>'. $negocio -> getTipoNegocio()  . ' </h4>
                 
-                </div>
+            //     </div>
             
-            ';
-        }
+            // ';
+        // }
     }
     ?>
     </section>
