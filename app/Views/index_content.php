@@ -53,7 +53,7 @@
     ?>
     </section>
     
-    
+<!--     
     <section class="container_top3">
     
     <?php 
@@ -75,7 +75,7 @@
     }
     ?>
     </section>
-    
+     -->
 
 <script>
     $(document).ready(function(){
