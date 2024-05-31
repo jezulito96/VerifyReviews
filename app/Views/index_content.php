@@ -59,7 +59,7 @@
     <?php 
     if(isset($top3_categorias)){
 
-        foreach($top3_categorias as $categoria => $value){
+        foreach($top3_categorias as $categoria){
             // echo "<pre>";
             // print_r($categoria['cod_categoria']);
             // echo "</pre>";
@@ -73,8 +73,11 @@
                 
                 </div>
             ';
-
-            echo $value;
+            foreach($categoria as $i){
+                echo "<pre>";
+                print_r($i);
+                echo "</pre>";
+            }
         }
     }
     ?>
