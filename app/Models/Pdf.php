@@ -67,7 +67,7 @@ class Pdf {
         </head>
         <body>
             <div class="container">
-                <h1>Factura de Ready Eats</h1>
+                <h1>Factura de Chema Eats</h1>
                 <div class="header">
                     <img width="150px" height="150px" src="data:image/png;base64,' . $imagen_logo_base64  . '" class="logo" />
                     <img width="200px" height="200px" src="data:image/png;base64,' . $imagen_base64 . '" class="qr" />
@@ -87,21 +87,21 @@ class Pdf {
                         <tr>
                             <td>Hamburguesa</td>
                             <td>2</td>
-                            <td>$5.00</td>
-                            <td>$10.00</td>
+                            <td>5.00€</td>
+                            <td>10.00€</td>
                         </tr>
                         <tr>
                             <td>Pizza</td>
                             <td>1</td>
-                            <td>$10.00</td>
-                            <td>$10.00</td>
+                            <td>10.00€</td>
+                            <td>10.00€</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="total">
-                    <p>Total: $20.00</p>
-                    <p>Envío: $5.00</p>
-                    <h3>Total a pagar: $25.00</h3>
+                    <p>Total: 20.00€</p>
+                    <p>Envío: 5.00€</p>
+                    <h3>Total a pagar: 25.00€</h3>
                 </div>
             </div>
         </body>
