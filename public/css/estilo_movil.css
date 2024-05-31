@@ -238,11 +238,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .titulo_resultado > h6{
         font-size: 13px;
-        padding-top: 5px ;
-        padding-bottom: 5px ;
     }
 
     .foto_resultado{
