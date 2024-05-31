@@ -294,6 +294,8 @@ class Home extends BaseController{
         $cod_categoria = $this->request->getPost('categoria');
         $nombre_titular = $this->request->getPost('nombreTitular');
         $telefono_titular = intval(trim($this->request->getPost('telefonoTitular')));
+        echo "<br>" .$telefono_negocio . "<br>";
+        echo "<br>" .$telefono_titular . "<br>";
         $activo = 1;
         $confirma_correo = 0;
 
