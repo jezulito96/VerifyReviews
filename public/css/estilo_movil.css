@@ -122,10 +122,15 @@
         z-index: 200;
     }
     .lista_filtros{
-        width: 100%;
-        min-height:400px;
+        width: 94%;
+        min-height: auto;
+        position: absolute;
+        top: 139px;
+        left: 0px;
+        background-color: #fff;
         padding: 10px;
-        box-sizing: border-box;
+        z-index: 200;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
     }
     .filtros{
         width: 100%;
@@ -161,6 +166,7 @@
         background-color: white;
         border:1px solid var(--azul);
         margin: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
     .filtro_seleccionado{
@@ -171,7 +177,7 @@
 
     /* icono check filtro */
     .check_filtro{
-        font-size: 15px;
+        margin-right: 3px;
     }
 
 
