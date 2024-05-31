@@ -5,20 +5,45 @@
     font-style: normal;
 }
 
+*{
+    font-family: inika;
+}
+
+body{
+    margin: 0px;
+    height: 0px;
+}
+li{
+    list-style: none;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+}
 :root {
     --azul_verify: #51a5d9;
     --azul: #3390c7;
     --azul_claro: #83c4e8;
     --azul_blanco: #d1e4f1;
     --gris: #3b3f44;
+
+    --error: #e74c3c;
+    --advertencia: #eca069;
 }
-*{
-    font-family: inika;
+
+
+
+a{
+    text-decoration: none;
+    color:black;
 }
 
 h1{
     font-size: 32.44px;
     color:var(--gris);
+    padding-left: 10px;
 }
 
 h2{
