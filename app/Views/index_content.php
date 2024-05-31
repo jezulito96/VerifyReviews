@@ -68,8 +68,8 @@
 
                 echo '<div class="fotoContainer">';
                     
-                    foreach($categoria as $i){
-                        echo $i['nota_media'];
+                    foreach($categoria as $i => $value){
+                        echo $value;
                     }
                 
                 echo '</div>';
