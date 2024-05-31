@@ -108,7 +108,7 @@
                 });
 
                 $('#buscar-icono').click(function() {
-                    $("#cerrar_busqueda").toggle();
+                    $("#cerrar_busqueda").toggle(500);
                     var texto = $('#buscar').val();
                     if(texto == ""){
                         texto = "false";
