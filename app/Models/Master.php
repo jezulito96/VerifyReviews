@@ -207,9 +207,11 @@ class Master {
         if($cod_categoria == false && $cod_negocio == false){
             $top3_categorias = array();
             
-            foreach($this -> getListaCategorias() as $i => $categoria)
+            foreach($this -> getListaCategorias() as $i => $categoria){
+                $lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()] = $baseDatos -> getRanking($categoria -> getCodCategoria());
+            }
             
-            $lista_estadisticas['top3_categorias'][$categoria -> getCodCategoria()] = $baseDatos -> getRanking($categoria -> getCodCategoria());
+            
         }
 
         return $lista_estadisticas;
