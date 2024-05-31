@@ -318,10 +318,10 @@
     
     .tituloCat {
         position: absolute;
-        bottom: 10px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 1;
+        z-index: 30;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 5px 10px;
