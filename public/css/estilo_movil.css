@@ -232,13 +232,14 @@
 
     .titulo_resultado{
         width: 100%;
-        height: auto;
+        height: 50px;
         padding: 5px;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 13px;
+        font-weight: 400;
     }
 
     .foto_resultado{
