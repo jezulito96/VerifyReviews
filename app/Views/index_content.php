@@ -76,7 +76,7 @@
                 // ';
                 foreach($categoria as $i => $value){
                     echo "<pre>";
-                    print_r($value['nota_media']);
+                    echo $value['nota_media'];
                     echo "</pre>";
                     // echo '
                     //     <div class="fotoContainer">
