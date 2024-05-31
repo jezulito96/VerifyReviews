@@ -79,6 +79,7 @@
     }
     ?>
     </section>
+    <div class="carousel_sombra" ></div>
 
 <script>
     $(document).ready(function(){

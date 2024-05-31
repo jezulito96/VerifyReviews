@@ -305,7 +305,6 @@
     } */
     .carousel_Categorias{
         height: 520px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
     }
     .fotoContainer {
         position: relative;
@@ -333,6 +332,9 @@
         border-radius: 5px;
     }
 
+    .carousel_sombra{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+    }
 
 }
  /* formulario comercio y usuario*/
