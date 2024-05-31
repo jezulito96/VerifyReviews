@@ -166,6 +166,7 @@
         background-color: white;
         border:1px solid var(--azul);
         margin: 5px;
+        color: var(--gris);
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
