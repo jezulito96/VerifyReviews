@@ -61,7 +61,7 @@
 
         // foreach($top3_categorias as $i => $negocio){
             echo "<pre>";
-            print_r($top3_categorias[]);
+            print_r($top3_categorias);
             echo "</pre>";
             // echo '
                 
