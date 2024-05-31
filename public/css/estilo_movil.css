@@ -277,14 +277,15 @@
 
     @media (max-width: 500px) {
     /* ---------   carousel    --------------- */
-    .imgCat{
+    /* .imgCat{
         width: 50vw;
         margin: 0px auto;
     }
     .fotoContainer{
         position: relative;
         height: 250px;
-    }
+    } */
+
     /* .flechaDelante, 
     .flechaAtras{
         position: absolute;
@@ -302,61 +303,84 @@
         height: 16px;
         color: transparent;
     } */
-
-        
-    /* formulario comercio y usuario*/
-    .containerNegocioForm,
-    .containerUsuarioForm{
-        width: 90vw;
-        height: auto;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .containerNegocioForm label,
-    .containerUsuarioForm label {
-        display: block;
-        margin-bottom: 5px;
-        color: #274C77;
-    }
-
-    .containerNegocioForm input[type="text"],
-    .containerUsuarioForm input[type="text"],
-    .containerNegocioForm input[type="email"],
-    .containerUsuarioForm input[type="email"],
-    .containerNegocioForm input[type="tel"],
-    .containerUsuarioForm input[type="tel"],
-    .containerNegocioForm input[type="url"],
-    .containerUsuarioForm input[type="url"],
-    .containerNegocioForm input[type="file"],
-    .containerUsuarioForm input[type="file"],
-    .containerNegocioForm select ,
-    .containerUsuarioForm select {
+    .fotoContainer{
+        position: relative;
         width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #A3CEF1;
-        border-radius: 4px;
-        box-sizing: border-box;
-        background-color: #FFFAFB;
-        color: #274C77;
+        overflow: hidden;
     }
-    .containerNegocioForm #registroNegocio,
-    .containerUsuarioForm #registroNegocio {
-        width: auto;
-        padding: 10px 20px;
-        background-color: #53A6D9;
-        border: none;
-        border-radius: 4px;
-        color: #FFFAFB;
-        cursor: pointer;
+    .videoCat{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
     }
-
-    .containerNegocioForm #registroNegocio:hover,
-    .containerUsuarioForm #registroNegocio:hover {
-        background-color: #6096BA;
+   
+    .tituloCat{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
     }
 
+
+}
+ /* formulario comercio y usuario*/
+ .containerNegocioForm,
+ .containerUsuarioForm{
+     width: 90vw;
+     height: auto;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .containerNegocioForm label,
+ .containerUsuarioForm label {
+     display: block;
+     margin-bottom: 5px;
+     color: #274C77;
+ }
+
+ .containerNegocioForm input[type="text"],
+ .containerUsuarioForm input[type="text"],
+ .containerNegocioForm input[type="email"],
+ .containerUsuarioForm input[type="email"],
+ .containerNegocioForm input[type="tel"],
+ .containerUsuarioForm input[type="tel"],
+ .containerNegocioForm input[type="url"],
+ .containerUsuarioForm input[type="url"],
+ .containerNegocioForm input[type="file"],
+ .containerUsuarioForm input[type="file"],
+ .containerNegocioForm select ,
+ .containerUsuarioForm select {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+     border: 1px solid #A3CEF1;
+     border-radius: 4px;
+     box-sizing: border-box;
+     background-color: #FFFAFB;
+     color: #274C77;
+ }
+ .containerNegocioForm #registroNegocio,
+ .containerUsuarioForm #registroNegocio {
+     width: auto;
+     padding: 10px 20px;
+     background-color: #53A6D9;
+     border: none;
+     border-radius: 4px;
+     color: #FFFAFB;
+     cursor: pointer;
+ }
+
+ .containerNegocioForm #registroNegocio:hover,
+ .containerUsuarioForm #registroNegocio:hover {
+     background-color: #6096BA;
+ }
 
     /* estilo login */
 
@@ -416,19 +440,12 @@
         width: 95%;
         height: 95%;
     }
-
-}
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
                                 /*  RESENA CONTENT */
 
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-    .videoCat {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-    }
+
 
 
 

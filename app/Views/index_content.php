@@ -32,7 +32,7 @@
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </a>
-                    <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
+                    <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
                 </div>
             ';
         }
