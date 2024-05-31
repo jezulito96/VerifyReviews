@@ -66,11 +66,13 @@
             
             echo '<section class="container_top3">';
 
-                echo '<div class="fotoContainer">
+                echo '<div class="fotoContainer">';
                     
-                    '.  print_r($categoria) .'
+                    foreach($categoria as $i){
+                        echo $i;
+                    }
                 
-                </div>';
+                echo '</div>';
 
             echo '</section>';
             
