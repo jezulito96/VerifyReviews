@@ -61,7 +61,7 @@
 
         foreach($top3_categorias as $categoria => $value){
             echo "<pre>";
-            var_dump($value);
+            var_dump($categoria);
             echo "</pre>";
             // echo '<div class="fotoContainer">';
                 // echo '
