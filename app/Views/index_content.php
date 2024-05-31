@@ -59,7 +59,7 @@
     <?php 
     if(isset($top3_categorias)){
 
-        foreach($top3_categorias as $categoria){
+        foreach($top3_categorias as $categoria => $value){
             // echo "<pre>";
             // print_r($categoria['cod_categoria']);
             // echo "</pre>";
@@ -69,10 +69,10 @@
                 
                     <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
         
-                <h4>'. $categoria['nombre_categoria']  . ' </h4>
+                    <h4>'. $categoria['nombre_categoria']  . ' </h4>
                 
                 </div>
-            
+                <br> <p>'. $value['nota_media'] .'</p>
             ';
         }
     }
