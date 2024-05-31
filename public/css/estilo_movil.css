@@ -183,7 +183,7 @@
 
     /*///////////  RESULTADOS DE BUSQUEDA O FILTROS   /////////// */
     .resultados_busqueda{
-        width: 100%;
+        width: 94%;
         height:auto;
         position:absolute;
         top:141px;
@@ -194,9 +194,6 @@
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
     .cerrar_busqueda{
-        /* position:relative; */
-        /* bottom: 20px;
-        left: 0px; */
         width: 100%;
         height: 20px;
         display: flex;
@@ -213,13 +210,8 @@
         margin-bottom: 20px;
         margin-top: 40px;
     }
-
-
-   
-
-    /* resultados de los filtros */
     .container_busquedas{
-        width: 95%;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: space-around;
@@ -227,7 +219,6 @@
         flex-wrap: wrap;
         flex-direction: row;
         columns: 2;
-        padding-top: 20px;
     }
 
     .container_resultado{
@@ -247,6 +238,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .titulo_resultado > h6{
+        font-size: 13px;
+        padding-top: 5px ;
+        padding-bottom: 5px ;
     }
 
     .foto_resultado{
