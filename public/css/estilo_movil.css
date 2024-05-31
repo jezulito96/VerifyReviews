@@ -1,17 +1,159 @@
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-                            /*   HEADER_MOVIL   */
+                            /*   HEADER_MOVIL    */
+                            /*   HASTA 500px     */
+                            /*   DE 500px a 800  */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-@media (max-width: 700px) {
-    
+@media (max-width: 500px) {
 
     .headerContainer {
         width: 100vw;
         height: 80px;
         display: flex;
         flex-direction: row;
+        /* border-bottom:1px solid #ccc ; */
+        /* box-shadow: 3px 0px 3px #eee; */
+    }
+    
+    .menuContainer {
+        width: 85px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-top: 30px;
+    }
+    
+    .imgMenu {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .imgMenu2 {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logoContainer {
+        width: calc(100vw - 85px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgLogo{
+        height: 70px;
+    }
+    
+    .listaMenu {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 0px;
         border-bottom:1px solid #ccc ;
+        box-shadow: 4px 0px 4px #eee;
+        z-index:1000;
+    }
+    
+    .listaMenu li {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 70px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 1.5em;
+        border-bottom:1px solid #eee ;
+        z-index:1000;
+    }
+    /* .headerContainer {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+ 
+    }
+    
+    .menuContainer {
+        width: 76px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-top: 26px;
+    }
+    
+    .imgMenu {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .imgMenu2 {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logoContainer {
+        width: calc(100vw - 85px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgLogo{
+        height: 64px;
+    }
+    
+    .listaMenu {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 0px;
+        border-bottom:1px solid #ccc ;
+        box-shadow: 4px 0px 4px #eee;
+        z-index:1000;
+    }
+    
+    .listaMenu li {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 70px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 1.5em;
+        border-bottom:1px solid #eee ;
+        z-index:1000;
+    } */
+
+}
+@media (min-width: 500px) and (max-width: 800px) {
+
+    .headerContainer {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        border-bottom:1px solid #ccc;
         box-shadow: 3px 0px 3px #eee;
     }
     
@@ -74,7 +216,8 @@
         font-size: 1.5em;
         border-bottom:1px solid #eee ;
         z-index:1000;
-    }.headerContainer {
+    }
+    /* .headerContainer {
         width: 100vw;
         height: 80px;
         display: flex;
@@ -142,8 +285,9 @@
         font-size: 1.5em;
         border-bottom:1px solid #eee ;
         z-index:1000;
-    }
+    } */
 
+}
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
                                 /*  RESENA CONTENT */
@@ -1125,5 +1269,4 @@
 
     /* } */
 
-}
 
