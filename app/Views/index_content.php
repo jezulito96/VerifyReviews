@@ -68,7 +68,7 @@
 
                 echo '<div class="fotoContainer">
                     
-                    '.  print($categoria) .'
+                    '.  print_r($categoria) .'
                 
                 </div>';
 
