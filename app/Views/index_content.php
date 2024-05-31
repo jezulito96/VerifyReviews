@@ -59,10 +59,10 @@
     <?php 
     if(isset($top3_categorias)){
 
-        foreach($top3_categorias as $categoria){
-            // echo "<pre>";
-            // print_r($categoria['cod_categoria']);
-            // echo "</pre>";
+        foreach($top3_categorias as $categoria => $value){
+            echo "<pre>";
+            var_dump($value);
+            echo "</pre>";
             // echo '<div class="fotoContainer">';
                 // echo '
                     
@@ -74,14 +74,10 @@
                     
                 //     </div>
                 // ';
-                foreach($categoria as $i => $value){
-                    if(!is_string($value)){
-                        foreach($value as $j => $negocio)
-                        echo "<pre>";
-                        echo $j;
-                        echo "</pre>";
-                    }
-                    
+                // foreach($categoria as $i => $value){
+                //     echo "<pre>";
+                //     print_r($value);
+                //     echo "</pre>";
                     // echo '
                     //     <div class="fotoContainer">
                         
@@ -91,7 +87,7 @@
                         
                     //     </div>
                     // ';
-                }
+                // }
         }
     }
     ?>
