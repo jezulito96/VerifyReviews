@@ -60,13 +60,16 @@
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $categoria){
-            echo '<img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCatTop3"><h4>Top 3 '. $categoria['nombre_categoria']  . '</h4>';
-            echo '<div class="fotoContainer">';
-            echo '
-                    
-                
+            echo '<div class="titulo_top3" >
+                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCatTop3"><h4>Top 3 '. $categoria['nombre_categoria']  . '</h4>
                 </div>
             ';
+            // echo '<div class="fotoContainer">';
+            // echo '
+                    
+                
+            //     </div>
+            // ';
                 
         }
     }
