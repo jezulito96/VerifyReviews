@@ -64,19 +64,19 @@
             // print_r($categoria['cod_categoria']);
             // echo "</pre>";
             echo '<div class="fotoContainer">';
-                echo '
+                // echo '
                     
-                    <div class="fotoContainer">
+                //     <div class="fotoContainer">
                     
-                        <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
+                //         <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
             
-                        <h4>'. $categoria['nombre_categoria']  . ' </h4>
+                //         <h4>'. $categoria['nombre_categoria']  . ' </h4>
                     
-                    </div>
-                ';
+                //     </div>
+                // ';
                 foreach($categoria as $i => $value){
                     echo "<pre>";
-                    print_r($value);
+                    print_r($value['nota_media']);
                     echo "</pre>";
                     // echo '
                     //     <div class="fotoContainer">
