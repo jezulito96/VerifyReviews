@@ -268,41 +268,14 @@
 
 
 
-    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-                                /*   INDEX_MOVIL   */
+                            /*   INDEX_MOVIL   */
 
-    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-    @media (max-width: 500px) {
-    /* ---------   carousel    --------------- */
-    /* .imgCat{
-        width: 50vw;
-        margin: 0px auto;
-    }
-    .fotoContainer{
-        position: relative;
-        height: 250px;
-    } */
-
-    /* .flechaDelante, 
-    .flechaAtras{
-        position: absolute;
-    }
-    .flechaDelante{
-        top:28%;
-        right: 30px;
-        width: 16px;
-        height: 16px;
-    }
-    .flechaAtras{
-        top:28%;
-        left: 30px;
-        width: 16px;
-        height: 16px;
-        color: transparent;
-    } */
+@media (max-width: 500px) {
     .fotoContainer {
         position: relative;
         width: 100%;
@@ -329,6 +302,37 @@
         border-radius: 5px;
     }
 
+    /* ////////////    TOP 3  ////////////// */
+    .container_top3{
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+    }
+    /* .imgCat{
+        width: 50vw;
+        margin: 0px auto;
+    }
+    .fotoContainer{
+        position: relative;
+        height: 250px;
+    } */
+
+    /* .flechaDelante, 
+    .flechaAtras{
+        position: absolute;
+    }
+    .flechaDelante{
+        top:28%;
+        right: 30px;
+        width: 16px;
+        height: 16px;
+    }
+    .flechaAtras{
+        top:28%;
+        left: 30px;
+        width: 16px;
+        height: 16px;
+        color: transparent;
+    } */
 
 }
  /* formulario comercio y usuario*/

@@ -53,28 +53,25 @@
     ?>
     </section>
     
+    
+    <section class="slick-carousel container_top3">
     <h3>Top 3</h3>
-    <section class="slick-carousel">
     <?php 
     if(isset($top3_categorias)){
 
         foreach($top3_categorias as $i => $categoria){
             print_r($top3_categorias[$i]);
-        //     echo '
+            echo '
                 
-        //         <div class="fotoContainer">
+                <div class="fotoContainer">
                 
-        //         <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
+                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
         
-        //             <img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat">
-        
-        //         <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
-        
-        //         <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
+                <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
                 
-        //         </div>
+                </div>
             
-        //     ';
+            ';
         }
     }
     ?>
