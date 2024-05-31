@@ -54,7 +54,7 @@
     </section>
     
     
-    <section class="slick-carousel container_top3">
+    <section class="container_top3">
     <h3>Top 3</h3>
     <?php 
     if(isset($top3_categorias)){
@@ -63,21 +63,31 @@
             // echo "<pre>";
             // print_r($categoria['cod_categoria']);
             // echo "</pre>";
-            echo '
+            echo '<div class="fotoContainer">';
+                echo '
+                    
+                    <div class="fotoContainer">
+                    
+                        <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
+            
+                        <h4>'. $categoria['nombre_categoria']  . ' </h4>
+                    
+                    </div>
+                ';
+                foreach($categoria as $i => $value){
+                    echo "<pre>";
+                    print_r($value);
+                    echo "</pre>";
+                    // echo '
+                    //     <div class="fotoContainer">
+                        
+                    //         <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
                 
-                <div class="fotoContainer">
-                
-                    <img src="'. base_url()  . 'img/categorias/catM-'. $categoria['cod_categoria'] . '.png" title="'. $categoria['nombre_categoria'] . ' " class="imgCat">
-        
-                    <h4>'. $categoria['nombre_categoria']  . ' </h4>
-                
-                </div>
-            ';
-            foreach($categoria as $i){
-                echo "<pre>";
-                print_r($i);
-                echo "</pre>";
-            }
+                    //         <h4>'. $categoria['nombre_categoria']  . ' </h4>
+                        
+                    //     </div>
+                    // ';
+                }
         }
     }
     ?>
@@ -89,6 +99,14 @@
         $('.carousel_Categorias').slick({
             dots: true, // puntitos
             slidesToShow: 1, // fotos que se pintan a la vez
+            // prevArrow:".flechaAtras",
+            // nextArrow:".flechaDelante"
+        });
+
+        $('.container_top3').slick({
+            // dots: true, // puntitos
+            slidesToShow: 1, // fotos que se pintan a la vez
+            centerMode:true,
             // prevArrow:".flechaAtras",
             // nextArrow:".flechaDelante"
         });
