@@ -50,9 +50,19 @@ li{
     --gris_claro:#f7f7f7;
     --error: #e74c3c;
     --advertencia: #eca069;
+
 }
 
-
+.div_span{
+    height: 20px;
+    width: 100%;
+}
+.bien{
+    color:var(--azul_verify);
+}
+.error{
+    color: var(--error);
+}
 
 a{
     text-decoration: none;
