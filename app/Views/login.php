@@ -4,8 +4,8 @@
     $sesion = session() -> get("sesionIniciada");
     if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2) {
         echo "Sesion iniciada";
-    }else{
-        echo "Usuario o contraseña incorrectos";
+    }elseif(isset($errorMail)){
+        echo $errorMail;
     }
 
 ?>

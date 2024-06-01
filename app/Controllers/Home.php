@@ -602,7 +602,6 @@ class Home extends BaseController{
                 // La contraseña es correcta
                 $maleta_login['todoCorrecto'] = "Sesión iniciada";
                 $sesion_iniciada = true;
-                echo "todo correcto<br>";
 
             } else {
                 // La contraseña es incorrecta
