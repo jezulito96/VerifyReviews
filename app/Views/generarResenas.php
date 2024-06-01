@@ -43,7 +43,7 @@
 
         <div id="containerEmailQr" class="invisible">
             <h5>Correo electrónico del cliente</h5>
-            <input class="inputs emailQr" style="padding-left:10px" type="email" placeholder="Correo electrónico" name="emailQr" required >
+            <input class="inputs emailQr" style="padding-left:10px" type="email" placeholder="Correo electrónico" name="emailQr">
         </div>
 
         <div id="numeroQrContainer" class="invisible">
@@ -65,9 +65,9 @@
 <?php
     }else{
         
-        if(isset($imagenQr) && $imagenQr != false) echo "<div class='qrcode-container'>" . $imagenQr ."</div>";
+        if(isset($imagenQr) && $imagenQr != false) echo "<h5>Escanea el código Qr</h5><div class='qrcode-container'>" . $imagenQr ."</div>";
 
-        if(isset($resultadoEmail) && $resultadoEmail != false) echo '<h3 class="bien">'. $resultadoEmail . '</h3>';
+        if(isset($resultadoEmail) && $resultadoEmail != false) echo '<h5 class="bien">'. $resultadoEmail . '</h5>';
 
 ?><?php
         
