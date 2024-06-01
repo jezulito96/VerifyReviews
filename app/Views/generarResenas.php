@@ -3,17 +3,18 @@
     if(!isset($resultadoEmail) && !isset($imagenQr)){
 ?>
 
-<h3>Genera códigos Qr</h3>
-<p>Para que tus clientes puedan opinar sobre tu negocio</p>
-<small>
-    Cada reseña será unica, de esta manera protegemos tu negocio. Nos aseguramos de que las reseñas que recibe tu negocio sean de tus clientes.
-</small>
+
 <div class="containerformGenerarResena">
+    <h3>Genera códigos Qr</h3>
+    <p class="bien">Solo tus clientes puedan opinar sobre tu negocio</p>
+    <small class="info_generar_resenas">
+        Cada reseña será unica, de esta manera protegemos tu negocio. Nos aseguramos de que las reseñas que recibe tu negocio sean de tus clientes.
+    </small>
     <form action="setGenerarResenas" method="post" class="formLogin">
 
         <!-- Añadir info para el usuario -->
-        <label>¿Como quieres generar los codigos?</label> 
-        <select name="accionQr" id="accionQr" >
+        <h4>¿Como quieres generar los codigos?</h4> 
+        <select class="inputs" name="accionQr" id="accionQr" >
             <option value="1">Autom&aacute;tico</option>
             <option value="2">Email</option>
             <option value="3">PDF</option> 
@@ -21,8 +22,8 @@
         </select>
 
         <div id="estiloQrContainer" >
-            <label>Elige el estilo del Qr</label>
-            <select name="estiloQr" id="estiloQr">
+            <h4>Elige el estilo del Qr</h4>
+            <select class="inputs" name="estiloQr" id="estiloQr">
                 <option value="0">Verify Reviews</option>
                 <option value="1">Morado azulado</option>
                 <option value="2">Tonos verdes</option>
@@ -56,7 +57,7 @@
             </select>
         </div>
         
-        <input type="submit" name="generaQr" value="Generar codigos">
+        <input class="btn_enviar_largo" type="submit" name="generaQr" value="Generar codigos">
     </form>
 
 </div>
