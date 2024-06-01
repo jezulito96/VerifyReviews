@@ -128,7 +128,7 @@
 
   
 
-  <h1 class="tituloResenaContent">Escribe tu reseña</h1>
+  <h3 class="tituloResenaContent">Escribe tu reseña</h3>
 
   <div class="resenaContainer" id="resenaContainer">
 
@@ -136,13 +136,12 @@
 
       <div class="fotoPerfilNegocio" id="fotoPerfilNegocio">
         <!-- cambiar url -->
-        <img class="imagenNegocio" src="<?php echo base_url() . $negocio['foto_principal'] ;?>" alt="Imagen negocio" title="Imagen negocio" />
+        <img class="imagenNegocio" src="<?php echo base_url() . "images/n/n_" . $negocio['cod_negocio'] . "/img_negocio/" . $negocio['foto_principal'] ;?>" alt="Imagen negocio" title="Imagen negocio" />
       </div>
 
       <div class="datosNegocio" id="datosNegocio">
 
         <div class="nombreNegocio" id="nombreNegocio">
-          <!-- La terraza del caballo blanco -->
           <?php echo $negocio['nombre'] ;?>
         </div>
 

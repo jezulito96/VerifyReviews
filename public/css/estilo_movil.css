@@ -1092,7 +1092,7 @@
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-    /* ///////////    INICIO SESION O NICKNAME    /////////// */
+/* ///////////    INICIO SESION O NICKNAME    /////////// */
 
     main{
         min-height: 400px;
@@ -1137,9 +1137,9 @@
     
   /* ///////////    SET RESENA    /////////// */
 
-    .tituloResenaContent{
+    /* .tituloResenaContent{
         padding-left: 20px;
-    }
+    } */
     .resenaContainer {
         box-sizing: border-box;
         margin-bottom: 5px;
