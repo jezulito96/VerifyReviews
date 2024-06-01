@@ -958,9 +958,12 @@
 
     /* para el input file */
     .file-upload-wrapper {
-        position: relative;
+        /* position: relative;
         width: 250px;
+        text-align: center; */
         text-align: center;
+        display: flex;
+        width: 100%;
     }
     
     /* Ocultar el input de tipo file original */
