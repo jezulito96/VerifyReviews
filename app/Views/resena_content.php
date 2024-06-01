@@ -239,7 +239,7 @@
   </div>
   
   
-  <input type="submit" value="Enviar" />
+  <input class="btn_enviar_largo" type="submit" value="Enviar" />
 
 </form>
 
