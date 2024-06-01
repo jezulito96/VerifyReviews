@@ -180,7 +180,7 @@
 
         <div class="areaTexto">
 
-          <input type="text" name="textoTitulo" class="textoTitulo" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Velada perfecta en pareja ...">
+          <input type="text" name="textoTitulo" class="inputs" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Describe aquí brevemente tu experiencia">
           <div id="infoInputs1" class="infoInputs"></div>
 
         </div>
