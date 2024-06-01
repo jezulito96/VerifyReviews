@@ -534,10 +534,11 @@
 }
 .nick_opinion {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 40%;
     height: 40px;
+    padding-top: 10px;
 }
 .nick_opinion > img {
     width: 40px;
@@ -551,10 +552,11 @@
 
 .resultado_opinion{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 40%;
     height: 40px;
+    margin-top: 10px;
 }
 
 .img_opinion_usu{

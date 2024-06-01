@@ -86,7 +86,7 @@
                             echo '<div class="resultado_opinion">';
                                 // NOTA MEDIA DE LAS RESEÑAS DEL NEGOCIO
 
-                                echo '<i class="fas fa-map-marked-alt iconosColor"></i>';
+                                echo '<i class="fa-regular fa-square-check" style="color: #51a5d9;"></i>';
                                 // imagen de check del logo
                                 echo '<div class="nota_media">4,2</div>';
 
