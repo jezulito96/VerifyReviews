@@ -519,7 +519,7 @@
     .infoContainerNegocio > div{
         padding-top: 10px;
         margin-bottom: 5px ;
-        border-bottom: 1px solid #ccc;
+        /* border-bottom: 1px solid #ccc; */
     }
 
     .content_opiniones >h3 {
