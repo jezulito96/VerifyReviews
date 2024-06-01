@@ -1083,6 +1083,11 @@
         font-weight: bold;
     }
     
+    label[for="fotos"],
+    label[for="fotoPrincipal"]{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
 }
 
