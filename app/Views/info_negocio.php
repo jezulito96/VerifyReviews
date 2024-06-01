@@ -37,7 +37,7 @@
 
         <div class="containerIcono container_opiniones">
         <i class='far fa-heart icono-corazon'></i>
-            <span id="opiniones">Opiniones</span>
+            <span id="opiniones">Like</span>
         </div>
         <div class="containerIcono container_opiniones">
             <i class="fas fa-comment iconosColor"></i>
