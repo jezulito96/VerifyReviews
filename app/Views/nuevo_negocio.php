@@ -89,7 +89,22 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     $(document).ready(function () {
-        
+        $('#fotos').change(function() {
+            var fileName = $(this).val().split('\\').pop();
+            if (fileName) {
+                $('#fileLabel').text(fileName);
+            } else {
+                $('#fileLabel').text('Foto de Perfil');
+            }
+        });
+        $('#fotosPrincipal').change(function() {
+            var fileName = $(this).val().split('\\').pop();
+            if (fileName) {
+                $('#fileLabel').text(fileName);
+            } else {
+                $('#fileLabel').text('Foto de Perfil');
+            }
+        });
         $('input[type="password"]').on('input', function() {
         var contrasena1 = $("#contrasenaNegocio").val();
         var fuerza = 0;

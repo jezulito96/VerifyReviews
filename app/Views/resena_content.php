@@ -54,7 +54,7 @@
 
   <script>
       $(document).ready(function(){
-
+      
         var opcion1 = $("#opcion1");
         var opcion2 = $("#opcion2");
 
@@ -248,7 +248,16 @@
   }
 
 ?>
-
+<script>
+  $('#fotos_resena').change(function() {
+            var fileName = $(this).val().split('\\').pop();
+            if (fileName) {
+                $('#fileLabel').text(fileName);
+            } else {
+                $('#fileLabel').text('Foto de Perfil');
+            }
+        });
+</script>
 <!-- script para pintar los ticks verdes de una nueva reseña -->
 <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
 
