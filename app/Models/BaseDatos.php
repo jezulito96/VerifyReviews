@@ -423,7 +423,7 @@ class BaseDatos extends Model
 
     public function getRanking($cod_categoria){
 
-        $orden = "SELECT cod_negocio, SUM(calificacion) / COUNT(calificacion) as nota_media 
+        $orden = "SELECT cod_negocio, SUM(calificacion) / COUNT(calificacion),foto_principal,nombre as nota_media 
         FROM estadisticas_resena 
         WHERE categoria_negocio=?
         GROUP BY cod_negocio 

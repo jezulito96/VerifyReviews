@@ -214,6 +214,8 @@ class Master {
                 ];
 
                 $ranking = $baseDatos->getRanking($categoria->getCodCategoria());
+                
+
                 $array_aux['ranking'] = $ranking;
 
                 $lista_estadisticas[$categoria->getCodCategoria()] = $array_aux;
