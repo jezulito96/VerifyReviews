@@ -27,7 +27,11 @@
             <div id="resultado_contrasena"></div>
 
             <!-- <label for="fotoPerfil">Foto de Perfil:</label> -->
-            <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
+            <!-- <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil"> -->
+            <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil">
+            <label for="fotoPerfil" class="custom-file-upload">
+                Foto de Perfil
+            </label>
 
             <!-- <label for="ciudad">Ciudad:</label> -->
             <input class="inputs" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
