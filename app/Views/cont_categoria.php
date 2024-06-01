@@ -8,7 +8,7 @@
             ?>
             <div class="titulo_negocio_categoria" >
                 <?php  
-                    echo $negocio -> getNombre();
+                    echo "<h4>".$negocio -> getNombre(). "<h4>";
                 ?>
             </div>
             
