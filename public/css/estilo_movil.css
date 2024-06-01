@@ -978,7 +978,7 @@
     .containerNegocioForm input[type="tel"],
     .containerNegocioForm input[type="url"],
     .containerNegocioForm input[type="file"],
-    .containerNegocioForm select ,
+    .containerNegocioForm select {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
