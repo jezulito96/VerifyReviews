@@ -1573,8 +1573,9 @@
     }
 
     /*////////////// VALORACION/////////// */
-    .titulos{
+    .titulos h5{
         margin-left: 20px;
+        margin-top: 10px;
     }
     .valoracion{
         padding:10px;
@@ -1640,11 +1641,13 @@
     } */
 
     .textoTituloArea{
-        width: 80%;
-        min-height: 50px;
-        margin-left: 20px;
+        width: 97%;
+        min-height: 72px;
+        margin-left: 0px;
         line-height: 20px;
         padding-left: 5px;
+        border-radius: 5px;
+        border: 1px solid var(--azul_verify);
     }
 
     .subtitulo{
