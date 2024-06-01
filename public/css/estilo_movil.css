@@ -608,8 +608,7 @@
 
 
 /* ///// botones de div opinion */
-.popup,
-.popup2 {
+.popup, .popup2 {
     display: none;
     position: fixed;
     left: 50%;
@@ -621,20 +620,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.contenido_popup{
-    background-color: #3d3b3bf3;
+.contenido_popup, .contenido_popup2 {
     padding: 20px;
     border-radius: 5px;
-    /* position: relative; */
-}
-.contenido_popup2{
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
 }
 
-.contenido_popup{
+.contenido_popup {
+    background-color: #3d3b3bf3;
     width: 80%;
     height: 300px;
     overflow-y: scroll;
@@ -642,17 +634,19 @@
     scrollbar-color: rgb(137, 207, 232);
 }
 
-.contenido_popup2{
+.contenido_popup2 {
+    background-color: #fff;
     min-height: 60px;
     word-wrap: break-word;
     width: 90%;
 }
-.informacion_popup{
+
+.informacion_popup {
     width: 100%;
     text-align: center;
 }
-.boton_cerrar,
-.boton_cerrar2 {
+
+.boton_cerrar, .boton_cerrar2 {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -660,11 +654,11 @@
     cursor: pointer;
 }
 
-.imgs_resenas{
+.imgs_resenas {
     width: 80%;
     margin-bottom: 30px;
     border-radius: 5px;
-}               
+}
 
     /*////////////////    MENU CON SCROLL DE INFO NEGOCIO ////////////////*/
     .sliderInfoNegocio{
