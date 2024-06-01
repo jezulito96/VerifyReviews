@@ -92,7 +92,7 @@
       });
   </script>
 
-<p?php
+<?php
     if(isset($errorEmail)){
       echo $errorEmail;
     }
