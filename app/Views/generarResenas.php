@@ -13,7 +13,7 @@
     <form action="setGenerarResenas" method="post" class="formLogin">
 
         <!-- Añadir info para el usuario -->
-        <h5>¿Cómo generar los códigos Qr?</h5> 
+        <h5>¿Cómo quieres generar Qr?</h5> 
         <select class="inputs" name="accionQr" id="accionQr" >
             <option value="1">Autom&aacute;tico</option>
             <option value="2">Email</option>
