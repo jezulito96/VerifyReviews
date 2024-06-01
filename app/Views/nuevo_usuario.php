@@ -1,51 +1,48 @@
-<?php
-    if(isset($formulario_correcto)){
-        echo $formulario_correcto;
-    }else{
-?>
-    <h1>Crea tu usuario</h1>
-    <h4>Rellena el formulario para ver tus antiguas reseñas</h4>
-    
+<h1>Unete a Verify Reviews</h1>
+<div class='div_span'>
     <?php
-        if(isset($error)) echo $error;
+        if(isset($formulario_correcto)){
+            echo "<p class='bien'>". $formulario_correcto . "</p>";
+        }else{
+        if(isset($error)) echo "<p class='error'>". $error . "</p>";
     ?>
-
+</div>
     <div class="containerUsuarioForm">
         <form action="setUsuario" method="post" id="formularioUsuario" enctype="multipart/form-data" >
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <!-- <label for="nombre">Nombre:</label> -->
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
 
-            <label for="nickname">Nickname:</label>
-            <input type="text" id="nickname" name="nickname" required>
+            <!-- <label for="nickname">Nickname:</label> -->
+            <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
 
-            <label for="contrasenaUsuario">Contraseña</label>
-            <input type="password" id="contrasenaUsuario" name="contrasenaUsuario" required>
+            <!-- <label for="contrasenaUsuario">Contraseña</label> -->
+            <input type="password" id="contrasenaUsuario" name="contrasenaUsuario" placeholder="Contraseña" required>
             
-            <label for="contrasenaUsuario2">Confirmar contraseña</label>
-            <input type="password" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
+            <!-- <label for="contrasenaUsuario2">Confirmar contraseña</label> -->
+            <input type="password" placeholder="Confirmar contraseña" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
             <div id="resultado_contrasena"></div>
 
-            <label for="fotoPerfil">Foto de Perfil:</label>
-            <input type="file" id="fotoPerfil" name="fotoPerfil">
+            <!-- <label for="fotoPerfil">Foto de Perfil:</label> -->
+            <input type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
 
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" id="ciudad" name="ciudad" required>
+            <!-- <label for="ciudad">Ciudad:</label> -->
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
 
-            <label for="pais">País:</label>
-            <input type="text" id="pais" name="pais" required>
+            <!-- <label for="pais">País:</label> -->
+            <input type="text" id="pais" name="pais" placeholder="País" required>
 
-            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <!-- <label for="fechaNacimiento">Fecha de Nacimiento:</label> -->
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" >
+            <!-- <label for="telefono">Teléfono:</label> -->
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
 
             <input type="submit" value="Registrarse" id="registroUsuario">
             <div id="error_direccion" ></div>

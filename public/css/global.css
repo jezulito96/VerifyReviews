@@ -53,6 +53,9 @@ li{
 
 }
 
+input:required{
+    border: var(--error);
+}
 .div_span{
     height: 20px;
     width: 100%;
