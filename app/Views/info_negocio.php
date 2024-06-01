@@ -218,9 +218,9 @@
 </script>
         
         <div class="div_llamar">
-            <h3>
+            <h4>
                     Contacto
-            </h3>
+            </h4>
             <div id="content_llamar">
                 <div class="icono_llamar">
                     <i class="fas fa-phone"></i>
@@ -233,9 +233,9 @@
         </div>
 
         <div class="div_web">
-            <h3>
+            <h4>
                     Sitio web
-            </h3>
+            </h4>
             <div id="content_web">
                 <div class="icono_web">
                     <i class="fas fa-globe"></i>
@@ -249,9 +249,9 @@
 
         <div class="div_redes">
 
-            <h3>
+            <h4>
                     Redes sociales
-            </h3>
+            </h4>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="content_redes">
                 <div class="icono_redes_sociales">
                     <i class="fa-brands fa-square-x-twitter"></i>
@@ -291,9 +291,9 @@
 
 
     <div id="content_mapa">
-        <h3>
+        <h4>
                 Localización
-        </h3>
+        </h4>
         <div class="head_mapa">
             <div class="icono_mapa">
                 <i class="fas fa-map-marker-alt"></i>

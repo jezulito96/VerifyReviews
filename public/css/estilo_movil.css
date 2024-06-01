@@ -697,7 +697,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .div_llamar h3{
+    .div_llamar h4{
         width: 100%;
     }
     #content_llamar{
@@ -734,7 +734,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .div_web h3{
+    .div_web h4{
         width: 100%;
     }
     #content_web{
@@ -775,7 +775,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .div_redes h3{
+    .div_redes h4{
         width: 100%;
     }
     #content_redes{
@@ -815,7 +815,7 @@
         justify-content: center;
         flex-wrap: wrap;
     }
-    #content_mapa h3{
+    #content_mapa h4{
         width: 100%;
     }
     .head_mapa{
