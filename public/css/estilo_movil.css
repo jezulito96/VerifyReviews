@@ -951,13 +951,12 @@
         margin-bottom: 0px;
         margin-top: 10px;
     }
-    .containerUsuarioForm input[type="file"]{
+    /* .containerUsuarioForm input[type="file"]{
         border: none;
         border-radius: 5px;
         background-color: var(--azul_verify);
         color: white;
-        font-weight: bold;
-    }
+    } */
 
     /* para el input file */
     .file-upload-wrapper {
@@ -983,7 +982,7 @@
         display: flex;
         padding: 10px;
         cursor: pointer;
-        color: var(--azul_verify);
+        color: var(--gris);
         background-color: white;
         border: 1px solid var(--azul_verify);
         border-radius: 5px;
@@ -997,6 +996,17 @@
         background-color: #ffffff;
         color: #51a5dd;
         border-color: #51a5dd;
+    }
+
+    .btn_enviar_largo{
+        width:100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
     }
 }
 

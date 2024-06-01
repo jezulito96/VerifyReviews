@@ -50,7 +50,7 @@
             <!-- <label for="telefono">Teléfono:</label> -->
             <input class="inputs" type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
 
-            <input class="inputs" type="submit" value="Registrarse" id="registroUsuario">
+            <input class="btn_enviar_largo" type="submit" value="Registrarse" id="registroUsuario">
             <div id="error_direccion"></div>
         </form>
     </div>
