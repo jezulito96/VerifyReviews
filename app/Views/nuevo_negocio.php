@@ -27,6 +27,7 @@
             <label for="email">*Email:</label>
             <input class="inputs" type="email" id="email" name="email"  required>
             <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
+
             <label for="calle">*Dirección:</label>
             <input class="inputs" type="text" id="calle" name="calle" placeholder="C/ Calle Juan Carlos, 15" required>
 
@@ -40,16 +41,16 @@
             <input class="inputs" type="text" id="telefonoNegocio" name="telefonoNegocio" required>
 
             <label for="fotos">Fotos:</label>
-            <input class="inputs" type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
+            <input  type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
 
             <label for="fotoPrincipal">*Fotos principal:</label>
-            <input class="inputs" type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
+            <input  type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
 
             <label for="sitio_web">Sitio Web:</label>
             <input class="inputs" type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" required>
+            <select class="inputs" id="categoria" name="categoria" required>
                 <?php
                 if (isset($listaCategorias)) {
                     foreach ($listaCategorias as $i => $cat) {
@@ -65,7 +66,7 @@
             <label for="nombreTitular">Nombre del titular:</label>
             <input class="inputs" type="text" id="nombreTitular" name="nombreTitular" required>
 
-            <input class="inputs" type="submit" class="btn_enviar_largo" value="Registrarse" id="registroNegocio">
+            <input type="submit" class="btn_enviar_largo" value="Registrarse" id="registroNegocio">
             <div id="error_direccion"></div>
         </form>
     </div>
