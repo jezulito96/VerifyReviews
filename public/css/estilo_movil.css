@@ -1010,8 +1010,14 @@
     }
 }
 
-/* ////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
+                            /*   FORMULARIO NEGOCIO  */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media (max-width: 500px) {
  /* formulario comercio y usuario*/
     .containerNegocioForm{
         width: 90vw;
@@ -1020,12 +1026,16 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .containerNegocioForm label {
+    .containerUsuarioForm h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    /* .containerNegocioForm label {
         display: block;
         margin-bottom: 5px;
         color: #274C77;
-    }
-
+    } */
+/* 
     .containerNegocioForm input[type="text"],
     .containerNegocioForm input[type="email"],
     .containerNegocioForm input[type="tel"],
@@ -1053,7 +1063,9 @@
 
     .containerNegocioForm #registroNegocio:hover {
         background-color: #6096BA;
-    } 
+    }  */
+
+}
 /* ///////////////////////////////////////////// */
     /* 
     .containerformGenerarResena {

@@ -1,16 +1,17 @@
-<h1>Únete a nosotros</h1>
-<h4>Rellena el formulario para recibir tus reseñas</h4>
-
+<h1>Únete a Verify Reviews</h1>
+<div class='div_span'>
 <?php
 
     if(isset($form_correcto)){
-        echo $form_correcto;
+        echo "<p class='bien'>".$form_correcto ."</p>";
     }else{
+
+        if(isset($error)) echo "<p class='error'>" .$error . "</p>";
+        
 ?>
+</div>
     <div class="containerNegocioForm">
-        <?php
-            if(isset($error)) echo $error;
-        ?>
+        
         <form action="setNegocio" method="post" id="formularioNegocio" enctype="multipart/form-data" >
 
             <label for="nombreNegocio">*Nombre del negocio:</label>
