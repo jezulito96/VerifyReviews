@@ -5,7 +5,7 @@
         $sesion = session() -> get("sesionIniciada");
         if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2) {
             $usuario = session() -> get('usuario_en_sesion');
-            echo '<h3 class="bien" style="padding:5px;">Bienvenido, ' . $usuario['nombre'] . '</h3>';
+            echo '<h3 class="bien" style="padding:5px;">Bienvenido,</br> ' . $usuario['nombre'] . '</h3>';
         }else{
             echo '<h3>Login</h3>';
         }
@@ -13,11 +13,7 @@
     
     <div class="div_span">
         <?php 
-            $sesion = session() -> get("sesionIniciada");
-            if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2) {
-                $usuario = session() -> get('usuario_en_sesion');
-                echo '<p class="bien" style="padding:5px;">Bienvenido, ' . $usuario['nombre'] . '</p>';
-            }elseif(isset($errorEmail)){
+            if(isset($errorEmail)){
                 echo '<p class="error">' . $errorEmail . '</p>';
             }
         ?>
