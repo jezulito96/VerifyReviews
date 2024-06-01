@@ -7,7 +7,7 @@
             $sesion = session() -> get("sesionIniciada");
             if(isset($sesion) && $sesion == 1 || isset($sesion) && $sesion == 2) {
                 $usuario = session() -> get('usuario_en_sesion');
-                var_dump($nombreUsuario);
+                var_dump($usuario);
                 echo '<p class="bien">Bienvenido, </p>';
             }elseif(isset($errorEmail)){
                 echo '<p class="error">' . $errorEmail . '</p>';
