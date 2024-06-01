@@ -68,8 +68,8 @@
 
                 echo '<div class="fotoContainer">';
                     
-                    foreach($categoria as $i => $value){
-                        print_r($value['nota_media']);
+                    foreach($categoria['ranking'] as $negocio){
+                        echo $negocio['cod_negocio'] ."<br>";
                     }
                 
                 echo '</div>';
