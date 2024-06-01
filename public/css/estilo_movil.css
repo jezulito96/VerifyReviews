@@ -729,16 +729,15 @@
         width: 100%;
         height: 100px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: ce;
         flex-direction: row;
     }
-    .container_llamar{
-        width: 90%;
+    /* .container_llamar{
+        width: 100%;
         height: 100px;
         display: flex;
         flex-direction: row;
-    }
+    } */
     .icono_llamar{
         width: 20%;
         height: 100%;
