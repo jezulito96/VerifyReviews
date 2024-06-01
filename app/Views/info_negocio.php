@@ -223,7 +223,7 @@
             </h3>
             <div id="content_llamar">
                 <div class="icono_llamar">
-                    <i class="fas fa-phone iconosColor"></i>
+                    <i class="fas fa-phone"></i>
                 </div>
                     
                 <div id="telefono_llamar">
@@ -238,7 +238,7 @@
             </h3>
             <div id="content_web">
                 <div class="icono_web">
-                    <i class="fas fa-envelope iconosColor"></i>
+                    <i class="fas fa-phone"></i>
                 </div>
                     
                 <div id="info_web">
