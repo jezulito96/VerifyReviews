@@ -41,7 +41,7 @@
             <input class="inputs" type="text" id="telefonoNegocio" name="telefonoNegocio" required>
 
             <label for="fotos">Fotos:</label>
-            <input  type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
+            <!-- <input  type="file" id="fotos" name="fotos[]" accept="image/*" multiple > -->
             <div class="file-upload-wrapper">
                 <input class="inputs" type="file" id="fotos" name="fotos[]" accept="image/*" multiple>
                 <label for="fotoPerfil" class="custom-file-upload" id="fileLabel">
