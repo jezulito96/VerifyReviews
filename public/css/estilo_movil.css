@@ -1616,6 +1616,10 @@
 
 /* /////////////////////  RESEÑAS */
 
-.div_tus_resenas{
+.div_tus_resenas {
 
+}
+
+.div_tus_resenas .info_opiniones{
+    margin-bottom: 20px;
 }
