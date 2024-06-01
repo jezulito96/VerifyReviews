@@ -1103,8 +1103,8 @@
     #containerNickname{
         margin-bottom: 0px;
     }
-    
-    .botones_enviar{
+
+    .botones_enviar_Resena{
         display: flex;
         justify-content: space-around;
         align-items: center;        
@@ -1112,7 +1112,7 @@
         width: 100%;
     }
 
-    .btn_enviar2{
+    .btn_enviar2_Resena{
         width: 40%;
       padding: 10px;
       margin-top: 20px;
@@ -1124,7 +1124,7 @@
       font-size: 14px;
     }
 
-    .btn_enviar{
+    .btn_enviar_Resena{
         width: 40%;
         padding: 10px;
         margin-top: 20px;

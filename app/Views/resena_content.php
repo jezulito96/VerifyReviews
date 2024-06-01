@@ -22,9 +22,9 @@
         <input class="inputs" type="email" name="email" id="email" placeholder="Email" required >
         <input class="inputs" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
 
-        <div class="botones_enviar">
-          <input class="btn_enviar" type="submit" name="submit_sesion" id="submit_sesion" value="Iniciar sesión" >
-          <input class="btn_enviar2" type="button" id="opcion2" value="Continuar sin iniciar sesión">
+        <div class="botones_enviar_Resena">
+          <input class="btn_enviar_Resena" type="submit" name="submit_sesion" id="submit_sesion" value="Iniciar sesión" >
+          <input class="btn_enviar2_Resena" type="button" id="opcion2" value="Continuar sin iniciar sesión">
         </div>
       </form>
     </div>  
@@ -39,10 +39,10 @@
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
 
         <input class="inputs" type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-        
-        <div class="botones_enviar">
-          <input class="btn_enviar" type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
-          <input class="btn_enviar2" type="button" id="opcion1" value="Iniciar sesion">
+
+        <div class="botones_enviar_Resena">
+          <input class="btn_enviar_Resena" type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
+          <input class="btn_enviar2_Resena" type="button" id="opcion1" value="Iniciar sesion">
         </div>
         
     
