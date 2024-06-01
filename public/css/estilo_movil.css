@@ -956,6 +956,7 @@
         font-weight: bold;
     }
 
+    /* para el input file */
     .file-upload-wrapper {
         position: relative;
         width: 250px;
