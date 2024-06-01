@@ -547,7 +547,11 @@
 }
 
 .fecha_opinion{
-
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 20px;
 }
 
 .resultado_opinion{
