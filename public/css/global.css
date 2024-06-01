@@ -54,7 +54,7 @@ li{
 }
 
 input:required{
-    border: var(--error);
+    border: 1px solid var(--error);
 }
 .div_span{
     height: 20px;

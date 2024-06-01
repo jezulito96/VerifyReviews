@@ -24,7 +24,7 @@
             
             <!-- <label for="contrasenaUsuario2">Confirmar contraseña</label> -->
             <input class="inputs" type="password" placeholder="Confirmar contraseña" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
-            <div id="resultado_contrasena"></div>
+            <div id="resultado_contrasena" class="div_span"></div>
 
             <!-- <label for="fotoPerfil">Foto de Perfil:</label> -->
             <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
