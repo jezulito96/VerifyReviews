@@ -3,7 +3,33 @@
         if (isset ($head_content)) echo $head_content;
     ?>
     <body >
-        
+                <!-- flecha flotante para subir arriba -->
+        <div class="flechaArriba" style="display:none;">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <script>
+            $(document).ready(funtion(){
+                $(window).scroll(function() {
+                    var alturaTotal = $(document).height();
+                    var alturaPantalla = $(window).height();
+                    var scroll = $(window).scrollTop();
+
+                    // console.log("altura total" + alturaTotal);
+                    // console.log("altura pant" + alturaPantalla);
+                    // console.log("scrol" + scroll);
+
+                    if (scroll + 100 <= alturaPantalla) {
+                        $('.flechaArriba').hide();
+                    } else {
+                        $('.flechaArriba').show();
+                    }
+                });
+                $('.flechaArriba').click(function() {
+                    $('html, body').animate({ scrollTop: 0 }, 'slow');
+                    // return false;
+                });
+            });
+        </script>
         <header id="header" class="header">
 
             <?php if (isset ($header_content)) echo $header_content; ?>
