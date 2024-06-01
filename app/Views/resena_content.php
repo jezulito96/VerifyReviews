@@ -92,7 +92,7 @@
       });
   </script>
 
-<?php
+<p?php
     if(isset($errorEmail)){
       echo $errorEmail;
     }
@@ -147,7 +147,7 @@
 
         <div class="direccionNegocio" id="direccionNegocio">
           <!-- Av. Valladolid, 106, 42005 Soria -->
-          <?php echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?>
+          <p><?php echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?> </p>
         </div>
 
       </div>
