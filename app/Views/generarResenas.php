@@ -42,8 +42,8 @@
 
 
         <div id="containerEmailQr" class="invisible">
-            <h5>Correo electrónico del cliente </h5>
-            <input class="inputs" type="email" name="emailQr" class="emailQr" />
+            <h5>Correo electrónico del cliente</h5>
+            <input class="inputs" type="email" placeholder="Correo electrónico" name="emailQr" class="emailQr" >
         </div>
 
         <div id="numeroQrContainer" class="invisible">
@@ -57,7 +57,7 @@
             </select>
         </div>
         
-        <input class="btn_enviar_largo" type="submit" name="generaQr" value="Generar codigos">
+        <input class="btn_enviar_largo" type="submit" name="generaQr" value="Generar">
     </form>
 
 </div>
