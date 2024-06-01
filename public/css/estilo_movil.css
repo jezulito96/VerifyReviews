@@ -1164,6 +1164,7 @@
 
     .imagenNegocio{
         width: 80%;
+        margin-bottom: 43px;
         border-radius: 10px;
         box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 23px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
