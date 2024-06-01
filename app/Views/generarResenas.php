@@ -94,7 +94,7 @@
         
         $("#accionQr").change(function(){
             var val = $(this).val();
-            console.log("acccion " + val);
+            // console.log("acccion " + val);
 
             borrarClases();
 
