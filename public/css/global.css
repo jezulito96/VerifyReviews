@@ -133,24 +133,5 @@ small{
     border: 1px solid var(--azul_claro);
 }
 
-.btn_enviar{
-    width: 45%;
-    padding: 10px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--azul_verify);
-    color: white;
-    font-weight: bold;
-}
 
-.btn_enviar2{
-    width: 45%;
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid var(--azul_claro);
-    border-radius: 5px;
-    background-color: white;
-    color: var(--azul_verify);
-    font-weight: bold;
-}
+
