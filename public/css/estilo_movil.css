@@ -1586,7 +1586,20 @@
     border: 1px solid var(--azul_claro);
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    padding: 10px;
 }
 
+.container_ranking{
+    margin: 0px auto;
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--azul_claro);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    padding: 10px;
+}
 
 

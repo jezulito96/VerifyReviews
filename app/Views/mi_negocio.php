@@ -15,7 +15,20 @@
         
     ?>
     <h5>Ranking</h5>
-    <?php print_r($estadisticas['ranking']); ?>
+    <?php 
+        
+
+            foreach($estadisticas['ranking'] as $i => $posicion){
+                echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" class="container_ranking">';
+
+                    echo '<h1 class="bien">' . $i .'</h1>';
+                    echo '<h5>'. $posicion['nombre'] .' </h5>';
+
+                echo '</a>';
+            }
+
+        
+    ?>
 
 
     <h5>Tus reseñas</h5>
