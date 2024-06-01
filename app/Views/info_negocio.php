@@ -277,7 +277,7 @@
                     <i class="fab fa-instagram iconosColor"></i>
                 </div>
                     
-                <div id="info_redes_sociales">
+                <div class="info_redes_sociales">
                     Instagram
                 </div>
             </a>
