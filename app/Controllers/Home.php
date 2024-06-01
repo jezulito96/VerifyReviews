@@ -129,7 +129,7 @@ class Home extends BaseController{
 
         $resenaRepetida = $baseDatos -> comprobarDuplicidad($txt_descripccion);
         if($resenaRepetida == true){
-            $maleta_resenaContent['error'] = "";
+            $maleta_resenaContent['error'] = "Tu reseña ya ha sido enviada";
             $maleta['head_content'] = view('head_content');
             $maleta['header_content'] = view('header_content');
             $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
