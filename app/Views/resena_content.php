@@ -179,7 +179,7 @@
 
         <div class="areaTexto">
 
-          <input type="text" name="textoTitulo" class="inputs" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Describe aquí brevemente tu experiencia">
+          <input type="text" name="textoTitulo" class="inputs textoTitulo" minlenght="50" maxlength="100" title="Título de la reseña" required placeholder="Describe aquí brevemente tu experiencia">
           <div id="infoInputs1" class="infoInputs"></div>
 
         </div>
@@ -193,7 +193,7 @@
 
         <div class="areaTexto">
 
-          <textarea class="textoTituloArea" name="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
+          <textarea class="textoTituloArea textoTituloArea" name="textoTituloArea" minlenght="170" maxlength="500" required placeholder="Cuenta como fué tu experiencia para otros usuarios"></textarea>
           <div id="infoInputs2" class="infoInputs"></div>
 
         </div>
