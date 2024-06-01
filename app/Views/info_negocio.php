@@ -321,21 +321,7 @@
         });
 
         
-        $(window).scroll(function() {
-            var alturaTotal = $(document).height();
-            var alturaPantalla = $(window).height();
-            var scroll = $(window).scrollTop();
 
-            // console.log("altura total" + alturaTotal);
-            // console.log("altura pant" + alturaPantalla);
-            // console.log("scrol" + scroll);
-
-            if (scroll + 100 <= alturaPantalla) {
-                $('.flechaArriba').hide();
-            } else {
-                $('.flechaArriba').show();
-            }
-        });
 
         
     });
