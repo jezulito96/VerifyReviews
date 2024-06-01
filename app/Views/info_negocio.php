@@ -219,7 +219,9 @@
         
 
         <div id="content_llamar">
-            
+            <h3>
+                Contacto
+            </h3>
             <div class="icono_llamar">
                 <i class="fas fa-phone iconosColor"></i>
             </div>
@@ -227,7 +229,7 @@
             <div id="telefono_llamar">
                     <a href="tel:<?php echo $negocio -> getTelefonoNegocio(); ?>" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
             </div>
-            
+
         </div>
 
         <div id="content_web">
