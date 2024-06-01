@@ -58,7 +58,7 @@
 ?>
 <script>
     $(document).ready(function(){
-        $('.container_top3').slick({
+        $('.carousel_negocio_categoria').slick({
             slidesToShow: 1, // fotos que se pintan a la vez
             centerMode:true,
             variableWidth: true,
