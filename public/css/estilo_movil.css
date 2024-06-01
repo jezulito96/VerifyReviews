@@ -808,10 +808,11 @@
 
 
     /* -------------  MAPA de info_negocio  ------------------- */
-    .content_mapa{
+    #content_mapa{
         width: 100%;
         height: 300px;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
     .content_mapa h3{
@@ -823,7 +824,7 @@
         display: flex;
         align-items: center;
         flex-direction: row;
-        margin-top: 20px;
+        margin-bottom: 20px;
         border-radius: 10px;
         border: 1px solid var(--gris_claro);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
