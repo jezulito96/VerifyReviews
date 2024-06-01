@@ -958,30 +958,30 @@
 
     /* para el input file */
     .file-upload-wrapper {
-        display: flex;
+        position: relative;
         width: 250px;
         text-align: center;
     }
     
     /* Ocultar el input de tipo file original */
     .inputs[type="file"] {
-        border: none;
-        border-radius: 5px;
-        background-color: var(--azul_verify);
-        color: white;
-        font-weight: bold;
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
     }
     
     /* Estilos para el label personalizado */
     .custom-file-upload {
         display: inline-block;
-        padding: 10px;
+        padding: 10px 20px;
         cursor: pointer;
         color: #ffffff;
         background-color: #51a5dd;
         border: 2px solid #51a5dd;
         border-radius: 5px;
-        width: 100%;
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     }
     
     .custom-file-upload:hover {
