@@ -1,22 +1,22 @@
-<h1>Mi negocio</h1>
+<h1 style="padding-left:20px;">Mi negocio</h1>
 
-<h3>Valoración</h3>
+<h5>Valoración</h5>
 <?php
-
 if(isset($error)){
     echo $error;
 }else{
   
     if(isset($estadisticas)){
-        echo $estadisticas['nota_media'];
-    
+        echo '<div class="container_valoracion">';
+            echo "<p>Valoracion de tus clientes</p>" . "<h5>" .$estadisticas['nota_media'] . "</h5>";
+        echo '</div>';
     
 ?>
-<h3>Ranking</h3>
+<h5>Ranking</h5>
 <?php print_r($estadisticas['ranking']); ?>
 
 
-<h3>Tus reseñas</h3>
+<h5>Tus reseñas</h5>
 <?php
     }
 
