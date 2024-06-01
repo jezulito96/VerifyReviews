@@ -149,6 +149,12 @@
         </div>
 <script>
     $(document).ready(function () {
+        $('.container_opiniones_info').slick({
+            slidesToShow: 1, // fotos que se pintan a la vez
+            centerMode:true,
+            variableWidth: true,
+            centerPadding: '0'
+        });
 
         $('.carousel_negocio_categoria').slick({
             slidesToShow: 1, // fotos que se pintan a la vez

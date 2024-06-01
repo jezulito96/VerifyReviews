@@ -487,66 +487,14 @@
         margin-left: 10px;
     }
 
-    .sliderInfoNegocio{
-        display: flex;
-        overflow-x: scroll;
-        padding: 10px 0;
-        background-color: white;
-        /* border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd; */
-        margin-top: 35px;
-        scrollbar-width: thin;
-        scrollbar-color: var(--azul_verify);
-    }
-    .sliderInfoNegocio::-webkit-scrollbar {
-        width: 2px; 
-    }
-
-    .sliderInfoNegocio::-webkit-scrollbar-track {
-        background: var(--azul_verify); 
-    }
-
-    .containerIcono{
-        width: 20%;
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .containerIcono i {
-        font-size: 24px;
-        color: #333;
-    }
-
-    .containerIcono span {
-        display: block;
-        margin-top: 5px;
-        font-size: 14px;
-    }
-
-    /* apartados de info */
-    .infoContainerNegocio > div{
-        padding-top: 10px;
-        margin-bottom: 5px ;
-        /* border-bottom: 1px solid #ccc; */
-    }
-
-    .content_opiniones >h3 {
-        margin-bottom: 5px;
-    }
-
-    
-
-    /* scroll de div opiniones en info_negocio */
+    /*////////////////    MENU OPNINIONES NEGOCIO ////////////////*/
     .content_opiniones{
         margin-bottom: 0px;
     }
     .container_opiniones_info {
-        display: flex;
-        overflow-x: auto;
-        background-color: white;
+        /* display: flex; */
+        /* overflow-x: auto; */
+        /* background-color: white; */
         /* margin-left: 5px; */
     }
 
@@ -555,7 +503,7 @@
         flex-wrap: wrap;
         margin: 10px 10px;
         height: 200px;
-        min-width: 90%;
+        width: 90%;
         border: 1px solid #ccc;
         border-left: 2px solid #ccc;
         padding: 5px 10px;
@@ -697,9 +645,60 @@
         width: 80%;
         margin-bottom: 30px;
         border-radius: 5px;
+    }               
+
+    /*////////////////    MENU CON SCROLL DE INFO NEGOCIO ////////////////*/
+    .sliderInfoNegocio{
+        display: flex;
+        overflow-x: scroll;
+        padding: 10px 0;
+        background-color: white;
+        /* border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd; */
+        margin-top: 35px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--azul_verify);
+    }
+    .sliderInfoNegocio::-webkit-scrollbar {
+        width: 2px; 
     }
 
-    /* ---------   TELEFONO negocio   ---------- */
+    .sliderInfoNegocio::-webkit-scrollbar-track {
+        background: var(--azul_verify); 
+    }
+
+    .containerIcono{
+        width: 20%;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .containerIcono i {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .containerIcono span {
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* apartados de info */
+    .infoContainerNegocio > div{
+        padding-top: 10px;
+        margin-bottom: 5px ;
+        /* border-bottom: 1px solid #ccc; */
+    }
+
+    .content_opiniones >h3 {
+        margin-bottom: 5px;
+    }
+
+    /*////////////////    TELEFONO NEGOCIO ////////////////*/
     .div_llamar{
         width: 100%;
         height: auto;
@@ -736,7 +735,7 @@
         align-items: center;
     }
 
-    /*-------- web negocio ------------------*/
+    /*////////////////   WEB NEGOCIO ////////////////*/
     .div_web{
         width: 100%;
         height: auto;
@@ -777,7 +776,7 @@
     }
 
 
-    /*-------- REDES SOCIALES ------------------*/
+    /*////////////////    REDES SOCIALES NEGOCIO     ////////////////*/
     .div_redes{
         width: 100%;
         height: auto;
@@ -818,7 +817,7 @@
     }
 
 
-    /* -------------  MAPA de info_negocio  ------------------- */
+    /*////////////////    MAPA NEGOCIO   ////////////////*/
     #content_mapa{
         width: 100%;
         height: auto;
