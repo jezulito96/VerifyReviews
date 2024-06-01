@@ -61,8 +61,8 @@
         // }
         ?>
     </section> -->
-    <div id="div_tus_resenas">
-        <h5>Tus reseñas</h5>  
+    <div class="div_tus_resenas">
+        <h5>Reseñas de tus clientes</h5>  
             <?php
             $negocio = session() -> get("usuario_en_sesion");
             echo '<div class="container_opiniones_info">';
