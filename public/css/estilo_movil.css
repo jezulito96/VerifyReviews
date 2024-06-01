@@ -1093,6 +1093,7 @@
 
     main{
         min-height: 500px;
+        padding: 10px;
     }
     .tituloResenaContent{
         padding-left: 20px;

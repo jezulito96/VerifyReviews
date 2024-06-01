@@ -8,8 +8,8 @@
             <i class="fas fa-arrow-up"></i>
         </div>
         <script>
-            $(document).ready(funtion(){
-                $(window).scroll(function() {
+            $(document).ready(function(){
+                $(window).scroll(function(){
                     var alturaTotal = $(document).height();
                     var alturaPantalla = $(window).height();
                     var scroll = $(window).scrollTop();
@@ -24,7 +24,7 @@
                         $('.flechaArriba').show();
                     }
                 });
-                $('.flechaArriba').click(function() {
+                $('.flechaArriba').click(function(){
                     $('html, body').animate({ scrollTop: 0 }, 'slow');
                     // return false;
                 });
