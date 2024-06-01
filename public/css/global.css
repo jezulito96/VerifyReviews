@@ -56,6 +56,10 @@ li{
 .div_span{
     height: 20px;
     width: 100%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 .bien{
     color:var(--azul_verify);
