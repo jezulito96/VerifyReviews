@@ -653,13 +653,9 @@
     text-align: center;
 }
 
-.boton_cerrar,
-.boton_cerrar2 {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+.contenido_popup .btn_cerrar,
+.contenido_popup2 .btn_cerrar {
+    padding: 5px;
 }
 
 .imgs_resenas{
