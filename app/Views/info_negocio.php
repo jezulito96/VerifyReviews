@@ -248,13 +248,13 @@
         </div>
 
         <div class="div_redes">
-            
+
             <h3>
                     Redes sociales
             </h3>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="content_redes">
                 <div class="icono_redes_sociales">
-                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
                 </div>
                     
                 <div id="info_redes_sociales">
@@ -264,7 +264,7 @@
 
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" id="content_redes">
                 <div class="icono_redes_sociales">
-                    <i class="fab fa-facebook-f iconos_redes"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
                 </div>
                     
                 <div id="info_redes_sociales">
