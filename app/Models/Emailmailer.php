@@ -100,7 +100,7 @@ class Emailmailer {
             // Cuerpo del mensaje con la etiqueta <img> que utiliza el ID del contenido incrustado
             $this->mail->Body = '
                 <h2>Escribe tu opinión sobre tu compra</h2>
-                <p>Descarga nuestro código QR y escanéalo para opinar sobre nuestro negocio</p>
+                <p>Escanea nuestro código QR para opinar sobre nuestro negocio</p>
                 <p>Ayuda a nuestro negocio a crecer, ¡Tu opinión nos importa!</p>
                 <center>
                     <img src="cid:codigo_Qr" type="image/png" alt="Código QR"  width="200px" height="200px">

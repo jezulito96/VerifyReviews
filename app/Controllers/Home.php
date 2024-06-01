@@ -716,9 +716,6 @@ class Home extends BaseController{
             if ($archivo = fopen($ruta_png, 'w')) {
                 fwrite($archivo, $image_png);
                 fclose($archivo);
-                echo "se ha guardado  ";
-            } else {
-                echo " error al guardar la imagen SVG.";
             }
             
             // cambio de svg a 

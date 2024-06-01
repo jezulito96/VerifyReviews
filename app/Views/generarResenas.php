@@ -67,7 +67,7 @@
         
         if(isset($imagenQr) && $imagenQr != false) echo "<div class='qrcode-container'>" . $imagenQr ."</div>";
 
-        if(isset($resultadoEmail) && $resultadoEmail != false) echo $resultadoEmail;
+        if(isset($resultadoEmail) && $resultadoEmail != false) echo '<h3 class="bien">'. $resultadoEmail . '</h3>';
 
 ?><?php
         
