@@ -818,11 +818,15 @@
         width: 100%;
     }
     .head_mapa{
-        width: 100%;
+        width: 90%;
         height: 60px;
         display: flex;
         align-items: center;
         flex-direction: row;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
     .icono_mapa{
         width: 20%;
