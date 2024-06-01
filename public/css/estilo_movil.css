@@ -1575,7 +1575,11 @@
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 .mi_negocio h5{
     margin-left: 20px;
+    margin-bottom: 10px;
 }
+
+/* /////////////////////  VALORACION */
+.div_valoracion{}
 .container_valoracion{
     margin: 0px auto;
     width: 85%;
@@ -1589,6 +1593,9 @@
     padding: 10px;
 }
 
+/* /////////////////////  RANKING */
+
+.div_ranking{}
 .container_ranking{
     margin: 0px auto;
     width: 85%;
@@ -1606,3 +1613,9 @@
     margin-right: 20px;
 }
 
+
+/* /////////////////////  RESEÑAS */
+
+.div_tus_resenas{
+
+}
