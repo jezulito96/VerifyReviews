@@ -1593,14 +1593,6 @@
         height: auto;
     }
 
-    /* .textoTitulo{
-        width: 80%;
-        height: 20px;
-        margin-left: 20px;
-        line-height: 20px;
-        padding-left: 5px;
-    } */
-
     .textoTituloArea{
         width: 97%;
         min-height: 72px;
