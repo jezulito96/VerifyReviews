@@ -644,9 +644,10 @@
 }
 
 .contenido_popup2{
-    min-height: 60px;
+    height: 48%;
     word-wrap: break-word;
-    width: 90%;
+    width: 80%;
+    overflow-y: scroll;
 }
 .informacion_popup{
     width: 100%;
