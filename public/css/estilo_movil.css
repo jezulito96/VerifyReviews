@@ -727,7 +727,7 @@
     /* ---------   TELEFONO negocio   ---------- */
     .div_llamar{
         width: 100%;
-        height: 100px;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
