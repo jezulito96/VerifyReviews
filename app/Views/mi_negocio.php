@@ -22,7 +22,7 @@
                 echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $posicion['cod_negocio'] . '" class="container_ranking">';
 
                     echo '<h1 class="bien">' . $i .'</h1>';
-                    echo '<h5>'. $posicion['nombre'] .' </h5>';
+                    echo '<h6>'. $posicion['nombre'] .' </h6>';
 
                 echo '</a>';
             }
