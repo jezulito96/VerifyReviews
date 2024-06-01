@@ -44,32 +44,6 @@
     <p>&copy; 2024 Verify Reviews. Proyecto de DAW 2024.</p>
         
 </div>
-    <!-- flecha flotante para subir arriba -->
-    <div class="flechaArriba" style="display:none;">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-    <script>
-        $(document).ready(funtion(){
-            $(window).scroll(function() {
-                var alturaTotal = $(document).height();
-                var alturaPantalla = $(window).height();
-                var scroll = $(window).scrollTop();
 
-                // console.log("altura total" + alturaTotal);
-                // console.log("altura pant" + alturaPantalla);
-                // console.log("scrol" + scroll);
-
-                if (scroll + 100 <= alturaPantalla) {
-                    $('.flechaArriba').hide();
-                } else {
-                    $('.flechaArriba').show();
-                }
-            });
-            $('.flechaArriba').click(function() {
-                $('html, body').animate({ scrollTop: 0 }, 'slow');
-                // return false;
-            });
-        });
-    </script>
 
 
