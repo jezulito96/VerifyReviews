@@ -1091,10 +1091,52 @@
 
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
+
+    /* ///////////    INICIO SESION O NICKNAME    /////////// */
+
     main{
-        min-height: 500px;
+        min-height: 400px;
         padding: 10px;
     }
+
+    #containerSesion,
+    #containerNickname{
+        margin-bottom: 0px;
+    }
+    
+    .botones_enviar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        height: auto;
+        width: 100%;
+    }
+
+    .btn_enviar2{
+        width: 40%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid var(--azul_claro);
+      border-radius: 5px;
+      background-color: white;
+      color: var(--azul_verify);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn_enviar{
+        width: 40%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+    
+  /* ///////////    SET RESENA    /////////// */
+
     .tituloResenaContent{
         padding-left: 20px;
     }
