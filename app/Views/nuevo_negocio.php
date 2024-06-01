@@ -47,7 +47,7 @@
             <input  type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
 
             <label for="sitio_web">Sitio Web:</label>
-            <input class="inputs" type="url" id="sitio_web" name="sitio_web" required>
+            <input class="inputs" style="backgorund:white;width:100%;" type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
             <select class="inputs" id="categoria" name="categoria" required>
