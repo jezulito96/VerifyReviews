@@ -76,8 +76,8 @@
         }
 
         if(isset($resultadoEmail) && $resultadoEmail != false) {
-            echo '<h5 class="bien" style="margin-bottom:20px;">'. $resultadoEmail . '</h5>';
-            echo "<a href='http://verifyReviews.es/verifyreviews/generarResenas' class='btn_enviar_largo' style='margin-left:20px'>
+            echo '<h5 class="bien" ">'. $resultadoEmail . '</h5>';
+            echo "<a style='margin-top:40px;margin-left:20px;' href='http://verifyReviews.es/verifyreviews/generarResenas' class='btn_enviar_largo' style='margin-left:20px'>
                     Volver a generar
                 </a>";
         }
