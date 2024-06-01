@@ -67,16 +67,16 @@
             echo '<section class="container_top3">';
                     
                 foreach($categoria['ranking'] as $negocio){
-                    echo '<div class="fotoContainerTop3">';
+                    // echo '<div class="fotoContainerTop3">';
 
                         $foto_principal = $negocio['foto_principal'];
                         $ruta_img_principal = base_url() . "images/n/n_" . $negocio['cod_negocio'] . "/img_negocio/" . $foto_principal;
-                        echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio['cod_negocio'] . '" >';
+                        echo '<a class="fotoContainerTop3"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio['cod_negocio'] . '" >';
                             echo '<img src="'. $ruta_img_principal .'" title="'. $negocio['nombre'] .'"/>';
                         echo '</a>';
                         // var_dump($negocio['cod_negocio']);
 
-                    echo '</div>';
+                    // echo '</div>';
                 }
 
             echo '</section>';
