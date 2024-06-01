@@ -320,6 +320,7 @@
         width: 30px;
         height: 30px;
         margin-right: 10px;
+        margin-top: 20px;
     }
 
     .fotoContainerTop3{
@@ -341,6 +342,17 @@
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    }
+    .nombreNegocioTop{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
     }
 
 }
