@@ -3,6 +3,18 @@
         if (isset ($head_content)) echo $head_content;
     ?>
     <body >
+        <!-- flecha flotante para subir arriba -->
+        <div class="flechaArriba" style="display:none;">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <script>
+            $(document).ready(funtion(){
+                $('.flechaArriba').click(function() {
+                    $('html, body').animate({ scrollTop: 0 }, 'slow');
+                });
+            });
+        </script>
+
 
         <header id="header" class="header">
 

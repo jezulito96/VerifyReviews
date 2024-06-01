@@ -476,8 +476,7 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-                            /*   CARROUSEL DE CONT_CATEGORIA   */
-                            /*   CARROUSEL DE INFO_NEGOCIO   */
+                            /*   INFO_NEGOCIO   */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -528,25 +527,7 @@
         margin-bottom: 5px;
     }
 
-    .flechaArriba{
-        position: fixed;
-        top:80vh;
-        right: 10vw;
-        z-index:300;
-        background: #ddd;
-        border-radius: 100px;
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.9;
-    }
-
-    .flechaArriba i{
-        color:#51a5d9;
-        font-size: 30px;
-    }
+    
 
     /* scroll de div opiniones en info_negocio */
     .content_opiniones{

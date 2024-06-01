@@ -257,9 +257,7 @@
 
     </div>
 
-    <div class="flechaArriba" style="display:none;">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+
 
     <div id="content_mapa">
         <div class="head_mapa">
@@ -322,10 +320,6 @@
             }, 1000);
         });
 
-        $('.flechaArriba').click(function() {
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
-            return false;
-        });
         
         $(window).scroll(function() {
             var alturaTotal = $(document).height();
