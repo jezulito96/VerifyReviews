@@ -575,9 +575,9 @@
 
 .titulo_opinion {
     width: 100%;
-    height: 130px;
+    height: 115px;
     font-size: 18px;
-    padding: 20px;
+    padding: 0px 20px;
     box-sizing: border-box;
     margin-bottom: 10px;
     word-wrap: break-word;
