@@ -411,6 +411,9 @@
         justify-content: space-around;
         align-items: center;
     }
+    .social{
+        font-size: 24px;
+    }
     .footer p{
         align-items: center;
     }
