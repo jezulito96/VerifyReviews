@@ -20,7 +20,7 @@
                 $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
                     echo '<a class="fotoContainer_negocio_cat"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                         echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
-                        echo '<div class="nombre_negocio_categoria">'. $negocio -> getNombre() .'</div>';
+                        echo '<div class="nombre_negocio_categoria">'. $negocio -> getCalle() . $negocio ->getCiudad(). '</div>';
                     echo '</a>';
 
 
@@ -31,7 +31,6 @@
                 //    echo "<p color='red'>" .base_url(). $valor ."</p>";
                         echo '<a class="fotoContainer_negocio_cat"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                             echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" title="'. $negocio -> getNombre() .'"/>';
-                            echo '<div class="nombre_negocio_categoria">'. $negocio -> getNombre() .'</div>';
                         echo '</a>';
                 }
                 
