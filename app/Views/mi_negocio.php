@@ -64,6 +64,7 @@
     <div id="div_tus_resenas">
         <h5>Tus reseñas</h5>  
             <?php
+            $negocio = session() -> get("usuario_en_sesion");
             echo '<div class="container_opiniones_info">';
                 foreach($lista_resenas as $i => $resena){
                         
@@ -124,7 +125,7 @@
                             $imagenes = explode(",", $rutasimgs);
                             foreach($imagenes as $key => $valor){
                                 $rutaImagen = base_url().'/images/n/' . $valor;
-                                echo '<img class="imgs_resenas" src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
+                                echo '<img class="imgs_resenas" src="' . $rutaImagen . '" alt="'. $negocio['cod_negocio'] .'" />';
                             }
                             
                         echo '</div>';
