@@ -232,14 +232,18 @@
             </div>
         </div>
 
-
-        <div id="content_web">
-            <div class="icono_web">
-                <i class="fas fa-envelope iconosColor"></i>
-            </div>
-                
-            <div id="info_web">
-                <a href="<?php echo $negocio -> getSitioWeb() ?>">Visita su Web</a>
+        <div class="div_web">
+            <h3>
+                    Sitio web
+            </h3>
+            <div id="content_web">
+                <div class="icono_web">
+                    <i class="fas fa-envelope iconosColor"></i>
+                </div>
+                    
+                <div id="info_web">
+                    <a href="<?php echo $negocio -> getSitioWeb() ?>">Visita su Web</a>
+                </div>
             </div>
         </div>
 
