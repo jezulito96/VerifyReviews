@@ -53,7 +53,7 @@ li{
 
 }
 
-input[required]{
+input:invalid{
     border: 1px solid var(--error);
 }
 .div_span{
