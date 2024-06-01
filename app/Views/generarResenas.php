@@ -2,10 +2,12 @@
     // primero se muestra el formulario y cuando se envia 
     if(!isset($resultadoEmail) && !isset($imagenQr)){
 ?>
-<h3>Genera códigos Qr para que tus clientes puedan opinar sobre tu negocio</h3>
-<p>
+
+<h3>Genera códigos Qr</h3>
+<p>Para que tus clientes puedan opinar sobre tu negocio</p>
+<small>
     Cada reseña será unica, de esta manera protegemos tu negocio. Nos aseguramos de que las reseñas que recibe tu negocio sean de tus clientes.
-</p>
+</small>
 <div class="containerformGenerarResena">
     <form action="setGenerarResenas" method="post" class="formLogin">
 
