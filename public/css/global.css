@@ -118,3 +118,28 @@ small{
     color:#222222;
 }
 
+/* 
+            Inputs y botones
+
+*/
+
+.inputs{
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #A3CEF1;
+}
+
+.btn_enviar{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #53A6D9;
+    color: white;
+    font-weight: bold;
+}

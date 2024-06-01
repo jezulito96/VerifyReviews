@@ -890,7 +890,16 @@
 
 
 @media (max-width: 500px) {
-    /* .containerformLogin,
+    .containerformLogin{
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+    }
+   
+}
+
+/* ///////////////////////////////////////////// */
+    /* 
     .containerformGenerarResena {
         width: 100%;
         max-width: 300px;
@@ -928,11 +937,6 @@
         color: white;
         font-weight: bold;
     } */
-   
-}
-
-/* ///////////////////////////////////////////// */
-
 .previsualizacionQr{
     display: flex;
     justify-content: center;
