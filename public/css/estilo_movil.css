@@ -947,7 +947,10 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
+    .containerUsuarioForm h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
     .containerUsuarioForm input[type="file"]{
         border: none;
         border-radius: 5px;
