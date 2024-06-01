@@ -66,9 +66,9 @@
     <div class="infoContainerNegocio">
 
         <div id="content_opiniones">
-            <h3>
+            <h4>
                 Opiniones
-            </h3>    
+            </h4>    
             <?php
             echo '<div class="container_opiniones_info">';
                 foreach($lista_resenas as $i => $resena){
