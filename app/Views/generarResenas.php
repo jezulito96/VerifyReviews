@@ -65,7 +65,7 @@
 <?php
     }else{
         
-        if(isset($imagenQr) && $imagenQr != false) echo "<h4 class='bien'>Escanea el código Qr</h4><div class='qrcode-container'>" . $imagenQr ."</div>";
+        if(isset($imagenQr) && $imagenQr != false) echo "<h4 class='bien' style='padding-left:10px;'>Escanea el código Qr</h4><div class='qrcode-container' style='width: 60vw;'>" . $imagenQr ."</div>";
 
         if(isset($resultadoEmail) && $resultadoEmail != false) echo '<h5 class="bien">'. $resultadoEmail . '</h5>';
 
