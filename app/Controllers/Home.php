@@ -69,10 +69,10 @@ class Home extends BaseController{
             $resultado_descifrado = openssl_decrypt($clavePublica, 'AES-256-CBC', $clave_privada, OPENSSL_RAW_DATA, $vector_inicializacion);
 
             if($resultado_descifrado == true){
-                var_dump($resultado_descifrado);
-                echo "<br><br>";
+                // var_dump($resultado_descifrado);
+                // echo "<br><br>";
                 $resultado_descifrado = $baseDatos -> comprobarEstado($claveCifradaHex);
-                var_dump($resultado_descifrado);
+                // var_dump($resultado_descifrado);
             }
 
             if($resultado_descifrado == true){
