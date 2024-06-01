@@ -1267,45 +1267,6 @@
         font-size: 10px ;
     }
 
-    .areaFile{
-        display: flex;
-        width: 80%;
-        margin: 20px;
-        justify-content: space-between;
-    }
-
-    .file-select {
-        position: relative;
-        display: inline-block;
-        width: 45%;
-    }
-    
-    .file-select::before {
-    background-color: #5678EF;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Seleccionar'; /* testo por defecto */
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    }
-
-    .file-select input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-    }
-
-    #fotos::before {
-    content: 'Sube aquí tus fotos';
-    }
-
     .fechaResena{
         margin-left:20px ;
     }
@@ -1654,45 +1615,6 @@
         font-size: 10px ;
     }
 
-    .areaFile{
-        display: flex;
-        width: 80%;
-        margin: 20px;
-        justify-content: space-between;
-    }
-
-    .file-select {
-        position: relative;
-        display: inline-block;
-        width: 45%;
-    }
-    
-    .file-select::before {
-    background-color: #5678EF;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Seleccionar'; /* testo por defecto */
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    }
-
-    .file-select input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-    }
-
-    #fotos::before {
-    content: 'Sube aquí tus fotos';
-    }
-
     .fechaResena{
         margin-left:20px ;
     }
@@ -1702,7 +1624,7 @@
         width: 79%;
         margin-left:20px ;
     }
-
+/* 
     div[class=".fechaResena.ui-widget.ui-widget-content"] {
         border: 1px solid #eee;
     }
@@ -1741,7 +1663,7 @@
     width: 17em;
     padding: .2em .2em 0;
     display: none;
-    }
+    } */
 
 
 
