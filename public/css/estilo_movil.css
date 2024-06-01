@@ -608,8 +608,7 @@
 
 
 /* ///// botones de div opinion */
-
-/* .popup,
+.popup,
 .popup2 {
     display: none;
     position: fixed;
@@ -665,7 +664,7 @@
     width: 80%;
     margin-bottom: 30px;
     border-radius: 5px;
-}                */
+}               
 
     /*////////////////    MENU CON SCROLL DE INFO NEGOCIO ////////////////*/
     .sliderInfoNegocio{
