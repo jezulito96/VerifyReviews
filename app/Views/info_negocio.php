@@ -338,19 +338,19 @@
 
         $('.container_llamar').click(function(){
             $('html, body').animate({
-                scrollTop: $('#content_llamar').offset().top
+                scrollTop: $('.div_llamar').offset().top
             }, 1000);
         });
 
         $('.container_web').click(function(){
             $('html, body').animate({
-                scrollTop: $('#content_web').offset().top
+                scrollTop: $('.div_web').offset().top
             }, 1000);
         });
 
         $('.container_redesSociales').click(function(){
             $('html, body').animate({
-                scrollTop: $('#content_redesSociales').offset().top
+                scrollTop: $('.div_redes').offset().top
             }, 1000);
         });
 
