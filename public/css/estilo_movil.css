@@ -815,9 +815,8 @@
         justify-content: center;
         flex-wrap: wrap;
     }
-    .content_mapa h3{
+    #content_mapa h3{
         width: 100%;
-        align-items: left;
     }
     .head_mapa{
         width: 90%;
