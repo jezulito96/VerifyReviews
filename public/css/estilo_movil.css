@@ -942,14 +942,14 @@
 
 @media (max-width: 500px) {
     /* formulario comercio y usuario*/
-    /* .containerNegocioForm,
+    .containerNegocioForm,
     .containerUsuarioForm{
         width: 90vw;
         height: auto;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
+/* 
     .containerNegocioForm label,
     .containerUsuarioForm label {
         display: block;
