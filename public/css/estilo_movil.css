@@ -688,42 +688,6 @@
         border-radius: 5px;
     }
 
-
-    /* -------------  MAPA de info_negocio  ------------------- */
-    .content_mapa{
-        width: 100%;
-        height: 300px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .head_mapa{
-        width: 100%;
-        height: 50px;
-        display: flex;
-        flex-direction: row;
-    }
-    .icono_mapa{
-        width: 20%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .calle_mapa{
-        width: 80%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .info_mapa{
-        width: 100%;
-        height: 250px;
-    }
-
     /* ---------   TELEFONO negocio   ---------- */
     .div_llamar{
         width: 100%;
@@ -811,6 +775,9 @@
         flex-direction: row;
         justify-content: center;
     }
+    .div_redes h3{
+        width: 100%;
+    }
     #content_redes{
         width: 90%;
         height: 60px;
@@ -840,6 +807,43 @@
     }
 
 
+    /* -------------  MAPA de info_negocio  ------------------- */
+    .content_mapa{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content_mapa h3{
+        width: 100%;
+    }
+    .head_mapa{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .icono_mapa{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calle_mapa{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info_mapa{
+        width: 100%;
+        height: 250px;
+    }
 }
 /* ///////////////////////////////////////////// */
 

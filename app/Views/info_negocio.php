@@ -257,7 +257,7 @@
                     <i class="fa-brands fa-square-x-twitter"></i>
                 </div>
                     
-                <div id="info_redes_sociales">
+                <div class="info_redes_sociales">
                     X
                 </div>
             </a>
@@ -267,7 +267,7 @@
                     <i class="fa-brands fa-square-facebook"></i>
                 </div>
                     
-                <div id="info_redes_sociales">
+                <div class="info_redes_sociales">
                     Facebook
                 </div>
             </a>
@@ -291,6 +291,9 @@
 
 
     <div id="content_mapa">
+        <h3>
+                Localización
+        </h3>
         <div class="head_mapa">
             <div class="icono_mapa">
                 <i class="fas fa-map-marker-alt"></i>
