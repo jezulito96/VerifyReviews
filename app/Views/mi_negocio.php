@@ -8,7 +8,7 @@ if(isset($error)){
   
     if(isset($estadisticas)){
         echo '<div class="container_valoracion">';
-            echo "<p>Valoracion de tus clientes</p>" . "<h5>" .$estadisticas['nota_media'] . "</h5>";
+            echo "<p>Valoracion de tus clientes:</p>" . "<h5>" . round($estadisticas['nota_media'],1) . "/5</h5>";
         echo '</div>';
     
 ?>
