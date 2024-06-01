@@ -425,7 +425,7 @@ class BaseDatos extends Model
 
         $orden = "SELECT e.cod_negocio, SUM(calificacion) / COUNT(calificacion) as e.nota_media , n.foto_principal, n.nombre
         FROM estadisticas_resena e
-        INNER JOIN negocio n as e.cod_negocio= n.cod_negocio
+        INNER JOIN negocio n ON e.cod_negocio= n.cod_negocio
         WHERE categoria_negocio=?
         GROUP BY cod_negocio 
         ORDER BY nota_media DESC
