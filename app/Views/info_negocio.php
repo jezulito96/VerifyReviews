@@ -144,12 +144,15 @@
                     echo '</div>';
 
 
-                    echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup" style="display:none;">';
-                        echo 'hola';
-                    echo '</div>';
+                    
                 }
             echo '</div>';
 
+            foreach($lista_resenas as $i => $resena){
+                echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup" style="display:none;">';
+                    echo 'hola';
+                echo '</div>';
+            }
             ?>
         </div>
 <script>
