@@ -1371,19 +1371,6 @@
 
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-
-
-
-    /* .textoTitulo:invalid,
-    .textoTituloArea:invalid,
-    #foto1:invalid,
-    #foto2:invalid,
-    #fechaResena:invalid
-    {
-        border: 1px solid rgb(234, 52, 52);
-    } */
-
-
     /* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA Y EN INFO_NEGOCIO--------------------- */
     .containerTitulo {
         text-align: center;

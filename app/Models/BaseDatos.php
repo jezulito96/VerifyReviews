@@ -352,6 +352,19 @@ class BaseDatos extends Model
         
     }
 
+    public function comprobarDuplicidad($txt_descripccion){
+        $orden = "SELECT cod_resena FROM resena WHERE opinion=?";
+        $parametros = [$txt_descripccion];
+        $consulta = $this -> db -> query($orden, $parametros);
+        $numeroFilas = $consulta -> getNumRows();
+
+        if($numeroFilas > 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function setResena($cod_reseña, $cod_negocio,$cod_usuario,$fecha_creacion,$fecha_servicio,$calificacion,$titulo,$opinion,$fotos,$id,$estado,$nickname){
         $orden = "INSERT INTO resena (cod_negocio, cod_usuario, fecha_creacion,	fecha_servicio,	calificacion,titulo,opinion,fotos,qr_id,estado,	nickname) 
                   VALUES (?,?,?,?,?,?,?,?,?,?,?)";

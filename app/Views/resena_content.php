@@ -2,7 +2,7 @@
   if(isset($error)){
     echo '<h4 class="error">Error:</h4><br><p class="error">' . $error . '</p>';
   }elseif(isset($resena_enviada) && $resena_enviada == true){
-    echo "<p class='bien' >La reseña ha sido enviada correctamente</p>";
+    echo "<h5 class='bien' >La reseña ha sido enviada correctamente</h5>";
     // var_dump($cod_resena);
   }elseif((isset($inicio_sesion_container) && $inicio_sesion_container == true) || isset($errorEmail)){
     // echo FCPATH;

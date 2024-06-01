@@ -112,6 +112,7 @@ class Home extends BaseController{
 
     public function setResena(){
         $master = Master::obtenerInstancia();
+        $baseDatos = new BaseDatos();
 
         if(!isset($_POST['qr_key'])){
             return redirect() -> to("https://verifyReviews.es");
@@ -126,6 +127,15 @@ class Home extends BaseController{
         $txt_descripccion = $this -> request -> getPost("textoTituloArea");
         $fecha_resena = $this -> request -> getPost("fechaResena");
 
+        $resenaRepetida = $baseDatos -> comprobarDuplicidad($txt_descripccion);
+        if($resenaRepetida == true){
+            $maleta_resenaContent['error'] = "";
+            $maleta['head_content'] = view('head_content');
+            $maleta['header_content'] = view('header_content');
+            $maleta['resena_content'] = view('resena_content',$maleta_resenaContent);
+            $maleta['vista_footer'] = view('vista_footer');
+            return view('index', $maleta);
+        }
         // echo "Código de Negocio: " . $cod_negocio . "<br>";
         // echo "QR Key: " . $qr_key . "<br>";
         // echo "Nickname: " . $nickname . "<br>";
@@ -149,7 +159,6 @@ class Home extends BaseController{
         $fotosBD = "";
 
         // recojo el max cod de reseña
-        $baseDatos = new BaseDatos();
         $cod_resena = $baseDatos -> getMaxResena();
         if($cod_resena == null || empty($cod_resena) || $cod_resena == false) {
             $cod_resena = 1;
