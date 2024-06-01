@@ -19,7 +19,7 @@
         
 
             foreach($estadisticas['ranking'] as $i => $posicion){
-                echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" class="container_ranking">';
+                echo '<a href="https://verifyreviews.es/verifyreviews/negocio?id='. $posicion['cod_negocio'] . '" class="container_ranking">';
 
                     echo '<h1 class="bien">' . $i .'</h1>';
                     echo '<h5>'. $posicion['nombre'] .' </h5>';
