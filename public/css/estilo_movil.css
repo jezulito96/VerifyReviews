@@ -942,7 +942,7 @@
 
 @media (max-width: 500px) {
     /* formulario comercio y usuario*/
-    .containerNegocioForm,
+    /* .containerNegocioForm,
     .containerUsuarioForm{
         width: 90vw;
         height: auto;
@@ -992,7 +992,7 @@
     .containerNegocioForm #registroNegocio:hover,
     .containerUsuarioForm #registroNegocio:hover {
         background-color: #6096BA;
-    }
+    } */
 }
 
 
