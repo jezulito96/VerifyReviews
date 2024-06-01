@@ -194,6 +194,9 @@
             <!--  vista para que el negocio vea sus reseñas y sus valoraciones -->
             <?php if (isset ($mi_negocio)) echo $mi_negocio; ?>
 
+            <!--  vista para la confirmacion del correo electrónico -->
+            <?php if (isset ($confirmacion_email)) echo $confirmacion_email; ?>
+
             <?php
             if (isset ($val))
                 echo $val;

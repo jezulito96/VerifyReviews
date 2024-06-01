@@ -416,15 +416,14 @@ class Home extends BaseController{
             $confirmado =  $baseDatos -> comprobarCorreo($codigoConfirmacion,$tipo);
 
             if($confirmado){
-                echo "el correo ha sido confirmado correctamente";
+                $maleta_confirmacion_email['todo_guay'] = "Confirmación";
                 $baseDatos -> confirmarCorreo($codigoConfirmacion,$tipo);
-
             }else{
-                echo "el codigo de confirmacion no es correcto";
+                $maleta_confirmacion_email['error'] = "El codigo de confirmacion no es correcto";
             }
 
         }else{
-            echo "codigo confirmacion vacio";
+            $maleta_confirmacion_email['error'] ="Codigo confirmacion vacio";
         }
         
 
@@ -432,7 +431,7 @@ class Home extends BaseController{
         $maleta_index['listaCategorias'] = $master->getListaCategorias();
         $maleta['head_content'] = view('head_content');
         $maleta['header_content'] = view('header_content');
-        $maleta['index_content'] = view('index_content', $maleta_index); 
+        $maleta['confirmacion_email'] = view('confirmacion_email', $maleta_confirmacion_email); 
         $maleta['vista_footer'] = view('vista_footer');
         return view('index', $maleta);
     }
