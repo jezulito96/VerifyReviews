@@ -69,7 +69,7 @@
                 echo '<div class="fotoContainer">';
                     
                     foreach($categoria['ranking'] as $negocio){
-                        echo $negocio['cod_negocio'] ."<br>";
+                        var_dump($negocio);
                     }
                 
                 echo '</div>';
