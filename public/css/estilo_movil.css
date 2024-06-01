@@ -322,6 +322,14 @@
         margin-right: 10px;
     }
 
+    .fotoContainerTop3{
+        position: relative;
+        width:250px;
+        height: 200px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
 }
 
 

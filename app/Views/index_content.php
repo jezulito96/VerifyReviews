@@ -67,7 +67,7 @@
             echo '<section class="container_top3">';
                     
                 foreach($categoria['ranking'] as $negocio){
-                    echo '<div class="fotoContainer">';
+                    echo '<div class="fotoContainerTop3">';
 
                         $foto_principal = $negocio['foto_principal'];
                         $ruta_img_principal = base_url() . "images/n/n_" . $negocio['cod_negocio'] . "/img_negocio/" . $foto_principal;
