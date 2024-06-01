@@ -881,9 +881,75 @@
         margin-bottom: 20px;
     }
 }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   LOGIN   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media (max-width: 500px) {
+    /* .containerformLogin,
+    .containerformGenerarResena {
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    .formLogin label,
+    .containerformGenerarResena label {
+        display: block;
+        margin-bottom: 5px;
+        color: #274C77;
+    }
+
+    .formLogin input[type="email"],
+    .formLogin input[type="password"],
+    .containerformGenerarResena input[type="text"],
+    .containerformGenerarResena input[type="number"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #A3CEF1;
+    }
+
+    .formLogin input[type="submit"],
+    .containerformGenerarResena input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #53A6D9;
+        color: white;
+        font-weight: bold;
+    } */
+   
+}
+
 /* ///////////////////////////////////////////// */
 
+.previsualizacionQr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+.previsualizacionQr > img{
+    /* width: 150px;
+    height: 150px; */
+    width: 95%;
+    height: 95%;
+}
 .imgCat{
     width: 50vw;
     margin: 0px auto;
@@ -963,64 +1029,7 @@
      background-color: #6096BA;
  }
 
-    /* estilo login */
-
-    .containerformLogin,
-    .containerformGenerarResena {
-        width: 100%;
-        max-width: 300px;
-        padding: 20px;
-    }
-
-    .formLogin label,
-    .containerformGenerarResena label {
-        display: block;
-        margin-bottom: 5px;
-        color: #274C77;
-    }
-
-    .formLogin input[type="email"],
-    .formLogin input[type="password"],
-    .containerformGenerarResena input[type="text"],
-    .containerformGenerarResena input[type="number"] {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-        border: 1px solid #A3CEF1;
-    }
-
-    .formLogin input[type="submit"],
-    .containerformGenerarResena input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #53A6D9;
-        color: white;
-        font-weight: bold;
-    }
-
-    .previsualizacionQr{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 150px;
-        margin: 0px auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .previsualizacionQr > img{
-        /* width: 150px;
-        height: 150px; */
-        width: 95%;
-        height: 95%;
-    }
+    
     /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
                                 /*  RESENA CONTENT */
