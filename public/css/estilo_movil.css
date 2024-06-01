@@ -1627,6 +1627,7 @@
     .areaTexto{
         width: 90%;
         padding-left: 20px;
+        padding-right:20px;
         height: auto;
     }
 
