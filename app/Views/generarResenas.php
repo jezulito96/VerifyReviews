@@ -65,7 +65,15 @@
 <?php
     }else{
         
-        if(isset($imagenQr) && $imagenQr != false) echo "<h4 class='bien' style='padding-left:20px;'>Escanea el código Qr</h4><div class='qrcode-container' style='width: 60vw;margin:0px auto;margin-bottom:30px;'>" . $imagenQr ."</div><a href='http://verifyReviews.es/verifyreviews/generarResenas' class='btn_enviar'>Volver a generar</a>";
+        if(isset($imagenQr) && $imagenQr != false) {
+            echo "<h4 class='bien' style='padding-left:20px;'>Escanea el código Qr</h4>
+                <div class='qrcode-container' style='width: 60vw;margin:0px auto;margin-bottom:30px;'>" . 
+                    $imagenQr ."
+                </div>
+                <a href='http://verifyReviews.es/verifyreviews/generarResenas' class='btn_enviar_largo' style='margin-left:20px'>
+                    Volver a generar
+                </a>";
+        }
 
         if(isset($resultadoEmail) && $resultadoEmail != false) echo '<h5 class="bien">'. $resultadoEmail . '</h5>';
 
