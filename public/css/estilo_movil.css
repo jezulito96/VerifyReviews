@@ -941,13 +941,19 @@
 
 
 @media (max-width: 500px) {
-    /* formulario comercio y usuario*/
-    .containerNegocioForm,
     .containerUsuarioForm{
         width: 90vw;
         height: auto;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .containerUsuarioForm input[type="file"]{
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
     }
 /* 
     .containerNegocioForm label,

@@ -1,4 +1,4 @@
-<h1>Unete a Verify Reviews</h1>
+<h3>Unete a Verify Reviews</h3>
 <div class='div_span'>
     <?php
         if(isset($formulario_correcto)){
