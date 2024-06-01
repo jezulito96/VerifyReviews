@@ -507,7 +507,7 @@
     }
 
     .containerIcono{
-        width: 100px;
+        width: 20%;
         margin: 10px;
         padding: 10px;
         display: flex;
@@ -522,8 +522,6 @@
 
     .containerIcono span {
         display: block;
-        width: 100%;
-        text-align: center;
         margin-top: 5px;
         font-size: 14px;
     }
