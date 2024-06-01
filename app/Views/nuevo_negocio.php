@@ -42,12 +42,24 @@
 
             <label for="fotos">Fotos:</label>
             <input  type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
+            <div class="file-upload-wrapper">
+                <input class="inputs" type="file" id="fotos" name="fotos[]" accept="image/*" multiple>
+                <label for="fotoPerfil" class="custom-file-upload" id="fileLabel">
+                    Foto de Perfil
+                </label>
+            </div>
 
             <label for="fotoPrincipal">*Fotos principal:</label>
-            <input  type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
+            <!-- <input  type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required> -->
+            <div class="file-upload-wrapper">
+                <input class="inputs" type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
+                <label for="fotoPerfil" class="custom-file-upload" id="fileLabel">
+                    Foto de Perfil
+                </label>
+            </div>
 
             <label for="sitio_web">Sitio Web:</label>
-            <input class="inputs" placeholder="https://VerifyReviews.es" type="url" id="sitio_web" name="sitio_web" required>
+            <input class="inputs" placeholder="https://www.VerifyReviews.es" type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
             <select class="inputs" style="background:white;width:100%;" id="categoria" name="categoria" required>
