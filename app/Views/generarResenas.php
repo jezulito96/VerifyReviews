@@ -13,7 +13,7 @@
     <form action="setGenerarResenas" method="post" class="formLogin">
 
         <!-- Añadir info para el usuario -->
-        <h4>¿Como quieres generar los codigos?</h4> 
+        <h5>¿Como quieres generar los codigos?</h5> 
         <select class="inputs" name="accionQr" id="accionQr" >
             <option value="1">Autom&aacute;tico</option>
             <option value="2">Email</option>
@@ -22,7 +22,7 @@
         </select>
 
         <div id="estiloQrContainer" >
-            <h4>Elige el estilo del Qr</h4>
+            <h5>Elige el estilo del Qr</h5>
             <select class="inputs" name="estiloQr" id="estiloQr">
                 <option value="0">Verify Reviews</option>
                 <option value="1">Morado azulado</option>

@@ -1564,3 +1564,7 @@
 .info_generar_resenas{
     margin-bottom: 20px;
 }
+
+.containerformGenerarResena select{
+    background: white;
+}
