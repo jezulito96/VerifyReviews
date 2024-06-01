@@ -24,7 +24,7 @@
             
             <!-- <label for="contrasenaUsuario2">Confirmar contraseña</label> -->
             <input class="inputs" type="password" placeholder="Confirmar contraseña" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
-            <div id="resultado_contrasena" class="div_span"></div>
+            <div id="resultado_contrasena"></div>
 
             <!-- <label for="fotoPerfil">Foto de Perfil:</label> -->
             <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
@@ -45,7 +45,7 @@
             <input class="inputs" type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
 
             <input class="inputs" type="submit" value="Registrarse" id="registroUsuario">
-            <div id="error_direccion" class="div_span"></div>
+            <div id="error_direccion"></div>
         </form>
     </div>
 <?php
