@@ -50,7 +50,6 @@
     </div>
     
   </div>
-<!-- </form> -->
 
   <script>
       $(document).ready(function(){
@@ -249,14 +248,14 @@
 
 ?>
 <script>
-  $('#fotos_resena').change(function() {
-            var fileName = $(this).val().split('\\').pop();
-            if (fileName) {
-                $('#fileLabel').text(fileName);
-            } else {
-                $('#fileLabel').text('Haz click aquí');
-            }
-        });
+  // $('#fotos_resena').change(function() {
+  //       var fileName = $(this).val().split('\\').pop();
+  //       if (fileName) {
+  //           $('#fileLabel').text(fileName);
+  //       } else {
+  //           $('#fileLabel').text('Haz click aquí');
+  //       }
+  //   });
 </script>
 <!-- script para pintar los ticks verdes de una nueva reseña -->
 <?php echo "<script src='". base_url() . "js/ticksResenas.js' > </script>";        ?>
