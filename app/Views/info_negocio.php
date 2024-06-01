@@ -141,12 +141,12 @@
                     echo '<div id="contenido_popup2_' . $resena-> getCodResena() . '" class="contenido_popup2" >';
                         echo '<span class="boton_cerrar2_' . $resena-> getCodResena() . '" >&times;</span>';
                         echo '<div  id="informacion_popup2_' . $resena-> getCodResena() . '" >';
-                            echo $resena -> getOpinion(); 
+                            echo '<p>' .$resena -> getOpinion() . '</p>'; 
                         echo '</div>';
                     echo '</div>';
                 echo '</div>';
             }
-            
+
             ?>
         </div>
 <script>

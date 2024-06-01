@@ -633,22 +633,25 @@
 }
 
 .contenido_popup{
-    width: 80%;
-    height: 300px;
+    width: 90%;
+    height: 367px;
     overflow-y: scroll;
     margin-top: 20px;
-    scrollbar-color: rgb(137, 207, 232);
+    background: var(--gris_claro);
 }
 
 .contenido_popup2{
     min-height: 60px;
     word-wrap: break-word;
-    width: 90%;
+    width: 72%;
 }
 .informacion_popup{
     width: 100%;
     text-align: center;
 }
+/* .informacion_popup2_1{
+
+} */
 .boton_cerrar,
 .boton_cerrar2 {
     position: absolute;
