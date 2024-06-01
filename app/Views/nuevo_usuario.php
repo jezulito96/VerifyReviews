@@ -11,41 +11,41 @@
         <form action="setUsuario" method="post" id="formularioUsuario" enctype="multipart/form-data" >
 
             <!-- <label for="nombre">Nombre:</label> -->
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input class="inputs" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+            <!-- <label for="apellidos">Apellidos:</label> -->
+            <input class="inputs" type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
 
             <!-- <label for="nickname">Nickname:</label> -->
-            <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
+            <input class="inputs" type="text" id="nickname" name="nickname" placeholder="Nickname" required>
 
             <!-- <label for="contrasenaUsuario">Contraseña</label> -->
-            <input type="password" id="contrasenaUsuario" name="contrasenaUsuario" placeholder="Contraseña" required>
+            <input class="inputs" type="password" id="contrasenaUsuario" name="contrasenaUsuario" placeholder="Contraseña" required>
             
             <!-- <label for="contrasenaUsuario2">Confirmar contraseña</label> -->
-            <input type="password" placeholder="Confirmar contraseña" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
+            <input class="inputs" type="password" placeholder="Confirmar contraseña" id="contrasenaUsuario2" name="contrasenaUsuario2" required>
             <div id="resultado_contrasena"></div>
 
             <!-- <label for="fotoPerfil">Foto de Perfil:</label> -->
-            <input type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
+            <input class="inputs" type="file" id="fotoPerfil" name="fotoPerfil" placeholder="Foto de Perfil">
 
             <!-- <label for="ciudad">Ciudad:</label> -->
-            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+            <input class="inputs" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
 
             <!-- <label for="pais">País:</label> -->
-            <input type="text" id="pais" name="pais" placeholder="País" required>
+            <input class="inputs" type="text" id="pais" name="pais" placeholder="País" required>
 
             <!-- <label for="fechaNacimiento">Fecha de Nacimiento:</label> -->
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
+            <input class="inputs" type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
 
             <!-- <label for="email">Email:</label> -->
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input class="inputs" type="email" id="email" name="email" placeholder="Email" required>
 
             <!-- <label for="telefono">Teléfono:</label> -->
-            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
+            <input class="inputs" type="tel" id="telefono" name="telefono" placeholder="Teléfono" >
 
-            <input type="submit" value="Registrarse" id="registroUsuario">
-            <div id="error_direccion" ></div>
+            <input class="inputs" type="submit" value="Registrarse" id="registroUsuario">
+            <div id="error_direccion" class="div_span"></div>
         </form>
     </div>
 <?php
