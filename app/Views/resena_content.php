@@ -254,7 +254,7 @@
             if (fileName) {
                 $('#fileLabel').text(fileName);
             } else {
-                $('#fileLabel').text('Foto de Perfil');
+                $('#fileLabel').text('Haz click aquí');
             }
         });
 </script>
