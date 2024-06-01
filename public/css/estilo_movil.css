@@ -900,6 +900,13 @@
         margin-top: 10px;
         padding-left: 0px;
     }
+    .botones_enviar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        height: auto;
+        width: 100%;
+    }
 }
 
 /* ///////////////////////////////////////////// */

@@ -134,7 +134,7 @@ small{
 }
 
 .btn_enviar{
-    width: 100%;
+    width: 45%;
     padding: 10px;
     margin-top: 20px;
     border: none;
@@ -145,7 +145,7 @@ small{
 }
 
 .btn_enviar2{
-    width: 100%;
+    width: 45%;
     padding: 10px;
     margin-top: 20px;
     border: 1px solid var(--azul_claro);

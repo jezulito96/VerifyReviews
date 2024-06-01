@@ -17,7 +17,11 @@
     <form action="setLogin" method="post" class="formLogin">
         <input type="email" name="email" placeholder="Email" class="inputs" required focus>
         <input type="password" name="contrasena" placeholder="Contraseña" class="inputs" required>
-        <input type="submit" value="Iniciar Sesión" class="btn_enviar">
+        <div class="botones_enviar">
+            <input type="submit" value="Iniciar Sesión" class="btn_enviar">
+            <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario"><input type="button" value="Registrate"  class="btn_enviar2"></a>
+        </div>
+        
     </form>
-    <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario"><input type="button" value="Registrate"  class="btn_enviar2"></a>
+    
 </div>
