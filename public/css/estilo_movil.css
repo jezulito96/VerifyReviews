@@ -725,17 +725,20 @@
     }
 
     /* ---------   TELEFONO negocio   ---------- */
+    .div_llamar{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+    .div_llamar h3{
+        width: 100%;
+    }
     #content_llamar{
         width: 100%;
         height: 100px;
         display: flex;
         justify-content: ce;
-        flex-direction: row;
-    }
-    .div_llamar{
-        width: 100%;
-        height: 100px;
-        display: flex;
         flex-direction: row;
     }
     .icono_llamar{
