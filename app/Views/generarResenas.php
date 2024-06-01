@@ -43,7 +43,7 @@
 
         <div id="containerEmailQr" class="invisible">
             <h5>Correo electrónico del cliente</h5>
-            <input class="inputs" type="email" placeholder="Correo electrónico" name="emailQr" class="emailQr" >
+            <input class="inputs emailQr" type="email" placeholder="Correo electrónico" name="emailQr"  >
         </div>
 
         <div id="numeroQrContainer" class="invisible">
