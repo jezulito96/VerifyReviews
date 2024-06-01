@@ -65,14 +65,19 @@
             ';
             
             echo '<section class="container_top3">';
-
-                echo '<div class="fotoContainer">';
                     
-                    foreach($categoria['ranking'] as $negocio){
-                        var_dump($negocio['cod_negocio']);
-                    }
-                
-                echo '</div>';
+                foreach($categoria['ranking'] as $negocio){
+                    echo '<div class="fotoContainer">';
+                    
+                    $foto_principal = $negocio -> getFotoPrincipal();
+                    $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
+                    echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
+                        echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
+                    echo '</a>';
+                        // var_dump($negocio['cod_negocio']);
+
+                    echo '</div>';
+                }
 
             echo '</section>';
             
