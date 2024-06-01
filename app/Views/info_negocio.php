@@ -238,7 +238,7 @@
             </h3>
             <div id="content_web">
                 <div class="icono_web">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-globe"></i>
                 </div>
                     
                 <div id="info_web">
@@ -247,21 +247,43 @@
             </div>
         </div>
 
-        <div id="content_redesSociales">
-            <div class="info_redes">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter iconos_redes"></i>
-                </a>
-                
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <div class="div_redes">
+            
+            <h3>
+                    Redes sociales
+            </h3>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="content_redes">
+                <div class="icono_redes_sociales">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                    
+                <div id="info_redes_sociales">
+                    X
+                </div>
+            </a>
+
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" id="content_redes">
+                <div class="icono_redes_sociales">
                     <i class="fab fa-facebook-f iconos_redes"></i>
-                </a>
-                
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                </div>
+                    
+                <div id="info_redes_sociales">
+                    Facebook
+                </div>
+            </a>
+            
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" id="content_redes">
+                <div class="icono_redes_sociales">
                     <i class="fab fa-instagram iconosColor"></i>
-                </a>
-            </div>
+                </div>
+                    
+                <div id="info_redes_sociales">
+                    Instagram
+                </div>
+            </a>
+
         </div>
+
 
 
     </div>

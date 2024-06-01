@@ -803,22 +803,40 @@
 
 
     /*-------- REDES SOCIALES ------------------*/
-    #content_redesSociales{
+    .div_redes{
         width: 100%;
-        height: 100px;
+        height: auto;
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #content_redes{
+        width: 90%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .icono_redes_sociales{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
-    .info_redes{
+    .icono_redes_sociales > i{
+    font-size: 24px;
+    }
+    .info_redes_sociales{
         height: 24px;
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: row;
-    }
-    .iconos_redes{
-        font-size: 24px;
     }
 
 
