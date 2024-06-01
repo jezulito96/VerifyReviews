@@ -140,11 +140,11 @@
                         //     echo '</div>';
                         // echo '</div>';
                         
-                        echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
-                            echo 'hola';
-                        echo '</div>';
+                        
                     echo '</div>';
-
+                    echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
+                        echo 'hola';
+                    echo '</div>';
                 }
             echo '</div>';
 
@@ -173,7 +173,7 @@
                 var $popup = $("#popup_" + id);
                 var $boton_cerrar = $(".boton_cerrar_" + id);
 
-                // $popup.css("display", "flex");
+                $popup.css("display", "flex");
 
                 $boton_cerrar.click(function() {
                     $popup.css("display", "none");
