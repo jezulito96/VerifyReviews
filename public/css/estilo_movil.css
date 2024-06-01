@@ -59,8 +59,9 @@
         height: auto;
         background: white;
         padding: 0px;
-        border-bottom: 1px solid #ccc;
-        box-shadow: 4px 0px 4px #eee;
+        /* border-bottom: 1px solid #ccc; */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        /* box-shadow: 4px 0px 4px #eee; */
         z-index: 1000;
     }
     
@@ -69,10 +70,11 @@
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: 70px;
-        text-align: center;
+        text-align: right;
+        padding-left: 20px;
         box-sizing: border-box;
         font-size: 1.5em;
-        border-bottom:1px solid #eee ;
+        /* border-bottom:1px solid #eee ; */
         z-index:1000;
     }
 
