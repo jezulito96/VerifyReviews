@@ -16,8 +16,8 @@
         <input type="hidden" name="es_sesion_resena" value="sesion">
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
         
-        <input type="email" name="email" id="email" placeholder="Email" required >
-        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
+        <input class="inputs" type="email" name="email" id="email" placeholder="Email" required >
+        <input class="inputs" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required >
 
         <input type="submit" name="submit_sesion" id="submit_sesion" value="Iniciar sesión" >
         <input type="button" id="opcion2" value="Continuar sin iniciar sesión">
@@ -31,8 +31,8 @@
         <input type="hidden" name="es_sesion_resena" value="nickname">
         <input type="hidden" name="qr_key" value="<?php echo $qr_key ;?>">
 
-        <input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
-        <input type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
+        <input class="inputs" type="text" name="nickname" id="nickname" placeholder="Nickname" required />
+        <input class="inputs" type="submit" name="submit_nickname" id="submit_nickname" value="Continuar" >
         <input type="button" id="opcion1" value="Iniciar sesion">
     
       </form>
