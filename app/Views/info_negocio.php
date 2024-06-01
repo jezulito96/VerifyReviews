@@ -170,7 +170,7 @@
                 var $popup = $("#popup_" + id);
                 var $boton_cerrar = $(".boton_cerrar_" + id);
 
-                $popup.css("display", "flex");
+                // $popup.css("display", "flex");
 
                 $boton_cerrar.click(function() {
                 $popup.css("display", "none");
@@ -190,7 +190,7 @@
             var $popup2 = $("#popup2_" + id );
             var $boton_cerrar2 = $(".boton_cerrar2_" + id);
 
-            $popup2.css("display", "flex");
+            // $popup2.css("display", "flex");
             
             $boton_cerrar2.click(function () {
                 $popup2.css("display", "none");
