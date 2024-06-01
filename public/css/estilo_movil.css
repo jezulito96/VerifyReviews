@@ -605,6 +605,7 @@
     align-items: center;
 }
 
+/* ////////////      POPUP RESEÑA  ///////////// */
 .popup,
 .popup2 {
     display: none; 
@@ -617,7 +618,7 @@
     justify-content: center;
     align-items: center;
 }
-
+/* 
 .contenido_popup{
     background-color: #3d3b3bf3;
     padding: 20px;
@@ -661,7 +662,7 @@
     width: 80%;
     margin-bottom: 30px;
     border-radius: 5px;
-}               
+}                */
 
     /*////////////////    MENU CON SCROLL DE INFO NEGOCIO ////////////////*/
     .sliderInfoNegocio{

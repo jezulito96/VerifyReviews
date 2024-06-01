@@ -139,7 +139,10 @@
                         //         echo '</div>';
                         //     echo '</div>';
                         // echo '</div>';
-
+                        
+                        echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
+                            echo 'hola';
+                        echo '</div>';
                     echo '</div>';
 
                 }
