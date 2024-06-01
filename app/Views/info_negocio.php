@@ -88,7 +88,7 @@
 
                                 echo '<i class="fa-regular fa-square-check" style="color: #51a5d9;font-size:24px;"></i>';
                                 // imagen de check del logo
-                                echo '<div class="nota_media">4,2</div>';
+                                echo '<div class="nota_media">4,2/5</div>';
 
                             echo '</div>';
 
@@ -99,7 +99,7 @@
                         
                         echo '<div class="titulo_opinion">';
                             // TITULO DE LA RESEÑA
-                            echo $resena -> getTitulo();                            
+                            echo "<p>". $resena -> getTitulo() . "</p>"; 
 
                         echo '</div>';
 
