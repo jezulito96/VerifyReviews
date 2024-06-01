@@ -3,7 +3,7 @@
         ?>
         <div class="titulo_negocio_categoria" >
             <?php  
-                echo "<h4>".$negocio -> getNombre(). "<h4> <i class='far fa-heart icono-corazon'></i>";
+                echo "<h4>".$negocio -> getNombre(). "<h4> ";
             ?>
         </div>
         
@@ -15,7 +15,7 @@
             $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
                 echo '<a class="fotoContainer_negocio_cat"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                     echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
-                    echo '<div class="nombre_negocio_categoria">'. $negocio -> getCalle() . " (" . $negocio ->getCiudad(). ')</div>';
+                    // echo '<div class="nombre_negocio_categoria">'. $negocio -> getCalle() . " (" . $negocio ->getCiudad(). ')</div>';
                 echo '</a>';
 
 
@@ -35,6 +35,10 @@
 
     <div class="sliderInfoNegocio">
 
+        <div class="containerIcono container_opiniones">
+        <i class='far fa-heart icono-corazon'></i>
+            <span id="opiniones">Opiniones</span>
+        </div>
         <div class="containerIcono container_opiniones">
             <i class="fas fa-comment iconosColor"></i>
             <span id="opiniones">Opiniones</span>
