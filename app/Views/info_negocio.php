@@ -95,7 +95,7 @@
                         echo '</div>';
 
                         $fecha = $resena -> getFechaServicio();
-                        echo '<div class="fecha_opinion">'. substr($fecha, 0, 10) . '</div>';
+                        echo '<div class="fecha_opinion"><small>'. substr($fecha, 0, 10) . '</small></div>';
                         
                         echo '<div class="titulo_opinion">';
                             // TITULO DE LA RESEÑA
