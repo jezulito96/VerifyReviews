@@ -118,28 +118,31 @@
 
                     echo '</div>';
 
-                    echo '<div id="popup_' . $resena->getCodResena() . '" class="popup">';
-echo '<div id="contenido_popup_' . $resena->getCodResena() . '" class="contenido_popup">';
-echo '<span class="boton_cerrar" data-id="' . $resena->getCodResena() . '">&times;</span>';
-echo '<div class="informacion_popup" id="informacion_popup_' . $resena->getCodResena() . '">';
-$rutasimgs = $resena->getFotos();
-$imagenes = explode(",", $rutasimgs);
-foreach ($imagenes as $key => $valor) {
-    $rutaImagen = base_url() . '/images/n/' . $valor;
-    echo '<img class="imgs_resenas" src="' . $rutaImagen . '" alt="' . $negocio->getNombre() . '" />';
-}
-echo '</div>';
-echo '</div>';
-echo '</div>';
+                echo '<div id="popup_' . $resena-> getCodResena() . '" class="popup">';
+                    echo '<div id="contenido_popup_' . $resena-> getCodResena() . '" class="contenido_popup" >';
+                        echo '<span class="boton_cerrar_' . $resena-> getCodResena() . '">&times;</span>';
+                        echo '<div class="informacion_popup" id="informacion_popup_' . $resena-> getCodResena() . '" >';
+                            // echo $resena -> getFotos(); 
+                            
+                            $rutasimgs = $resena -> getFotos();
+                            $imagenes = explode(",", $rutasimgs);
+                            foreach($imagenes as $key => $valor){
+                                $rutaImagen = base_url().'/images/n/' . $valor;
+                                echo '<img class="imgs_resenas" src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" />';
+                            }
+                            
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
 
-echo '<div id="popup2_' . $resena->getCodResena() . '" class="popup2">';
-echo '<div id="contenido_popup2_' . $resena->getCodResena() . '" class="contenido_popup2">';
-echo '<span class="boton_cerrar2" data-id="' . $resena->getCodResena() . '">&times;</span>';
-echo '<div id="informacion_popup2_' . $resena->getCodResena() . '">';
-echo $resena->getOpinion();
-echo '</div>';
-echo '</div>';
-echo '</div>';
+                echo '<div id="popup2_' . $resena-> getCodResena() . '" class="popup2">';
+                    echo '<div id="contenido_popup2_' . $resena-> getCodResena() . '" class="contenido_popup2" >';
+                        echo '<span class="boton_cerrar2_' . $resena-> getCodResena() . '" >&times;</span>';
+                        echo '<div  id="informacion_popup2_' . $resena-> getCodResena() . '" >';
+                            echo $resena -> getOpinion(); 
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
 
                 }
             echo '</div>';
@@ -164,37 +167,43 @@ echo '</div>';
 
         // -------------    Para los botones de las reseñas fotos y opinion     -------------------
         $(".btn_opinion1").click(function() {
-            var id = $(this).attr('id');
-            var $popup = $("#popup_" + id);
+            
+                var id = $(this).attr('id');
+                var $popup = $("#popup_" + id);
+                var $boton_cerrar = $(".boton_cerrar_" + id);
 
-            $popup.css("display", "flex");
+                $popup.css("display", "flex");
 
-            $(".boton_cerrar[data-id='" + id + "']").click(function() {
+                $boton_cerrar.click(function() {
                 $popup.css("display", "none");
-            });
+                });
 
-            $(window).click(function(evento) {
-                if ($(evento.target).closest('.contenido_popup').length === 0 && !$(evento.target).is('.btn_opinion1')) {
-                    $popup.css("display", "none");
-                }
-            });
+                $(window).click(function (evento) {
+                    if ($(evento.target).is($popup)) {
+                        $popup.css("display", "none");
+                    }
+                });
         });
+
 
         $(".btn_opinion2").click(function() {
             var id = $(this).attr('id');
-            var $popup2 = $("#popup2_" + id);
+
+            var $popup2 = $("#popup2_" + id );
+            var $boton_cerrar2 = $(".boton_cerrar2_" + id);
 
             $popup2.css("display", "flex");
-
-            $(".boton_cerrar2[data-id='" + id + "']").click(function() {
+            
+            $boton_cerrar2.click(function () {
                 $popup2.css("display", "none");
             });
 
-            $(window).click(function(evento) {
-                if ($(evento.target).closest('.contenido_popup2').length === 0 && !$(evento.target).is('.btn_opinion2')) {
+            $(window).click(function (evento) {
+                if ($(evento.target).is($popup2)) {
                     $popup2.css("display", "none");
                 }
             });
+
         });
 
         // PINTAR EL Mapa  info_mapa
