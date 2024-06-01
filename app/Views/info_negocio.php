@@ -1,24 +1,22 @@
 <?php
     if(isset($negocio)){
         ?>
-        <div class="containerTitulo" >
+        <div class="titulo_negocio_categoria" >
             <?php  
-                echo $negocio -> getNombre(). "<i class='far fa-heart icono-corazon'></i>";
+                echo "<h4>".$negocio -> getNombre(). "<h4> <i class='far fa-heart icono-corazon'></i>";
             ?>
         </div>
         
         <?php
+        echo '<div class="carousel_negocio_categoria">';
 
-        echo '<div class="fotosContainerNegocio">';
-
-            // recojo las rutas de las fotos y las pinto 
+            // recojo las rutas de las fotos y las pinto
             $foto_principal = $negocio -> getFotoPrincipal();
             $ruta_img_principal = base_url() . "images/n/n_" . $negocio -> getCodNegocio() . "/img_negocio/" . $foto_principal;
-            echo '<div class="fotoContainer" style="margin-left:15px;">';
-                echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
+                echo '<a class="fotoContainer_negocio_cat"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                     echo '<img src="'. $ruta_img_principal .'" title="'. $negocio -> getNombre() .'"/>';
+                    echo '<div class="nombre_negocio_categoria">'. $negocio -> getCalle() . " (" . $negocio ->getCiudad(). ')</div>';
                 echo '</a>';
-            echo '</div>';
 
 
             $rutasimgs = $negocio -> getFotosBD();
@@ -26,14 +24,12 @@
             foreach($imagenes as $key => $valor){
             $rutaImagen = base_url().'/images/n/n_'.$negocio -> getCodNegocio().'/img_negocio/'.  $valor ;
             //    echo "<p color='red'>" .base_url(). $valor ."</p>";
-                echo '<div class="fotoContainer" >';
-                    echo '<a class="fotoContainer"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
+                    echo '<a class="fotoContainer_negocio_cat"  href="https://verifyreviews.es/verifyreviews/negocio?id='. $negocio -> getCodNegocio() . '" >';
                         echo '<img src="' . $rutaImagen . '" alt="'. $negocio -> getNombre() .'" title="'. $negocio -> getNombre() .'"/>';
                     echo '</a>';
-                echo '</div>';
             }
             
-        echo '</div>';
+        echo '</div>'; 
     } 
 ?>
 
@@ -150,6 +146,12 @@
 <script>
     $(document).ready(function () {
 
+        $('.carousel_negocio_categoria').slick({
+            slidesToShow: 1, // fotos que se pintan a la vez
+            centerMode:true,
+            variableWidth: true,
+            centerPadding: '0'
+        });
 
         // -------------    Para los botones de las reseñas fotos y opinion     -------------------
         $(".btn_opinion1").click(function() {
