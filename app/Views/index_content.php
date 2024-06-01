@@ -97,6 +97,7 @@
             slidesToShow: 1, // fotos que se pintan a la vez
             centerMode:true,
             variableWidth: true,
+            centerPadding: '0'
         });
     });
 </script>
