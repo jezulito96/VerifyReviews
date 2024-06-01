@@ -1,6 +1,6 @@
 <?php
   if(isset($error)){
-    echo '<div  class="div_span" style="width:200px;" ><h4 class="errror">Error:</h4><br><p class="error">' . $error . '</p></div>';
+    echo '<div  class="div_span" style="width:200px;height:auto;" ><h4 class="errror">Error:</h4><br><p class="error">' . $error . '</p></div>';
   }elseif(isset($resena_enviada) && $resena_enviada == true){
     echo "<p class='bien' >La reseña ha sido enviada correctamente</p>";
     // var_dump($cod_resena);
