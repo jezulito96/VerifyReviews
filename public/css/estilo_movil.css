@@ -331,7 +331,7 @@
     }
     .fotoContainerTop3 > img{
         position: relative;
-        width:250px;
+        width:90%;
         height: 200px;
         border-radius: 5px;
         overflow: hidden;
