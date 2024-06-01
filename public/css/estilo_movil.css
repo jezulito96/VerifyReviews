@@ -960,7 +960,7 @@
 
 
  /* formulario comercio y usuario*/
-    /* .containerNegocioForm{
+    .containerNegocioForm{
         width: 90vw;
         height: auto;
         padding: 20px;
@@ -1000,7 +1000,7 @@
 
     .containerNegocioForm #registroNegocio:hover {
         background-color: #6096BA;
-    } */
+    } 
 /* ///////////////////////////////////////////// */
     /* 
     .containerformGenerarResena {
