@@ -5,7 +5,7 @@
 
 
 <div class="containerformGenerarResena">
-    <h3>Genera códigos Qr</h3>
+    <h3>Genera tus Qr</h3>
     <p class="bien">Solo tus clientes puedan opinar sobre tu negocio</p>
     <small class="info_generar_resenas">
         Cada reseña será unica, de esta manera protegemos tu negocio. Nos aseguramos de que las reseñas que recibe tu negocio sean de tus clientes.
@@ -28,7 +28,7 @@
                 <option value="1">Morado azulado</option>
                 <option value="2">Tonos verdes</option>
                 <option value="4">Tonos marrones</option>
-                <option value="5">Tonos rosas</option>
+                <option value="5">Tonos naranjas</option>
                 <option value="3">Tonos grises 1</option>
                 <option value="6">Tonos grises 2</option>
             </select>
@@ -42,13 +42,13 @@
 
 
         <div id="containerEmailQr" class="invisible">
-            <label>Correo electrónico del cliente </email>
-            <input type="email" name="emailQr" class="emailQr" />
+            <h5>Correo electrónico del cliente </h5>
+            <input class="inputs" type="email" name="emailQr" class="emailQr" />
         </div>
 
         <div id="numeroQrContainer" class="invisible">
-            <label>¿Cuántos códigos quieres generar?</label>
-            <select name="numeroQr" id="numeroQr">
+            <h5>¿Cuántos códigos quieres generar?</h5>
+            <select class="inputs" name="numeroQr" id="numeroQr">
                 <option value="3">3</option>
                 <option value="5">5</option>
                 <option value="10">10</option>
