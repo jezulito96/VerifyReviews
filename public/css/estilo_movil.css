@@ -638,6 +638,7 @@
     overflow-y: scroll;
     margin-top: 20px;
     background: var(--gris_claro);
+    border-radius: 10px;
 }
 
 .contenido_popup2{
@@ -645,6 +646,7 @@
     word-wrap: break-word;
     width: 72%;
     background: var(--gris_claro);
+    border-radius: 10px;
 }
 .informacion_popup{
     width: 100%;
