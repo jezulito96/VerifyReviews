@@ -15,38 +15,38 @@
         <form action="setNegocio" method="post" id="formularioNegocio" enctype="multipart/form-data" >
 
             <label for="nombreNegocio">*Nombre del negocio:</label>
-            <input type="text" id="nombreNegocio" name="nombreNegocio" required>
+            <input class="inputs" type="text" id="nombreNegocio" name="nombreNegocio" required>
 
             <label for="contrasenaNegocio">*Contraseña:</label>
-            <input type="password" id="contrasenaNegocio" name="contrasenaNegocio" required>
+            <input class="inputs" type="password" id="contrasenaNegocio" name="contrasenaNegocio" required>
 
             <label for="contrasenaNegocio2">*Confirma la contraseña:</label>
-            <input type="password" id="contrasenaNegocio2" required>
+            <input class="inputs" type="password" id="contrasenaNegocio2" required>
             <div id="resultado_contrasena"></div>
 
             <label for="email">*Email:</label>
-            <input type="email" id="email" name="email"  required>
+            <input class="inputs" type="email" id="email" name="email"  required>
             <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
             <label for="calle">*Dirección:</label>
-            <input type="text" id="calle" name="calle" placeholder="C/ Calle Juan Carlos, 15" required>
+            <input class="inputs" type="text" id="calle" name="calle" placeholder="C/ Calle Juan Carlos, 15" required>
 
             <label for="ciudad">*Ciudad:</label>
-            <input type="text" id="ciudad" name="ciudad" required>
+            <input class="inputs" type="text" id="ciudad" name="ciudad" required>
 
             <label for="pais">*País:</label>
-            <input type="text" id="pais" name="pais" required>
+            <input class="inputs" type="text" id="pais" name="pais" required>
 
             <label for="telefonoNegocio">*Teléfono:</label>
-            <input type="text" id="telefonoNegocio" name="telefonoNegocio" required>
+            <input class="inputs" type="text" id="telefonoNegocio" name="telefonoNegocio" required>
 
             <label for="fotos">Fotos:</label>
-            <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
+            <input class="inputs" type="file" id="fotos" name="fotos[]" accept="image/*" multiple >
 
             <label for="fotoPrincipal">*Fotos principal:</label>
-            <input type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
+            <input class="inputs" type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
 
             <label for="sitio_web">Sitio Web:</label>
-            <input type="url" id="sitio_web" name="sitio_web" required>
+            <input class="inputs" type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
             <select id="categoria" name="categoria" required>
@@ -60,12 +60,12 @@
             </select>
 
             <label for="telefonoTitular">Teléfono del titular:</label>
-            <input type="text" id="telefonoTitular" name="telefonoTitular" required>
+            <input class="inputs" type="text" id="telefonoTitular" name="telefonoTitular" required>
 
             <label for="nombreTitular">Nombre del titular:</label>
-            <input type="text" id="nombreTitular" name="nombreTitular" required>
+            <input class="inputs" type="text" id="nombreTitular" name="nombreTitular" required>
 
-            <input type="submit" value="Registrarse" id="registroNegocio">
+            <input class="inputs" type="submit" class="btn_enviar_largo" value="Registrarse" id="registroNegocio">
             <div id="error_direccion"></div>
         </form>
     </div>

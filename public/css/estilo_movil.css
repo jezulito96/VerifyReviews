@@ -1030,40 +1030,58 @@
         margin-bottom: 0px;
         margin-top: 10px;
     }
-    /* .containerNegocioForm label {
-        display: block;
-        margin-bottom: 5px;
-        color: #274C77;
-    } */
-/* 
-    .containerNegocioForm input[type="text"],
-    .containerNegocioForm input[type="email"],
-    .containerNegocioForm input[type="tel"],
-    .containerNegocioForm input[type="url"],
-    .containerNegocioForm input[type="file"],
-    .containerNegocioForm select {
+
+     /* para el input file */
+     .file-upload-wrapper {
+        /* position: relative;
+        width: 250px;
+        text-align: center; */
+        text-align: center;
+        display: flex;
         width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #A3CEF1;
-        border-radius: 4px;
-        box-sizing: border-box;
-        background-color: #FFFAFB;
-        color: #274C77;
     }
-    .containerNegocioForm #registroNegocio {
-        width: auto;
-        padding: 10px 20px;
-        background-color: #53A6D9;
-        border: none;
-        border-radius: 4px;
-        color: #FFFAFB;
+    
+    /* Ocultar el input de tipo file original */
+    .inputs[type="file"] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 20px;
         cursor: pointer;
     }
+    
+    /* Estilos para el label personalizado */
+    .custom-file-upload {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        color: var(--gris);
+        background-color: white;
+        border: 1px solid var(--azul_verify);
+        border-radius: 5px;
+        width: 100%;
+        height: 20px;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .custom-file-upload:hover {
+        background-color: #ffffff;
+        color: #51a5dd;
+        border-color: #51a5dd;
+    }
 
-    .containerNegocioForm #registroNegocio:hover {
-        background-color: #6096BA;
-    }  */
+    .btn_enviar_largo{
+        width:100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+  
 
 }
 /* ///////////////////////////////////////////// */
