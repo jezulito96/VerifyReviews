@@ -173,10 +173,10 @@
                 var $popup = $("#popup_" + id);
                 var $boton_cerrar = $(".boton_cerrar_" + id);
 
-                $popup.css("display", "flex");
+                // $popup.css("display", "flex");
 
                 $boton_cerrar.click(function() {
-                $popup.css("display", "none");
+                    $popup.css("display", "none");
                 });
 
                 $(window).click(function (evento) {
