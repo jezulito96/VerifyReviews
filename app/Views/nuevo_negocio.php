@@ -35,7 +35,7 @@
             <input class="inputs" type="text" id="ciudad" name="ciudad" required>
 
             <label for="pais">*País:</label>
-            <input class="inputs" type="text" id="pais" name="pais" required>
+            <input class="inputs" value="España" type="text" id="pais" name="pais" required>
 
             <label for="telefonoNegocio">*Teléfono:</label>
             <input class="inputs" type="text" id="telefonoNegocio" name="telefonoNegocio" required>
@@ -47,7 +47,7 @@
             <input  type="file" id="fotoPrincipal" name="fotoPrincipal" accept="image/*" required>
 
             <label for="sitio_web">Sitio Web:</label>
-            <input class="inputs" type="url" id="sitio_web" name="sitio_web" required>
+            <input class="inputs" placeholder="https://VerifyReviews.es" type="url" id="sitio_web" name="sitio_web" required>
                 
             <label for="categoria">Categoría:</label>
             <select class="inputs" style="background:white;width:100%;" id="categoria" name="categoria" required>
