@@ -94,10 +94,12 @@
         });
 
         $('.container_top3').slick({
-            slidesToShow: 1, // fotos que se pintan a la vez
+            // fotos que se pintan a la vez
+            slidesToShow: 1, 
             centerMode:true,
             variableWidth: true,
-            centerPadding: '0'
+            //para que no se deforme la foto
+            centerPadding: '0' 
         });
     });
 </script>
