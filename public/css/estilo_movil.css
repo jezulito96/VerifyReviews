@@ -1578,7 +1578,7 @@
 }
 .container_valoracion{
     margin: 0px auto;
-    width: 90%;
+    width: 85%;
     height: 100px;
     display: flex;
     justify-content: space-around;
@@ -1591,7 +1591,7 @@
 
 .container_ranking{
     margin: 0px auto;
-    width: 90%;
+    width: 85%;
     height: 30px;
     display: flex;
     justify-content: start;
