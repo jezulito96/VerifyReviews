@@ -644,6 +644,7 @@
     min-height: 60px;
     word-wrap: break-word;
     width: 72%;
+    background: var(--gris_claro);
 }
 .informacion_popup{
     width: 100%;
