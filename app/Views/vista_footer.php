@@ -1,6 +1,8 @@
 <div class="footer">
-
-    <img src="<?php echo base_url() ?>img/logoMovil.png" alt="Logotipo">
+    <div class="container_logo_footer">
+        <img src="<?php echo base_url() ?>img/logoMovil.png" alt="Logotipo">
+    </div>
+    
 
     <ul class="listaMenu_footer">
         <?php
@@ -29,13 +31,13 @@
 
     <div class="social">
         <a href="https://www.facebook.com" target="_blank">      
-            <i class="fab fa-twitter iconos_redes"></i>
+            <i class="fab fa-twitter"></i>
         </a>
         <a href="https://www.twitter.com" target="_blank">
-            <i class="fab fa-facebook-f iconos_redes"></i>
+            <i class="fab fa-facebook-f "></i>
         </a>
         <a href="https://www.instagram.com" target="_blank">
-            <i class="fab fa-instagram iconosColor" style="color:white;></i>
+            <i class="fab fa-instagram " ></i>
         </a>
     </div>
     
