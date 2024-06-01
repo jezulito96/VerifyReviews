@@ -1573,7 +1573,9 @@
                                 /*  MI NEGOCIO */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
+.mi_negocio h5{
+    margin-left: 20px;
+}
 .container_valoracion{
     margin: 0px auto;
     width: 90%;
