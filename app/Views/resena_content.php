@@ -175,7 +175,7 @@
 
       <div class="moduloResena">
         <h5 class="titulos">
-          T&iacute;tulo de su experiencia
+          T&iacute;tulo de tu experiencia
         </h5>
 
         <div class="areaTexto">
@@ -207,10 +207,15 @@
         </h5>
 
         <div class="areaFile">
-
-          <div class="file-select" id="fotos">
-            <input type="file" id="fotos_resena" name="fotos_resena[]" accept="image/*" aria-label="Archivo" multiple>
+          <div class="file-upload-wrapper">
+              <input class="inputs" type="file" id="fotos_resena" name="fotos_resena[]" accept="image/*" aria-label="Archivo" multiple>
+              <label for="fotoPerfil" class="custom-file-upload" id="fileLabel">
+                  Haz click aquí
+              </label>
           </div>
+          <!-- <div class="file-select" id="fotos">
+            <input type="file" id="fotos_resena" name="fotos_resena[]" accept="image/*" aria-label="Archivo" multiple>
+          </div> -->
 
         </div>
 
