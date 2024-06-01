@@ -19,7 +19,7 @@
         <input type="password" name="contrasena" placeholder="Contraseña" class="inputs" required>
         <div class="botones_enviar">
             <input type="submit" value="Iniciar Sesión" class="btn_enviar">
-            <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario" class="btn_enviar2"><input type="button" value="Registrate"  ></a>
+            <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario" class="btn_enviar2">Registrate</a>
         </div>
         
     </form>
