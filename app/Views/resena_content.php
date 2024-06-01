@@ -135,7 +135,6 @@
     <div class="negocio" id="negocio">
 
       <div class="fotoPerfilNegocio" id="fotoPerfilNegocio">
-        <!-- cambiar url -->
         <img class="imagenNegocio" src="<?php echo base_url() . "images/n/n_" . $negocio['cod_negocio'] . "/img_negocio/" . $negocio['foto_principal'] ;?>" alt="Imagen negocio" title="Imagen negocio" />
       </div>
 
@@ -146,16 +145,15 @@
         </div>
 
         <div class="direccionNegocio" id="direccionNegocio">
-          <!-- Av. Valladolid, 106, 42005 Soria -->
           <p><?php echo $negocio['calle'] . ", " . $negocio['ciudad'] . ", " . $negocio['pais'];?> </p>
         </div>
 
       </div>
 
       <div class="valoracion">
-        <h3 class="tituloValoracion">
+        <h5 class="tituloValoracion">
           ¿Cómo puntuar&iacute;as la experiencia?
-        </h3>
+        </h5>
         <div class="puntuacionValoracion">
           <!-- imagen --- https://iconos8.es/icon/set/tick/stickers  -->
           <img class="imgPuntuacion" id="imgTick1"
@@ -176,9 +174,9 @@
       </div>
 
       <div class="moduloResena">
-        <h3 class="titulos">
+        <h5 class="titulos">
           T&iacute;tulo de su experiencia
-        </h3>
+        </h5>
 
         <div class="areaTexto">
 
@@ -190,9 +188,9 @@
       </div>
 
       <div class="moduloResena">
-        <h3 class="titulos">
+        <h5 class="titulos">
           Describe tu experiencia
-        </h3>
+        </h5>
 
         <div class="areaTexto">
 
@@ -204,9 +202,9 @@
       </div>
 
       <div class="moduloResena">
-        <h3 class="titulos">
+        <h5 class="titulos">
           Añade alguna foto <span class="subtitulo">(opcional)</span>
-        </h3>
+        </h5>
 
         <div class="areaFile">
 
@@ -219,9 +217,9 @@
       </div>
 
       <div class="moduloResena">
-        <h3 class="titulos">
+        <h5 class="titulos">
           Fecha de tu experiencia
-        </h3>
+        </h5>
 
         <div class="areaFecha">
           <input type="date" name="fechaResena" id="fechaResena" class="fechaResena" required placeholder="d/m/Y" min="2024-01-01">
