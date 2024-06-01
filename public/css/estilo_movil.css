@@ -496,8 +496,9 @@
 }
 .info_opiniones {
     position: relative;
-    width:300px;
+    width:93%;
     height: 250px;
+    border:1px solid var(--azul_verify);
     border-radius: 10px;
     overflow: hidden;
     margin-left: 20px;
