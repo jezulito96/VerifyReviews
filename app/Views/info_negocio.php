@@ -37,7 +37,7 @@
 
         <div class="containerIcono container_opiniones">
         <i class='far fa-heart icono-corazon'></i>
-            <span id="opiniones">Like</span>
+            <span id="">Like</span>
         </div>
         <div class="containerIcono container_opiniones">
             <i class="fas fa-comment iconosColor"></i>
@@ -49,7 +49,7 @@
         </div>
         <div class="containerIcono container_llamar">
             <i class="fas fa-phone iconosColor"></i>
-            <span id="llamar">Llamar</span>
+            <span id="llamar">Contacto</span>
         </div>
 
         <div class="containerIcono container_web">
@@ -217,15 +217,20 @@
     });
 </script>
         
-
+        <h3>
+            Contacto
+        </h3>   
         <div id="content_llamar">
-            <div class="icono_llamar">
-                <i class="fas fa-phone iconosColor"></i>
+            <div class="container_llamar">
+                <div class="icono_llamar">
+                    <i class="fas fa-phone iconosColor"></i>
+                </div>
+                    
+                <div id="telefono_llamar">
+                        <a href="tel:<?php echo $negocio -> getTelefonoNegocio(); ?>" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
+                </div>
             </div>
-                
-            <div id="telefono_llamar">
-                    <a href="tel:<?php echo $negocio -> getTelefonoNegocio(); ?>" ><?php echo $negocio -> getTelefonoNegocio(); ?></a>
-            </div>
+            
         </div>
 
         <div id="content_web">
