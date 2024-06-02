@@ -1076,14 +1076,14 @@
         margin-top: 10px;
     }
     #formularioNegocio{
-        width: 40%;
+        width: 30%;
     }
-    /* .containerUsuarioForm input[type="file"]{
-        border: none;
-        border-radius: 5px;
-        background-color: var(--azul_verify);
-        color: white;
-    } */
+    #formularioNegocio label{
+        font-size: 1.5em;
+    }
+    .inputs{
+        font-size: 1.5em;
+    }
 
     /* para el input file */
     .file-upload-wrapper {
