@@ -27,7 +27,7 @@
 
             echo '<li><a href="http://verifyReviews.es/verifyreviews/cerrarSesion">Cerrar sesion</a></li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/misResenas">Mis reseñas</a></li>';
-            echo '<li>Favoritos</li>';
+            // echo '<li>Favoritos</li>';
             
 
         } else if(isset($sesionIniciada) && $sesionIniciada == 2){
