@@ -205,21 +205,7 @@
             <br />
         </main>
 
-        <!--.--------------------------  PERMISOS DE UBICACION ----------------------- -->
-        <!-- <div id="containerPermisosUbicacion">
-
-            <h4>Queremos acceder a tu ubicacion</h4>
-            <p>Podremos darte una mejor informarción sobre los comercios de tu zona</p>
-
-            <div class="botonesUbicacion">
-                <button id="aceptarUbicacion">Aceptar</button>
-                <button id="degenarUbicacion">Denegar</button>
-            </div>
-            
-
-        </div> -->
-        <div id="resultadoLocation"></div>
-        <!-- <div id="mapa" class="mapa"></div> -->
+        <div class="clearfix"></div>
 
         <footer>
             <!--  vista para que el negocio vea sus reseñas y sus valoraciones -->

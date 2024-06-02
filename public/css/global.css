@@ -177,3 +177,6 @@ display: inline-block;
 #fotos::before {
 content: 'Sube aquí tus fotos';
 }
+
+/* limpiar flotados */
+.clearfix{clear: both;}
