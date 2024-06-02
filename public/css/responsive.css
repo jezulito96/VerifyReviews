@@ -454,9 +454,10 @@
         justify-content: center;
         align-content: center;
     }
-
     .container_logo_footer img {
+        margin-top: 25%;
         height: 60px;
+        background-image: url('../img/logotipo3.png');
     }
     .listaMenu_footer {
         width: 35%;
@@ -467,7 +468,7 @@
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-right: 70px;
+        padding-right: 31px;
         text-align: center;
         padding-left: 20px;
         box-sizing: border-box;
