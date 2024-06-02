@@ -139,7 +139,7 @@
 
         <script>
             $(document).ready(function() {
-                $('.carousel_Categorias').slick({
+                $('#carousel_cat_escritorio').slick({
                     dots: true, // puntitos
                     slidesToShow: 1, // fotos que se pintan a la vez
                 });
