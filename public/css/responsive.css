@@ -1780,8 +1780,8 @@
         float: right;
         width: 100%;
         margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
     }
     #carousel_cat_movil{
         display: none;
