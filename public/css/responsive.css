@@ -1693,6 +1693,8 @@
     }
     .footer .logo2{
         display: block;
+        width: 100px;
+        height: 100px;
     }
     .container_logo_footer{
         width: 30%;
@@ -1703,7 +1705,7 @@
     }
     .container_logo_footer img {
         margin-top: 25%;
-        height: 60px;
+        /* height: 60px; */
     }
     .listaMenu_footer {
         width: 35%;
