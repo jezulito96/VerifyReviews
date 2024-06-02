@@ -1700,7 +1700,7 @@
         display: none;
     }
     #carousel_cat_escritorio{
-        margin-bottom: 30px;
+        margin-bottom: 75px;
     }
     /*
          header
@@ -1779,13 +1779,11 @@
     .filtros_container {
         width: 100%;
         display: flex;
-        justify-content: start;
-        align-items: start;
+        justify-content: space-around;
+        align-items: center;
         padding: 10px 15px;
-        padding-top: 10px;
+        /* padding-top: 10px; */
         height: 100%;
-        padding-top: 80px;
-        flex-wrap: wrap;
     
     }
     .filtros_container button, .filtros_container input {
