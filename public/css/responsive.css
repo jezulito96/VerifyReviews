@@ -1075,6 +1075,9 @@
         margin-bottom: 0px;
         margin-top: 10px;
     }
+    #formularioNegocio{
+        width: 40%;
+    }
     /* .containerUsuarioForm input[type="file"]{
         border: none;
         border-radius: 5px;
