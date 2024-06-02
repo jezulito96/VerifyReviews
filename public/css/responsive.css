@@ -1786,21 +1786,29 @@
         height: 100%;
     
     }
-    .filtros_container button, .filtros_container input {
+    .filtros_container button{
         border: 2px solid var(--azul_blanco);
         padding: 5px;
         border-radius: 5px;
         margin-right: 5px;
         background: white;
         color:var(--gris);
+        width: 200px;
+        height: 35px;
     }
+    
     .filtros_container input {
-        flex-grow: 1;
-        padding-left: 10px;
-        margin-left: 5px;
+        border: 2px solid var(--azul_blanco);
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        background: white;
+        color:var(--gris);
+        height: 35px;
     }
+
     .filtros_container > i{
-        font-size: 25px;
+        font-size: 30px;
         margin-left: 5px;
         color:var(--gris);
     }
