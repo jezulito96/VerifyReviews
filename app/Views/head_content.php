@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- posicionamiento -->
-    <!-- <meta name="keywords" content="Reseñas, verificadas, opiniones, comercio, opinion, negocio"> -->
-    <!-- <link rel="canonical" href="https://verifyreviews.es">
-    <meta name="robots" content="index, follow"> -->
+    <meta name="keywords" content="Reseñas, verificadas, opiniones, comercio, opinion, negocio"> -->
+    <link rel="canonical" href="https://verifyreviews.es">
+    <meta name="robots" content="index, follow">
 
 
 

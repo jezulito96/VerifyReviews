@@ -668,8 +668,8 @@
         .container_opiniones_info{
             margin-top: 20px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
-            display: flex;
-            justify-content: start;
+            /* display: flex;
+            justify-content: start; */
         }
     }
     .info_opiniones {
