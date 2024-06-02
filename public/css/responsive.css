@@ -1062,6 +1062,13 @@
         max-width: 300px;
         padding: 20px;
         margin: 0px auto;
+        margin-left: 30%;
+    }
+    .formLogin{
+        width: 500px;
+    }
+    .formLogin small{
+        font-size: 1.2em;
     }
     .containerformLogin h3{
         margin-bottom: 0px;
@@ -1077,7 +1084,7 @@
     }
 
     .btn_enviar2{
-        width: 40%;
+        width: 30%;
       padding: 10px;
       margin-top: 20px;
       border: 1px solid var(--azul_claro);
@@ -1086,10 +1093,11 @@
       color: var(--azul_verify);
       font-weight: bold;
       font-size: 14px;
+      font-size: 1.3em;
     }
 
     .btn_enviar{
-        width: 40%;
+        width: 60%;
         padding: 10px;
         margin-top: 20px;
         border: none;
@@ -1097,6 +1105,7 @@
         background-color: var(--azul_verify);
         color: white;
         font-weight: bold;
+        font-size: 1.3em;
     }
 }
 
