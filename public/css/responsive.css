@@ -1807,6 +1807,7 @@
         border-radius: 10px;
         padding: 10px 10px;
         flex-wrap: wrap;
+        padding-bottom: 25px;
     }
     .filtros_container {
         width: 100%;
@@ -1829,6 +1830,7 @@
         height: 59px;
         font-size: 1.4em;
         margin-right: 30px;
+        cursor:pointer;
     }
     
     .filtros_container input {
@@ -1842,6 +1844,7 @@
         width: 80%;
         font-size: 1.5em;
         padding-left: 20px;
+
     }
 
     .filtros_container > i{
@@ -1949,6 +1952,7 @@
         align-items: center;
         margin-bottom:20px;    
         margin-top: 20px;
+        cursor:pointer;
     }
     .cerrar_busqueda span{
         font-size: 18px;
