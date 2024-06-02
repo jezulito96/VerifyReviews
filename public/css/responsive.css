@@ -340,6 +340,7 @@
 }
 
     /* ////////////    TOP 3  ////////////// */
+@media (max-width: 800px) {
     .container_top3{
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
@@ -386,6 +387,58 @@
         border-radius: 5px;
         /* width: 100%; */
     }
+}
+@media (min-width: 800px) {
+    .container_top3{
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+    }
+    .titulo_top3{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .titulo_top3 h3{
+        font-size: 1.5em;
+    }
+
+    .imgCatTop3{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .fotoContainerTop3{
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        
+    }
+    .fotoContainerTop3 > img{
+        position: relative;
+        border-radius: 10px important!;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .nombreNegocioTop{
+        position: absolute;
+        bottom: 10px;
+        left: 3px;
+        z-index: 100;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 5px;
+        border-radius: 5px;
+        /* width: 100%; */
+    }
+}
     @media (max-width: 500px){
         .fotoContainerTop3{
             width:300px;
@@ -407,7 +460,7 @@
             height: 320px;
         }
     }
-    @media (min-width: 600px) and (max-width: 900px){
+    @media (min-width: 600px) and (max-width: 800px){
         .fotoContainerTop3{
             width:550px;
             height: 500px;
