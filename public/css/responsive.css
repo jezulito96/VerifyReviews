@@ -1831,9 +1831,12 @@
     }
 
 }
-.containerformGenerarResena{
-    margin: 20px;
+@media (max-width:800px){
+    .containerformGenerarResena{
+        margin: 20px;
+    }
 }
+
 .info_generar_resenas{
     margin-bottom: 20px;
 }
