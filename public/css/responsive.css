@@ -16,7 +16,7 @@
         flex-direction: row;
     }
     .carousel_cat_escritorio{
-
+        display: none;
     }
     .menuContainer {
         width: 85px;
