@@ -4,11 +4,7 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 @media (max-width: 800px) {
-    body{
-        margin: 0px;
-        height: 0px;
-        width: 100%;
-    }
+
     .headerContainer {
         width: 100vw;
         height: 80px;
@@ -1394,11 +1390,7 @@
 
 /* ///////////    INICIO SESION O NICKNAME    /////////// */
 
-    main{
-        min-height: 400px;
-        /* padding: 10px; */
-        box-sizing: border-box;
-    }
+
 
     #containerSesion,
     #containerNickname{
@@ -1938,22 +1930,7 @@
 
 
 @media (min-width: 800px) {
-    body{
-        margin: 0px;
-        height: 0px;
-        width: 85%;
-        margin: 0px auto;
-    }
-    main{
-        min-height: 600px;
-        box-sizing: border-box;
-        float: right;
-        width: 80%;
-        margin-top: 20px;
-        margin-right: 10%;
-        /* display: flex;
-        flex-wrap: wrap; */
-    }
+
     #carousel_cat_movil{
         display: none;
     }

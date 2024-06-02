@@ -185,3 +185,35 @@ content: 'Sube aquí tus fotos';
 
 /* limpiar flotados */
 .clearfix{clear: both;}
+
+@media (min-width: 800px) {
+    body{
+        margin: 0px;
+        height: 0px;
+        width: 85%;
+        margin: 0px auto;
+    }
+    main{
+        min-height: 600px;
+        box-sizing: border-box;
+        float: right;
+        width: 80%;
+        margin-top: 20px;
+        margin-right: 10%;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+}
+
+@media (max-width: 800px) {
+    body{
+        margin: 0px;
+        height: 0px;
+        width: 100%;
+    }
+    main{
+        min-height: 400px;
+        /* padding: 10px; */
+        box-sizing: border-box;
+    }
+}
