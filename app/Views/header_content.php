@@ -1,4 +1,4 @@
-<!-- <div class="espacioHeader"></div> -->
+<?php echo DISPOSITIVO; ?>
 <div class="headerContainer">
 
     <div class="logoContainer">

@@ -87,10 +87,12 @@
         // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/estilo_movil.css' />";
         echo "<link rel='stylesheet' href='" . base_url() . "css/general_movil.css' />";
+        define("DISPOSITIVO", "movil");
     } else {
         // Escritorio
         echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
         echo "<link rel='stylesheet' href='" . base_url() . "css/general_escritorio.css' />";
+        define("DISPOSITIVO", "escritorio");
     }
 
     echo "<link rel='stylesheet' href='" . base_url() . "css/global.css' />";
