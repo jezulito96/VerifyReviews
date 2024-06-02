@@ -1864,6 +1864,12 @@
         width: 50%;
         margin-left: 30%;
     }
+    .container_opiniones_info{
+        
+    }
+    .info_opiniones{
+        width: 90%;
+    }
 }
 
 .mi_negocio h5{
