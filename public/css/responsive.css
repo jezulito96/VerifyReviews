@@ -600,6 +600,7 @@
     .carousel_negocio_categoria{
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+        height: 450px;
     }
     .titulo_negocio_categoria{
         width: 100%;
