@@ -1824,7 +1824,13 @@
                                 /*  GENERAR_RESENA */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:800px){
+    .containerformGenerarResena{
+        width: 50%;
+        margin: 0px auto;
+    }
 
+}
 .containerformGenerarResena{
     margin: 20px;
 }
