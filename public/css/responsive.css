@@ -407,7 +407,7 @@
     .footer .logo2{
         display: none;
     }
-    .footer .logo{
+    .footer .logo1{
         display: block;
     }
     .container_logo_footer{
@@ -1948,7 +1948,7 @@
         padding: 10px;
         flex-wrap: wrap;
     }
-    .footer .logo{
+    .footer .logo1{
         display: none;
     }
     .footer .logo2{
