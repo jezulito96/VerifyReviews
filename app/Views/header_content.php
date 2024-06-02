@@ -39,7 +39,7 @@
 
             echo '<li><a href="http://verifyReviews.es/verifyreviews/login">Iniciar sesion</a></li>';
             echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoNegocio">¿Eres un negocio?</a></li>';
-            echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoUsuario">Registrate</a></li>';
+            echo '<li><a href="http://verifyReviews.es/verifyreviews/nuevoUsuario">Regístrate</a></li>';
 
         }       
     ?>

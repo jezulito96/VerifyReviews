@@ -24,7 +24,7 @@
         <small>Recordar contraseña</small>
         <div class="botones_enviar">
             <input type="submit" value="Iniciar Sesión" class="btn_enviar">
-            <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario" style="text-align:center;" class="btn_enviar2">Registrate</a>
+            <a href="http://verifyReviews.es/verifyreviews/nuevoUsuario" style="text-align:center;" class="btn_enviar2">Regístrate</a>
         </div>
         
     </form>
