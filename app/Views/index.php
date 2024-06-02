@@ -59,11 +59,15 @@
     </section>
 
         <nav>
-            <div class="filtros_container">
+            <div class="filtros_container" id="filtros_version_movil">
                 <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
                 <input type="text" placeholder="Buscar" id="buscar" value="">
                 <i class="fas fa-search" id="buscar-icono"></i>
             </div>
+            <div class="filtros_container" id="filtros_version_escritorio">
+                <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
+                
+                <i class="fas fa-search" id="buscar-icono" style="/*! position: absolute; *//*! top: 0px; *//*! right: 0px; *//*! width: 44%; *//*! margin-left: ; *//*! float: right; *//*! margin: 10px; *//*! padding-right: 40xp; *//*! font-size: 28px; */"></i><input type="text" placeholder="Buscar" id="buscar" value="">            </div>
             <div id="container_filtros" style="display:none;">  
             
                 <div class="lista_filtros">
