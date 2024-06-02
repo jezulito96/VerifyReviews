@@ -444,21 +444,22 @@
         color: var(--gris);
         display: flex;
         justify-content: space-around;
-        flex-direction: column;
         padding: 10px;
+        flex-wrap: wrap;
     }
     .container_logo_footer{
         width: 30%;
-        height: 65px;
+        height: 180px;
         display: flex;
         justify-content: center;
+        align-content: center;
     }
 
     .container_logo_footer img {
         height: 60px;
     }
     .listaMenu_footer {
-        width: 30%;
+        width: 35%;
         height: auto;
         padding: 0px;
     }
@@ -476,11 +477,14 @@
         width: 30%;
         height: 50px;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .social{
         font-size: 24px;
+    }
+    .social a{
+        width: 100%;
     }
     .footer p{
         align-items: center;
