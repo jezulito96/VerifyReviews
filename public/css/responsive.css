@@ -601,6 +601,8 @@
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
         height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .titulo_negocio_categoria{
