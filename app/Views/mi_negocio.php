@@ -12,7 +12,7 @@
         
             if(isset($estadisticas)){
                 echo '<div class="container_valoracion">';
-                    echo "<h6>Valoracion de tus clientes:</h6>" . "<h5>" . round($estadisticas['nota_media'],1) . " / 5</h5>";
+                    echo "<h6>Valoracion de tus clientes:</h6>" . "<h5 style='padding-bottom:10px;'>" . round($estadisticas['nota_media'],1) . " / 5</h5>";
                 echo '</div>';
             }
         }
