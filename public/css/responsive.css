@@ -600,7 +600,7 @@
     .carousel_negocio_categoria{
         margin-top: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
-        height: 450px;
+        height: 500px;
     }
 
     .titulo_negocio_categoria{
@@ -614,19 +614,18 @@
     }
 
     .titulo_negocio_categoria h4{
-        font-size: 1.4em;
+        font-size: 2.5em;
     }
 
     .fotoContainer_negocio_cat{
         position: relative;
-        width:300px;
-        height: 250px;
+        height: 450px;
         border-radius: 10px;
         overflow: hidden;
         margin-left: 20px;
         margin-right: 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        
+        height: 500px;
     }
     .fotoContainer_negocio_cat > img{
         position: relative;
