@@ -1,4 +1,3 @@
-<?php echo DISPOSITIVO; ?>
 <div class="headerContainer">
 
     <div class="logoContainer">
