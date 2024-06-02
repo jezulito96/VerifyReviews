@@ -118,7 +118,7 @@
 
     /* ////////   DIV DE FILTROS  ///////////// */
     #container_filtros{
-        width: 94%;
+        width: 100%;
         min-height:auto;
         position:absolute;
         top: 139px;
@@ -189,7 +189,7 @@
 
     /*///////////  RESULTADOS DE BUSQUEDA O FILTROS   /////////// */
     .resultados_busqueda{
-        width: 94%;
+        width: 100%;
         height:auto;
         position:absolute;
         top:141px;
@@ -407,7 +407,7 @@
     .footer .logo2{
         display: none;
     }
-    .footer .logo1{
+    .footer .logo{
         display: block;
     }
     .container_logo_footer{
@@ -1679,7 +1679,7 @@
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
     body{
         margin: 0px;
         height: 0px;
@@ -1784,7 +1784,7 @@
 
     /* ////////   DIV DE FILTROS  ///////////// */
     #container_filtros{
-        width: 94%;
+        width: 100%;
         min-height:auto;
         position:absolute;
         top: 139px;
@@ -1855,7 +1855,7 @@
 
     /*///////////  RESULTADOS DE BUSQUEDA O FILTROS   /////////// */
     .resultados_busqueda{
-        width: 94%;
+        width: 100%;
         height:auto;
         position:absolute;
         top:141px;
