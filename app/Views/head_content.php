@@ -75,25 +75,25 @@
     
 
 
-    // Comprobación para detectar si el usuario accede desde un dispositivo móvil o desde escritorio
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    if (
-        strpos($user_agent, 'Mobile') !== false ||
-        strpos($user_agent, 'Android') !== false ||
-        strpos($user_agent, 'iPhone') !== false ||
-        strpos($user_agent, 'iPad') !== false ||
-        strpos($user_agent, 'iPod') !== false
-    ) {
+    // // Comprobación para detectar si el usuario accede desde un dispositivo móvil o desde escritorio
+    // $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    // if (
+    //     strpos($user_agent, 'Mobile') !== false ||
+    //     strpos($user_agent, 'Android') !== false ||
+    //     strpos($user_agent, 'iPhone') !== false ||
+    //     strpos($user_agent, 'iPad') !== false ||
+    //     strpos($user_agent, 'iPod') !== false
+    // ) {
         // Móvil
-        echo "<link rel='stylesheet' href='" . base_url() . "css/estilo_movil.css' />";
+        echo "<link rel='stylesheet' href='" . base_url() . "css/responsive.css' />";
         echo "<link rel='stylesheet' href='" . base_url() . "css/general_movil.css' />";
-        define("DISPOSITIVO", "movil");
-    } else {
-        // Escritorio
-        echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
-        echo "<link rel='stylesheet' href='" . base_url() . "css/general_escritorio.css' />";
-        define("DISPOSITIVO", "escritorio");
-    }
+        // define("DISPOSITIVO", "movil");
+    // } else {
+    //     // Escritorio
+    //     echo "<link rel='stylesheet' href='" . base_url() . "css/headerEscritorio.css' />";
+    //     echo "<link rel='stylesheet' href='" . base_url() . "css/general_escritorio.css' />";
+    //     define("DISPOSITIVO", "escritorio");
+    // }
 
     echo "<link rel='stylesheet' href='" . base_url() . "css/global.css' />";
     
