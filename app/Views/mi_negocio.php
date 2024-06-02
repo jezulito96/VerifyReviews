@@ -35,32 +35,6 @@
         ?>
     </section>
 
-
-    <!-- <section class="div_tus_resenas">
-
-        <h5>Tus reseñas</h5>
-        <?php
-        //     }
-
-        //     if(isset($lista_resenas)){
-        //         echo "<ul>";
-        //         foreach($lista_resenas as $i => $resena){
-
-        //             echo "<li class='mi_resena'>";
-        //                 $fecha_completa = $resena -> getFechaServicio();
-        //                 $fecha = substr($fecha_completa, 0, 10);
-        //                 echo  $fecha . " - " .  $resena -> getNickname() ;
-
-        //                 echo '<div class="mi_resena_container" style="display:none;">Holaa</div>';
-
-        //             echo "</li>";
-
-        //         }
-        //         echo "</ul>";
-        //     }
-        // }
-        ?>
-    </section> -->
     <div class="div_tus_resenas">
         <h5>Reseñas de tus clientes</h5>  
             <?php
@@ -143,7 +117,7 @@
             }
 
             ?>
-        </div>
+    </div>
 
 
 
