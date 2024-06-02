@@ -1084,7 +1084,9 @@
     .inputs{
         font-size: 1.5em;
     }
-
+    .btn_enviar_largo{
+        font-size: 1.5em;
+    }
     /* para el input file */
     .file-upload-wrapper {
         /* position: relative;
