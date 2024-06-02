@@ -1859,6 +1859,13 @@
                                 /*  MI NEGOCIO */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:800px){
+    .mi_negocio{
+        width: 50%;
+        margin-left: 30%;
+    }
+}
+
 .mi_negocio h5{
     margin-left: 20px;
     margin-bottom: 10px;
