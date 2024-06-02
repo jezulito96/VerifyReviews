@@ -48,6 +48,9 @@
     .imgLogo{
         height: 70px;
     }
+    .imgLogo2{
+        display: none;
+    }
     
     .listaMenu {
         position: absolute;
@@ -1717,7 +1720,11 @@
     }
     
     .imgLogo{
-        height: 70px;
+        display: none;
+    }
+    .imgLogo2{
+        display: block;
+        height: 120px;
     }
     
     .listaMenu {
