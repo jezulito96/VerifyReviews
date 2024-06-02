@@ -1739,8 +1739,14 @@
     }
     .social a{
         width: 100%;
-        margin-left: 45%;
-        margin-top: 23px;
+        margin-left: 12%;
+        margin-top: 5px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .social a i{
+        margin-left: 10px ;
     }
     .footer p{
         align-items: center;
