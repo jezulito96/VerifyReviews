@@ -3,7 +3,7 @@
 
 
     <!-- <h3>Categorías</h3> -->
-    <section class="carousel_Categorias">
+    <section class="carousel_Categorias" id="carousel_cat_movil">
     <?php 
     if(isset($listaCategorias)){
         foreach($listaCategorias as $i => $categoria){

@@ -35,6 +35,29 @@
             <?php if (isset ($header_content)) echo $header_content; ?>
         
         </header>  
+
+        <!-- para el carrousel de videos de la version escritorio  -->
+        <section class="carousel_Categorias" id="carousel_cat_movil">
+    <?php 
+    if(isset($listaCategorias)){
+        foreach($listaCategorias as $i => $categoria){
+            echo '
+                <div class="videoContainer">
+                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
+                        <video class="videoCat" autoplay loop muted playsinline>
+                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
+                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.webm" type="video/webm">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </a>
+                    <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
+                </div>
+            ';
+        }
+    }
+    ?>
+    </section>
+
         <nav>
             <div class="filtros_container">
                 <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
@@ -116,6 +139,11 @@
 
         <script>
             $(document).ready(function() {
+                $('.carousel_Categorias').slick({
+                    dots: true, // puntitos
+                    slidesToShow: 1, // fotos que se pintan a la vez
+                });
+
                 var info_filtros = [];
                 $('.opciones_filtro').click(function() {
                     const valor = $(this).val();
