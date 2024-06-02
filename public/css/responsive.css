@@ -1777,9 +1777,9 @@
     }
     .filtros_container {
         width: 100%;
-        display: flex;
+        /* display: flex;
         justify-content: start;
-        align-items: start;
+        align-items: start; */
         padding: 10px 15px;
         padding-top: 10px;
         height: 100%;
@@ -1808,10 +1808,12 @@
         color:var(--gris);
     }
     .filtros_container input[type="text"] {
-        width: 97%;
-        height: 35px;;
+        width: 90%;
+        height: 44px;
         padding-left: 10px;
         margin-left: 5px;
+        margin-top: 20px;
+        font-size: 1.4em;
     }
     .filtros_container > i{
         font-size: 33px;
