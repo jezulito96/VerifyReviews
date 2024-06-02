@@ -36,27 +36,31 @@
         
         </header>  
 
-        <!-- para el carrousel de videos de la version escritorio  -->
-        <section class="carousel_Categorias" id="carousel_cat_escritorio">
-    <?php 
-    if(isset($listaCategorias)){
-        foreach($listaCategorias as $i => $categoria){
-            echo '
-                <div class="videoContainer">
-                    <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
-                        <video class="videoCat" autoplay loop muted playsinline>
-                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
-                            <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.webm" type="video/webm">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                    </a>
-                    <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
-                </div>
-            ';
-        }
-    }
-    ?>
-    </section>
+        <?php if (isset ($index_content)) { ?>
+
+            <!-- para el carrousel de videos de la version escritorio  -->
+            <section class="carousel_Categorias" id="carousel_cat_escritorio">
+                <?php 
+                if(isset($listaCategorias)){
+                    foreach($listaCategorias as $i => $categoria){
+                        echo '
+                            <div class="videoContainer">
+                                <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
+                                    <video class="videoCat" autoplay loop muted playsinline>
+                                        <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
+                                        <source src="'. base_url()  . 'img/categorias/catM_V-'. $categoria -> getCodCategoria()  . '.webm" type="video/webm">
+                                        Tu navegador no soporta la etiqueta de video.
+                                    </video>
+                                </a>
+                                <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
+                            </div>
+                        ';
+                    }
+                }
+                ?>
+            </section>
+        <?php
+        } ?>
 
         <nav>
             <div class="filtros_container" >
