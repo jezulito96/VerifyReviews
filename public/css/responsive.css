@@ -367,7 +367,7 @@
             height: 320px;
         }
     }
-    @media (min-width: 600px) and (max-width: 800px){
+    @media (min-width: 600px) and (max-width: 900px){
         .fotoContainerTop3{
             width:550px;
             height: 500px;
