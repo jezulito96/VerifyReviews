@@ -1,10 +1,9 @@
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-                            /*   HEADER_MOVIL    */
-                            /*   HASTA 600px     */
+                            /*   HEADER_CONTENT    */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-/* @media (max-width: 500px) { */
+@media (max-width: 500px) {
 
     .headerContainer {
         width: 100vw;
@@ -258,7 +257,7 @@
         border-radius:5px; 
     }
 
-/* } */
+}
 /* @media (min-width: 500px) and (max-width: 800px) {
 
 
@@ -1673,6 +1672,12 @@
 
 
 @media (min-width: 600px) {
+    /*
+         header
+    */
+
+
+
     /*
          footer 
     */
