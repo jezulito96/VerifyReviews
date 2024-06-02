@@ -1773,7 +1773,7 @@
         float: left;
     }
     #filtros_version_movil{
-        display: flex;
+        display: none;
     }
     .filtros_container {
         width: 100%;
