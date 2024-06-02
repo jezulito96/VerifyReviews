@@ -1864,9 +1864,10 @@
         width: 50%;
         margin-left: 30%;
     }
-    .container_opiniones_info{
-        
-    }
+    .container_opiniones_info {
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+      }
     .info_opiniones{
         position: relative;
         width: 90%;
