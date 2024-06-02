@@ -37,7 +37,7 @@
         </header>  
 
         <!-- para el carrousel de videos de la version escritorio  -->
-        <section class="carousel_Categorias" id="carousel_cat_movil">
+        <section class="carousel_Categorias" id="carousel_cat_escritorio">
     <?php 
     if(isset($listaCategorias)){
         foreach($listaCategorias as $i => $categoria){
