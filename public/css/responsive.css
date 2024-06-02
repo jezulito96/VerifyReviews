@@ -1794,7 +1794,8 @@
         background: white;
         color:var(--gris);
         width: 200px;
-        height: 35px;
+        height: 59px;
+        font-size: 1.4em;
     }
     
     .filtros_container input {
@@ -1803,13 +1804,17 @@
         border-radius: 5px;
         margin-right: 5px;
         background: white;
-        color:var(--gris);
-        height: 35px;
+        color: var(--gris);
+        height: 44px;
+        width: 80%;
+        font-size: 1.5em;
+        padding-left: 20px;
     }
 
     .filtros_container > i{
         font-size: 30px;
-        margin-left: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
         color:var(--gris);
     }
 
