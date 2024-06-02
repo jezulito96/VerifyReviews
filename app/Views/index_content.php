@@ -2,40 +2,11 @@
       
 
 
-    <!-- <h3>Categorías</h3> -->
     <section class="carousel_Categorias" id="carousel_cat_movil">
     <?php 
     if(isset($listaCategorias)){
         foreach($listaCategorias as $i => $categoria){
-            // carousel con flechas //
-
-            // echo '
-                
-            //     <div class="fotoContainer">
-                
-            //     <img src="'. base_url()  . 'img/categorias/flechaAtras.png" class="flechaAtras">
-        
-            //         <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'" ><img src="'. base_url()  . 'img/categorias/catM-'. $categoria -> getCodCategoria()  . '.png" alt="'. $categoria -> getTipoNegocio()  . ' " title="'. $categoria -> getTipoNegocio()  . ' " class="imgCat"></a>
-        
-            //     <img src="'. base_url()  . 'img/categorias/flechaDelante.png" class="flechaDelante">
-        
-            //     <h4>'. $categoria -> getTipoNegocio()  . ' </h4>
-                
-            //     </div>
-            
-            // ';
-            // buenaaa
-            // echo '
-            //     <div class="fotoContainer">
-            //         <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
-            //             <video class="videoCat" autoplay loop muted>
-            //                 <source src="'. base_url()  . 'videos/catM_V-'. $categoria -> getCodCategoria()  . '.mp4" type="video/mp4">
-            //                 Tu navegador no soporta la etiqueta de video.
-            //             </video>
-            //         </a>
-            //         <h5 class="tituloCat">'. $categoria -> getTipoNegocio()  . ' </h5>
-            //     </div>
-            // ';
+           
             echo '
                 <div class="videoContainer">
                     <a href="https://verifyreviews.es/verifyreviews/categoria?id='. $categoria -> getCodCategoria() .'">
@@ -86,7 +57,7 @@
 
 <script>
     $(document).ready(function(){
-        $('.carousel_Categorias').slick({
+        $('.carousel_cat_movil').slick({
             dots: true, // puntitos
             slidesToShow: 1, // fotos que se pintan a la vez
             // prevArrow:".flechaAtras",
