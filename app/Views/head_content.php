@@ -86,7 +86,7 @@
     // ) {
         // Móvil
         echo "<link rel='stylesheet' href='" . base_url() . "css/responsive.css' />";
-        echo "<link rel='stylesheet' href='" . base_url() . "css/general_movil.css' />";
+        // echo "<link rel='stylesheet' href='" . base_url() . "css/general_movil.css' />";
         // define("DISPOSITIVO", "movil");
     // } else {
     //     // Escritorio
