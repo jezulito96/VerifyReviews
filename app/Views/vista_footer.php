@@ -33,12 +33,15 @@
     <div class="social">
         <a href="https://www.facebook.com" target="_blank">      
             <i class="fab fa-twitter"></i>
+            <p>Facebook</p>
         </a>
         <a href="https://www.twitter.com" target="_blank">
             <i class="fab fa-facebook-f "></i>
+            <p>X</p>
         </a>
         <a href="https://www.instagram.com" target="_blank">
             <i class="fab fa-instagram " ></i>
+            <p>Instagram</p>
         </a>
     </div>
     
