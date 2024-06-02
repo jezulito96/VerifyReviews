@@ -675,6 +675,12 @@
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             display: flex;
             flex-wrap: wrap;
+            
+        }
+        .containerIcono span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
         }
     }
     @media (min-width: 800px) {
@@ -696,6 +702,12 @@
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             display: flex;
             flex-wrap: wrap;
+        }
+        .containerIcono span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+            margin-left: 10px;
         }
     }
 
@@ -876,11 +888,7 @@
         color: #333;
     }
 
-    .containerIcono span {
-        display: block;
-        margin-top: 5px;
-        font-size: 14px;
-    }
+
 
     /* apartados de info */
     .infoContainerNegocio > div{
