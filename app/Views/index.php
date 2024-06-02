@@ -34,85 +34,85 @@
 
             <?php if (isset ($header_content)) echo $header_content; ?>
         
-        </header>
-        <nav>
-            <div class="filtros_container">
-                <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
-                <input type="text" placeholder="Buscar" id="buscar" value="">
-                <i class="fas fa-search" id="buscar-icono"></i>
-            </div>
-            <div id="container_filtros" style="display:none;">  
-               
-                <div class="lista_filtros">
+        
+            <nav>
+                <div class="filtros_container">
+                    <button id="btn_filtros"><i class="fas fa-filter"></i> Filtros</button>
+                    <input type="text" placeholder="Buscar" id="buscar" value="">
+                    <i class="fas fa-search" id="buscar-icono"></i>
+                </div>
+                <div id="container_filtros" style="display:none;">  
+                
+                    <div class="lista_filtros">
 
-                    <div class="nombre_filtro">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h5>Ciudad</h5>
-                    </div>
-                    <div class="filtros">
-                        <button class="opciones_filtro" value="1_soria">Soria</button>
-                        <button class="opciones_filtro" value="1_madrid">Madrid</button>
-                        <button class="opciones_filtro" value="1_barcelona">Barcelona</button>
-                        <button class="opciones_filtro" value="1_valencia">Valencia</button>
-                    </div>
+                        <div class="nombre_filtro">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h5>Ciudad</h5>
+                        </div>
+                        <div class="filtros">
+                            <button class="opciones_filtro" value="1_soria">Soria</button>
+                            <button class="opciones_filtro" value="1_madrid">Madrid</button>
+                            <button class="opciones_filtro" value="1_barcelona">Barcelona</button>
+                            <button class="opciones_filtro" value="1_valencia">Valencia</button>
+                        </div>
 
-                    <div class="nombre_filtro">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h5>Categoria</h5>
-                    </div>
-                    <div class="filtros">
-                        <button class="opciones_filtro" value="2_1">Restaurantes</button>
-                        <button class="opciones_filtro" value="2_2">Peluquerías</button>
-                        <button class="opciones_filtro" value="2_3">Cafeterías</button>
-                        <button class="opciones_filtro" value="2_4">Talleres</button>
-                        <button class="opciones_filtro" value="2_5">Perfumerías</button>
-                        <button class="opciones_filtro" value="2_6">Psicología</button>
-                        <button class="opciones_filtro" value="2_7">Moda</button>
-                    </div>
+                        <div class="nombre_filtro">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h5>Categoria</h5>
+                        </div>
+                        <div class="filtros">
+                            <button class="opciones_filtro" value="2_1">Restaurantes</button>
+                            <button class="opciones_filtro" value="2_2">Peluquerías</button>
+                            <button class="opciones_filtro" value="2_3">Cafeterías</button>
+                            <button class="opciones_filtro" value="2_4">Talleres</button>
+                            <button class="opciones_filtro" value="2_5">Perfumerías</button>
+                            <button class="opciones_filtro" value="2_6">Psicología</button>
+                            <button class="opciones_filtro" value="2_7">Moda</button>
+                        </div>
 
-                    <div class="nombre_filtro">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h5>Valoración</h5>
-                    </div>
-                    <div class="filtros">
-                        <button class="opciones_filtro" value="3_1">
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
-                        <button class="opciones_filtro" value="3_2">
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
-                        <button class="opciones_filtro" value="3_3">
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
-                        <button class="opciones_filtro" value="3_4">
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
-                        <button class="opciones_filtro" value="3_5">
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                            <i class="fas fa-check check_filtro"></i>
-                        </button>
+                        <div class="nombre_filtro">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h5>Valoración</h5>
+                        </div>
+                        <div class="filtros">
+                            <button class="opciones_filtro" value="3_1">
+                                <i class="fas fa-check check_filtro"></i>
+                            </button>
+                            <button class="opciones_filtro" value="3_2">
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                            </button>
+                            <button class="opciones_filtro" value="3_3">
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                            </button>
+                            <button class="opciones_filtro" value="3_4">
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                            </button>
+                            <button class="opciones_filtro" value="3_5">
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                                <i class="fas fa-check check_filtro"></i>
+                            </button>
+                        </div>
+
                     </div>
 
                 </div>
+                <div class="resultados_busqueda" style="display:none;">
 
-            </div>
-            <div class="resultados_busqueda" style="display:none;">
-
-                <!-- se mostraran los resultados de la busqueda y los filtros -->
+                    <!-- se mostraran los resultados de la busqueda y los filtros -->
+                    
+                </div>
                 
-            </div>
-            
-        </nav> 
-            
+            </nav> 
+        </header>   
 
         <script>
             $(document).ready(function() {
