@@ -57,6 +57,7 @@
     }
     
     .listaMenu {
+        display: none;
         position: absolute;
         top: 60px;
         left: 0px;
@@ -1682,7 +1683,7 @@
     body{
         margin: 0px;
         height: 0px;
-        width: 90%;
+        width: 85%;
         margin: 0px auto;
     }
     /*
