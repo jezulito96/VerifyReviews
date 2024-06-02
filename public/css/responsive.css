@@ -369,12 +369,12 @@
     }
     @media (min-width: 600px) and (max-width: 800px){
         .fotoContainerTop3{
-            width:450px;
-            height: 400px;
+            width:550px;
+            height: 500px;
         }
         .fotoContainerTop3 > img{
-            width:450px;
-            height: 400px;
+            width:550px;
+            height: 500px;
         }
     }
 
