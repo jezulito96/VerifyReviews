@@ -1905,7 +1905,7 @@
         border-radius: 5px;
         width: auto;
         padding: 3px 10px;
-        height: 23px;
+        height: 40px;
         font-size: 11px;
         background-color: white;
         border:1px solid var(--azul);
@@ -1937,6 +1937,8 @@
         padding:10px;
         z-index: 2000;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        font-size: 1.5em;
+        margin-left: 20px;
     }
     .cerrar_busqueda{
         width: 100%;
@@ -1954,6 +1956,7 @@
         border-bottom: 1px solid #333;
         margin-bottom: 20px;
         margin-top: 40px;
+        font-size: 1.5em;
     }
     .container_busquedas{
         width: 100%;
