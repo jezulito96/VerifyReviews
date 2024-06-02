@@ -1869,7 +1869,7 @@
     }
     .info_opiniones{
         position: relative;
-        width: 330px;
+        width: 90%;
         height: 250px;
         border: 1px solid var(--azul_verify);
         border-radius: 10px;
