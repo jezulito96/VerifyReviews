@@ -269,12 +269,22 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
-                            /*   INDEX_MOVIL   */
+                            /*   INDEX_CONTENT   */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-/* @media (max-width: 500px) { */
+@media (min-width: 500px) and (max-width: 800px){
+    .fotoContainerTop3{
+        width:370px;
+        height: 320px;
+    }
+    .fotoContainerTop3 > img{
+        width:370px;
+        height: 320px;
+    }
+
+}
     .videoContainer {
         position: relative;
         width: 100%;
