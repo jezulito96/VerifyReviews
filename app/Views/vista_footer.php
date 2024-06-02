@@ -1,6 +1,7 @@
 <div class="footer">
     <div class="container_logo_footer">
-        <img src="<?php echo base_url() ?>img/logoMovil_2.png" alt="Logotipo">
+        <img src="<?php echo base_url() ?>img/logoMovil_2.png" alt="Logotipo" class="logo1">
+        <img src="<?php echo base_url() ?>img/logotipo3.png" alt="Logotipo" class="logo2">
     </div>
     
 
