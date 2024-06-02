@@ -92,9 +92,6 @@
         display: flex;
         align-items: center;
     }
-    #filtros_version_escritorio{
-        display: none;
-    }
     .filtros_container {
         width: 100%;
         display: flex;
@@ -1771,16 +1768,15 @@
         display: flex;
         align-items: center;
         float: left;
-        margin-top: 50px;
     }
     #filtros_version_movil{
-        display: none;
+        display: flex;
     }
     .filtros_container {
         width: 100%;
-        /* display: flex;
+        display: flex;
         justify-content: start;
-        align-items: start; */
+        align-items: start;
         padding: 10px 15px;
         padding-top: 10px;
         height: 100%;
@@ -1809,12 +1805,10 @@
         color:var(--gris);
     }
     .filtros_container input[type="text"] {
-        width: 90%;
-        height: 44px;
+        width: 97%;
+        height: 35px;;
         padding-left: 10px;
         margin-left: 5px;
-        margin-top: 20px;
-        font-size: 1.4em;
     }
     .filtros_container > i{
         font-size: 33px;
@@ -1831,11 +1825,11 @@
         width: 100%;
         min-height:auto;
         position:absolute;
-        top: 0px;
+        top: 139px;
         left: 0px;
         background-color: #fff;
         padding:10px;
-        z-index: 6000;
+        z-index: 200;
     }
     .lista_filtros{
         width: 100%;
