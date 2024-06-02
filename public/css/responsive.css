@@ -357,7 +357,7 @@
         }
     
     }
-    @media (min-width: 500px) and (max-width: 800px){
+    @media (min-width: 500px) and (max-width: 600px){
         .fotoContainerTop3{
             width:370px;
             height: 320px;
@@ -366,7 +366,16 @@
             width:370px;
             height: 320px;
         }
-    
+    }
+    @media (min-width: 600px) and (max-width: 800px){
+        .fotoContainerTop3{
+            width:450px;
+            height: 400px;
+        }
+        .fotoContainerTop3 > img{
+            width:450px;
+            height: 400px;
+        }
     }
 
 
