@@ -23,7 +23,7 @@
 
 ?> -->
 <div class="div_mis_resenas">
-    <h5>Mis reseñas</h5>  
+    <h3>Mis reseñas</h3>  
         <?php
         // $negocio = session() -> get("usuario_en_sesion");
         echo '<div class="container_opiniones_info">';
