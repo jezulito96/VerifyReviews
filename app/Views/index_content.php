@@ -57,7 +57,7 @@
 
 <script>
     $(document).ready(function(){
-        $('.carousel_cat_movil').slick({
+        $('#carousel_cat_movil').slick({
             dots: true, // puntitos
             slidesToShow: 1, // fotos que se pintan a la vez
             // prevArrow:".flechaAtras",
