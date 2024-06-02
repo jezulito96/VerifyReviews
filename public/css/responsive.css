@@ -1831,11 +1831,11 @@
         width: 100%;
         min-height:auto;
         position:absolute;
-        top: 139px;
+        top: 0px;
         left: 0px;
         background-color: #fff;
         padding:10px;
-        z-index: 200;
+        z-index: 6000;
     }
     .lista_filtros{
         width: 100%;
