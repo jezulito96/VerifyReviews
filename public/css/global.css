@@ -138,6 +138,11 @@ small{
 
 
 /* Imagenes */
+
+.file-upload-wrapper{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .areaFile{
     display: flex;
     width: 80%;

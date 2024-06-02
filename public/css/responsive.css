@@ -611,6 +611,10 @@
         margin-top: 15px;
     }
 
+    .titulo_negocio_categoria h4{
+        font-size: 1.4em;
+    }
+
     .fotoContainer_negocio_cat{
         position: relative;
         width:300px;
@@ -629,6 +633,7 @@
         border-radius: 10px important!;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        height: 450px;
     }
     .nombre_negocio_categoria{
         position: absolute;
