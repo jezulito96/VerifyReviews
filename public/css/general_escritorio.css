@@ -1,0 +1,1640 @@
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   HEADER_MOVIL    */
+                            /*   HASTA 500px     */
+                            /*   DE 500px a 800  */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+/* @media (max-width: 500px) { */
+
+    .headerContainer {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .menuContainer {
+        width: 85px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-top: 27px;
+    }
+    
+    .imgMenu {
+        width: 30px;
+        height: 30px;
+        color:var(--gris);
+    }
+    
+    .imgMenu2 {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logoContainer {
+        width: calc(100vw - 85px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgLogo{
+        height: 70px;
+    }
+    
+    .listaMenu {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        background: white;
+        padding: 0px;
+        box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 23px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        z-index: 1000;
+    }
+    
+    .listaMenu li {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 70px;
+        text-align: left;
+        padding-left: 20px;
+        box-sizing: border-box;
+        font-size: 1.5em;
+        font-weight: 400;
+        z-index:1000;
+    }
+
+    /* ////////   DIV DE BUSQUEDA  ///////////// */
+    nav{
+        width: 100vw;
+        height: 60px;
+        background-color: var(--gris_claro);
+        display: flex;
+        align-items: center;
+    }
+    .filtros_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+    .filtros_container button, .filtros_container input {
+        border: 2px solid var(--azul_blanco);
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        background: white;
+        color:var(--gris);
+    }
+    .filtros_container input {
+        flex-grow: 1;
+        padding-left: 10px;
+        margin-left: 5px;
+    }
+    .filtros_container > i{
+        font-size: 25px;
+        margin-left: 5px;
+        color:var(--gris);
+    }
+
+    /* ////////   DIV DE FILTROS  ///////////// */
+    #container_filtros{
+        width: 94%;
+        min-height:auto;
+        position:absolute;
+        top: 139px;
+        left: 0px;
+        background-color: #fff;
+        padding:10px;
+        z-index: 200;
+    }
+    .lista_filtros{
+        width: 100%;
+        min-height: auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #fff;
+        padding: 10px;
+        z-index: 200;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    }
+    .filtros{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nombre_filtro{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .nombre_filtro > i {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .opciones_filtro{
+        border-radius: 5px;
+        width: auto;
+        padding: 3px 10px;
+        height: 23px;
+        font-size: 11px;
+        background-color: white;
+        border:1px solid var(--azul);
+        margin: 5px;
+        color: var(--gris);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .filtro_seleccionado{
+        background-color: var(--azul_verify);
+        color:white;
+        font-weight: 300;
+    }
+
+    /* icono check filtro */
+    .check_filtro{
+        margin-right: 3px;
+    }
+
+    /*///////////  RESULTADOS DE BUSQUEDA O FILTROS   /////////// */
+    .resultados_busqueda{
+        width: 94%;
+        height:auto;
+        position:absolute;
+        top:141px;
+        left: 0px;
+        background-color: #fff;
+        padding:10px;
+        z-index: 2000;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    .cerrar_busqueda{
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:20px;    
+        margin-top: 20px;
+    }
+    .cerrar_busqueda span{
+        font-size: 18px;
+        color: #333;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #333;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    .container_busquedas{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        columns: 2;
+    }
+
+    .container_resultado{
+        width:35%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border: 1px solid var(--azul_blanco);
+        border-radius: 10px;
+    }
+
+    .titulo_resultado{
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .foto_resultado{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foto_resultado > img{
+        height: 90px;
+        border-radius:5px; 
+    }
+
+/* } */
+/* @media (min-width: 500px) and (max-width: 800px) {
+
+
+} */
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   INDEX_MOVIL   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* @media (max-width: 500px) { */
+    .videoContainer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 510px;
+    }
+    
+    .videoCat {
+        width: 100%;
+        height: 500px;
+        display: block;
+        object-fit: cover;
+    }
+    
+    .tituloCat {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    /* ////////////    TOP 3  ////////////// */
+    .container_top3{
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+    }
+    .titulo_top3{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+
+    .imgCatTop3{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .fotoContainerTop3{
+        position: relative;
+        width:300px;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        
+    }
+    .fotoContainerTop3 > img{
+        position: relative;
+        width:300px;
+        height: 250px;
+        border-radius: 10px important!;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .nombreNegocioTop{
+        position: absolute;
+        bottom: 10px;
+        left: 3px;
+        z-index: 100;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 5px;
+        border-radius: 5px;
+        /* width: 100%; */
+    }
+
+/* } */
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   FOOTER   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* @media (max-width: 500px) { */
+    .footer {
+        margin-top: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px -6px 12px -2px, rgba(0, 0, 0, 0.3) 0px -3px 7px -3px;
+        background-color: var(--gris_claro);
+        color: var(--gris);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container_logo_footer{
+        width: 100%;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_logo_footer img {
+        height: 60px;
+    }
+    .listaMenu_footer {
+        width: 100%;
+        height: auto;
+        padding: 0px;
+    }
+    .listaMenu_footer li {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 70px;
+        text-align: center;
+        padding-left: 20px;
+        box-sizing: border-box;
+        font-weight:300;
+    }
+    .footer .social{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .social{
+        font-size: 24px;
+    }
+    .footer p{
+        align-items: center;
+    }
+/* } */
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   CARROUSEL DE CONT_CATEGORIA   */
+                            /*   CARROUSEL DE INFO_NEGOCIO   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* @media (max-width: 500px) { */
+
+    .carousel_negocio_categoria{
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+    }
+    .titulo_negocio_categoria{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+
+    .fotoContainer_negocio_cat{
+        position: relative;
+        width:300px;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        
+    }
+    .fotoContainer_negocio_cat > img{
+        position: relative;
+        width:300px;
+        height: 250px;
+        border-radius: 10px important!;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .nombre_negocio_categoria{
+        position: absolute;
+        bottom: 10px;
+        left: 3px;
+        z-index: 100;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 5px;
+        border-radius: 5px;
+        /* width: 100%; */
+    }
+
+/* } */
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   INFO_NEGOCIO   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* @media (max-width: 500px) { */
+
+        .iconosColor{
+            color: #333;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    /*////////////////    MENU OPNINIONES NEGOCIO ////////////////*/
+    /* ///// tarjeta de opinion */
+    .content_opiniones{
+        margin-bottom: 0px;
+    }
+    .container_opiniones_info{
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px -1px -4px;
+    }
+    .info_opiniones {
+        position: relative;
+        width:330px;
+        height: 250px;
+        border:1px solid var(--azul_verify);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* .container_opiniones_info {
+        display: flex;
+        overflow-x: auto;
+        background-color: white;
+    }
+
+    .info_opiniones {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 10px;
+        height: 200px;
+        min-width: 90%;
+        border: 1px solid #ccc;
+        border-left: 2px solid #ccc;
+        padding: 5px 10px;
+        border-radius: 5px;
+    } */
+
+    .head_opinion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+    }
+    .nick_opinion {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        padding-top: 10px;
+    }
+    .nick_opinion > img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+
+    .fecha_opinion{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .resultado_opinion{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .img_opinion_usu{
+
+    }
+
+    .nota_media{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .titulo_opinion {
+        width: 100%;
+        height: 115px;
+        font-size: 18px;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+    }
+
+
+    /* ///// botones de div opinion */
+
+    .menu_opinion{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .btn_opinion1{
+        border-right: 1px solid #ccc;
+    }
+    .btn_opinion1,
+    .btn_opinion2{
+        width: 50%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ////////////      POPUP RESEÑA  ///////////// */
+    .popup,
+    .popup2 {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); 
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .contenido_popup{
+        background-color: #3d3b3bf3;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .contenido_popup2{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+    } */
+
+    .contenido_popup{
+        width: 72%;
+        height: 367px;
+        overflow-y: scroll;
+        margin-top: 20px;
+        background: var(--gris_claro);
+        border-radius: 10px;
+    }
+
+    .contenido_popup2{
+        min-height: 60px;
+        word-wrap: break-word;
+        width: 72%;
+        background: var(--gris_claro);
+        border-radius: 10px;
+    }
+    .informacion_popup{
+        width: 100%;
+        text-align: center;
+    }
+    #informacion_popup2_1{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .contenido_popup .btn_cerrar,
+    .contenido_popup2 .btn_cerrar {
+        padding: 5px;
+    }
+
+    .imgs_resenas{
+        width: 80%;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }           
+
+    /*////////////////    MENU CON SCROLL DE INFO NEGOCIO ////////////////*/
+    .sliderInfoNegocio{
+        display: flex;
+        overflow-x: scroll;
+        padding: 10px 0;
+        background-color: white;
+        /* border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd; */
+        margin-top: 35px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--azul_verify);
+    }
+    .sliderInfoNegocio::-webkit-scrollbar {
+        width: 2px; 
+    }
+
+    .sliderInfoNegocio::-webkit-scrollbar-track {
+        background: var(--azul_verify); 
+    }
+
+    .containerIcono{
+        width: 20%;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .containerIcono i {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .containerIcono span {
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* apartados de info */
+    .infoContainerNegocio > div{
+        padding-top: 10px;
+        margin-bottom: 5px ;
+        /* border-bottom: 1px solid #ccc; */
+    }
+
+    .content_opiniones >h3 {
+        margin-bottom: 5px;
+    }
+
+    /*////////////////    TELEFONO NEGOCIO ////////////////*/
+    .div_llamar{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .div_llamar h4{
+        width: 100%;
+    }
+    #content_llamar{
+        width: 90%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .icono_llamar{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #telefono_llamar{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*////////////////   WEB NEGOCIO ////////////////*/
+    .div_web{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .div_web h4{
+        width: 100%;
+    }
+    #content_web{
+        width: 90%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .icono_web{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icono_web > i{
+    font-size: 24px;
+    }
+    #info_web{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    /*////////////////    REDES SOCIALES NEGOCIO     ////////////////*/
+    .div_redes{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .div_redes h4{
+        width: 100%;
+    }
+    #content_redes{
+        width: 90%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .icono_redes_sociales{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icono_redes_sociales > i{
+    font-size: 24px;
+    }
+    .info_redes_sociales{
+        height: 100%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+
+    /*////////////////    MAPA NEGOCIO   ////////////////*/
+    #content_mapa{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #content_mapa h4{
+        width: 100%;
+    }
+    .head_mapa{
+        width: 90%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--gris_claro);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .icono_mapa{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calle_mapa{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info_mapa{
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+/* } */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   LOGIN   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* @media (max-width: 500px) { */
+    .containerformLogin{
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+    }
+    .containerformLogin h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+    .botones_enviar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        height: auto;
+        width: 100%;
+    }
+
+    .btn_enviar2{
+        width: 40%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid var(--azul_claro);
+      border-radius: 5px;
+      background-color: white;
+      color: var(--azul_verify);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn_enviar{
+        width: 40%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+/* } */
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   FORMULARIO USUARIO   */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* @media (max-width: 500px) { */
+    .containerUsuarioForm{
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+    .containerUsuarioForm h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    /* .containerUsuarioForm input[type="file"]{
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+    } */
+
+    /* para el input file */
+    .file-upload-wrapper {
+        /* position: relative;
+        width: 250px;
+        text-align: center; */
+        text-align: center;
+        display: flex;
+        width: 100%;
+    }
+    
+    /* Ocultar el input de tipo file original */
+    .inputs[type="file"] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    /* Estilos para el label personalizado */
+    .custom-file-upload {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        color: var(--gris);
+        background-color: white;
+        border: 1px solid var(--azul_verify);
+        border-radius: 5px;
+        width: 100%;
+        height: 20px;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .custom-file-upload:hover {
+        background-color: #ffffff;
+        color: #51a5dd;
+        border-color: #51a5dd;
+    }
+
+    .btn_enviar_largo{
+        width:100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+/* } */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                            /*   FORMULARIO NEGOCIO  */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* @media (max-width: 500px) { */
+ /* formulario comercio y usuario*/
+    .containerNegocioForm{
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    .containerUsuarioForm h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+     /* para el input file ---> de uiverse personalizado por mí */
+     .file-upload-wrapper {
+        /* position: relative;
+        width: 250px;
+        text-align: center; */
+        text-align: center;
+        display: flex;
+        width: 100%;
+    }
+    
+    /* Ocultar el input de tipo file original */
+    .inputs[type="file"] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    /* Estilos para el label personalizado */
+    .custom-file-upload {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        color: var(--gris);
+        background-color: white;
+        border: 1px solid var(--azul_verify);
+        border-radius: 5px;
+        width: 100%;
+        height: 20px;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .custom-file-upload:hover {
+        background-color: #ffffff;
+        color: #51a5dd;
+        border-color: #51a5dd;
+    }
+
+    .btn_enviar_largo{
+        width:100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+    
+    label[for="fotos"],
+    label[for="fotoPrincipal"]{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+/* } */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  RESENA CONTENT */
+
+    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////    INICIO SESION O NICKNAME    /////////// */
+
+    main{
+        min-height: 400px;
+        /* padding: 10px; */
+        box-sizing: border-box;
+    }
+
+    #containerSesion,
+    #containerNickname{
+        margin-bottom: 0px;
+    }
+
+    .botones_enviar_Resena{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        height: auto;
+        width: 100%;
+    }
+
+    .btn_enviar2_Resena{
+        width: 60%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid var(--azul_claro);
+      border-radius: 5px;
+      background-color: white;
+      color: var(--azul_verify);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn_enviar_Resena{
+        width: 35%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--azul_verify);
+        color: white;
+        font-weight: bold;
+    }
+    
+  /* ///////////    SET RESENA    /////////// */
+
+    /* .tituloResenaContent{
+        padding-left: 20px;
+    } */
+    .resenaContainer {
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        width: 100vw;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .negocio{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .fotoPerfilNegocio{
+        width: 100%;
+        margin-bottom: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagenNegocio{
+        width: 80%;
+        margin-bottom: 43px;
+        border-radius: 10px;
+        box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 23px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    
+    .datosNegocio{
+        width: 100vw;
+        height: auto;
+    }
+
+    .nombreNegocio{
+        width: 100%;
+        font-size: 24px;
+        height: 40px;
+        text-align: center;
+        font-weight: 600;
+
+    }
+
+    .direccionNegocio{
+        width: 100%;
+        font-size: 15px;
+        height: 17px;
+        text-align: center;
+    }
+
+    /*////////////// VALORACION/////////// */
+    .titulos{
+        margin-left: 20px;
+    }
+    .valoracion{
+        padding:10px;
+        font-size: 1.1em;
+    }
+
+    .puntuacionValoracion{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding-left:10px ;
+    }
+
+    .imgPuntuacion{
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+        margin-right:10px;
+    }
+
+    .resultadoValoracion{
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    
+    /* Titulo de su experiencia */
+    .infoInputs{
+        width: 80%;
+        margin: 0px;
+        margin-left: 20px;
+        text-align: right;
+        font-size: 10px;
+        height: 11px;
+        padding: 0px;
+    }
+
+    .moduloResena{
+        width: 100vw;
+        height: auto;
+    }
+
+    .areaTexto{
+        width: 100%;
+        height: auto;
+    }
+
+    .textoTitulo{
+        width: 80%;
+        height: 20px;
+        margin-left: 20px;
+        line-height: 20px;
+        padding-left: 5px;
+    }
+
+    .textoTituloArea{
+        width: 80%;
+        min-height: 50px;
+        margin-left: 20px;
+        line-height: 20px;
+        padding-left: 5px;
+    }
+
+    .subtitulo{
+        font-size: 10px ;
+    }
+
+    .fechaResena{
+        margin-left:20px ;
+    }
+
+    /* fecha  */
+    .areaFecha{
+        width: 100%;
+        margin-left:20px ;
+    }
+
+    div[class=".fechaResena.ui-widget.ui-widget-content"] {
+        border: 1px solid #eee;
+    }
+    div[class=".fechaResena.ui-widget.ui-widget-content"] {
+        background: #fff;
+    }
+    div[class=".ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br"]
+    {
+    border-bottom-right-radius: 3px;
+    }
+    div[class=".ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl"]
+    {
+    border-bottom-left-radius: 3px;
+    }
+    div[class=".ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr"]
+    {
+    border-top-right-radius: 3px;
+    }
+    div[class=".ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl"]
+    {
+    border-top-left-radius: 3px;
+    }
+    div[class=".ui-widget-content"]
+    {
+    border: 1px solid #ccc;
+    background: #5678ef;
+    color: #333333;
+    }
+    div[class=".ui-widget"]
+    {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    }
+    div[class=".ui-datepicker"]
+    {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+    }
+
+/* ///////////////////////////////////////////// */
+
+/* 
+.flechaDelante, 
+.flechaAtras{
+    position: absolute;
+}
+.flechaDelante{
+    top:28%;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+}
+.flechaAtras{
+    top:28%;
+    left: 30px;
+    width: 16px;
+    height: 16px;
+    color: transparent;
+} */
+ 
+
+    
+    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  RESENA CONTENT */
+
+    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    /* --------------  FOTOS DE NEGOCIO EN CONT_CATEGORIA Y EN INFO_NEGOCIO--------------------- */
+    .containerTitulo {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .icono-corazon {
+        color: #333;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .tituloNegocio{
+        border-top: 1px solid #ddd;
+        margin:3px 0px;
+    }
+    .fotosContainerNegocio {
+        display: flex;
+        overflow-x: auto;
+    }
+    .fotosContainerNegocio .fotoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 5px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    .fotosContainerNegocio img {
+        height: 90%;
+    }
+
+
+    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  RESENA CONTENT */
+
+    /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    .tituloResenaContent{
+        padding-left: 20px;
+    }
+    .resenaContainer {
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        width: 100vw;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .negocio{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .fotoPerfilNegocio{
+        width: 100%;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagenNegocio{
+        width: 80%;
+        height: auto;
+    }
+
+    /* .nombreNegocio{
+        width: 100%;
+        height: auto;
+    }
+     */
+    .datosNegocio{
+        width: 100vw;
+        height: auto;
+    }
+
+    .nombreNegocio{
+        width: 100%;
+        font-size: 24px;
+        height: 40px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .direccionNegocio{
+        width: 90%;
+        font-size: 15px;
+        height: 17px;
+    }
+
+    /*////////////// VALORACION/////////// */
+    .titulos{
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .valoracion{
+        padding:10px;
+        font-size: 1.1em;
+    }
+    .puntuacionValoracion{
+        width: 100%;
+        height: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        /* padding-left: 10px; */
+        align-items: center;
+    }
+
+    .imgPuntuacion{
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+        margin-right:10px;
+    }
+
+    .resultadoValoracion{
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    
+    /* Titulo de su experiencia */
+    .infoInputs{
+        width: 80%;
+        margin: 0px;
+        margin-left: 20px;
+        text-align: right;
+        font-size: 10px;
+        height: 11px;
+        padding: 0px;
+    }
+
+    .moduloResena{
+        width: 100vw;
+        height: auto;
+    }
+
+    .areaTexto{
+        width: 80%;
+        padding-left: 20px;
+        padding-right:20px;
+        height: auto;
+    }
+
+    .textoTituloArea{
+        width: 97%;
+        min-height: 72px;
+        margin-left: 0px;
+        line-height: 20px;
+        padding-left: 5px;
+        border-radius: 5px;
+        border: 1px solid var(--azul_verify);
+    }
+
+    .subtitulo{
+        font-size: 10px ;
+    }
+
+    .fechaResena{
+        margin-left:20px ;
+    }
+
+    /* fecha  */
+    .areaFecha{
+        width: 79%;
+        margin-left:20px ;
+    }
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  GENERAR_RESENA */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.containerformGenerarResena{
+    margin: 20px;
+}
+.info_generar_resenas{
+    margin-bottom: 20px;
+}
+
+.containerformGenerarResena select{
+    background: white;
+}
+   
+.previsualizacionQr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.previsualizacionQr > img{
+    /* width: 150px;
+    height: 150px; */
+    width: 95%;
+    height: 95%;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  MI NEGOCIO */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+.mi_negocio h5{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* /////////////////////  VALORACION */
+.div_valoracion{}
+.container_valoracion{
+    margin: 0px auto;
+    width: 85%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--azul_claro);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    padding: 10px;
+}
+
+/* /////////////////////  RANKING */
+
+.div_ranking{}
+.container_ranking{
+    margin: 0px auto;
+    width: 85%;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid var(--azul_claro);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.container_ranking h1{
+    margin-right: 20px;
+}
+
+
+/* /////////////////////  RESEÑAS ////////*/
+
+.div_tus_resenas {
+
+}
+
+.div_tus_resenas .info_opiniones{
+    margin-bottom: 20px;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                /*  MIS RESEÑAS */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.div_mis_resenas {
+
+}
+.div_mis_resenas .info_opiniones{
+    margin-bottom: 20px;
+}
