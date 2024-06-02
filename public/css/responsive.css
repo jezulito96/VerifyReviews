@@ -1064,7 +1064,7 @@
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     .containerUsuarioForm{
         width: 40%;
         height: auto;
