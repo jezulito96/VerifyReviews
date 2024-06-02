@@ -1882,6 +1882,54 @@
         display: flex;
         flex-wrap: wrap;
     }
+    .popup,
+    .popup2 {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido_popup{
+        width: 50%;
+        height: 70%;
+        overflow-y: scroll;
+        margin-top: 20px;
+        background: var(--gris_claro);
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    .contenido_popup2{
+        min-height: 160px;
+        word-wrap: break-word;
+        width: 40%;
+        background: var(--gris_claro);
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .informacion_popup{
+        width: 100%;
+        text-align: center;
+    }
+    #informacion_popup2_1{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .contenido_popup .btn_cerrar,
+    .contenido_popup2 .btn_cerrar {
+        padding: 5px;
+    }
+
+    .imgs_resenas{
+        width: 60%;
+        border-radius: 5px;
+    }   
 }
 
 .mi_negocio h5{
